@@ -15,7 +15,7 @@
 :root {
 --narrow: calc(var(--wide) / 2);
 --wide: calc(var(--browserwidth) / 2);
---browserwidth: 250px;
+--browserwidth: 260px;
 --legendwidth: 200px;
 }
 
@@ -27,7 +27,6 @@ margin-right: 1em;
 
 table {
 margin-top: 1em;
-/* width: 100%; */
 text-align: center;
 border: none;
 table-layout: fixed;
@@ -36,17 +35,17 @@ font-size: small;
 
 td {
 border: none;
-padding: 2px 2px;
+padding: 1px 1px;
 vertical-align: top;
 }
 
-table th {
+th {
 border: none;
+position: -webkit-sticky;
 position: sticky;
 top: 0px;
 z-index: 10;
-position: -webkit-sticky;
-background: #fff;
+background-color: #fff;
 }
 
 td img {
@@ -66,19 +65,16 @@ white-space: nowrap;
 #android:checked~#theTable .android_wide,
 #ios:checked~#theTable .ios_wide {
 visibility: visible; 
-/* width: var(--wide); */
 }
 
 
 #android:checked~#theTable .android,
 #ios:checked~#theTable .ios {
 visibility: visible;
-/* width: var(--narrow); */
 }
 
 
 .legend {
-/* width: var(--legendwidth); */
 text-align: left;
 white-space: nowrap;
 padding-right: 5px;
@@ -193,7 +189,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <thead style="font-weight: bold;">
 
 <tr style="height: 1px;">
-<td style="width: var(--legendwidth);"></td>
+<td style="width: var(--legendwidth);;"></td>
 
 <td style="width: var(--wide);"></td>
 <td style="width: var(--narrow);"></td>
@@ -222,7 +218,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td style="width: var(--narrow);"></td>
 </tr>
 
-<tr style="font-size: x-large;">
+<tr style="font-size: x-large; border: none;">
 <td class="legend"></td>
 <th colspan="3">Mozilla Firefox</th>
 <th colspan="2">Apple Safari</th>
@@ -500,7 +496,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="no">No</td>
 <td colspan="3" class="dropped">Dropped: Windows Phone/Mobile</td>
-<td colspan="3" class="dropped">Dropped: MacOS Classic, Wii, Nintendo DS, MeeGo, EPOC/Symbian, Bada, BlackBerry, Windows Mobile/Phone, Linux-based TVs</td>
+<td colspan="3" class="dropped">Dropped: MacOS Classic, Wii, Nintendo DS, <br />MeeGo, EPOC/Symbian, Bada, BlackBerry, <br />Windows Mobile/Phone, Linux-based TVs</td>
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="no">No</td>
 </tr>
