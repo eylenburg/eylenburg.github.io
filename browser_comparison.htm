@@ -58,7 +58,7 @@ padding: 15px 0px;
 .android_wide,
 .ios_wide {
 visibility: hidden;
-/* white-space: nowrap; */
+white-space: nowrap;
 }
 
 #desktop:checked~#theTable .desktop,
@@ -718,7 +718,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop almost"><span class="dropped">Dropped (v15)</span> <span class="tooltip">(2 tabs)<span class="tooltiptext">you can have two websites open side by side by pinning one of them to the sidebar</span></span></td>
+<td class="desktop almost"><span class="dropped" style="font-size: smaller;">Dropped (v15)</span> <span class="tooltip">(2 tabs)<span class="tooltiptext">you can have two websites open side by side by pinning one of them to the sidebar</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -1863,7 +1863,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop no">No</td>
+<td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
@@ -1994,7 +1994,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop almost"><span class="dropped">Dropped (v15)</span>, <span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span></td>
+<td class="desktop almost"><span class="dropped" style="font-size: smaller;">Dropped (v15)</span>, <span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
@@ -2250,7 +2250,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Ability to modify browser's UI elements</td>
 <!-- Firefox -->
-<td class="desktop yes">Yes (userChrome.css)</td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2269,7 +2269,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop yes">Yes (using .css files)</td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
 <td class="android_wide no">No</td>
 <!-- Brave -->
 <td class="desktop no">No</td>
