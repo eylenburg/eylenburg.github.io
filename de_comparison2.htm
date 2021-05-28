@@ -42,7 +42,7 @@ td img {
 padding: 15px 0px;
 }
 
-.legend {
+td:first-child {
 text-align: left;
 white-space: nowrap;
 padding-right: 5px;
@@ -197,28 +197,31 @@ background-color: #aaaaaa;
 There are the Big 2 - KDE and GNOME - as well as some smaller ones and lots of forks and variants of the big ones.<br /><br />
 Especially since the controversial initial release of GNOME 3, there have been lots of variants and forks: Unity, Mate, Cinnamon, as well as Solus's Budgie, and elementaryOS's Pantheon (the latter two are not forks strictly speaking, however they use some core parts of the Gnome stack, e.g. Mutter as window manager or Gnome apps). Unity has been dropped by Canonical and is now developed by the UBports community, renamed to Lorimi, although the last stable version of Unity, Unity 7, is still available, e.g. in the Ubuntu Unity distribution.<br /><br />KDE only had one notable fork, Trinity, which is based on KDE 3.<br /><br />Other notable desktop environments include LXQt (a merger of LXDE and Razor-qt), Deepin Desktop, Lumina, and Enlightenment and its fork Moksha.</p>
 
+<h2 class="center">Comparison of Linux/Unix Desktop Environments</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: June 2021 (v6.0)</p>
 
 <table>
 <colgroup>
-<col> <!-- legend -->
+<col style="text-align: left; white-space: nowrap; padding-right: 5px;"> <!-- legend -->
 <col style="border-left: double;">
-<col style="border-left: dotted lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
 <!-- end KDE & GNOME -->
 <col style="border-left: double;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
 <!-- end 4x popular alternatives -->
 <col style="border-left: double;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
 <!-- end 4x niche -->
 <col style="border-left: double;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey;">
-<col style="border-left: dotted lightgrey; border-right: double;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: 1px solid lightgrey; border-right: double;">
 <!-- end 5x super niche -->
 </colgroup>
 
@@ -272,7 +275,7 @@ Especially since the controversial initial release of GNOME 3, there have been l
 
 <tbody>
 <tr>
-<td class="legend"></td>
+<td></td>
 <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Plasma_coloured_logo.svg/200px-Plasma_coloured_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
 <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Gnomelogo.svg/180px-Gnomelogo.svg.png" style="height: 100px; max-width: 190px" /></td>
 <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Xfce_logo.svg/128px-Xfce_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
@@ -290,10 +293,130 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td><img src="https://lumina-desktop.org/images/logo.png" style="height: 100px; max-width: 190px" /></td>
 </tr>
 
+<tr>
+<td class="semititle">History</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>First release</td>
+
+<td>1998</td> <!-- Plasma -->
+<td>1999</td> <!-- Gnome -->
+
+<td>1997</td> <!-- Xfce -->
+<td>2011</td> <!-- MATE -->
+<td>2011</td> <!-- Cinnamon -->
+<td>2013</td> <!-- LXQt -->
+
+<td>2011</td> <!-- Pantheon -->
+<td>2013</td> <!-- Deepin -->
+<td>2013</td> <!-- Budgie -->
+<td>2016</td> <!-- UKUI -->
+
+<td>1993</td> <!-- CDE -->
+<td>1996</td> <!-- Enlightenment -->
+<td>2010</td> <!-- Trinity -->
+<td>2010</td> <!-- Unity -->
+<td>2012</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Forked from</td>
+
+<td>-</td> <!-- Plasma -->
+<td>-</td> <!-- Gnome -->
+
+<td>-</td> <!-- Xfce -->
+<td class="gnomefill">GNOME 2</td> <!-- MATE -->
+<td class="gnomefill">GNOME 3</td> <!-- Cinnamon -->
+<td>LXDE &amp; Razor-qt</td> <!-- LXQt -->
+
+<td>-</td> <!-- Pantheon -->
+<td>-</td> <!-- Deepin -->
+<td>-</td> <!-- Budgie -->
+<td class="gnomefill">MATE</td> <!-- UKUI -->
+
+<td>1993</td> <!-- CDE -->
+<td>1996</td> <!-- Enlightenment -->
+<td class="kdefill">KDE 3.5</td> <!-- Trinity -->
+<td class="gnomefill">GNOME 3</td> <!-- Unity -->
+<td>-</td> <!-- Lumina -->
+</tr>
 
 
+<tr>
+<td>Raison d'être</td>
+
+<td>Creation of a free and non-commercial desktop environment for Linux</td> <!-- Plasma -->
+<td>Started as a GTK-based KDE alternative due to Qt's non-free license (until 1999)</td> <!-- Gnome -->
+
+<td>Originally started as a Linux clone of CDE</td> <!-- Xfce -->
+<td>Continuation of GNOME 2 when GNOME 3 was released</td> <!-- MATE -->
+<td>Desktop environment created for the Linux Mint distribution</td> <!-- Cinnamon -->
+<td>Lightweight desktop environment, de facto successor of LXDE</td> <!-- LXQt -->
+
+<td>Desktop environment created for the elementary OS distribution</td> <!-- Pantheon -->
+<td>Desktop environment created for the Deepin distribution</td> <!-- Deepin -->
+<td>Desktop environment created for the Solus distribution</td> <!-- Budgie -->
+<td>Desktop environment created for the Ubuntu Kylin distribution</td> <!-- UKUI -->
+
+<td>Former joint venture of HP, IBM, Sun and USL to create a standard UNIX desktop</td> <!-- CDE -->
+<td>Sophisticated window manager that slowly turned into a desktop environment</td> <!-- Enlightenment -->
+<td>Continuation of KDE 3 when KDE Plasma 4 was released</td> <!-- Trinity -->
+<td>Desktop environment created for the Ubuntu distribution (until 2017)</td> <!-- Unity -->
+<td>Desktop environment created for PC-BSD &rarr; TrueOS &rarr; Project Trident distribution</td> <!-- Lumina -->
+</tr>
 
 
+<tr>
+<td class="semititle">Application suite<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">May include inactive, experimental or 3rd party apps.<br />blue/orange shading = KDE/GNOME app or fork;<br />blue/orange font = uses Qt/GTK</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>GUI toolkit</td>
+
+<td class="kdefont">Qt</td> <!-- Plasma -->
+<td class="gnomefont">GTK</td> <!-- Gnome -->
+
+<td class="gnomefont">GTK</td> <!-- Xfce -->
+<td class="gnomefont">GTK</td> <!-- MATE -->
+<td class="gnomefont">GTK</td> <!-- Cinnamon -->
+<td class="kdefont">Qt</td> <!-- LXQt -->
+
+<td class="gnomefont">GTK</td> <!-- Pantheon -->
+<td class="kdefont tooltip">DTK<span class="tooltiptext">fork of Qt</span></td> <!-- Deepin -->
+<td class="gnomefont">GTK</td> <!-- Budgie -->
+<td class="kdefont">Qt</td> <!-- UKUI -->
+
+<td>Motif</td> <!-- CDE -->
+<td>EFL</td> <!-- Enlightenment -->
+<td class="kdefont tooltip">TQt<span class="tooltiptext">fork of Qt 3</span></td> <!-- Trinity -->
+<td>Nux</td> <!-- Unity -->
+<td class="kdefont">Qt</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Window manager</td>
+
+<td class="kdefill">KWin</td> <!-- Plasma -->
+<td class="gnomefill">Mutter</td> <!-- Gnome -->
+
+<td class="tooltip">Xfwm4<span class="tooltiptext">fork of Fvwm</span></td> <!-- Xfce -->
+<td class="gnomefill tooltip">Marco<span class="tooltiptext">fork of Metacity</span></td> <!-- MATE -->
+<td class="gnomefill tooltip">Muffin<span class="tooltiptext">fork of Mutter</span></td> <!-- Cinnamon -->
+<td class="tooltip">Openbox<span class="tooltiptext">fork of Blackbox</span></td> <!-- LXQt -->
+
+<td class="gnomefill tooltip">Gala<span class="tooltiptext">fork of Mutter</span></td> <!-- Pantheon -->
+<td class="kdefill tooltip">dde-kwin<span class="tooltiptext">fork of KWin</span></td> <!-- Deepin -->
+<td class="gnomefill tooltip">budgie-wm<span class="tooltiptext">fork of Mutter</span></td> <!-- Budgie -->
+<td class="kdefill tooltip">ukui-kwin<span class="tooltiptext">fork of KWin</span></td> <!-- UKUI -->
+
+<td>dtwm</td> <!-- CDE -->
+<td tooltip>Enlightenment<span class="tooltiptext">fork of Fvwm</span></td> <!-- Enlightenment -->
+<td class="kdefill tooltip">TWin<span class="tooltiptext">fork of KWin</span></td> <!-- Trinity -->
+<td>Compiz</td> <!-- Unity -->
+<td class="tooltip">Fluxbox<span class="tooltiptext">fork of Blackbox</span></td> <!-- Lumina -->
+</tr>
 
 
 
