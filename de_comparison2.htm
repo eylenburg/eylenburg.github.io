@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
---legendwidth: 200px;
+--legendwidth: 350px;
 --dewidth: 200px;
 }
 
@@ -87,18 +87,17 @@ background-color: #CEE6BB;
 background-color: #E7F2DD;
 }
 
-.no {
-background-color: #EBC1AD;
+.mixed {
+background-color: #E7DEB1;
 }
 
 .notreally {
 background-color: #F5E0D6;
 }
 
-.mixed {
-background-color: #E7DEB1;
+.no {
+background-color: #EBC1AD;
 }
-
 
 td.yes,
 td.almost,
@@ -204,25 +203,25 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <div>
 <table>
 <colgroup>
-<col style="text-align: left; white-space: nowrap; padding-right: 5px;"> <!-- legend -->
-<col style="border-left: double;">
-<col style="border-left: 1px solid lightgrey;">
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <!-- end KDE & GNOME -->
-<col style="border-left: double;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: double; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <!-- end 4x popular alternatives -->
-<col style="border-left: double;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
+<col style="border-left: double; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <!-- end 4x niche -->
-<col style="border-left: double;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey;">
-<col style="border-left: 1px solid lightgrey; border-right: double;">
+<col style="border-left: double; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<col style="border-left: 1px solid lightgrey; border-right: double; width: var(--dewidth);">
 <!-- end 5x super niche -->
 </colgroup>
 
@@ -295,7 +294,7 @@ Especially since the controversial initial release of GNOME 3, there have been l
 </tr>
 
 <tr>
-<td class="semititle">History</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">History</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -368,9 +367,12 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>Desktop environment created for PC-BSD &rarr; TrueOS &rarr; Project Trident distribution</td> <!-- Lumina -->
 </tr>
 
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
 
 <tr>
-<td class="semititle">Application suite<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">May include inactive, experimental or 3rd party apps.<br />blue/orange shading = KDE/GNOME app or fork;<br />blue/orange font = uses Qt/GTK</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Application suite<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">May include inactive, experimental or 3rd party apps.<br />blue/orange shading = KDE/GNOME app or fork;<br />blue/orange font = uses Qt/GTK</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -463,6 +465,10 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="kdefill kdefont">KHTML</td> <!-- Trinity -->
 <td class="kdefill gnomefont tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Unity -->
 <td>-</td> <!-- Lumina -->
+</tr>
+
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -768,35 +774,844 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>-</td> <!-- Lumina -->
 </tr>
 
-<tr>
-<td class="semititle">Resrouce use<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">Test system: Ubuntu 20.04, virtual machine with 2 GB RAM, three different runs</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="tooltip">Minimum/Average RAM use<span class="tooltiptext">in excess of base system (terminal only)</span></td>
+<td class="semititle">Resource use</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
 
-<td>347/572 MB</td> <!-- Plasma -->
-<td>408/737 MB</td> <!-- Gnome -->
+<tr>
+<td class="tooltip">Minimum/Average RAM use<span class="tooltiptext">Test system: Ubuntu 20.04, virtual machine with 2 GB RAM, three different runs, RAM use in excess of base system (i.e. terminal only)</span></td>
 
-<td>394/532 MB</td> <!-- Xfce -->
-<td>376/487 MB</td> <!-- MATE -->
-<td>348/569 MB</td> <!-- Cinnamon -->
-<td>243/462 MB</td> <!-- LXQt -->
+<td class="resource2">347/572 MB</td> <!-- Plasma -->
+<td class="resource1">408/737 MB</td> <!-- Gnome -->
 
-<td>302/473 MB</td> <!-- Pantheon -->
-<td>490/640 MB</td> <!-- Deepin -->
-<td>336/576 MB</td> <!-- Budgie -->
-<td>438/632 MB</td> <!-- UKUI -->
+<td class="resource2">394/532 MB</td> <!-- Xfce -->
+<td class="resource2">376/487 MB</td> <!-- MATE -->
+<td class="resource2">348/569 MB</td> <!-- Cinnamon -->
+<td class="resource3">243/462 MB</td> <!-- LXQt -->
 
-<td>419/573 MB</td> <!-- CDE -->
-<td>70/299 MB</td> <!-- Enlightenment -->
-<td>185/380 MB</td> <!-- Trinity -->
-<td>335/651 MB</td> <!-- Unity -->
-<td>93/242 MB</td> <!-- Lumina -->
+<td class="resource2">302/473 MB</td> <!-- Pantheon -->
+<td class="resource1">490/640 MB</td> <!-- Deepin -->
+<td class="resource2">336/576 MB</td> <!-- Budgie -->
+<td class="resource1">438/632 MB</td> <!-- UKUI -->
+
+<td class="resource1 tooltip">419/573 MB<span class="tooltiptext">using SparkyLinux binary; these numbers seem off given the fact that CDE was the standard Unix desktop in the 1990s</span></td> <!-- CDE -->
+<td class="resource5">70/299 MB</td> <!-- Enlightenment -->
+<td class="resource4">185/380 MB</td> <!-- Trinity -->
+<td class="resource2">335/651 MB</td> <!-- Unity -->
+<td class="resource5">93/242 MB</td> <!-- Lumina -->
+</tr>
+
+
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="semititle">General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Display server support</td>
+
+<td class="yes">X11 + Wayland</td> <!-- Plasma -->
+<td class="yes">X11 + Wayland</td> <!-- Gnome -->
+
+<td class="no">X11 only</td> <!-- Xfce -->
+<td class="no">X11 only</td> <!-- MATE -->
+<td class="no">X11 only</td> <!-- Cinnamon -->
+<td class="no">X11 only</td> <!-- LXQt -->
+
+<td class="no">X11 only</td> <!-- Pantheon -->
+<td class="no">X11 only</td> <!-- Deepin -->
+<td class="no">X11 only</td> <!-- Budgie -->
+<td class="no">X11 only</td> <!-- UKUI -->
+
+<td class="no">X11 only</td><!-- CDE -->
+<td class="yes">X11 + Wayland</td> <!-- Enlightenment -->
+<td class="no">X11 only</td> <!-- Trinity -->
+<td class="no">X11 only</td> <!-- Unity -->
+<td class="no">X11 only</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>HiDPI support</td>
+
+<td class="yes">Yes (fractional scaling)</td> <!-- Plasma -->
+<td class="yes">Yes (fractional scaling)</td> <!-- Gnome -->
+
+<td class="yes">Yes (fractional scaling)</td><!-- Xfce -->
+<td class="mixed">Yes (2x scaling)</td> <!-- MATE -->
+<td class="mixed">Yes (2x scaling)</td> <!-- Cinnamon -->
+<td class="no">No (only font size)</td> <!-- LXQt -->
+
+<td class="mixed">Yes (2x scaling)</td> <!-- Pantheon -->
+<td class="yes">Yes (fractional scaling)</td> <!-- Deepin -->
+<td class="yes">Yes (fractional scaling)</td> <!-- Budgie -->
+<td class="mixed">Yes (2x scaling)</td> <!-- UKUI -->
+
+<td class="no">No (only font size)</td> <!-- CDE -->
+<td class="yes">Yes (fractional scaling)</td> <!-- Enlightenment -->
+<td class="no">No (only font size)</td> <!-- Trinity -->
+<td class="yes">Yes (fractional scaling)</td> <!-- Unity -->
+<td class="no">No (only font size)</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Preferred style of window decorations (SSD/CSD)</td>
+
+<td>Server-side decorations</td> <!-- Plasma -->
+<td>Client-side decorations</td> <!-- Gnome -->
+
+<td>Mixed (mostly SSD)</td> <!-- Xfce -->
+<td>Server-side decorations</td> <!-- MATE -->
+<td>Server-side decorations</td> <!-- Cinnamon -->
+<td>Server-side decorations</td> <!-- LXQt -->
+
+<td>Client-side decorations</td> <!-- Pantheon -->
+<td>Client-side decorations</td> <!-- Deepin -->
+<td>Client-side decorations</td> <!-- Budgie -->
+<td>Client-side decorations</td> <!-- UKUI -->
+
+<td>Server-side decorations</td> <!-- CDE -->
+<td>Server-side decorations</td> <!-- Enlightenment -->
+<td>Server-side decorations</td> <!-- Trinity -->
+<td>Server-side decorations</td> <!-- Unity -->
+<td>Server-side decorations</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Theme support, including 3rd-party themes</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="mixed tooltip">Not OOTB<span class="tooltiptext">need to install gnome-tweaks and gnome-shell-extensions</span></td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">Colour and font only</td> <!-- CDE -->
+<td class="yes">Yes</td> <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="yes">Yes</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Scheduled theme switch (e.g. dark theme at night)</td>
+
+<td class="no">No</td> <!-- Plasma -->
+<td class="no">No</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="no">No</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Night light (reduces blue light)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td><!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td><!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Integration with online accounts</td>
+
+<td>Google, Owncloud</td> <!-- Plasma -->
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Gnome -->
+
+<td>-</td> <!-- Xfce -->
+<td>-</td> <!-- MATE -->
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Cinnamon -->
+<td>-</td> <!-- LXQt -->
+
+<td>Fastmail, Last.fm</td> <!-- Pantheon -->
+<td>-</td> <!-- Deepin -->
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Budgie -->
+<td>-</td><!-- UKUI -->
+
+<td>-</td> <!-- CDE -->
+<td>-</td> <!-- Enlightenment -->
+<td>-</td> <!-- Trinity -->
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Unity -->
+<td>-</td> <!-- Lumina -->
+</tr>
+
+
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="semititle">Panel elements <span style="font-size: x-small; font-weight: normal; text-decoration: none;">w/o extensions or hidden settings/tweaks</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>App launcher: show all apps / sort apps by XDG category</td>
+
+<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">with alternative launcher</span></span>/Yes</td> <!-- Plasma -->
+<td class="mixed"><span class="yes">Yes</span>/<span class="tooltip no">No<span class="tooltiptext">but can create custom app folders</span></span></td><!-- Gnome -->
+
+<td class="yes">Yes/Yes</td> <!-- Xfce -->
+<td class="yes">Yes/Yes</td> <!-- MATE -->
+<td class="yes">Yes/Yes</td> <!-- Cinnamon -->
+<td class="mixed"><span class="no">No</span>/<span class="yes">Yes</span></td> <!-- LXQt -->
+
+<td class="yes">Yes/Yes</td> <!-- Pantheon -->
+<td class="yes">Yes/Yes</td> <!-- Deepin -->
+<td class="yes">Yes/Yes</td> <!-- Budgie -->
+<td class="yes">Yes/Yes</td> <!-- UKUI -->
+
+<td class="mixed"><span class="no">No</span>/<span class="yes">Yes</span></td> <!-- CDE -->
+<td class="mixed"><span class="no">No</span>/<span class="yes">Yes</span></td> <!-- Enlightenment -->
+<td class="mixed"><span class="no">No</span>/<span class="yes">Yes</span></td> <!-- Trinity -->
+<td class="yes">Yes/<span class="tooltip">Yes<span class="tooltiptext">can filter by category</span></td> <!-- Unity -->
+<td class="yes">Yes/Yes</td><!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>App launcher: search apps and settings</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="mixed">Only apps</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="mixed">Only apps</td> <!-- UKUI -->
+
+<td class="yes">Yes</td> <!-- CDE -->
+<td class="yes">Yes</td> <!-- Enlightenment -->
+<td class="yes tooltip">Yes<span class="tooltiptext">(separate searches)</span></td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="yes">Yes</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>App launcher: quickly uninstall apps (e.g. right-click)</td>
+
+<td class="no">No</td> <!-- Plasma -->
+<td class="no">No</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Favourited/pinned apps</td>
+
+<td class="yes">in app launcher and panel</td> <!-- Plasma -->
+<td class="yes">in "Activities" dash</td> <!-- Gnome -->
+
+<td class="yes">in app launcher and panel</td> <!-- Xfce -->
+<td class="yes">in app launcher and panel</td> <!-- MATE -->
+<td class="yes">in app launcher and panel</td> <!-- Cinnamon -->
+<td class="yes">in panel</td> <!-- LXQt -->
+
+<td class="yes">in panel</td> <!-- Pantheon -->
+<td class="yes">in panel</td> <!-- Deepin -->
+<td class="yes">in panel</td> <!-- Budgie -->
+<td class="yes">in panel</td> <!-- UKUI -->
+
+<td class="yes">in panel</td> <!-- CDE -->
+<td class="yes">in panel</td> <!-- Enlightenment -->
+<td class="yes">in panel</td> <!-- Trinity -->
+<td class="yes">in panel</td> <!-- Unity -->
+<td class="yes">in app launcher and panel</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Panel location changeable (e.g. bottom, top)</td>
+
+<td class="yes">Yes (all four sides)</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="yes">Yes (all four sides)</td> <!-- Xfce -->
+<td class="yes">Yes (all four sides)</td> <!-- MATE -->
+<td class="yes">Yes (all four sides)</td> <!-- Cinnamon -->
+<td class="yes">Yes (all four sides)</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="yes">Yes (all four sides)</td> <!-- Deepin -->
+<td class="yes">Yes (all four sides)</td> <!-- Budgie -->
+<td class="yes">Yes (all four sides)</td> <!-- UKUI -->
+
+<td class="yes">Yes (moves like window)</td> <!-- CDE -->
+<td class="yes">Yes (all four sides)</td> <!-- Enlightenment -->
+<td class="yes">Yes (all four sides)</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="yes">Yes (all four sides)</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Panel auto-hide function</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="no">No</td> <!-- UKUI -->
+
+<td class="no tooltip">No<span class="tooltiptext">but panel can be minimized like a normal window</span></td> <!-- CDE -->
+<td class="yes">Yes</td> <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="yes">Yes</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Clock/volume/battery status in panel</td>
+
+<td class="yes">Yes/Yes/Yes</td> <!-- Plasma -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Gnome -->
+
+<td class="yes">Yes/Yes/Yes</td> <!-- Xfce -->
+<td class="yes">Yes/Yes/Yes</td> <!-- MATE -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes/Yes/Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes/Yes/Yes</td> <!-- Pantheon -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Deepin -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Budgie -->
+<td class="yes">Yes/Yes/Yes</td> <!-- UKUI -->
+
+<td class="no">No/No/No</td> <!-- CDE -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Enlightenment -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Trinity -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Unity -->
+<td class="yes">Yes/Yes/Yes</td> <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Network manager in panel</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="no">No</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Keyboard layout switcher in panel</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="yes">Yes</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="no">No</td>  <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Notification list (e.g. new e-mail, updates available)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Icons for background apps (e.g. cloud sync, messenger)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="mixed tooltip">Limited<span class="tooltiptext">GNOME does not support tray icons, but applications can use sticky notifications, similar to those on Android. However, this is not supported by all applications who would have otherwise shown tray icons. More info here: <a href="https://wiki.gnome.org/Initiatives/StatusIconMigration" target="_blank" style="color: white;">https://wiki.gnome.org/Initiatives/StatusIconMigration</a></span></td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="yes">Yes</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Option to have a global menubar (like macOS)</td>
+
+<td class="yes">Yes (not default)</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="yes">Yes (not default)</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes (not default)</td> <!-- Budgie -->
+<td class="no">No</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td>  <!-- Enlightenment -->
+<td class="yes">Yes (not default)</td> <!-- Trinity -->
+<td class="yes">Yes (default but optional)</td> <!-- Unity -->
+<td class="no">No</td>  <!-- Lumina -->
+</tr>
+
+
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="semititle">Window management</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Taskbar/dock: toggle between showing windows or apps</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no tooltip">No (see note)<span class="tooltiptext">dash (in "Activities" screen) shows running apps, panel shows only the one currently focused app</span></td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="no">No (dock shows apps)</td> <!-- Pantheon -->
+<td class="no">No (taskbar shows apps)</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="no">No (taskbar shows apps)</td> <!-- UKUI -->
+
+<td class="no">No (only pinned apps shown)</td> <!-- CDE -->
+<td class="no">No (taskbar shows windows)</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="no">No (dock shows apps)</td> <!-- Unity -->
+<td class="yes">Yes</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Taskbar/dock: show window thumbnails</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="yes">Yes</td>  <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="yes">Yes</td>  <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td>  <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Maximize window (without hiding panel/dock/taskbar)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes (right-click)</td> <!-- Gnome -->
+
+<td class="yes">Yes</td><!-- Xfce -->
+<td class="yes">Yes</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="yes">Yes</td>  <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td>  <!-- UKUI -->
+
+<td class="no">No (panel will be covered)</td> <!-- CDE -->
+<td class="yes">Yes</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="yes">Yes</td>  <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Fullscreen (hides panel and other element)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
+
+<td class="yes">Yes (right-click only)</td><!-- Xfce -->
+<td class="almost">keyboard shortcut only</td> <!-- MATE -->
+<td class="almost">keyboard shortcut only</td> <!-- Cinnamon -->
+<td class="almost">keyboard shortcut only</td> <!-- LXQt -->
+
+<td class="almost">keyboard shortcut only</td> <!-- Pantheon -->
+<td class="no">No</td>  <!-- Deepin -->
+<td class="almost">keyboard shortcut only</td> <!-- Budgie -->
+<td class="no">No</td>  <!-- UKUI -->
+
+<td class="yes">Yes</td> <!-- CDE -->
+<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
+<td class="yes">Yes (right-click)</td> <!-- Trinity -->
+<td class="almost">keyboard shortcut only</td> <!-- Unity -->
+<td class="almost">keyboard shortcut only</td>   <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Minimize</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes (right-click)</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td><!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="yes">Yes</td> <!-- Budgie -->
+<td class="yes">Yes</td>  <!-- UKUI -->
+
+<td class="yes">Yes (minimizes to desktop)</td> <!-- CDE -->
+<td class="yes">Yes</td>  <!-- Enlightenment -->
+<td class="yes">Yes</td> <!-- Trinity -->
+<td class="yes">Yes</td> <!-- Unity -->
+<td class="yes">Yes</td>   <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Show desktop (minimize all windows)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
+
+<td class="yes">Yes</td> <!-- Xfce -->
+<td class="yes">Yes</td><!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="almost">keyboard shortcut only</td>  <!-- Deepin -->
+<td class="yes">Yes</td>  <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="almost">keyboard shortcut only</td>  <!-- Enlightenment -->
+<td class="yes">Yes (right-click)</td> <!-- Trinity -->
+<td class="almost">keyboard shortcut only</td> <!-- Unity -->
+<td class="yes">Yes</td>   <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Keep window on top</td>
+
+<td class="yes">Yes (right-click)</td> <!-- Plasma -->
+<td class="yes">Yes (right-click)</td> <!-- Gnome -->
+
+<td class="yes">Yes (right-click)</td> <!-- Xfce -->
+<td class="yes">Yes (right-click)</td><!-- MATE -->
+<td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
+<td class="yes">Yes (right-click)</td> <!-- LXQt -->
+
+<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes (right-click)</td> <!-- Budgie -->
+<td class="no">No</td>  <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
+<td class="yes">Yes (right-click)</td> <!-- Trinity -->
+<td class="yes">Yes (right-click)</td> <!-- Unity -->
+<td class="yes">Yes (right-click)</td>   <!-- Lumina -->
+</tr>
+
+<tr>
+<td>Move window to other workspace (virtual desktop)</td>
+
+<td class="yes">Yes (right-click)</td> <!-- Plasma -->
+<td class="yes">Yes (right-click)</td> <!-- Gnome -->
+
+<td class="yes">Yes (right-click)</td> <!-- Xfce -->
+<td class="yes">Yes (right-click)</td><!-- MATE -->
+<td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
+<td class="yes">Yes (right-click)</td> <!-- LXQt -->
+
+<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
+<td class="almost">keyboard shortcut only</td> <!-- Deepin -->
+<td class="yes">Yes (right-click)</td> <!-- Budgie -->
+<td class="almost">drag &amp; drop in taskview</td>  <!-- UKUI -->
+
+<td class="yes">Yes (right-click)</td> <!-- CDE -->
+<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
+<td class="yes">Yes (right-click)</td> <!-- Trinity -->
+<td class="yes">Yes (right-click)</td> <!-- Unity -->
+<td class="yes">Yes (right-click)</td>   <!-- Lumina -->
 </tr>
 
 
 
+<tr>
+<td>Show window on all workspaces (virtual desktops)</td>
+
+<td class="yes">Yes (right-click)</td> <!-- Plasma -->
+<td class="yes">Yes (right-click)</td> <!-- Gnome -->
+
+<td class="yes">Yes (right-click)</td> <!-- Xfce -->
+<td class="yes">Yes (right-click)</td><!-- MATE -->
+<td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
+<td class="yes">Yes (right-click)</td> <!-- LXQt -->
+
+<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="yes">Yes (right-click)</td> <!-- Budgie -->
+<td class="no">No</td>  <!-- UKUI -->
+
+<td class="yes">Yes (right-click)</td> <!-- CDE -->
+<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
+<td class="yes">Yes (right-click)</td> <!-- Trinity -->
+<td class="yes">Yes (right-click)</td> <!-- Unity -->
+<td class="yes">Yes (right-click)</td>   <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Tile windows by moving them to the screen edge</td>
+
+<td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- Plasma -->
+<td class="almost">Yes (&frac12; screen)</td> <!-- Gnome -->
+
+<td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- Xfce -->
+<td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- MATE -->
+<td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="almost">Yes (&frac12; screen)</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="almost">Yes (&frac12; screen)</td> <!-- Budgie -->
+<td class="yes">Yes (&frac12; or &frac14; screen)</td>  <!-- UKUI -->
+
+<td class="no">No</td>  <!-- CDE -->
+<td class="yes">Yes (&frac12; or &frac14; screen)</td>  <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="almost">Yes (&frac12; screen)</td> <!-- Unity -->
+<td class="no">No</td>   <!-- Lumina -->
+</tr>
+
+
+<tr>
+<td>Move/resize windows using Alt + Left/Right Click</td>
+
+<td class="yes">Yes/Yes</td> <!-- Plasma -->
+<td class="yes tooltip">Yes/Yes<span class="tooltiptext">Super key instead of Alt key</span></td> <!-- Gnome -->
+
+<td class="yes">Yes/Yes</td> <!-- Xfce -->
+<td class="yes">Yes/Yes</td><!-- MATE -->
+<td class="yes">Yes/Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes/Yes</td> <!-- LXQt -->
+
+<td class="no">No/No</td> <!-- Pantheon -->
+<td class="mixed"><span class="yes">Yes</span>/<span class="no">No</span></td> <!-- Deepin -->
+<td class="no">No/No</td> <!-- Budgie -->
+<td class="no">No/No</td>  <!-- UKUI -->
+
+<td class="mixed"><span class="yes">Yes</span>/<span class="no">No</span></td> <!-- CDE -->
+<td class="yes">Yes/<span class="tooltip">Yes<span class="tooltiptext">Alt + Middle Click</span></span></td>  <!-- Enlightenment -->
+<td class="yes">Yes /Yes</td> <!-- Trinity -->
+<td class="mixed"><span class="yes">Yes</span>/<span class="no">No</span></td> <!-- Unity -->
+<td class="yes">Yes/Yes</td>   <!-- Lumina -->
+</tr>
+
+
+<td>Show overview of all windows (expos&eacute;)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes (current workspace)</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="yes">Yes</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="yes">Yes (current workspace)</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="almost">keyboard shortcut only</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
+
+
+<td>Show overview of all workspaces (virtual desktop grid)</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="yes">Yes</td> <!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="yes">Yes</td> <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="yes">Yes</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
+
+
+
+<td>Virtual desktop cube</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+
+<td class="no">No</td> <!-- Pantheon -->
+<td class="no">No</td> <!-- Deepin -->
+<td class="no">No</td> <!-- Budgie -->
+<td class="no">No</td> <!-- UKUI -->
+
+<td class="no">No</td> <!-- CDE -->
+<td class="no">No</td> <!-- Enlightenment -->
+<td class="no">No</td> <!-- Trinity -->
+<td class="no">No</td> <!-- Unity -->
+<td class="no">No</td> <!-- Lumina -->
+</tr>
 
 
 
