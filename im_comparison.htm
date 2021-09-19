@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Instant Messengers</title>
+<meta name="description" content="Comparison of Instant Messengers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Operating Systems, Desktop Environments, Linux, Unix, World Maps, Maps, Religions, Races, Languages, Linguistics, Politics, History, Alternative History">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+--legendwidth: 250px;
+--imwidth: 150px;
+}
+
+table {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--legendwidth) + 10 * var(--imwidth));
+}
+
+#bottom.table {
+text-align: left;
+table-layout:fixed;
+white-space: nowrap;
+}
+
+td {
+border: none;
+padding: 1px 1px;
+vertical-align: top;
+}
+
+td.yes,
+td.almost,
+td.no,
+td.mixed,
+td.notreally,
+td.line,
+td.mau1, td.mau2, td.mau3, td.mau4, td.mau5 {
+border-top: 1px solid ivory;
+border-bottom: 1px solid ivory;
+}
+
+th {
+border: none;
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+z-index: 10;
+background-color: #fff;
+}
+
+td img {
+padding: 15px 0px;
+}
+
+td:first-child {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+}
+
+.semititle {
+text-decoration: underline;
+font-weight: bold;
+vertical-align: bottom; }
+
+.center {
+text-align: center;
+}
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.yes {
+background-color: #CEE6BB;
+}
+
+.almost {
+background-color: #E7F2DD;
+}
+
+.mixed {
+background-color: #E7DEB1;
+}
+
+.notreally {
+background-color: #F5E0D6;
+}
+
+.no {
+background-color: #EBC1AD;
+}
+
+/* for MAU and downloads */
+/* <5% */
+
+.mau0 {
+background-color: #fff;
+}
+
+.mau1 {
+background-color: #eee;
+}
+
+.mau2{
+background-color: #ddd;
+}
+
+.mau3 {
+background-color: #ccc;
+}
+
+.mau4 {
+background-color: #bbb;
+}
+
+.mau5 {
+background-color: #aaa;
+</style>
+</head>
+<body>
+<header><h1 style="text-align: center">Maps and Tables</h1><p style="text-align: center"><em><strong>by Alphonse Eylenburg<br />eylenburg.github.io</strong></em></p><h2><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></header>
+
+
+<h1>Comparison of Instant Messengers</h1>
+<p>There are probably a hundred or more different instant messengers out there. But which one respects your privacy, is resistant to censorship attempts by governments and Big Tech, and is easy to use for normies? <br />
+I have limited this comparison to only ten messengers:</p>
+<ul>
+<li>XMPP, the pioneer of FOSS and federated instant messengers. XMPP is just a protocol and not an application; in this article it is represented by the Android app Conversations.</li>
+<li>Delta Chat, which is based on normal email and hence has the greatest theoretical potential among all federated messengers.</li>
+<li>Matrix, a new and very promising federated protocol, here represented by the leading client Element.</li>
+<li>Signal, the most mainstream end-to-end (E2E) encrypted FOSS messenger.</li>
+<li>Telegram, the most mainstream FOSS messenger, and market leader in some countries.</li>
+<li>Threema, the most maintream E2E-encrypted FOSS messenger with the option of anonymous accounts.</li>
+<li>Facebook Messenger, the second most popular messenger worldwide.</li>
+<li>Line, the most popular messenger in Japan, Taiwan, and Thailand.</li>
+<li>Viber, as it is the most popular messenger in some countries.</li>
+<li>WhatsApp, the #1 most popular messenger worldwide.</li>
+</ul>
+<p>Some messengers that are relevant but did not make it on the list:</p>
+<ul>
+<li>RCS (Google Messages): not available on iOS</li>
+<li>iMessage (+FaceTime): not available on Android</li>
+<li>Skype: Not market leader in any country (anymore), cannibalized by Microsoft Teams</li>
+<li>Briar: Peer-to-peer messenger with the most mindshare, but low adoption, limited functionality (only text messages), not available for iOS</li>
+<li>Tox: Another well-known P2P messenger, supports more platforms than Briar, but low adoption.</li>
+<li>ICQ: One of the first, and historically very popular, IMs. It's still around but small amount of active users.</li>
+<li>WeChat: The market leader in China, and third most popular IM worldwide, but it's a privacy nightmare and there's no reason to use WeChat if you're not Chinese or living in China.</li>
+<li>KakaoTalk: The market leader in South Korea, but low adoption elsewhere.</li>
+<li>IRC: A protocol with many clients and server federation. Unlike XMPP for example, IRC focuses mostly on group chats rather than 1:1 instant messaging.</li>
+<li>Discord: Quite popular, but mostly focuses on group and voice chats. Privacy nightmare.</li>
+<li>Kik: Quite popular, but not #1 anywhere</li>
+<li>Snapchat: Quite popular, but more like a social media than pure IM, and not #1 in any country.</li>
+<li>QQ: Second most popular messenger in China. But if WeChat doesn't make it on list, QQ won't make it either.</li>
+<li>Wire: Focuses on enterprise users.</li>
+<li>Wickr: ditto.</li>
+<li>Slack: ditto.</li>
+<li>Microsoft Teams: ditto.</li>
+<li>BBMe: ditto.</li>
+<li>Mattermost: ditto.</li>
+<li>Jami: Low adoption.</li>
+<li>Session: ditto.</li>
+<li>Instagram: Mainly social media rather than a messenger.</li>
+<li>LinkedIn: ditto.</li>
+<li>Mumble: Voice chat focus.</li>
+<li>Teamspeak: ditto.</li>
+<li>Anything made by Google: Google Chat, Google Meet, Google Duo, Google Hangouts, it's hard to follow what they're pushing at the moment. They keep deprecating and reinventing their IM apps. It's too tiresome to follow and they won't ever make a breakthrough anyway. Should have kept Google Talk, which was simply an XMPP client.</li>
+</ul>
+
+<h2 class="center">Comparison of Instant Messengers</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: September 2021</p>
+
+
+<table>
+<colgroup>
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<!-- end federated + foss -->
+<col style="border-left: double; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<!-- end centralized + foss -->
+<col style="border-left: double; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
+<!-- end Proprietary -->
+</colgroup>
+
+<thead>
+<tr style="height: 1px; display: none;">
+<td style="width: var(--legendwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
+</tr>
+
+<tr class="groups" style="font-size: large; font-weight: bold; border: none;">
+<td></td>
+<td colspan="3">Federated &amp; FOSS</td>
+<td colspan="3">Centralized &amp; FOSS</td>
+<td colspan="4">Proprietary Market Leaders</td>
+</tr>
+
+<tr style="font-size: larger; font-weight: bold;">
+<th></th>
+<th>Conversations <br />(XMPP)</th>
+<th>Delta Chat</th>
+<th>Element <br />(Matrix)</th>
+<th>Signal</th>
+<th>Telegram</th>
+<th>Threema</th>
+<th>Facebook Messenger</th>
+<th>Line</th>
+<th>Viber</th>
+<th>WhatsApp</th>
+</tr>
+
+</thead>
+<tbody>
+
+<tr>
+<td></td>
+<td><img src="https://conversations.im/images/conversations_logo.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://delta.chat/assets/logos/delta-chat.svg" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://element.io/images/logo-mark-primary.svg" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Signal-Logo.svg/225px-Signal-Logo.svg.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/150px-Telegram_2019_Logo.svg.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Threema%27s_App_Icon.png/288px-Threema%27s_App_Icon.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/150px-Facebook_Messenger_logo_2020.svg.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/LINE_New_App_Icon_%282020-12%29.png/225px-LINE_New_App_Icon_%282020-12%29.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://www.viber.com/app/uploads/viber-logo.png" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/225px-WhatsApp.svg.png" style="height: 100px; max-width: 190px;" /></td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Year introduced</td>
+<td class="line">2014 (XMPP: 1999)</td>
+<td class="line">2017</td>
+<td class="line">2016 (Matrix: 2014)</td>
+<td class="line">2014</td>
+<td class="line">2013</td>
+<td class="line">2012</td>
+<td class="line">2011</td>
+<td class="line">2011</td>
+<td class="line">2010</td>
+<td class="line">2009</td>
+</tr>
+
+<tr>
+<td>Developer</td>
+<td class="line">mainly Daniel Gultsch</td>
+<td class="line">various developers</td>
+<td class="line">The Matrix.org Foundation CIC</td>
+<td class="line">Signal Technology Foundation</td>
+<td class="line">Telegram FZ LLC</td>
+<td class="line">Threema GmbH</td>
+<td class="line">Facebook, Inc.</td>
+<td class="line">LINE Corporation</td>
+<td class="line">Rakuten Group, Inc.</td>
+<td class="line">Facebook, Inc.</td>
+</tr>
+
+<tr>
+<td>Domicile of developer</td>
+<td class="line">Germany</td>
+<td class="line">n/a</td>
+<td class="line">UK</td>
+<td class="line">USA</td>
+<td class="line">UAE</td>
+<td class="line">Switzerland</td>
+<td class="line">USA</td>
+<td class="line">Japan</td>
+<td class="line">Japan</td>
+<td class="line">USA</td>
+</tr>
+
+<tr>
+<td>Monthly active users</td>
+<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
+<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
+<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
+<td class="mau1">40 million</td>
+<td class="mau3">550 million</td>
+<td class="mau1">10 million</td>
+<td class="mau4">1.3 billion</td>
+<td class="mau2">250 million</td>
+<td class="mau3">825 million</td>
+<td class="mau5">2.0 billion</td>
+</tr>
+
+<tr>
+<td>Play Store number of installs</td>
+<td class="mau1">100,000+</td>
+<td class="mau1">100,000+</td>
+<td class="mau1">100,000+</td>
+<td class="mau3">50,000,000+</td>
+<td class="mau4">500,000,000+</td>
+<td class="mau2">1,000,000+</td>
+<td class="mau5">5,000,000,000+</td>
+<td class="mau4">500,000,000+</td>
+<td class="mau4">500,000,000+</td>
+<td class="mau5">5,000,000,000+</td>
+</tr>
+
+
+<tr>
+<td>Protocol used</td>
+<td class="line">XMPP + OMEMO</td>
+<td class="line">IMAP/SMTP + OpenPGP</td>
+<td class="line">Matrix + Olm/Megolm</td>
+<td class="line">Signal</td>
+<td class="line">MTProto</td>
+<td class="line">NaCl</td>
+<td class="line">MQTT</td>
+<td class="line">MQTT + Letter Sealing</td>
+<td class="line">Viber</td>
+<td class="line">XMPP + Proteus</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td class="line"><span class="tooltip">free<span class="tooltiptext">on F-Droid</span></span> (Play Store: <span style="color: red;">€2.99</span>)</td>
+<td class="line">free</td>
+<td class="line">free</td>
+<td class="line">free</td>
+<td class="line">free</td>
+<td class="line" style="color: red;">€3.99</td>
+<td class="line">free</td>
+<td class="line">free</td>
+<td class="line">free</td>
+<td class="line">free</td>
+</tr>
+
+
+
+<tr>
+<td class="semititle"><br />Sustainability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>License of client/server</td>
+<td class="yes">GPL</td>
+<td class="yes">GPL</td>
+<td class="yes">Apache</td>
+<td class="yes">GPL</td>
+<td class="mixed">GPL/Proprietary</td>
+<td class="mixed">AGPL/Proprietary</td>
+<td class="no">Proprietary</td>
+<td class="no">Proprietary</td>
+<td class="no">Proprietary</td>
+<td class="no">Proprietary</td>
+</tr>
+
+<tr>
+<td>Server architecture</td>
+<td class="yes">Federated</td>
+<td class="yes">Federated</td>
+<td class="yes">Federated</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+<td class="no">Centralized</td>
+</tr>
+
+<tr>
+<td>Ability to self-host server</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Compatibility with other protocols</td>
+<td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord)</span></td>
+<td class="mixed">Normal Email if recipient does not use Delta Chat</td>
+<td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat)</span></td>
+<td class="mixed">Android app can send/receive SMS</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="mixed">Android app can send/receive SMS</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Android</td>
+<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="almost">Yes (no APK available)</td>
+<td class="yes">Yes (APK available)</td>
+<td class="almost">Yes (no APK available)</td>
+<td class="yes">Yes (APK available)</td>
+</tr>
+
+
+<tr>
+<td>iOS</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+
+<tr>
+<td>Windows</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="almost tooltip">Yes (needs phone app)<span class="tooltiptext">Only works when the phone app is running on online</td>
+</tr>
+
+<tr>
+<td>macOS</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="almost tooltip">Yes (needs phone app)<span class="tooltiptext">Only works when the phone app is running on online</td>
+</tr>
+
+<tr>
+<td>GNU/Linux</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>*BSD</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="no">No</td>
+<td class="almost"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix clients</a></td>
+<td class="no">No</td>
+<td class="almost"><span class="tooltip">Yes <span class="tooltiptext">FreeBSD has a port of the standard Telegram app</span></span> / <span class="tooltip"><a href="https://telegram.org/apps" target="_blank" style="color: black; text-decoration: none;">other clients</a><span class="tooltiptext">Only option for NetBSD and OpenSBD</span></span></td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Illumos</td>
+<td class="notreally tooltip">Unclear<span class="tooltiptext">not supported by any of the clients listed on xmpp.org/software/clients/ but it might be possible to compile a Linux/BSD app</span></td>
+<td class="no">No</td>
+<td class="almost"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix clients</a></td>
+<td class="no">No</td>
+<td class="notreally tooltip">Unclear<span class="tooltiptext">not supported by any of the clients listed on telegram.org/clients/ but it might be possible to compile a Linux/BSD app</span></td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Haiku</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="no">No</td>
+<td class="almost"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix clients</a></td>
+<td class="no">No</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Inofficial port of the standard Telegram app</span></td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Web client</td>
+<td class="almost"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP clients</a></td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="almost">No but Chrome extension</td>
+<td class="yes">Yes</td>
+<td class="almost tooltip">Yes (needs phone app)<span class="tooltiptext">Only works when the phone app is running on online</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Capability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Offline messages (if recipient is offline)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Group chats</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Voice messages</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Voice and video calls</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+
+<tr>
+<td>Send photos, video and other files</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Screensharing</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="almost">Yes (not on mobile)</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="almost">Yes (not on mobile)</td>
+<td class="almost">Yes (not on mobile)</td>
+<td class="almost">Yes (not on mobile)</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Public/searchable groups</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Self-destructing messages</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="mixed">Only in "secret chats"</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Delete messages on device of recipients</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Usability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Find contacts from phone address book</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Phone number & Email</td>
+<td class="yes">Phone number</td>
+<td class="yes">Phone number</td>
+<td class="yes">Phone number & Email</td>
+<td class="yes tooltip">Phone number & Email<span class="tooltiptext">Can upload address book to Facebook to check if contacts have a Facebook account</span></td>
+<td class="yes">Phone number</td>
+<td class="yes">Phone number</td>
+<td class="yes">Phone number</td>
+</tr>
+
+<tr>
+<td>Automatic backups of chat history</td>
+<td class="notreally">Chat history is saved on the XMPP server, but useless without decryption keys, which need to be manually backed up to local device</td>
+<td class="notreally">Local unencrypted backups of chat history are possible but not automatic. Chat history is saved on the Email server, but useless without decryption keys, which need to be manually backed up to local device./td>
+<td class="yes">Chat history is saved on the Matrix server, but useless without decryption keys, which can be automatically backed up to local device or Matrix homeserver</td>
+<td class="almost">Backup on local device only (no cloud backup which would protect against loss of device)</td>
+<td class="mixed">All data is saved on Telegram servers, except for "secret chats" which cannot be backed up</td>
+<td class="no">No</td>
+<td class="mixed">All data is saved on Facebook servers, Except for "secret chats" which cannot be backed up</td>
+<td class="mixed">Backup to cloud only (Google Drive/iCloud), and text messages only</td>
+<td class="almost">Backup to cloud only (Google Drive/iCloud)</td>
+<td class="yes">Yes (local device or Google Drive/iCloud)</td>
+</tr>
+
+<tr>
+<td>Data can be transferred to new device</td>
+<td class="almost">Yes, at least to new installation of Conversations (unclear across different XMPP clients)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="mixed">Yes, but only Android &harr; Android or iOS &harr; iOS, not supported on Desktop</td>
+<td class="mixed">Yes, except for secret chats</td>
+<td class="yes">Yes</td>
+<td class="mixed">Yes, except for secret chats</td>
+<td class="mixed">Text messages only, and only Android &harr; Android or iOS &harr; iOS, not supported on Desktop</td>
+<td class="mixed">Yes, but only Android &harr; Android or iOS &harr; iOS, not supported on Desktop</td>
+<td class="mixed">Yes, but only Android &harr; Android or iOS &harr; iOS, as well as one way iPhone &rarr; Samsung phones</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>User ID</td>
+<td>XMPP address (user@server.tld)</td>
+<td>Email address (user@server.tld)</td>
+<td>Matrix ID (@user:server.tld)</td>
+<td>Phone number</td>
+<td>Phone number</td>
+<td>Threema ID (8-digit ID)</td>
+<td>Email address of Facebook account</td>
+<td>Phone number</td>
+<td>Phone number</td>
+<td>Phone number</td>
+</tr>
+
+<tr>
+<td>Anonymous sign-up possible</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No (phone number required)</td>
+<td class="no">No (phone number required)</td>
+<td class="almost tooltip">Yes if purchased anonymously <span class="tooltiptext">Android license can be purchased from Threema directly using Bitcoin, while iOS app can only be bought in the App Store (hence the latter is only anonymous if the Apple ID itself is anonymous, i.e. anonymous email address used and no phone number given)</td>
+<td class="mixed">Theoretically yes, but again Facebook's TOS</td>
+<td class="no">No (phone number required)</td>
+<td class="no">No (phone number required)</td>
+<td class="no">No (phone number required)</td>
+</tr>
+
+<tr>
+<td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of 1:1 text messages</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes">Yes</td>
+<td class="mixed">Only in "secret chats"</td>
+<td class="yes">Yes</td>
+<td class="mixed tooltip">Only in "secret chats"<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+</tr>
+
+<tr>
+<td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of group chats</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="notreally tooltip">Planned/experimental<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+</tr>
+
+<tr>
+<td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of voice and video calls</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="line">n/a</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="notreally tooltip">Planned/experimental<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
+</tr>
+
+<tr>
+<td>E2E encryption of chat backups</td>
+<td class="yes">Yes</td>
+<td class="mixed">Local backups: no,<br />on email server: yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No (secret chats not backed up)</td>
+<td class="yes">Yes</td>
+<td class="no">No (secret chats not backed up)</td>
+<td class="notreally">Unclear (no information found)</td>
+<td class="no">No</td>
+<td class="no">No (but planned)</td>
+</tr>
+
+<tr>
+<td>Minimal metadata</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Verification of contacts</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Lock app with password/biometrics</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="mixed">Mobile apps only</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="mixed">Desktop app only</td>
+<td class="yes">Yes</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<h2>So, what's the conclusion?</h2>
+
+<ul>
+<li>In an ideal world, everyone would use federated messengers, so that no one company has the power to ban users or sell out to a <span class="tooltip">FAGMAN<span class="tooltiptext">The Big Tech oligopolists: Facebook, Apple, Google, Microsoft, Amazon, Netflix</span></span> company, and so that people can self-host their own servers.
+<ul><li>At the moment, Matrix seems to be the most promising. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery. Of course, it would be equally great if XMPP or Delta Chat become mainstream.</li>
+<li>XMPP has a very lightweight and easy to set up server software. Furthermore it is a standardized protocol that has been around since 1999 and is the basis for other messengers such as Whatsapp. The main problem with XMPP is the fact that there is no one client app which works across all major operating systems and has implemented all the important features (such as E2E encryption or video calling). I believe that this is a roadblock to more widespread adoption among the less technologically inclined ("Oh you have an iPhone? Then you need to download Siskin, not Conversations."). </li>
+<li>Delta Chat has the advantage that everyone already has an email address so there are billions of potential users. However, the email protocol has its own limits, for example you can't conduct voice or video calls. Because of this, I don't think that Delta Chat will have a realistic change of ever replacing WhatsApp.</li></ul>
+<li>Signal is the next best choice. It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), and can be used as the default SMS app on Android, and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously (unless you are lucky enough to live in a country that allows anonymous purchase of SIM cards). Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do now allow third-party clients, so users of niche operating systems are excluded.</li>
+<li>Telegram has lots of features and encourages the development of third-party clients. The main downside is that chats are not E2E encrypted by default, and the E2E encrypted secret chats don't sync across devices. It's probably the best messenger if you don't care too much about privacy.</li>
+<li>Threema good from a privacy perspective and allows users to sign up without giving up their phone number, but lacks desktop apps. The main problem I see is that the app costs money. It's not much, and it's good to know how the development is financed, but it is a major showstopper for widespread adoption.</li>
+<li>Among the big proprietary messengers, Whatsapp, Line and Viber E2E-encrypt all messages by default, which is great. However, you can never be sure that the company doesn't hold the keys to access your messages, as the apps are closed source and can't be audited. Furthermore, the cloud chat backups are not E2E encrypted. Even if you don't upload your chat history to the cloud, your conversation partner may do so, and this effectively makes the rest of the E2E encryption pointless, because Apple/Google and the US government can read your messages in the cloud backup. WhatsApp has announced to close this loophole soon, so it might actually not be the worst choice among the proprietary messengers.</li>
+</ul>
+
+<footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
+<h2 style="text-align: center"><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></footer>
+</body>
+</html>
