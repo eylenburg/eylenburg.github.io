@@ -461,7 +461,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <tr>
 <td class="legend">Chrome OS</td>
-<td colspan="3" class="no">No</td>
+<td colspan="3" class="almost tooltip">Yes (Linux app)<span class="tooltiptext">Firefox officially supports ChromeOS via installation of the Linux application</span></td>
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="yes">Yes (preinstalled)</td>
 <td colspan="3" class="no">No</td>
@@ -584,7 +584,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <tr>
 <td class="legend tooltip">Ability to change tab bar position <span class="tooltiptext">e.g. vertical tab on the side or bottom tabs; on mobile any possibility to change to location of the tab switcher counts as "yes"</span></td>
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
+<td class="desktop ext"><span class="dropped">Dropped (v29)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <td class="desktop no">No</td>
@@ -1090,36 +1090,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 <tr>
-<td class="legend tooltip">Ad blocking<span class="tooltiptext">incl. blocking of "acceptable ads" and "non-intrusive ads"</span></td>
-<!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android_wide yes">Yes</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr>
-
-<tr>
 <td class="legend tooltip">Tracking protection<span class="tooltiptext">e.g. blocking of tracking scripts, third-party cookies, fingerprinting attempts via canvas, user agent string, favicons etc.</span></td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
@@ -1150,26 +1120,56 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr> 
 
 <tr>
-<td class="legend tooltip">CNAME uncloaking<span class="tooltiptext">identify and block ads and trackers disguised as first-party contents</span></td>
+<td class="legend tooltip">Ad blocking (cosmetic, in addition to trackers)<span class="tooltiptext">incl. blocking of "acceptable ads" and "non-intrusive ads"</span></td>
 <!-- Firefox -->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <!-- Chrome -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Opera -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android_wide yes">Yes</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">CNAME uncloaking<span class="tooltiptext">identify and block ads and trackers disguised as first-party contents</span></td>
+<!-- Firefox -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios yes">Yes</td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
-<td class="ios no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
 <!-- Opera -->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
-<td class="ios no">No</td>
+<td class="ios yes">Yes</td>
 <!-- Vivaldi -->
 <td class="desktop no">No</td>
 <td class="android_wide no">No</td>
@@ -1303,8 +1303,8 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Option to disable hyperlink auditing pings</td>
 <!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android dropped">Dropped</td>
+<td class="desktop yes">Disabled</td>
+<td class="android yes">Disabled</td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop dropped">Dropped (v12.1)</td>
@@ -1837,7 +1837,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Upload file from clipboard</td>
 <!-- Firefox -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2107,7 +2107,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Ability to view and save files in cache<span class="tooltiptext">example use-case: stream a video, <br />find video file in cache, save video on device</span></td>
 <!-- Firefox -->
-<td class="desktop no tooltip">No<span class="tooltiptext">very limited functionality</span></td>
+<td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2348,7 +2348,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Ability to modify browser's UI elements</td>
 <!-- Firefox -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></td>
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2814,7 +2814,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">In-browser proxy or VPN</td>
 <!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">Yes (paid)<span class="tooltiptext">selected countries only</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
