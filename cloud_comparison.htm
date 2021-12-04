@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Cloud, Sync &amp; Email services</title>
+<meta name="description" content="Comparison of Instant Messengers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Operating Systems, Desktop Environments, Linux, Unix, World Maps, Maps, Religions, Races, Languages, Linguistics, Politics, History, Alternative History">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+--product: 100px;
+--logo: 75px;
+--oswidth: 90px;
+--item: 80px;
+--price: 50px;
+--comment: 350px;
+}
+
+
+table {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--product) + var(--logo) + 23 * var(--item) + 8 * var(--price) + var(--comment));
+hyphens: auto;
+}
+
+td {
+border: none;
+padding: 1px 5px 1px 5px;
+vertical-align: center;
+hyphens: auto;
+}
+
+.sticky {
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+z-index: 10;
+background-color: #fff;
+border-left: 1px solid lightgrey !important;
+}
+
+td img {
+padding: 15px 0px;
+}
+
+tr.product td {
+border: 1px solid lightgrey;
+}
+
+td:first-child {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+border-left: none;
+font-weight: bold;
+}
+
+td:nth-last-of-type(1) {
+text-align: left;
+}
+
+.center {
+text-align: center;
+}
+
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.yes {
+background-color: #CEE6BB;
+}
+
+.almost {
+background-color: #E7F2DD;
+}
+
+.mixed {
+background-color: #E7DEB1;
+}
+
+.notreally {
+background-color: #F5E0D6;
+}
+
+.no {
+background-color: #EBC1AD;
+}
+
+img.icon {
+max-width: 50px;
+max-height: 40px;
+}
+
+.bad {
+color: white;
+border: 1px solid red;
+border-radius: 3px;
+background: red;
+font-size: x-small;
+}
+
+.good {
+color: white;
+border: 1px solid green;
+border-radius: 3px;
+background: green;
+font-size: x-small;
+}
+
+.bdleft {
+border-left: 1px solid lightgrey;
+}
+
+.px {
+text-align: right;
+padding-right: 5px;
+}
+
+.na {
+background: lightgrey;
+}
+
+
+</style>
+</head>
+<body>
+<header><h1 style="text-align: center">Maps and Tables</h1><p style="text-align: center"><em><strong>by Alphonse Eylenburg<br />eylenburg.github.io</strong></em></p><h2><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></header>
+
+
+<h1>Comparison of Cloud, Sync &amp; Email services</h1>
+<p>There are many people out there who have decided to pursue the noble goal of a <strong><em>Techxodus</em></strong>. This means:</p>
+<ol>
+<li><strong>Independence</strong>: using software that is not made or controlled by Big Tech monopolists (Google, Apple, Microsoft, Meta, Amazon), who together have almost unchecked control about people's digital lives. See also <a href="https://wiki.techxodus.org" target="_blank">Techxodus Wiki</a></li>
+<li><strong>Freedom</strong>: only using free and open source software, i.e. software published under a copyleft or permissive license. If the developer ever becomes evil, it will be possible to fork the software. The fact that Konqueror was published under the GPL forced Apple and Google to publish the source code for their browser engines (WebKit and Blink) - thus enabling "good" forks (Brave, Ungoogled-Chromium) or "bad" software (Chrome). See also <a href="https://directory.fsf.org/wiki/Main_Page" target="_blank">FSF Directory</a></li>
+<li><strong>Privacy</strong>: using software that respects the user's privacy. For example, a service that allows anonymous sign-up or offers end-to-end encryption of all user data. A closed source software can by definition not be trusted to respect the users privacy, because there is no way of really knowing what's going on in the background. See also <a href="https://www.privacytools.io" target="_blank">PrivacyTools</a> or <a href="https://www.privacyguides.org" target="_blank">PrivacyGuides</a></li>
+<li><strong>Openness</strong>: using software that relies on open standards, thereby avoiding vendor lock-in. For example, an email provider be compatible with any email client running on any operating system.</li>
+<li><strong>Neutrality</strong>: using software that can be censor information or ban users, and that is ideally developed by a politically neutral entity. For example, an end-to-end encrypted messenger can't censor messages because it can't even read the messages in the first place, and a federated messenger can't ban users because there is no central server that has control over who is using the messenger.
+</ol>
+
+<p>In some cases it's easy. For example, replace your browser with Firefox - it is free software, it can be configured to respect your privacy, and it is not made by a Big Tech company nor based on their product (i.e., Chromium). Or you can use Brave Search as your search engine - it does not track its users, and it is based on its own search index (unlike DuckDuckGo and Startpage, which mostly use the Bing and Google index, respectively).<br /><br />
+In other cases, it's almost impossible. When it comes to mobile operating systems, there are only two options: iOS made by Apple (Big Tech, not private, not open source), and Android made by Google (Big Tech, even less private, only partially open source). Symbian or BlackBerry OS are long dead. GNU/Linux exists for phones (e.g. Sailfish OS, Ubuntu Touch, postmarketOS) but is not generally available preinstalled and lacks the most important mobile apps, and is hence not yet suitable as a daily driver for 99% of people.<br /><br />
+Here, I am looking at cloud services, which includes file sync, PIM (addressbook, calendar, to-do list, and notes), as well as email hosting (which often integrates PIM services). The Big Three - Apple, Google, and Microsoft - really offer a complete package, where the individual services are working well together and offer a very convenient cloud service to users. I have set out to see whether a Techxodus is possible, and whether there is an email + file sync + PIM provider out there that ticks all the boxes: independence from Big Tech, no vendor lock-in, free and open source software, no politics, and great privacy, ideally by means of end-to-end encryption which would make it impossible for the service provider (or anyone else, like the police) to read the user data.</p>
+
+
+<h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: December 2021</p>
+
+
+<table>
+
+
+<colgroup>
+<col style="width: var(--product); font-weight: bold;" class="bdleft">
+<col style="width: var(--logo);" class="bdleft">
+<col span="7" style="width: var(--item);" class="bdleft">
+<col style="width: var(--oswidth);" class="bdleft">
+<col span="15" style="width: var(--item);" class="bdleft">
+<col span="8" style="width: var(--price);" class="bdleft">
+<col style="width: var(--comment);" class="bdleft">
+</colgroup>
+
+
+<thead style="font-weight: bold;" class="sticky">
+
+<tr style="text-align: left; vertical-align: top; font-style: italic; text-decoration: underline;">
+<td colspan="10" rowspan="2">General information</td>
+<td colspan="6" rowspan="2">File sync</td>
+<td colspan="4" rowspan="2">Addressbook, Calendar &amp; Tasks</td>
+<td colspan="3" rowspan="2">Email</td>
+<td colspan="2" rowspan="2">Other</td>
+<td colspan="9">Pricing<span style="text-decoration: none;"> (single user, annual price in EUR)</span></td>
+</tr>
+
+<tr style="text-align: left; vertical-align: top;">
+<td colspan="3">Mail storage</td>
+<td colspan="5">File storage</td>
+<td></td>
+</tr>
+
+
+<tr style="vertical-align: top;">
+<td colspan="2">Product</td>
+<td>Developer</td>
+<td>Juris&shy;diction</td>
+<td>Anony&shy;mous pay&shy;ments?</td>
+<td>Two-factor authenti&shy;cation?</td>
+<td>Soft&shy;ware li&shy;cense</td>
+<td>Offered for self-hosting?</td>
+<td>Data encryp&shy;ted at rest?</td>
+<td class="tooltip">Dedi&shy;cated apps?<span class="tooltiptext">Not to be confused with supported operating systems - most OS have native support for e.g. calendar sync via CalDAV, and emails can be access with any client app as long as the provider supports IMAP.</td>
+<!-- File sync -->
+<td>End-to-end encryp&shy;tion?</td>
+<td>WebDAV (or other <span class="tooltip">API<span class="tooltiptext">for inte&shy;gration in 3rd-party apps</span></span>)?</td>
+<td>Edit files in browser?</td>
+<td>Share files &amp; folders?</td>
+<td class="tooltip">Two-way sync with desktop?<span class="tooltiptext">Windows, macOS, and Linux</span></td>
+<td class="tooltip">Two-way sync with mobile?<span class="tooltiptext">Android and iOS</span></td>
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td>End-to-end encryp&shy;tion?</td>
+<td>Has all three?</td>
+<td>CardDaV &amp; CalDAV support?</td>
+<td>Access in browser?</td>
+<!-- Mail -->
+<td>Zero access encryp&shy;tion?</td>
+<td>IMAP support?</td>
+<td>Access in browser?</td>
+<!-- Other -->
+<td>Notes?</td>
+<td>Pass&shy;word mana&shy;ger?</td>
+<!-- Prices -->
+<td>&ge;5 GB</td>
+<td>&ge;15 GB</td>
+<td>&ge;50 GB</td>
+<td>&ge;20 GB</td>
+<td>&ge;100 GB</td>
+<td>&ge;500 GB</td>
+<td>&ge;1 TB</td>
+<td>&ge;2 TB</td>
+<td>Comment</td>
+</tr>
+
+</thead>
+<tbody>
+
+<tr class="product">
+<td>Apple iCloud</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/en/f/f0/ICloud_logo_%28new%29.png" class="icon" /></td>
+<td>Apple Inc. <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span></td>
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td>
+<td class="mixed">Apple gift cards paid in cash</td>
+<td class="yes">Yes</td>
+<td class="no">Proprie&shy;tary</td>
+<td class="no">No</td>
+<td class="mixed">Emails only in transit</td>
+<td>Windows, macOS, iOS</td>
+<!-- File sync -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes (Apple iWork)</td>
+<td class="yes">Yes</td>
+<td class="mixed">No Linux support</td>
+<td class="no">No</td>
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<!-- Mail -->
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<!-- Other -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<!-- Prices -->
+<td class="px">free<br />(5 GB)</td>
+<td colspan="3" class="px">€12<br />(50 GB)</td>
+<td class="px">€36<br />(200 GB)</td>
+<td class="px" colspan="3">€120<br />(2 TB)</td>
+<td>Can be shared with up to 6 people</td>
+</tr>
+
+
+
+
+<tr class="product">
+<td>Box</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Box%2C_Inc._logo.svg/300px-Box%2C_Inc._logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Box, Inc. <span class="bad">Woke</span></td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="yes">Yes (Microsoft Office Online)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">Linux via <span class="tooltip">3rd party apps<span class="tooltiptext">such as GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM --><!-- Mail -->
+<td colspan="7" class="na"></td>
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="2" class="px">€108<br />(100 GB)</td>
+<td colspan="3" class="px tooltip">€486<br />(unlimited)<span class="tooltiptext">only available for Team subscription with 3 users minimum</span></td>
+<td>Unlimited plan shows price for 3 users (minimum amount).</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Dropbox</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dropbox_logo_2017.svg/440px-Dropbox_logo_2017.svg.png" class="icon" /></td><!-- Logo -->
+<td>Box, Inc. <span class="bad">Woke</span></td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="yes">Yes (Microsoft Office Online)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM --><!-- Mail -->
+<td colspan="7" class="na"></td>
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="5" class="px">€120<br />(2 TB)</td>
+<td>Family plan also available.</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>ecloud</td>
+<td><img src="https://e.foundation/wp-content/uploads/2019/11/e-logo-noir-01.png" class="icon" /></td><!-- Logo -->
+<td>e.<wbr>foundation  <span class="good">Non-Profit</span></td><!-- Developer -->
+<td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>None, but can use Nextcloud apps</em></td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (OnlyOffice)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px">€20<br />(20 GB)</td>
+<td class="px">€40<br />(64 GB)</td>
+<td class="px">€20<br />(20 GB)</td>
+<td class="px">€60<br />(128 GB)</td>
+<td colspan="2" class="px">€130<br />(1 TB)</td>
+<td class="px na"></td>
+<td>Self-hosted cost: either hardware upfront costs (~€50 for RaspPi + ~€50 for 1 TB HDD) or ~€60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Etesync</td>
+<td><img src="https://www.etesync.com/static/img/brand.5e0c4083d73a.svg" class="icon" /></td><!-- Logo -->
+<td>Etesync Ltd.</td><!-- Developer -->
+<td>&#x1F1EC;&#x1F1E7;<br />UK</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="no">No</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, Unix, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes <em>(via EteSync Bridge)</em></td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td colspan="3" class="na"></td>
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="8" class="px na"></td>
+<td>Hosted by EteSync developers: €21 p.a.;<br />Self-hosted cost: either hardware upfront costs (~€50 for RaspPi) or ~€12 p.a. for cheap VPS</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Fastmail</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Fastmail_logo_2019.svg/440px-Fastmail_logo_2019.svg.png" class="icon" /></td><!-- Logo -->
+<td>Fastmail Pty Ltd</td><!-- Developer -->
+<td>&#x1F1E6;&#x1F1FA;<br />Australia</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV (and FTP)</td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="notreally">No (only team members)</td><!--share files -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="mixed">Yes, except tasks</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="no">No</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px tooltip">€44<br />(30 GB)<span class="tooltiptext">additional 10 GB for files</span></td>
+<td class="px tooltip">€80<br />(100 GB)<span class="tooltiptext">additional 50 GB for files</span></td>
+<td colspan="2" class="px tooltip">€160<br />(100 GB)<span class="tooltiptext">additional 200 GB for emails</span></td>
+<td colspan="3" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Filen</td>
+<td><img src="https://filen.io/assets/img/logoround.svg" class="icon" /></td><!-- Logo -->
+<td>Filen Cloud Dienste UG</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="mixed">Proprie&shy;tary but source avai&shy;lable (clients)</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM --><!-- Mail --><!-- Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="2" class="px">€12<br />(100 GB)</td>
+<td class="px">€40<br />(500 GB)</td>
+<td colspan="2" class="px">€90<br />(2 TB)</td>
+<td>Lifetime purchase options also available.</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>fruux</td>
+<td><img src="https://fruux.com/static/img/fruux/logo-small-white.png" style="filter: invert(1);" class="icon" /></td><!-- Logo -->
+<td>fruux GmbH</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="no">No</td><!-- 2FA -->
+<td class="notreally tooltip">Proprie&shy;tary<span class="tooltiptext">but mostly based on open source projects (sabre/dav)</span></td><!-- License -->
+<td class="no">No<span style="font-size: x-small;"><br />alternative: Baikal (also by fruux GmbH)</span></td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Android</td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail --><!-- Other -->
+<td colspan="5" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="8" class="px na"></td>
+<td>Free for syncing two devices, otherwise €40 p.a.</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Google One<br /><span style="font-weight: normal;">Google Drive &amp;<br />GMail etc.</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Google_One_logo.svg/130px-Google_One_logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Alphabet Inc.  <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span> <span class="bad">Evil</span></td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="mixed">Google Play gift cards paid in cash</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="yes">Yes (Google Docs Editors)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">Linux via <span class="tooltip">3rd party apps<span class="tooltiptext">such as insync, FreeFileSync, or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="mixed">Yes, except tasks (own API)</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px">free<br />(15 GB)</td>
+<td colspan="3" class="px">€20<br />(100 GB)</td>
+<td colspan="3" class="px">€100<br />(2 TB)</td>
+<td>Can be shared with up to 6 people</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>GMX/<wbr>Mail.com</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/GMX-Logo.png" class="icon" /></td><!-- Logo -->
+<td>United Inter&shy;net AG  <span class="bad">Woke</span></td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="no">In transit only</td><!-- encrypted at rest -->
+<td>iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV (and FTP)</td><!-- WebDAV or API -->
+<td class="yes">Yes <span class="tooltip">(GMX Online Office)<span class="tooltiptext">based on LibreOffice</span></span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="mixed">Yes, except tasks</td>
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td><!-- notes --><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px">free<br />(65 GB)</td>
+<td colspan="2" class="px tooltip">€24<br />(100 GB)<span class="tooltiptext">additional 65 GB for emails</span></td>
+<td class="px tooltip">€96<br />(500 GB)<span class="tooltiptext">additional 65 GB for emails</span></td>
+<td class="px tooltip">€179<br />(1 TB)<span class="tooltiptext">additional 65 GB for emails</span></td>
+<td class="px tooltip">€335<br />(2 TB)<span class="tooltiptext">additional 65 GB for emails</span></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Icedrive</td>
+<td><img src="https://icedrive.net/frontend/img/icon-sm.png" class="icon" /></td><!-- Logo -->
+<td>ID Cloud Services Ltd.</td><!-- Developer -->
+<td>&#x1F1EC;&#x1F1E7;<br />UK</td><!-- Jurisdiction -->
+<td class="yes">Crypto (lifetime deals only)</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no WebDAV</span></td><!-- E2EE -->
+<td class="yes">WebDAV <em>(not for E2EE files)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="2" class="px">€22<br />(150 GB)</td>
+<td colspan="2" class="px">€50<br />(1 TB)</td>
+<td class="px">€180<br />5 TB</td>
+<td>Lifetime purchase options also available.</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Infomaniak<br /><span style="font-weight: normal;">kDrive &amp;<br />Workspace</span></td>
+<td><img src="https://www.infomaniak.com/g/static/241dfc297610647c38be41fd7ce8325b/logo-infomaniak.svg" class="icon" /></td><!-- Logo -->
+<td>Infomaniak Network SA</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="almost">Clients are free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes <span class="tooltip">(Infomaniak Office)<span class="tooltiptext">based on OnlyOffice</span></span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td><!-- notes --><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px">free<br />(20 GB)</td>
+<td class="px tooltip">incl. with domain<span class="tooltiptext">unlimited mail storage if you register a domain with them</span></td>
+<td colspan="5" class="px">€60<br />(2 TB)</td>
+<td>Family plan also available</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Internxt Drive</td>
+<td><img src="https://internxt.com/logos/internxt/cool-gray-90.svg" class="icon" /></td><!-- Logo -->
+<td>Internxt Universal Technolo&shy;gies SL</td><!-- Developer -->
+<td>&#x1F1EA;&#x1F1F8;<br />Spain</td><!-- Jurisdiction -->
+<td class="yes">Crypto (on request)</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux,iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td class="px">€11<br />(20 GB)</td>
+<td class="px">€42<br />(100 GB)</td>
+<td colspan="3" class="px">€108<br />(2 TB)</td>
+<td>Lifetime purchase options also available.</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Kolab Now</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Kolab_Now_logo.png" class="icon" /></td><!-- Logo -->
+<td>Apheleia IT AG</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="no">In transit only</td><!-- encrypted at rest -->
+<td><em>Kube client:</em> Windows, macOS, Linux</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (Collabora Office)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px tooltip">€120<br />(5 GB)<span class="tooltiptext">only email (without files, calendar etc.) for €57 p.a.</span></td>
+<td class="px">€142<br />(15 GB)</td>
+<td class="px">€242<br />(50 GB)</td>
+<td class="px">€156<br />(20 GB)</td>
+<td class="px">€385<br />(100 GB)</td>
+<td colspan="3" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Mailbox.org</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Mailbox.org_logo.svg" class="icon" /></td><!-- Logo -->
+<td>Heinlein Hosting GmbH</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="mixed">Cash via post</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="almost">Mostly free<span style="font-size: x-small;"> (mostly based on Open-Xchange)</span></td><!-- License -->
+<td class="no">No<span style="font-size: x-small;"><br />alternative: Open-Xchange</span></td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>OX Drive:</em> Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (OX Office)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="yes">Yes <em><span class="tooltip">(needs PGP support in client)<span class="tooltiptext">To use encrypted mail (zero access encryption), the user will need to decrypt them on the local device, e.g. using Thunderbird, or the OpenKeychain app on Android</span></span></em></td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td><!-- notes --><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€36<br />(10 GB)</td>
+<td class="px">€46<br />(15 GB)</td>
+<td class="px">€149<br />(50 GB)</td>
+<td class="px tooltip">€48<br />(20 GB)<span class="tooltiptext">also includes 10 GB mail storage</span></td>
+<td class="px tooltip">€121<br />(100 GB)<span class="tooltiptext">also includes 10 GB mail storage</span></td>
+<td class="px tooltip">€309<br />(500 GB)<span class="tooltiptext">also includes 25 GB mail storage</span></td>
+<td class="px tooltip">€538<br />(1 TB)<span class="tooltiptext">also includes 25 GB mail storage</span></td>
+<td class="px tooltip">€996<br />(2 TB)<span class="tooltiptext">also includes 25 GB mail storage</span></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Mailfence</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Official_Mailfence_logo_with_name.png/440px-Official_Mailfence_logo_with_name.png" class="icon" /></td><!-- Logo -->
+<td>Contact<wbr>Office Group SA</td><!-- Developer -->
+<td>&#x1F1E7;&#x1F1EA;<br />Belgium</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>None</em></td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (Contact Office)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="no">No tasks</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="yes">Yes <em><span class="tooltip">(needs PGP support in client)<span class="tooltiptext">To use encrypted mail (zero access encryption), the user will need to decrypt them on the local device, e.g. using Thunderbird, or the OpenKeychain app on Android</span></span></em></td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td><!-- notes --><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px tooltip">€30<br />(5 GB)<span class="tooltiptext">also includes 12 GB for files</td>
+<td class="px tooltip">€90<br />(20 GB)<span class="tooltiptext">also includes 24 GB for files</td>
+<td class="px tooltip">€300<br />(50 GB)<span class="tooltiptext">also includes 70 GB for files</td>
+<td class="px tooltip">€90<br />(24 GB)<span class="tooltiptext">additional 20 GB for emails</td>
+<td colspan="4" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Mega</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/01_mega_logo.svg/393px-01_mega_logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Mega Ltd.</td><!-- Developer -->
+<td>&#x1F1F3;&#x1F1FF;<br />New Zealand</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="mixed">Proprie&shy;tary but source avai&shy;lable (clients)</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="almost">API,<em> also WebDAV server via MegaCMD</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM --><!-- Mail --><!-- Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td class="px">free<br />(20 GB)</td>
+<td class="px">€50<br />(400 GB)</td>
+<td colspan="3" class="px">€100<br />(2 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+
+
+<tr class="product">
+<td>Microsoft 365<br /><span style="font-weight: normal;">OneDrive &amp;<br />Outlook.com</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Microsoft_365.svg/400px-Microsoft_365.svg.png" class="icon" /></td><!-- Logo -->
+<td>Microsoft Corp.  <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span></td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="yes">Yes (Microsoft Office Online)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">Linux via <span class="tooltip">3rd party apps<span class="tooltiptext">such as insync, FreeFileSync, or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="mixed">Uses MS Exchange instead</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px">free<br />(15 GB)</td>
+<td class="px">€69 <span class="tooltip">(50 GB)<span class="tooltiptext">included with 1 TB subscription</span></span>
+<td colspan="2" class="px">€24<br />(100 GB)</td>
+<td colspan="2" class="px tooltip">€69<br />(1 TB)<span class="tooltiptext">Mail storage also upgraded from 15 GB to 50 GB</span></td>
+<td class="px na"></td>
+<td>Family plan also available. 1 TB plan includes Microsoft Office Online.</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Nextcloud<br /><span style="font-weight: normal; font-style: italic;">(various<br />hosters)</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/320px-Nextcloud_Logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Nextcloud GmbH</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td>depends on hoster</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no access in browser</span></td><!-- E2EE -->
+<td class="yes">WebDAV <em>(not for E2EE files)</em></td><!-- WebDAV or API -->
+<td class="yes">Yes (<span class="tooltip">Nextcloud Office<span class="tooltiptext">based on Collabora Office</span></span> and <span class="tooltip">others<span class="tooltiptext">OnlyOffice, Collabora Office, Hancom Office, Microsoft Office Online</span></span>)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td colspan="2" class="na"></td><!-- Zero access encryption --><!-- IMAP -->
+<td class="yes">IMAP mail client in browser</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="4" class="px" style="vertical-align: top;">
+Hetzner Storage Share:<br />
+Ionos Managed Nextcloud:<br />
+Hosting.de Managed Nextcloud:<br />
+Owncube (single user only!):</td>
+<td class="px" style="vertical-align: top;">€41<br /><br />€59<br />€15</td>
+<td class="px" style="vertical-align: top;">€70<br />€72<br />€83<br /> </td>
+<td class="px" style="vertical-align: top;">€113<br />€108<br />€119<br />€50</td>
+<td class="px" style="vertical-align: top;">€141<br /><br />€299<br />€70</td>
+<!-- <td colspan="2" class="px tooltip">~€15-59<br />(100 GB)<span class="tooltiptext">Owncube (single-user): €15<br />Hetzner Storage Share (multi-user): €41<br />Hosting.de Managed Nextcloud (multi-user): €59</td>
+<td class="px tooltip">~€70-83<br />(500 GB)<span class="tooltiptext">Hetzner Storage Share (multi-user): €70<br />Ionos Managed Nextcloud (multi-user): €72<br />Hosting.de Managed Nextcloud (multi-user): €83</td>
+<td class="px tooltip">~€50-119<br />(1 TB)<span class="tooltiptext">Owncube (single-user): €15<br />Hetzner Storage Share (multi-user): €113<br />Ionos Managed Nextcloud (multi-user): €108<br />Hosting.de Managed Nextcloud (multi-user): €119</td>
+<td class="px tooltip">~€70-299<br />(2 TB)<span class="tooltiptext">Owncube (single-user): €70<br />Hetzner Storage Share (multi-user): €141<br />Hosting.de Managed Nextcloud (multi-user): €299</td> -->
+<td>Can be shared by multiple users. Self-hosted cost: either hardware upfront costs (~€50 for RaspPi + ~€50 for 1 TB HDD) or ~€60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Nordlocker</td>
+<td><img src="https://s1.nlocker.app/media/1.1367.0/images/locker/global/logos/horizontal/logo-default.svg" class="icon" style="filter: invert(1);" /></td><!-- Logo -->
+<td>Nordsec Ltd.</td><!-- Developer -->
+<td>&#x1F1F5;&#x1F1E6;<br />Panama</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="notreally">No (only with other Nordlocker users)</td><!--share files -->
+<td class="mixed">No Linux support</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM --><!-- Mail & Notes -->
+<td colspan="8" class="na"></td>
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="3" class="px">€34<br />(500 GB)</td>
+<td colspan="2" class="px">€85<br />(2 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>pCloud</td>
+<td><img src="https://blog.pcloud.com/wp-content/uploads/2018/04/pCloud-logo.png" class="icon" /></td><!-- Logo -->
+<td>pCloud AG</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (limited) (claimed)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no sync or sharing; encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes <em>(except E2EE files)</em></td><!--share files -->
+<td class="yes">Yes <em>(except E2EE files)</em></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="3" class="px">€50<br />(500 GB)</td>
+<td colspan="2" class="px">€100<br />(2 TB)</td>
+<td>Family plan and lifetime purchase options also available.</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Posteo</td>
+<td><img src="https://posteo.de/images/presse_logo_print.jpg" class="icon" /></td><!-- Logo -->
+<td>Posteo e.K. <span class="good">Non-Corporate</span></td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="mixed">Cash via post</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>None</em></td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="almost tooltip">Yes (temporarily encrypted)<span class="tooltiptext">The data will be temporarily decrypted whenever modifications are made, e.g. in the browser or via an app using CalDAV</span></td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="mixed">Yes, except tasks</td><!-- access in browser -->
+<!-- Mail -->
+<td class="almost tooltip">Yes (temporarily decrypted)<span class="tooltiptext">emails are temporarily decrypted when accessing them, e.g. via browser or an IMAP client</span></td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€21<br />(5 GB)</td>
+<td class="px">€51<br />(15 GB)</td>
+<td colspan="6" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>ProtonMail<br /><span style="font-weight: normal;">+ Calendar<br />+ Drive</span></td>
+<td><img src="https://protonapps.com/img/protonmail-logo-purple.png" class="icon" /></td><!-- Logo -->
+<td>Proton Technolo&shy;gies AG</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="almost">Clients are free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="no">No</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No tasks</td><!-- has tasks? -->
+<td class="no">No</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="almost"><span class="tooltip">Desktop only<span class="tooltiptext">Windows, macOS, Linux</span></span><em> (via Proton&shy;Mail Bridge)</em></td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€48<br />(5 GB)</td>
+<td class="px">€168<br />(15 GB)</td>
+<td class="px na"></td>
+<td class="px">€228<br />(20 GB)</td>
+<td colspan="4" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Radicale</td>
+<td><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.si4W0c9eO8ur6SWcNAOLkwAAAA%26pid%3DApi&f=1" class="icon" /></td><!-- Logo -->
+<td>Kozea Commu&shy;nity <span class="good">Non-Corporate</span> <span class="good">Non-Profit</span></td><!-- Developer -->
+<td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
+<td class="yes"><em>(no payment)</em></td><!-- Anonymous payments -->
+<td class="no">No</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="no">In transit only</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, Unix</td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="no">No</td><!-- access in browser -->
+<!-- Mail & Other -->
+<td colspan="5" class="na"></td>
+<!-- Other -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="8" class="px na"></td>
+<td>Self-hosted cost: either hardware upfront costs (~€50 for RaspPi) or ~€12 p.a. for cheap VPS</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Runbox</td>
+<td><img src="https://runbox.com/_img/index/logobox.png" class="icon" /></td><!-- Logo -->
+<td>Runbox Solutions As</td><!-- Developer -->
+<td>&#x1F1F3;&#x1F1F4;<br />Norway</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="no">In transit only</td><!-- encrypted at rest -->
+<td><em>None</em></td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="almost">FTP</td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="no">No</td><!--share files -->
+<td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="no">No tasks</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na">not avaiable</td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px tooltip">€30<br />(10 GB)<span class="tooltiptext">additional 1 GB for files</span></td>
+<td class="px tooltip">€40<br />(25 GB)<span class="tooltiptext">additional 2 GB for files</span></td>
+<td class="px tooltip">€70<br />(50 GB)<span class="tooltiptext">additional 5 GB for files</span></td>
+<td class="px tooltip">€189<br />(20 GB)<span class="tooltiptext">additional 50 GB for email</span></td>
+<td class="px tooltip">€825<br />(100 GB)<span class="tooltiptext">additional 50 GB for emails</span></td>
+<td colspan="3" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Seafile<br /><span style="font-weight: normal; font-style: italic;">(various<br />hosters)</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/en/3/39/Seafile_logo.png" class="icon" /></td><!-- Logo -->
+<td>Seafile Ltd.</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1F3;<br />China</td><!-- Jurisdiction -->
+<td>depends on hoster</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted libraries" with limited features, e.g. no WebDAV; furthermore, if encrypted libraries are accessed through a web browser, the server will receive the password and store it for one hour.</span></td><!-- E2EE -->
+<td class="yes">WebDAV <em>(not for E2EE files)</em> &amp; API</td><!-- WebDAV or API -->
+<td class="yes tooltip">Yes (Only&shy;Office or Colla&shy;bora Office)<span class="tooltiptext">If E2EE files are accessed through a web browser, the server will receive the password and store it for one hour.</span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="4" class="px" style="vertical-align: top;">
+<em>Single user prices:</em><br />Luckycloud:<br />YourSecureCloud:<br /></td>
+<td class="px" style="vertical-align: top;"><br />€86<br />€96<br /> </td>
+<td class="px" style="vertical-align: top;"><br />€218<br /><br /></td>
+<td class="px" style="vertical-align: top;"><br />€426<br />€600<br /></td>
+<td class="px" style="vertical-align: top;"><br />€815<br /><br /></td>
+<td>Self-hosted cost: either hardware upfront costs (~€50 for RaspPi + ~€50 for 1 TB HDD) or ~€60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>StartMail</td>
+<td><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pcmag.com%2Fimagery%2Freviews%2F00n2laCY7ynJTeGAxIFA09Q-4.1576719576.fit_scale.size_760x427.png&f=1&nofb=1" class="icon" /></td><!-- Logo -->
+<td>StartMail B.V.</td><!-- Developer -->
+<td>&#x1F1F3;&#x1F1F1;<br />Netherlands</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>None</em></td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="no">Neither calendar nor tasks</td><!-- has tasks? -->
+<td class="no">No</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="almost tooltip">Yes (temporarily decrypted)<span class="tooltiptext">emails are temporarily decrypted when accessing them, e.g. via browser or an IMAP client</span></td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€53<br />(10 GB)</td>
+<td colspan="8" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Sync.com</td>
+<td><img src="https://www.sync.com/assets-images/sync_logo.svg" class="icon" /></td><!-- Logo -->
+<td>Sync.com, Inc. </td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1E6;<br />Canada</td><!-- Jurisdiction -->
+<td class="yes">Crypto</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="yes tooltip">Yes (Microsoft Office Online)<span class="tooltiptext">Files will be temporarily decrypted</span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="mixed">No Linux support</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px na"></td>
+<td colspan="5" class="px">€85<br />(2 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Syncthing<br /><span style="font-weight: normal; font-style: italic;">(P2P sync)</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/SyncthingLogoHorizontal.svg/440px-SyncthingLogoHorizontal.svg.png" class="icon" /></td><!-- Logo -->
+<td>Syncthing Foundation  <span class="good">Non-Corporate</span> <span class="good">Non-Profit</span><!-- <span class="bad">Woke</span>--></td><!-- Developer -->
+<td>&#x1F1F8;&#x1F1EA;<br />Sweden</td><!-- Jurisdiction -->
+<td class="yes"><em>(no payment)</em></td><!-- Anonymous payments -->
+<td>n/a (server&shy;less)</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="tooltip">depends on setup<span class="tooltiptext">Always encrypted in transit. By default Syncthing syncs files directly between device without using a server. It is up to you whether you encrypt your devices's storage or not.</span></td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, Unix, Android</td><!-- apps -->
+<!-- File sync -->
+<td>n/a (server&shy;less)</td><!-- E2EE -->
+<td>n/a (server&shy;less) but <span class="tooltip">possible<span class="tooltiptext">You could set up one always-on device as a "server" which then makes the files available via WebDAV like a normal cloud server</span></span></td><!-- WebDAV or API -->
+<td class="no">No</td><!-- access/edit in browser -->
+<td class="no">No</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="mixed">iOS: no; Android: yes</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="8" class="px na"></td>
+<td>Self-hosted server cost: either hardware upfront costs (~€50 for RaspPi + ~€50 for 1 TB HDD) or ~€60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Tresorit</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Tresorit_logo.svg/440px-Tresorit_logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Tresorit AG</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
+<td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
+<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="9" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="na px"></td>
+<td colspan="3" class="px">€100<br />(500 GB)</td>
+<td colspan="2" class="px">€240<br />(2.5 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Tutanota</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Tutanota_Logo.png/440px-Tutanota_Logo.png" class="icon" /></td><!-- Logo -->
+<td>Tutao GmbH</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="almost">Clients are free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No tasks</td><!-- has tasks? -->
+<td class="no">No</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="no">No</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td colspan="2" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€36<br />(11 GB)</td>
+<td colspan="2" class="px">€132<br />(101 GB)</td>
+<td colspan="5" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>W&ouml;lkli<br /><span style="font-weight: normal;">Cloud &amp;<br />Mail</span></td>
+<td><img src="https://imgr.search.brave.com/mitiwVckUB-ZUF_1lUhtbbq_ThpI3dvWXa7EKGrmaOU/fit/250/250/ce/1/aHR0cHM6Ly93d3cu/Y29sbGFib3Jhb2Zm/aWNlLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOS8wNS93/b2Vsa2xpLWxvZ28t/cHBwLnBuZw" class="icon" /></td><!-- Logo -->
+<td>oriented.net LLC</td><!-- Developer -->
+<td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="yes">Free</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td><em>None, but can use Nextcloud apps</em></td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (Only&shy;Office or Colla&shy;bora Office)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">Not iOS; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="yes">Yes <em><span class="tooltip">(needs PGP support in client)<span class="tooltiptext">To use encrypted mail (zero access encryption), the user will need to decrypt them on the local device, e.g. using Thunderbird, or the OpenKeychain app on Android</span></span></em></td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">€206<br />(5 GB)</td>
+<td colspan="2" class="px na"></td>
+<td class="px">€185<br />(50 GB)</td>
+<td class="px">€401<br />(200 GB)</td>
+<td class="px">€709<br />(500 GB)</td>
+<td colspan="2" class="px na"></td>
+<td>Family plan also offered. Cloud and Mail have to be purchased separately.</td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Yahoo Mail</td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Yahoo%21_Mail_%282019%29.svg/300px-Yahoo%21_Mail_%282019%29.svg.png" class="icon" /></td><!-- Logo -->
+<td>Yahoo, Inc.  <span class="bad">PRISM</span> <span class="bad">Woke</span></td><!-- Developer -->
+<td>&nbsp;<br />&#x1F1FA;&#x1F1F8;<br />USA<br />&nbsp;</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="no">In transit only</td><!-- encrypted at rest -->
+<td>iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="na"></td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px">free<br />(1 TB)</td>
+<td colspan="5" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
+<td>Yandex<br /><span style="font-weight: normal;">Disk &amp;<br />Mail</span></td>
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Yandex_logo.svg/440px-Yandex_logo.svg.png" class="icon" /></td><!-- Logo -->
+<td>Yandex N.V.</td><!-- Developer -->
+<td>&#x1F1F3;&#x1F1F1;<br />Netherlands<br />&#x1F1F7;&#x1F1FA;<br />Russia</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">WebDAV</td><!-- WebDAV or API -->
+<td class="yes">Yes (Microsoft Office Online)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="notreally">Not iOS; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="3" class="px">free<br />(unlimited)</td>
+<td colspan="2" class="px">€18<br />(100 GB)</td>
+<td colspan="2" class="px">€89<br />(1 TB)</td>
+<td class="px">€266<br />(3 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+<tr class="product">
+<td>Zoho<br />Workspace</td>
+<td><img src="https://www.zohowebstatic.com/sites/default/files/workplace-logo.png" class="icon" /></td><!-- Logo -->
+<td>Zoho Corp.</td><!-- Developer -->
+<td>&#x1F1EE;&#x1F1F3;<br />India<br />&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="no">No</td><!-- Anonymous payments -->
+<td class="yes">Yes</td><!-- 2FA -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="mixed">API</td><!-- WebDAV or API -->
+<td class="yes">Yes (Zoho Office)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="no tooltip">No<span class="tooltiptext">theoretically possible via 3rd party tools using Zoho's API but currently not supported by either FolderSync or AutoSync</span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="mixed">Yes, except tasks</td><!-- CardDAV/CalDAV -->
+<td class="yes">Yes</td><!-- access in browser -->
+<!-- Mail -->
+<td class="no">No</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- IMAP -->
+<td class="yes">Yes</td><!-- Webmail -->
+<!-- Other -->
+<td class="yes">Yes</td><!-- notes -->
+<td class="yes">Yes</td><!-- password manager -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px tooltip">€117<br />(30 GB)<span class="tooltiptext">Minimum 3 users who will get 30 GB each.</span></td>
+<td class="px  tooltip">€233<br />(100 GB)<span class="tooltiptext">Minimum 3 users who will get 100 GB each.</span></td>
+<td colspan="2" class="px tooltip">€117<br />(100 GB)<span class="tooltiptext">Minimum 3 users who can share 100 GB.</span></td>
+<td colspan="2" class="px tooltip">€223<br />(1 TB)<span class="tooltiptext">Minimum 3 users who can share 1 TB.</span></td>
+<td class="px tooltip">un&shy;dis&shy;closed<span class="tooltiptext">It is possible to upgrade beyond 1 TB, but prices are not disclosed on the website.</span></td>
+<td>Prices shown are for three users (team plans).</td><!-- price comment -->
+</tr>
+
+</tbody>
+</table>
+
+<h2>So, what's the conclusion?</h2>
+
+<p>There are multiple possibilities. Below I have set up five strategies how to manage your cloud setup.</p>
+
+<h3>Strategy 1: Don't bother and stay in the Big Tech ecosystem. At least it's comfortable and just works.</h3>
+
+<ul>
+<li><strong>Apple iCloud</strong> (€120 p.a. for 2 TB) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">Incompatible with Android and Linux</span></li>
+<li><strong>Google One</strong> (Drive &amp; Gmail) (€100 p.a. for 2 TB) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">Bond villains</span> <span class="bad">Incompatible with Linux</span></li>
+<li><strong>Microsoft 365</strong> (OneDrive &amp; Outlook.com) (€69 p.a. for 1 TB files and 50 GB mail) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">Spies on you</span>  <span class="bad">Incompatible with Linux</span></li>
+<li><em>Further choices:</em><ul>
+<li><strong>GMX/Mail.com</strong> (€96 p.a. for 500 GB files and 65 GB mail)  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">No sync client</span> - if the file storage and sync is not your priority</li>
+<li><strong>Yandex</strong> (€89 p.a. for 1 TB files and unlimited mail storage) <span class="bad">No privacy</span> - if you'd rather give your data to the Russians than the Americans</li>
+</ul>
+</ul>
+
+<p>All these companies offer the whole spectrum of sync and cloud services - files, mail, and PIM. You <em>will</em> get spied on, your data <em>will</em> be sold to advertisers, you <em>will</em> be locked into the ecosystem which no easy way to migrate your data, and you <em>will</em> have to use a proprietary operating system, but you also <em>will</em> be happy, because everything just works and is well integrated with each other. If you're using a Mac and an iPhone, going with iCloud is an obvious choice. If you need Microsoft Office you might as well use the 1 TB OneDrive you get for free with it (besides, I have to admit that Microsoft's family subscription is great value for money, especially if you buy it for half price from Amazon). It takes a strong will to opt out.</p>
+
+
+<h3>Strategy 2: Use a different one-stop solution, but one that claims to respect your privacy</h3>
+
+<ul>
+<li><strong>ecloud</strong> (€130 p.a. for 1 TB) <span class="good">Non-profit</span></li>
+<li><strong>Infomaniak</strong> (kDrive &amp; Workspace) (€60 p.a. for 2 TB) <span class="good">Hosted in Switzerland</span></li>
+<li><strong>Zoho Workspace</strong> (€223 p.a. for 1 TB) - targets business users rather than private individuals</li>
+<li><em>If you don't need a lot of cloud storage, these providers could also be interesting:</em><ul>
+<li><strong>Fastmail</strong> (€80 p.a. for 100 GB mail + 50 GB files)  <span class="bad">No file sync client</span></li>
+<li><strong>Kolab Now</strong> (€385 p.a. for 100 GB) <span class="good">Hosted in Switzerland</span> <span class="bad">No file sync client</span> <span class="bad">Expensive</span></li>
+<li><strong>Mailbox.org</strong> (€121 p.a. for 100 GB) <span class="good">Email with zero access encryption</span> <span class="bad">No file sync client</span></li>
+<li><strong>Mailfence</strong> (€90 p.a. for 20 GB mail + 24 GB files) <span class="good">Email with zero access encryption</span> <span class="bad">No file sync client</span></li>
+<li><strong>Runbox</strong> (€70 p.a. for 50 GB mail + 5 GB files) <span class="bad">No file sync client</span></li>
+<li><strong>Wölkli</strong> Cloud &amp; Mail (€391 for 5 GB mail + 50 GB files) <span class="good">Hosted in Switzerland</span> <span class="bad">Expensive</span></li>
+</ul>
+</ul>
+
+<p>These companies claim to respect your privacy, not scan your data, and not sell your data to advertisers. That's probably good enough for most people who don't want to be spied on and don't want to support the Big Tech monopolists, but also don't really need end-to-end encryption or protect their data from the government. Keep in mind that these companies can <em>claim</em> to not read your data, but there's nothing technically stopping them from it. If you <em>do</em> need or want that extra protection to keep your data safe from anyone's eyes, then you need to either get end-to-end encryption for all your services or you need to self-host at home.</p>
+
+<h3>Strategy 3: End-to-end encryption (E2EE) for everything</h3>
+
+<h4>Strategy 3a: E2EE one-stop solutions</h4>
+
+<ul>
+<li><strong>ProtonMail/Calendar/Drive</strong> (€228 p.a. for 20 GB) <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">No apps or sync for ProtonDrive yet</span> <span class="bad">Can't edit files in browser</span> <span class="bad">20 GB maximum storage</span> <span class="bad">No CalDAV/CardDAV</span> <span class="bad">No tasks in calendar</span> <span class="bad">no IMAP on mobile</span> <span class="bad">Expensive</span></li>
+</ul>
+
+<p>Sadly, there is only one provider out there that offers a combination of mail hosting, calendar/contacts, and file cloud with all items fully end-to-end encrypted. That one provider is Proton Technologies. Unfortunately, while ProtonMail is a great and mature product, the other offerings (ProtonCalendar and ProtonDrive) are still very immature and can't yet compete with the more specialised providers.</span>
+
+<h4>Strategy 3b: combination of "best in class" E2EE services</h4>
+
+<ul>
+<li>Variant 1 - best in class (€172 p.a. for 5 GB mail + 2 TB files) </li>
+<ul>
+<li>For email: <strong>ProtonMail</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their mobile app</span></li>
+<li>For contacts, calendar, and tasks: <strong>EteSync</strong> <span class="good">E2EE</span>  <span class="good">Open Source</span></li>
+<li>For file sync: <strong>Mega</strong> <span class="good">E2EE</span> <span class="good">Source available</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li></ul>
+<li>Variant 2 - a bit cheaper (€111 p.a. for 5 GB mail + 2 TB files)</li>
+<ul>
+<li>For email and contacts/calendar/tasks: <strong>Posteo</strong> <span class="good">Zero access encryption</span> <span class="good">Open Source</span> <span class="bad">Data will get temporarily decrypted</span> <span class="bad">No tasks in web interface</span></li>
+<li>For file sync: <strong>Filen</strong>  <span class="good">E2EE</span> <span class="good">Source available</span>  <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
+</ul></ul>
+
+<p>For encrypted mail there are many options, so you can choose whatever you like. ProtonMail is often recommended as the best one, but there are many other good ones. For encrypted calendars and contacts, the only good option is EteSync. Posteo is an interesting alternative to both ProtonMail and EyeSync, because it supports zero access encryption for not only email, but also contacts and calendars. Finally, there are several files clouds with end-to-end encryption, but only Mega and Filen have open source clients and support Linux. Of the two, Mega is the slightly superior choice as it has an API to integrate with other applications (e.g. FolderSync support for Android), and you can even set up WebDAV if you want.</p>
+
+
+<h3>Strategy 4: Self-host</h3>
+
+<ul>
+<li><strong>ecloud</strong> (based on Nextcloud)</li>
+<li><strong>Nextcloud</strong> + your own mail server <em>or</em> you keep your old email hoster and connect it to the Nextcloud mail app</li>
+<ul><li>If you don't want to spend too much time setting up your homeserver you may want to consider a plug-and-play solution such as <a href="https://www.homedrive.io/" target="_blank">Homedrive</a> or <a href="https://shop.nitrokey.com/shop/product/nextbox-116" target="_blank">Nextbox</a>.</li></ul>
+<li><strong>Kolab</strong> <span class="bad">No file sync client</span></li>
+</ul>
+
+<p>Self-hosting means taking full control of your data. Keep in mind that you should ideally self-host at home, on your own server. Renting a VPS might be easier, but in the end your hoster can still read your data if they really want to (or are forced by the government). However, self-hosting also has a number of downsides: software updates going wrong, home Internet going down, hardware problems, taking care of backups, ...</p>
+
+<footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
+<h2 style="text-align: center"><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></footer>
+</body>
+</html>
