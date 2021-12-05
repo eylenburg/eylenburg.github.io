@@ -62,6 +62,7 @@ border-left: none;
 font-weight: bold;
 }
 
+
 td:nth-last-of-type(1) {
 text-align: left;
 }
@@ -183,7 +184,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <col style="width: var(--product); font-weight: bold;" class="bdleft">
 <col style="width: var(--logo);" class="bdleft">
 <col span="7" style="width: var(--item);" class="bdleft">
-<col style="width: var(--oswidth);" class="bdleft">
+<col style="width: var(--oswidth); visibility: collapse;" class="bdleft"> <!-- hide the "dedicated apps" column -->
 <col span="15" style="width: var(--item);" class="bdleft">
 <col span="8" style="width: var(--price);" class="bdleft">
 <col style="width: var(--comment);" class="bdleft">
@@ -217,7 +218,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Soft&shy;ware li&shy;cense</td>
 <td>Offered for self-hosting?</td>
 <td>Data encryp&shy;ted at rest?</td>
-<td class="tooltip">Dedi&shy;cated apps?<span class="tooltiptext">Not to be confused with supported operating systems - most OS have native support for e.g. calendar sync via CalDAV, and emails can be access with any client app as long as the provider supports IMAP.</td>
+<td class="tooltip"><!--Dedi&shy;cated apps?<span class="tooltiptext">Not to be confused with supported operating systems - most OS have native support for e.g. calendar sync via CalDAV, and emails can be access with any client app as long as the provider supports IMAP.--></td><!-- content hidden -->
 <!-- File sync -->
 <td>End-to-end encryp&shy;tion?</td>
 <td>WebDAV (or other <span class="tooltip">API<span class="tooltiptext">for inte&shy;gration in 3rd-party apps</span></span>)?</td>
@@ -1066,7 +1067,7 @@ Owncube (single user only!):</td>
 </tr>
 
 <tr class="product">
-<td>Radicale</td>
+<td>Radicale<br /><span style="font-weight: normal; font-style: italic;">(self-hosted)</span></td>
 <td><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.si4W0c9eO8ur6SWcNAOLkwAAAA%26pid%3DApi&f=1" class="icon" /></td><!-- Logo -->
 <td>Kozea Commu&shy;nity <span class="good">Non-Corporate</span> <span class="good">Non-Profit</span></td><!-- Developer -->
 <td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
@@ -1107,7 +1108,7 @@ Owncube (single user only!):</td>
 <td class="almost">FTP</td><!-- WebDAV or API -->
 <td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
 <td class="no">No</td><!--share files -->
-<td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
+<td class="almost">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FreeFileSync or GoodSync</span></span></td><!-- desktop sync -->
 <td class="notreally">iOS: no; Android via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM -->
@@ -1238,7 +1239,7 @@ Owncube (single user only!):</td>
 <td>n/a (server&shy;less) but <span class="tooltip">possible<span class="tooltiptext">You could set up one always-on device as a "server" which then makes the files available via WebDAV like a normal cloud server</span></span></td><!-- WebDAV or API -->
 <td class="no">No</td><!-- access/edit in browser -->
 <td class="no">No</td><!--share files -->
-<td class="yes">Yes</td><!-- desktop sync -->
+<td class="yes">Yes <span class="tooltip">(even on Unix)<span class="tooltiptext">Official supported are: FreeBSD, NetBSD, OpenBSD, DragonflyBSD, Illumos, and Solaris</span></span></td><!-- desktop sync -->
 <td class="mixed">iOS: no; Android: yes</td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM, Mail, Other -->
@@ -1471,11 +1472,11 @@ Owncube (single user only!):</td>
 <h3>Strategy 1: Don't bother and stay in the Big Tech ecosystem. At least it's comfortable and just works.</h3>
 
 <ul>
-<li><strong>Apple iCloud</strong> (€120 p.a. for 2 TB) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">Incompatible with Android and Linux</span></li>
-<li><strong>Google One</strong> (Drive &amp; Gmail) (€100 p.a. for 2 TB) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">Bond villains</span> <span class="bad">Incompatible with Linux</span></li>
-<li><strong>Microsoft 365</strong> (OneDrive &amp; Outlook.com) (€69 p.a. for 1 TB files and 50 GB mail) <span class="bad">Big Tech</span>  <span class="bad">Woke</span>  <span class="bad">Spies on you</span>  <span class="bad">Incompatible with Linux</span></li>
+<li><strong>Apple iCloud</strong> (€120 p.a. for 2 TB) <span class="bad">Big Tech</span>   <span class="bad">No privacy</span> <span class="bad">Incompatible with Android and Linux</span></li>
+<li><strong>Google One</strong> (Drive &amp; Gmail) (€100 p.a. for 2 TB) <span class="bad">Big Tech</span>   <span class="bad">No privacy</span> <span class="bad">Bond villains</span> <span class="bad">Incompatible with Linux</span></li>
+<li><strong>Microsoft 365</strong> (OneDrive &amp; Outlook.com) (€69 p.a. for 1 TB files and 50 GB mail) <span class="bad">Big Tech</span>   <span class="bad">Spies on you</span>  <span class="bad">Incompatible with Linux</span></li>
 <li><em>Further choices:</em><ul>
-<li><strong>GMX/Mail.com</strong> (€96 p.a. for 500 GB files and 65 GB mail)  <span class="bad">Woke</span>  <span class="bad">No privacy</span> <span class="bad">No sync client</span> - if the file storage and sync is not your priority</li>
+<li><strong>GMX/Mail.com</strong> (€96 p.a. for 500 GB files and 65 GB mail)   <span class="bad">No privacy</span> <span class="bad">No sync client</span> - if you care more about mail and PIM rather than file sync</li>
 <li><strong>Yandex</strong> (€89 p.a. for 1 TB files and unlimited mail storage) <span class="bad">No privacy</span> - if you'd rather give your data to the Russians than the Americans</li>
 </ul>
 </ul>
