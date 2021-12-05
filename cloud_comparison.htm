@@ -43,7 +43,10 @@ position: sticky;
 top: 0px;
 z-index: 10;
 background-color: #fff;
-border-left: 1px solid lightgrey !important;
+}
+
+thead.sticky tr td {
+border-left: 1px solid lightgrey;
 }
 
 td img {
@@ -58,10 +61,8 @@ td:first-child {
 text-align: left;
 white-space: nowrap;
 padding-right: 5px;
-border-left: none;
 font-weight: bold;
 }
-
 
 td:nth-last-of-type(1) {
 text-align: left;
@@ -135,9 +136,6 @@ background: green;
 font-size: x-small;
 }
 
-.bdleft {
-border-left: 1px solid lightgrey;
-}
 
 .px {
 text-align: right;
@@ -181,13 +179,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 
 <colgroup>
-<col style="width: var(--product); font-weight: bold;" class="bdleft">
-<col style="width: var(--logo);" class="bdleft">
-<col span="7" style="width: var(--item);" class="bdleft">
-<col style="width: var(--oswidth); visibility: collapse;" class="bdleft"> <!-- hide the "dedicated apps" column -->
-<col span="15" style="width: var(--item);" class="bdleft">
-<col span="8" style="width: var(--price);" class="bdleft">
-<col style="width: var(--comment);" class="bdleft">
+<col style="width: var(--product); font-weight: bold;">
+<col style="width: var(--logo);">
+<col span="7" style="width: var(--item);">
+<col style="width: var(--oswidth); visibility: collapse;"> <!-- hide the "dedicated apps" column -->
+<col span="15" style="width: var(--item);">
+<col span="8" style="width: var(--price);">
+<col style="width: var(--comment);">
 </colgroup>
 
 
