@@ -13,7 +13,6 @@
 :root {
 --product: 100px;
 --logo: 75px;
---oswidth: 90px;
 --item: 80px;
 --price: 50px;
 --comment: 350px;
@@ -26,7 +25,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--product) + var(--logo) + 23 * var(--item) + 8 * var(--price) + var(--comment));
+width: calc(var(--product) + var(--logo) + 22 * var(--item) + 8 * var(--price) + var(--comment));
 hyphens: auto;
 }
 
@@ -181,9 +180,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <colgroup>
 <col style="width: var(--product); font-weight: bold;">
 <col style="width: var(--logo);">
-<col span="7" style="width: var(--item);">
-<col style="width: var(--oswidth); visibility: collapse;"> <!-- hide the "dedicated apps" column -->
-<col span="15" style="width: var(--item);">
+<col span="22" style="width: var(--item);">
 <col span="8" style="width: var(--price);">
 <col style="width: var(--comment);">
 </colgroup>
@@ -192,7 +189,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <thead style="font-weight: bold;" class="sticky">
 
 <tr style="text-align: left; vertical-align: top; font-style: italic; text-decoration: underline;">
-<td colspan="10" rowspan="2">General information</td>
+<td colspan="9" rowspan="2">General information</td>
 <td colspan="6" rowspan="2">File sync</td>
 <td colspan="4" rowspan="2">Addressbook, Calendar &amp; Tasks</td>
 <td colspan="3" rowspan="2">Email</td>
@@ -216,15 +213,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Soft&shy;ware li&shy;cense</td>
 <td>Offered for self-hosting?</td>
 <td>Data encryp&shy;ted at rest?</td>
-<td class="tooltip"><!--Dedi&shy;cated apps?<span class="tooltiptext">Not to be confused with supported operating systems - most OS have native support for e.g. calendar sync via CalDAV, and emails can be access with any client app as long as the provider supports IMAP.--></td><!-- content hidden -->
 <!-- File sync -->
 <td>End-to-end encryp&shy;tion?</td>
 <td>WebDAV (or other <span class="tooltip">API<span class="tooltiptext">for inte&shy;gration in 3rd-party apps</span></span>)?</td>
 <td>Edit files in browser?</td>
 <td>Share files &amp; folders?</td>
-<td class="tooltip">Two-way sync with desktop?<span class="tooltiptext">Windows, macOS, and Linux</span></td>
+<td class="tooltip">Two-way sync with Desktop?<span class="tooltiptext">Windows, macOS, and Linux</span></td>
 <td class="tooltip">Two-way sync with mobile?<span class="tooltiptext">Android and iOS</span></td>
-<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM -->
 <td>End-to-end encryp&shy;tion?</td>
 <td>Has all three?</td>
@@ -262,7 +257,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td>
 <td class="no">No</td>
 <td class="mixed">Emails only in transit</td>
-<td>Windows, macOS, iOS</td>
 <!-- File sync -->
 <td class="no">No</td>
 <td class="no">No</td>
@@ -304,7 +298,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -335,7 +328,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -356,7 +348,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 <tr class="product">
-<td>ecloud</td>
+<td>ecloud<sup><a href="#note">1</a></sup></td>
 <td><img src="https://e.foundation/wp-content/uploads/2019/11/e-logo-noir-01.png" class="icon" /></td><!-- Logo -->
 <td>e.<wbr>foundation  <span class="good">Non-Profit</span></td><!-- Developer -->
 <td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
@@ -365,7 +357,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>None, but can use Nextcloud apps</em></td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -406,7 +397,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, Unix, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -435,7 +425,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV (and FTP)</td><!-- WebDAV or API -->
@@ -474,7 +463,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="mixed">Proprie&shy;tary but source avai&shy;lable (clients)</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -504,7 +492,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="notreally tooltip">Proprie&shy;tary<span class="tooltiptext">but mostly based on open source projects (sabre/dav)</span></td><!-- License -->
 <td class="no">No<span style="font-size: x-small;"><br />alternative: Baikal (also by fruux GmbH)</span></td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Android</td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -530,7 +517,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -569,7 +555,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
-<td>iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV (and FTP)</td><!-- WebDAV or API -->
@@ -608,7 +593,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no WebDAV</span></td><!-- E2EE -->
 <td class="yes">WebDAV <em>(not for E2EE files)</em></td><!-- WebDAV or API -->
@@ -638,7 +622,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="almost">Clients are free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -675,7 +658,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux,iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -704,7 +686,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
-<td><em>Kube client:</em> Windows, macOS, Linux</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -745,7 +726,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="almost">Mostly free<span style="font-size: x-small;"> (mostly based on Open-Xchange)</span></td><!-- License -->
 <td class="no">No<span style="font-size: x-small;"><br />alternative: Open-Xchange</span></td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>OX Drive:</em> Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -787,7 +767,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>None</em></td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -827,7 +806,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="mixed">Proprie&shy;tary but source avai&shy;lable (clients)</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="almost">API,<em> also WebDAV server via MegaCMD</em></td><!-- WebDAV or API -->
@@ -858,7 +836,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -898,7 +875,6 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no access in browser</span></td><!-- E2EE -->
 <td class="yes">WebDAV <em>(not for E2EE files)</em></td><!-- WebDAV or API -->
@@ -945,7 +921,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -974,7 +949,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (limited) (claimed)<span class="tooltiptext">optional "encrypted folder" with limited features, e.g. no sync or sharing; encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -1003,7 +977,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>None</em></td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1035,7 +1008,6 @@ Owncube (single user only!):</td>
 <td class="almost">Clients are free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -1074,7 +1046,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, Unix</td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1100,7 +1071,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
-<td><em>None</em></td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="almost">FTP</td><!-- WebDAV or API -->
@@ -1141,7 +1111,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (limited)<span class="tooltiptext">optional "encrypted libraries" with limited features, e.g. no WebDAV; furthermore, if encrypted libraries are accessed through a web browser, the server will receive the password and store it for one hour.</span></td><!-- E2EE -->
 <td class="yes">WebDAV <em>(not for E2EE files)</em> &amp; API</td><!-- WebDAV or API -->
@@ -1173,7 +1142,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>None</em></td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1203,7 +1171,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -1231,7 +1198,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="tooltip">depends on setup<span class="tooltiptext">Always encrypted in transit. By default Syncthing syncs files directly between device without using a server. It is up to you whether you encrypt your devices's storage or not.</span></td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, Unix, Android</td><!-- apps -->
 <!-- File sync -->
 <td>n/a (server&shy;less)</td><!-- E2EE -->
 <td>n/a (server&shy;less) but <span class="tooltip">possible<span class="tooltiptext">You could set up one always-on device as a "server" which then makes the files available via WebDAV like a normal cloud server</span></span></td><!-- WebDAV or API -->
@@ -1258,7 +1224,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
@@ -1287,7 +1252,6 @@ Owncube (single user only!):</td>
 <td class="almost">Clients are free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1309,7 +1273,7 @@ Owncube (single user only!):</td>
 </tr>
 
 <tr class="product">
-<td>W&ouml;lkli<br /><span style="font-weight: normal;">Cloud &amp;<br />Mail</span></td>
+<td>W&ouml;lkli<sup><a href="#note">1</a></sup><br /><span style="font-weight: normal;">Cloud &amp;<br />Mail</span></td>
 <td><img src="https://imgr.search.brave.com/mitiwVckUB-ZUF_1lUhtbbq_ThpI3dvWXa7EKGrmaOU/fit/250/250/ce/1/aHR0cHM6Ly93d3cu/Y29sbGFib3Jhb2Zm/aWNlLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOS8wNS93/b2Vsa2xpLWxvZ28t/cHBwLnBuZw" class="icon" /></td><!-- Logo -->
 <td>oriented.net LLC</td><!-- Developer -->
 <td>&#x1F1E8;&#x1F1ED;<br />Switzerland</td><!-- Jurisdiction -->
@@ -1318,7 +1282,6 @@ Owncube (single user only!):</td>
 <td class="yes">Free</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td><em>None, but can use Nextcloud apps</em></td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -1359,7 +1322,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
-<td>iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1391,7 +1353,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">WebDAV</td><!-- WebDAV or API -->
@@ -1430,7 +1391,6 @@ Owncube (single user only!):</td>
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
-<td>Windows, macOS, Linux, iOS, Android</td><!-- apps -->
 <!-- File sync -->
 <td class="no">No</td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
@@ -1462,6 +1422,8 @@ Owncube (single user only!):</td>
 
 </tbody>
 </table>
+  
+  <a name="note">1: File cloud and sync based on Nextcloud</a>
 
 <h2>So, what's the conclusion?</h2>
 
@@ -1485,16 +1447,16 @@ Owncube (single user only!):</td>
 <h3>Strategy 2: Use a different one-stop solution, but one that claims to respect your privacy</h3>
 
 <ul>
-<li><strong>ecloud</strong> (€130 p.a. for 1 TB) <span class="good">Non-profit</span></li>
-<li><strong>Infomaniak</strong> (kDrive &amp; Workspace) (€60 p.a. for 2 TB) <span class="good">Hosted in Switzerland</span></li>
+<li><strong>ecloud</strong> (€130 p.a. for 1 TB) <span class="good">Non-profit</span> <span class="good">Open Source</span></li>
+<li><strong>Infomaniak</strong> (kDrive &amp; Workspace) (€60 p.a. for 2 TB) <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span></li>
 <li><strong>Zoho Workspace</strong> (€223 p.a. for 1 TB) - targets business users rather than private individuals</li>
 <li><em>If you don't need a lot of cloud storage, these providers could also be interesting:</em><ul>
 <li><strong>Fastmail</strong> (€80 p.a. for 100 GB mail + 50 GB files)  <span class="bad">No file sync client</span></li>
-<li><strong>Kolab Now</strong> (€385 p.a. for 100 GB) <span class="good">Hosted in Switzerland</span> <span class="bad">No file sync client</span> <span class="bad">Expensive</span></li>
-<li><strong>Mailbox.org</strong> (€121 p.a. for 100 GB) <span class="good">Email with zero access encryption</span> <span class="bad">No file sync client</span></li>
+<li><strong>Kolab Now</strong> (€385 p.a. for 100 GB) <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">No file sync client</span> <span class="bad">Expensive</span></li>
+<li><strong>Mailbox.org</strong> (€121 p.a. for 100 GB) <span class="good">Email with zero access encryption</span> <span class="good">Open Source</span> <span class="bad">No file sync client</span></li>
 <li><strong>Mailfence</strong> (€90 p.a. for 20 GB mail + 24 GB files) <span class="good">Email with zero access encryption</span> <span class="bad">No file sync client</span></li>
-<li><strong>Runbox</strong> (€70 p.a. for 50 GB mail + 5 GB files) <span class="bad">No file sync client</span></li>
-<li><strong>Wölkli</strong> Cloud &amp; Mail (€391 for 5 GB mail + 50 GB files) <span class="good">Email with zero access encryption</span> <span class="good">Hosted in Switzerland</span> <span class="bad">Expensive</span></li>
+<li><strong>Runbox</strong> (€70 p.a. for 50 GB mail + 5 GB files) <span class="good">Open Source</span> <span class="bad">No file sync client</span></li>
+<li><strong>Wölkli</strong> Cloud &amp; Mail (€391 for 5 GB mail + 50 GB files) <span class="good">Email with zero access encryption</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Expensive</span></li>
 </ul>
 </ul>
 
