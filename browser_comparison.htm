@@ -52,6 +52,12 @@ td img {
 padding: 15px 0px;
 }
 
+tr.noncore td {
+hyphens: auto;
+word-wrap: break-word;
+white-space: normal;
+}
+
 .desktop,
 .android,
 .ios,
@@ -239,7 +245,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td colspan="3"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Edge_logo_%282019%29.png" height="100" /></td>
 <td colspan="3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Opera_2015_icon.svg/128px-Opera_2015_icon.svg.png" height="100" /></td>
 <td colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vivaldi_web_browser_logo.svg/128px-Vivaldi_web_browser_logo.svg.png" height="100" /></td>
-<td colspan="3"><img src="https://brave.com/wp-content/uploads/2019/03/brave-logo.png" height="100" /></td>
+<td colspan="3" style="vertical-align: middle;"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Brave_logo.svg/2880px-Brave_logo.svg.png" style="max-height: 100px; max-width: 200px;" /></td>
 </tr>
 
 <tr>
@@ -997,11 +1003,11 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop yes">Yes</td>
+<td class="desktop dropped">Dropped (v97)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop yes">Yes</td>
+<td class="desktop dropped">Dropped (v97)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -1012,7 +1018,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
 <!-- Brave -->
-<td class="desktop yes">Yes</td>
+<td class="desktop dropped">Dropped (v1.34)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -1706,7 +1712,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Ability to open file without saving<span class="tooltiptext">download files into a temporary location ("Open")<br />rather than save them in the Downloads folder ("Save")</span></td>
 <!-- Firefox -->
-<td class="desktop yes">Yes</td> <!-- https://www.ghacks.net/2021/06/28/firefox-91-download-behavior-when-opening-files-with-apps-changes/ announced that this would be dropped in v91 but as of v92 it still works -->
+<td class="desktop dropped">Dropped (v97)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2246,6 +2252,36 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 <tr>
+<td class="legend">In-browser proxy or VPN</td>
+<!-- Firefox -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop yes">Yes (free)</td>
+<td class="android yes">Yes (free)</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop yes">Yes (Tor tabs)</td>
+<td class="android no">No</td>
+<td class="ios almost">Yes (paid)</td>
+</tr>
+
+<tr>
 <td class="legend">Automatic upgrading to HTTPS</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
@@ -2306,6 +2342,37 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr> 
 
 <tr>
+<td class="legend">FTP support</td>
+<!-- Firefox -->
+<td class="desktop dropped tooltip">Dropped (v90)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
+<!-- Safari -->
+<td class="desktop almost">Read-only</td>
+<td class="ios_wide almost">Read-only</td>
+<!-- Chrome -->
+<td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
+<!-- Edge -->
+<td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
+<!-- Opera -->
+<td class="desktop dropped tooltip">Dropped (v74)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
+<!-- Vivaldi -->
+<td class="desktop dropped tooltip">Dropped (v3.6)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<!-- Brave -->
+<td class="desktop dropped tooltip">Dropped (v1.8)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
+<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
+</tr>
+
+
+<tr>
 <td class="legend">DNS-over-HTTPS</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
@@ -2333,7 +2400,8 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
-</tr> 
+</tr>
+
 
 <tr>
 <td class="legend semititle"><br />Customization</td>
@@ -2741,31 +2809,62 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="ios"></td>
 </tr>
 
+<tr class="noncore">
+<td class="legend"><br />Notable non-browser features</td>
+<!-- Firefox -->
+<td class="desktop"><span class="yes">PDF reader</span>;<br /><span class="dropped">>RSS feed reader (dropped v64)</span></td>
+<td class="android"><span class="yes">System-wide password manager</span></td>
+<td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span></span></td>
+<!-- Safari -->
+<td class="desktop"><span class="yes">PDF reader</span>;<br /><span class="dropped">RSS reader (dropped v11)</span></td>
+<td class="ios_wide"><span class="yes">PDF reader</span>;<br /><span class="dropped">RSS reader (dropped v11)</span></td>
+<!-- Chrome -->
+<td class="desktop"><span class="yes">PDF reader</span></td>
+<td class="android"><span class="yes">RSS reader, <br />system-wide password manager</span></td>
+<td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span></span></td>
+<!-- Edge -->
+<td class="desktop"><span class="yes">PDF reader</span>, <br /><span class="almost">RSS reader (experimental)</span>;<br /><span class="dropped">ePub reader (dropped v79)</span></td>
+<td class="android"><span class="yes">System-wide password manager</span></td>
+<td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span></span></td>
+<!-- Opera -->
+<td class="desktop"><span class="yes">PDF reader, <br />RSS reader, <br />Crypto wallet, <br />instant messengers, <br />music streaming</span>;<br /><span class="dropped">Bittorrent client, <br />e-mail client, <br />IRC client, <br />Usenet client, <br />text notes (all dropped v15), <br />P2P file sharing (dropped v12)</span></td>
+<td class="android"><span class="yes">RSS reader, <br />Crypto wallet</span></td>
+<td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span>, <br />Crypto wallet</span></td>
+<!-- Vivaldi -->
+<td class="desktop"><span class="yes">PDF reader, <br />RSS reader, <br />E-mail client, <br />calendar, <br />text notes</span></td>
+<td class="android_wide"><span class="yes">Text notes</span></td>
+<!-- Brave -->
+<td class="desktop"><span class="yes">PDF reader, <br />RSS reader, <br />Bittorrent client, <br />Crypto wallet, <br />video calling</span></td>
+<td class="android"><span class="yes">RSS reader, <br />Crypto wallet</span></td>
+<td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span>, <br />RSS reader, <br />Crypto wallet</span></td>
+</tr>
+
+<!--
 <tr>
 <td class="legend">PDF reader</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop yes">Yes</td>
 <td class="ios yes">Yes</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">iOS/WebKit feature</span></td>
@@ -2773,29 +2872,29 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">RSS newsfeed reader</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop ext"><span class="dropped">Dropped (v64)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop dropped">Dropped (v11)</td>
 <td class="ios_wide dropped">Dropped (v11)</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop almost"><span class="tooltip">experimental<span class="tooltiptext">also Dropped (v20), as Internet Explorer had this function</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
@@ -2803,119 +2902,63 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">Bittorrent client</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop dropped">Dropped (v15)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop no">No</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
 
-<tr>
-<td class="legend">FTP client</td>
-<!-- Firefox -->
-<td class="desktop dropped tooltip">Dropped (v90)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Safari -->
-<td class="desktop almost">Read-only</td>
-<td class="ios_wide almost">Read-only</td>
-<!-- Chrome -->
-<td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Edge -->
-<td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Opera -->
-<td class="desktop dropped tooltip">Dropped (v74)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Vivaldi -->
-<td class="desktop dropped tooltip">Dropped (v3.6)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<!-- Brave -->
-<td class="desktop dropped tooltip">Dropped (v1.8)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-</tr> 
 
-<tr>
-<td class="legend">In-browser proxy or VPN</td>
-<!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop yes">Yes (free)</td>
-<td class="android yes">Yes (free)</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop yes">Yes (Tor tabs)</td>
-<td class="android no">No</td>
-<td class="ios almost">Yes (paid)</td>
-</tr> 
+
+
 
 <tr>
 <td class="legend">Crypto wallet</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios dropped">Dropped</td>
@@ -2924,29 +2967,29 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">E-mail client</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop dropped tooltip">Dropped (v0.1)<span class="tooltiptext">Mozilla Application Suite had this function</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop dropped">Dropped (v15)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
@@ -2954,29 +2997,29 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">IRC client</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop dropped tooltip">Dropped (v0.1)<span class="tooltiptext">Mozilla Application Suite had this function</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop dropped">Dropped (v15)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop no">No</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
@@ -2984,29 +3027,29 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">Usenet client</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop dropped tooltip">Dropped (v0.1)<span class="tooltiptext">Mozilla Application Suite had this function</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop dropped">Dropped (v15)</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop no">No</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
@@ -3014,29 +3057,29 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend tooltip">Notes manager<span class="tooltiptext">ignoring very simple plain text notes, e.g. as part of Edge's <em>Collections</em> or Opera's <em>Flow</em> feature</span></td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop yes">Yes</td>
 <td class="android_wide yes">Yes</td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
@@ -3044,33 +3087,34 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr>
 <td class="legend">Other notable features</td>
-<!-- Firefox -->
+<!- - Firefox - ->
 <td class="desktop"><span class="dropped tooltip">Dropped: <br />HTML editor (v0.1)<span class="tooltiptext">Mozilla Application Suite had this function</span></span></td>
 <td class="android"><span class="yes">System-wide<br />password<br />manager</span></td>
 <td class="ios"></td>
-<!-- Safari -->
+<!- - Safari - ->
 <td class="desktop"></td>
 <td class="ios_wide"></td>
-<!-- Chrome -->
+<!- - Chrome - ->
 <td class="desktop"></td>
 <td class="android"><span class="yes">System-wide<br />password<br />manager</span></td>
 <td class="ios"></td>
-<!-- Edge -->
+<!- - Edge - ->
 <td class="desktop"><span class="dropped">Dropped: <br />ePub reader (v79)</span></td>
 <td class="android"><span class="yes">System-wide<br />password<br />manager</span></td>
 <td class="ios"></td>
-<!-- Opera -->
+<!- - Opera - ->
 <td class="desktop"><span class="yes tooltip">Instant messengers<span class="tooltiptext">Facebook Messenger, Instagram, Telegram, Twitter, VK, WhatsApp</span></span><br /><span class="yes tooltip">Music streaming<span class="tooltiptext">Apple Music, Deezer, Gaana, SoundCloud, Spotify, Tidal, YouTube Music</span></span><br /><span class="dropped">Dropped: <br /><span class="tooltip">P2P file sharing (v12)<span class="tooltiptext">Opera Unite</span></span></span></td>
 <td class="android"></td>
 <td class="ios"></td>
-<!-- Vivaldi -->
+<!- - Vivaldi - ->
 <td class="desktop"><span class="yes">Calendar</span></td>
 <td class="android_wide"></td>
-<!-- Brave -->
+<!- - Brave - ->
 <td class="desktop"><span class="yes tooltip">Video calling<span class="tooltiptext">based on Jitsi, with free and premium tiers</span></td>
 <td class="android"></td>
 <td class="ios"></td>
-</tr> 
+</tr>
+-->
 
 </tbody>
 
