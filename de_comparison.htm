@@ -20,7 +20,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 15 * var(--dewidth));
+width: calc(var(--legendwidth) + 7 * var(--dewidth));
 }
 
 #bottom.table {
@@ -202,11 +202,15 @@ background-color: #aaa;
 
 <h1>Comparison of Linux and Unix Desktop Environments</h1>
 
-<p>The below table shows a comparison of the main 15 desktop environments available for Linux and Unix.<br /><br />
+<p>The below table shows a comparison of the main desktop environments available for Linux and Unix.<br /><br />
 There are the Big 2 - KDE and GNOME - as well as some smaller ones and lots of forks and variants of the big ones.<br /><br />
-Especially since the controversial initial release of GNOME 3, there have been lots of variants and forks: Unity, Mate, Cinnamon, as well as Solus's Budgie, and elementaryOS's Pantheon (the latter two are not forks strictly speaking, however they use some core parts of the Gnome stack, e.g. Mutter as window manager or Gnome apps). Unity has been dropped by Canonical and is now developed by the community, renamed to UnityX (Unity 7 for desktops) and Lorimi(Unity 8 for phones), which are the defaults in the Ubuntu Unity and Ubuntu Touch distributions, respectively.<br /><br />KDE only had one notable fork, Trinity, which is based on KDE 3.<br /><br />Other notable desktop environments include LXQt (a merger of LXDE and Razor-qt), Deepin Desktop, Lumina, and Enlightenment and its fork Moksha.</p>
+Especially since the controversial initial release of GNOME 3, there have been lots of variants and forks: Mate (a continuation of GNOME 2), Linux Mint's Cinnamon, Ubuntu's Unity, Solus's Budgie, elementaryOS's Pantheon, and pop_OS!'s COSMIC (strictly speaking not all of these are forks, but they at least use some core parts of the Gnome stack, e.g. Mutter as their window manager, or Gnome apps). <br /><br />KDE only had one notable fork, Trinity, which is a continuation of KDE 3.<br /><br />Other notable desktop environments not derived from either GNOME or KDE include LXQt (a merger of LXDE and Razor-qt), Deepin Desktop, Lumina, as well as Enlightenment and its fork Moksha.</p>
 
-<h2 class="center">Comparison of Linux/Unix Desktop Environments</h2>
+<hr>
+<p style="font-weight: bold; font-size: large;;"><a href="cloud_comparison_2022old.htm">Click here to see an older version of this comparison which includes additional desktop environments (Budgie, Pantheon, Deepin, UKUI, CDE, Enlightenment, Trinity, UnityX, and Lumina)</a>. This extended comparison was up to date as of beginning 2022 but will not be updated anymore.</p>
+<hr>
+
+<h2 class="center">Comparison of Linux/Unix Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
 <p class="center" style="color: red; font-size: small;">Last updated: January 2022</p>
 
@@ -221,17 +225,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <!-- end 4x popular alternatives -->
-<col style="border-left: double; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<!-- end 4x niche -->
-<col style="border-left: double; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<col style="border-left: 1px solid lightgrey; border-right: double; width: var(--dewidth);">
-<!-- end 5x super niche -->
 </colgroup>
 
 <thead>
@@ -243,23 +236,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td style="width: var(--dewidth);"></td>
 <td style="width: var(--dewidth);"></td>
 <td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-<td style="width: var(--dewidth);"></td>
-</tr>
-
-<tr class="groups" style="font-size: large; font-weight: bold; border: none;">
-<td></td>
-<td colspan="2">The Two Main Competitors</td>
-<td colspan="4">Popular Alternatives</td>
-<td colspan="4">Niche Desktop Environments</td>
-<td colspan="5">Very Niche Desktop Environments</td>
 </tr>
 
 <tr style="font-size: larger; font-weight: bold;">
@@ -270,41 +246,37 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <th>MATE</th>
 <th>Cinnamon</th>
 <th>LXQt</th>
-<th>Pantheon</th>
-<th>Deepin (DDE)</th>
-<th>Budgie</th>
-<th>UKUI</th>
-<th>Common (CDE)</th>
-<th>Enlightenment</th>
-<th>Trinity (TDE)</th>
-<th>UnityX</th>
-<th>Lumina</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 <td></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Plasma_coloured_logo.svg/200px-Plasma_coloured_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Gnomelogo.svg/180px-Gnomelogo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Xfce_logo.svg/128px-Xfce_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mate-logo.svg/128px-Mate-logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cinnamon-logo.svg/128px-Cinnamon-logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Helix_lxqt.svg/311px-Helix_lxqt.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://raw.githubusercontent.com/elementary/brand/master/logomark.svg" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Deepin_logo.svg/120px-Deepin_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Budgie.svg/200px-Budgie.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td style="vertical-align: middle;"><!-- <img src="https://www.ukui.org/upload/202006/1592909933.png" style="vertical-align: middle;" />--> <img src="pics/de_comp/ukui_logo.png" style="height: 90px; max-width: 150px"/ ></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Common_Desktop_Environment_logo.svg/200px-Common_Desktop_Environment_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Enlightenment_Logo.svg/128px-Enlightenment_Logo.svg.png" style="filter:brightness(0%); height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Trinity_DE_logo_crystal.png/100px-Trinity_DE_logo_crystal.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Unity_logo.svg/128px-Unity_logo.svg.png" style="height: 100px; max-width: 190px" /></td>
-<td><img src="https://lumina-desktop.org/images/logo.png" style="height: 100px; max-width: 190px" /></td>
+<td><img src="pics/logos/desktops/plasma.png" style="height: 100px; max-width: 190px" /></td>
+<td><img src="pics/logos/desktops/gnome.png" style="height: 100px; max-width: 190px" /></td>
+<td><img src="pics/logos/desktops/xfce.png" style="height: 100px; max-width: 190px" /></td>
+<td><img src="pics/logos/desktops/mate.png" style="height: 100px; max-width: 190px" /></td>
+<td><img src="pics/logos/desktops/cinnamon.png" style="height: 100px; max-width: 190px" /></td>
+<td style="vertical-align: middle; "><img src="pics/logos/desktops/lxqt.png" style="max-height: 100px; max-width: 190px" /></td>
 </tr>
 
 <tr>
-<td class="semititle">History</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">General</td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
+
+
+<tr>
+<td>License</td>
+
+<td>GPL</td> <!-- Plasma -->
+<td>GPL</td> <!-- Gnome -->
+
+<td>GPL, LGPL, BSD</td> <!-- Xfce -->
+<td>GPL, LGPLv2</td> <!-- MATE -->
+<td>GPL</td> <!-- Cinnamon -->
+<td>GPL, LGLP</td> <!-- LXQt -->
+</tr>
+
 
 <tr>
 <td>First release</td>
@@ -316,17 +288,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>2011</td> <!-- MATE -->
 <td>2011</td> <!-- Cinnamon -->
 <td>2013</td> <!-- LXQt -->
-
-<td>2011</td> <!-- Pantheon -->
-<td>2013</td> <!-- Deepin -->
-<td>2013</td> <!-- Budgie -->
-<td>2016</td> <!-- UKUI -->
-
-<td>1993</td> <!-- CDE -->
-<td>1996</td> <!-- Enlightenment -->
-<td>2010</td> <!-- Trinity -->
-<td>2010</td> <!-- Unity -->
-<td>2012</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -340,48 +301,28 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gnomeapp">GNOME 3</td> <!-- Cinnamon -->
 <td>LXDE &amp; Razor-qt</td> <!-- LXQt -->
 
-<td>-</td> <!-- Pantheon -->
-<td>-</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td class="gnomeapp">MATE</td> <!-- UKUI -->
-
-<td>1993</td> <!-- CDE -->
-<td>1996</td> <!-- Enlightenment -->
-<td class="kdeapp">KDE 3.5</td> <!-- Trinity -->
-<td class="gnomeapp">GNOME 3</td> <!-- Unity -->
-<td>-</td> <!-- Lumina -->
-</tr>
-
 
 <tr>
-<td>Raison d'être</td>
+<td>Corporate and government backing</td>
 
-<td>Creation of a free and non-commercial desktop environment for Linux</td> <!-- Plasma -->
-<td>Started as a GTK-based KDE alternative due to Qt's non-free license (until 1999)</td> <!-- Gnome -->
+<td class="line">Blue Systems, Canonical, Google, Qt Group, SUSE</td> <!-- Plasma -->
+<td class="line">IBM (Red Hat), Canonical, Google, SUSE, System76</td> <!-- Gnome -->
 
-<td>Originally started as a Linux clone of CDE</td> <!-- Xfce -->
-<td>Continuation of GNOME 2 when GNOME 3 was released</td> <!-- MATE -->
-<td>Desktop environment created for the Linux Mint distribution</td> <!-- Cinnamon -->
-<td>Lightweight desktop environment, de facto successor of LXDE</td> <!-- LXQt -->
+<td class="line">-</td> <!-- Xfce -->
+<td class="line">-</td> <!-- MATE -->
+<td class="line">-</td> <!-- Cinnamon -->
+<td class="line">-</td> <!-- LXQt -->
 
-<td>Desktop environment created for the elementary OS distribution</td> <!-- Pantheon -->
-<td>Desktop environment created for the Deepin distribution</td> <!-- Deepin -->
-<td>Desktop environment created for the Solus distribution</td> <!-- Budgie -->
-<td>Desktop environment created for the Ubuntu Kylin distribution</td> <!-- UKUI -->
 
-<td>Former joint venture of HP, IBM, Sun and USL to create a standard UNIX desktop</td> <!-- CDE -->
-<td>Sophisticated window manager that slowly turned into a desktop environment</td> <!-- Enlightenment -->
-<td>Continuation of KDE 3 when KDE Plasma 4 was released</td> <!-- Trinity -->
-<td>Desktop environment created for the Ubuntu distribution (until 2017)</td> <!-- Unity -->
-<td>Desktop environment created for PC-BSD &rarr; TrueOS &rarr; Project Trident distribution</td> <!-- Lumina -->
 </tr>
+
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">Application suite<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">May include inactive, experimental or 3rd party apps.<br />blue/orange shading = KDE/GNOME app or fork;<br />blue/orange font = uses Qt/GTK</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Application suite<span class="tooltip" style="color: blue; text-decoration: none;"> (readme)<span class="tooltiptext">May include inactive, experimental or 3rd party apps.<br />blue/orange shading = KDE/GNOME app or fork;<br />blue/orange font = uses Qt/GTK</span></span></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -395,16 +336,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit">GTK</td> <!-- Cinnamon -->
 <td class="qttoolkit">Qt</td> <!-- LXQt -->
 
-<td class="gtktoolkit">GTK</td> <!-- Pantheon -->
-<td class="qttoolkit tooltip">DTK<span class="tooltiptext">fork of Qt</span></td> <!-- Deepin -->
-<td class="gtktoolkit tooltip">GTK<span class="tooltiptext">Migration to EFL announced</span></td> <!-- Budgie -->
-<td class="qttoolkit">Qt</td> <!-- UKUI -->
-
-<td>Motif</td> <!-- CDE -->
-<td>EFL</td> <!-- Enlightenment -->
-<td class="qttoolkit tooltip">TQt<span class="tooltiptext">fork of Qt 3</span></td> <!-- Trinity -->
-<td>Nux</td> <!-- Unity -->
-<td class="qttoolkit">Qt</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -418,16 +349,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gnomeapp tooltip">Muffin<span class="tooltiptext">fork of Mutter</span></td> <!-- Cinnamon -->
 <td class="tooltip">Openbox<span class="tooltiptext">fork of Blackbox</span></td> <!-- LXQt -->
 
-<td class="gnomeapp tooltip">Gala<span class="tooltiptext">fork of Mutter</span></td> <!-- Pantheon -->
-<td class="kdeapp tooltip">dde-kwin<span class="tooltiptext">fork of KWin</span></td> <!-- Deepin -->
-<td class="gnomeapp tooltip">budgie-wm<span class="tooltiptext">fork of Mutter</span></td> <!-- Budgie -->
-<td class="kdeapp tooltip">ukui-kwin<span class="tooltiptext">fork of KWin</span></td> <!-- UKUI -->
-
-<td>dtwm</td> <!-- CDE -->
-<td tooltip>Enlightenment<span class="tooltiptext">fork of Fvwm</span></td> <!-- Enlightenment -->
-<td class="kdeapp tooltip">TWin<span class="tooltiptext">fork of KWin</span></td> <!-- Trinity -->
-<td>Compiz</td> <!-- Unity -->
-<td class="tooltip">Fluxbox<span class="tooltiptext">fork of Blackbox</span></td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -441,16 +362,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>LightDM</td> <!-- Cinnamon -->
 <td class="qttoolkit">SDDM</td> <!-- LXQt -->
 
-<td>LightDM</td> <!-- Pantheon -->
-<td>LightDM</td> <!-- Deepin -->
-<td>LightDM</td> <!-- Budgie -->
-<td>LightDM</td> <!-- UKUI -->
-
-<td>dtlogin</td> <!-- CDE -->
-<td>Entrance</td> <!-- Enlightenment -->
-<td class="kdeapp qttoolkit tooltip">TDM<span class="tooltiptext">fork of KDM</span></td> <!-- Trinity -->
-<td>LightDM</td> <!-- Unity -->
-<td class="qttoolkit">SDDM</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -464,20 +375,10 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Pantheon -->
-<td class="kdeapp qttoolkit tooltip">QtWebView<span class="tooltiptext">Blink, fork of WebKit, fork of KHTML</span></td> <!-- Deepin -->
-<td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>-</td> <!-- Enlightenment -->
-<td class="kdeapp qttoolkit">KHTML</td> <!-- Trinity -->
-<td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Unity -->
-<td>-</td> <!-- Lumina -->
 </tr>
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -491,16 +392,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp tooltip">Muffin<span class="tooltiptext">fork of Nautilus</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">PCManFM-Qt</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Files</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin File Manager</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">Nautilus or <span class="tooltip">Nemo<span class="tooltiptext">fork of Nautilus</span></span></td> <!-- Budgie -->
-<td class="qttoolkit">Peony</td> <!-- UKUI -->
-
-<td rowspan="2" style="vertical-align: middle;">dtfile</td> <!-- CDE -->
-<td>Enlightenment File Manager</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Konqueror</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">Nautilus or <span class="tooltip">Nemo<span class="tooltiptext">fork of Nautilus</span></span></td>  <!-- Unity -->
-<td class="qttoolkit">Insight</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -514,16 +405,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp">File Roller</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="gtktoolkit gnomeapp">File Roller</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Compressor</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">File Roller</td> <!-- Budgie -->
-<td class="gtktoolkit gnomeapp tooltip">Engrampa<span class="tooltiptext">fork of File Roller</span></td> <!-- UKUI -->
-
- <!-- CDE dtfile -->
-<td>Epack</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Ark</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">File Roller</td>  <!-- Unity -->
-<td class="qttoolkit">Lumina Archiver</td> <!-- Lumina -->
 </tr>
 
 
@@ -538,16 +419,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp tooltip">xreader<span class="tooltiptext">fork of Atril</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">qpdfview</td> <!-- LXQt -->
 
-<td class="gtktoolkit gnomeapp">Evince</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Reader</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">Evince</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>-</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">KPDF</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">Evince</td>   <!-- Unity -->
-<td class="qttoolkit">Lumina PDF Viewer</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -561,19 +432,21 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp"><span class="tooltip">xviewer<span class="tooltiptext">fork of eog (Eye of GNOME)</span></span>, <span class="tooltip">pix<span class="tooltiptext">fork of gThumb</span></span></td> <!-- Cinnamon -->
 <td class="qttoolkit">LXImage</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Photos</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Image Viewer</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">eog (Eye of GNOME)</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>dtimage</td> <!-- CDE -->
-<td>Ephoto</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Gwenview, digiKam, Kuickshow</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">eog (Eye of GNOME)</td>   <!-- Unity -->
-<td class="qttoolkit">Lumina Image Viewer</td> <!-- Lumina -->
 </tr>
 
 
+<tr>
+<td>Image editing</td>
+
+<td class="qttoolkit kdeapp">Krita, ShowFoto</td> <!-- Plasma -->
+<td class="gtktoolkit gnomeapp">GIMP</td> <!-- Gnome -->
+
+<td>-</td> <!-- Xfce -->
+<td>-</td> <!-- MATE -->
+<td>-</td> <!-- Cinnamon -->
+<td>-</td> <!-- LXQt -->
+
+</tr>
 
 <tr>
 <td>Text editor</td>
@@ -586,16 +459,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp tooltip">xed<span class="tooltiptext">fork of Pluma</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">Featherpad</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Code</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Editor</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">gedit</td> <!-- Budgie -->
-<td class="gtktoolkit gnomeapp tooltip">Pluma<span class="tooltiptext">fork of gedit</span></td> <!-- UKUI -->
-
-<td>dtpad</td> <!-- CDE -->
-<td>Ecrire</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Kate, KWrite, KEdit</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">gedit</td>  <!-- Unity -->
-<td class="qttoolkit">Lumina Text Editor</td> <!-- Lumina -->
 </tr>
 
 
@@ -611,16 +474,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp">GNOME Terminal</td> <!-- Cinnamon -->
 <td class="qttoolkit">QTerminal</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Terminal</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Terminal</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">GNOME Terminal</td> <!-- Budgie -->
-<td class="gtktoolkit gnomeapp tooltip">MATE Terminal<span class="tooltiptext">fork of GNOME Terminal</span></td> <!-- UKUI -->
-
-<td>dtterm</td> <!-- CDE -->
-<td>Terminology</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Konsole</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">GNOME Terminal</td>  <!-- Unity -->
-<td>-</td> <!-- Lumina -->
 </tr>
 
 
@@ -634,17 +487,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp tooltip">MATE Calculator<span class="tooltiptext">fork of GNOME Calculator</span></td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp">GNOME Calculator</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
-
-<td class="gtktoolkit">Pantheon Calculator</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Calculator</td> <!-- Deepin -->
-<td class="gtktoolkit gnomeapp">GNOME Calculator</td> <!-- Budgie -->
-<td class="gtktoolkit gnomeapp tooltip">MATE Calculator<span class="tooltiptext">fork of GNOME Calculator</span></td> <!-- UKUI -->
-
-<td>dtcalc</td> <!-- CDE -->
-<td>Equate</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">KCalc</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">GNOME Calculator</td>  <!-- Unity -->
-<td class="qttoolkit">Lumina Calculator</td> <!-- Lumina -->
 </tr>
 
 
@@ -659,16 +501,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp tooltip">xplayer<span class="tooltiptext">fork of Totem</span></td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Videos</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Movie</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td class="qttoolkit">Kylin Video</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>Rage</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Kaffeine, KMPlayer</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">GNOME Videos (Totem)</td>   <!-- Unity -->
-<td class="qttoolkit">Lumina Media Player</td> <!-- Lumina -->
 </tr>
 
 
@@ -682,16 +514,16 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Music</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Music</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
+</tr>
 
-<td>-</td> <!-- CDE -->
-<td>Enjoy</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">Amarok, JuK</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">Rhythmbox</td>   <!-- Unity -->
-<td>-</td> <!-- Lumina -->
+<tr>
+<td>Web browser</td>
+<td class="qttoolkit kdeapp">Falkon</td> <!-- Plasma -->
+<td class="gtktoolkit gnomeapp">GNOME Web (Epiphany)</td> <!-- Gnome -->
+<td>Midori</td> <!-- Xfce -->
+<td>-</td> <!-- MATE -->
+<td>-</td> <!-- Cinnamon -->
+<td>-</td> <!-- LXQt -->
 </tr>
 
 <tr>
@@ -704,18 +536,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Mail</td> <!-- Pantheon -->
-<td>-</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>dtmail</td> <!-- CDE -->
-<td class="tooltip">Email<span class="tooltiptext">Experimental</span></td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">KMail</td> <!-- Trinity -->
-<td>-</td>   <!-- Unity -->
-<td>-</td> <!-- Lumina -->
-</tr>
-
 
 <tr>
 <td>Calendar</td>
@@ -727,16 +547,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td class="gtktoolkit">Pantheon Calendar</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin Calendar</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>dtcm</td> <!-- CDE -->
-<td>-</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">KOrganizer</td> <!-- Trinity -->
-<td>-</td>   <!-- Unity -->
-<td>-</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -749,78 +559,20 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="gtktoolkit gnomeapp">GNOME System Monitor</td> <!-- Cinnamon -->
 <td class="kdeapp">qps</td> <!-- LXQt -->
 
-<td>-</td> <!-- Pantheon -->
-<td class="qttoolkit">Deepin System Monitor</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td class="qttoolkit">UKUI System Monitor</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>Exterminator</td> <!-- Enlightenment -->
-<td class="qttoolkit kdeapp">KSysGuard</td> <!-- Trinity -->
-<td class="gtktoolkit gnomeapp">GNOME System Monitor</td>   <!-- Unity -->
-<td>-</td> <!-- Lumina -->
-</tr>
-
-<tr>
-<td>Other notable programs</td>
-
-<td><span class="qttoolkit kdeapp">Falkon (browser), Words (word processor), Sheets (spreadsheets), Stage (presentations), Krita (image editing/drawing), ShowFoto (image editing), KolourPaint (drawing), Flow (diagrams), Karbon (vector graphics), Kdenlive (video editor), Plan (project management), Kexi (databases), KTorrent, Konversation (IRC), Kopete (Instant Messenger), Akregator (RSS), KWave (sound editor), KMyMoney (personal finances), K3b (CD burner), KDevelop (IDE), KDE Connect</span></td> <!-- Plasma -->
-<td><span class="gtktoolkit gnomeapp">Epiphany/GNOME Web (browser), AbiWord (word processor), Gnumeric (spreadsheets), GIMP (image editing), GNU Paint (drawing), Dia (diagrams), Inkscape (vector graphics), Pitivi (video editor), Planner (project management), Polari (IRC), Empathy (Instant Messenger), Boxes (Virtual Machines), Brasero (CD burner), Builder (IDE)</span></td> <!-- GNOME -->
-<td><span class="gtktoolkit">Midori (browser), Xfburn (CD burner)</span></td> <!-- Xfce -->
-<td>-</td> <!-- MATE -->
-<td>-</td> <!-- Cinnamon -->
-<td>-</td> <!-- LXQt -->
-
-<td><span class="gnomeapp gtktoolkit">Epiphany (browser)</span></td> <!-- Pantheon -->
-<td>-</td> <!-- Deepin -->
-<td>-</td> <!-- Budgie -->
-<td>-</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>EDI (IDE)</td> <!-- Enlightenment -->
-<td><span class="qttoolkit kdeapp">Konqueror (browser), KWord (word processor), KSpread (spreadsheets), KPresenter (presentations), ShowFoto (image editing), KolourPaint (drawing), KChart &amp; Kivio (diagrams), Karbon (vector graphics), Kdenlive (video editor), KPlato (project management), Kexi (databases), KTorrent, Konversation (IRC), Kopete (Instant Messenger), Akregator (RSS), KWave (sound editor), KMyMoney (personal finances), K3b (CD burner), KDevelop (IDE)</span></td> <!-- Trinity -->
-<td>-</td>   <!-- Unity -->
-<td>-</td> <!-- Lumina -->
-</tr>
-
-<tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-
-<tr>
-<td class="semititle">Resource use</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-
-<tr>
-<td class="tooltip">Minimum/Average RAM use<span class="tooltiptext">Test system: Ubuntu 20.04, virtual machine with 2 GB RAM, three different runs, RAM use in excess of base system (i.e. terminal only)</span></td>
-
-<td class="resource2">347/572 MB</td> <!-- Plasma -->
-<td class="resource1">408/737 MB</td> <!-- Gnome -->
-
-<td class="resource2">394/532 MB</td> <!-- Xfce -->
-<td class="resource2">376/487 MB</td> <!-- MATE -->
-<td class="resource2">348/569 MB</td> <!-- Cinnamon -->
-<td class="resource3">243/462 MB</td> <!-- LXQt -->
-
-<td class="resource2">302/473 MB</td> <!-- Pantheon -->
-<td class="resource1">490/640 MB</td> <!-- Deepin -->
-<td class="resource2">336/576 MB</td> <!-- Budgie -->
-<td class="resource1">438/632 MB</td> <!-- UKUI -->
-
-<td class="resource1 tooltip">419/573 MB<span class="tooltiptext">using SparkyLinux binary; these numbers seem off given the fact that CDE was the standard Unix desktop in the 1990s</span></td> <!-- CDE -->
-<td class="resource5">70/299 MB</td> <!-- Enlightenment -->
-<td class="resource4">185/380 MB</td> <!-- Trinity -->
-<td class="resource2">335/651 MB</td> <!-- Unity -->
-<td class="resource5">93/242 MB</td> <!-- Lumina -->
 </tr>
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+
+<tr height="10">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">General features</td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -834,16 +586,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">X11 only</td> <!-- Cinnamon -->
 <td class="no">X11 only</td> <!-- LXQt -->
 
-<td class="no">X11 only</td> <!-- Pantheon -->
-<td class="no">X11 only</td> <!-- Deepin -->
-<td class="no">X11 only</td> <!-- Budgie -->
-<td class="no">X11 only</td> <!-- UKUI -->
-
-<td class="no">X11 only</td><!-- CDE -->
-<td class="yes">X11 + Wayland</td> <!-- Enlightenment -->
-<td class="no">X11 only</td> <!-- Trinity -->
-<td class="no">X11 only</td> <!-- Unity -->
-<td class="no">X11 only</td> <!-- Lumina -->
 </tr>
 
 
@@ -858,16 +600,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="mixed">Yes (2x scaling)</td> <!-- Cinnamon -->
 <td class="no">No (only font size)</td> <!-- LXQt -->
 
-<td class="mixed">Yes (2x scaling)</td> <!-- Pantheon -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Deepin -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Budgie -->
-<td class="mixed">Yes (2x scaling)</td> <!-- UKUI -->
-
-<td class="no">No (only font size)</td> <!-- CDE -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Enlightenment -->
-<td class="no">No (only font size)</td> <!-- Trinity -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Unity -->
-<td class="no">No (only font size)</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -881,16 +613,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>Server-side decorations</td> <!-- Cinnamon -->
 <td>Server-side decorations</td> <!-- LXQt -->
 
-<td>Client-side decorations</td> <!-- Pantheon -->
-<td>Client-side decorations</td> <!-- Deepin -->
-<td>Client-side decorations</td> <!-- Budgie -->
-<td>Client-side decorations</td> <!-- UKUI -->
-
-<td>Server-side decorations</td> <!-- CDE -->
-<td>Server-side decorations</td> <!-- Enlightenment -->
-<td>Server-side decorations</td> <!-- Trinity -->
-<td>Server-side decorations</td> <!-- Unity -->
-<td>Server-side decorations</td> <!-- Lumina -->
 </tr>
 
 
@@ -898,23 +620,12 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>Theme support, including 3rd-party themes</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="mixed tooltip">Not OOTB<span class="tooltiptext">need to install gnome-tweaks and gnome-shell-extensions</span></td> <!-- Gnome -->
+<td class="mixed tooltip">Not out of the box<span class="tooltiptext">need to install gnome-tweaks and gnome-shell-extensions</span></td> <!-- Gnome -->
 
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">Colour and font only</td> <!-- CDE -->
-<td class="yes">Yes</td> <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -927,17 +638,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">No</td> <!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="no">No</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -951,16 +651,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 <tr>
@@ -974,25 +664,15 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 
-<td>Fastmail, Last.fm</td> <!-- Pantheon -->
-<td>-</td> <!-- Deepin -->
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Budgie -->
-<td>-</td><!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>-</td> <!-- Enlightenment -->
-<td>-</td> <!-- Trinity -->
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Unity -->
-<td>-</td> <!-- Lumina -->
 </tr>
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">Panel elements <span style="font-size: x-small; font-weight: normal; text-decoration: none;">w/o extensions or hidden settings/tweaks</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Panel elements <span style="font-size: x-small; font-weight: normal; text-decoration: none;">w/o extensions or hidden settings/tweaks</span></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1006,40 +686,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="mixed">No/Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes/Yes</td> <!-- Pantheon -->
-<td class="yes">Yes/Yes</td> <!-- Deepin -->
-<td class="yes">Yes/Yes</td> <!-- Budgie -->
-<td class="yes">Yes/Yes</td> <!-- UKUI -->
-
-<td class="mixed">No/Yes</td> <!-- CDE -->
-<td class="mixed">No/Yes</td> <!-- Enlightenment -->
-<td class="mixed">No/Yes</td> <!-- Trinity -->
-<td class="yes">Yes/<span class="tooltip">Yes<span class="tooltiptext">can filter by category</span></td> <!-- Unity -->
-<td class="yes">Yes/Yes</td><!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>App launcher: search apps and settings</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="mixed">Only apps</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="mixed">Only apps</td> <!-- UKUI -->
-
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="yes">Yes</td> <!-- Enlightenment -->
-<td class="yes tooltip">Yes<span class="tooltiptext">(separate searches)</span></td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
@@ -1054,16 +700,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
@@ -1078,16 +714,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">in app launcher and panel</td> <!-- Cinnamon -->
 <td class="yes">in panel</td> <!-- LXQt -->
 
-<td class="yes">in panel</td> <!-- Pantheon -->
-<td class="yes">in panel</td> <!-- Deepin -->
-<td class="yes">in panel</td> <!-- Budgie -->
-<td class="yes">in panel</td> <!-- UKUI -->
-
-<td class="yes">in panel</td> <!-- CDE -->
-<td class="yes">in panel</td> <!-- Enlightenment -->
-<td class="yes">in panel</td> <!-- Trinity -->
-<td class="yes">in panel</td> <!-- Unity -->
-<td class="yes">in app launcher and panel</td> <!-- Lumina -->
 </tr>
 
 
@@ -1102,16 +728,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes (all four sides)</td> <!-- Cinnamon -->
 <td class="yes">Yes (all four sides)</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes (all four sides)</td> <!-- Deepin -->
-<td class="yes">Yes (all four sides)</td> <!-- Budgie -->
-<td class="yes">Yes (all four sides)</td> <!-- UKUI -->
-
-<td class="yes">Yes (moves like window)</td> <!-- CDE -->
-<td class="yes">Yes (all four sides)</td> <!-- Enlightenment -->
-<td class="yes">Yes (all four sides)</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="yes">Yes (all four sides)</td> <!-- Lumina -->
 </tr>
 
 
@@ -1126,21 +742,11 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="no">No</td> <!-- UKUI -->
-
-<td class="no tooltip">No<span class="tooltiptext">but panel can be minimized like a normal window</span></td> <!-- CDE -->
-<td class="yes">Yes</td> <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
 <tr>
-<td>Clock/volume/battery status in panel</td>
+<td>Clock/volume/battery/network status/keyboard layout</td>
 
 <td class="yes">Yes/Yes/Yes</td> <!-- Plasma -->
 <td class="yes">Yes/Yes/Yes</td> <!-- Gnome -->
@@ -1149,66 +755,9 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes/Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes/Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes/Yes/Yes</td> <!-- Pantheon -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Deepin -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Budgie -->
-<td class="yes">Yes/Yes/Yes</td> <!-- UKUI -->
-
-<td class="no">No/No/No</td> <!-- CDE -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Enlightenment -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Trinity -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Unity -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Lumina -->
 </tr>
 
 
-<tr>
-<td>Network manager in panel</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="no">No</td>  <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Keyboard layout switcher in panel</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="no">No</td>  <!-- Lumina -->
-</tr>
 
 <tr>
 <td>Notification list (e.g. new e-mail, updates available)</td>
@@ -1220,17 +769,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td>  <!-- Lumina -->
 </tr>
 
 
@@ -1245,16 +783,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="yes">Yes</td>  <!-- Lumina -->
 </tr>
 
 
@@ -1268,26 +796,15 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes (not default)</td> <!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes (not default)</td> <!-- Budgie -->
-<td class="no">No</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes (not default)</td> <!-- Trinity -->
-<td class="yes">Yes (default but optional)</td> <!-- Unity -->
-<td class="no">No</td>  <!-- Lumina -->
 </tr>
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">Window management</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Window management</td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1301,41 +818,8 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="no">No (dock shows apps)</td> <!-- Pantheon -->
-<td class="no">No (taskbar shows apps)</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="no">No (taskbar shows apps)</td> <!-- UKUI -->
-
-<td class="no">No (only pinned apps shown)</td> <!-- CDE -->
-<td class="no">No (taskbar shows windows)</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="no">No (dock shows apps)</td> <!-- Unity -->
-<td class="yes">Yes</td>  <!-- Lumina -->
 </tr>
 
-
-<tr>
-<td>Taskbar/dock: show window previews</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="no">No</td> <!-- Gnome -->
-
-<td class="no">No</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="no">No</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes</td>  <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="yes">Yes</td>  <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td>  <!-- Lumina -->
-</tr>
 
 
 <tr>
@@ -1349,16 +833,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td>  <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td>  <!-- UKUI -->
-
-<td class="no">No (panel will be covered)</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="yes">Yes</td>  <!-- Lumina -->
 </tr>
 
 
@@ -1373,16 +847,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="almost">keyboard shortcut only</td> <!-- Cinnamon -->
 <td class="almost">keyboard shortcut only</td> <!-- LXQt -->
 
-<td class="almost">keyboard shortcut only</td> <!-- Pantheon -->
-<td class="no">No</td>  <!-- Deepin -->
-<td class="almost">keyboard shortcut only</td> <!-- Budgie -->
-<td class="no">No</td>  <!-- UKUI -->
-
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
-<td class="yes">Yes (right-click)</td> <!-- Trinity -->
-<td class="almost">keyboard shortcut only</td> <!-- Unity -->
-<td class="almost">keyboard shortcut only</td>   <!-- Lumina -->
 </tr>
 
 
@@ -1397,16 +861,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="yes">Yes</td> <!-- Budgie -->
-<td class="yes">Yes</td>  <!-- UKUI -->
-
-<td class="yes">Yes (minimizes to desktop)</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<td class="yes">Yes</td> <!-- Unity -->
-<td class="yes">Yes</td>   <!-- Lumina -->
 </tr>
 
 
@@ -1421,17 +875,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="almost">keyboard shortcut only</td>  <!-- Deepin -->
-<td class="yes">Yes</td>  <!-- UKUI -->
-<td class="yes">Yes</td> <!-- Budgie -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="almost">keyboard shortcut only</td>  <!-- Enlightenment -->
-<td class="yes">Yes (right-click)</td> <!-- Trinity -->
-<td class="almost">keyboard shortcut only</td> <!-- Unity -->
-<td class="yes">Yes</td>   <!-- Lumina -->
-</tr>
 
 
 <tr>
@@ -1445,16 +888,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
 <td class="yes">Yes (right-click)</td> <!-- LXQt -->
 
-<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="yes">Yes (right-click)</td> <!-- Budgie -->
-<td class="no">No</td>  <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
-<td class="yes">Yes (right-click)</td> <!-- Trinity -->
-<td class="yes">Yes (right-click)</td> <!-- Unity -->
-<td class="yes">Yes (right-click)</td>   <!-- Lumina -->
 </tr>
 
 <tr>
@@ -1468,16 +901,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
 <td class="yes">Yes (right-click)</td> <!-- LXQt -->
 
-<td class="yes">Yes (right-click)</td> <!-- Pantheon -->
-<td class="mixed">keyboard shortcut only/No</td> <!-- Deepin -->
-<td class="yes">Yes (right-click)</td> <!-- Budgie -->
-<td class="mixed">drag &amp; drop in taskview/No</td>  <!-- UKUI -->
-
-<td class="yes">Yes (right-click)</td> <!-- CDE -->
-<td class="yes">Yes (right-click)</td>  <!-- Enlightenment -->
-<td class="yes">Yes (right-click)</td> <!-- Trinity -->
-<td class="yes">Yes (right-click)</td> <!-- Unity -->
-<td class="yes">Yes (right-click)</td>   <!-- Lumina -->
 </tr>
 
 
@@ -1492,17 +915,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- MATE -->
 <td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
-
-<td class="almost">Yes (&frac12; screen)</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="almost">Yes (&frac12; screen)</td> <!-- Budgie -->
-<td class="yes">Yes (&frac12; or &frac14; screen)</td>  <!-- UKUI -->
-
-<td class="no">No</td>  <!-- CDE -->
-<td class="yes">Yes (&frac12; or &frac14; screen)</td>  <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="almost">Yes (&frac12; screen)</td> <!-- Unity -->
-<td class="no">No</td>   <!-- Lumina -->
 </tr>
 
 
@@ -1517,16 +929,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
 
-<td class="no">No/No</td> <!-- Pantheon -->
-<td class="mixed">Yes/No</td> <!-- Deepin -->
-<td class="no">No/No</td> <!-- Budgie -->
-<td class="no">No/No</td>  <!-- UKUI -->
-
-<td class="mixed">Yes/No</td> <!-- CDE -->
-<td class="yes">Yes/<span class="tooltip">Yes<span class="tooltiptext">Alt + Middle Click</span></span></td>  <!-- Enlightenment -->
-<td class="yes">Yes /Yes</td> <!-- Trinity -->
-<td class="mixed">Yes/No</td> <!-- Unity -->
-<td class="yes">Yes/Yes</td>   <!-- Lumina -->
 </tr>
 
 
@@ -1540,16 +942,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="yes">Yes (current workspace)</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="almost">keyboard shortcut only</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
@@ -1563,16 +955,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="yes">Yes</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
@@ -1586,28 +968,17 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">No</td> <!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<td class="no">No</td> <!-- Budgie -->
-<td class="no">No</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td> <!-- Enlightenment -->
-<td class="no">No</td> <!-- Trinity -->
-<td class="no">No</td> <!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">File manager</td><td>Dolphin</td><td>GNOME Files (Nautilus)</td><td>Thunar</td><td>Caja</td><td>Nemo</td><td>PCManFM-Qt</td><td>Pantheon Files</td><td>Deepin File Manager</td><td></td><td>Peony</td><td>dtfile</td><td>Enlightenment File Manager</td><td>Konqueror</td><td></td><td>Insight</td>
+<td class="semititle">File manager</td><td>Dolphin</td><td>GNOME Files (Nautilus)</td><td>Thunar</td><td>Caja</td><td>Nemo</td><td>PCManFM-Qt</td>
 </tr>
 
 
@@ -1621,62 +992,19 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="almost">Yes/Yes/in side panel</td> <!-- Cinnamon -->
 <td class="almost">Yes/Yes/in side panel</td> <!-- LXQt -->
 
-<td class="yes">Yes/Yes/Yes</td> <!-- Pantheon -->
-<td class="mixed">Yes/Yes/No</td> <!-- Deepin -->
-<td rowspan="20" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">Budgie does not have a standard file manager, it is up to the distribution to decide which file manager to ship. For example, Solus (the flagship distribution for Budgie) uses GNOME's Nautilus, while Ubuntu Budgie uses Cinnamon's Nemo.</td> <!-- Budgie -->
-<td class="almost">Yes/Yes/in side panel</td> <!-- UKUI -->
-
-<td class="yes">Yes/Yes/Yes</td> <!-- CDE -->
-<td class="mixed">Yes/Yes/No</td> <!-- Enlightenment -->
-<td class="yes">Yes/Yes/Yes</td> <!-- Trinity -->
-<td rowspan="20" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">Unity does not have a standard file manager, it is up to the distribution to decide which file manager to ship. For example, Ubuntu Unity uses Cinnamon's Nemo, but installing Unity on standard Ubuntu will default to GNOME's Nautilus.</td> <!-- Unity -->
-<td class="almost">Yes/Yes/in side panel</td> <!-- Lumina -->
 </tr>
 
 
-<td>Tabs</td>
+<td>Tabs or dual-pane view</td>
 
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td><!-- Gnome -->
+<td class="yes">Yes/Yes</td> <!-- Plasma -->
+<td class="mixed">Yes/No</td><!-- Gnome -->
 
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td> <!-- Xfce -->
+<td class="yes">Yes/Yes</td> <!-- MATE -->
+<td class="yes">Yes/Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes/Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td><!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
-</tr>
-
-
-<td>Split/dual-pane view</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="no">No</td><!-- Gnome -->
-
-<td class="no">No</td><!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="no">No</td><!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="no">No</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
@@ -1690,15 +1018,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td><!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
@@ -1712,66 +1031,24 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes/Yes/Yes/Yes</td><!-- Pantheon -->
-<td class="yes">Yes/Yes/Yes/Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes/Yes/Yes/Yes</td><!-- UKUI -->
-<td class="yes">Yes/Yes/Yes/Yes</td> <!-- CDE -->
-<td class="yes">Yes/Yes/Yes/Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes/Yes/Yes/Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes/Yes/Yes/Yes</td> <!-- Lumina -->
 </tr>
 
 
 
-<td>Thumbnail support in file manager</td>
+<td>Thumbnail support in file manager and <span class="tooltip">file picker<span class="tooltiptext">open/save dialogue</span></span></td>
 
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td><!-- Gnome -->
+<td class="yes">Yes/Yes</td> <!-- Plasma -->
+<td class="mixed">Yes/No</td> <!-- Gnome -->
 
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td> <!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td>  <!-- Xfce -->
+<td class="mixed">Yes/No</td>  <!-- MATE -->
+<td class="mixed">Yes/No</td>  <!-- Cinnamon -->
+<td class="yes">Yes/Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td><!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
-</tr>
-
-<td>Thumbnail support in file picker (open/save dialogue)</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="no">No</td> <!-- Gnome -->
-
-<td class="no">No</td> <!-- Xfce -->
-<td class="no">No</td><!-- MATE -->
-<td class="no">No</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="no">No</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
-<td>Type-ahead find</td>
+<td>Type-ahead find in active folder</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
 <td class="no">No</td> <!-- Gnome -->
@@ -1781,16 +1058,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
@@ -1804,21 +1071,11 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="no">No</td><!-- UKUI -->
-
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
 
-<td>Recursive search</td>
+<td>Recursive file search</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
 <td class="yes">Yes</td> <!-- Gnome -->
@@ -1828,40 +1085,9 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
-<td>Drag &amp; drop to desktop/between folders</td>
-
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">will ask if file should be moved, copied, or linked</span></td> <!-- Plasma -->
-<td class="mixed"><span class="tooltip">No desktop<span class="tooltiptext">GNOME does not support desktop icons or displaying files on the desktop</span></span>/<span class="tooltip">Yes<span class="tooltiptext">without pressing modifier keys, GNOME will not ask what to do but will <em>move</em> the file(s)</span></td> <!-- Gnome -->
-
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, Xfce will not ask what to do but will <em>move</em> the file(s)</span></td> <!-- Xfce -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, MATE will not ask what to do but will <em>move</em> the file(s)</span></td><!-- MATE -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, Cinnamon will not ask what to do but will <em>move</em> the file(s)</span></td> <!-- Cinnamon -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">will ask if file should be moved, copied, or linked</span></td> <!-- LXQt -->
-
-<td class="mixed"><span class="tooltip">No desktop<span class="tooltiptext">Pantheon does not support desktop icons or displaying files on the desktop</span></span>/<span class="tooltip">Yes<span class="tooltiptext">without pressing modifier keys, Pantheon will not ask what to do but will <em>create a link</em> to the file</span></td> <!-- Pantheon -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, DDE will not ask what to do but will <em>move</em> the file(s)</span></td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, UKUI will not ask what to do but will <em>move</em> the file(s)</span></td><!-- UKUI -->
-
-<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">without pressing modifier keys, CDE will not ask what to do but will <em>create a link</em> to the file</span></span>/<span class="tooltip">Yes<span class="tooltiptext">without pressing modifier keys, CDE will not ask what to do but will <em>move</em> the file(s)</span></td> <!-- CDE -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">without pressing modifier keys, Enlightenment will not ask what to do but will <em>move</em> the file(s)</span></td>  <!-- Enlightenment -->
-<td class="yes tooltip">Yes/Yes<span class="tooltiptext">will ask if file should be moved, copied, or linked</span></td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">Lumina shows inconsistent behaviour and may either copy or move files</span></span>/<span class="tooltip">Yes<span class="tooltiptext">without pressing modifier keys, Lumina will not ask what to do but will <em>move</em> the file(s)</span></td> <!-- Lumina -->
-</tr>
 
 
 <td>Undo rename or deletion with Ctrl+Z</td>
@@ -1874,16 +1100,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
 </tr>
 
 
@@ -1896,17 +1112,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Keep new/old/rename</td> <!-- MATE -->
 <td class="yes">Keep new/old/rename</td> <!-- Cinnamon -->
 <td class="yes">Keep new/old/rename</td> <!-- LXQt -->
-
-<td class="yes">Keep new/old/rename</td> <!-- Pantheon -->
-<td class="yes">Keep new/old/rename</td> <!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Keep new/old/rename</td> <!-- UKUI -->
-
-<td class="yes">Keep new/old/rename</td> <!-- CDE -->
-<td class="notreally">Automatically renames</td>  <!-- Enlightenment -->
-<td class="yes">Keep new/old/rename</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="notreally">Automatically renames</td> <!-- Lumina -->
 </tr>
 
 
@@ -1920,109 +1125,19 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="yes">Yes</td> <!-- CDE -->
-<td class="yes">Yes</td>  <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
+<td>Select multiple files with Ctrl/Shift, and invert selection</td>
 
-<td>Compress files</td>
+<td class="yes">Yes/Yes</td> <!-- Plasma -->
+<td class="almost">Yes/keyboard shortcut only</td> <!-- Gnome -->
 
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
+<td class="yes">Yes/Yes</td> <!-- Xfce -->
+<td class="yes">Yes/Yes</td><!-- MATE -->
+<td class="yes">Yes/Yes</td> <!-- Cinnamon -->
+<td class="yes">Yes/Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td><!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>   <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
-</tr>
-
-
-<td>Select multiple files with Ctrl and Shift</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td><!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>   <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
-</tr>
-
-
-<td>Invert selection</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td><!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="no">No</td> <!-- Pantheon -->
-<td class="no">No</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="no">No</td> <!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="no">No</td>   <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="no">No</td> <!-- Lumina -->
-</tr>
-
-
-<td>Open file with... (select application)</td>
-
-<td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- Gnome -->
-
-<td class="yes">Yes</td> <!-- Xfce -->
-<td class="yes">Yes</td><!-- MATE -->
-<td class="yes">Yes</td> <!-- Cinnamon -->
-<td class="yes">Yes</td> <!-- LXQt -->
-
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="yes">Yes</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="yes">Yes</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="yes">Yes</td>   <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
@@ -2036,52 +1151,19 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 
-<td class="yes">Yes</td> <!-- Pantheon -->
-<td class="almost">keyboard shortcut only</td><!-- Deepin -->
-<!-- Budgie -->
-<td class="notreally">copy only</td><!-- UKUI -->
-
-<td class="no">No</td> <!-- CDE -->
-<td class="notreally">copy only</td>   <!-- Enlightenment -->
-<td class="yes">Yes</td> <!-- Trinity -->
-<!-- Unity -->
-<td class="yes">Yes</td> <!-- Lumina -->
 </tr>
 
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <tr>
-<td class="semititle">Distribution support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Distribution support</td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
-
-<tr>
-<td>Reference distribution (closest to upstream)</td>
-
-<td>KDE Neon</td> <!-- Plasma -->
-<td>Fedora or GNOME OS</td> <!-- Gnome -->
-
-<td>-</td> <!-- Xfce -->
-<td>-</td> <!-- MATE -->
-<td>Linux Mint</td> <!-- Cinnamon -->
-<td>-</td> <!-- LXQt -->
-
-<td>elementary OS</td> <!-- Pantheon -->
-<td>Deepin</td> <!-- Deepin -->
-<td>Solus</td> <!-- Budgie -->
-<td>Ubuntu Kylin</td> <!-- UKUI -->
-
-<td>-</td> <!-- CDE -->
-<td>-</td> <!-- Enlightenment -->
-<td>-</td> <!-- Trinity -->
-<td>Ubuntu Unity</td> <!-- Unity -->
-<td>Project Trident</td> <!-- Lumina -->
-</tr>
 
 
 <tr>
@@ -2095,16 +1177,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td>29</td> <!-- Cinnamon -->
 <td>27</td> <!-- LXQt -->
 
-<td>3</td> <!-- Pantheon -->
-<td>8</td> <!-- Deepin -->
-<td>12</td> <!-- Budgie -->
-<td>n/a (1)</td> <!-- UKUI -->
-
-<td>n/a</td> <!-- CDE -->
-<td>19</td> <!-- Enlightenment -->
-<td>2</td> <!-- Trinity -->
-<td>3</td> <!-- Unity -->
-<td>1</td> <!-- Lumina -->
 </tr>
 
 
@@ -2120,16 +1192,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="almost">option during installation</td>  <!-- Cinnamon -->
 <td class="almost">option during installation</td>  <!-- LXQt -->
 
-<td class="notreally">via 3rd party repository</td> <!-- Pantheon -->
-<td class="no">no builds available</td> <!-- Deepin -->
-<td class="mixed">officially supported</td> <!-- Budgie -->
-<td class="mixed">officially supported</td> <!-- UKUI -->
-
-<td class="notreally">via 3rd party repository</td> <!-- CDE -->
-<td class="mixed">officially supported</td> <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="notreally">via 3rd party repository</td> <!-- Lumina -->
 </tr>
 
 
@@ -2143,42 +1205,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="almost">default in Ubuntu MATE</td>  <!-- MATE -->
 <td class="mixed">officially supported</td>  <!-- Cinnamon -->
 <td class="almost">default in Lubuntu</td>  <!-- LXQt -->
-
-<td class="notreally">via elementary OS repository</td> <!-- Pantheon -->
-<td class="notreally">via 3rd party repository</td> <!-- Deepin -->
-<td class="almost">default in Ubuntu Budgie</td> <!-- Budgie -->
-<td class="almost">default in Ubuntu Kylin</td> <!-- UKUI -->
-
-<td class="notreally">via 3rd party repository</td> <!-- CDE -->
-<td class="mixed">officially supported</td> <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="mixed">officially supported</td> <!-- Unity -->
-<td class="notreally">via 3rd party repository</td> <!-- Lumina -->
-</tr>
-
-
-
-<tr>
-<td>Linux Mint</td>
-
-<td class="notreally">via Ubuntu repository</td> <!-- Plasma -->
-<td class="notreally">via Ubuntu repository</td> <!-- Gnome -->
-
-<td class="almost">default in Xfce Edition</td> <!-- Xfce -->
-<td class="almost">default in MATE Edition</td>  <!-- MATE -->
-<td class="yes">default in Cinnamon Edition</td>  <!-- Cinnamon -->
-<td class="notreally">via Ubuntu repository</td>   <!-- LXQt -->
-
-<td class="notreally">via elementary OS repository</td> <!-- Pantheon -->
-<td class="notreally">via 3rd party repository</td><!-- Deepin -->
-<td class="notreally">via Ubuntu repository</td> <!-- Budgie -->
-<td class="notreally">via Ubuntu repository</td> <!-- UKUI -->
-
-<td class="notreally">via 3rd party Ubuntu repository</td> <!-- CDE -->
-<td class="notreally">via Ubuntu repository</td> <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="notreally">via Ubuntu repository</td> <!-- Unity -->
-<td class="notreally">via 3rd party repository</td> <!-- Lumina -->
 </tr>
 
 
@@ -2193,90 +1219,8 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="almost">default in Cinnamon Spin</td>  <!-- Cinnamon -->
 <td class="almost">default in LXQt Spin</td>  <!-- LXQt -->
 
-<td class="mixed">officially supported</td> <!-- Pantheon -->
-<td class="mixed">officially supported</td> <!-- Deepin -->
-<td class="notreally">via 3rd party repository</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="notreally">via 3rd party repository</td> <!-- CDE -->
-<td class="mixed">officially supported</td> <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="mixed">officially supported</td> <!-- Lumina -->
 </tr>
 
-<tr>
-<td>Red Hat Enterprise Linux</td>
-
-<td class="notreally">via EPEL repository</td> <!-- Plasma -->
-<td class="yes">default desktop</td> <!-- Gnome -->
-
-<td class="notreally">via EPEL repository</td> <!-- Xfce -->
-<td class="no">no builds available</td>  <!-- MATE -->
-<td class="no">no builds available</td> <!-- Cinnamon -->
-<td class="no">no builds available</td>  <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td> <!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="notreally">via 3rd party repository</td> <!-- CDE -->
-<td class="no">no builds available</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>  <!-- Lumina -->
-</tr>
-
-
-
-<tr>
-<td>Mageia</td>
-
-<td class="yes">pre-selected at installation</td> <!-- Plasma -->
-<td class="almost">option during installation</td> <!-- Gnome -->
-
-<td class="almost">option during installation</td>  <!-- Xfce -->
-<td class="almost">option during installation</td>   <!-- MATE -->
-<td class="almost">option during installation</td>  <!-- Cinnamon -->
-<td class="mixed">officially supported</td>  <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td> <!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>  <!-- Lumina -->
-</tr>
-
-
-
-<tr>
-<td>SUSE Linux Enterprise</td>
-
-<td class="notreally">via SUSE Package Hub</td> <!-- Plasma -->
-<td class="yes">default desktop</td> <!-- Gnome -->
-
-<td class="notreally">via SUSE Package Hub</td>  <!-- Xfce -->
-<td class="notreally">via SUSE Package Hub</td>   <!-- MATE -->
-<td class="notreally">via SUSE Package Hub</td>  <!-- Cinnamon -->
-<td class="no">no builds available</td>  <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td> <!-- Deepin -->
-<td class="notreally">via SUSE Package Hub</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="notreally">via SUSE Package Hub</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>  <!-- Lumina -->
-</tr>
 
 
 <tr>
@@ -2289,66 +1233,9 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="mixed">officially supported</td>    <!-- MATE -->
 <td class="mixed">officially supported</td>   <!-- Cinnamon -->
 <td class="mixed">officially supported</td> <!-- LXQt -->
-
-<td class="mixed">officially supported</td> <!-- Pantheon -->
-<td class="mixed">officially supported</td>  <!-- Deepin -->
-<td class="mixed">officially supported</td>  <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="notreally">available in OBS</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="notreally">available in OBS</td>  <!-- Lumina -->
 </tr>
 
 
-<tr>
-<td>Slackware</td>
-
-<td class="yes">pre-selected at installation</td> <!-- Plasma -->
-<td class="notreally">via 3rd party repository</td> <!-- Gnome -->
-
-<td class="almost">option during installation</td>  <!-- Xfce -->
-<td class="notreally">via 3rd party repository</td>    <!-- MATE -->
-<td class="notreally">via 3rd party repository</td>   <!-- Cinnamon -->
-<td class="notreally">via 3rd party repository</td> <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td>  <!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="notreally">available as SlackBuild</td> <!-- CDE -->
-<td class="notreally">available as SlackBuild</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td> <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="notreally">available as SlackBuild</td>  <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Gentoo</td>
-
-<td class="mixed">officially supported</td> <!-- Plasma -->
-<td class="mixed">officially supported</td> <!-- Gnome -->
-
-<td class="mixed">officially supported</td>  <!-- Xfce -->
-<td class="mixed">officially supported</td>    <!-- MATE -->
-<td class="mixed">officially supported</td>   <!-- Cinnamon -->
-<td class="mixed">officially supported</td> <!-- LXQt -->
-
-<td class="mixed">officially supported</td> <!-- Pantheon -->
-<td class="mixed">officially supported</td> <!-- Deepin -->
-<td class="mixed">officially supported</td> <!-- Budgie -->
-<td class="no">no builds available</td> <!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="mixed">officially supported</td>  <!-- Trinity -->
-<td class="notreally">via 3rd party repository</td> <!-- Unity -->
-<td class="mixed">officially supported</td>  <!-- Lumina -->
-</tr>
 
 
 <tr>
@@ -2362,16 +1249,6 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="mixed">officially supported</td>   <!-- Cinnamon -->
 <td class="mixed">officially supported</td> <!-- LXQt -->
 
-<td class="notreally">available in AUR</td> <!-- Pantheon -->
-<td class="mixed">officially supported</td> <!-- Deepin -->
-<td class="mixed">officially supported</td> <!-- Budgie -->
-<td class="mixed">officially supported</td><!-- UKUI -->
-
-<td class="notreally">available in AUR</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="notreally">via 3rd party repository</td>  <!-- Trinity -->
-<td class="notreally">available in AUR</td> <!-- Unity -->
-<td class="notreally">available in AUR</td>  <!-- Lumina -->
 </tr>
 
 
@@ -2386,174 +1263,49 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="mixed">officially supported</td>   <!-- Cinnamon -->
 <td class="mixed">officially supported</td> <!-- LXQt -->
 
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td><!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td><!-- UKUI -->
-
-<td class="mixed">officially supported</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="no">no builds available</td>  <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="mixed">officially supported</td>  <!-- Lumina -->
 </tr>
 
-
-<tr>
-<td>NetBSD</td>
-
-<td class="no">only Plasma 4 available</td> <!-- Plasma -->
-<td class="mixed">officially supported</td> <!-- Gnome -->
-
-<td class="mixed">officially supported</td>  <!-- Xfce -->
-<td class="mixed">officially supported</td>    <!-- MATE -->
-<td class="no">no builds available</td>   <!-- Cinnamon -->
-<td class="mixed">officially supported</td> <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td><!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td><!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="no">no builds available</td>  <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>   <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>OpenBSD</td>
-
-<td class="no">only Plasma 4 available</td> <!-- Plasma -->
-<td class="mixed">officially supported</td> <!-- Gnome -->
-
-<td class="mixed">officially supported</td>  <!-- Xfce -->
-<td class="mixed">officially supported</td>    <!-- MATE -->
-<td class="no">no builds available</td>   <!-- Cinnamon -->
-<td class="mixed">officially supported</td> <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td><!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td><!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="mixed">officially supported</td>  <!-- Enlightenment -->
-<td class="no">no builds available</td>  <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="mixed">officially supported</td>   <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Solaris</td>
-
-<td class="no">no builds available</td> <!-- Plasma -->
-<td class="yes">default desktop</td> <!-- Gnome -->
-
-<td class="no">no builds available</td>  <!-- Xfce -->
-<td class="no">no builds available</td>    <!-- MATE -->
-<td class="no">no builds available</td>   <!-- Cinnamon -->
-<td class="no">no builds available</td> <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td><!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td><!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="no">no builds available</td>  <!-- Enlightenment -->
-<td class="no">no builds available</td>  <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>  <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Illumos</td>
-
-<td class="no">only Plasma 4 available</td> <!-- Plasma -->
-<td class="no">only GNOME 2 available</td> <!-- Gnome -->
-
-<td class="mixed tooltip">officially supported<span class="tooltiptext">available in OpenIndiana or Joyent repositories; default desktop for Tribblix</span></td>  <!-- Xfce -->
-<td class="mixed tooltip">officially supported<span class="tooltiptext">available in OpenIndiana or Joyent repositories; default desktop for OpenIndiana</span></td>    <!-- MATE -->
-<td class="no">no builds available</td>   <!-- Cinnamon -->
-<td class="no">no builds available</td> <!-- LXQt -->
-
-<td class="no">no builds available</td> <!-- Pantheon -->
-<td class="no">no builds available</td><!-- Deepin -->
-<td class="no">no builds available</td> <!-- Budgie -->
-<td class="no">no builds available</td><!-- UKUI -->
-
-<td class="no">no builds available</td> <!-- CDE -->
-<td class="mixed tooltip">officially supported<span class="tooltiptext">available in OpenIndiana or Joyent repositories</span></td>  <!-- Enlightenment -->
-<td class="no">no builds available</td>  <!-- Trinity -->
-<td class="no">no builds available</td> <!-- Unity -->
-<td class="no">no builds available</td>  <!-- Lumina -->
-</tr>
 
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <tr>
-<td class="semititle">Usage share (estimate)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Usage share (estimate)</td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td>GamingOnLinux.com User Statistics</td>
+<td><a href="https://www.gamingonlinux.com/users/statistics/" target="_blank">GamingOnLinux.com User Statistics (01/2022)</a></td>
 
-<td class="mktshare40">31.2%</td> <!-- Plasma -->
-<td class="mktshare40">30.9%</td> <!-- Gnome -->
+<td class="mktshare40">33.4%</td> <!-- Plasma -->
+<td class="mktshare30">29.9%</td> <!-- Gnome -->
 
-<td class="mktshare20">10.6%</td> <!-- Xfce -->
-<td class="mktshare5">3.6%</td> <!-- MATE -->
-<td class="mktshare20">8.6%</td> <!-- Cinnamon -->
-<td class="mktshare1">0.7%</td> <!-- LXQt -->
+<td class="mktshare20">9.5%</td> <!-- Xfce -->
+<td class="mktshare5">3.3%</td> <!-- MATE -->
+<td class="mktshare20">7.7%</td> <!-- Cinnamon -->
+<td class="mktshare1">0.6%</td> <!-- LXQt -->
 
-<td class="mktshare1">0.6%</td> <!-- Pantheon -->
-<td>n/a</td> <!-- Deepin -->
-<td class="mktshare5">1.6%</td> <!-- Budgie -->
-<td>n/a</td> <!-- UKUI -->
-
-<td>n/a</td> <!-- CDE -->
-<td>n/a</td> <!-- Enlightenment -->
-<td>n/a</td> <!-- Trinity -->
-<td class="mktshare5">1.0%</td> <!-- Unity -->
-<td>n/a</td> <!-- Lumina -->
 </tr>
 
 <tr>
-<td>Arch (<u>no default desktop</u>) - installations</td>
+<td><a href="https://pkgstats.archlinux.de/compare/packages#packages=cinnamon,gnome-shell,lxqt-session,mate-panel,plasma-workspace,xfdesktop" target="_blank">Arch (<u>no default desktop</u>) - installations (12/2021)</a></td>
 
-<td class="mktshare40">34.4%</td> <!-- Plasma -->
-<td class="mktshare30">27.5%</td> <!-- Gnome -->
+<td class="mktshare40">30.8%</td> <!-- Plasma -->
+<td class="mktshare30">20.9%</td> <!-- Gnome -->
 
-<td class="mktshare20">18.9%</td> <!-- Xfce -->
-<td class="mktshare20">7.1%</td> <!-- MATE -->
-<td class="mktshare20">6.7%</td> <!-- Cinnamon -->
-<td class="mktshare5">2.8%</td> <!-- LXQt -->
+<td class="mktshare20">13.6%</td> <!-- Xfce -->
+<td class="mktshare5">2.9%</td> <!-- MATE -->
+<td class="mktshare5">4.2%</td> <!-- Cinnamon -->
+<td class="mktshare5">2.4%</td> <!-- LXQt -->
 
-<td class="mktshare1">0.0%</td> <!-- Pantheon -->
-<td class="mktshare20">5.0%</td> <!-- Deepin -->
-<td class="mktshare5">1.5%</td> <!-- Budgie -->
-<td class="mktshare1">0.2%</td> <!-- UKUI -->
-
-<td class="mktshare1">0.1%</td> <!-- CDE -->
-<td class="mktshare5">1.7%</td> <!-- Enlightenment -->
-<td class="mktshare1">0.2%</td> <!-- Trinity -->
-<td class="mktshare1">0.0%</td> <!-- Unity -->
-<td class="mktshare1">0.1%</td> <!-- Lumina -->
 </tr>
 
 
 <tr>
-<td>OpenSUSE (<u>no default desktop</u>) - 2020 EoY survey</td>
+<td><a href="https://en.opensuse.org/End-of-year-surveys/2020/Data" target="_blank">OpenSUSE (<u>no default desktop</u>) - 2020 EoY survey</a></td>
 
 <td class="mktshare100">64.6%</td> <!-- Plasma -->
 <td class="mktshare20">15.8%</td> <!-- Gnome -->
@@ -2563,149 +1315,228 @@ Especially since the controversial initial release of GNOME 3, there have been l
 <td class="mktshare5">1.1%</td> <!-- Cinnamon -->
 <td class="mktshare5">1.2%</td> <!-- LXQt -->
 
-<td class="mktshare1">0.1%</td> <!-- Pantheon -->
-<td>n/a</td> <!-- Deepin -->
-<td>n/a</td> <!-- Budgie -->
-<td>n/a</td> <!-- UKUI -->
-
-<td>n/a</td> <!-- CDE -->
-<td class="mktshare1">0.4%</td> <!-- Enlightenment -->
-<td>n/a</td> <!-- Trinity -->
-<td>n/a</td> <!-- Unity -->
-<td>n/a</td> <!-- Lumina -->
 </tr>
 
-
-<tr>
-<td>Debian (<u>GNOME</u> is pre-selected option) - installations</td>
-
-<td class="mktshare20">9.8%</td> <!-- Plasma -->
-<td class="mktshare30">23.7%</td> <!-- Gnome -->
-
-<td class="mktshare20">14.1%</td> <!-- Xfce -->
-<td class="mktshare20">6.8%</td> <!-- MATE -->
-<td class="mktshare20">5.0%</td> <!-- Cinnamon -->
-<td class="mktshare5">1.6%</td> <!-- LXQt -->
-
-<td>n/a</td> <!-- Pantheon -->
-<td class="mktshare1">0.2%</td> <!-- Deepin -->
-<td class="mktshare1">0.1%</td> <!-- Budgie -->
-<td class="mktshare1">0.1%</td> <!-- UKUI -->
-
-<td>n/a</td> <!-- CDE -->
-<td>n/a</td> <!-- Enlightenment -->
-<td>n/a</td> <!-- Trinity -->
-<td>n/a</td> <!-- Unity -->
-<td>n/a</td> <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Ubuntu (modified <u>GNOME</u> is default desktop) - installations</td>
-
-<td class="mktshare20">9.6%</td> <!-- Plasma -->
-<td class="tooltip mktshare100">48.0% (6.5%)<span class="tooltiptext">48.0% = Ubuntu-Desktop, a modified version of GNOME; 6.5% = vanilla GNOME</span></td> <!-- Gnome -->
-
-<td class="mktshare5">4.7%</td> <!-- Xfce -->
-<td class="mktshare1">0.2%</td> <!-- MATE -->
-<td class="mktshare1">0.4%</td> <!-- Cinnamon -->
-<td class="mktshare5">1.0%</td> <!-- LXQt -->
-
-<td class="mktshare1">0.0%</td> <!-- Pantheon -->
-<td class="mktshare1">0.0%</td> <!-- Deepin -->
-<td class="mktshare1">0.0%</td> <!-- Budgie -->
-<td class="mktshare1">0.0%</td> <!-- UKUI -->
-
-<td>n/a</td> <!-- CDE -->
-<td class="mktshare1">0.5%</td> <!-- Enlightenment -->
-<td class="mktshare1">0.0%</td> <!-- Trinity -->
-<td class="mktshare30">23.8%</td> <!-- Unity -->
-<td class="mktshare1">0.0%</td> <!-- Lumina -->
-</tr>
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
-<tr>
-<td class="semititle">Non-technical information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+
+
 </tr>
 
-
-<tr>
-<td>License</td>
-
-<td>GPL</td> <!-- Plasma -->
-<td>GPL</td> <!-- Gnome -->
-
-<td>GPL, LGPL, BSD</td> <!-- Xfce -->
-<td>GPL, LGPLv2</td> <!-- MATE -->
-<td>GPL</td> <!-- Cinnamon -->
-<td>GPL, LGLP</td> <!-- LXQt -->
-
-<td>GPL</td> <!-- Pantheon -->
-<td>GPL</td> <!-- Deepin -->
-<td>GPL, LGPL</td> <!-- Budgie -->
-<td>GPL</td> <!-- UKUI -->
-
-<td>LGPL</td> <!-- CDE -->
-<td>BSD</td> <!-- Enlightenment -->
-<td>GPL</td> <!-- Trinity -->
-<td>GPL, LGPL</td> <!-- Unity -->
-<td>BSD</td> <!-- Lumina -->
-</tr>
-
-
-<tr>
-<td>Corporate and government backing</td>
-
-<td class="line">Blue Systems, Canonical, Google, Qt Group, SUSE</td> <!-- Plasma -->
-<td class="line">IBM (Red Hat), Canonical, Google, SUSE, System76</td> <!-- Gnome -->
-
-<td class="line">-</td> <!-- Xfce -->
-<td class="line">-</td> <!-- MATE -->
-<td class="line">-</td> <!-- Cinnamon -->
-<td class="line">-</td> <!-- LXQt -->
-
-<td class="line">Elementary Inc.</td> <!-- Pantheon -->
-<td class="line">Union Tech 统信软件, Chinese government</td> <!-- Deepin -->
-<td class="line">-</td> <!-- Budgie -->
-<td class="line">Canonical, Chinese government</td> <!-- UKUI -->
-
-<td class="line">-</td> <!-- CDE -->
-<td class="line">Samsung</td> <!-- Enlightenment -->
-<td class="line">-</td> <!-- Trinity -->
-<td class="line">-</td> <!-- Unity -->
-<td class="line">-</td> <!-- Lumina -->
-</tr>
-
-<tr>
-<td>Politics and activism</td>
-
-<td class="tooltip">Climate activism<span class="tooltiptext">Endorsement of "climate strike"</span></td> <!-- Plasma -->
-<td><span class="tooltip">Racism/sexism<sapan class="tooltiptext">Explicit acceptance of anti-White racism and misandry in Code of Conduct</span></span>, <span class="tooltip">activism against RMS/FSF<span class="tooltiptext">recurring activism against Richard M. Stallman, e.g. GNOME Foundation signed the 2021 open letter to remove RMS from all leadership positions and called for the removal of the entire Board of the Free Software Foundation</span></span>, endorsement of <span class="tooltip">BLM<span class="tooltiptext">"Black Lives Matter"</span></span></td> <!-- Gnome -->
-
-<td></td> <!-- Xfce -->
-<td></td> <!-- MATE -->
-<td></td> <!-- Cinnamon -->
-<td></td> <!-- LXQt -->
-
-<td></td> <!-- Pantheon -->
-<td></td> <!-- Deepin -->
-<td></td> <!-- Budgie -->
-<td></td> <!-- UKUI -->
-
-<td></td> <!-- CDE -->
-<td></td> <!-- Enlightenment -->
-<td></td> <!-- Trinity -->
-<td></td> <!-- Unity -->
-<td></td> <!-- Lumina -->
-</tr>
 </tbody>
 </table>
 
+
+<h2>Full list of desktop environments</h2>
+
+<p><strong>major currently used desktop environment</strong>, minor desktop, <em>smartphone user interface</em>, <del>discontinued/dead</del></p>
+
+<ul style="font-size: small;">
+<li>For Unix, Linux, and other Unix-like operating systems</li>
+    <ul>
+    <li>EFL toolkit</li>
+        <ul>
+        <li><strong>Enlightenment</strong></li>
+        <li>Moksha (Bodhi Linux)</li>
+        <li><em>Tizen UI (Tizen OS)</em></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>FLTK toolkit</li>
+        <ul>
+        <li><del>Equinox/EDE</del></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Flutter toolkit</li>
+        <ul>
+        <li>Pangolin Desktop UI (dahliaOS)</li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Fyne toolkit</li>
+        <ul>
+        <li>FyneDesk</li>
+        </ul>
+    </ul>
+    <ul>
+    <li>GNUStep toolkit</li>
+        <ul>
+        <li><del>Etoile</del></li>
+        <li>Nextspace</li>
+        </ul>
+    </ul>
+    <ul>
+    <li>GTK toolkit</li>
+        <ul>
+        <li><strong>Budgie (Solus)</strong></li>
+        <li><strong>Cinnamon (Linux Mint)</strong></li>
+        <li><del>Consort</del></li>
+        <li><strong>COSMIC (Pop_OS!)</strong></li>
+        <li>Endless Shell (Endless OS)</li>
+        <li><strong>GNOME</strong></li>
+        <li>GNOME Classic</li>
+        <li>GNOME Flashback</li>
+        <li><del><em>GPE</em></del></li>
+        <li><em>Hildon (Maemo Leste)</em></li>
+        <li>JADE</li>
+        <li><del>Java Desktop System (Solaris)</del></li>
+        <li>Manokwari (BlankOn Linux</li>
+        <li><strong>MATE</strong></li>
+        <li>Material Shell</li>
+        <li><del>Maynard</del></li>
+        <li><del>Mezzo</del></li>
+        <li>LXDE</li>
+        <li><strong>Pantheon (elementaryOS)</strong></li>
+        <li>Pearl DE (Pearl Linux</li>
+        <li><em>Phosh (PureOS)</em></li>
+        <li>PIXEL Desktop (Raspberry Pi OS)</li>
+        <li><del>ROX Desktop</del></li>
+        <li>Sugar</li>
+        <li>Regolith Desktop (Regolith Linux)</li>
+        <li><strong>UnityX (Ubuntu Unity)</strong></li>
+        <li><del>Vera</del></li>
+        <li>XFast</li>
+        <li><strong>Xfce</strong></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Motif toolkit</li>
+        <ul>
+        <li><strong>CDE/Common Desktop Environment</strong></li>
+        <li><del>IRIX Interactive Desktop (IRIX)</del></li>
+        <li><del>HP VUE (HP-UX)</del></li>
+        <li><del>Panorama Desktop</del></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>OLIT/Xview toolkit</li>
+        <ul>
+        <li><del>openlook</del></li>
+        <li><del>Open Windows (Solaris)</del></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Qt toolkit (or forks of Qt)</li>
+        <ul>
+        <li><del>BE::Shell</del></li>
+        <li>Cutefish</li>
+        <li><strong>Deepin Desktop (Deepin Linux)</strong></li>
+        <li>Draco DE</li>
+        <li><del>Elokab</del></li>
+        <li><em>Glacier UX (Nemo Mobile)</em></li>
+        <li><del>Hawaii</del></li>
+        <li>hello Desktop (helloSystem)</li>
+        <li><del>Innova</del></li>
+        <li>Jing Desktop (JingOS)</li>
+        <li>KDE Liquidshell</li>
+        <li><strong>KDE Plasma</strong></li>
+        <li><em>KDE Plasma Mobile</em></li>
+        <li><del>Kuartet</del></li>
+        <li>Liri Shell (Liri OS)</li>
+        <li><em>Lomiri (Ubuntu Touch)</em></li>
+        <li><strong>Lumina</strong></li>
+        <li><em>Luna Next (Open WebOS)</em></li>
+        <li><strong>LXQt</strong></li>
+        <li>Maui Shell <em>(convergent, for desktop and mobile)</em></li>
+        <li><del>MoonlightDE</del></li>
+        <li>NX Desktop (Nitrux)</li>
+        <li><del>OPIE</del></li>
+        <li><del>Papyros</del></li>
+        <li><del>Razor-qt</del></li>
+        <li><em>Sailfish UI (Sailfish OS)</em></li>
+        <li>theShell</li>
+        <li><strong>Trinity Desktop</strong></li>
+        <li><strong>UKUI (Ubuntu Kylin)</strong></li>
+        <li><del>Unity 2D</del></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Xlib toolkit</li>
+        <ul>
+        <li><em>Sxmo</em></li>
+        <li><del>UDE/Unix DE</del></li>
+        </ul>
+    </ul>
+    <ul>
+    <li>Other, for X Server or Wayland</li>
+        <ul>
+        <li>Fvwm-Crystal</li>
+        <li><del>Fvwm-Nightshade</del></li>
+        <li>nsCDE</li>
+        <li><del>Project Looking Glass</del></li>
+        <li>PsychDOS</li>
+        <li>Stacking and compositing stand-alone window managers: 2bwm, 9wm, AfterStep, amiwm, berry, Blackbox, Compiz, CTWM, cwm, eggwm, evilwm, Fluxbox, Flwm, Fvwm, Goomwwm, IceWM, jbwm, JWM, Karmen, lwm, Matchbox, MWM, olwm, Openbox, pawm, PekWM, Qvwm, Sawfish, Scwm, sowm, swm, TinyWM, twm, tvtwm, ukwm, UWM, vwm, vtwm, Wind, WindowMaker, WindowLab, Wio, wm2</li>
+        <li>Tiling and dynamic stand-alone window managers: Alopex, awesome, Bspwm, dwm, echinus, EXWM, FrankenWM, Herbstluftwm, i3, Ion, Larswm, NotionWM, Qtile, Ratpoison, spectrwm, StumpWM, subtle, Sway, Velox, Wingo, WMFS2, wmii, xmonad</li>
+        </ul>
+    <li>Other, not using X Server oder Wayland</li>
+        <ul>
+        <li><em><strong>various Android interfaces</strong>, incl. for Android forks</em></li>
+        <li><strong>Aqua (macOS)</strong></li>
+        <li><strong>Aura Shell (ChromeOS)</strong></li>
+        <li><del><em>Bada GUI (Bada OS)</em></del></li>
+        <li>Durden</li>
+        <li>egmde</li>
+        <li><em>Gala (KaiOS/FirefoxOS)</em></li>
+        <li><del>NeXTSTEP Desktop</del></li>
+        <li>Orbital (Redox OS)</li>
+        <li><del>Photon (QNX)</del></li>
+        <li>rio (Plan 9 and forks)</li>
+        <li>Screen (QNX)</li>
+        <li>SerenityOS GUI (SerenityOS)</li>
+        <li>skiftOS GUI (skiftOS)</li>
+        <li><em><strong>Springboard (iOS/iPadOS)</strong></em></li>
+        <li>wm (Inferno)</li>
+        <li>XaAES (FreeMiNT)</li>
+        </ul>
+    </ul>
+<li>For Windows and Windows-like operating systems</li>
+    <ul><ul>
+    <li>ReactOS Explorer (ReactOS)</li>
+    <li><strong>Windows Shell (Microsoft Windows)</strong></li>
+    <li><strong>Workspace Shell (ArcaOS)</strong></li>
+    </ul></ul>
+<li>For AmigaOS and Amiga-like operating systems</li>
+    <ul><ul>
+    <li><strong>Workbench (AmigaOS)</strong></li>
+    <li>Ambient (MorphOS)</li>
+    <li>Magellan (Icaros)</li>
+    <li>Wanderer (AROS)</li>
+    </ul></ul>
+<li>For other still actively developed operating systems</li>
+    <ul><ul>
+    <li>Bluebottle GUI (Bluebottle OS)</li>
+    <li>ChrysaLisp GUI (ChrysaLisp OS)</li>
+    <li>DawnOS GUI (DawnOS)</li>
+    <li>DexOS GUI (DexOS)</li>
+    <li>DECWindows (OpenVMS)</li>
+    <li><strong>Ermine (Fuchsia)</strong></li>
+    <li>Essence GUI (Essence OS)</li>
+    <li>Ghost GUI (Ghost OS)</li>
+    <li>HelenOS GUI (HelenOS)</li>
+    <li>KolibriOS GUI (KolibriOS)</li>
+    <li>MenuetOS GUI (MenuetOS)</li>
+    <li>Mezzano GUI (Mezzano OS)</li>
+    <li>MonaOS GUI (MonaOS)</li>
+    <li><strong>OpenTracker (Haiku)</strong></li>
+    <li>PhantomOS GUI (PhantomOS)</li>
+    <li><strong>Pinboard (RISC OS)</strong></li>
+    <li>Sculpt (Genode)</li>
+    <li>Solar OS GUI (Solar OS)</li>
+    <li>SymbOS GUI (SymbOS)</li>
+    <li>Visopsys GUI (Visopsys)</li>
+    <li>Yutani (ToaruOS)</li>
+    </ul></ul>
+</ul>
+
+
+
+<!--
 <table id="bottom" style="white-space: nowrap; text-align: left;">
 <colgroup><col style="width: var(--legendwidth);"><col style="width: calc(15 * var(--legendwidth));"></colgroup>
 
@@ -2784,8 +1615,16 @@ Especially since the controversial initial release of GNOME 3, there have been l
 
 <tr><td>For other operating systems</td><td><span class="tooltip">Ermine<span class="tooltiptext">used in Fuchsia</span></span>, <span class="tooltip">Sculpt<span class="tooltiptext">used in Genode</span></span>, <span class="tooltip">Yutani<span class="tooltiptext">used in ToaruOS</span></span>; <em>the unnamed GUIs of the following OS:</em> Bluebottle, ChrysaLisp, DawnOS, DexOS, Essence, Ghost, HelenOS, KolibriOS, MenuetOS, Mezzano, MonaOS, PhantomOS, Solar OS, SymbOS, Visopsys</td><tr>
 
-</table>
+</table>-->
 
+<hr>
+<p style="font-weight: bold; font-size: large;;"><a href="cloud_comparison_2022old.htm">Again, click here to see an older version of this comparison which includes additional desktop environments (Budgie, Pantheon, Deepin, UKUI, CDE, Enlightenment, Trinity, UnityX, and Lumina)</a>. This extended comparison was up to date as of beginning 2022 but will not be updated anymore.</p>
+
+
+<hr>
+<br /><br />
+<p style="color: red;"><strong>Note: the below is from 2021 and will not be updated anymore</strong></p><br /><br />
+<hr>
 
 
 <h3>RAM Use</h3>
