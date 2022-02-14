@@ -162,7 +162,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: January 2022</p>
+<p class="center" style="color: red; font-size: small;">Last updated: Feburary 2022</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
@@ -345,6 +345,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td colspan="3">2016 Brave</td>
 </tr>
 
+<!--
 <tr>
 <td class="legend">Browser identification (user agent string on PC)</td>
 <td colspan="3">Firefox</td>
@@ -355,13 +356,14 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td colspan="2">Chrome (until 2019: Vivaldi)</td>
 <td colspan="3">Chrome (until 2016: Brave)</td>
 </tr>
+-->
 
 <tr>
 <td class="legend">HTML and Javascript engine</td>
 <td colspan="3"><strong>Gecko/SpiderMonkey</strong><br />WebKit/Nitro on iOS</td>
 <td colspan="2"><strong>WebKit/Nitro</strong></td>
 <td colspan="3"><strong>Blink/V8</strong><br />WebKit/Nitro until 2013 + on iOS</td>
-<td colspan="3"><strong>Blink/V8</strong><br />WebKit/Nitro on iOS<br />EdgeHTML/Chakra until 2020</td>
+<td colspan="3"><strong>Blink/V8</strong><br />WebKit/Nitro on iOS<br />Trident/Chakra in IE Mode<br />EdgeHTML/Chakra until 2020</td>
 <td colspan="3"><strong>Blink/V8</strong><br />WebKit/Nitro on iOS<br />Presto/Carakan until 2013 + in Opera Mini</td>
 <td colspan="2"><strong>Blink/V8</strong></td>
 <td colspan="3"><strong>Blink/V8</strong></td>
@@ -442,7 +444,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <tr>
 <td class="legend">Unix</td>
-<td colspan="3" class="almost tooltip">Yes (*BSD/Illumos/Solaris) / <span class="dropped">Dropped (HP-UX)</span><span class="tooltiptext">All inofficial builds (not provided or supported by Mozilla). <br />*BSD = FreeBSD, NetBSD, OpenBSD, and DragonflyBSD.</span></td>
+<td colspan="3" class="almost tooltip">Yes (*BSD/Illumos/Solaris)/<span class="dropped">Dropped (HP-UX)</span><span class="tooltiptext">All inofficial builds (not provided or supported by Mozilla). <br />*BSD = FreeBSD, NetBSD, OpenBSD, and DragonflyBSD.</span></td>
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="no">No</td>
 <td colspan="3" class="no">No</td>
@@ -632,6 +634,68 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr> 
 
+
+<tr>
+<td class="legend tooltip">Configurable placement of new tabs<span class="tooltiptext">e.g. next right vs. far right on tab bar</span></td>
+<!-- Firefox -->
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android dropped">Dropped</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android_wide yes">Yes</td>
+<!-- Brave -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr> 
+
+<tr>
+<td class="legend tooltip">Configurable tab focus after closing tab<span class="tooltiptext">e.g. go back to adjacent tab or to last used tab</span></td>
+<!-- Firefox -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<!--
 <tr>
 <td class="legend">Ability to reload all tabs at once</td>
 <td class="desktop yes">Yes</td>
@@ -676,35 +740,35 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-</tr> 
+</tr>  -->
 
 
 <tr class="noncore">
 <td class="legend">Other currently supported tab management features</td>
 
-<td class="desktop">Muting, pinning, search in tabs</td>
+<td class="desktop">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window</td>
 <td class="android"></td>
 <td class="ios">Search in tabs</td>
 
-<td class="desktop">Muting, pinning, search in tabs</td>
+<td class="desktop">Mute, pin, search in tabs</td>
 <td class="ios_wide">Search in tabs</td>
 
-<td class="desktop">Muting, pinning</td>
+<td class="desktop">Mute, pin, move multiple tabs to new window</td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Muting, pinning</td>
+<td class="desktop">Mute, pin, reload all tabs, move multiple tabs to new window</td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Muting, pinning, search in tabs</td>
+<td class="desktop">Mute, pin, search in tabs, reload all tabs, </td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Muting, pinning, search in tabs, <span class="tooltip">tiling<span class="tooltiptext">show multiple websites next to each other in same browser window</span></span></td>
+<td class="desktop">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window, <span class="tooltip">tiling<span class="tooltiptext">show multiple websites next to each other in same browser window</span></span></td>
 <td class="android_wide"></td>
 
-<td class="desktop">Muting, pinning</td>
+<td class="desktop">Mute, pin, move multiple tabs to new window</td>
 <td class="android"></td>
 <td class="ios"></td>
 </tr>
@@ -1809,6 +1873,192 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr> 
 
+
+
+<tr>
+<td class="legend">Portable settings profiles</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes (user.js)</td>
+<td class="android no tooltip">No<span class="tooltiptext">on rooted devices only</span></td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr> 
+
+<tr>
+<td class="legend">Ability to modify browser's UI elements</td>
+<!-- Firefox -->
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop dropped">Dropped (v15)</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr> 
+
+
+<td class="legend">Support for AVIF image format</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android_wide yes">Yes</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+</tr>
+
+
+<td class="legend">Support for JPEG XL image format</td>
+<!-- Firefox -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">only in Nightly, needs to be enabled in about:config</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend">Ability to view website with different HTML engine</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes tooltip">Yes (Trident)<span class="tooltiptext">Internet Explorer mode on Windows</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
+<td class="ios dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
+
+<td class="desktop no">No</td>
+<td class="android_wide no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr> 
+-->
+
+<!--
+<tr>
+<td class="legend">Set a custom user agent on a site-by-site basis</td>
+
+<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android dropped">Dropped</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop almost">w/ official extension</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android_wide no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr> 
+-->
+
 <tr>
 <td class="legend tooltip">Automatic tab hibernating<span class="tooltiptext">also called tab snoozing, freezing, unloading etc.</span></td>
 <!-- Firefox -->
@@ -2083,35 +2333,37 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr> 
 
+<!--
 <tr>
 <td class="legend">FTP support</td>
-<!-- Firefox -->
+
 <td class="desktop dropped tooltip">Dropped (v90)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Safari -->
+
 <td class="desktop almost">Read-only</td>
 <td class="ios_wide almost">Read-only</td>
-<!-- Chrome -->
+
 <td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Edge -->
+
 <td class="desktop dropped tooltip">Dropped (v88)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Opera -->
+
 <td class="desktop dropped tooltip">Dropped (v74)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
-<!-- Vivaldi -->
+
 <td class="desktop dropped tooltip">Dropped (v3.6)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
-<!-- Brave -->
+
 <td class="desktop dropped tooltip">Dropped (v1.8)<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="android dropped tooltip">Dropped<span class="tooltiptext">this function was read-only (only downloading, no uploading)</span></td>
 <td class="ios almost tooltip">Read-only<span class="tooltiptext">iOS/WebKit feature</span></td>
 </tr>
+-->
 
 
 <tr>
@@ -2145,304 +2397,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 
-<tr>
-<td class="legend semititle"><br />Customization</td>
-<!-- Firefox -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Safari -->
-<td class="desktop"></td>
-<td class="ios_wide"></td>
-<!-- Chrome -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Edge -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Opera -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Vivaldi -->
-<td class="desktop"></td>
-<td class="android_wide"></td>
-<!-- Brave -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-</tr>
-
-<tr>
-<td class="legend">Portable settings profiles</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes (user.js)</td>
-<td class="android no tooltip">No<span class="tooltiptext">on rooted devices only</span></td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend">Ability to modify browser's UI elements</td>
-<!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend tooltip">Configurable placement of new tabs<span class="tooltiptext">e.g. next right vs. far right on tab bar</span></td>
-<!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android dropped">Dropped</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android_wide yes">Yes</td>
-<!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend tooltip">Configurable tab focus after closing tab<span class="tooltiptext">e.g. go back to adjacent tab or to last used tab</span></td>
-<!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr>
-
-<tr>
-<td class="legend semititle"><br />Compatibility</td>
-<!-- Firefox -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Safari -->
-<td class="desktop"></td>
-<td class="ios_wide"></td>
-<!-- Chrome -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Edge -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Opera -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Vivaldi -->
-<td class="desktop"></td>
-<td class="android_wide"></td>
-<!-- Brave -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-</tr>
-
-<td class="legend">Support for AVIF image format</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android_wide yes">Yes</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-</tr>
-
-
-<td class="legend">Support for JPEG XL image format</td>
-<!-- Firefox -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">only in Nightly, needs to be enabled in about:config</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop almost tooltip">experimental<span class="tooltiptext">disabled by default</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr>
-
-<tr>
-<td class="legend">Ability to view website with different HTML engine</td>
-<!-- Firefox -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes tooltip">Yes (Trident)<span class="tooltiptext">Internet Explorer mode on Windows</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
-<td class="ios dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend">Set a custom user agent on a site-by-site basis</td>
-<!-- Firefox -->
-<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android dropped">Dropped</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop almost">w/ official extension</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
 
 <tr>
 <td class="legend semititle"><br />Extensions</td>
@@ -2926,7 +2880,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr><td colspan="20"><span style="text-decoration: underline;">Using WebKit/Nitro engine:</span> GNOME Web, Otter, <em>all iOS browsers...</em></td></tr>
 <tr><td colspan="20"><span style="text-decoration: underline;">Using Gecko/SpiderMonkey engine:</span> Waterfox, LibreWolf, SeaMonkey, Tor Browser,  ...</td></tr>
 <tr><td colspan="20"><span style="text-decoration: underline;">Using Goanna/SpiderMonkey engine:</span> Pale Moon, Basilisk, <a href="https://git.nuegia.net/webbrowser.git/" target="_blank" style="text-decoration: none; color: black;"><span class="tooltip">Webbrowser<span class="tooltiptext">fork of Pale Moon</span></span></a>, K-Meleon, ...</td></tr>
-<tr><td colspan="20"><span style="text-decoration: underline;">Using other engines:</span> <span class="tooltip">NetSurf<span class="tooltiptext">using Hubbub/Duktape engine</span></span>, Servo, Ekioh Flow, SerenityOS Browser, <span class="tooltip">iBrowse<span class="tooltiptext">for AmigaOS/MorphOS</span></span>, <em>text browsers...</em></td></tr>
+<tr><td colspan="20"><span style="text-decoration: underline;">Using other engines:</span> <span class="tooltip">NetSurf<span class="tooltiptext">using Hubbub/Duktape engine</span></span>, Ekioh Flow, SerenityOS Browser, <span class="tooltip">iBrowse<span class="tooltiptext">for AmigaOS/MorphOS</span></span>, Servo, <em>text browsers...</em></td></tr>
 </tfoot>
 
 
