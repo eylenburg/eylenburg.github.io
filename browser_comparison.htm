@@ -611,6 +611,37 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr> 
 
+
+<td class="legend tooltip">Vertical tabs</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop dropped">Dropped (v16)</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop dropped">Dropped (v15)</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android_wide no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<!--
 <tr>
 <td class="legend tooltip">Ability to change tab bar position <span class="tooltiptext">e.g. vertical tab on the side or bottom tabs; on mobile any possibility to change to location of the tab switcher counts as "yes"</span></td>
 <td class="desktop ext"><span class="dropped">Dropped (v29)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
@@ -632,68 +663,72 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop no">No</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
-</tr> 
+</tr> -->
 
-
+<!--
 <tr>
 <td class="legend tooltip">Configurable placement of new tabs<span class="tooltiptext">e.g. next right vs. far right on tab bar</span></td>
-<!-- Firefox -->
+
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android dropped">Dropped</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+
 <td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+
 <td class="desktop yes">Yes</td>
 <td class="android_wide yes">Yes</td>
-<!-- Brave -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
+-->
 
+<!--
 <tr>
 <td class="legend tooltip">Configurable tab focus after closing tab<span class="tooltiptext">e.g. go back to adjacent tab or to last used tab</span></td>
-<!-- Firefox -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+
 <td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-</tr>
+</tr> -->
+
+
 
 <!--
 <tr>
@@ -744,31 +779,67 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 
 <tr class="noncore">
-<td class="legend">Other currently supported tab management features</td>
+<td class="legend">Other supported tab settings (not exhaustive)</td>
 
-<td class="desktop">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window</td>
-<td class="android"></td>
-<td class="ios">Search in tabs</td>
+<td class="desktop"><span class="yes">Cycle tabs in recently used order with Ctrl+Tab</span>, <span class="tooltip almost">choose placement of new tabs (in about:config)<span class="tooltiptext">e.g. next to current tab or at far right of tab bar</span></span></td>
+<td class="android dropped">Dropped: choose placement of new tabs (v79)</td>
+<td class="ios"></td>
 
-<td class="desktop">Mute, pin, search in tabs</td>
-<td class="ios_wide">Search in tabs</td>
+<td class="desktop"></td>
+<td class="ios_wide"></td>
 
-<td class="desktop">Mute, pin, move multiple tabs to new window</td>
+<td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Mute, pin, reload all tabs, move multiple tabs to new window</td>
+<td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Mute, pin, search in tabs, reload all tabs, </td>
+<td class="desktop"><span class="yes">Cycle tabs in recently used order with Ctrl+Tab</span>, <span class="dropped">Dropped: configurable placement of new tabs (v15), configurable tab focus after closing tab (v15)</span></td>
 <td class="android"></td>
 <td class="ios"></td>
 
-<td class="desktop">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window, <span class="tooltip">tiling<span class="tooltiptext">show multiple websites next to each other in same browser window</span></span></td>
+<td class="desktop"><span class="yes">Cycle tabs in recently used order with Ctrl+Tab, 
+  <span class="tooltip">choose between shrinking or scrollable tabs on tab bar<span class="tooltiptext">if too many tabs are open to fit horizontally</span></span>,
+  <span class="tooltip">configurable placement of new tabs (in about:config)<span class="tooltiptext">e.g. next to current tab or at far right of tab bar</span></span>, 
+  <span class="tooltip">configurable tab focus after closing tab<span class="tooltiptext">e.g. go back to adjacent tab or to last used tab</span></span>, 
+  </span></td>
 <td class="android_wide"></td>
 
-<td class="desktop">Mute, pin, move multiple tabs to new window</td>
+<td class="desktop"><span class="yes">Cycle tabs in recently used order with Ctrl+Tab</span></td>
+<td class="android"></td>
+<td class="ios"></td>
+</tr>
+
+
+
+<tr class="noncore">
+<td class="legend">Other supported tab management features (not exhaustive)</td>
+
+<td class="desktop"><span class="yes">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window</span></td>
+<td class="android"></td>
+ <td class="ios"><span class="yes">Search in tabs</span></td>
+
+  <td class="desktop"><span class="yes">Mute, pin, search in tabs</span></td>
+  <td class="ios_wide"><span class="yes">Search in tabs</span></td>
+
+<td class="desktop"><span class="yes">Mute, pin, move multiple tabs to new window</span></td>
+<td class="android"></td>
+<td class="ios"></td>
+
+<td class="desktop"><span class="yes">Mute, pin, reload all tabs, move multiple tabs to new window</span></td>
+<td class="android"></td>
+<td class="ios"></td>
+
+  <td class="desktop"><span class="yes">Mute, pin, search in tabs, reload all tabs</span>, <span class="dropped">Dropped: periodic reload (v15), <span class="tooltip">tiling<span class="tooltiptext">show multiple websites next to each other in same browser window</span></span> (v15)</span></td>
+<td class="android"></td>
+<td class="ios"></td>
+
+<td class="desktop"><span class="yes">Mute, pin, search in tabs, reload all tabs, move multiple tabs to new window, periodic reload, <span class="tooltip">tiling<span class="tooltiptext">show multiple websites next to each other in same browser window</span></span></span></td>
+<td class="android_wide"></td>
+
+  <td class="desktop"><span class="yes">Mute, pin, move multiple tabs to new window</span></td>
 <td class="android"></td>
 <td class="ios"></td>
 </tr>
