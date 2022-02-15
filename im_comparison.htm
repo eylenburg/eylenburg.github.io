@@ -157,11 +157,11 @@ background-color: #999;
 I have limited this comparison to only ten messengers:</p>
 <ul>
 <li>XMPP, the pioneer of FOSS and federated instant messengers. XMPP is just a protocol and not an application; in this article it is represented by the Android app Conversations.</li>
-<li>Delta Chat, which is based on normal email and hence has the greatest theoretical potential among all federated messengers.</li>
+<li>Delta Chat, which is based on normal email and hence has the greatest theoretical userbase among all federated messengers.</li>
 <li>Matrix, a new and very promising federated protocol, here represented by the leading client Element.</li>
 <li>Signal, the most mainstream end-to-end (E2E) encrypted FOSS messenger.</li>
 <li>Telegram, the most mainstream FOSS messenger, and market leader in some countries.</li>
-<li>Threema, the most maintream E2E-encrypted FOSS messenger with the option of anonymous accounts.</li>
+<li>Threema, the most mainstream E2E-encrypted FOSS messenger with the option of anonymous accounts.</li>
 <li>Facebook Messenger, the second most popular messenger worldwide.</li>
 <li>Line, the most popular messenger in Japan, Taiwan, and Thailand.</li>
 <li>Viber, as it is the most popular messenger in some countries.</li>
@@ -169,12 +169,13 @@ I have limited this comparison to only ten messengers:</p>
 </ul>
 <p>Some messengers that are relevant but did not make it on the list:</p>
 <ul style="font-size: small;">
-<li>RCS (Google Messages): not available on iOS</li>
 <li>iMessage (+FaceTime): not available on Android</li>
+<li>RCS (Google Messages): not available on iOS</li>
+<li>Anything else made by Google: Google Chat, Google Meet, Google Duo, Google Hangouts, it's hard to follow what they're pushing at the moment. They keep deprecating and reinventing their IM apps. It's too tiresome to follow and they won't ever make a breakthrough anyway. Should have kept Google Talk, which was simply an XMPP client.</li>
 <li>Skype: Not market leader in any country (anymore), cannibalized by Microsoft Teams</li>
 <li>Briar: Peer-to-peer messenger with the most mindshare, but low adoption, limited functionality (only text messages), not available for iOS</li>
 <li>Tox: Another well-known P2P messenger, supports more platforms than Briar, but low adoption.</li>
-<li>ICQ: One of the first, and historically very popular, IMs. It's still around but small amount of active users.</li>
+<li>ICQ: One of the first, and historically very popular, IMs. It's still around but with a small number of active users.</li>
 <li>WeChat: The market leader in China, and third most popular IM worldwide, but it's a privacy nightmare and there's no reason to use WeChat if you're not Chinese or living in China.</li>
 <li>KakaoTalk: The market leader in South Korea, but low adoption elsewhere.</li>
 <li>IRC: A protocol with many clients and server federation. Unlike XMPP for example, IRC focuses mostly on group chats rather than 1:1 instant messaging.</li>
@@ -186,7 +187,6 @@ I have limited this comparison to only ten messengers:</p>
 <li>Jami, Session: Low adoption.</li>
 <li>Instagram, LinkedIn: Mainly social media rather than a messenger.</li>
 <li>Mumble, Teamspeak: Voice chat focus.</li>
-<li>Anything made by Google: Google Chat, Google Meet, Google Duo, Google Hangouts, it's hard to follow what they're pushing at the moment. They keep deprecating and reinventing their IM apps. It's too tiresome to follow and they won't ever make a breakthrough anyway. Should have kept Google Talk, which was simply an XMPP client.</li>
 </ul>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
@@ -932,7 +932,7 @@ I have limited this comparison to only ten messengers:</p>
 <tr>
 <td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of voice and video calls</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
-<td class="line">n/a</td>
+<td class="line">n/a (no calls)</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1038,14 +1038,14 @@ I have limited this comparison to only ten messengers:</p>
 <h2>So, what's the conclusion?</h2>
 
 <ul>
-<li>In an ideal world, everyone would use federated messengers, so that no company has the power to ban users or sell out to a <span class="tooltip">FAGMAN<span class="tooltiptext">The Big Tech oligopolists: Facebook, Apple, Google, Microsoft, Amazon, Netflix</span></span> company, and so that people can self-host their own servers.
-<ul><li>At the moment, Matrix seems to be the most promising. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery. Of course, it would be equally great if XMPP or Delta Chat become mainstream.</li>
+<li>In an ideal world, everyone would use federated messengers, so that no company has the power to ban users or sell out to a Big Tech oligopolist such as Meta, Apple, Google, Microsoft, or Amazon, and so that people can self-host their own servers and thereby circumvent censorship attempts.
+<ul><li>At the moment, Matrix seems to be the most promising. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery.</li>
 <li>XMPP has a very lightweight and easy to set up server software. Furthermore it is a standardized protocol that has been around since 1999 and is the basis for other messengers such as Whatsapp. The main problem with XMPP is the fact that there isn't any client app which works across all major operating systems and has implemented all the important features (such as E2E encryption or video calling). I believe that this is a roadblock to more widespread adoption among the less technologically inclined ("Oh you have an iPhone? Then you need to download Siskin, not Conversations."). </li>
 <li>Delta Chat has the advantage that everyone already has an email address so there are billions of potential users which already have each other saved in their address books. However, the email protocol has its own limits, for example you can't conduct voice or video calls. Because of this, I don't think that Delta Chat will have a realistic chance of ever replacing WhatsApp.</li></ul>
-<li>Signal is the next best choice. It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), it can be used as the default SMS app on Android, and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously (unless you are lucky enough to live in a country that allows the anonymous purchase of SIM cards). Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do now allow third-party clients, so users of niche operating systems are excluded.</li>
-<li>Telegram has lots of features and encourages the development of third-party clients. The main downside is that chats are not E2E encrypted by default, and the E2E encrypted secret chats don't sync across devices. It's probably the best messenger if you don't care too much about privacy.</li>
-<li>Threema is good from a privacy perspective and allows users to sign up without giving up their phone number, but lacks desktop apps. The main problem I see is that the app costs money. It's not much, and it's good to know how the development is financed, but it is a major showstopper for widespread adoption.</li>
-<li>Among the big proprietary messengers, Whatsapp, Line and Viber E2E-encrypt all messages by default, which is great. However, you can never be sure that the company or the government doesn't hold the keys to access your messages, as the apps are closed source and can't be audited. Furthermore, the cloud chat backups of the proprietary messengers are not E2E encrypted, although WhatsApp is in the process of adding this feature as of late 2021. If backups are not end-to-end encrypted, then even if you don't upload your chat history to the cloud, your conversation partner may do so, and this effectively makes the rest of the E2E encryption pointless, because Apple/Google and the US government can read your messages in the cloud backup. With WhatsApp closing this loophole, it might actually be the best choice among the big proprietary messengers - and ironically give people less reasons to switch to another messenger such as Signal.</li>
+<li>Signal is the next best choice. It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), it can be used as the default SMS app on Android, and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously if your country forbids the anonymous purchase of SIM cards. Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do now allow third-party clients, so users of niche operating systems are excluded.</li>
+<li>Telegram has lots of features and encourages the development of third-party clients. It's probably the best messenger if you don't care too much about privacy. The main downside is that chats are not E2E encrypted by default, and the E2E encrypted secret chats don't sync across devices. Furthermore, it is centralized and was forced to censor in the past (e.g. it blocked over 60 public channels accused of wrongthink for German users after being pressured by the German government in 2022). </li>
+<li>Threema is good from a privacy perspective and allows users to sign up without giving up their phone number. The main problem I see is that the app costs money. It's not much, and it's good to know how the development is financed, but it is a major showstopper for widespread adoption.</li>
+<li>Among the big proprietary messengers, Whatsapp, Line and Viber E2E-encrypt all messages by default, which is great. However, you can never be sure that the company or the government doesn't hold the keys to access your messages, as the apps are closed source and can't be audited. Furthermore, the cloud chat backups of the proprietary messengers, with the exception of WhatsApp, are not E2E encrypted. If backups are not end-to-end encrypted, then even if you don't upload your chat history to the cloud, your conversation partner may do so, and this effectively makes the rest of the E2E encryption pointless, because Apple/Google and the US government can read your messages in the cloud backup. With WhatsApp having closed this loophole, it might actually be the best choice among the big proprietary messengers - and ironically give people less reasons to switch to another messenger such as Signal.</li>
 </ul>
 
 <footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
