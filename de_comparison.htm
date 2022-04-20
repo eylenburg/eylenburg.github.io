@@ -194,6 +194,10 @@ background-color: #aaa;
 }
 
 
+.reviewcontent { display: none; }
+
+.reviewcontent:target { display: block;  }
+
 </style>
 </head>
 <body>
@@ -1585,6 +1589,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
         <li>hello Desktop (helloSystem)</li>
         <li><del>Innova</del></li>
         <li>Jing Desktop (JingOS)</li>
+        <li>Katana DE <em>(fork of KDE Plasma 4)</em></li>
         <li>KDE Liquidshell</li>
         <li><strong>KDE Plasma</strong></li>
         <li><em>KDE Plasma Mobile</em></li>
@@ -1688,97 +1693,16 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 
-<!--
-<table id="bottom" style="white-space: nowrap; text-align: left;">
-<colgroup><col style="width: var(--legendwidth);"><col style="width: calc(15 * var(--legendwidth));"></colgroup>
-
-<tr><td style="text-decoration: underline; font-weight: bold;" colspan="2">Other active or experimental desktop environments for Linux/Unix (examples):</td></tr>
-
-<tr><td>Using EFL:</td><td><span class="tooltip">Moksha<span class="tooltiptext">fork of Enlightenment, used in Bodhi Linux</span></span></td></tr>
-
-<tr><td>Using Flutter:</td><td><span class="tooltip">Pangolin Desktop UI<span class="tooltiptext">used in dahliaOS</span></span></td></tr>
-
-<tr><td>Using Fyne:</td><td>FyneDesk</td></tr>
-
-<tr><td>Using GNUstep:</td><td>Nextspace</td></tr>
-
-<tr><td>Using GTK:</td><td><span class="tooltip">COSMIC<span class="tooltiptext">based on GNOME, used in Pop!_OS</span></span>, <span class="tooltip">Endless Shell<span class="tooltiptext">fork of GNOME, used in Endless OS</span></span>, GNOME Classic, GNOME Flashback, JADE, <span class="tooltip">Manokwari<span class="tooltiptext">fork of GNOME, used in BlankOn Linux</span></span>, <span class="tooltip">Material Shell<span class="tooltiptext">based on GNOME</span></span>, LXDE, <span class="tooltip">Pearl DE<span class="tooltiptext">employing Compiz, used in Pearl Linux</span></span>, <span class="tooltip">PIXEL Desktop<span class="tooltiptext">fork of LXDE, used in Raspberry Pi OS</span></span>, Sugar, <span class="tooltip">Regolith<span class="tooltiptext">employing i3, used in Regolith Linux</span></span>, XFast</td></tr>
-
-<tr><td>Using Motif:</td><td>Maxx Interactive</td></tr>
-
-<tr><td>Using Qt:</td><td>Cutefish, <span class="tooltip">Draco DE<span class="tooltiptext">fork of Lumina</span></span>, <span class="tooltip">hello Desktop<span class="tooltiptext">used in helloSystem</span></span>, <span class="tooltip">Jing Desktop Environment<span class="tooltiptext">fork of KDE Plasma, used in JingOS</span></span>, KDE Liquidshell, <span class="tooltip">Liri Shell<span class="tooltiptext">used in Liri OS</span></span>, <span class="tooltip">Maui Shell<span class="tooltiptext">convergent shell for desktops and mobile devices</span></span>, <span class="tooltip">NX Desktop<span class="tooltiptext">fork of KDE Plasma, used in Nitrux</span></span>, theShell</td></tr>
-
-<tr><td>Other:</td><td><span class="tooltip">Fvwm-Crystal<span class="tooltiptext">based on Fvwm window manager</span></span>, <span class="tooltip">nsCDE<span class="tooltiptext">based on Fvwm window manager</span></span>, PsychDOS</td></tr>
-
-<tr><td>Not for X11 or Wayland</td><td><span class="tooltip">Aqua<span class="tooltiptext">used in macOS</span></span>, <span class="tooltip">Aura Shell<span class="tooltiptext">used in Chrome OS</span></span>, <span class="tooltip">Durden<span class="tooltiptext">for Arcan display server</span></span>, <span class="tooltip">egmde<span class="tooltiptext">for Mir display server</span></span></td></tr>
-
-<tr height="10"><td></td><td></td></tr>
-
-<tr><td style="text-decoration: underline; font-weight: bold;" colspan="2">Stand-alone window managers for Linux/Unix (examples):</td></tr>
-
-<tr><td>Stacking and compositing window managers:</td><td>2bwm, 9wm, AfterStep, amiwm, berry, Blackbox, Compiz, CTWM, cwm, eggwm, evilwm, Fluxbox, Flwm, Fvwm, Goomwwm, IceWM, jbwm, JWM, Karmen, lwm, Matchbox, MWM, olwm, Openbox, pawm, PekWM, Qvwm, Sawfish, Scwm, sowm, swm, TinyWM, twm, tvtwm, ukwm, UWM, vwm, vtwm, Wind, WindowMaker, WindowLab, Wio, wm2</td></tr>
-<tr><td>Tiling and dynamic window managers:</td><td>Alopex, awesome, Bspwm, dwm, echinus, EXWM, FrankenWM, Herbstluftwm, i3, Ion, Larswm, NotionWM, Qtile, Ratpoison, spectrwm, StumpWM, subtle, Sway, Velox, Wingo, WMFS2, wmii, xmonad</td></tr>
-
-<tr height="10"><td></td><td></td></tr>
-
-<tr><td style="text-decoration: underline; font-weight: bold;" colspan="2">Active smartphone GUIs for Linux/Unix (examples):</td></tr>
-
-<tr><td>Using EFL:</td><td><span class="tooltip">Tizen UI<span class="tooltiptext">using Enlightenment window manager</span></span></td></tr>
-
-<tr><td>Using GTK:</td><td><span class="tooltip">Hildon<span class="tooltiptext">used in Maemo Leste</span></span>, <span class="tooltip">Phosh<span class="tooltiptext">used in PureOS</span></span></td></tr>
-
-<tr><td>Using Qt:</td><td><span class="tooltip">Glacier UX<span class="tooltiptext">used in Nemo Mobile</span></span>, <span class="tooltip">KDE Plasma Mobile<span class="tooltiptext">default UI on PinePhone</span></span>, <span class="tooltip">Lomiri<span class="tooltiptext">successor of Unity 7, used in Ubuntu Touch</span></span>, <span class="tooltip">Luna Next<span class="tooltiptext">used in Open webOS</span></span>, <span class="tooltip">Sailfish UI<span class="tooltiptext">used in Sailfish OS</span></span></td><tr>
-
-<tr><td>Using Xlib:</td><td>Sxmo</td></tr>
-
-<tr><td>Not for X11 or Wayland:</td><td><span class="tooltip">Gala<span class="tooltiptext">used in KaiOS and its predecessor FirefoxOS</span></span>, <span class="tooltip">Springboard<span class="tooltiptext">used in iOS/iPadOS</span></span>, <span class="tooltip">various Android interfaces (incl. for forks such as HarmonyOS or Fire OS)<span class="tooltiptext">e.g. Stock Android as well as custom UIs by manufacturers such as Amazon (FireOS), Asus, HTC, Huawei, Meizu, OnePlus, OPPO, Samsung, Sony, and Xiaomi</span></span></td></tr>
-
-
-<tr height="10"><td></td><td></td></tr>
-
-<tr><td style="text-decoration: underline; font-weight: bold;" colspan="2">Discontinued or dormant desktop environments for Linux/Unix (examples):</td></tr>
-
-<tr><td>Using FLTK:</td><td>Equinox (EDE)</td></tr>
-<tr><td>Using GNUstep / OpenStep:</td><td>Etoile, NeXTSTEP Desktop</td></tr>
-<tr><td>Using GTK:</td><td>Consort, <span class="tooltip">GPE<span class="tooltiptext">for smartphones</span></span>, <span class="tooltip">Java Desktop System<span class="tooltiptext">fork of GNOME, used in Solaris</span></span>, Maynard, Mezzo, ROX Desktop, Vera</td><tr>
-<tr><td>Using Motif:</td><td><span class="tooltip">IRIX Interactive Desktop<span class="tooltiptext">used in IRIX</span></span>, <span class="tooltip">HP VUE<span class="tooltiptext">used in HP-UX</span></span>, Panorama Desktop</td></tr>
-<tr><td>Using OLIT/Xview:</td><td><span class="tooltip">openlook<span class="tooltiptext">fork of Open Windows</span></span>, <span class="tooltip">Open Windows<span class="tooltiptext">used in Solaris</span></span></td></tr>
-<tr><td>Using Qt:</td><td>BE::SHell, Elokab, Hawaii, Innova, Kuartet, MoonlightDE, OPIE, Papyros, <span class="tooltip">Razor-qt<span class="tooltiptext">on of the predecessors of LXQt</span></span>, Unity 2D</td></tr>
-<tr><td>Using Xlib/XCB:</td><td>Unix DE (UDE)</td></tr>
-<tr><td>Other:</td><td><span class="tooltip">Bada GUI<span class="tooltiptext">for smartphones running Samsung Bada OS</span></span>, <span class="tooltip">Fvwm-Nightshade<span class="tooltiptext">based on Fvwm window manager</span></span>, <span class="tooltip">Project Looking Glass<span class="tooltiptext">using Java 3D</span></span></td></tr>
-
-
-
-<tr height="10"><td></td><td></td></tr>
-
-<tr><td style="text-decoration: underline; font-weight: bold;" colspan="2">Active desktop environments for non-Linux/Unix operating systems (examples):</td></tr>
-
-<tr><td>For AmigaOS-like operating systems:</td><td><span class="tooltip">Workbench<span class="tooltiptext">used in AmigaOS</span></span>, <span class="tooltip">Ambient<span class="tooltiptext">used in MorphOS</span></span>, <span class="tooltip">Magellan<span class="tooltiptext">used in Icaros</span></span>, <span class="tooltip">Wanderer<span class="tooltiptext">used in AROS</span></span></td></tr>
-
-<tr><td>For Haiku:</td><td>OpenTracker</td></tr>
-
-<tr><td>For OpenVMS:</td><td>DECWindows</td></tr>
-
-<tr><td>For RISC OS:</td><td>Pinboard</td></tr>
-
-<tr><td>For Unix-like operating system</td><td><span class="tooltip">Orbital<span class="tooltiptext">used in Redox OS</span></span>, <span class="tooltip">rio<span class="tooltiptext">used in 9legacy, 9front, Harvey OS etc.</span></span>, <span class="tooltip">Screen<span class="tooltiptext">used in QNX</span></span>, SerenityOS GUI, skiftOS GUI, <span class="tooltip">wm<span class="tooltiptext">used in Inferno</span></span>, <span class="tooltip">XaAES<span class="tooltiptext">used in FreeMiNT</span></span></td></tr>
-
-<tr><td>For Windows-like operating systems:</td><td><span class="tooltip">Windows Shell<span class="tooltiptext">used in Microsoft Windows</span></span>, <span class="tooltip">ReactOS Explorer<span class="tooltiptext">used in ReactOS</span></span>, <span class="tooltip">Workspace Shell<span class="tooltiptext">used in ArcaOS</span></span></td></tr>
-
-<tr><td>For other operating systems</td><td><span class="tooltip">Ermine<span class="tooltiptext">used in Fuchsia</span></span>, <span class="tooltip">Sculpt<span class="tooltiptext">used in Genode</span></span>, <span class="tooltip">Yutani<span class="tooltiptext">used in ToaruOS</span></span>; <em>the unnamed GUIs of the following OS:</em> Bluebottle, ChrysaLisp, DawnOS, DexOS, Essence, Ghost, HelenOS, KolibriOS, MenuetOS, Mezzano, MonaOS, PhantomOS, Solar OS, SymbOS, Visopsys</td><tr>
-
-</table>-->
-
 <hr>
 <p style="font-weight: bold; font-size: large;;"><a href="de_comparison_2022old.htm">Again, click here to see an older version of this comparison which includes additional desktop environments (Budgie, Pantheon, Deepin, UKUI, CDE, Enlightenment, Trinity, UnityX, and Lumina)</a>. This extended comparison was up to date as of beginning 2022 but will not be updated anymore.</p>
 
 
 <hr>
-<br /><br />
-<p style="color: red;"><strong>Note: the below is a review of 15 Linux desktop environments from 2021 and will not be updated anymore</strong></p><br /><br />
+
+<p style="font-size: large; font-weight: bold;"><a href="#Review">Click here to show my review of 15 Linux desktop environments, with screenshots and comparison of RAM use</a> (from 2021, will not be updated anymore)</p>
 <hr>
 
-
+<div class="reviewcontent" id="Review">
 <h3>RAM Use</h3>
 <p>Below is a graph showing the RAM use in excess of the 261 MB used by the base system (without GDM3 or X.Org running).</p>
 <a href="pics/de_comp/RAM use.png" target="_blank"><img src="pics/de_comp/RAM use.png" style="max-width: 100%;" alt="RAM Use by Desktop Environment" /></a>
@@ -1852,6 +1776,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <a href="pics/de_comp/Screenshots/Xfce.png" target="_blank"><img src="pics/de_comp/Screenshots/Xfce.png" style="max-width: 100%;" /></a>
 <ul><li>The oldest desktop environment developed for Linux, slightly preceding KDE and GNOME.</li><li>Traditionally the lightweight alternative to GNOME and KDE Plasma</li><li>Mature product with relatively slow development pace</li><li>However, recently KDE Plasma has become just as lightweight (in terms of RAM use) as Xfce, and some new desktops like LXQt are even more lightweight than those two</li><li>Comes with a small set of Xfce applications</li><li>Customizable and easy to use</li><li>Traditional workflow</li><li>Default design looks outdated, but can be themed</li><li><b>Conclusion: recommended</b></li><ul><li><b>Features: 4/5</b></li><li><b>Polish: 5/5</b></li><li><b>Resource usage: 2/5</b></li></ul></ul>
 
+</div>
 
 <footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
 <h2 style="text-align: center"><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></footer>
