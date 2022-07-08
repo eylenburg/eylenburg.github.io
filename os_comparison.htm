@@ -127,12 +127,12 @@ background-color: #EBC1AD;
 <li><strong>Chrome OS</strong>: Unix-like, based on Linux. Decent market share in certain markets (e.g. US). Preinstalled on Chromebooks.</li>
 <li><strong>GNU/Linux</strong>: Unix-like. Widespread use in the server and embedded markets, still significant as a desktop and smartphone OS. Most popular distributions for desktops include Ubuntu, Debian, OpenSUSE, Fedora, and Arch.</li>
 <li><strong>FreeBSD</strong>: Unix. Without any doubt the most popular of the BSD systems, is used in production or as part of their product by large companies (e.g. Apple, Sony, Netflix). Has desktop-specific distributions such as GhostBSD.</li>
-<li><strong>NetBSD</strong>: Unix. Probably less popular than its fork OpenBSD, yet relatively widely used. Has been part of various commercial products. General purpose OS that can be used on the desktop, i.e. it runs modern browsers and modern desktop environments.</li>
-<li><strong>OpenBSD</strong>: Unix. Second most popular of the BSDs, fork of NetBSD. General purpose OS that can be used on the desktop. Has influenced other OS.</li>
+<li><strong>NetBSD</strong>: Unix. Has been part of various commercial products. General purpose OS that can be used on the desktop, i.e. it runs modern browsers and modern desktop environments.</li>
+<li><strong>OpenBSD</strong>: Unix. Fork of NetBSD. General purpose OS that can be used on the desktop. Has influenced other OS.</li>
 <li><strong>Illumos</strong>: Unix. Open source fork of Solaris 10 that has several distributions ranging from commercial to hobbyist, and target various markets such as cloud, NAS, server, and desktop (e.g. OpenIndiana).</li>
 <li><strong>Haiku</strong>: One of the most promising of the alternative OS. Has a relatively complete selection of software, including a modern browser. Attempts to re-create BeOS, a commercially failed desktop OS of the late 90s/early 2000s.</li>
 <li><strong>ArcaOS</strong>: While it is a legacy OS catering towards remaining users of OS/2, with fundamental limitations (e.g. stuck to 32-bit), Arca Noae has undertaken many significant improvements such as hardware compatibility or the possibility of using more than 4 GB RAM. ArcaOS can also run modern browsers.</li>
-<li><strong>RISC OS</strong>: Legacy OS from the late 80s that was finally open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi.</li>
+<li><strong>RISC OS</strong>: Legacy OS from the late 80s that was open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi.</li>
 <li><strong>MorphOS</strong>: Despite its negligible market share and limited hardware compatibility (PowerPC only, mostly obsolete devices; no SMP or 64-bit support), this appears to be the most polished of the three AmigaOS-like systems (AmigaOS, AROS, MorphOS), and the only one that has a modern web browser (Wayfarer). Good enough to be a daily driver for some. Also, I wanted to compare more than just a bunch of Unix-like systems.</li>
 </ul>
 </p>
@@ -239,7 +239,7 @@ background-color: #EBC1AD;
 <td class="line">Illumos Foundation</td><!-- end of Unix -->
 <td class="line">Haiku, Inc.</td>
 <td class="line">Arca Noae, LLC</td>
-<td class="line">RISC OS Open Ltd.</td>
+<td class="line">RISC OS Develop&shy;ments Ltd. &amp; RISC OS Open Ltd.</td>
 <td class="line">MorphOS Development Team</td>
 </tr>
 
@@ -248,7 +248,7 @@ background-color: #EBC1AD;
 <td class="line">First release in 1985. Early version were based on MS-DOS (1981-2000). Current versions ("NT") started as a fork of OS/2 (1987-2001).</td>
 <td class="line">Early versions (1984-2002) were an independent OS. Current versions are based on Darwin (which in turn is derived from NeXTSTEP, FreeBSD, and Mach code).</td>
 <td class="line">First release in 2007. Based on Darwin (like macOS).</td>
-<td class="line">First release in 2008. Based on Linux. Typically bundled with Google services. Google-free forks include FireOS, HarmonyOS, LineageOS, or GrapheneOS.</td>
+<td class="line">First release in 2008. Based on Linux. Typically bundled with Google services. Google-free forks include FireOS, LineageOS, or GrapheneOS.</td>
 <td class="line">First release in 2011. Based on Linux. An free and open source version called Chromium OS exists.</td>
 <td class="line">First release in 1991. Typically bundled with GNU software. Various distributions exist, e.g. OpenSUSE, Debian, Ubuntu, Fedora, RHEL, and Arch.</td><!-- end of big 6 -->
 <td class="line">First release in 1993. Forked from the Berkeley Software Distribution (1978-1995). Lineage going back to the original UNIX from 1971.</td>
@@ -352,7 +352,7 @@ background-color: #EBC1AD;
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">Not anymore</td>
+<td class="yes">Selected devices</td>
 <td class="no">No</td>
 </tr>
 
@@ -370,8 +370,8 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Niche devices only</td>
-<td class="notreally">Niche devices only</td>
+<td class="yes">Selected devices</td>
+<td class="yes">Selected devices</td>
 </tr>
 
 <tr>
@@ -464,7 +464,7 @@ background-color: #EBC1AD;
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">32-bit ARM only</td>
+<td class="mixed">Yes (legacy CPUs)</td>
 <td class="no">No</td>
 </tr>
 
@@ -477,13 +477,13 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="mixed">32-bit PPC only</td>
+<td class="mixed">Yes (legacy CPUs)</td>
 <td class="yes">Yes</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">32-bit PPC only</td>
+<td class="mixed">Yes (legacy CPUs)</td>
 </tr>
 
 <tr>
@@ -542,7 +542,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="almost">Experimental</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -559,7 +559,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="notreally">3rd-party drivers</td>
+<td class="notreally">3rd-party software</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 </tr>
@@ -579,7 +579,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -591,14 +591,14 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">2-finger scroll only</td>
+<td class="almost">2 finger scroll/tap</td>
 <td class="no">No</td>
-<td class="almost">2-finger scroll only</td>
-<td class="almost">2-finger scroll only</td><!-- end of Unix -->
-<td class="almost">2-finger scroll only</td>
+<td class="almost">2 finger scroll/tap</td>
+<td class="almost">2 finger scroll/tap</td><!-- end of Unix -->
+<td class="almost">2 finger scroll/tap</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="almost">2-finger scroll only</td>
+<td class="almost">2 finger scroll/tap</td>
 </tr>
 
 <tr>
@@ -633,7 +633,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="notreally">3rd-party software</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -661,7 +661,7 @@ background-color: #EBC1AD;
 </tr>
 
 <tr>
-<td>64-bit support</td>
+<td>64-bit kernel</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -765,7 +765,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">Planned (v5.1)</td>
-<td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 </tr>
 
@@ -819,7 +819,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
+<td class="notreally">3rd-party software</td>
 <td class="no">No</td>
 </tr>
 
@@ -836,7 +836,7 @@ background-color: #EBC1AD;
 <td class="yes tooltip">Yes (VMM)<span class="tooltiptext">Currenlty only supports OpenBSD and Linux guests, no graphics output</span></td>
 <td class="yes">Yes (KVM, bhyve)</td><!-- end of Unix -->
 <td class="mixed tooltip">Install Qemu<span class="tooltiptext">Unofficial port of Qemu without hardware acceleration, has to be installed separately.</span></td>
-<td class="mixed tooltip">Install Virtualbox<span class="tooltiptext">Unofficial and outdated port of Virtualbox, has to be installed separately.</span></td>
+<td class="mixed tooltip">Install Virtualbox<span class="tooltiptext">Unofficial (and outdated) port of Virtualbox without hardware acceleration, has to be installed separately.</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
@@ -1018,7 +1018,7 @@ background-color: #EBC1AD;
 </tr>
 
 <tr>
-<td>Full disk encryption</td>
+<td>Full disk encryption (incl. system)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1151,7 +1151,7 @@ background-color: #EBC1AD;
 <tr>
 <td class="tooltip">Unlimited OS update support<span class="tooltiptext">Will the OS receive feature and/or security updates forever, as long as hardware requirements are met? Or is update support tied to the specific device (i.e. planned obsolescence) - and if so, how long are devices typically supplied with updates?</span></td>
 <td class="yes">Yes</td>
-<td class="no">No (8-11 years)</td>
+<td class="no">No (6-11 years)</td>
 <td class="no">No (6-8 years)</td>
 <td class="no tooltip">No (2-5+ years)<span class="tooltiptext">Depends on device manufacturer. User-installed ROMs such as LineageOS may increase device lifespan to ~10 years</span></td>
 <td class="notreally tooltip">No (4-9 yrs) / Flex<span class="tooltiptext">Chromebooks (with Chrome OS preinstalled) have a limited lifespan in terms of updates. Chrome OS Flex runs on other laptops as well, but Google only officially supports the installation on "certified" devices, and certification of devices may end after which it is not recommended to install updates.</td>
@@ -1663,9 +1663,9 @@ background-color: #EBC1AD;
 <td></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></span></td><!-- end of Unix -->
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></td>
-<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Odin32 (third-party app) - 32-bit apps only!</span></td>
+<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">only 16-bit apps as well as 32-bit apps via Odin32 (third-party app</span><br /><span class="yes"><strong>DOS</strong></span></td>
 <td></td>
-<td></td>
+<td><br /><span class="yes"><strong>AmigaOS</strong></span></td>
 </tr>
 
 
