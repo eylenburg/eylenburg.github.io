@@ -1,7 +1,13 @@
-body { /*  background-color: #FFE4C4; */ font-family: /* "Tw Cen MT" */ Helvetica, Tahoma, sans-serif; }
+body { font-family: Helvetica, Tahoma, sans-serif; }
 table, th, td {border: 1px solid black; border-collapse: collapse;}
 img { display: block;   margin-left: auto;  margin-right: auto; }
-/* .tooltip {  position: relative;  display: inline-block;  border-bottom: 1px dotted black; }
-.tooltip .tooltiptext {  visibility: hidden;  width: 120px;  background-color: #555;  color: #fff;  text-align: center;  padding: 5px 0;  border-radius: 6px;  position: absolute;  z-index: 1;  bottom: 125%;  left: 50%;  margin-left: -60px;  opacity: 0;  transition: opacity 0.3s; }
-.tooltip .tooltiptext::after {  content: "";  position: absolute;  top: 100%;  left: 50%;  margin-left: -5px;  border-width: 5px;  border-style: solid;  border-color: #555 transparent transparent transparent; }
-.tooltip:hover .tooltiptext {  visibility: visible;  opacity: 1; } */
+table.menubar { width: 100%; text-align: center; table-layout: fixed; overflow-wrap: break-word; font-size: 11pt; margin-top: 0em; padding: none; }
+table.menubar tr td { background-color: #eee; border: 1px solid darkgrey; hyphens: auto; vertical-align: middle;}
+table.menubar tr td a { color: black; text-decoration: none;}
+table.menubar tr td a:hover { text-decoration: underline;}
+@media all and (max-width: 760px) {
+  table { display: block; }
+  table tr { display: block; }
+  table td { display: inline-block; width: 100%; padding: 10px; }
+}
+
