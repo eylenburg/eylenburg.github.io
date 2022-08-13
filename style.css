@@ -6,8 +6,8 @@ table.menubar tr td { background-color: #eee; border: 1px solid darkgrey; hyphen
 table.menubar tr td a { color: black; text-decoration: none;}
 table.menubar tr td a:hover { text-decoration: underline;}
 @media all and (max-width: 760px) {
-  table { display: block; }
-  table tr { display: block; }
-  table td { display: inline-block; width: 100%; padding: 10px; }
+  table.menubar { display: block; }
+  table.menubar tr { display: block; }
+  table.menubar td { display: inline-block; width: 100%; padding: 10px; }
 }
 
