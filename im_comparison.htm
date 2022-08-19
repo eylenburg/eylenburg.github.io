@@ -782,17 +782,17 @@ I have limited this comparison to only ten messengers:</p>
 </tr>
 
 <tr>
-<td>Self-destructing messages</td>
+<td>Ephemeral (self-destructing) messages</td>
+<td class="mixed tooltip">Only on local device<span class="tooltiptext">Automatic message deletion on local device, but no remote deletion on other people's devices</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
+<td class="mixed tooltip">Only in "secret chats"<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
-<td class="mixed">Only in "secret chats"</td>
-<td class="no">No</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 </tr>
 
 <tr>
@@ -807,6 +807,21 @@ I have limited this comparison to only ten messengers:</p>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+</tr>
+
+
+<tr>
+<td>Use with multiple accounts</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="otherclients">Other Matrix client(s)</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
 </tr>
 
 
@@ -1057,7 +1072,7 @@ I have limited this comparison to only ten messengers:</p>
 <ul>
 <li>In an ideal world, everyone would use federated messengers, so that no company has the power to ban users or sell out to a Big Tech oligopolist such as Meta, Apple, Google, Microsoft, or Amazon, and so that people can self-host their own servers and thereby circumvent censorship attempts.
 <ul><li>At the moment, Matrix seems to be the most promising. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery.</li>
-<li>XMPP has a very lightweight and easy to set up server software. Furthermore it is a standardized protocol that has been around since 1999 and is the basis for other messengers such as Whatsapp. The main problem with XMPP is the fact that there isn't any client app which works across all major operating systems and has implemented all the important features (such as E2E encryption or video calling). I believe that this is a roadblock to more widespread adoption among the less technologically inclined ("Oh you have an iPhone? Then you need to download Siskin, not Conversations."). </li>
+<li>XMPP has a very lightweight and easy to set up server software. Furthermore it is a standardized protocol that has been around since 1999 and is the basis for other messengers such as Whatsapp. The main problem with XMPP is the fact that there isn't any client app which works across all major operating systems and has implemented all the important features (such as video calling). I believe that this is a roadblock to more widespread adoption among the less technologically inclined ("Oh you have an iPhone? Then you need to download Siskin, not Conversations."). </li>
 <li>Delta Chat has the advantage that everyone already has an email address so there are billions of potential users which already have each other saved in their address books. However, the email protocol has its own limits, for example you can't conduct voice or video calls. Because of this, I don't think that Delta Chat will have a realistic chance of ever replacing WhatsApp.</li></ul>
 <li>Signal is the next best choice. It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), it can be used as the default SMS app on Android, and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously if your country forbids the anonymous purchase of SIM cards. Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do now allow third-party clients, so users of niche operating systems are excluded.</li>
 <li>Telegram has lots of features and encourages the development of third-party clients. It's probably the best messenger if you don't care too much about privacy. The main downside is that chats are not E2E encrypted by default, and the E2E encrypted secret chats don't sync across devices. Furthermore, it is centralized and was forced to censor in the past (e.g. it blocked over 60 public channels accused of wrongthink for German users after being pressured by the German government in 2022). </li>
