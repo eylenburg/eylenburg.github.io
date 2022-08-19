@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
---legendwidth: 250px;
---oswidth: 115px;
+--legendwidth: 245px;
+--oswidth: 110px;
 }
 
 table {
@@ -495,7 +495,7 @@ background-color: #EBC1AD;
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">Yes (legacy CPUs)</td>
+<td class="mixed">Legacy CPUs</td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
@@ -509,14 +509,14 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="mixed">Yes (legacy CPUs)</td>
+<td class="mixed">Legacy CPUs</td>
 <td class="yes">Yes</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">Yes (legacy CPUs)</td>
-<td class="mixed">Yes (legacy CPUs)</td>
+<td class="mixed">Legacy CPUs</td>
+<td class="mixed">Legacy CPUs</td>
 </tr>
 
 <tr>
@@ -841,7 +841,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">w/ Google services<span class="tooltiptext">Google Pay will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
+<td class="mixed tooltip">Not on AOSP<span class="tooltiptext">Google Pay will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -860,7 +860,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes </td>
-<td class="mixed tooltip">w/ Google services<span class="tooltiptext">Android Auto will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
+<td class="mixed tooltip">Not on AOSP<span class="tooltiptext">Android Auto will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1066,7 +1066,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed">Flatpak/Snap apps</td><!-- end of big 6 -->
+<td class="mixed">via Flatpak/Snap</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1088,7 +1088,7 @@ background-color: #EBC1AD;
 <td class="no">No</td><!-- end of big 6 -->
 <td class="mixed tooltip">via Capsicum<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td>
-<td class="mixed tooltip">via pledge &amp; unveil<span class="tooltiptext">not supported by all applications</span></td>
+<td class="mixed tooltip">via pledge/unveil<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1145,9 +1145,9 @@ background-color: #EBC1AD;
 <td class="no">Proprietary</td>
 <td class="no">Proprietary</td>
 <td class="no">Proprietary</td>
-<td class="yes">Apache, GNU GPL</td>
+<td class="yes">Apache, GPL</td>
 <td class="no">Proprietary</td>
-<td class="yes">GNU GPL</td><!-- end of big 6 -->
+<td class="yes">GPL</td><!-- end of big 6 -->
 <td class="yes">BSD</td>
 <td class="yes">BSD</td>
 <td class="yes">BSD</td>
@@ -1165,7 +1165,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="notreally tooltip">Up to 7 days<span class="tooltiptext">Installations are only allowed from the App Store, except for apps transferred as IPA files from a macOS or Windows devices, but they expire after 7 days</span></td>
 <td class="yes">Yes</td>
-<td class="almost tooltip">via ADB debugging<span class="tooltiptext">through Linux subsystem</span></td>
+<td class="almost tooltip">via ADB<span class="tooltiptext">through Linux subsystem</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1386,7 +1386,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">w/ Google services<span class="tooltiptext">Banking apps will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
+<td class="mixed tooltip">Not on AOSP<span class="tooltiptext">Banking apps will most likely only work on the original, unmodified Android ROM that was pre-installed on the device and includes the necessary Google components.</span></td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
@@ -1778,7 +1778,7 @@ background-color: #EBC1AD;
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">only 16-bit apps as well as 32-bit apps via Odin32 (third-party app</span><br /><span class="yes"><strong>DOS</strong></span></td>
 <td></td>
-<td></tr>
+<td></td>
 <td><br /><span class="yes"><strong>AmigaOS</strong></span></td>
 </tr>
 
