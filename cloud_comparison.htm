@@ -142,8 +142,27 @@ padding-right: 5px;
 }
 
 .na {
-background: lightgrey;
-}
+background: lightgrey; }
+
+input#BigTech:checked ~ #comparisonTable .BigTech { display: none !important; visibility: hidden; }
+input#NonFree:checked ~ #comparisonTable .NonFree { display: none !important; visibility: hidden; }
+input#NoSelfHosting:checked ~ #comparisonTable .NoSelfHosting { display: none !important; visibility: hidden; }
+input#NoFiles:checked ~ #comparisonTable .NoFiles { display: none !important; visibility: hidden; }
+input#NoMSO:checked ~ #comparisonTable .NoMSO { display: none !important; visibility: hidden; }
+input#NoE2EE:checked ~ #comparisonTable .NoE2EE { display: none !important; visibility: hidden; }
+input#NoFullE2EE:checked ~ #comparisonTable .NoFullE2EE { display: none !important; visibility: hidden; }
+input#NoLinuxApp:checked ~ #comparisonTable .NoLinuxApp { display: none !important; visibility: hidden; }
+input#NoAndroidSync:checked ~ #comparisonTable .NoAndroidSync { display: none !important; visibility: hidden; }
+input#NoPIM:checked ~ #comparisonTable .NoPIM { display: none !important; visibility: hidden; }
+input#NoPIMEncrypt:checked ~ #comparisonTable .NoPIMEncrypt { display: none !important; visibility: hidden; }
+input#NoDAV:checked ~ #comparisonTable .NoDAV { display: none !important; visibility: hidden; }
+input#NoEmail:checked ~ #comparisonTable .NoEmail { display: none !important; visibility: hidden; }
+input#NoEmailEncrypt:checked ~ #comparisonTable .NoEmailEncrypt { display: none !important; visibility: hidden; }
+input#NoIMAP:checked ~ #comparisonTable .NoIMAP { display: none !important; visibility: hidden; }
+
+input#NoFiles:checked ~ .NoFilesChild { display: none !important; visibility: hidden; }
+input#NoPIM:checked ~ .NoPIMChild { display: none !important; visibility: hidden; }
+input#NoEmail:checked ~ .NoEmailChild { display: none !important; visibility: hidden; }
 
 
 </style>
@@ -188,8 +207,24 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <p class="center">Source: eylenburg.github.io</p>
 <p class="center" style="color: red; font-size: small;">Last updated: August 2022</p>
 
+<div>
+<input type="checkbox" id="BigTech"><label>Hide Big Tech megacorps</label><br />
+<input type="checkbox" id="NonFree"><label>Hide proprietary (non-free) software</label><br />
+<input type="checkbox" id="NoSelfHosting"><label>Hide software that can't be self-hosted</label><br />
+<input type="checkbox" id="NoFiles"><label>Hide providers that don't offer a file cloud or file sync</label><!-- <span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show cloud providers who offer end-to-end encryption for files</label>--><span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoFullE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show providers who apply end-to-end encryption by default and offer all features (sync, editing, browser access, ...) for E2E-encrypted files</label><span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoMSO" class="NoFilesChild"><label class="NoFilesChild">Only show providers have an integration with Micrsoft Office Online for editing files in the browser</label><span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoLinuxApp" class="NoFilesChild"><label class="NoFilesChild">Only show providers who offer a Linux app for file sync</label><span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoAndroidSync" class="NoFilesChild"><label class="NoFilesChild">Only show coulds which can sync with Android (either via native app or via FolderSync)</label><br />
+<input type="checkbox" id="NoPIM"><label>Hide providers which don't offer PIM features (addressbook, calendar, to-do list)</label><span class="NoPIMChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoPIMEncrypt" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer end-to-end encryption for PIM data</label><span class="NoPIMChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoDAV" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer CalDAV/CardDAV access for PIM data</label><br />
+<input type="checkbox" id="NoEmail"><label>Hide providers who don't offer email</label><br /><span class="NoEmailChild">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoEmailEncrypt" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer zero-access encryption for emails</label><span class="NoEmailChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoIMAP" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer IMAP access for emails</label><br />
 
-<table class="comparison">
+<table id="comparisonTable" class="comparison">
 
 
 <colgroup>
@@ -248,9 +283,9 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 </thead>
-<tbody>
 
-<tr class="product">
+
+<tr class="product NoMSO BigTech NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmailEncrypt">
 <td>Apple iCloud</td>
 <td><img src="pics/logos/cloud/icloud.png" class="icon" /></td>
 <td>Apple Inc. <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span></td>
@@ -281,7 +316,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Can be shared with up to 6 people</td>
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoFullE2EE NoLinuxApp NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Aurora Files</td>
 <td><img src="pics/logos/cloud/aurora.png" class="icon" /></td><!-- Logo -->
 <td>Afterlogic Corp.</td><!-- Developer -->
@@ -305,7 +340,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Box</td>
 <td><img src="pics/logos/cloud/box.png" class="icon" /></td><!-- Logo -->
 <td>Box, Inc. <span class="bad">Woke</span></td><!-- Developer -->
@@ -330,7 +365,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 <!--
-<tr class="product">
+<tr class="product NoMSO">
 <td>CTemplar</td>
 <td><img src="pics/logos/cloud/ctemplar.png" class="icon" /></td>
 <td>Templar Soft&shy;ware Systems Ltd.</td>
@@ -352,7 +387,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 -->
 
 
-<tr class="product">
+<tr class="product NonFree NoSelfHosting NoE2EE NoFullE2EE NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Dropbox</td>
 <td><img src="pics/logos/cloud/dropbox.png" class="icon" /></td><!-- Logo -->
 <td>Box, Inc. <span class="bad">Woke</span></td><!-- Developer -->
@@ -375,7 +410,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Family plan also available.</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoE2EE NoFullE2EE NoPIMEncrypt NoEmailEncrypt">
 <td>ecloud<sup><a href="#note">1</a></sup></td>
 <td><img src="pics/logos/cloud/ecloud.png" class="icon" /></td><!-- Logo -->
 <td>e.<wbr>foundation  <span class="good">Non-Profit</span></td><!-- Developer -->
@@ -404,7 +439,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoEmail NoEmailEncrypt">
 <td>Etesync</td>
 <td><img src="pics/logos/cloud/etesync.svg" class="icon" /></td><!-- Logo -->
 <td>Etesync Ltd.</td><!-- Developer -->
@@ -426,7 +461,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoEmailEncrypt">
 <td>Fastmail</td>
 <td><img src="pics/logos/cloud/fastmail.png" class="icon" /></td><!-- Logo -->
 <td>Fastmail Pty Ltd</td><!-- Developer -->
@@ -455,7 +490,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Filen</td>
 <td><img src="pics/logos/cloud/filen.svg" class="icon" /></td><!-- Logo -->
 <td>Filen Cloud Dienste UG</td><!-- Developer -->
@@ -481,7 +516,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmail NoEmailEncrypt NoIMAP">
 <td>fruux</td>
 <td><img src="pics/logos/cloud/fruux.png" style="filter: invert(1);" class="icon" /></td><!-- Logo -->
 <td>fruux GmbH</td><!-- Developer -->
@@ -503,7 +538,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO BigTech NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoDAV NoEmailEncrypt">
 <td>Google One<br /><span style="font-weight: normal;">Google Drive &amp;<br />GMail etc.</span></td>
 <td><img src="pics/logos/cloud/google.png" class="icon" /></td><!-- Logo -->
 <td>Alphabet Inc.  <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span> <span class="bad">Evil</span></td><!-- Developer -->
@@ -533,7 +568,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoEmailEncrypt">
 <td>GMX/<wbr>Mail.com</td>
 <td><img src="pics/logos/cloud/gmx.png" class="icon" /></td><!-- Logo -->
 <td>United Inter&shy;net AG  <span class="bad">Woke</span></td><!-- Developer -->
@@ -562,7 +597,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoFullE2EE NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Icedrive</td>
 <td><img src="pics/logos/cloud/icedrive.png" class="icon" /></td><!-- Logo -->
 <td>ID Cloud Services Ltd.</td><!-- Developer -->
@@ -587,7 +622,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoE2EE NoFullE2EE NoPIMEncrypt NoEmailEncrypt">
 <td>Infomaniak<br /><span style="font-weight: normal;">kDrive &amp;<br />Workspace</span></td>
 <td><img src="pics/logos/cloud/infomaniak.svg" class="icon" /></td><!-- Logo -->
 <td>Infomaniak Network SA</td><!-- Developer -->
@@ -615,7 +650,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Family plan also available</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Internxt Drive</td>
 <td><img src="pics/logos/cloud/internxt.svg" class="icon" /></td><!-- Logo -->
 <td>Internxt Universal Technolo&shy;gies SL</td><!-- Developer -->
@@ -640,7 +675,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Lifetime purchase options also available.</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoEmailEncrypt">
 <td>Kolab Now</td>
 <td><img src="pics/logos/cloud/kolab.png" class="icon" /></td><!-- Logo -->
 <td>Apheleia IT AG</td><!-- Developer -->
@@ -670,7 +705,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Linshare</td>
 <td><img src="pics/logos/cloud/linshare.png" class="icon" /></td><!-- Logo -->
 <td>Linagora</td><!-- Developer -->
@@ -696,7 +731,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt">
 <td>Mailbox.org</td>
 <td><img src="pics/logos/cloud/mailbox.svg" class="icon" /></td><!-- Logo -->
 <td>Heinlein Hosting GmbH</td><!-- Developer -->
@@ -726,7 +761,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt">
 <td>Mailfence</td>
 <td><img src="pics/logos/cloud/mailfence.png" class="icon" /></td><!-- Logo -->
 <td>Contact<wbr>Office Group SA</td><!-- Developer -->
@@ -756,7 +791,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Mega</td>
 <td><img src="pics/logos/cloud/mega.png" class="icon" /></td><!-- Logo -->
 <td>Mega Ltd.</td><!-- Developer -->
@@ -782,7 +817,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 
 
-<tr class="product">
+<tr class="product BigTech NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoDAV NoEmailEncrypt">
 <td>Microsoft 365<br /><span style="font-weight: normal;">OneDrive &amp;<br />Outlook.com</span></td>
 <td><img src="pics/logos/cloud/microsoft.png" class="icon" /></td><!-- Logo -->
 <td>Microsoft Corp.  <span class="bad">Big Tech</span> <span class="bad">PRISM</span> <span class="bad">Woke</span></td><!-- Developer -->
@@ -811,7 +846,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Family plan also available. 1 TB plan includes Microsoft Office Online.</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoPIMEncrypt NoFullE2EE NoEmail NoEmailEncrypt NoIMAP">
 <td>Nextcloud<br /><span style="font-weight: normal; font-style: italic;">(various<br />hosters)</span></td>
 <td><img src="pics/logos/cloud/nextcloud.png" class="icon" /></td><!-- Logo -->
 <td>Nextcloud GmbH</td><!-- Developer -->
@@ -847,7 +882,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Can be shared by multiple users. Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoLinuxApp NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Nordlocker</td>
 <td><img src="pics/logos/cloud/nordlocker.svg" class="icon" style="filter: invert(1);" /></td><!-- Logo -->
 <td>Nordsec Ltd.</td><!-- Developer -->
@@ -871,7 +906,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoFullE2EE NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>pCloud</td>
 <td><img src="pics/logos/cloud/pcloud.png" class="icon" /></td><!-- Logo -->
 <td>pCloud AG</td><!-- Developer -->
@@ -896,7 +931,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync">
 <td>Posteo</td>
 <td><img src="pics/logos/cloud/posteo.jpg" class="icon" /></td><!-- Logo -->
 <td>Posteo e.K. <span class="good">Non-Corporate</span></td><!-- Developer -->
@@ -920,7 +955,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoLinuxApp NoAndroidSync NoDAV">
 <td>Proton</td>
 <td><img src="pics/logos/cloud/protonmail.png" class="icon" /></td><!-- Logo -->
 <td>Proton Technolo&shy;gies AG</td><!-- Developer -->
@@ -950,7 +985,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmail NoEmailEncrypt  NoIMAP">
 <td>Radicale<br /><span style="font-weight: normal; font-style: italic;">(self-hosted)</span></td>
 <td><img src="pics/logos/cloud/radicale.jpg" class="icon" /></td><!-- Logo -->
 <td>Kozea Commu&shy;nity <span class="good">Non-Corporate</span> <span class="good">Non-Profit</span></td><!-- Developer -->
@@ -971,7 +1006,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi) or ~&euro;12 p.a. for cheap VPS</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIMEncrypt NoEmailEncrypt">
 <td>Runbox</td>
 <td><img src="pics/logos/cloud/runbox.png" class="icon" /></td><!-- Logo -->
 <td>Runbox Solutions As</td><!-- Developer -->
@@ -1002,7 +1037,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoFullE2EE NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Seafile<br /><span style="font-weight: normal; font-style: italic;">(various<br />hosters)</span></td>
 <td><img src="pics/logos/cloud/seafile.png" class="icon" /></td><!-- Logo -->
 <td>Seafile Ltd.</td><!-- Developer -->
@@ -1028,7 +1063,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoLinuxApp NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoIMAP">
 <td>Skiff</td>
 <td><img src="pics/logos/cloud/skiff.svg" class="icon" /></td><!-- Logo -->
 <td>Skiff World Inc.</td><!-- Developer -->
@@ -1056,7 +1091,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIM NoPIMEncrypt NoDAV">
 <td>StartMail</td>
 <td><img src="pics/logos/cloud/startmail.png" class="icon" /></td><!-- Logo -->
 <td>StartMail B.V.</td><!-- Developer -->
@@ -1079,7 +1114,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NonFree NoSelfHosting NoLinuxApp NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Sync.com</td>
 <td><img src="pics/logos/cloud/sync.com.svg" class="icon" /></td><!-- Logo -->
 <td>Sync.com, Inc. </td><!-- Developer -->
@@ -1104,7 +1139,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoEmail NoEmailEncrypt NoIMAP">
 <td>Syncthing<br /><span style="font-weight: normal; font-style: italic;">(P2P sync)</span></td>
 <td><img src="pics/logos/cloud/syncthing.png" class="icon" /></td><!-- Logo -->
 <td>Syncthing Foundation  <span class="good">Non-Corporate</span> <span class="good">Non-Profit</span><!-- <span class="bad">Woke</span>--></td><!-- Developer -->
@@ -1128,7 +1163,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Tresorit</td>
 <td><img src="pics/logos/cloud/tresorit.png" class="icon" /></td><!-- Logo -->
 <td>Tresorit AG</td><!-- Developer -->
@@ -1153,7 +1188,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoDAV NoIMAP">
 <td>Tutanota</td>
 <td><img src="pics/logos/cloud/tutanota.png" class="icon" /></td><!-- Logo -->
 <td>Tutao GmbH</td><!-- Developer -->
@@ -1177,7 +1212,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NoSelfHosting NoE2EE NoFullE2EE NoPIMEncrypt">
 <td>W&ouml;lkli<sup><a href="#note">1</a></sup><br /><span style="font-weight: normal;">Cloud &amp;<br />Mail</span></td>
 <td><img src="pics/logos/cloud/woelkli.png" class="icon" /></td><!-- Logo -->
 <td>oriented.net LLC</td><!-- Developer -->
@@ -1207,7 +1242,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Family plan also offered. Cloud and Mail have to be purchased separately.</td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmailEncrypt">
 <td>Yahoo Mail</td>
 <td><img src="pics/logos/cloud/yahoo.png" class="icon" /></td><!-- Logo -->
 <td>Yahoo, Inc.  <span class="bad">PRISM</span> <span class="bad">Woke</span></td><!-- Developer -->
@@ -1231,7 +1266,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product">
+<tr class="product NonFree NoSelfHosting NoE2EE NoFullE2EE NoPIMEncrypt NoEmailEncrypt">
 <td>Yandex<br /><span style="font-weight: normal;">Disk &amp;<br />Mail</span></td>
 <td><img src="pics/logos/cloud/yandex.png" class="icon" /></td><!-- Logo -->
 <td>Yandex N.V.</td><!-- Developer -->
@@ -1260,7 +1295,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td></td><!-- price comment -->
 </tr>
 
-<tr class="product">
+<tr class="product NoMSO NonFree NoSelfHosting NoE2EE NoFullE2EE NoAndroidSync NoPIMEncrypt NoDAV NoEmailEncrypt">
 <td>Zoho<br />Workspace</td>
 <td><img src="pics/logos/cloud/zoho.png" class="icon" /></td><!-- Logo -->
 <td>Zoho Corp.</td><!-- Developer -->
@@ -1289,8 +1324,8 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Prices shown are for three users (team plans).</td><!-- price comment -->
 </tr>
 
-</tbody>
 </table>
+</div>
   
   <a name="note">1: File cloud and sync based on Nextcloud</a>
 
