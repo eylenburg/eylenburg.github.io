@@ -144,6 +144,8 @@ padding-right: 5px;
 .na {
 background: lightgrey; }
 
+label { font-size: small; }
+
 input#BigTech:checked ~ #comparisonTable .BigTech { display: none !important; visibility: hidden; }
 input#NonFree:checked ~ #comparisonTable .NonFree { display: none !important; visibility: hidden; }
 input#NoSelfHosting:checked ~ #comparisonTable .NoSelfHosting { display: none !important; visibility: hidden; }
@@ -203,9 +205,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <p style="font-weight: bold;"><a href="cloud_comparison_2022old.htm">Click here to see an older version of this comparison with more information</a>, up to date as of beginning 2022 but will not be updated anymore.</p>
 
-<h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
-<p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: August 2022</p>
+
 
 <div>
 <input type="checkbox" id="BigTech"><label>Hide Big Tech megacorps</label><br />
@@ -214,7 +214,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <input type="checkbox" id="NoFiles"><label>Hide providers that don't offer a file cloud or file sync</label><!-- <span class="NoFilesChild"><br />
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show cloud providers who offer end-to-end encryption for files</label>--><span class="NoFilesChild"><br />
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoFullE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show providers who apply end-to-end encryption by default and offer all features (sync, editing, browser access, ...) for E2E-encrypted files</label><span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoMSO" class="NoFilesChild"><label class="NoFilesChild">Only show providers have an integration with Micrsoft Office Online for editing files in the browser</label><span class="NoFilesChild"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoMSO" class="NoFilesChild"><label class="NoFilesChild">Only show providers have an integration with Microsoft Office Online for editing files in the browser</label><span class="NoFilesChild"><br />
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoLinuxApp" class="NoFilesChild"><label class="NoFilesChild">Only show providers who offer a Linux app for file sync</label><span class="NoFilesChild"><br />
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoAndroidSync" class="NoFilesChild"><label class="NoFilesChild">Only show coulds which can sync with Android (either via native app or via FolderSync)</label><br />
 <input type="checkbox" id="NoPIM"><label>Hide providers which don't offer PIM features (addressbook, calendar, to-do list)</label><span class="NoPIMChild"><br />
@@ -223,6 +223,12 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <input type="checkbox" id="NoEmail"><label>Hide providers who don't offer email</label><br /><span class="NoEmailChild">
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoEmailEncrypt" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer zero-access encryption for emails</label><span class="NoEmailChild"><br />
 &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoIMAP" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer IMAP access for emails</label><br />
+
+
+<h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: August 2022</p>
+
 
 <table id="comparisonTable" class="comparison">
 
