@@ -173,14 +173,14 @@ background: lightgrey;
 <li><strong>Freedom</strong>: only using free and open source software, i.e. software published under a copyleft or permissive license. If the developer ever becomes evil, it will be possible to fork the software. The fact that Konqueror was published under the GPL forced Apple and Google to publish the source code for their browser engines (WebKit and Blink) - thus enabling "good" forks (Brave, Ungoogled-Chromium) of "bad" software (Chrome). See also <a href="https://directory.fsf.org/wiki/Main_Page" target="_blank">FSF Directory</a></li>
 <li><strong>Privacy</strong>: using software that respects the user's privacy. For example, a service that allows anonymous sign-up or offers end-to-end encryption of all user data. A closed source software can by definition not be trusted to respect the users privacy, because there is no way of really knowing what's going on in the background. See also <a href="https://www.privacytools.io" target="_blank">PrivacyTools</a> or <a href="https://www.privacyguides.org" target="_blank">PrivacyGuides</a></li>
 <li><strong>Openness</strong>: using software that relies on open standards, thereby avoiding vendor lock-in. For example, an email provider should be compatible with any email client running on any operating system.</li>
-<li><strong>Neutrality</strong>: using software that can censor information or ban users, and that is ideally developed by a politically neutral entity. For example, an end-to-end encrypted messenger can't censor messages because it can't even read the messages in the first place, and a federated messenger can't ban users because there is no central server that has control over who is using the messenger.
+<li><strong>Neutrality</strong>: using software that cannot censor information or ban users, and that is ideally developed by a politically neutral entity. For example, an end-to-end encrypted messenger can't censor messages because it can't even read the messages in the first place, and a federated messenger can't ban users because there is no central server that has control over who is using the messenger.
 </ol>
 
 <p>In some cases it's easy. For example, replace your browser with Firefox - it is free software, it can be configured to respect your privacy, and it is not made by a Big Tech company nor based on their product (i.e., Chromium). Or you can use Brave Search as your search engine - it does not track its users, and it is based on its own search index (unlike DuckDuckGo and Startpage, which mostly use the Bing and Google index, respectively).<br /><br />
 In other cases, it's almost impossible. When it comes to mobile operating systems, there are only two options: iOS made by Apple (Big Tech, not private, not open source), and Android made by Google (Big Tech, even less private, only partially open source). Symbian or BlackBerry OS are long dead. GNU/Linux exists for phones (e.g. Sailfish OS, Ubuntu Touch, postmarketOS) but is not generally available preinstalled and lacks the most important mobile apps, and is hence not yet suitable as a daily driver for 99% of people.<br /><br />
 In some cases there might be alternatives, but they're simply inferior. OpenStreetMaps is alright, but it can't measure up to Google Maps. LibreOffice Calc is a decent product, but can't compete with Microsoft Excel.
 <br /><br />
-Here, I am looking at cloud services, which includes file sync, PIM (addressbook, calendar, to-do list, and notes), as well as email hosting (which often integrates PIM services). The Big Three - Apple, Google, and Microsoft - really offer a complete package, where the individual services are working well together and offer a very convenient cloud service to users. I have set out to see whether a Techxodus is possible, and whether there is an email + file sync + PIM provider out there that ticks all the boxes: independence from Big Tech, no vendor lock-in, free and open source software, no politics, and great privacy, ideally by means of end-to-end encryption which would make it impossible for the service provider (or anyone else, like the police) to read the user data.</p>
+Here, I am looking at cloud services, which includes file sync, PIM (addressbook, calendar, to-do list), as well as email hosting (which often integrates PIM services). The Big Three - Apple, Google, and Microsoft - really offer a complete package, where the individual services are working well together and offer a very convenient cloud service to users. I have set out to see whether a Techxodus is possible, and whether there is an email + file sync + PIM provider out there that ticks all the boxes: independence from Big Tech, no vendor lock-in, free and open source software, no politics, and great privacy, ideally by means of end-to-end encryption which would make it impossible for the service provider (or anyone else, like the police) to read the user data.</p>
 
 <p style="font-weight: bold;"><a href="cloud_comparison_2022old.htm">Click here to see an older version of this comparison with more information</a>, up to date as of beginning 2022 but will not be updated anymore.</p>
 
@@ -281,7 +281,28 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Can be shared with up to 6 people</td>
 </tr>
 
-
+<tr class="product">
+<td>Aurora Files</td>
+<td><img src="pics/logos/cloud/aurora.png" class="icon" /></td><!-- Logo -->
+<td>Afterlogic Corp.</td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<!-- File sync -->
+<td class="almost tooltip">Yes (limited)<span class="tooltiptext">Unclear which featues stop working when their so-called "paranoid encryption" is activated. WebDAV (which is e.g. needed for sync on macOS, Linux and Android) by design can't work with E2EE; at most it will show the encrypted and hence useless files. OnlyOffice (for editing Office files) will either not work with E2EE or will decrypt the files.</span></td><!-- E2EE -->
+<td class="yes">WebDAV <em>(not for E2EE files)</em></td><!-- WebDAV or API -->
+<td class="yes tooltip">Yes (OnlyOffice)<span class="tooltiptext">Files will be temporarily decrypted</span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="almost">macoS &amp; Linux via <span class="tooltip">3rd party apps<span class="tooltiptext">such as GoodSync</span></span></td><!-- desktop sync -->
+<td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="5" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="4" class="px na"></td>
+<td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
 
 
 <tr class="product">
@@ -650,6 +671,32 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 <tr class="product">
+<td>Linshare</td>
+<td><img src="pics/logos/cloud/linshare.png" class="icon" /></td><!-- Logo -->
+<td>Linagora</td><!-- Developer -->
+<td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="no">"coming soon"</td><!-- encrypted at rest -->
+<!-- File sync -->
+<td class="no">No</td><!-- E2EE -->
+<td class="no">No</td><!-- WebDAV or API -->
+<td class="yes">Yes (OnlyOffice)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="no">"coming soon"</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
+<!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
+<!-- PIM, Mail, Other -->
+<td colspan="5" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px na"></td>
+<td class="px">&euro;36<br />(250 GB)</td>
+<td class="px">&euro;120<br />(2 TB)</td>
+<td></td><!-- price comment -->
+</tr>
+
+
+<tr class="product">
 <td>Mailbox.org</td>
 <td><img src="pics/logos/cloud/mailbox.svg" class="icon" /></td><!-- Logo -->
 <td>Heinlein Hosting GmbH</td><!-- Developer -->
@@ -982,15 +1029,20 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 
 <tr class="product">
-<td>Skiff Mail</td>
+<td>Skiff</td>
 <td><img src="pics/logos/cloud/skiff.svg" class="icon" /></td><!-- Logo -->
 <td>Skiff World Inc.</td><!-- Developer -->
 <td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
-<td class="yes">Free</td><!-- License -->
+<td class="notreally">Proprietary, source available for Mail</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">No</td><!-- WebDAV or API -->
+<td class="almost tooltip">Yes (Skiff Pages)<span class="tooltiptext">Only supports word processing, no spreadsheets or presentations.</span></td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="no">No</td><!-- desktop sync -->
+<td class="no">No</td><!-- mobile sync -->
 <!-- PIM -->
 <td colspan="3" class="na"></td>
 <!-- Mail -->
@@ -998,8 +1050,8 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- IMAP -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td class="px">Free<br />(10 GB)</td>
-<td class="px">&euro;144<br />(100 GB)</td>
-<td colspan="2" class="px na"></td>
+<td colspan="2" class="px">&euro; 96<br />(100 GB mail + 100 GB files)</td>
+<td class="px na"></td>
 <td></td><!-- price comment -->
 </tr>
 
@@ -1300,7 +1352,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <li>Variant 2 - a bit cheaper (&euro;111 p.a. for 5 GB mail + 2 TB files)</li>
 <ul>
 <li>For email and contacts/calendar/tasks: <strong>Posteo</strong> <span class="good">Zero access encryption</span> <span class="good">Open Source</span> <span class="bad">Data will get temporarily decrypted</span> <span class="bad">No tasks in web interface</span></li>
-<li>For file sync: <strong>Filen</strong>  <span class="good">E2EE</span> <span class="good">Source available</span>  <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
+<li>For file sync: <strong>Filen</strong>  <span class="good">E2EE</span> <span class="good">Open Source</span>  <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
 </ul></ul>
 
 <p>For encrypted mail there are many options, so you can choose whatever you like. ProtonMail is often recommended as the best one, but there are many other good ones. For encrypted calendars and contacts, the only good option is EteSync. Posteo is an interesting alternative to both ProtonMail and EteSync, because it supports zero access encryption for not only email, but also contacts and calendars. Finally, there are several files clouds with end-to-end encryption, but only Mega and Filen have open source clients and support Linux. Of the two, Mega is the slightly superior choice as it has an API to integrate with other applications (e.g. FolderSync support for Android), and you can even set up WebDAV if you want.</p>
