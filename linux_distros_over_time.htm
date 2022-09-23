@@ -10,18 +10,23 @@
 <link rel="stylesheet" href="style.css">
 <style>
 table.maintable tr td { vertical-align: middle; text-align: center; width: 12.5%; }
-table.maintable tr td img, table.maintable tr td div { max-width: 100px; max-height: 100px; min-width: 75px; }
-table { border-collapse: collapse; }
+table.maintable tr td img { max-width: 100px; max-height: 100px; min-width: 75px; }
+.content2000, .content2005, .content2010, .content2015, .content2020, .contenttoday { display: none; }
+.content2000:target, .content2005:target, .content2010:target, .content2015:target, .content2020:target, .contenttoday:target { display: block; }
+
 </style>
 </head>
+
 <body>
 <header>
+
 <table class="menubar">
 <tr>
 <td><a href="os_comparison.htm">Compa&shy;rison of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
 <td><a href="os_familytree.htm">Fami&shy;ly Tree of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
+<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
 <td><a href="im_comparison.htm">Compa&shy;rison of Ins&shy;tant Mes&shy;sen&shy;gers</a></td>
@@ -31,13 +36,18 @@ table { border-collapse: collapse; }
 <p><a href="index.html">&larr; Sitemap</a></p>
 </header>
 
-<h1>Linux distros over time</h1>
+<h1>Linux distributions over time</h1><h2>How different are they and how different have they been?</h2>
 
+<p>Since the beginning of Linux, different distributions come with different tools and packages, making it hard for developers to make sure that their applications work on all distributions. The most obvious user-facing differences are the choice in desktop environment (also <a href="de_default.htm">see here for a timeline of default desktops</a>) and the package formats used. I have looked at the most important Linux distributions for each year. Click on the years below to see what has changed over time. Overall, when looking at the seven categories below (desktop environment, toolkit, display server, init software, package formats, file systems, security modules) there has always been around 70-80% homogeneity across the four big distributions.</p>
+
+
+<p style="text-align: center; font-size: 24pt; "> Select a year:
+<a href="#2000">2000</a> <a href="#2005">2005</a> <a href="#2010">2010</a> <a href="#2015">2015</a> <a href="#2020">2020</a> <a href="#today">Today</a></p>
+
+<div class="content2000" id="2000">
+<p style="text-align: center; font-size: large;">Beginning of 2000 - 82% homogeneity</p>
 <table class="maintable">
 <tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
-
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">Beginning of 2000</span><br />
-82% homogeneity</td></tr>
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -121,10 +131,14 @@ table { border-collapse: collapse; }
 <td>ext</td>
 <td>None</td>
 </tr>
+</table>
+</div>
 
 
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">Beginning of 2005</span><br />
-79% homogeneity</td></tr>
+<div class="content2005" id="2005">
+<p style="text-align: center; font-size: large;">Beginning of 2005 - 79% homogeneity</p>
+<table class="maintable">
+<tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -208,10 +222,14 @@ table { border-collapse: collapse; }
 <td>ext</td>
 <td>None</td>
 </tr>
+</table>
+</div>
 
 
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">Beginning of 2010</span><br />
-71% homogeneity</td></tr>
+<div class="content2010" id="2010">
+<p style="text-align: center; font-size: large;">Beginning of 2010 - 71% homogeneity</p>
+<table class="maintable">
+<tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -295,10 +313,15 @@ table { border-collapse: collapse; }
 <td>ext</td>
 <td>AppArmor</td>
 </tr>
+</table>
+</div>
 
 
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">Beginning of 2015</span><br />
-68% homogeneity</td></tr>
+<div class="content2015" id="2015">
+<p style="text-align: center; font-size: large;">Beginning of 2015 - 68% homogeneity</p>
+<table class="maintable">
+<tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
+
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -382,12 +405,16 @@ table { border-collapse: collapse; }
 <td>btrfs</td>
 <td>AppArmor</td>
 </tr>
+</table>
+</div>
 
 
 
+<div class="content2020" id="2020">
+<p style="text-align: center; font-size: large;">Beginning of 2020 - 79% homogeneity</p>
+<table class="maintable">
+<tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">Beginning of 2020</span><br />
-79% homogeneity</td></tr>
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -406,7 +433,7 @@ table { border-collapse: collapse; }
 <td>systemd</td>
 <td>DEB packages</td>
 <td>ext</td>
-<td>None</td>
+<td>AppArmor</td>
 </tr>
 
 
@@ -454,7 +481,7 @@ table { border-collapse: collapse; }
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>OpenSUSE Leap</strong></td>
-<td><img src="pics/logos/other/combination/kde+gnome.png" /></td>
+<td style="height: 100px;"><img src="pics/logos/other/combination/kde+gnome.png" /></td>
 <td><img src="pics/logos/other/combination/qt+gtk.png" /></td>
 <td><img src="pics/logos/other/combination/x11+wayland.png" /></td>
 <td><img src="pics/logos/other/systemd.svg" /></td>
@@ -470,11 +497,15 @@ table { border-collapse: collapse; }
 <td>btrfs</td>
 <td>AppArmor</td>
 </tr>
+</table>
+</div>
 
 
+<div class="contenttoday" id="today">
+<p style="text-align: center; font-size: large;">As of today (2022) - 78% homogeneity</p>
+<table class="maintable">
+<tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment</td><td>Preferred Toolkit for Applications</td><td>Default Display Server</td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
-<tr><td colspan="8" ><span style="text-decoration: underline; font-size: 32pt; ">As of today (2022)</span><br />
-78% homogeneity</td></tr>
 
 <tr>
 <td rowspan="2" style="vertical-align: middle;" ><strong>Debian GNU/Linux</strong></td>
@@ -559,6 +590,7 @@ table { border-collapse: collapse; }
 </tr>
 
 </table>
+</div>
 
 <footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
 <h2 style="text-align: center"><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></footer>
