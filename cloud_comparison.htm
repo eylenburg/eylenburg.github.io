@@ -228,7 +228,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: September 2022</p>
+<p class="center" style="color: red; font-size: small;">Last updated: November 2022</p>
 
 
 <table id="comparisonTable" class="comparison">
@@ -346,6 +346,26 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
 </tr>
 
+<tr class="product NoMSO NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmail NoEmailEncrypt NoIMAP">
+<td>Baikal<br /><span style="font-weight: normal; font-style: italic;">(self-hosted)</span></td>
+<td><img src="pics/logos/cloud/baikal.png" class="icon" /></td><!-- Logo -->
+<td>fruux GmbH</td><!-- Developer -->
+<td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td>depends on setup</td><!-- encrypted at rest -->
+<!-- File sync -->
+<td colspan="6" class="na"></td>
+<!-- PIM -->
+<td class="no">No</td><!-- E2EE -->
+<td class="yes">Yes</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<!-- Mail --><!-- Other -->
+<td colspan="2" class="na"></td>
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="4" class="px na"></td>
+<td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi) or ~&euro;12 p.a. for cheap VPS</td><!-- price comment -->
+</tr>
 
 <tr class="product NonFree NoSelfHosting NoE2EE NoFullE2EE NoLinuxApp NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Box</td>
@@ -397,7 +417,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <tr class="product NonFree NoSelfHosting NoE2EE NoFullE2EE NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Dropbox</td>
 <td><img src="pics/logos/cloud/dropbox.png" class="icon" /></td><!-- Logo -->
-<td>Box, Inc. <span class="bad">Woke</span></td><!-- Developer -->
+<td>Dropbox, Inc. <span class="bad">Woke</span></td><!-- Developer -->
 <td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
 <td class="no">Proprie&shy;tary</td><!-- License -->
 <td class="no">No</td><!-- self-hosting -->
@@ -528,8 +548,8 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td><img src="pics/logos/cloud/fruux.png" style="filter: invert(1);" class="icon" /></td><!-- Logo -->
 <td>fruux GmbH</td><!-- Developer -->
 <td>&#x1F1E9;&#x1F1EA;<br />Germany</td><!-- Jurisdiction -->
-<td class="no tooltip">Proprie&shy;tary<span class="tooltiptext">but mostly based on open source projects (sabre/dav)</span></td><!-- License -->
-<td class="no">No<span style="font-size: x-small;"><br />alternative: Baikal (also by fruux GmbH)</span></td><!-- self-hosting -->
+<td class="no">Proprie&shy;tary</td><!-- License -->
+<td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
@@ -999,7 +1019,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>&#x1F1EB;&#x1F1F7;<br />France</td><!-- Jurisdiction -->
 <td class="yes">Free</td><!-- License -->
 <td class="yes">Yes</td><!-- self-hosting -->
-<td class="no">In transit only</td><!-- encrypted at rest -->
+<td>depends on setup</td><!-- encrypted at rest -->
 <!-- File sync -->
 <td colspan="6" class="na"></td>
 <!-- PIM -->
@@ -1403,10 +1423,17 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <h3>Strategy 4: Self-host</h3>
 
 <ul>
-<li><strong>ecloud</strong> (based on Nextcloud)</li>
-<li><strong>Nextcloud</strong> + your own mail server <em>or</em> you keep your old email hoster and connect it to the Nextcloud mail app</li>
+<li><strong>ecloud</strong> (based on Nextcloud, includes email)</li>
+<li><strong>Nextcloud</strong> + <strong>your own mail server</strong> <em>or</em> you keep your old email hoster and connect it to the Nextcloud mail app</li>
 <ul><li>If you don't want to spend too much time setting up your homeserver you may want to consider a plug-and-play solution such as <a href="https://www.homedrive.io/" target="_blank">Homedrive</a> or <a href="https://shop.nitrokey.com/shop/product/nextbox-116" target="_blank">Nextbox</a>.</li></ul>
+<li><strong>Seafile</strong> for files + <strong>Baikal/EteSync/Radicale</strong> for contacts and calendar + <strong>your own mail server</strong></li>
 <li><strong>Kolab</strong> <span class="bad">No file sync client</span></li>
+</ul>
+
+
+<h3>Strategy 5: Serverless &amp; decentralized (no email!)</h3>
+<ul>
+<li><strong>Syncthing</strong> for files + <strong>DecSync</strong> for contacts and calendar. Syncthing and DecSync are serverless and can directly sync between different devices as long as they are online at the same time. You can leave a synched computer at home running all the time (or rent a VPS) so that you have a "server" with which your other devices can sync whenever they're online. Email is not part of this solution; you could host your own mail server or just use one of the other providers.</li>
 </ul>
 
 <p>Self-hosting means taking full control of your data. Keep in mind that you should ideally self-host at home, on your own server. Renting a VPS might be easier, but in the end your hoster can still read your data if they really want to (or are forced by the government). However, self-hosting also has a number of downsides: software updates going wrong, home Internet going down, hardware problems, taking care of backups, ...</p>
