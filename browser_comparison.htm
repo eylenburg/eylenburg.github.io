@@ -181,7 +181,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: November 2022</p>
+<p class="center" style="color: red; font-size: small;">Last updated: December 2022</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
@@ -649,29 +649,29 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Firefox -->
 <td class="desktop yes">HTML/PNG</td>
 <td class="android dropped">Dropped</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature via Share button</span></td>
+<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
 <!-- Safari -->
 <td class="desktop yes">Webarchive/PDF</td>
-<td class="ios_wide yes">PDF</td>
+<td class="ios_wide yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
 <!-- Chrome -->
 <td class="desktop yes">(M)HTML</td>
 <td class="android yes">MHTML</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature via Share button</span></td>
+<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
 <!-- Edge -->
 <td class="desktop yes">MHTML/PNG</td>
 <td class="android yes">MHTML</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature via Share button</span></td>
+<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
 <!-- Opera -->
 <td class="desktop yes">(M)HTML/PDF</td>
 <td class="android yes">(M)HTML/PDF</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature via Share button</span></td>
+<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
 <!-- Vivaldi -->
 <td class="desktop yes">(MHTML)/PDF/PNG</td>
 <td class="android_wide yes">MHTML/PNG</td>
 <!-- Brave -->
 <td class="desktop yes">(M)HTML</td>
 <td class="android yes">MHTML</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature via Share button</span></td>
+<td class="ios yes">PDF</td>
 </tr> 
 
 
@@ -759,7 +759,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
+<td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
@@ -774,7 +774,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
-<td class="ios no">Yes</td>
+<td class="ios yes">Yes</td>
 </tr> 
 
 <tr>
@@ -854,11 +854,11 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Edge -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios yes">Yes</td>
 <!-- Opera -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios yes">Yes</td>
 <!-- Vivaldi -->
 <td class="desktop yes">Yes</td>
 <td class="android_wide yes">Yes</td>
@@ -1457,7 +1457,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Edge -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios no">No</td>
+<td class="ios yes">Yes</td>
 <!-- Opera -->
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
@@ -1499,7 +1499,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Brave -->
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android almost"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span></td>
-<td class="ios no">No</td>
+<td class="ios yes">Yes</td>
 </tr> 
 
 <tr>
@@ -1554,7 +1554,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios_wide yes">Yes ("groups")</td>
 <td class="desktop yes">Yes ("groups")</td>
 <td class="android yes">Yes</td>
-<td class="ios no">no</td>
+<td class="ios no">No</td>
 <td class="desktop yes">Yes ("groups")</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
@@ -1741,7 +1741,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <td class="desktop"><span class="yes">Mute; pin; duplicate; search in tabs; reload all tabs; move multiple tabs to new window; <span class="tooltip">vertically scrolling tab bar<span class="tooltiptext">when too many tabs are open they only shrink to a certain minimum width and the bar bar enables vertical scrolling</span></span></span></td>
 <td class="android"></td>
-<td class="ios"><span class="yes">Search in tabs</span></td>
+<td class="ios"></td>
 
 <td class="desktop"><span class="yes">Mute; pin; duplicate; search in tabs</span></td>
 <td class="ios_wide"><span class="yes">Pin; search in tabs</span></td>
@@ -2326,8 +2326,8 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
+<td class="desktop almost">for known websites</td>
+<td class="ios_wide almost">for known websites</td>
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
