@@ -628,7 +628,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop yes">Yes (workspaces)</td>
+<td class="desktop ext"><span class="dropped">Dropped (v79)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -649,24 +649,24 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Firefox -->
 <td class="desktop yes">HTML/PNG</td>
 <td class="android yes">PDF</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
+<td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop yes">Webarchive/PDF</td>
-<td class="ios_wide yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
+<td class="ios_wide no">No</td>
 <!-- Chrome -->
 <td class="desktop yes">(M)HTML</td>
 <td class="android yes">MHTML</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
+<td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">MHTML/PNG</td>
 <td class="android yes">MHTML/PNG</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
+<td class="ios no">No</td>
 <!-- Opera -->
 <td class="desktop yes">(M)HTML/PDF</td>
 <td class="android yes">(M)HTML/PDF</td>
-<td class="ios yes tooltip">PDF<span class="tooltiptext">iOS feature: Share &rarr; Print &rarr; Share &rarr; Save to Files</span></td>
+<td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop yes">(MHTML)/PDF/PNG</td>
+<td class="desktop yes">(MHTML)/PNG/JPG</td>
 <td class="android_wide yes">MHTML/PNG</td>
 <!-- Brave -->
 <td class="desktop yes">(M)HTML</td>
@@ -839,18 +839,18 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 <tr>
-<td class="legend tooltip">Tracking protection<span class="tooltiptext">can include blocking of tracking scripts, third-party cookies, URL tracking parameters, fingerprinting attempts via canvas or supercookies, and more</span></td>
+<td class="legend tooltip">Tracking protection<span class="tooltiptext">can include blocking of tracking scripts, tracking cookies, URL tracking parameters, fingerprinting attempts via canvas or supercookies, and more</span></td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios yes">Yes</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
@@ -865,7 +865,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios yes">Yes</td>
 </tr> 
 
 <tr>
@@ -899,37 +899,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 <tr>
-<td class="legend">CNAME uncloaking support</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr> 
-
-
-<tr>
 <td class="legend">Can clear cookies on exit</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
@@ -957,37 +926,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
-</tr> 
-
-
-<tr>
-<td class="legend">Partitioning of third-party storage</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android_wide no">No</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
 </tr>
 
 
@@ -1021,6 +959,71 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios yes">Yes</td>
 </tr>
 
+
+<tr>
+<td class="legend">CNAME uncloaking support</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes ">Yes</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+</tr> 
+
+
+
+
+<tr>
+<td class="legend">Partitioning of third-party storage</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android_wide no">No</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+</tr>
+
+
 <tr>
 <td class="legend">Can disable hyperlink auditing pings</td>
 <!-- Firefox -->
@@ -1043,7 +1046,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop ext"><span class="dropped">Dropped (v2.5)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
 <!-- Brave -->
 <td class="desktop yes">Disabled</td>
@@ -1073,7 +1076,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/content/javascript)</span></td>
 <td class="android_wide yes">Yes</td>
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
@@ -1459,14 +1462,14 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">No <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
 <td class="desktop yes">Yes</td>
 <td class="android_wide yes tooltip">Yes<span class="tooltiptext">In Accessibility Settings &rarr; Simplified View for Web Pages</span></td>
 <!-- Brave -->
-<td class="desktop yes">Yes</td>
+<td class="desktop ext">No <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes tooltip">Yes<span class="tooltiptext">In Accessibility Settings &rarr; Simplified View for Web Pages</span></td>
 <td class="ios yes">Yes</td>
 </tr> 
@@ -1475,7 +1478,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Enforce dark theme for websites<span class="tooltiptext">changes the website to a dark design to match the browser's or operating system's dark theme</span></td>
 <!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">experimental <span class="tooltiptext">currently only available in Firefox Nightly</span></span><span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop no"><span class="tooltip">No <span class="tooltiptext">currently only available in Firefox Nightly</span></span><span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="ios yes">Yes</td>
 <!-- Safari -->
@@ -1494,7 +1497,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios dropped">Dropped</td>
 <!-- Vivaldi -->
-<td class="desktop yes">Yes <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android_wide yes">Yes</td>
 <!-- Brave -->
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
@@ -1735,7 +1738,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr>  -->
 
-
+<!--
 <tr class="noncore">
 <td class="legend" style="font-size: 12px;">Other notable tab management features</td>
 
@@ -1764,7 +1767,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop"><span class="yes">Mute; pin; duplicate; move multiple tabs to new window</span></td>
 <td class="android"></td>
 <td class="ios"></td>
-</tr>
+</tr> -->
 
 
 
@@ -1865,7 +1868,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop yes">Yes</td>
+<td class="desktop no">No</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
@@ -2073,65 +2076,68 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr> 
 -->
 
+<!--
 <tr>
 <td class="legend tooltip">Automatic tab hibernating<span class="tooltiptext">also called tab snoozing, freezing, unloading etc.</span></td>
-<!-- Firefox -->
+
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Safari -->
+
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
-<!-- Chrome -->
+
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Edge -->
+
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Opera -->
+
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
-<!-- Vivaldi -->
+
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<!-- Brave -->
+
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
+-->
 
+<!--
 <tr>
 <td class="legend tooltip">Back/forward cache<span class="tooltiptext">re-load previously visited websites instantly from cache</span></td>
-<!-- Firefox -->
+
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
-<!-- Safari -->
+
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in edge://flags</span></td>
+
+<td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop almost"><span class="dropped" style="font-size: smaller;">Dropped (v15)</span>, <span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span></td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
+
+<td class="desktop yes">Yes</td>
 <td class="android_wide yes">Yes</td>
-<!-- Brave -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
+
+<td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 </tr>
+-->
 
 <tr>
 <td class="legend tooltip">Can view and save files in cache<span class="tooltiptext">example use-case: stream a video, <br />find video file in cache, save video on device</span></td>
@@ -2266,7 +2272,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop yes">Yes</td>
+<td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
@@ -2303,7 +2309,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop yes">Yes (free)</td>
+<td class="desktop no tooltip">Planned (free)<span class="tooltiptext">"Edge Secure Network"</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -2314,7 +2320,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android_wide no">No</td>
 <!-- Brave -->
-<td class="desktop yes">Yes (paid &amp; Tor tabs)</td>
+<td class="desktop yes">Yes (Tor &amp; paid VPN)</td>
 <td class="android almost">Yes (paid)</td>
 <td class="ios almost">Yes (paid)</td>
 </tr>
@@ -2333,15 +2339,15 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop yes">Yes</td>
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop yes">Yes</td>
 <td class="android_wide yes">Yes</td>
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
@@ -2467,7 +2473,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/security)</span></td>
 <td class="android_wide yes">Yes</td>
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
@@ -2618,31 +2624,32 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td colspan="3">Google</td>
 </tr>
 
+<!--
 <tr>
 <td class="legend semititle"><br />Non-core features</td>
-<!-- Firefox -->
+
 <td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
-<!-- Safari -->
+
 <td class="desktop"></td>
 <td class="ios_wide"></td>
-<!-- Chrome -->
+
 <td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
-<!-- Edge -->
+
 <td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
-<!-- Opera -->
+
 <td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
-<!-- Vivaldi -->
+
 <td class="desktop"></td>
 <td class="android_wide"></td>
-<!-- Brave -->
+
 <td class="desktop"></td>
 <td class="android"></td>
 <td class="ios"></td>
@@ -2650,38 +2657,38 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <tr class="noncore">
 <td class="legend" style="font-size: 12px;"><br />Notable non-browser features</td>
-<!-- Firefox -->
+
 <td class="desktop"><span class="yes">PDF reader</span>; <span class="dropped">Dropped: RSS reader (v64)</span></td>
 <td class="android"><span class="yes">PDF reader (soon); System-wide password manager</span></td>
 <td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span></span></td>
-<!-- Safari -->
+
 <td class="desktop"><span class="yes">PDF reader</span>; <span class="dropped">Dropped: RSS reader (v11)</span></td>
 <td class="ios_wide"><span class="yes">PDF reader</span>; <span class="dropped">Dropped: RSS reader (v11)</span></td>
-<!-- Chrome -->
+
 <td class="desktop"><span class="yes">PDF reader; RSS reader</span></td>
 <td class="android"><span class="yes">RSS reader; system-wide password manager</span></td>
 <td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span>; RSS reader</span></td>
-<!-- Edge -->
+
 <td class="desktop"><span class="yes">PDF reader</span>; <span class="almost">RSS reader (experimental)</span>; <span class="dropped">Dropped: ePub reader (v79)</span></td>
 <td class="android"><span class="yes">System-wide password manager</span></td>
 <td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span></span></td>
-<!-- Opera -->
+
 <td class="desktop"><span class="yes">PDF reader; RSS reader; crypto wallet; instant messengers; music streaming</span>; <span class="dropped">Dropped: Bittorrent client; e-mail client; IRC client; Usenet client; text notes (all v15); P2P file sharing (v12)</span></td>
 <td class="android"><span class="yes">RSS reader; crypto wallet</span></td>
 <td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span>; crypto wallet</span></td>
-<!-- Vivaldi -->
+
 <td class="desktop"><span class="yes">PDF reader; RSS reader; e-mail client; calendar; tasks; text notes; clock</span></td>
 <td class="android_wide"><span class="yes">Text notes</span></td>
-<!-- Brave -->
+
 <td class="desktop"><span class="yes">PDF reader; RSS reader; Bittorrent client; crypto wallet; video calling</span></td>
 <td class="android"><span class="yes">RSS reader; crypto wallet</span></td>
 <td class="ios"><span class="yes"><span class="tooltip">PDF reader<span class="tooltiptext">provided by iOS</span></span>; RSS reader; crypto wallet</span></td>
-</tr>
+</tr> -->
 
 </tbody>
 
 <tfoot style="text-align: left;">
-<tr><td colspan="20"></td></tr>
+<tr><td colspan="20" height="20"></td></tr></td></tr>
 <tr><td colspan="20" style="font-weight: bold; font-size: larger;">Other notable, still developed browsers which were not included in this comparison (list not exhaustive):</td></tr>
 <tr><td colspan="20"><span style="text-decoration: underline;">Using Blink/V8 engine:</span> Samsung Browser, ungoogled-chromium, Falkon, Yandex Browser <em>(except iOS)</em>, Naver Whale <em>(except iOS)</em>, DuckDuckGo Browser <em>(Android)</em>, <em>seemingly all Chinese browsers</em> (e.g. 360 Secure, Baidu, CM, Maxthon, QQ, Sogou, UC), <em>many more...</em></td></tr>
 <tr><td colspan="20"><span style="text-decoration: underline;">Using WebKit/Nitro engine:</span> GNOME Web, Otter, Orion, Qt Ultralight Browser, DuckDuckGo Browser <em>(macOS/iOS)</em>, Yandex Browser <em>(iOS)</em>, Naver Whale <em>(iOS)</em>, <em>all iOS browsers...</em></td></tr>
