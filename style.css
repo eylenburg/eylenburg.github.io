@@ -10,4 +10,9 @@ table.menubar tr td a:hover { text-decoration: underline;}
   table.menubar tr { display: block; }
   table.menubar td { display: inline-block; width: 100%; padding: 10px; }
 }
-
+@media (prefers-color-scheme: dark) {
+body, th {background-color: #222; color: white;  }
+a, a:visited { color: lightblue; }
+.dropped, .ext, .yes, .no, .notreally, .mixed, .almost, .kdeapp, .gnomeapp, .mktshare1, .mktshare5, .mktshare20, .mktshare30, .mktshare40, .mktshare100, .otherclients, .mau0, .mau1, .mau2, .mau3, .mau4, .mau5, .mau6{ color: black; }
+table tr.product td { border-color: #333; }
+}
