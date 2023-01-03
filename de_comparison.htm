@@ -199,14 +199,27 @@ background-color: #aaa;
 
 @media (prefers-color-scheme: dark) {
 td.gtktoolkit,
-td.qttoolkit {
-border-top: 1px solid #222;
-border-bottom: 1px solid #222;
-}
+td.qttoolkit,
 td.gnomeapp,
-td.kdeapp {
-border-top: 1px solid ivory;
-border-bottom: 1px solid ivory;
+td.kdeapp{
+border-top: none;
+border-bottom: none;
+border-top: none;
+border-bottom: none;
+}
+.gnomeapp {
+background-color: #825717;
+color: white;
+}
+.kdeapp {
+background-color: #063756;
+color: white;
+}
+.qttoolkit {
+color: #94d4ff;
+}
+.gtktoolkit {
+color: #eac895;
 }
 }
 
