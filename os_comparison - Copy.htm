@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 245px;
---oswidth: 110px;
+--oswidth: 86px;
 }
 
 table {
@@ -19,7 +19,7 @@ margin-top: 1em;
 text-align: center;
 border: none;
 table-layout: fixed;
-font-size: small;
+font-size: 9pt;
 width: calc(var(--legendwidth) + 14 * var(--oswidth));
 }
 
@@ -27,6 +27,7 @@ td {
 border: none;
 padding: 1px 1px;
 vertical-align: top;
+hyphens: auto;
 }
 
 td.yes,
@@ -222,21 +223,21 @@ background-color: #EBC1AD;
 
 <tr>
 <td></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/windows.svg" style="max-width: 90px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/macos.png" style="max-width: 75px; padding: 0 px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/ios.svg" style="max-width: 40px; padding: 0 px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/android.svg" style="max-width: 90px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/chromeos.svg" style="max-width: 80px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/Tux.svg" style="max-height: 80px; max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/freebsd.png" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/netbsd.svg" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/openbsd.svg" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/illumos.svg" style="max-width: 100px; filter: brightness(0.75);" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/haiku.svg" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/arcaos.png" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/risc os.png" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/amigaos.png" style="max-width: 100px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/morphos.png" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/windows.svg" style="max-width: 66px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/macos.png" style="max-width: 76px; padding: 0 px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/ios.svg" style="max-width: 36px; padding: 0 px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/android.svg" style="max-width: 66px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/chromeos.svg" style="max-width: 56px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/Tux.svg" style="max-height: 80px; max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/freebsd.png" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/netbsd.svg" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/openbsd.svg" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/illumos.svg" style="max-width: 76px; filter: brightness(0.75);" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/haiku.svg" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/arcaos.png" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/risc os.png" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/amigaos.png" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/morphos.png" style="max-width: 76px;" /></td>
 </tr>
 
 
@@ -370,22 +371,22 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Chromebooks</td>
-<td class="yes">Selected devices</td><!-- end of big 6 -->
+<td class="yes">Some devices</td><!-- end of big 6 -->
 <td class="mixed">Rarely</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Selected devices</td>
-<td class="yes">Selected devices</td>
+<td class="yes">Some devices</td>
+<td class="yes">Some devices</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
 <td>Installable on other laptops/desktops?</td>
 <td class="yes">Yes</td>
-<td class="almost tooltip">Yes (prohibited)<span class="tooltiptext">Can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
+<td class="almost tooltip">Yes <span style="font-size: 7pt;">(prohibited)</span><span class="tooltiptext">Can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">"Chrome OS Flex", some features are missing or limited</span></td>
@@ -396,9 +397,9 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Selected devices</td>
-<td class="yes">Selected devices</td>
-<td class="yes">Selected devices</td>
+<td class="yes">Some devices</td>
+<td class="yes">Some devices</td>
+<td class="yes">Some devices</td>
 </tr>
 
 <tr>
@@ -408,7 +409,7 @@ background-color: #EBC1AD;
 <td class="yes">Apple iPhone</td>
 <td class="yes">Most devices</td>
 <td class="no">No</td>
-<td class="yes">Selected devices</td><!-- end of big 6 -->
+<td class="yes">Some devices</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -475,7 +476,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="yes">Yes (32-bit mode)</td>
+<td class="yes">Yes <span style="font-size: 7pt;">(32-bit mode)</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -633,9 +634,9 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="notreally">3rd-party software</td>
+<td class="notreally">3rd-party app</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party software</td>
+<td class="notreally">3rd-party app</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -667,15 +668,15 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">2 finger scroll/tap</td>
+<td class="almost">2 fingers</td>
 <td class="no">No</td>
-<td class="almost">2 finger scroll/tap</td>
-<td class="almost">2 finger scroll/tap</td><!-- end of Unix -->
-<td class="almost">2 finger scroll/tap</td>
+<td class="almost">2 fingers</td>
+<td class="almost">2 fingers</td><!-- end of Unix -->
+<td class="almost">2 fingers</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party software</td>
-<td class="almost">2 finger scroll/tap</td>
+<td class="notreally">3rd-party app</td>
+<td class="almost">2 fingers</td>
 </tr>
 
 <tr>
@@ -711,8 +712,8 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">3rd-party software</td>
-<td class="notreally">3rd-party software</td>
+<td class="notreally">3rd-party app</td>
+<td class="notreally">3rd-party app</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -739,6 +740,7 @@ background-color: #EBC1AD;
 <tr>
 <td class="semititle"><br />General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
+
 
 <tr>
 <td>GUI/Desktop available</td>
@@ -840,7 +842,7 @@ background-color: #EBC1AD;
 <td>Multiple users</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Deployments only<span class="tooltiptext">"Shared iPad", only for Education or Enterprise deployments</span></td>
+<td class="mixed tooltip">Deployments<span class="tooltiptext">"Shared iPad", only for Education or Enterprise deployments</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
@@ -945,25 +947,25 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party software</td>
+<td class="notreally">3rd-party app</td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
 <td>Hosting virtual machines</td>
-<td class="yes">Yes (Hyper-V)</td>
-<td class="yes">Yes (Hypervisor)</td>
-<td class="no tooltip">Only if jailbroken<span class="tooltiptext">can install an app such as  UTM to host VMs</span></td>
-<td class="yes">Yes (KVM)</td>
-<td class="yes">Yes (KVM)</td>
-<td class="yes">Yes (KVM)</td><!-- end of big 6 -->
-<td class="yes">Yes (bhyve)</td>
-<td class="yes">Yes (NVMM)</td>
-<td class="yes tooltip">Yes (VMM)<span class="tooltiptext">Currenlty only supports OpenBSD and Linux guests, no graphics output</span></td>
-<td class="yes">Yes (KVM, bhyve)</td><!-- end of Unix -->
-<td class="mixed tooltip">Install Qemu<span class="tooltiptext">Unofficial port of Qemu without hardware acceleration, has to be installed separately.</span></td>
-<td class="mixed tooltip">Install Virtualbox<span class="tooltiptext">Unofficial (and outdated) port of Virtualbox without hardware acceleration, has to be installed separately.</span></td>
+<td class="yes"><em>Hyper-V</em></td>
+<td class="yes"><em>Hypervisor</em></td>
+<td class="no tooltip">if jailbroken<span class="tooltiptext">can install an app such as  UTM to host VMs</span></td>
+<td class="yes"><em>KVM</em></td>
+<td class="yes"><em>KVM</em></td>
+<td class="yes"><em>KVM</em></td><!-- end of big 6 -->
+<td class="yes"><em>bhyve</em></td>
+<td class="yes"><em>NVMM</em></td>
+<td class="yes tooltip"><em>VMM</em><span class="tooltiptext">Currently only supports OpenBSD and Linux guests, no graphics output</span></td>
+<td class="yes"><em>KVM &amp; bhyve</em></td><!-- end of Unix -->
+<td class="mixed tooltip">w/ qemu<span class="tooltiptext">Unofficial of Qemu without hardware acceleration, has to be installed separately.</span></td>
+<td class="mixed tooltip">w/ Virtualbox<span class="tooltiptext">Unofficial (and outdated) port of Virtualbox without hardware acceleration, has to be installed separately.</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -971,16 +973,16 @@ background-color: #EBC1AD;
 
 <tr>
 <td>OS-level virtualisation</td>
-<td class="yes">Yes (Containers)</td>
+<td class="yes"><em>Containers</em></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes (LXC)</td><!-- end of big 6 -->
-<td class="yes">Yes (jails)</td>
+<td class="yes"><em>LXC</em></td><!-- end of big 6 -->
+<td class="yes"><em>jails</em></td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes (Zones)</td><!-- end of Unix -->
+<td class="yes"><em>Zones</em></td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1123,7 +1125,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed">via Flatpak/Snap</td><!-- end of big 6 -->
+<td class="mixed">Flatpak/Snap</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1138,14 +1140,14 @@ background-color: #EBC1AD;
 <tr>
 <td>Sandboxing of apps by default</td>
 <td class="mixed">UWP apps</td>
-<td class="mixed">App Store apps</td>
+<td class="mixed">AppStore apps</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td><!-- end of big 6 -->
-<td class="mixed tooltip">via Capsicum<span class="tooltiptext">not supported by all applications</span></td>
+<td class="mixed tooltip">Capsicum<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td>
-<td class="mixed tooltip">via pledge/unveil<span class="tooltiptext">not supported by all applications</span></td>
+<td class="mixed tooltip">pledge/unveil<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1240,7 +1242,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="mixed">On rooted devices</td>
+<td class="notreally">if rooted</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1258,7 +1260,7 @@ background-color: #EBC1AD;
 <td>Can be used without online account</td>
 <td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workarounds such as entering bogus account details</span></td>
 <td class="almost tooltip">No App Store<span class="tooltiptext">cannot use App Store if not logged in with Apple account, but can still install apps from other sources</span></td>
-<td class="notreally tooltip">Can't install apps<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
+<td class="notreally tooltip">Very limited<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
 <td class="almost tooltip">No Play Store<span class="tooltiptext">cannot use Play Store if not logged in with Google account, but can still install apps from other sources</span></td>
 <td class="no tooltip">No<span class="tooltiptext">except guest accounts</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
@@ -1278,7 +1280,7 @@ background-color: #EBC1AD;
 <td class="no">Advertising ID</td>
 <td class="no">Advertising ID</td>
 <td class="no">Advertising ID</td>
-<td class="mixed tooltip">Not part of AOSP<span class="tooltiptext">While included in almost all devices, the Advertising ID is technically not part of Android but of Google Mobile Services</span></td>
+<td class="mixed tooltip">Not on AOSP<span class="tooltiptext">While included in almost all devices, the Advertising ID is technically not part of Android but of Google Mobile Services</span></td>
 <td class="no">Advertising ID</td>
 <td class="yes">None</td><!-- end of big 6 -->
 <td class="yes">None</td>
@@ -1295,17 +1297,17 @@ background-color: #EBC1AD;
 <tr>
 <td class="tooltip">Unlimited OS update support<span class="tooltiptext">Will the OS receive feature and/or security updates forever, as long as hardware requirements are met? Or is update support tied to the specific device (i.e. planned obsolescence) - and if so, how long are devices typically supplied with updates?</span></td>
 <td class="yes">Yes</td>
-<td class="no">No (6-11 years)</td>
-<td class="no">No (6-8 years)</td>
-<td class="no tooltip">No (2-5+ years)<span class="tooltiptext">Depends on device manufacturer. User-installed ROMs such as LineageOS may increase device lifespan to ~10 years</span></td>
-<td class="notreally tooltip">No (4-9 yrs) / Flex<span class="tooltiptext">Chromebooks (with Chrome OS preinstalled) have a limited lifespan in terms of updates. Chrome OS Flex runs on other laptops as well, but Google only officially supports the installation on "certified" devices, and certification of devices may end after which it is not recommended to install updates.</td>
+<td class="no">No (6-11 yrs)</td>
+<td class="no">No (6-8 yrs)</td>
+<td class="no tooltip">No (2-5+ yrs)<span class="tooltiptext">Depends on device manufacturer. User-installed ROMs such as LineageOS may increase device lifespan to ~10 years</span></td>
+<td class="no tooltip">No (4-9 yrs)<span class="tooltiptext">Chromebooks (with Chrome OS preinstalled) have a limited lifespan in terms of updates. Chrome OS Flex runs on other laptops as well, but Google only officially supports the installation on "certified" devices, and certification of devices may end after which it is not recommended to install updates.</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="almost">w/ subscription</td>
+<td class="almost tooltip">Yes (paid)<span class="tooltiptext">Requires a paid subscription</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1324,10 +1326,10 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="no tooltip">No<span class="tooltiptext">although Mozilla gives instructions how to run the Android or Linux app of Firefox on Chrome OS</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td><!-- end of Unix -->
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1337,21 +1339,21 @@ background-color: #EBC1AD;
 
 <tr>
 <td>Webkit (e.g. Safari, GNOME Web)</td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">No mainstream browser for Windows uses Webkit, but the engine is compatible with Windows, e.g. there is Qt Ultralight browser or Playwright</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">No mainstream browser for Windows uses Webkit, but the engine is compatible with Windows.</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">WebPositive Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">WebPositive Browser</span></td>
 <td class="no">No</td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Iris Browser</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Odyssey Web Browser</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Wayfarer Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Iris Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Odyssey Web Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Wayfarer Browser</span></td>
 </tr>
 
 <tr>
@@ -1362,12 +1364,12 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Falkon Browser</span></td>
-<td class="almost tooltip">Unofficial port<span class="tooltiptext">Dooble Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Falkon Browser</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Dooble Browser</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1385,19 +1387,18 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of big 6 -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of Unix -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of big 6 -->
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
 </tr>
-
 
 <tr>
 <td>LibreOffice or CollaboraOffice</td>
@@ -1417,7 +1418,6 @@ background-color: #EBC1AD;
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 </tr>
-
 
 <tr>
 <td class="tooltip">Adobe Creative Cloud core apps<span class="tooltiptext">After Effects, Animate, Audition, Dreamweaver, Illustrator, InDesign, Lightroom, Photoshop, Premiere Pro</span></td>
@@ -1509,17 +1509,17 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of big 6 -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of Unix -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of big 6 -->
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
 </tr>
 
 <tr>
@@ -1528,17 +1528,17 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial port</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of Unix -->
-<td class="almost">Unofficial port</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
+<td class="almost">Unofficial</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="almost">Unofficial</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
 </tr>
 
 
@@ -1586,13 +1586,13 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td><!-- end of Unix -->
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1607,11 +1607,11 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes (PWA)</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td>
-<td class="notreally">Web version only</td><!-- end of Unix -->
-<td class="notreally">Web version only</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="notreally">Web version</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1627,8 +1627,8 @@ background-color: #EBC1AD;
 <td style="text-indent: 10px;">Dropbox</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="no">No</td>
@@ -1647,8 +1647,8 @@ background-color: #EBC1AD;
 <td style="text-indent: 10px;">OneDrive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
@@ -1666,8 +1666,8 @@ background-color: #EBC1AD;
 <td style="text-indent: 10px;">Google Drive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
@@ -1685,7 +1685,7 @@ background-color: #EBC1AD;
 <td style="text-indent: 10px;">iCloud Drive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
@@ -1704,13 +1704,13 @@ background-color: #EBC1AD;
 <td style="text-indent: 10px;">Nextcloud (client)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
 <td class="no">No</td>
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1737,11 +1737,11 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial port</td>
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
+<td class="almost">Unofficial</td>
 <td class="no">No</td>
-<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of Apache but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of Apache but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial of Apache but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial of Apache but it's very outdated</span></td>
 </tr>
 
 <tr>
@@ -1756,7 +1756,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1775,10 +1775,10 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial port</td>
-<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
+<td class="almost">Unofficial</td>
+<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial of MySQL but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial of MySQL but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial of MySQL but it's very outdated</span></td>
 <td class="no">No</td>
 </tr>
 
@@ -1790,9 +1790,9 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial port</td>
-<td class="almost">Unofficial port</td>
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
+<td class="almost">Unofficial</td>
+<td class="almost">Unofficial</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1829,7 +1829,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial</td>
 <td class="yes">Yes</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
@@ -1849,10 +1849,10 @@ background-color: #EBC1AD;
 <td><br /><span class="yes"><strong>Linux</strong></span>,<br /><span class="yes"><strong>Android</strong></span>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via CrossOver (third-party app)</span></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine or CrossOver (third-party app)</span></span>,<br /><span class="mixed tooltip"><strong>Android</strong><span class="tooltiptext">via Anbox or WayDroid (third-party app)</span></span>,<br /><span class="notreally tooltip"><strong>macOS</strong><span class="tooltiptext">via Darling (third-party apps) - experimental support only!</span></span></td><!-- end of big 6 -->
 <td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app)</span></td>
-<td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></span></td>
+<td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span></span></td>
 <td></td>
-<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></span></td><!-- end of Unix -->
-<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span><br /><span class="yes"><strong>BeOS</strong></span></td>
+<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span></span></td><!-- end of Unix -->
+<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span><br /><span class="yes"><strong>BeOS</strong></span></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">only 16-bit apps as well as 32-bit apps via Odin32 (third-party app</span><br /><span class="yes"><strong>DOS</strong></span></td>
 <td></td>
 <td></td>
