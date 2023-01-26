@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 245px;
---oswidth: 86px;
+--oswidth: 110px;
 }
 
 table {
@@ -19,15 +19,14 @@ margin-top: 1em;
 text-align: center;
 border: none;
 table-layout: fixed;
-font-size: 9pt;
-width: calc(var(--legendwidth) + 16 * var(--oswidth));
+font-size: small;
+width: calc(var(--legendwidth) + 14 * var(--oswidth));
 }
 
 td {
 border: none;
 padding: 1px 1px;
 vertical-align: top;
-hyphens: auto;
 }
 
 td.yes,
@@ -133,7 +132,7 @@ background-color: #EBC1AD;
 
 <h1>Comparison of Operating Systems</h1>
 
-<p>Compared are these different operating systems:</p>
+<p>Compared are 15 different operating systems
 <ul>
 <li><strong>Windows</strong>: Most popular desktop OS. High overall market share. Probably the best software and hardware compatibility of all OS, due to its dominant market position. Comes pre-installed on most PCs sold.</li>
 <li><strong>macOS</strong>: Unix. Significant market share and great software support. Comes pre-installed on all Apple Macs.</li>
@@ -144,15 +143,14 @@ background-color: #EBC1AD;
 <li><strong>FreeBSD</strong>: Unix. Without any doubt the most popular of the BSD systems, is used in production or as part of their product by large companies (e.g. Apple, Sony, Netflix). Has desktop-specific distributions such as GhostBSD.</li>
 <li><strong>NetBSD</strong>: Unix. Has been part of various commercial products. General purpose OS that can be used on the desktop, i.e. it runs modern browsers and modern desktop environments.</li>
 <li><strong>OpenBSD</strong>: Unix. Fork of NetBSD. General purpose OS that can be used on the desktop. Has influenced other OS.</li>
-<li><strong>DragonFly BSD</strong>: Unix. Fork of FreeBSD. General purpose OS that can be used on the desktop. The least popular of the four BSD systems, but it has some interesting features such as the HAMMER2 file system.</li>
 <li><strong>Illumos</strong>: Unix. Open source fork of Solaris 10 that has several distributions ranging from commercial to hobbyist, and target various markets such as cloud, NAS, server, and desktop (e.g. OpenIndiana).</li>
 <li><strong>Haiku</strong>: One of the most promising of the alternative OS. Has a relatively complete selection of software, including a modern browser. Attempts to re-create BeOS, a commercially failed desktop OS of the late 90s/early 2000s.</li>
 <li><strong>ArcaOS</strong>: While it is a legacy OS catering towards remaining users of OS/2, with fundamental limitations (e.g. stuck to 32-bit), Arca Noae has undertaken many significant improvements such as hardware compatibility or the possibility of using more than 4 GB RAM. ArcaOS can also run modern browsers.</li>
 <li><strong>RISC OS</strong>: Legacy OS from the late 80s that was open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi.</li>
 <li><strong>AmigaOS</strong>: Legacy OS from the 1980s with slow development progress. Back in the day it was an impressive OS for home users. Suffers from limited hardware support (32-bit PowerPC only) with no plans to change this. Disappointing browser situation (best browser is Odyssey Web Browser/OWB, which is still receiving updates as of 2022 but is fundamentally based on a 2013 version of Webkit with backports/updates added). Long-term outlook is unclear as it is proprietary, commercial OS.</li>
 <li><strong>MorphOS</strong>: Despite its negligible market share and limited hardware compatibility (PowerPC only, mostly obsolete devices; no SMP or 64-bit support), this appears to be a relatively polished OS and has the most modern web browser (Wayfarer) for all AmigaOS-like operating systems. Good enough to be a daily driver for some.</li>
-<li><strong>AROS</strong>: An open source reimplementation of AmigaOS 3.1. While suffering from relatively slow development and few developers, it might survive AmigaOS and MorphOS in the long-term, as AROS runs on x86 hardware and has some other modern features the others lack (such as 64-bit support).</li>
 </ul>
+</p>
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
@@ -163,8 +161,6 @@ background-color: #EBC1AD;
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
 <col style="border-left: double; width: var(--oswidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--oswidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--oswidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--oswidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--oswidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--oswidth);">
@@ -199,8 +195,6 @@ background-color: #EBC1AD;
 <td style="width: var(--oswidth);"></td>
 <td style="width: var(--oswidth);"></td>
 <td style="width: var(--oswidth);"></td>
-<td style="width: var(--oswidth);"></td>
-<td style="width: var(--oswidth);"></td>
 </tr>
 
 
@@ -215,14 +209,12 @@ background-color: #EBC1AD;
 <th>FreeBSD</th>
 <th>NetBSD</th>
 <th>OpenBSD</th>
-<th>DragonFly BSD</th>
 <th>Illumos</th>
 <th>Haiku</th>
 <th>ArcaOS</th>
 <th>RISC OS</th>
 <th>AmigaOS</th>
 <th>MorphOS</th>
-<th>AROS</th>
 </tr>
 
 </thead>
@@ -230,28 +222,26 @@ background-color: #EBC1AD;
 
 <tr>
 <td></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/windows.svg" style="max-width: 66px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/macos.png" style="max-width: 76px; padding: 0 px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/ios.svg" style="max-width: 36px; padding: 0 px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/android.svg" style="max-width: 66px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/chromeos.svg" style="max-width: 56px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/Tux.svg" style="max-height: 80px; max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/freebsd.png" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/netbsd.svg" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/openbsd.svg" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/dragonflybsd.svg" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/illumos.svg" style="max-width: 76px; filter: brightness(0.75);" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/haiku.svg" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/arcaos.png" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/risc os.png" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/amigaos.png" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/morphos.png" style="max-width: 76px;" /></td>
-<td style="vertical-align: middle;"><img src="pics/logos/OS/aros.png" style="max-width: 76px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/windows.svg" style="max-width: 90px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/macos.png" style="max-width: 75px; padding: 0 px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/apple.svg" style="max-height: 40px; padding: 0 px;" /><img src="pics/logos/OS/ios.svg" style="max-width: 40px; padding: 0 px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/android.svg" style="max-width: 90px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/chromeos.svg" style="max-width: 80px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/Tux.svg" style="max-height: 80px; max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/freebsd.png" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/netbsd.svg" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/openbsd.svg" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/illumos.svg" style="max-width: 100px; filter: brightness(0.75);" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/haiku.svg" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/arcaos.png" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/risc os.png" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/amigaos.png" style="max-width: 100px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/OS/morphos.png" style="max-width: 100px;" /></td>
 </tr>
 
 
 <tr>
-<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -265,35 +255,31 @@ background-color: #EBC1AD;
 <td class="line">The FreeBSD Project</td>
 <td class="line">The NetBSD Project</td>
 <td class="line">The OpenBSD Project</td>
-<td class="line">The DragonFly BSD Project</td>
 <td class="line">Illumos Foundation</td><!-- end of Unix -->
 <td class="line">Haiku, Inc.</td>
 <td class="line">Arca Noae, LLC</td>
 <td class="line">RISC OS Develop&shy;ments Ltd. &amp; RISC OS Open Ltd.</td>
 <td class="line">Hyperion Entertainment</td>
 <td class="line">MorphOS Development Team</td>
-<td class="line">AROS Development Team</td>
 </tr>
 
 <tr>
 <td>History</td>
-<td class="line">First re&shy;lease in 1985. Early ver&shy;sions were based on MS-DOS (1981-2000). Cur&shy;rent ver&shy;sions ("NT") star&shy;ted as a fork of OS/2 (1987-2001).</td>
-<td class="line">Early ver&shy;sions (1984-&shy;2002) were an in&shy;depen&shy;dent OS. Cur&shy;rent ver&shy;sions are based on Darwin (which is de&shy;rived from NeXTSTEP, Free&shy;BSD, and Mach code).</td>
-<td class="line">First re&shy;lease in 2007. Based on Darwin (like macOS).</td>
-<td class="line">First re&shy;lease in 2008. Based on Linux. Typi&shy;cally bundled with Google ser&shy;vices. Google-free forks in&shy;clude FireOS, LineageOS, or GrapheneOS.</td>
-<td class="line">First re&shy;lease in 2011. Based on Linux. A free and open source ver&shy;sion called Chromium OS exists.</td>
-<td class="line">First re&shy;lease in 1991. Typi&shy;cally bundled with GNU soft&shy;ware. Various dis&shy;tribu&shy;tions exist, e.g. OpenSUSE, Debian, Ubuntu, Fedora, RHEL, and Arch.</td><!-- end of big 6 -->
-<td class="line">First re&shy;lease in 1993. Forked from the Ber&shy;keley Soft&shy;ware Dis&shy;tri&shy;bution (1978-&shy;1995). Lineage going back to the ori&shy;ginal UNIX from 1971.</td>
-<td class="line">First re&shy;lease in 1993. Forked from the Ber&shy;keley Soft&shy;ware Dis&shy;tribu&shy;tion (1978-&shy;1995). Lineage going back to the ori&shy;ginal UNIX from 1971.</td>
-<td class="line">First re&shy;lease in 1996. Forked from Net&shy;BSD. Lineage going back to the ori&shy;ginal UNIX from 1971.</td>
-<td class="line">First re&shy;lease in 2004. Forked from Free&shy;BSD. Lineage going back to the ori&shy;ginal UNIX from 1971.</td>
-<td class="line">First re&shy;lease in 2010. Forked from Solaris (1993-today). Lineage going back to the ori&shy;ginal UNIX from 1971. Va&shy;rious dis&shy;tri&shy;butions exist, e.g. Open&shy;Indiana and SmartOS.</td><!-- end of Unix -->
-<td class="line">First re&shy;lease in 2002. Star&shy;ted as a re&shy;implemen&shy;tation of BeOS/ZETA (1995-&shy;2007). In&shy;depen&shy;dent OS with some ori&shy;ginal BeOS code (e.g. file ma&shy;nager &amp; desk&shy;top).</td>
-<td class="line">First re&shy;lease in 2017. Based on the last re&shy;lease of IBM's OS/2 (1987-&shy;2001).</td>
-<td class="line">First re&shy;lease in 1987. In&shy;depen&shy;dent OS. Open source since 2018.</td>
-<td class="line">First re&shy;lease in 1985. In&shy;depen&shy;dent OS.
-<td class="line">First re&shy;lease in 2000. In&shy;depen&shy;dent OS. Star&shy;ted as a re&shy;implemen&shy;tation of AmigaOS (1985-&shy;today).</td>
-<td class="line">First re&shy;lease in 1995. In&shy;depen&shy;dent OS. Star&shy;ted as a re&shy;implemen&shy;tation of AmigaOS (1985-&shy;today). Va&shy;rious dis&shy;tri&shy;butions exist, e.g. Icaros Desktop and AROS One.</td>
+<td class="line">First release in 1985. Early version were based on MS-DOS (1981-2000). Current versions ("NT") started as a fork of OS/2 (1987-2001).</td>
+<td class="line">Early versions (1984-2002) were an independent OS. Current versions are based on Darwin (which is derived from NeXTSTEP, FreeBSD, and Mach code).</td>
+<td class="line">First release in 2007. Based on Darwin (like macOS).</td>
+<td class="line">First release in 2008. Based on Linux. Typically bundled with Google services. Google-free forks include FireOS, LineageOS, or GrapheneOS.</td>
+<td class="line">First release in 2011. Based on Linux. A free and open source version called Chromium OS exists.</td>
+<td class="line">First release in 1991. Typically bundled with GNU software. Various distributions exist, e.g. OpenSUSE, Debian, Ubuntu, Fedora, RHEL, and Arch.</td><!-- end of big 6 -->
+<td class="line">First release in 1993. Forked from the Berkeley Software Distribution (1978-1995). Lineage going back to the original UNIX from 1971.</td>
+<td class="line">First release in 1993. Forked from the Berkeley Software Distribution (1978-1995). Lineage going back to the original UNIX from 1971.</td>
+<td class="line">First release in 1996. Forked from NetBSD. Lineage going back to the original UNIX from 1971.</td>
+<td class="line">First release in 2010. Forked from Solaris (1993-today). Lineage going back to the original UNIX from 1971. Various distributions exist, e.g. OpenIndiana and SmartOS.</td><!-- end of Unix -->
+<td class="line">First release in 2002. Started as a reimplementation of BeOS/ZETA (1995-2007). Independent OS with some original BeOS code (e.g. file manager &amp; desktop).</td>
+<td class="line">First release in 2017. Based on the last release of OS/2 (1987-2001).</td>
+<td class="line">First release in 1987. Independent OS. Open source since 2018.</td>
+<td class="line">First release in 1985. Independent OS.
+<td class="line">First release in 2000. Independent OS. Started as a reimplementation of AmigaOS (1985-today).</td>
 </tr>
 
 <tr>
@@ -307,12 +293,10 @@ background-color: #EBC1AD;
 <td class="line">Unix-like</td>
 <td class="line">Unix-like</td>
 <td class="line">Unix-like</td>
-<td class="line">Unix-like</td>
 <td class="line">Unix-like</td><!-- end of Unix -->
 <td class="line">BeOS-like</td>
 <td class="line">VMS-like</td>
 <td class="line">n/a</td>
-<td class="line">AmigaOS-like</td>
 <td class="line">AmigaOS-like</td>
 <td class="line">AmigaOS-like</td>
 </tr>
@@ -328,14 +312,12 @@ background-color: #EBC1AD;
 <td class="line">FreeBSD</td>
 <td class="line">NetBSD</td>
 <td class="line">OpenBSD</td>
-<td class="line">DragonFly BSD</td>
 <td class="line">Illumos</td><!-- end of Unix -->
 <td class="line">Haiku</td>
 <td class="line">OS/2</td>
 <td class="line">RISC OS</td>
 <td class="line">Exec</td>
 <td class="line">Quark</td>
-<td class="line">AROS</td>
 </tr>
 
 <tr>
@@ -349,40 +331,36 @@ background-color: #EBC1AD;
 <td class="line">Monolithic</td>
 <td class="line">Monolithic</td>
 <td class="line">Monolithic</td>
-<td class="line">Hybrid</td>
 <td class="line">Monolithic</td><!-- end of Unix -->
 <td class="line">Hybrid</td>
 <td class="line">Hybrid</td>
 <td class="line">Monolithic</td>
 <td class="line">Microkernel</td>
 <td class="line">Microkernel</td>
-<td class="line">Microkernel</td>
 </tr>
 
 
 <tr>
-<td class="semititle"><br />Availability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Availability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Target devices <br /><small><em>("workstation" = desktop/laptop)</em></small></td>
-<td>Workstations, tablets, servers, embedded</td>
-<td>Workstations</td>
-<td>Phones, tablets, embedded</td>
-<td>Phones, tablets, embedded</td>
-<td>Workstations</td>
-<td>Workstations, tablets, phones, servers, embedded</td><!-- end of big 6 -->
-<td>Workstations, servers, embedded</td>
-<td>Workstations, servers, embedded</td>
-<td>Workstations, servers, embedded</td>
-<td>Workstations, servers, embedded</td>
-<td>Workstations, servers, embedded</td><!-- end of Unix -->
-<td>Workstations</td>
-<td>Workstations, servers, embedded</td>
-<td>Workstations</td>
-<td>Workstations</td>
-<td>Workstations</td>
-<td>Workstations</td>
+<td class="line">Workstations, tablets, servers, embedded</td>
+<td class="line">Workstations</td>
+<td class="line">Phones, tablets, embedded</td>
+<td class="line">Phones, tablets, embedded</td>
+<td class="line">Workstations</td>
+<td class="line">Workstations, tablets, phones, servers, embedded</td><!-- end of big 6 -->
+<td class="line">Workstations, servers, embedded</td>
+<td class="line">Workstations, servers, embedded</td>
+<td class="line">Workstations, servers, embedded</td>
+<td class="line">Workstations, servers, embedded</td><!-- end of Unix -->
+<td class="line">Workstations</td>
+<td class="line">Workstations, servers, embedded</td>
+<td class="line">Workstations</td>
+<td class="line">Workstations</td>
+<td class="line">Workstations</td>
 </tr>
 
 <tr>
@@ -392,24 +370,22 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Chromebooks</td>
-<td class="yes">Some devices</td><!-- end of big 6 -->
+<td class="yes">Selected devices</td><!-- end of big 6 -->
 <td class="mixed">Rarely</td>
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Some devices</td>
-<td class="yes">Some devices</td>
-<td class="no">No</td>
+<td class="yes">Selected devices</td>
+<td class="yes">Selected devices</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
 <td>Installable on other laptops/desktops?</td>
 <td class="yes">Yes</td>
-<td class="almost tooltip">Yes <span style="font-size: 7pt;">(prohibited)</span><span class="tooltiptext">Can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
+<td class="almost tooltip">Yes (prohibited)<span class="tooltiptext">Can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">"Chrome OS Flex", some features are missing or limited</span></td>
@@ -417,14 +393,12 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Some devices</td>
-<td class="yes">Some devices</td>
-<td class="yes">Some devices</td>
-<td class="yes">Some devices</td>
+<td class="yes">Selected devices</td>
+<td class="yes">Selected devices</td>
+<td class="yes">Selected devices</td>
 </tr>
 
 <tr>
@@ -434,13 +408,11 @@ background-color: #EBC1AD;
 <td class="yes">Apple iPhone</td>
 <td class="yes">Most devices</td>
 <td class="no">No</td>
-<td class="yes">Some devices</td><!-- end of big 6 -->
-<td class="no">No</td>
+<td class="yes">Selected devices</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -459,9 +431,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -480,9 +450,7 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="mixed">Rarely</td>
 <td class="mixed">Rarely</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -491,7 +459,7 @@ background-color: #EBC1AD;
 </tr>
 
 <tr>
-<td class="semititle"><br />CPU compatibility - stable releases</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />CPU compatibility - stable releases</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -505,14 +473,12 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="yes">Yes <span style="font-size: 7pt;">(32-bit mode)</span></td>
+<td class="yes">Yes (32-bit mode)</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -526,12 +492,10 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="mixed">Legacy CPUs</td>
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
@@ -547,12 +511,10 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="mixed">Legacy CPUs</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">Legacy CPUs</td>
 <td class="mixed">Legacy CPUs</td>
 <td class="mixed">Legacy CPUs</td>
 </tr>
@@ -568,10 +530,8 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="notreally">Experimental</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="notreally">Experimental</td>
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -589,9 +549,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -610,9 +568,7 @@ background-color: #EBC1AD;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -637,14 +593,12 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="almost">Experimental</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 </tr>
 
 <tr>
@@ -658,17 +612,14 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 </tr>
 
-<!--
 <tr>
 <td>Camera/Webcam</td>
 <td class="yes">Yes</td>
@@ -676,24 +627,19 @@ background-color: #EBC1AD;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
-<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-Dragonfly missing
 <td class="yes">Yes</td>
-
+<td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="notreally">3rd-party app</td>
+<td class="notreally">3rd-party software</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party app</td>
+<td class="notreally">3rd-party software</td>
 <td class="yes">Yes</td>
-AROS missing
 </tr>
--->
 
-<!--
+
 <tr>
 <td>Multiple monitors</td>
 <td class="yes">Yes</td>
@@ -701,24 +647,18 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
-<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
+<td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-AROS missing
 </tr>
--->
 
-<!--
 <tr>
 <td>Multi-touch (on touchpad or touchscreen)</td>
 <td class="yes">Yes</td>
@@ -726,21 +666,17 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
-<td class="almost">2 fingers</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="almost">2 finger scroll/tap</td>
 <td class="no">No</td>
-<td class="almost">2 fingers</td>
-Dragonfly missing
-<td class="almost">2 fingers</td>
-
-<td class="almost">2 fingers</td>
+<td class="almost">2 finger scroll/tap</td>
+<td class="almost">2 finger scroll/tap</td><!-- end of Unix -->
+<td class="almost">2 finger scroll/tap</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party app</td>
-<td class="almost">2 fingers</td>
+<td class="notreally">3rd-party software</td>
+<td class="almost">2 finger scroll/tap</td>
 </tr>
--->
 
 <tr>
 <td>Bluetooth</td>
@@ -753,14 +689,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="mixed tooltip">Limited<span class="tooltiptext">USB emulation only (e.g. for using bluetooth mouse or keyboard)</span></td>
-<td class="no">No</td>
 </tr>
 
 <tr>
@@ -774,18 +708,16 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">3rd-party app</td>
-<td class="notreally">3rd-party app</td>
-<td class="yes">Yes</td>
+<td class="notreally">3rd-party software</td>
+<td class="notreally">3rd-party software</td>
 <td class="yes">Yes</td>
 </tr>
 
 <tr>
-<td>WWAN (Mobile/cellular Internet)</td>
+<td>WWAN/Mobile Internet</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -795,9 +727,7 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -810,7 +740,6 @@ Dragonfly missing
 <td class="semititle"><br />General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
-
 <tr>
 <td>GUI/Desktop available</td>
 <td class="yes">Yes</td>
@@ -822,9 +751,7 @@ Dragonfly missing
 <td class="yes">Optional</td>
 <td class="yes">Optional</td>
 <td class="yes">Optional</td>
-<td class="yes">Optional</td>
 <td class="yes">Optional</td><!-- end of Unix -->
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -843,14 +770,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -864,14 +789,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes (disabled)</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -885,12 +808,10 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 </tr>
@@ -907,30 +828,26 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="mixed tooltip">Limited<span class="tooltiptext">Only in Qbox (used for low-level tasks), but not in Abox (in which all applications are running). Necessary for backwards compatibility with AmigaOS applications. </span></td>
-<td class="no">No</td>
 </tr>
 
 <tr>
 <td>Multiple users</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Deployments<span class="tooltiptext">"Shared iPad", only for Education or Enterprise deployments</span></td>
+<td class="mixed tooltip">Deployments only<span class="tooltiptext">"Shared iPad", only for Education or Enterprise deployments</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -949,16 +866,13 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">Planned (v5.1)</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 </tr>
-
 
 <tr>
 <td>Logical volume management</td>
@@ -967,23 +881,18 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
-<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-
+<td class="yes">Yes</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
 
-<!--
 <tr>
 <td>NFC payments</td>
 <td class="no">No</td>
@@ -995,14 +904,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-AROS missing
 </tr>
 
 <tr>
@@ -1016,16 +923,13 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-AROS missing
 </tr>
--->
 
 <tr>
 <td>Native IPv6 support</td>
@@ -1038,32 +942,28 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="notreally">3rd-party app</td>
-<td class="no">No</td>
+<td class="notreally">3rd-party software</td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
 <td>Hosting virtual machines</td>
-<td class="yes"><em>Hyper-V</em></td>
-<td class="yes"><em>Hypervisor</em></td>
-<td class="no tooltip">if jailbroken<span class="tooltiptext">can install an app such as  UTM to host VMs</span></td>
-<td class="yes"><em>KVM</em></td>
-<td class="yes"><em>KVM</em></td>
-<td class="yes"><em>KVM</em></td><!-- end of big 6 -->
-<td class="yes"><em>bhyve</em></td>
-<td class="yes"><em>NVMM</em></td>
-<td class="yes tooltip"><em>VMM</em><span class="tooltiptext">Currently only supports OpenBSD and Linux guests, no graphics output</span></td>
-<td class="yes"><em>NVMM</em></td>
-<td class="yes"><em>KVM &amp; bhyve</em></td><!-- end of Unix -->
-<td class="mixed tooltip">w/ qemu<span class="tooltiptext">Unofficial of Qemu without hardware acceleration, has to be installed separately.</span></td>
-<td class="mixed tooltip">w/ Virtualbox<span class="tooltiptext">Unofficial (and outdated) port of Virtualbox without hardware acceleration, has to be installed separately.</span></td>
-<td class="no">No</td>
+<td class="yes">Yes (Hyper-V)</td>
+<td class="yes">Yes (Hypervisor)</td>
+<td class="no tooltip">Only if jailbroken<span class="tooltiptext">can install an app such as  UTM to host VMs</span></td>
+<td class="yes">Yes (KVM)</td>
+<td class="yes">Yes (KVM)</td>
+<td class="yes">Yes (KVM)</td><!-- end of big 6 -->
+<td class="yes">Yes (bhyve)</td>
+<td class="yes">Yes (NVMM)</td>
+<td class="yes tooltip">Yes (VMM)<span class="tooltiptext">Currenlty only supports OpenBSD and Linux guests, no graphics output</span></td>
+<td class="yes">Yes (KVM, bhyve)</td><!-- end of Unix -->
+<td class="mixed tooltip">Install Qemu<span class="tooltiptext">Unofficial port of Qemu without hardware acceleration, has to be installed separately.</span></td>
+<td class="mixed tooltip">Install Virtualbox<span class="tooltiptext">Unofficial (and outdated) port of Virtualbox without hardware acceleration, has to be installed separately.</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1071,18 +971,16 @@ AROS missing
 
 <tr>
 <td>OS-level virtualisation</td>
-<td class="yes"><em>Containers</em></td>
+<td class="yes">Yes (Containers)</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes"><em>LXC</em></td><!-- end of big 6 -->
-<td class="yes"><em>jails</em></td>
+<td class="yes">Yes (LXC)</td><!-- end of big 6 -->
+<td class="yes">Yes (jails)</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes"><em>jails</em></td>
-<td class="yes"><em>Zones</em></td><!-- end of Unix -->
-<td class="no">No</td>
+<td class="yes">Yes (Zones)</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1106,10 +1004,8 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="notreally">Read-only</td>
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1127,14 +1023,12 @@ AROS missing
 <td class="no">No</td>
 <td class="notreally">Read-only</td>
 <td class="notreally">Read-only</td>
-<td class="notreally">Read-only</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="notreally">Read-only</td>
-<td class="no">No</td>
 </tr>
 
 
@@ -1149,9 +1043,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1170,14 +1062,12 @@ AROS missing
 <td class="almost">Experimental</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="notreally">Read-only</td>
-<td class="no">No</td>
 </tr>
 
 <tr>
@@ -1191,9 +1081,7 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1205,7 +1093,7 @@ AROS missing
 
 
 <tr>
-<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1219,12 +1107,10 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no tooltip">No<span class="tooltiptext">RISC OS 6 had a firewall, however RISC OS 6 development has stopped; the currently developed version is confusingly called RISC OS 5</span></td>
-<td class="no">No</td>
+<td class="no tooltip">No (in RISC OS 6)<span class="tooltiptext">RISC OS 6 development has stopped; currently developed version is confusingly called RISC OS 5</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
@@ -1237,13 +1123,11 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed">Flatpak/Snap</td><!-- end of big 6 -->
-<td class="no">No</td>
+<td class="mixed">via Flatpak/Snap</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1254,17 +1138,15 @@ AROS missing
 <tr>
 <td>Sandboxing of apps by default</td>
 <td class="mixed">UWP apps</td>
-<td class="mixed">AppStore apps</td>
+<td class="mixed">App Store apps</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td><!-- end of big 6 -->
-<td class="mixed tooltip">Capsicum<span class="tooltiptext">not supported by all applications</span></td>
+<td class="mixed tooltip">via Capsicum<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td>
-<td class="mixed tooltip">pledge/unveil<span class="tooltiptext">not supported by all applications</span></td>
-<td class="no">No</td>
+<td class="mixed tooltip">via pledge/unveil<span class="tooltiptext">not supported by all applications</span></td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1283,9 +1165,7 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1294,7 +1174,7 @@ AROS missing
 </tr>
 
 <tr>
-<td>VPN support (OpenVPN/Wireguard/IPsec)</td>
+<td>VPN support (OpenVPN or Wireguard)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1304,9 +1184,7 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1316,7 +1194,7 @@ AROS missing
 
 
 <tr>
-<td class="semititle"><br />Openness</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Openness</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1330,14 +1208,12 @@ AROS missing
 <td class="yes">BSD</td>
 <td class="yes">BSD</td>
 <td class="yes">BSD</td>
-<td class="yes">BSD</td>
 <td class="yes">CDDL</td><!-- end of Unix -->
 <td class="yes">MIT</td>
 <td class="no">Proprietary</td>
 <td class="yes">Apache</td>
 <td class="no">Proprietary</td>
 <td class="no">Proprietary</td>
-<td class="yes">AROS Public</td>
 </tr>
 
 <tr>
@@ -1351,14 +1227,12 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-#<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -1366,15 +1240,13 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="notreally">if rooted</td>
+<td class="mixed">On rooted devices</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1386,11 +1258,10 @@ AROS missing
 <td>Can be used without online account</td>
 <td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workarounds such as entering bogus account details</span></td>
 <td class="almost tooltip">No App Store<span class="tooltiptext">cannot use App Store if not logged in with Apple account, but can still install apps from other sources</span></td>
-<td class="notreally tooltip">Very limited<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
+<td class="notreally tooltip">Can't install apps<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
 <td class="almost tooltip">No Play Store<span class="tooltiptext">cannot use Play Store if not logged in with Google account, but can still install apps from other sources</span></td>
 <td class="no tooltip">No<span class="tooltiptext">except guest accounts</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1400,7 +1271,6 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">but need to purchase a license key to use the OS</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">but need to purchase a license key to use the OS</span></td>
-<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -1408,15 +1278,13 @@ AROS missing
 <td class="no">Advertising ID</td>
 <td class="no">Advertising ID</td>
 <td class="no">Advertising ID</td>
-<td class="mixed tooltip">Not on AOSP<span class="tooltiptext">While included in almost all devices, the Advertising ID is technically not part of Android but of Google Mobile Services</span></td>
+<td class="mixed tooltip">Not part of AOSP<span class="tooltiptext">While included in almost all devices, the Advertising ID is technically not part of Android but of Google Mobile Services</span></td>
 <td class="no">Advertising ID</td>
 <td class="yes">None</td><!-- end of big 6 -->
 <td class="yes">None</td>
 <td class="yes">None</td>
 <td class="yes">None</td>
-<td class="yes">None</td>
 <td class="yes">None</td><!-- end of Unix -->
-<td class="yes">None</td>
 <td class="yes">None</td>
 <td class="yes">None</td>
 <td class="yes">None</td>
@@ -1427,19 +1295,17 @@ AROS missing
 <tr>
 <td class="tooltip">Unlimited OS update support<span class="tooltiptext">Will the OS receive feature and/or security updates forever, as long as hardware requirements are met? Or is update support tied to the specific device (i.e. planned obsolescence) - and if so, how long are devices typically supplied with updates?</span></td>
 <td class="yes">Yes</td>
-<td class="no">No (6-11 yrs)</td>
-<td class="no">No (6-8 yrs)</td>
-<td class="no tooltip">No (2-5+ yrs)<span class="tooltiptext">Depends on device manufacturer. User-installed ROMs such as LineageOS may increase device lifespan to ~10 years</span></td>
-<td class="no tooltip">No (4-9 yrs)<span class="tooltiptext">Chromebooks (with Chrome OS preinstalled) have a limited lifespan in terms of updates. Chrome OS Flex runs on other laptops as well, but Google only officially supports the installation on "certified" devices, and certification of devices may end after which it is not recommended to install updates.</td>
+<td class="no">No (6-11 years)</td>
+<td class="no">No (6-8 years)</td>
+<td class="no tooltip">No (2-5+ years)<span class="tooltiptext">Depends on device manufacturer. User-installed ROMs such as LineageOS may increase device lifespan to ~10 years</span></td>
+<td class="notreally tooltip">No (4-9 yrs) / Flex<span class="tooltiptext">Chromebooks (with Chrome OS preinstalled) have a limited lifespan in terms of updates. Chrome OS Flex runs on other laptops as well, but Google only officially supports the installation on "certified" devices, and certification of devices may end after which it is not recommended to install updates.</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
 <td class="yes">Yes</td>
-<td class="almost tooltip">Yes (paid)<span class="tooltiptext">Requires a paid subscription</span></td>
-<td class="yes">Yes</td>
+<td class="almost">w/ subscription</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1447,7 +1313,7 @@ AROS missing
 
 
 <tr>
-<td class="semititle"><br />Browser engine support (up to date)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Browser engine support (up to date)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1458,12 +1324,10 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="no tooltip">No<span class="tooltiptext">although Mozilla gives instructions how to run the Android or Linux app of Firefox on Chrome OS</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td><!-- end of Unix -->
-<td class="no">No</td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Firefox</span></td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1473,23 +1337,21 @@ AROS missing
 
 <tr>
 <td>Webkit (e.g. Safari, GNOME Web)</td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">No mainstream browser for Windows uses Webkit, but the engine is compatible with Windows.</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">No mainstream browser for Windows uses Webkit, but the engine is compatible with Windows, e.g. there is Qt Ultralight browser or Playwright</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">GNOME Web</span></td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="almost tooltip">Unofficial<span class="tooltiptext">WebPositive Browser</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">WebPositive Browser</span></td>
 <td class="no">No</td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Iris Browser</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Odyssey Web Browser</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Wayfarer Browser</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Odyssey Web Browser</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Iris Browser</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Odyssey Web Browser</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Wayfarer Browser</span></td>
 </tr>
 
 <tr>
@@ -1500,14 +1362,12 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Chromium</span></td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Falkon Browser</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Dooble Browser</span></td>
-<td class="no">No</td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Falkon Browser</span></td>
+<td class="almost tooltip">Unofficial port<span class="tooltiptext">Dooble Browser</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1515,7 +1375,7 @@ AROS missing
 
 
 <tr>
-<td class="semititle"><br />Native application support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Native application support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
@@ -1525,20 +1385,19 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of big 6 -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of big 6 -->
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of Unix -->
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
 </tr>
+
 
 <tr>
 <td>LibreOffice or CollaboraOffice</td>
@@ -1551,15 +1410,14 @@ AROS missing
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td><!-- end of Unix -->
 <td class="almost">Unofficial</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
 </tr>
+
 
 <tr>
 <td class="tooltip">Adobe Creative Cloud core apps<span class="tooltiptext">After Effects, Animate, Audition, Dreamweaver, Illustrator, InDesign, Lightroom, Photoshop, Premiere Pro</span></td>
@@ -1572,9 +1430,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1594,9 +1450,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1615,9 +1469,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1636,9 +1488,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1659,19 +1509,17 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of big 6 -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="no">No</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of big 6 -->
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of Unix -->
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
 </tr>
 
 <tr>
@@ -1680,19 +1528,17 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version</td>
+<td class="notreally">Web version only</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="almost">Unofficial port</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of Unix -->
+<td class="almost">Unofficial port</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
 </tr>
 
 
@@ -1707,9 +1553,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1728,9 +1572,7 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1744,15 +1586,13 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version</td>
+<td class="notreally">Web version only</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td><!-- end of Unix -->
-<td class="notreally">Web version</td>
-<td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
+<td class="notreally">Web version only</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1767,13 +1607,11 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes (PWA)</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="notreally">Web version</td>
-<td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td>
+<td class="notreally">Web version only</td><!-- end of Unix -->
+<td class="notreally">Web version only</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1782,23 +1620,21 @@ AROS missing
 
 
 <tr>
-<td><br />Cloud sync  - official apps</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td><br />Cloud sync  - official apps</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td style="text-indent: 10px;">Dropbox</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1811,16 +1647,14 @@ AROS missing
 <td style="text-indent: 10px;">OneDrive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1832,16 +1666,14 @@ AROS missing
 <td style="text-indent: 10px;">Google Drive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1853,16 +1685,14 @@ AROS missing
 <td style="text-indent: 10px;">iCloud Drive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1874,16 +1704,14 @@ AROS missing
 <td style="text-indent: 10px;">Nextcloud (client)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
-<td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
+<td class="mixed tooltip">Yes (limited sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial</td>
+<td class="almost">Unofficial port</td>
 <td class="no">No</td>
-<td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
+<td class="almost">Unofficial port</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1894,7 +1722,7 @@ AROS missing
 
 
 <tr>
-<td><br />Server applications</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td><br />Server applications</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1908,14 +1736,12 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
+<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial port</td>
 <td class="no">No</td>
-<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial version of Apache but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial version of Apache but it's very outdated</span></td>
-<td class="no">No</td>
+<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of Apache but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of Apache but it's very outdated</span></td>
 </tr>
 
 <tr>
@@ -1929,10 +1755,8 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial</td>
-<td class="no">No</td>
+<td class="almost">Unofficial port</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1950,13 +1774,11 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="almost">Unofficial</td>
-<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial version of MySQL but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial version of MySQL but it's very outdated</span></td>
-<td class="no tooltip">No<span class="tooltiptext">There is an Unofficial version of MySQL but it's very outdated</span></td>
-<td class="no">No</td>
+<td class="almost">Unofficial port</td>
+<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
+<td class="no tooltip">No<span class="tooltiptext">There is an unofficial port of MySQL but it's very outdated</span></td>
 <td class="no">No</td>
 </tr>
 
@@ -1968,12 +1790,10 @@ AROS missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
-<td class="almost">Unofficial</td>
+<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial port</td>
+<td class="almost">Unofficial port</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1992,9 +1812,7 @@ AROS missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2011,11 +1829,9 @@ AROS missing
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="almost">Unofficial</td>
+<td class="almost">Unofficial port</td>
 <td class="yes">Yes</td>
-<td class="almost">Unofficial</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2033,15 +1849,13 @@ AROS missing
 <td><br /><span class="yes"><strong>Linux</strong></span>,<br /><span class="yes"><strong>Android</strong></span>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via CrossOver (third-party app)</span></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine or CrossOver (third-party app)</span></span>,<br /><span class="mixed tooltip"><strong>Android</strong><span class="tooltiptext">via Anbox or WayDroid (third-party app)</span></span>,<br /><span class="notreally tooltip"><strong>macOS</strong><span class="tooltiptext">via Darling (third-party apps) - experimental support only!</span></span></td><!-- end of big 6 -->
 <td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app)</span></td>
-<td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span></span></td>
+<td><br /><span class="yes"><strong>Linux</strong>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></span></td>
 <td></td>
-<td></td>
-<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span></span></td><!-- end of Unix -->
-<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - Unofficial</span><br /><span class="yes"><strong>BeOS</strong></span></td>
+<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span></span></td><!-- end of Unix -->
+<td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine (third-party app) - unofficial port</span><br /><span class="yes"><strong>BeOS</strong></span></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">only 16-bit apps as well as 32-bit apps via Odin32 (third-party app</span><br /><span class="yes"><strong>DOS</strong></span></td>
 <td></td>
 <td></td>
-<td><br /><span class="yes"><strong>AmigaOS</strong></span></td>
 <td><br /><span class="yes"><strong>AmigaOS</strong></span></td>
 </tr>
 
@@ -2063,6 +1877,7 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 <ul>
 <li>Unix</li><ul>
 <li><strong>AIX</strong>: Commercial Unix from IBM. Not marketed towards workstation/desktop use anymore (e.g. Firefox browser and CDE desktop haven't been updated in years). While it will be supported until at least 2029, the long-term outlook for this OS is unclear as IBM is more likely to focus on its competing offer Red Hat Enterprise Linux. AIX doesn't run on commonly available consumer hardware (only POWER ISA).</li>
+<li><strong>DragonFlyBSD</strong>: Would almost look the same as FreeBSD in this comparison (as DragonFlyBSD is a fork of FreeBSD). More suitable as a daily driver than some other niche OS (e.g. you can install the Xfce desktop and Firefox browser on DragonFlyBSD). However, its existence appears to depend on its founder (Matt Dillon) with relatively little developer interest compared to other BSDs, and negligible usage share both on desktops and servers. While an interesting OS, it seems to be more of a research project rather than something that is actually used in production (yet).</li>
 <li><strong>HP-UX</strong>: Commercial Unix from HP. Not marketed towards workstation/desktop use anymore (e.g. Firefox browser and CDE desktop haven't been updated in years). Doesn't run on commonly available consumer hardware (only Itanium ISA). End of life announced for 2025 for both Itanium hardware and HP-UX support. It's a dead end.</li>
 <li><strong>Solaris</strong>: Commercial Unix from Oracle. Would almost look the same as Illumos in this comparison (as Illumos is a fork of Solaris). While Solaris was historically used for workstations and still includes relatively up to date desktop software (e.g. modern GNOME desktop and Firefox browser), it is clear that Oracle is focusing on the commercial server market. Even though Solaris is still regularly getting new features and improvements, the long-term perspective has been put into doubt. The current version is still supported until at least 2034, which is generally seen as the end of life date for Solaris. Go on Oracle's website and you'll see that they're focused more on Oracle Linux rather than Solaris. The SPARC ISA, one of the main arguments to buy a Solaris computer, is on its way out as well.</li>
 <!-- <li><strong>UnixWare</strong>: Commercial Unix from Xinuous, previously SCO. The last update is from 2019, no roadmap or support schedule is published, and apparently there is still no 64-bit version of this OS. It's quite likely that this OS is already dead, just without an official announcement. Even if it weren't the lack of a modern browser and desktop environment (still using CDE) make it quite irrelevant as a workstation OS.</li>-->
@@ -2079,6 +1894,7 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 
 <li>Other</li><ul>
 <li><strong>A2</strong> (formerly Bluebottle): Never found any widespread adoption or real-world use outside of ETH Z&uuml;rich.</li>
+<li><strong>AROS</strong>: Generally seen as the most immature and unstable of the three AmigaOS-like systems (AmigaOS, AROS, MorphOS). The best available browser is OWB which is fundamentally still based on 2013 Webkit with backports and smaller updates, and might not be fully compatible with "modern" websites. Slow development, few developers. Still, it might survive AmigaOS and MorphOS in the long-term, as AROS runs on x86 hardware and has some other modern features (such as 64-bit support and SMT).</li>
 <li><strong>FreeDOS</strong>: While some laptops are available with FreeDOS preinstalled, this OS is not suitable for the average user, lacking a graphical interface and modern browser. It's just a niche OS for running old DOS software.</li>
 <li><strong>Fuchsia</strong>: Currently only used in niche/embedded devices (e.g. Google Nest). Relatively young OS with unclear roadmap for the future. The graphical user interface (Armadillo) has been removed from Fuchsia. Knowing Google's tendency to kill its projects, it wouldn't be surprising if Fuchsia development will be discontinued suddenly.</li>
 <li><strong>Genode</strong>: One of the most promising and quickly progressing alternative operating systems. Can run a modern web browser (Falkon) and supports a variety of hardware, from PC to Pinephone. <em>Sculpt OS</em> is intended to be a distribution for desktop users, however the GUI is not easy to understand for normal users. Once this runs a "normal" desktop I'd like to include it in the comparison.</li>
