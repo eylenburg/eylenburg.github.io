@@ -109,6 +109,41 @@ background-color: #F5E0D6;
 background-color: #EBC1AD;
 }
 
+.itsover {
+color: white;
+border: 1px solid red;
+border-radius: 3px;
+background: red;
+}
+
+.good {
+color: white;
+border: 1px solid green;
+border-radius: 3px;
+background: green;
+}
+
+.bad {
+color: white;
+border: 1px solid #cc8500;
+border-radius: 3px;
+background: #cc8500;
+}
+
+.medium {
+color: white;
+border: 1px solid #a4a428;
+border-radius: 3px;
+background: #a4a428;
+}
+
+.paid {
+border: 2px solid aqua;
+border-radius: 3px;
+}
+
+
+
 
 </style>
 </head>
@@ -135,7 +170,7 @@ background-color: #EBC1AD;
 
 <p>Compared are these different operating systems:</p>
 <ul>
-<li><strong>Windows</strong>: Most popular desktop OS. High overall market share. Probably the best software and hardware compatibility of all OS, due to its dominant market position. Comes pre-installed on most PCs sold.</li>
+<li><strong>Windows</strong>: Most popular desktop OS. High overall market share. Probably the best software and hardware compatibility of all OS, due to its dominant market position. Comes pre-installed on most PCs sold. The comparison below refers to <span style="text-decoration: underline;">Windows 11</span>.</li>
 <li><strong>macOS</strong>: Unix. Significant market share and great software support. Comes pre-installed on all Apple Macs.</li>
 <li><strong>iOS</strong>: Unix. The mobile equivalent to macOS, pre-installed on the iPhone. Significant market share.</li>
 <li><strong>Android</strong>: Unix-like, based on Linux. Most popular smartphone OS, pre-installed on almost all smartphones that are not made by Apple. Highest market share of all end-user OS.</li>
@@ -148,8 +183,8 @@ background-color: #EBC1AD;
 <li><strong>Illumos</strong>: Unix. Open source fork of Solaris 10 that has several distributions ranging from commercial to hobbyist, and target various markets such as cloud, NAS, server, and desktop (e.g. OpenIndiana).</li>
 <li><strong>Haiku</strong>: One of the most promising of the alternative OS. Has a relatively complete selection of software, including a modern browser. Attempts to re-create BeOS, a commercially failed desktop OS of the late 90s/early 2000s.</li>
 <li><strong>ArcaOS</strong>: While it is a legacy OS catering towards remaining users of OS/2, with fundamental limitations (e.g. stuck to 32-bit), Arca Noae has undertaken many significant improvements such as hardware compatibility or the possibility of using more than 4 GB RAM. ArcaOS can also run modern browsers.</li>
-<li><strong>RISC OS</strong>: Legacy OS from the late 80s that was open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi.</li>
-<li><strong>AmigaOS</strong>: Legacy OS from the 1980s with slow development progress. Back in the day it was an impressive OS for home users. Suffers from limited hardware support (32-bit PowerPC only) with no plans to change this. Disappointing browser situation (best browser is Odyssey Web Browser/OWB, which is still receiving updates as of 2022 but is fundamentally based on a 2013 version of Webkit with backports/updates added). Long-term outlook is unclear as it is proprietary, commercial OS.</li>
+<li><strong>RISC OS</strong>: Legacy OS from the late 80s that was open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi. The comparison below refers to <span style="text-decoration: underline;">RISC OS 5</span>.</li>
+<li><strong>AmigaOS</strong>: Legacy OS from the 1980s with slow development progress. Back in the day it was an impressive OS for home users. Suffers from limited hardware support (32-bit PowerPC only) with no plans to change this. Disappointing browser situation (best browser is Odyssey Web Browser/OWB, which is still receiving updates as of 2022 but is fundamentally based on a 2013 version of Webkit with backports/updates added). Long-term outlook is unclear as it is proprietary, commercial OS. The comparison below refers to <span style="text-decoration: underline;">AmigaOS 4</span>.</li>
 <li><strong>MorphOS</strong>: Despite its negligible market share and limited hardware compatibility (PowerPC only, mostly obsolete devices; no support for multiple CPU cores or >2 GB RAM), this appears to be a relatively polished OS and has the most modern web browser (Wayfarer) for all AmigaOS-like operating systems. Good enough to be a daily driver for some.</li>
 <li><strong>AROS</strong>: An open source reimplementation of AmigaOS 3.1. While suffering from relatively slow development and few developers, it might survive AmigaOS and MorphOS in the long-term, as AROS runs on x86 hardware and has some other modern features the others lack (such as 64-bit support).</li>
 <li><strong>OpenVMS</strong>: An old operating system going back to the 1970s, which used to be sold on servers and workstations alike. Nowadays, it's only marketed towards the server market, in particular legacy OpenVMS users. Nevertheless, the DECWindows desktop environment is still being developed and officially supported. The current owner, VSI, recently ported OpenVMS to x86, although more with a focus on running as a virtual machine than on bare metal. OpenVMS has influenced Microsoft Windows.</li>
@@ -2204,6 +2239,7 @@ Dragonfly missing
 
 <p>
 There are of course many more operating systems, <a href="os_familytree.htm">for an extensive list see here</a>. I have not included the following:
+</p>
 
 <ul>
 <li>OS that have never been marketed towards end users in any way, e.g. z/OS, IBM i, MCP, VSEn, VxWorks, TRON, NonSteop OS, OS-9, BAE Systems STOP, ThreadX, FreeRTOS and many more.</li>
@@ -2243,8 +2279,30 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 </ul>
 </ul></ul>
 
-</p>
+<h2>Can I try out these operating systems in a virtual machine?</h2>
 
+<p>The below assumes that you're running <span style="text-decoration: underline;">Qemu, Virtualbox, or VMWare Workstation Player</span> on a <span style="text-decoration: underline;">x86 (Intel/AMD) PC</span>. Colour guide: <span class="good">possible</span> <span class="medium">old version</span> <span class="bad">emulation</span> <span class="itsover">impossible</span> <span class="paid">need to pay</span></p>
+
+<ul>
+<li><span class="good">Windows:</span> Supported by Qemu, Virtualbox, VMware Workstation Player and many other popular virtual machine hypervisors. GNOME Boxes will even download the OS image for you. Theoretically you need a license key, but an unregistered Windows will still run with minor restrictions (also there's tons of resources on Windows piracy...).</li>
+<li><span class="good">macOS:</span> Supported by Qemu and Virtualbox. Apple does not allow macOS to run on non-Apple hardware, not even in a virtual machine. Nevertheless, there are plenty of guides online how to install a virtual macOS. The future looks bleaker however - in a few years <span style="text-decoration: underline;">Apple will drop support for x86</span>, and then you'd be forced to do <em>emulation</em> rather than <em>virtualization</em> on your PC.</li>
+<li><span class="itsover">iOS/iPadOS:</span> Does not run on x86 and I'm not aware of any emulator with full iOS support. Obviously, Apple would try to shut it down anyway.</li>
+<li><span class="medium">Android:</span> There is a project called Android-x86 which should run like a normal Linux distribution on all popular VM hypervisors. Unfortunately, as of early 2023, with the current Android version being 13, the latest available version of Android-x86 is 9. Android 9 was released in 2018, so <span style="text-decoration: underline;">the version of Android you can run in a VM is quite outdated</span>.</li>
+<li><span class="good">Chrome OS:</span> The "real" Chrome OS that comes preinstalled on Chromebooks is not available for download, however there is Chrome OS Flex, which can be downloaded but comes some <a href="https://support.google.com/chromeosflex/answer/11542901" target="_blank">major restrictions</a> such as no Linux or Android app support. Chrome OS Flex appears to run only on on Qemu but not for example Virtualbox or VMWare.</li>
+<li><span class="good">GNU/Linux:</span> Supported by Qemu, Virtualbox, VMware Workstation Player and many other popular virtual machine hypervisors (even obscure ones such as 9front's vmx or OpenBSD's vmm). GNOME Boxes will even download the OS images for many popular distributions for you. Almost all Linux distributions can be downloaded and used for free.</li>
+<li><span class="good">FreeBSD:</span> Supported by Qemu, Virtualbox and VMware Workstation Player.</li>
+<li><span class="good">NetBSD:</span> Supported by Qemu and Virtualbox.</li>
+<li><span class="good">OpenBSD:</span> Supported by Qemu and Virtualbox.</li>
+<li><span class="good">DragonFly BSD:</span> Supported by Qemu and also runs in Virtualbox using the FreeBSD profile. </li>
+<li><span class="good">Illumos:</span> Supported by Qemu and Virtualbox.</li>
+<li><span class="good">Haiku:</span> Supported by Qemu and I know from my own experience that it also works on Virtualbox.</li>
+<li><span class="good">ArcaOS:</span> <span class="paid">$$$</span> Supported by Virtualbox and should also run on Qemu. Please note that you <span style="text-decoration: underline;">need to pay</span> for an ArcaOS license. Each image is "watermarked" with the license key and due to that it appears that there is virtually no pirated copies circulating.</li>
+<li><span class="bad">RISC OS:</span> RISC OS does not run on x86 CPUs so you need an emulator such as Qemu or - specifically for RISC OS - <em>RCPemu</em>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox or GNOME Boxes.</li>
+<li><span class="bad">AmigaOS:</span> <span class="paid">$$$</span> AmigaOS does not run on x86 CPUs so you need an emulator such as Qemu or - specifically for AmigaOS - <em>UAE</em>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox or GNOME Boxes. Also don't forget that you <span style="text-decoration: underline;">need to pay</span> for AmigaOS (I've also not seen any pirated ISOs).</li>
+<li><span class="bad">MorphOS:</span> <span class="paid">$$$</span> AmigaOS does not run on x86 CPUs so you need an emulator such as Qemu. I've managed to make it run using <a href="http://zero.eik.bme.hu/~balaton/qemu/amiga/" target="_blank">these instructions</a>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox or GNOME Boxes. MorphOS is paid, but you can download the image for free. If you don't have a license, the system will slow to a crawl after 30 minutes until you reboot, so it's still good enough for playing around.</li>
+<li><span class="good">AROS:</span> Supported by Qemu and I know from my own experience that it also works on Virtualbox.</li>
+<li><span class="good">OpenVMS:</span> <span class="paid">$$$</span> According to the developer, it should work on Qemu, Virtualbox, and VMWare. OpenVMS is paid software targeting enterprise customers but there is a <a href="https://vmssoftware.com/community/community-license/" target="_blank">free community license</a>. Unfortunately this <span style="text-decoration: underline;">free license is not yet available</span> for the x86 version of OpenVMS, so you'll have to either wait for it or run an older OpenVMS version for Integrity or Alpha on an emulator.</li>
+</ul>
 
 <h2>What about market share?</h2>
 
