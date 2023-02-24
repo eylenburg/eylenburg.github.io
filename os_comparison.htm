@@ -994,10 +994,10 @@ AROS missing
 <td class="line">Btrfs</td>
 <td class="line">ext4, Btrfs, XFS</td><!-- end of big 6 -->
 <td class="line">UFS2, ZFS</td>
-<td class="line">UFS2 (FFS)</td>
-<td class="line">UFS2 (FFS)</td>
+<td class="line">FFS2 (UFS)</td>
+<td class="line">FFS2 (UFS)</td>
 <td class="line">HAMMER2</td>
-<td class="line">UFS, ZFS</td><!-- end of Unix -->
+<td class="line">ZFS, UFS</td><!-- end of Unix -->
 <td class="line">OpenBFS</td>
 <td class="line">JFS</td>
 <td class="line">ADFS</td>
@@ -1348,7 +1348,7 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="notreally">requires root</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1501,6 +1501,29 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 </tr>
+
+<tr>
+<td>Allows apps licensed under GNU GPL</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="notreally tooltip">No (App Store)<span class="tooltiptext">App Store policies are incompatible with freedoms guaranteed by the GNU GPL, and Apple only allows installation of apps from the App Store</span></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
 
 <!--
 <tr>
@@ -1909,7 +1932,7 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="notreally">Web version</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="notreally">Web version</td><!-- end of big 6 -->
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
@@ -2300,7 +2323,7 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 <li><span class="bad">RISC OS:</span> RISC OS does not run on x86 CPUs so you need an emulator such as Qemu or - specifically for RISC OS - <em>RCPemu</em>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox.</li>
 <li><span class="bad">AmigaOS:</span> <span class="paid">$$$</span> AmigaOS does not run on x86 CPUs so you need an emulator such as Qemu or - specifically for AmigaOS - <em>UAE</em>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox. Also don't forget that you <span style="text-decoration: underline;">need to pay</span> for AmigaOS (I've also not seen any pirated ISOs).</li>
 <li><span class="bad">MorphOS:</span> <span class="paid">$$$</span> MorphOS does not run on x86 CPUs so you need an emulator such as Qemu. I've managed to make it run using <a href="http://zero.eik.bme.hu/~balaton/qemu/amiga/" target="_blank">these instructions</a>. Obviously, emulation is slower than mere virtualization, and setting everything up in Qemu is more complicated than just spinning up a new VM in Virtualbox. MorphOS is paid, but you can download the image for free. If you don't have a license, the system will slow to a crawl after 30 minutes until you reboot, so it's still good enough for playing around.</li>
-<li><span class="good">AROS:</span> Supported by Qemu and I know from my own experience that it also works on Virtualbox.</li>
+<li><span class="good">AROS:</span> Should work on Qemu, Virtualbox, VMware Workstation Player although not officially supported by either.</li>
 <li><span class="good">OpenVMS:</span> <span class="paid">$$$</span> According to the developer, it should work on Qemu, Virtualbox, and VMWare. OpenVMS is paid software targeting enterprise customers but there is a <a href="https://vmssoftware.com/community/community-license/" target="_blank">free community license</a>. Unfortunately this <span style="text-decoration: underline;">free license is not yet available</span> for the x86 version of OpenVMS, so you'll have to either wait for it or run an older OpenVMS version for Integrity or Alpha on an emulator.</li>
 </ul>
 
