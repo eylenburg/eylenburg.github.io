@@ -192,7 +192,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: February 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: March 2023</p>
 
 
 <table class="comparison">
@@ -2089,7 +2089,27 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
-
+<tr>
+<td style="text-indent: 10px;">Syncthing</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of Unix -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
 
 <tr>
 <td><br />Server applications</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -2304,13 +2324,13 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 
 <h2>Can I try out these operating systems in a virtual machine?</h2>
 
-<p>The below assumes that you're running <span style="text-decoration: underline;">Qemu, Virtualbox, or VMWare Workstation Player</span> on a <span style="text-decoration: underline;">x86 (Intel/AMD) PC</span>. Colour guide: <span class="good">possible</span> <span class="medium">old version</span> <span class="bad">emulation</span> <span class="itsover">impossible</span> <span class="paid">need to pay</span></p>
+<p>The below assumes that you're running <span style="text-decoration: underline;">Qemu, Virtualbox, or VMWare Workstation Player</span> on a <span style="text-decoration: underline;">x86_64 (Intel/AMD) PC</span>. Colour guide: <span class="good">possible</span> <!-- <span class="medium">old version</span> --> <span class="bad">emulation</span> <span class="itsover">impossible</span> <span class="paid">need to pay</span></p>
 
 <ul>
 <li><span class="good">Windows:</span> Supported by Qemu, Virtualbox, VMware Workstation Player and many other popular virtual machine hypervisors. GNOME Boxes will even download the OS image for you. Theoretically you need a license key, but an unregistered Windows will still run with minor restrictions (also there's tons of resources on Windows piracy...).</li>
 <li><span class="good">macOS:</span> Supported by Qemu and Virtualbox. Apple does not allow macOS to run on non-Apple hardware, not even in a virtual machine. Nevertheless, there are plenty of guides online how to install a virtual macOS. The future looks bleaker however - in a few years <span style="text-decoration: underline;">Apple will drop support for x86</span>, and then you'd be forced to do <em>emulation</em> rather than <em>virtualization</em> on your PC.</li>
-<li><span class="itsover">iOS/iPadOS:</span> Does not run on x86 and I'm not aware of any emulator with full iOS support. Obviously, Apple would try to shut it down anyway.</li>
-<li><span class="medium">Android:</span> There is a project called Android-x86 which should run like a normal Linux distribution on all popular VM hypervisors. Unfortunately, as of early 2023, with the current Android version being 13, the latest available version of Android-x86 is 9. Android 9 was released in 2018, so <span style="text-decoration: underline;">the version of Android you can run in a VM is quite outdated</span>.</li>
+<li><span class="itsover">iOS/iPadOS:</span> Does not run on x86 hardware and I'm not aware of any emulator with full iOS support. Obviously, Apple would try to shut it down anyway. There is an iOS simulator that is part of XCode (Apple's IDE), however XCode itself is only available for macOS. So if you don't have a Mac, the only way to kind of run iOS would be to install macOS in a VM (against Apple's EULA, by the way), then install XCode, and then start the included iOS Simulator.</li>
+<li><span class="good">Android:</span> There used to be a project called Android-x86 which should run like a normal Linux distribution on all popular VM hypervisors, however it appears to be discontinued. Fortunately, there are still other Android-based operating systems that are more up to date, such as BlissOS, which should run in Qemu.</li>
 <li><span class="good">Chrome OS:</span> The "real" Chrome OS that comes preinstalled on Chromebooks is not available for download, however there is Chrome OS Flex, which can be downloaded but has some <a href="https://support.google.com/chromeosflex/answer/11542901" target="_blank">major restrictions</a> such as no Linux or Android app support. Chrome OS Flex appears to run only on on Qemu.</li>
 <li><span class="good">GNU/Linux:</span> Supported by Qemu, Virtualbox, VMware Workstation Player and many other popular virtual machine hypervisors (even obscure ones such as 9front's vmx or OpenBSD's vmm).</li>
 <li><span class="good">FreeBSD:</span> Supported by Qemu, Virtualbox and VMware Workstation Player.</li>
