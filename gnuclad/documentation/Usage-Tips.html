@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+<title>Usage Tips - gnuclad manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="gnuclad manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Usage.html#Usage" title="Usage">
+<link rel="next" href="Config-Options.html#Config-Options" title="Config Options">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is a manual for gnuclad
+
+Copyright (C) 2010-2011 Donjan Rodic <donjan (at) dyx (dot) ch>
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, no Front-Cover Texts, and
+     no Back-Cover Texts.
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Usage-Tips"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Config-Options.html#Config-Options">Config Options</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Usage.html#Usage">Usage</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">3 Usage Tips</h2>
+
+<h3 class="section">3.1 Input: CSV =&gt; Output: SVG</h3>
+
+<p>CSV spreadsheets can include SVG images, yet only the defs (gradients, etc) and
+drawing data (paths, shapes, etc) are imported, <em>not the header</em>.<br>
+This means that included images have to comply with the SVG XML used by
+gnuclad.<br>
+If you think the current SVG header is missing something, please file
+a bug detailing the problem.
+
+   <p>CSV spreadsheets can also include PNG images, but keep in mind that raster images
+are encoded in base64 and may result in a really huge output file.
+
+<h3 class="section">3.2 Input: any =&gt; Output: CSV</h3>
+
+<p>All nodes with a starting date newer than endOfTime (usually the current date)
+will be ignored. 
+All nodes with a stopping date newer or the same as endOfTime will have
+their stopping date removed (unset == "still alive").
+
+   <p>For best results with CSV output, the recommended optimisation is 0 and
+treeMode conf setting is "lower inverse":
+<pre class="example">       optimise = 0
+       treeMode = 2
+</pre>
+   <p>This way the trees will be grouped by children and sorted by date, while
+your single nodes won't be mangled.
+
+<h3 class="section">3.3 Optimisation - how it works</h3>
+
+<p>The optimisation parameter can be set to a value between 0 and 99. 
+0 turns off optimisation completely while 99 tries to stuff the resulting
+image closely together.
+
+   <p>The first digit refers to the optimisation factor for isolated nodes, those
+which are not part of the tree. The higher it is, the more aggressively they
+will be appended to each other. 
+The second digit sets the tree optimisation. Higher values will try to cramp the
+tree together more than lower ones.
+
+   <p>The current mapping looks as follows (the exact parametrisation may be subject
+to change). 
+Each higher scoring optimisation includes all the lines above it in the same
+group.
+<pre class="example">     0   - off
+     
+     x1  - queue pairwise consecutive node lines; fast
+     x3  - pull nodes to parent
+     x6  - pull nodes towards root
+     x8  - pull nodes towards root strongly
+     
+     
+     1x  - inject single nodes among other single nodes in a greedy manner
+         - don't pass over trees
+     2x  - pass over trees of size &lt;= 2
+     3x  - pass over trees of size &lt;= 3
+     4x  - pass over trees of size &lt;= 5
+     5x  - pass over trees of size &lt;= 10
+     6x  - pass over trees of size &lt;= 20
+     7x  - pass over trees of size &lt;= 50
+     8x  - pass over any tree
+     
+</pre>
+   <h3 class="section">3.4 Optimisation - additional info</h3>
+
+<p>The current optimisation is greedy and therefore not exactly stellar.
+
+   <p>For example, this optimises well:
+<pre class="example">                4 -&gt; 2
+     ___          -&gt;  ___ ___ ___
+             ___  -&gt;      _______
+         _______  -&gt;
+         ___      -&gt;
+     
+</pre>
+   <p>But a slightly different map doesn't (a human can easily reduce this to 2):
+<pre class="example">                4 -&gt; 3
+     ___          -&gt;  ___     ___
+             ___  -&gt;      _______
+         _______  -&gt;    _____
+       _____      -&gt;
+</pre>
+   <p>Sorting by start date (see config options) might help a bit.
+
+<!-- Part of the gnuclad texinfo manual -->
+   </body></html>
+

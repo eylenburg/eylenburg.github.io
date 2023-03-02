@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+<title>Helpers and Utilities - gnuclad manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="gnuclad manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Programming.html#Programming" title="Programming">
+<link rel="prev" href="Classes.html#Classes" title="Classes">
+<link rel="next" href="Configuration-Options.html#Configuration-Options" title="Configuration Options">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is a manual for gnuclad
+
+Copyright (C) 2010-2011 Donjan Rodic <donjan (at) dyx (dot) ch>
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, no Front-Cover Texts, and
+     no Back-Cover Texts.
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Helpers-and-Utilities"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Configuration-Options.html#Configuration-Options">Configuration Options</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Classes.html#Classes">Classes</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Programming.html#Programming">Programming</a>
+<hr>
+</div>
+
+<h3 class="unnumberedsec"></h3>
+
+<!-- ________________________________________________________ ADDITIONAL FUNCTIONS -->
+<p><a name="index-Additional-Cladogram-functions-5"></a>
+
+<h3 class="section">6.2 Additional Cladogram functions</h3>
+
+<p>The <a href="Classes.html#Classes">Cladogram class</a> holds all the data and configuration
+settings, but also a few additional resources.
+
+   <p>The following can be directly accessed for general information.
+<pre class="example">     std::string gnuclad_version;
+     std::string inputFolder;
+     
+     int maximumOffset;
+     Date beginningOfTime;
+</pre>
+   <p>These are meant to be set by the <a href="Writing-a-parser.html#Writing-a-parser">parser</a> if needed:
+<pre class="example">     bool truncateFolder;    // Use only base name of child after parent assignment
+     bool inVitro;           // Don't warn if child starts after parent stops
+     bool tighterDomains;    // Tighten domains to expand just half as far
+</pre>
+   <p>The following method (usually executed with clad-&gt;nodesPreorder()) will change
+the order of the nodes vector such that every parent will occur after all it's
+children, topologically sorted. This is useful for preventing line overlaps in
+SVG output.
+<pre class="example">     void nodesPreorder();
+</pre>
+   <!-- ____________________________________________________________ HELPER FUNCTIONS -->
+   <p><a name="index-Helper-functions-6"></a>
+
+<h3 class="section">6.3 Helper functions</h3>
+
+<p>Here's an additional list of small helpers you can get when including
+'gnuclad.h'. 
+This is meant as a quick overview. For descriptions, take a look at
+the 'gnuclad-helpers.cpp' source file.
+
+   <p>void pressEnter();
+
+   <p>std::string strToLower(std::string str);
+
+   <p>std::string getBaseName(std::string fname);
+
+   <p>std::string getExt(std::string fname);
+
+   <p>std::ifstream * new_infile(const std::string fname);
+
+   <p>std::ofstream * new_outfile(const std::string fname);
+
+   <p>void safeClose(std::ifstream * fp);
+
+   <p>void safeClose(std::ofstream * fp);
+
+   <p>void explode(const std::string str, const char delimiter,
+             std::vector&lt;std::string&gt; * v);
+
+   <p>void explodeSafely(const std::string str, const char delimiter,
+                   const char toggle, std::vector&lt;std::string&gt; * v);
+
+   <p>std::string findReplace(std::string str, std::string find, std::string replace);
+
+   <p>double str2double(const std::string str);
+
+   <p>int str2int(const std::string s);
+
+   <p>std::string int2str(const int n);
+
+   <p>std::string base64_encode(const char * raw, unsigned int len);
+
+   <p>Date currentDate();
+
+   <p>std::string Date2str(Date date);
+
+   <p>int datePX(Date d, const Cladogram * clad);
+
+<!-- Part of the gnuclad texinfo manual -->
+   </body></html>
+

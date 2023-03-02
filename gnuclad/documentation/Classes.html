@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+<title>Classes - gnuclad manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="gnuclad manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Programming.html#Programming" title="Programming">
+<link rel="next" href="Helpers-and-Utilities.html#Helpers-and-Utilities" title="Helpers and Utilities">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is a manual for gnuclad
+
+Copyright (C) 2010-2011 Donjan Rodic <donjan (at) dyx (dot) ch>
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, no Front-Cover Texts, and
+     no Back-Cover Texts.
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Classes"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Helpers-and-Utilities.html#Helpers-and-Utilities">Helpers and Utilities</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Programming.html#Programming">Programming</a>
+<hr>
+</div>
+
+<h3 class="unnumberedsec"></h3>
+
+<!-- _____________________________________________________________________ CLASSES -->
+<p><a name="index-Classes-4"></a>
+
+<h3 class="section">6.1 Classes</h3>
+
+<p>A breakdown of the classes used in gnuclad. 
+Only the relevant public parts are shown, first the members and then the
+constructors &amp; methods.
+
+   <p><br>
+The most important class is the <strong>Cladogram</strong>. It is instantiated by a
+single object which describes the whole timeline and will be passed to the
+parser/generator. 
+The Cladogram usually doesn't need to be accessed by the
+<a href="Writing-a-parser.html#Writing-a-parser">parser</a>, except for the add*** functions. 
+The <a href="Writing-a-generator.html#Writing-a-generator">generator</a> is meant to make use of the data
+vectors.
+
+<pre class="example">     class Cladogram
+       std::vector&lt;Node *&gt; nodes;
+       std::vector&lt;Connector *&gt; connectors;
+       std::vector&lt;Domain *&gt; domains;
+       std::vector&lt;Image *&gt; includeSVG;
+       std::vector&lt;Image *&gt; includePNG;
+     
+       Node * addNode(std::string tname);
+       Domain * addDomain(std::string tname);
+       Connector * addConnector();
+       Image * addImage(std::string tname, std::vector&lt;Image *&gt; &amp;vector);
+</pre>
+   <p>The cladogram also holds all <a href="Configuration-Options.html#Configuration-Options">configuration options</a>,
+as well as <a href="Helpers-and-Utilities.html#Helpers-and-Utilities">additional functions</a>.
+
+   <p><br>
+The second most important class, a single <strong>Node</strong>. 
+It should be initialised only with the addNode() method:
+<pre class="example">       Node * Cladogram::addNode(std::string tname);
+</pre>
+   <p>The 'offset' is meant for the generator (it can be ignored by the parser).
+<pre class="example">     class Node
+       std::string name
+       std::string parentName
+       std::vector&lt;NameChange&gt; nameChanges;
+       Date start;
+       Date stop;
+       Color color;
+       std::string iconfile;
+       std::string description;
+       int offset;
+     
+       void addNameChange(std::string newName, Date date, std::string description);
+</pre>
+   <p><br>
+A  <strong>Color</strong> object can be initialised either with RGB (1-255)
+or a hex color value (#abc or #abcdef). 
+It will automatically convert and hold the other value too.
+<pre class="example">     class Color
+       int red;
+       int green;
+       int blue;
+       std::string hex;
+     
+       Color(int tred, int tgreen, int tblue);
+       Color(std::string thex);
+</pre>
+   <p><br>
+The <strong>Date</strong> object can be initialised either with year,month,day or
+year,month or year integer parameters; or with a string in the format "y.m.d" or
+"y.m" or "y", where the letters can be arbitrary (also negative) integers.<br>
+The monthset/dayset switches tell the generator to honor the month and day
+settings, and should be ignored by the parser.
+<pre class="example">     class Date
+       int year;
+       int month;
+       int day;
+     
+       bool monthset;
+       bool dayset;
+     
+       Date(int tyear, int tmonth, int tday);
+       Date(int tyear, int tmonth);
+       Date(int tyear);
+       Date(const std::string str);
+     
+       bool operator&lt;(const Date d);
+       bool operator==(Date d);
+       Date operator+(const Date d);
+</pre>
+   <p><br>
+The <strong>Image</strong> object is to be initialised only with addImage() in the
+parser:
+<pre class="example">       Image * Cladogram::addImage(std::string tname, std::vector&lt;Image *&gt; &amp;vector);
+</pre>
+   <p>The parser has to specify the vector it wants the image to be loaded into (see
+the Cladogram class below for details). 
+It is usually passed to the generator unchanged and contains three members.
+<pre class="example">     class Image
+       std::string filename;
+       int x;
+       int y;
+</pre>
+   <p><br>
+The <strong>NameChange</strong> is to be initialised only with addNameChange() in the
+parser:
+<pre class="example">       void Node::addNameChange(std::string newName, Date date,
+                                std::string description);
+</pre>
+   <p>The generator can access the nameChanges vector of the Node, making use of the
+three members.
+<pre class="example">     class NameChange
+       std::string newName;
+       Date date;
+       std::string description;
+</pre>
+   <p><br>
+The <strong>Domain</strong> is to be initialised only with addDomain() in the parser:
+<pre class="example">       Domain * Cladogram::addDomain(std::string tname);
+</pre>
+   <p>The 'offsetA' and 'offsetB' are meant for the generator (they can be ignored
+by the parser).
+<pre class="example">     class Domain
+       std::string nodeName;
+       Color color;
+       int intensity;
+       int offsetA;
+       int offsetB;
+</pre>
+   <p><br>
+The <strong>Connector</strong> is to be initialised only with addConnector() in the
+parser:
+<pre class="example">       Connector * Cladogram::addConnector();
+</pre>
+   <p>The 'offsetA' and 'offsetB' are meant for the generator (they can be ignored
+by the parser).
+<pre class="example">     class Connector
+       std::string fromName;
+       std::string toName;
+       Date fromWhen;
+       Date toWhen;
+       int thickness;
+       Color color;
+       int offsetA;
+       int offsetB;
+</pre>
+   <p><br>
+The <strong>InputFile</strong> serves as a container to pass data to the parser.
+<pre class="example">     class InputFile:
+       std::ifstream * p;
+       std::string name;
+     
+       InputFile(std::string tname);
+       ~InputFile();
+</pre>
+   <!-- Part of the gnuclad texinfo manual -->
+   </body></html>
+
