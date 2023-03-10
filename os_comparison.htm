@@ -258,7 +258,7 @@ border-radius: 3px;
 <th>Haiku</th>
 <th>ArcaOS</th>
 <th>RISC OS</th>
-<th>AmigaOS</th>
+<th>AmigaOS 4</th>
 <th>MorphOS</th>
 <th>AROS</th>
 <th>OpenVMS</th>
@@ -545,11 +545,11 @@ border-radius: 3px;
 -->
 
 <tr>
-<td class="semititle"><br />CPU compatibility - stable releases</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />CPU compatibility - official &amp; current</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td>x86 (amd64)</td>
+<td>x86 (x86/i386, amd64/x86_64/x64)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -571,7 +571,7 @@ border-radius: 3px;
 </tr>
 
 <tr>
-<td>ARM (arm64)</td>
+<td>ARM (arm32, arm64/aarch64)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -585,15 +585,15 @@ border-radius: 3px;
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">Legacy CPUs</td>
+<td class="mixed">not arm64</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="mixed">not arm64</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
-<td>Power (ppc64)</td>
+<td>Power (ppc32, ppc64)</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -601,16 +601,16 @@ border-radius: 3px;
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="mixed">Legacy CPUs</td>
+<td class="mixed">not ppc64</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="mixed">Legacy CPUs</td>
-<td class="mixed">Legacy CPUs</td>
-<td class="mixed">Legacy CPUs</td>
+<td class="mixed">not ppc64</td>
+<td class="mixed">not ppc64</td>
+<td class="mixed">not ppc64</td>
 <td class="no">No</td>
 </tr>
 
@@ -619,15 +619,15 @@ border-radius: 3px;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="notreally">Experimental</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
-<td class="notreally">Experimental</td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td><!-- end of Unix -->
-<td class="notreally">Experimental</td>
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -637,29 +637,7 @@ border-radius: 3px;
 </tr>
 
 <tr>
-<td>LoongArch (loong64)</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-</tr>
-  
-<tr>
-<td>Elbrus 2000 (e2k)</td>
+<td>z/Architecture (s390, s390x)</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -681,28 +659,48 @@ border-radius: 3px;
 </tr>
 
 <tr>
-<td>z/Architecture (s390x)</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
+<td>Other current ISAs</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>loong64, <span class="tooltip">e2k<span class="tooltiptext">Elbrus 2000, supported by some distributions e.g. ALT Linux, but not officially by the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch" target="_blank">Linux kernel</a></span></span>, sparc64, <span class="tooltip">others<span class="tooltiptext">arc, csky, hexagon, microblaze, nios2, openrisc</span></td><!-- end of big 6 -->
+<td></td>
+<td>sparc64</td>
+<td>sparc64</td>
+<td></td>
+<td></td><!-- end of Unix -->
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 
-
+<tr>
+<td>Legacy ISAs</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>alpha, ia64, m68k, mips, pa-risc, superh</td><!-- end of big 6 -->
+<td></td>
+<td>alpha, m68k, mips, pa-risc, superh, vax</td>
+<td>alpha, m88k, mips, superh</td>
+<td></td>
+<td></td><!-- end of Unix -->
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>m68k</td>
+<td></td>
+</tr>
 
 
 
@@ -2307,9 +2305,9 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 </p>
 
 <ul>
-<li>OS that have never been marketed towards end users in any way, e.g. z/OS, IBM i, MCP, VSEn, VxWorks, TRON, NonSteop OS, OS-9, BAE Systems STOP, ThreadX, FreeRTOS and many more.</li>
-<li>OS that are not developed anymore, e.g. OS/2, Mac OS 9, IRIX, MS-DOS, BeOS/ZETA, AtheOS/Syllable, SkyOS, Symbian, Plan 9, BlackBerry OS, BlackBerry 10, REX OS, Nokia Series 30, Nokia Series 40, Nokia Asha OS, ...</li>
-<li>OS that have not had any updates since 2020 even though they are not confirmed to be dead, e.g. UnixWare, Minix, Inferno, PhantomOS, Ghost, ...</li>
+<li>OS that have never been marketed towards end users in any way, e.g. <strong>z/OS, IBM i, MCP, VSEn, VxWorks, TRON, NonSteop OS, OS-9, BAE Systems STOP, ThreadX, FreeRTOS, ...</strong></li>
+<li>OS that are not developed anymore, e.g. <strong>OS/2, Mac OS 9, IRIX, MS-DOS, BeOS/ZETA, AtheOS/Syllable, SkyOS, Symbian, Plan 9, BlackBerry OS 7, BlackBerry 10, REX OS, Nokia Series 30, Nokia Series 40, Nokia Asha OS, ...</strong></li>
+<li>OS that have not had any updates since 2020 even though they are not confirmed to be dead, e.g. <strong>UnixWare, Minix, Inferno, PhantomOS, Ghost, ...</strong></li>
 <li>This still leaves an extensive list of OS that I didn't include but are worth mentioning:</li>
 
 <ul>
