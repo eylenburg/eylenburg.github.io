@@ -170,10 +170,11 @@ input#NoEmail:checked ~ #comparisonTable .NoEmail { display: none !important; vi
 input#NoEmailEncrypt:checked ~ #comparisonTable .NoEmailEncrypt { display: none !important; visibility: hidden; }
 input#NoIMAP:checked ~ #comparisonTable .NoIMAP { display: none !important; visibility: hidden; }
 
+<!--
 input#NoFiles:checked ~ .NoFilesChild { display: none !important; visibility: hidden; }
 input#NoPIM:checked ~ .NoPIMChild { display: none !important; visibility: hidden; }
 input#NoEmail:checked ~ .NoEmailChild { display: none !important; visibility: hidden; }
-
+-->
 
 </style>
 </head>
@@ -216,27 +217,31 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 
 
-<div>
-<input type="checkbox" id="BigTech"><label>Hide Big Tech megacorps</label><br />
-<input type="checkbox" id="NonFree"><label>Hide proprietary (non-free) software</label><br />
-<input type="checkbox" id="NoSelfHosting"><label>Hide software that can't be self-hosted</label><br />
-<input type="checkbox" id="NoFiles"><label>Hide providers that don't offer a file cloud or file sync</label><!-- <span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show cloud providers who offer end-to-end encryption for files</label>--><span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoFullE2EE" class="NoFilesChild"><label class="NoFilesChild">Only show providers who apply end-to-end encryption by default and offer all features (sync, editing, browser access, ...) for E2E-encrypted files</label><span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoMSO" class="NoFilesChild"><label class="NoFilesChild">Only show providers have an integration with an office suite for editing files in the browser</label><span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoLinuxApp" class="NoFilesChild"><label class="NoFilesChild">Only show providers who offer a Linux app for file sync</label><span class="NoFilesChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoAndroidSync" class="NoFilesChild"><label class="NoFilesChild">Only show coulds which can sync with Android (either via native app or via FolderSync)</label><br />
-<input type="checkbox" id="NoPIM"><label>Hide providers which don't offer PIM features (addressbook, calendar, to-do list)</label><span class="NoPIMChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoPIMEncrypt" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer end-to-end encryption for PIM data</label><span class="NoPIMChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoDAV" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer CalDAV/CardDAV access for PIM data</label><br />
-<input type="checkbox" id="NoEmail"><label>Hide providers who don't offer email</label><br /><span class="NoEmailChild">
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoEmailEncrypt" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer zero-access encryption for emails</label><span class="NoEmailChild"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="checkbox" id="NoIMAP" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer IMAP access for emails</label><br />
+<p>Use these checkboxes to filter the providers in the table below:</p>
+<div><span style="font-weight: bold; font-size: small;">General:</span><br />
+<input type="checkbox" id="BigTech"><label>Hide Big Tech megacorps</label><br>
+<input type="checkbox" id="NonFree"><label>Hide proprietary (non-free) software</label><br>
+<input type="checkbox" id="NoSelfHosting"><label>Hide software that can't be self-hosted</label><br /><span style="font-weight: bold; font-size: small;">File sync:</span><br />
+<input type="checkbox" id="NoFiles"><label>Only show providers that offer a file cloud or file sync</label>
+<span class="NoFilesChild"><br>
+</span><input type="checkbox" id="NoFullE2EE" class="NoFilesChild"><label class="NoFilesChild">Only
+ show providers who apply end-to-end encryption by default and offer all
+ features (sync, editing, browser access, ...) for E2E-encrypted files</label><span class="NoFilesChild"><br>
+</span><input type="checkbox" id="NoMSO" class="NoFilesChild"><label class="NoFilesChild">Only show providers have an integration with an office suite for editing files in the browser</label><span class="NoFilesChild"><br>
+</span><input type="checkbox" id="NoLinuxApp" class="NoFilesChild"><label class="NoFilesChild">Only show providers who offer a Linux app for file sync</label><span class="NoFilesChild"><br>
+</span><input type="checkbox" id="NoAndroidSync" class="NoFilesChild"><label class="NoFilesChild">Only show coulds which can sync with Android (either via native app or via FolderSync)</label><br /><span style="font-weight: bold; font-size: small;">PIM:</span><br />
+<input type="checkbox" id="NoPIM"><label>Only show providers that offer PIM features (addressbook, calendar, to-do list)</label><span class="NoPIMChild"><br>
+</span><input type="checkbox" id="NoPIMEncrypt" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer end-to-end encryption for PIM data</label><span class="NoPIMChild"><br>
+</span><input type="checkbox" id="NoDAV" class="NoPIMChild"><label class="NoPIMChild">Only show providers who offer CalDAV/CardDAV access for PIM data</label><br /><span style="font-weight: bold; font-size: small;">Email:</span><br />
+<input type="checkbox" id="NoEmail"><label>Only show providers who offer email</label><br><span class="NoEmailChild">
+</span><input type="checkbox" id="NoEmailEncrypt" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer zero-access encryption for emails</label><span class="NoEmailChild"><br>
+</span><input type="checkbox" id="NoIMAP" class="NoEmailChild"><label class="NoEmailChild">Only show providers who offer IMAP access for emails</label><br>
+
 
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: December 2022</p>
+<p class="center" style="color: red; font-size: small;">Last updated: April 2023</p>
 
 
 <table id="comparisonTable" class="comparison">
