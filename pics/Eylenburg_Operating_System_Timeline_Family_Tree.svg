@@ -338,6 +338,13 @@
   <marker id='__stop_RISC__Unix__[Acorn]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_RISC__Unix__[Acorn])' />
   </marker>
+  <linearGradient id='__fadeout_SUPER-UX__[NEC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_SUPER-UX__[NEC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_SUPER-UX__[NEC])' />
+  </marker>
   <linearGradient id='__fadeout_COSIX__[CS&amp;S]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
     <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
@@ -1282,6 +1289,13 @@
   </linearGradient>
   <marker id='__stop_TC/IX__[Control__Data]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_TC/IX__[Control__Data])' />
+  </marker>
+  <linearGradient id='__fadeout_MINIX' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_MINIX' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MINIX)' />
   </marker>
   <linearGradient id='__fadeout_Minix-VMD' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
@@ -3102,6 +3116,13 @@
   </linearGradient>
   <marker id='__stop_L4Ka::Pistachio__(X.2)' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_L4Ka::Pistachio__(X.2))' />
+  </marker>
+  <linearGradient id='__fadeout_WrmOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FFD700' offset='0' stop-opacity='1' />
+    <stop stop-color='#FFD700' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_WrmOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_WrmOS)' />
   </marker>
   <linearGradient id='__fadeout_Orion__(L4__kernel)' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#000' offset='0' stop-opacity='1' />
@@ -6725,7 +6746,7 @@ style='opacity:0.6;' >
   <path id='__line_UHC__Unix__[UHC]' d='M 992 1255 C 1065.5,1255 1016.5,865 1090,865 L 1090 865 L 1300 865' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UHC__Unix__[UHC])' />
   <path id='__line_RISC__Unix__[Acorn]' d='M 1026 1255 C 1096.5,1255 1049.5,895 1120,895 L 1120 895 L 1147 895' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_RISC__Unix__[Acorn])' />
   <path id='__line_UX__(EWS-UX,__UP-UX)__[NEC]' d='M 1030 1255 C 1097.5,1255 1052.5,925 1120,925 L 1120 925 L 2197 925' stroke='#FF8585' style='stroke-width:4;' />
-  <path id='__line_SUPER-UX__[NEC]' d='M 1064 1255 C 1128.5,1255 1085.5,955 1150,955 L 1150 955 L 2197 955' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_SUPER-UX__[NEC]' d='M 1064 1255 C 1128.5,1255 1085.5,955 1150,955 L 1150 955 L 1905 955' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SUPER-UX__[NEC])' />
   <path id='__line_COSIX__[CS&amp;S]' d='M 1068 1255 C 1129.5,1255 1088.5,985 1150,985 L 1150 985 L 1477 985' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_COSIX__[CS&amp;S])' />
   <path id='__line_Atari__Unix__[Atari]' d='M 1073 1255 C 1130.75,1255 1092.25,1015 1150,1015 L 1150 1015 L 1257 1015' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Atari__Unix__[Atari])' />
   <path id='__line_Unleashed' d='M 2005 1105 C 2025.25,1105 2011.75,1135 2032,1135 L 2032 1135 L 2087 1135' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unleashed)' />
@@ -6892,7 +6913,7 @@ style='opacity:0.6;' >
   <path id='__line_TC/IX__[Control__Data]' d='M 1123 5575 C 1143.25,5575 1129.75,5605 1150,5605 L 1150 5605 L 1240 5605' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_TC/IX__[Control__Data])' />
   <path id='__line_LynxOS' d='M 1060 5575 L 2197 5575' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Minix-VMD' d='M 1478 5665 C 1498.25,5665 1484.75,5695 1505,5695 L 1505 5695 L 1537 5695' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Minix-VMD)' />
-  <path id='__line_MINIX' d='M 1090 5665 L 2197 5665' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_MINIX' d='M 1090 5665 L 2002 5665' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MINIX)' />
   <path id='__line_MeikOS__[Meiko__Scientific]' d='M 1150 5755 L 1215 5755' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MeikOS__[Meiko__Scientific])' />
   <path id='__line_MiNT/MultiTOS' d='M 1190 5785 L 2197 5785' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Thoroughbred/OS__[Omega]' d='M 970 5815 L 1120 5815' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Thoroughbred/OS__[Omega])' />
@@ -7271,7 +7292,7 @@ style='opacity:0.6;' >
   <path id='__line_NICTA::L4-embedded' d='M 1573 18565 C 1608.25,18565 1584.75,18475 1620,18475 L 1620 18475 L 1702 18475' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_NICTA::L4-embedded)' />
   <path id='__line_FreeVMS' d='M 1753 18565 C 1773.25,18565 1759.75,18535 1780,18535 L 1780 18535 L 1897 18535' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_FreeVMS)' />
   <path id='__line_REX__OS' d='M 1600 18655 C 1600,18655 1600,18685 1600,18685 L 1600 18685 L 1867 18685' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_REX__OS)' />
-  <path id='__line_WrmOS' d='M 1768 18565 C 1788.25,18565 1774.75,18595 1795,18595 L 1795 18595 L 2197 18595' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_WrmOS' d='M 1768 18565 C 1788.25,18565 1774.75,18595 1795,18595 L 1795 18595 L 2047 18595' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_WrmOS)' />
   <path id='__line_Orion__(L4__kernel)' d='M 1667 18565 C 1695.5,18565 1676.5,18625 1705,18625 L 1705 18625 L 2080 18625' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Orion__(L4__kernel))' />
   <path id='__line_Iguana/Wombat__OS' d='M 1570 18565 C 1592.5,18565 1577.5,18655 1600,18655 L 1600 18655 L 1810 18655' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_Iguana/Wombat__OS)' />
   <path id='__line_L4Ka::Pistachio__(X.2)' d='M 1570 18565 L 1795 18565' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_L4Ka::Pistachio__(X.2))' />
@@ -7865,7 +7886,7 @@ style='opacity:0.6;' >
   <circle id='__dot_UHC__Unix__[UHC]' cx='1090' cy='865' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_RISC__Unix__[Acorn]' cx='1120' cy='895' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_UX__(EWS-UX,__UP-UX)__[NEC]' cx='1120' cy='925' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_SUPER-UX__[NEC]' cx='1150' cy='955' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_SUPER-UX__[NEC]' cx='1150' cy='955' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_COSIX__[CS&amp;S]' cx='1150' cy='985' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Atari__Unix__[Atari]' cx='1150' cy='1015' r='10' fill='#FF8585' stroke='none' />
     <circle cx='1210' cy='1015' r='5' fill='#FF8585' stroke='none' />
@@ -8076,7 +8097,7 @@ style='opacity:0.6;' >
     <circle cx='1192' cy='5605' r='5' fill='#FF8585' stroke='none' />
   <circle id='__dot_LynxOS' cx='1060' cy='5575' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Minix-VMD' cx='1505' cy='5695' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_MINIX' cx='1090' cy='5665' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_MINIX' cx='1090' cy='5665' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_MeikOS__[Meiko__Scientific]' cx='1150' cy='5755' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_MiNT/MultiTOS' cx='1190' cy='5785' r='10' fill='#8B0000' stroke='none' />
     <circle cx='1327' cy='5785' r='5' fill='#8B0000' stroke='none' />
