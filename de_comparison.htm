@@ -256,7 +256,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: June 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: July 2023</p>
 
 <table class="comparison">
 <colgroup>
@@ -478,7 +478,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">Caja<span class="tooltiptext">fork of Nautilus</span></td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp tooltip">Nemo<span class="tooltiptext">fork of Nautilus</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">PCManFM-Qt</td> <!-- LXQt -->
-<td>-</td>
+<td class="gtktoolkit gnomeapp tooltip">Nemo (usually)<span class="tooltiptext">fork of Nautilus</span></td>
 
 <td>Finder</td>
 <td>File Explorer</td>
@@ -995,7 +995,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Taskbar/dock: toggle between showing windows or apps</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="no tooltip">No (shows neither)<span class="tooltiptext">dash (in "Activities" screen) shows running apps, panel shows only the one currently focused app</span></td> <!-- Gnome -->
+<td class="no tooltip">No (shows neither)<span class="tooltiptext">dash (in "Activities" screen) shows running apps, but panel doesn't show running apps or open windows</span></td> <!-- Gnome -->
 
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td> <!-- MATE -->
@@ -1167,7 +1167,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <tr>
 <td class="semititle">File manager</td><td>Dolphin</td><td>GNOME Files (Nautilus)</td><td>Thunar</td><td>Caja</td><td>Nemo</td><td>PCManFM-Qt</td>
-<td rowspan="15" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">Budgie does not have a standard file manager, it is up to the distribution to decide which file manager to ship. For example, Ubuntu and Fedora use Cinnamon's Nemo, while Solus uses GNOME's Nautilus.</td> <!-- Budgie -->
+<!--<td rowspan="15" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">Budgie does not have a standard file manager, it is up to the distribution to decide which file manager to ship. For example, Ubuntu and Fedora use Cinnamon's Nemo, while Solus uses GNOME's Nautilus.</td> --><td>Nemo (usually)</td>
 <td>Finder</td><td>File Explorer</td>
 </tr>
 
@@ -1181,6 +1181,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="almost">Yes/Yes/in side panel</td> <!-- MATE -->
 <td class="almost">Yes/Yes/in side panel</td> <!-- Cinnamon -->
 <td class="almost">Yes/Yes/in side panel</td> <!-- LXQt -->
+<td class="almost">Yes/Yes/in side panel</td>
 
 <td class="mixed">Yes/Yes/No</td>
 <td class="almost">Yes/Yes/in side panel</td>
@@ -1196,6 +1197,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="yes">Yes/Yes</td>
 
 <td class="mixed">Yes/No</td>
 <td class="mixed"><span class="tooltip">Yes<span class="tooltiptext">experimental</span></span>/No</td>
@@ -1211,6 +1213,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 
 <td class="almost">keyboard shortcut only</td>
 <td class="yes">Yes</td>
@@ -1227,6 +1230,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- LXQt -->
+<td class="yes">Yes/Yes/Yes/Yes</td>
 
 <td class="yes">Yes/Yes/Yes/Yes</td>
 <td class="yes">Yes/Yes/Yes/Yes</td>
@@ -1243,6 +1247,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="mixed">Yes/No</td>  <!-- MATE -->
 <td class="mixed">Yes/No</td>  <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td>
 
 <td class="yes">Yes/Yes</td>
 <td class="yes">Yes/Yes</td>
@@ -1258,6 +1263,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1273,6 +1279,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td><!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="no">No</td>
 
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1289,6 +1296,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td> 
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1306,6 +1314,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes</td> 
 
 <td class="yes tooltip">Yes<span class="tooltiptext">Cmd + Z</td>
 <td class="yes">Yes</td>
@@ -1322,6 +1331,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Keep new/old/rename</td> <!-- MATE -->
 <td class="yes">Keep new/old/rename</td> <!-- Cinnamon -->
 <td class="yes">Keep new/old/rename</td> <!-- LXQt -->
+<td class="yes">Keep new/old/rename</td>
 
 <td class="yes">Keep new/old/rename</td>
 <td class="yes">Keep new/old/rename</td>
@@ -1337,6 +1347,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1352,6 +1363,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes</td><!-- MATE -->
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="yes">Yes/Yes</td>
 
 <td class="almost">Yes/keyboard shortcut only</td>
 <td class="yes">Yes/Yes</td>
@@ -1367,6 +1379,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 
 <td class="almost">keyboard shortcut only</td>
 <td class="yes">Yes</td>
@@ -1382,6 +1395,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 
 <td class="almost">keyboard shortcut only</td>
 <td class="yes">Yes</td>
@@ -1626,7 +1640,8 @@ The desktop environment "landscape" has fragmented since the controversial initi
     <li>GNUStep toolkit</li>
         <ul>
         <li><del>Etoile</del></li>
-        <li>Nextspace</li>
+	<li>GSDE</li>
+        <li><del>Nextspace</del></li>
         </ul>
     </ul>
     <ul>
