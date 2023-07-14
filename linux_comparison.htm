@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Linux Distributions</title>
+<meta name="description" content="Comparison of Linux Distributions">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Firefox, Chrome, Edge, Safari, Brave, Vivaldi, Operating Systems, Desktop Environments, GNOME, KDE, Xfce, Linux, Unix, BSD, Solaris, Windows, macOS, Instant Messengers, Chat, Software, Cloud, Sync, Email, Privacy">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+--legendwidth: 275px;
+--distrowidth: 90px;
+}
+
+table.comparison {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--legendwidth) + 18 * var(--distrowidth));
+height: 100%;
+}
+
+thead { 
+border: none;
+position: sticky; 
+position: -webkit-sticky;
+top: 0px;
+z-index: 10;
+}
+
+thead tr td {
+background-color: white;
+font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+thead tr td {background-color: #222; color: white;  }
+}
+
+td {
+border: none;
+/* padding: 1px 1px; */
+vertical-align: top;
+overflow-wrap: break-word;
+hyphens: auto;
+}
+
+td img {
+padding: 15px 0px;
+}
+
+table.split {
+border: none;
+table-layout: fixed;
+width: calc(var(--distrowidth));
+height: 103%;
+}
+
+table.split tr td {
+border: none !important;
+width: 50%;
+overflow-wrap: break-word;
+hyphens: auto;
+}
+
+table.comparison tr td:nth-child(2) {
+border-left: 1px dotted lightgrey;
+}
+
+.semititle {
+text-decoration: underline;
+font-weight: bold;
+vertical-align: bottom; }
+
+.legend {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+}
+
+.center {
+text-align: center;
+}
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.yes {
+background-color: #CEE6BB;
+}
+
+.almost {
+background-color: #E7F2DD;
+}
+
+.mixed {
+background-color: #E7DEB1;
+}
+
+.notreally {
+background-color: #F5E0D6;
+}
+
+.no {
+background-color: #EBC1AD;
+}
+
+img.logo {
+width: 90%;
+}
+
+td.yes,
+td.almost,
+td.no,
+td.mixed,
+td.notreally,
+td.line {
+border-top: 1px solid ivory;
+border-bottom: 1px solid ivory;
+}
+</style>
+
+<header>
+<table class="menubar">
+<tr>
+<td><a href="os_comparison.htm">Compa&shy;rison of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
+<td><a href="os_familytree.htm">Fami&shy;ly Tree of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
+<td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
+<td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
+<td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
+<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
+<td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
+<td><a href="im_comparison.htm">Compa&shy;rison of Ins&shy;tant Mes&shy;sen&shy;gers</a></td>
+<td><a href="cloud_comparison.htm">Compa&shy;rison of Cloud, Sync &amp; E&shy;mail pro&shy;viders</a></td>
+</tr>
+</table>
+<p><a href="index.html">&larr; Sitemap</a></p>
+</header>
+
+<body>
+
+<h1>Comparison of Linux Distributions</h1>
+
+<p>It's a well known fact that there's hundreds of different Linux distributions, with many of them gaining sudden popularity or falling back into relative obscurity. As of 2023, I'd say the most important distributions - those that are here to stay for another decade at least and those that have a significant mindshare on the desktop - are just five: Debian, Ubuntu, Fedora, openSUSE, and Arch. Everything else is more of a niche distribution, be it for servers (RHEL, SLE), nerds and greybeards (Gentoo, Slackware), or to make an existing general-purpose distro slightly more user-friendly for novice users (Zorin, pop_OS).<br /><br >
+Distributions mostly differ in their package manager and their default choices (desktop environment and so on). Furthermore, there are clearly different tiers of difficulty from beginner-level to expert, for example like this:<br /><br />
+<em>Beginners. Easy to use and work out of the box.</em>
+<ul><li>Mint</li><li>(K)ubuntu</li><li>Solus</li></ul>
+<em>Beginners to Intermediate. Same as above but some post-install tweaks needed (e.g. codecs, Nvidia).</em>
+<ul><li>Fedora</li><li>openSUSE</li><li>Mageia</li></ul>
+<em>Advanced users. Anyone can use them but to set everything up you need to be willing to read the documentation and get comfortable with the command line.</em>
+<ul><li>Debian</li><li>RHEL</li><li>Arch</li></ul>
+<em>Experts. Same as above but there is additional distro-specific knowledge to learn.</em>
+<ul><li>Slackware</li><li>NixOS</li><li>Gentoo</li></ul></p>
+<p>For this comparison I have focused mostly on "original" distributions rather than forks as this shows the
+
+<h2 class="center">Comparison of Linux Distributions</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: July 2023</p>
+
+<table class="comparison">
+
+<colgroup>
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+
+<thead>
+<tr>
+<td class="legend" rowspan="2"></td>
+<td rowspan="2">Debian</td>
+<td rowspan="2">Ubuntu</td>
+<td rowspan="2">Linux Mint</td>
+<td>openSUSE</td>
+<td rowspan="2">SUSE Linux Enterprise</td>
+<td>Fedora</td>
+<td rowspan="2">Red Hat Enterprise Linux</td>
+<td rowspan="2">Open<wbr>Mandriva</td>
+<td rowspan="2">Mageia</td>
+<td rowspan="2">PCLinuxOS</td>
+<td rowspan="2">Arch</td>
+<td rowspan="2">Slackware</td>
+<td rowspan="2">Gentoo</td>
+<td rowspan="2">Alpine</td>
+<td rowspan="2">Void</td>
+<td rowspan="2">NixOS</td>
+<td rowspan="2">Guix System</td>
+<td rowspan="2">Solus</td>
+</tr>
+<tr>
+<td><table class="split"><tr><td style="word-break: break-all; font-size: smaller;">Tumble&shy;weed</td><td style="font-size: smaller;">Micro<wbr>OS</td></tr></table></td>
+<td><table class="split"><tr><td style="font-size: smaller;">Work&shy;station</td><td style="font-size: smaller;">Immu&shy;table</td></tr></table></td>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td></td>
+<td><img class="logo" src="pics/logos/distros/debian.png" /></td>
+<td><img class="logo" src="pics/logos/distros/ubuntu.png" /></td>
+<td><img class="logo" src="pics/logos/distros/mint.png" /></td>
+<td><img class="logo" src="pics/logos/distros/opensuse.png" /></td>
+<td><img class="logo" src="pics/logos/distros/sle.png" /></td>
+<td><img class="logo" src="pics/logos/distros/fedora.png" /></td>
+<td><img class="logo" src="pics/logos/distros/redhat.png" /></td>
+<td><img class="logo" src="pics/logos/distros/openmandriva.png" /></td>
+<td><img class="logo" src="pics/logos/distros/mageia.png" /></td>
+<td><img class="logo" src="pics/logos/distros/pclinuxos.png" /></td>
+<td><img class="logo" src="pics/logos/distros/arch.png" /></td>
+<td><img class="logo" src="pics/logos/distros/slackware.png" /></td>
+<td><img class="logo" src="pics/logos/distros/gentoo.png" /></td>
+<td><img class="logo" src="pics/logos/distros/alpine.png" /></td>
+<td><img class="logo" src="pics/logos/distros/void.png" /></td>
+<td><img class="logo" src="pics/logos/distros/nixos.png" /></td>
+<td><img class="logo" src="pics/logos/distros/guixsd.png" /></td>
+<td><img class="logo" src="pics/logos/distros/solus.png" /></td>
+</tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Development &amp; Background</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Based on...</td>
+<td>Independent</td>
+<td>Debian</td>
+<td>Ubuntu</td>
+<td>Independent</td>
+<td>openSUSE</td>
+<td>Independent</td>
+<td>Fedora</td>
+<td>Independent</td>
+<td>Independent (forked from Mandriva)</td>
+<td>Independent (forked from Mandriva)</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+<td>Independent</td>
+</tr>
+
+<tr>
+<td class="legend">Initial release</td>
+<td>1993</td>
+<td>2004</td>
+<td>2006</td>
+<td colspan="2">1994 (Suse)</td>
+<td colspan="2">1995 (Red Hat)</td>
+<td>1998 (Mandrake)</td>
+<td>2010</td>
+<td>2003</td>
+<td>2002</td>
+<td>1993</td>
+<td>2002</td>
+<td>2005</td>
+<td>2008</td>
+<td>2003</td>
+<td>2013</td>
+<td>2015</td>
+</tr>
+
+<tr>
+<td class="legend">Availa&shy;ble preinstalled (major PC builders)?</td>
+<td>-</td>
+<td class="yes">Dell, Lenovo</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><table class="split"><tr><td class="yes">Lenovo</td><td>-</td></tr></table></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td class="legend">Community-driven or Corporate</td>
+<td>Community</td>
+<td>Corporate (Canonical)</td>
+<td>Community</td>
+<td>Community, with corporate backing (SUSE)</td>
+<td>Corporate (SUSE)</td>
+<td>Community, with corporate backing (IBM)</td>
+<td>Corporate (IBM)</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+<td>Community</td>
+</tr>
+
+<tr>
+<td class="legend">Price</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="no">Paid <!--<span style="font-size: x-small;">(openSUSE Leap is a free "clone" of SLE with additional packages (e.g. Plasma) but w/o the extended support period)</span>--></td>
+<td class="yes">Free</td>
+<td class="mixed">Paid, free subscription for developers<!-- (Alma and Rocky are free "clones" of RHEL)--></td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+</tr>
+
+<tr>
+<td class="legend">Freedom &amp; adherence to GNU GPL</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="mixed tooltip">IBM does not allow sharing of source code<span class="tooltiptext">While IBM makes the source code Availa&shy;ble to subscribers as required by the GNU GPL, they reserve the right to cancel the subscriptions and therefore also further software updates from clients who share the source code with third parties. This clearly is a violation of the spirit and possibly even wording of the GNU GPL, as it essentially means you can only share the source code once before IBM cancels your subscription.</span></td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+<td class="yes">Free</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Philosophy</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Primarily source-based vs binary packages</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Binary</td>
+<td>Source-based</td>
+<td>Binary</td>
+<td>Hybrid</td>
+<td>Hybrid</td>
+<td>Source-based</td>
+<td>Binary</td>
+</tr>
+
+<tr>
+<td class="legend">Immutable or traditional?</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td><table class="split"><tr><td>Tradi&shy;tional</td><td class="tooltip">Immu&shy;table <span class="tooltiptext">snap&shy;shot-based</span></td></tr></table></td>
+<td>Traditional</td>
+<td><table class="split"><tr><td>Tradi&shy;tional</td><td class="tooltip">Immu&shy;table <span class="tooltiptext">image-based</span></td></tr></table></td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td>Traditional</td>
+<td class="tooltip">Immutable <span class="tooltiptext">declarative</span></td>
+<td class="tooltip">Immutable <span class="tooltiptext">declarative</span></td>
+<td>Traditional</td>
+</tr>
+
+<tr>
+<td class="legend">Fully reproducible system?</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Policy of only allowing free software in repos?</td>
+<td>No <span style="font-size: x-small;">(while such a policy exists there is nevertheless a non-free repo)</span></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes, with exception for non-free firmware</td>
+<td>Yes, with exception for non-free firmware</td>
+<td>No</td>
+<td>No</td>
+<td>No, default installation even includes non-free apps</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes, with exception for non-free firmware</td>
+<td>No</td>
+<td>No</td>
+<td>Yes, and even uses the linux-libre kernel</td>
+<td>No</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Release schedule &amp; Reliability</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Release model</td>
+<td>Fixed</td>
+<td>Fixed</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Fixed</td>
+<td>Fixed</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Rolling</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Fixed</td>
+<td>Rolling</td>
+<td>Rolling</td>
+</tr>
+
+<tr>
+<td class="legend">LTS option (>5 yrs)</td>
+<td class="yes">Yes (5 years)</td>
+<td class="yes">Yes (10 years)</td>
+<td class="yes">Yes (5 years)</td>
+<td class="no">No</td>
+<td class="yes">Yes (13 years)</td>
+<td class="no">No</td>
+<td class="yes">Yes (13-15 years)</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes (no fixed EOL date)</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Ability to roll back updates if something breaks</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes <span style="font-size: x-small;">(snapper rollback)</span></td>
+<td class="yes">Yes <span style="font-size: x-small;">(snapper rollback)</span></td>
+<td><table class="split"><tr><td class="no">No</td><td class="yes">Yes <span style="font-size: x-small;">(rpm-ostree rollback)</span></td></tr></table></td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes <span style="font-size: x-small;">(nixos-rebuild switch)</span></td>
+<td class="yes">Yes <span style="font-size: x-small;">(guix system roll-back)</span></td>
+<td class="yes">Yes <span style="font-size: x-small;">(eopkg history)</span></td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">CPU compatibility</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">amd64 (64-bit AMD/Intel)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">aarch64 (64-bit ARM)</td>
+<td class="yes">Yes</td>
+<td class="almost">Server image</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="almost">Server image</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">ppc64le (IBM POWER9/10)</td>
+<td class="yes">Yes</td>
+<td class="almost">Server image</td>
+<td class="no">No</td>
+<td class="almost">Server image</td>
+<td class="almost">Server image</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">s390x (IBM Z)</td>
+<td class="yes">Yes</td>
+<td class="almost">Server image</td>
+<td class="no">No</td>
+<td class="almost">Server image</td>
+<td class="almost">Server image</td>
+<td class="almost">Server image</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">riscv64 (RISC-V)</td>
+<td class="mixed">Experimental</td>
+<td class="almost">Server image</td>
+<td class="no">No</td>
+<td class="mixed">Experimental</td>
+<td class="no">No</td>
+<td class="mixed">Experimental</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td class="legend">i686 (legacy 32-bit Intel/AMD)</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="almost">Minimal image</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Ease of use (default setup)</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Graphical installer?</td>
+<td class="yes">Yes (Debian-Install)</td>
+<td class="yes">Yes (Ubuntu Desktop Installer)</td>
+<td class="yes">Yes (Ubiquity)</td>
+<td class="yes">Yes (Yast)</td> <!-- soon Agama for MicroOS? -->
+<td class="yes">Yes (Yast)</td> <!-- soon Agama for ALP? -->
+<td class="yes">Yes (Anaconda)</td>
+<td class="yes">Yes (Anaconda)</td>
+<td class="yes">Yes (Calamares)</td>
+<td class="yes">Yes (DrakX)</td>
+<td class="yes">Yes (DrakX)</td>
+<td class="mixed">Text-based (archinstall)</td>
+<td class="mixed">Test-based (Slackware Setup)</td>
+<td class="no">No, manual install</td>
+<td class="mixed">Text-based (setup-alpine)</td>
+<td class="mixed">Text-based (void-installer)</td>
+<td class="yes">Yes (Calamares)</td>
+<td class="mixed">Text-based (Guix installer)</td>
+<td class="yes">Yes (Solus os-installer)</td>
+</tr>
+
+<tr>
+<td class="legend">Desktop environment by default <br />(or offered during installation)?</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes (archinstall)</td>
+<td class="yes">Yes</td>
+<td class="no">No, needs to be done post-install</td>
+<td class="no">No, needs to be done post-install</td>
+<td class="almost">Only if installing from Xfce live image<!-- and selecting "local source"--></td>
+<td class="yes">Yes</td>
+<td class="no">No, needs to be done post-install</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">GUI for advanced system administration?</td>
+<td class="no">No</td>
+<td class="mixed">Limited (e.g. driver manager)</td>
+<td class="mixed">Limited (e.g. driver manager)</td>
+<td><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="no">No</td></tr></table></td>
+<td class="yes">Yes (Yast)</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes (Control Center)</td>
+<td class="yes">Yes (Control Center)</td>
+<td class="yes">Yes (Control Center)</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="mixed">Limited (e.g. driver manager)</td>
+</tr>
+
+<tr>
+<td class="legend">Graphical updating of packages <br />and system upgrades?</td>
+<td class="mixed">Updates only, not upgrades to next release</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="mixed">Updates only, not upgrades to next release</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Offers to install proprietary codecs?</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Installed by default</td> <!-- still true? all info is quite old -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Installed by default</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Defaults</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Default browser</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>Chromium</td>
+<td>Firefox</td>
+<td>Firefox</td>
+<td>-</td>
+<td>Firefox</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Firefox</td>
+<td>-</td>
+<td>Firefox</td>
+</tr>
+
+<tr>
+<td class="legend">Default file system</td>
+<td>ext4</td>
+<td>ext4</td>
+<td>ext4</td>
+<td>btrfs</td>
+<td>btrfs</td>
+<td>btrfs</td>
+<td>xfs</td>
+<td>ext4</td>
+<td>ext4</td>
+<td>ext4</td>
+<td><em>no default</em></td>
+<td><em>no default</em></td>
+<td><em>no default</em></td>
+<td>ext4</td>
+<td><em>no default</em></td>
+<td>ext4</td>
+<td>ext4</td>
+<td>ext4</td>
+</tr>
+
+<tr>
+<td class="legend">Default swap approach</td>
+<td>Swap partition</td>
+<td>Swap file</td>
+<td>Swap file</td>
+<td><table class="split"><tr><td>Swap partition</td><td>No swap</td></tr></table></td>
+<td>Swap partition</td>
+<td>Swap on ZRAM</td>
+<td>Swap partition</td>
+<td>No swap</td>
+<td>Swap partition</td>
+<td>Swap partition</td>
+<td>Swap on ZRAM (archinstall)</td>
+<td><em>no default</em></td>
+<td><em>no default</em></td>
+<td>Swap partition</td>
+<td><em>no default</em></td>
+<td>No swap</td>
+<td>No swap</td>
+<td>Swap on ZRAM</td>
+</tr>
+
+<tr>
+<td class="legend">Default init system</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>systemd</td>
+<td>SysV init</td>
+<td>systemd</td>
+<td>SysV init</td>
+<td>OpenRC</td>
+<td>OpenRC</td>
+<td>runit</td>
+<td>systemd</td>
+<td>Shepherd</td>
+<td>systemd</td>
+</tr>
+
+<tr>
+<td class="legend">Default C library</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>musl</td>
+<td>glibc</td>
+<td>Choice of glibc or musl</td>
+<td>glibc</td>
+<td>glibc</td>
+<td>glibc</td>
+</tr>
+
+<tr>
+<td class="legend">Compiler used</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>clang</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+<td>gcc</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Suppor&shy;ted desktops:</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">KDE Plasma</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in Kubuntu</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td><table class="split"><tr><td class="almost">Option during installation</td><td class="almost">Default in Kalpa</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in KDE Spin</td><td class="almost">Default in Kinoite</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in EPEL</td>
+<td class="yes">Default desktop</td>
+<td class="yes">Pre-selected choice in installer, or Live Image</td>
+<td class="almost">Default in Plasma Edition</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="yes">Default desktop</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Availa&shy;ble via setup-desktop</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Default in Plasma Edition</td>
+</tr>
+
+<tr>
+<td class="legend">GNOME</td>
+<td class="yes">Pre-selected choice in installer</td>
+<td class="yes">Default desktop</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td><table class="split"><tr><td class="almost">Option during installation</td><td class="almost">Default in Aeon</td></tr></table></td>
+<td class="yes">Default desktop</td>
+<td><table class="split"><tr><td class="yes">Default desktop</td><td class="almost">Default in Silver&shy;blue</td></tr></table></td>
+<td class="yes">Default desktop</td>
+<td class="almost">Default in GNOME Spin</td>
+<td class="almost">Option during installation, or Live Image</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Availa&shy;ble via setup-desktop</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="yes">Pre-selected choice in installer</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in GNOME Edition</td>
+</tr>
+
+<tr>
+<td class="legend">Xfce</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in Xubuntu</td>
+<td class="almost">Default in Mint Xfce</td>
+<td><table class="split"><tr><td class="almost">Option during installation</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in Xfce Spin</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in EPEL</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="yes">Availa&shy;ble as installable Live Image</td>
+<td class="almost">Default in Xfce Edition</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="almost">Option during installation</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Availa&shy;ble via setup-desktop</td>
+<td class="yes">Default desktop (installable Live Image)</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Option during installation</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+</tr>
+
+<tr>
+<td class="legend">MATE</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in Ubuntu MATE</td>
+<td class="almost">Default in Mint MATE</td>
+<td><table class="split"><tr><td class="mixed">Availa&shy;ble in official repo</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in MATE Spin</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in EPEL</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Default in MATE Edition</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in MATE Edition</td>
+</tr>
+
+<tr>
+<td class="legend">Cinnamon</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in Ubuntu Cinnamon</td>
+<td class="almost">Default in Mint Cinnamon</td>
+<td><table class="split"><tr><td class="mixed">Availa&shy;ble in official repo</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in Cinnamon Spin</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in EPEL</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+</tr>
+
+<tr>
+<td class="legend">LXQt</td>
+<td class="almost">Option during installation</td>
+<td class="almost">Default in Lubuntu</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td><table class="split"><tr><td class="mixed">Availa&shy;ble in official repo</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in LXQt Spin</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="almost">Default in LXQt Spin</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+</tr>
+
+<tr>
+<td class="legend">Budgie</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="almost">Default in Ubuntu Budgie</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td><table class="split"><tr><td class="mixed">Availa&shy;ble in official repo</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td><table class="split"><tr><td class="almost">Default in Budgie Spin</td><td class="almost">Default in Onyx</td></tr></table></td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="almost">Option during installation (archinstall)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="mixed">Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="almost">Default in Budgie Edition</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Package management</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Main package manager</td>
+<td>apt</td>
+<td>apt</td>
+<td>apt</td>
+<td><table class="split"><tr><td>zypper</td><td>transactional-update</td></tr></table></td>
+<td>zypper</td>
+<td><table class="split"><tr><td>dnf</td><td>rpm-ostree</td></tr></table></td>
+<td>dnf</td>
+<td>dnf</td>
+<td>urpmi</td>
+<td>apt-rpm</td>
+<td>pacman</td>
+<td>slackpkg</td>
+<td>portage</td>
+<td>apk</td>
+<td>xbps</td>
+<td>Nix</td>
+<td>Guix</td>
+<td>epokg</td>
+</tr>
+
+<tr>
+<td class="legend">Native binary package format</td>
+<td>DEB</td>
+<td>DEB</td>
+<td>DEB</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>RPM</td>
+<td>PKG.TAR.ZST</td>
+<td>TXZ</td>
+<td>GPKG.TAR</td>
+<td>APK</td>
+<td>XBPS</td>
+<td>NAR.XZ</td>
+<td>"substitutes"</td>
+<td>EOPKG</td>
+</tr>
+
+<tr><td class="legend" style="text-align: left; text-decoration: underline;">Suppor&shy;ted "universal" package formats:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend">Flatpak</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="yes">Preinstalled</td>
+<td><table class="split"><tr><td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td><td class="yes">Preinstalled</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Package Hub</td>
+<td class="yes">Preinstalled</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="yes">Preinstalled</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+</tr>
+
+<tr>
+<td class="legend">Snap</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="yes">Preinstalled</td>
+<td class="mixed">In official repo, but blacklisted by default</td>
+<td><table class="split"><tr><td class="notreally">Not Availa&shy;ble in official repo, but in OBS</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td><table class="split"><tr><td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in EPEL</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in AUR</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="no">Not Availa&shy;ble in official repo</td>
+<td class="yes">Preinstalled</td>
+</tr>
+
+<tr>
+<td class="legend">AppImage</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td><table class="split"><tr><td class="yes">Should work</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="yes">Should work</td>
+<td class="no">Most likely not working due to missing glibc</td>
+<td class="mixed">Should work if using glibc rather than musl</td>
+<td class="yes">Should work (appimage-run)</td>
+<td class="no">Most likely not working</td>
+<td class="yes">Should work</td>
+</tr>
+
+<tr>
+<td class="legend">Nix</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td><table class="split"><tr><td class="notreally">Should work via Nix installer script</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Should work via Nix installer script</td>
+<td><table class="split"><tr><td class="notreally">Should work via Nix installer script</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Should work via Nix installer script</td>
+<td class="notreally">Should work via Nix installer script</td>
+<td class="notreally">Should work via Nix installer script</td>
+<td class="notreally">Should work via Nix installer script</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in Slackbuilds</td>
+<td class="notreally">Should work via Nix installer script</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="yes">Preinstalled</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="notreally">Should work via Nix installer script</td>
+</tr>
+
+<tr>
+<td class="legend">Guix</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td>
+<td><table class="split"><tr><td class="almost">Suppor&shy;ted (in offi&shy;cial repo)</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Should work via Guix installer script</td>
+<td><table class="split"><tr><td class="notreally">Should work via Guix installer script</td><td class="no">Not official&shy;ly suppor&shy;ted</td></tr></table></td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Not Availa&shy;ble in official repo, but in AUR</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="notreally">Should work via Guix installer script</td>
+<td class="yes">Preinstalled</td>
+<td class="notreally">Should work via Guix installer script</td>
+</tr>
+
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td class="legend semititle" style="font-size: large;">Security</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Full-disk encryption option in installer</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="mixed tooltip">Can encrypt individual partitions <span class="tooltiptext">when selecting "custom partitioning"</span></td>
+<td class="mixed tooltip">Can encrypt individual partitions <span class="tooltiptext">when selecting "custom partitioning"</span></td>
+<td class="yes">Yes (archinstall)</td>
+<td class="notreally">No, manual setup using cryptsetup</td>
+<td class="notreally">No, manual setup using cryptsetup</td>
+<td class="yes">Yes</td>
+<td class="notreally">No, manual setup using cryptsetup</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Out-of-the-box support for Secure Boot</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Kernel security module set up by default?</td>
+<td class="yes">Yes (AppArmor)</td>
+<td class="yes">Yes (AppArmor)</td>
+<td class="yes">Yes (AppArmor)</td>
+<td><table class="split"><tr><td class="yes">Yes (AppArmor)</td><td class="yes">Yes (SELinux)</td></tr></table></td>
+<td class="yes">Yes (AppArmor)</td> <!-- soon SELinux in ALP? -->
+<td class="yes">Yes (SELinux)</td>
+<td class="yes">Yes (SELinux)</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes (AppArmor)</td>
+</tr>
+
+</tbody>
+</table>
+
+<footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
+<h2 style="text-align: center"><a href="index.html">&rarr; Back to Homepage and Sitemap</a></h2></footer>
+
+</body>
+</html>
