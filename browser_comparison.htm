@@ -159,7 +159,32 @@ background-color: #222;}
 
 
 </head>
-<body><div class="ads-banner" style="color: white; background-color: red; text-weight: bold;">It seems that you're not using an adblocker. Please consider installing an adblocker such as <a href="https://ublockorigin.com/" target="_blank" style="color: white;">uBlock Origin</a> or <a href="https://adguard.com" target="_blank" style="color: white;">Adguard</a> to improve your browsing experience.</div>
+<body>
+<!-- START WEI BROWSER WARNING -->
+<!-- https://github.com/eylenburg/wei_warning -->
+
+<div id="wei_warning" style="display: none; position: fixed; top: 0px; left: 0px; z-index; 1000; height: 100%; width: 100%; background-color: darkred; font-size: 16pt; text-align: center; color: white; font-family: sans-serif;">
+
+<p><strong>Your browser supports Web Environment Integrity (WEI), which is harming the freedom and openness of the web.</strong><br /> WEI is Google's attempt to lock down the web. In short, a Google-owned server will be asked to confirm that the browser does not deviate in <em>any</em> way from Google's accepted browser configuration. This can used to prevent users from blocking ads, trackers and other harmful content. It allows website owners to lock out users of unapproved (non-Chrome) browsers, unapproved operating systems, and older hardware. Not only would this further cement the Chrome's monopoly, but if WEI is allowed to become widespread then Google could even consider making remote attestation mandatory for websites: non-participating websites will be downranked on Google Search and labeled with a "security" warning in Chrome. <br /><a href="https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet" target="_blank" style="color: white;">Click here to read why we need to nip WEI in the bud.</a> <br /><br />
+
+<strong>Please use a WEI-free browser such as <a href="https://www.mozilla.org/en-US/firefox/" target="_blank" style="color: white;">Firefox</a> (recommended), <a href="https://www.apple.com/safari/" target="_blank" style="color: white;">Safari</a>, <a href="https://www.brave.com/" target="_blank" style="color: white;">Brave</a>, <a href="https://www.palemoon.org/" target="_blank" style="color: white;">Pale Moon</a>, or <a href="https://apps.gnome.org/app/org.gnome.Epiphany/" target="_blank" style="color: white;">GNOME Web</a>.</strong><br /><br />
+
+<a href="#" onclick="close_wei_warning()" style="color: white; font-size: 12pt; font-style: italic;">I'm unable to change my browser, please let me continue to the website.</a>
+</p></div>
+
+<script>
+if (navigator.userAgent.indexOf("Chrome") != -1 && !navigator.brave) {
+  document.getElementById('wei_warning').style.display = 'block';
+}
+</script>
+
+<script>
+function close_wei_warning() {
+  document.getElementById('wei_warning').style.display = 'none';
+}
+</script>
+
+<!-- END WEI BROWSER WARNING --><div class="ads-banner advertising ad-zone ad-banner ad-tile ad-top ad-unit adbox adimage" style="color: white; background-color: red; text-weight: bold;">It seems that you're not using an adblocker. Please consider installing an adblocker such as <a href="https://ublockorigin.com/" target="_blank" style="color: white;">uBlock Origin</a> or <a href="https://adguard.com" target="_blank" style="color: white;">Adguard</a> to improve your browsing experience.</div>
 <header>
 <table class="menubar">
 <tr>
