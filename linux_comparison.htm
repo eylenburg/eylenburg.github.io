@@ -43,7 +43,7 @@ thead tr td {background-color: #222; color: white;  }
 
 td {
 border: none;
-/* padding: 1px 1px; */
+padding: 0px;
 vertical-align: top;
 overflow-wrap: break-word;
 hyphens: auto;
@@ -57,7 +57,7 @@ table.split {
 border: none;
 table-layout: fixed;
 width: calc(var(--distrowidth));
-height: 103%;
+height: 100%;
 }
 
 table.split tr td {
@@ -206,7 +206,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: July 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: August 2023</p>
 
 <table class="comparison">
 
@@ -1318,7 +1318,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
+<td><table class="split"><tr><td class="yes">Yes</td><td class="no tooltip">/home only<span class="tooltiptext">Replaced with systemd-homed encryption</span></td></tr></table></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
