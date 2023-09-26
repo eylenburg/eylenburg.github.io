@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Linux Distributions</title>
+<meta name="description" content="Comparison of Linux Distributions">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Firefox, Chrome, Edge, Safari, Brave, Vivaldi, Operating Systems, Desktop Environments, GNOME, KDE, Xfce, Linux, Unix, BSD, Solaris, Windows, macOS, Instant Messengers, Chat, Software, Cloud, Sync, Email, Privacy">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+--legendwidth: 275px;
+--distrowidth: 220px;
+}
+
+table.comparison {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--legendwidth) + 7 * var(--distrowidth));
+height: 100%;
+}
+
+thead { 
+border: none;
+position: sticky; 
+position: -webkit-sticky;
+top: 0px;
+z-index: 10;
+font-size: large;
+}
+
+thead tr td {
+background-color: white;
+font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+thead tr td {background-color: #222; color: white;  }
+}
+
+td {
+border: none;
+padding: 0px;
+vertical-align: top;
+overflow-wrap: break-word;
+hyphens: auto;
+}
+
+td img {
+padding: 15px 0px;
+}
+
+table.comparison tr td:nth-child(2) {
+border-left: 1px dotted lightgrey;
+}
+
+.semititle {
+text-decoration: underline;
+font-weight: bold;
+vertical-align: bottom; }
+
+.legend {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+}
+
+.center {
+text-align: center;
+}
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.green {
+background-color: #CEE6BB;
+}
+
+.lgreen {
+background-color: #E7F2DD;
+}
+
+.yellow {
+background-color: #E7DEB1;
+}
+
+.lred {
+background-color: #F5E0D6;
+}
+
+.red {
+background-color: #EBC1AD;
+}
+
+img.logo {
+max-width: 150px;
+max-height: 75px;
+}
+
+td.green,
+td.lgreen,
+td.red,
+td.lred,
+td.yellow,
+td.line {
+border-top: 1px solid ivory;
+border-bottom: 1px solid ivory;
+}
+</style>
+
+<body>
+<!-- START WEI BROWSER WARNING -->
+<!-- https://github.com/eylenburg/wei_warning -->
+
+<div id="wei_warning" style="display: none; position: fixed; top: 0px; left: 0px; z-index; 1000; height: 100%; width: 100%; background-color: darkred; font-size: 16pt; text-align: center; color: white; font-family: sans-serif;">
+
+<p><strong>Your browser supports Web Environment Integrity (WEI), which is harming the freedom and openness of the web.</strong><br /> WEI is Google's attempt to lock down the web. In short, a Google-owned server will be asked to confirm that the browser does not deviate in <em>any</em> way from Google's accepted browser configuration. This can used to prevent users from blocking ads, trackers and other harmful content. It allows website owners to lock out users of unapproved (non-Chrome) browsers, unapproved operating systems, and older hardware. Not only would this further cement the Chrome's monopoly, but if WEI is allowed to become widespread then Google could even consider making remote attestation mandatory for websites: non-participating websites will be downranked on Google Search and labeled with a "security" warning in Chrome. <br /><a href="https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet" target="_blank" style="color: white;">Click here to read why we need to nip WEI in the bud.</a> <br /><br />
+
+<strong>Please use a WEI-free browser such as <a href="https://www.mozilla.org/en-US/firefox/" target="_blank" style="color: white;">Firefox</a> (recommended), <a href="https://www.apple.com/safari/" target="_blank" style="color: white;">Safari</a>, <a href="https://www.brave.com/" target="_blank" style="color: white;">Brave</a>, <a href="https://www.palemoon.org/" target="_blank" style="color: white;">Pale Moon</a>, or <a href="https://apps.gnome.org/app/org.gnome.Epiphany/" target="_blank" style="color: white;">GNOME Web</a>.</strong><br /><br />
+
+<a href="#" onclick="close_wei_warning()" style="color: white; font-size: 12pt; font-style: italic;">I'm unable to change my browser, please let me continue to the website.</a>
+</p></div>
+
+<script>
+if (navigator.userAgent.indexOf("Chrome") != -1 && !navigator.brave) {
+  document.getElementById('wei_warning').style.display = 'block';
+}
+</script>
+
+<script>
+function close_wei_warning() {
+  document.getElementById('wei_warning').style.display = 'none';
+}
+</script>
+
+<!-- END WEI BROWSER WARNING --><div class="ads-banner advertising ad-zone ad-banner ad-tile ad-top ad-unit adbox adimage" style="color: white; background-color: red; text-weight: bold;">It seems that you're not using an adblocker. Please consider installing an adblocker such as <a href="https://ublockorigin.com/" target="_blank" style="color: white;">uBlock Origin</a> or <a href="https://adguard.com" target="_blank" style="color: white;">Adguard</a> to improve your browsing experience.</div>
+
+<header>
+<table class="menubar">
+<tr>
+<td><a href="os_comparison.htm">Compa&shy;rison of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
+<td><a href="os_familytree.htm">Fami&shy;ly Tree of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
+<td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
+<td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
+<td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
+<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
+<td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
+<td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
+<td><a href="im_comparison.htm">Compa&shy;rison of Ins&shy;tant Mes&shy;sen&shy;gers</a></td>
+<td><a href="cloud_comparison.htm">Compa&shy;rison of Cloud, Sync &amp; E&shy;mail pro&shy;viders</a></td>
+</tr>
+</table>
+<p><a href="index.html">&larr; Sitemap</a></p>
+</header>
+
+
+
+<h1>Comparison of Android ROMs</h1>
+
+<p>This is a comparison of popular Android "ROMs" (or better: AOSP distributions). Please note I'm not affiliated with any of these projects and I am not giving any specific recommendation. If you think anything is factually incorrect, please let me know.</p>
+
+<h2 class="center">Comparison of Android ROMs</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: September 2023</p>
+
+<table class="comparison">
+
+<colgroup>
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+
+
+<thead>
+<tr>
+<td class="legend"></td>
+<td>GrapheneOS</td>
+<td>DivestOS</td>
+<td>CalyxOS</td>
+<td>IodéOS</td>
+<td>/e/</td>
+<td>LineageOS</td>
+<td>"Stock" Android</td>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td></td>
+<td><img class="logo" src="pics/logos/android/grapheneos.svg" /></td>
+<td><img class="logo" src="pics/logos/android/divestos.svg" /></td>
+<td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/calyxos.jpg" /></td>
+<td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/iodeos.png" /></td>
+<td><img class="logo" src="pics/logos/android/eos.png" /></td>
+<td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/lineageos.png" /></td>
+<td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/android.svg" /></td>
+</tr>
+
+<tr>
+<td class="legend semititle">Freedom</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Free and open source (FOSS)?</td>
+<td class="green">Yes</td>
+<td class="green">Yes, and deblobbed</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend semititle"><br />Features</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Network controls for apps</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Network-based location</td>
+<td class="lred">No (redirect to GNSS location)</td>
+<td class="red">No (GNSS only)</td>
+<td class="green">Yes (UnifiedNLP)</td>
+<td class="green">Yes (UnifiedNLP)</td>
+<td class="green">Yes (UnifiedNLP)</td>
+<td class="red">No (GNSS only)</td>
+<td class="green">Yes (Google Geolocation Service)</td>
+</tr>
+
+<tr>
+<td class="legend">Android Auto compatible</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Built-in tracker blocking</td>
+<td class="yellow">No, but can use private DNS</td>
+<td class="green">Yes (hosts file)</td>
+<td class="yellow">No, but can use private DNS</td>
+<td class="green">Yes (iodé app)</td>
+<td class="yellow">No, but can use private DNS</td>
+<td class="yellow">No, but can use private DNS</td>
+<td class="yellow">No, but can use private DNS</td>
+</tr>
+
+<tr>
+<td class="legend">E2E-encrypted phone backups</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="yellow">Yes, but requires Google login</td>
+</tr>
+
+
+<tr>
+<td class="legend semititle"><br />Connections to Google</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">eSIM activation</td>
+<td class="yellow">Google EUICC (not preinstalled)</td>
+<td class="green">OpenEUICC</td>
+<td class="red">Google EUICC (preinstalled)</td>
+<td class="red">Google EUICC (preinstalled)</td>
+<td class="red">Google EUICC (preinstalled)</td>
+<td class="red">Google EUICC (preinstalled)</td>
+<td class="red">Google EUICC (preinstalled)</td>
+</tr>
+
+<tr>
+<td class="legend">Network location provider</td>
+<td>n/a</td>
+<td>n/a</td>
+<td class="green">UnifiedNLP</td>
+<td class="green">UnifiedNLP</td>
+<td class="green">UnifiedNLP</td>
+<td>n/a</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
+<td class="legend">SUPL</td>
+<td class="green">GrapheneOS proxy</td>
+<td class="yellow">Google (default) or none</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
+<td class="legend">SUPL: IMSI sent?</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="red">Yes</td>
+<td class="green">No</td>
+<td class="red">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">PSDS</td>
+<td class="green">GrapheneOS proxy</td>
+<td class="green">Broadcom</td>
+<td class="green">Broadcom</td>
+<td class="green">Broadcom</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
+<td class="legend">Captive portal</td>
+<td class="green">GrapheneOS proxy</td>
+<td class="green">Multiple options</td>
+<td class="yellow">Google, but can be changed</td>
+<td class="green">Kuketz.de</td>
+<td class="green">/e/foundation</td>
+<td class="yellow">Google, but can be changed</td>
+<td class="yellow">Google, but can be changed</td>
+</tr>
+
+<tr>
+<td class="legend">DNS server fallback</td>
+<td class="green">Cloudflare</td>
+<td class="green">Quad9</td>
+<td class="green">Cloudflare</td>
+<td class="green">Quad9</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
+<td class="legend">NTP</td>
+<td class="green">GrapheneOS proxy</td>
+<td class="green">NTP.org</td>
+<td class="red">Google</td>
+<td class="green">NTP.org</td>
+<td class="green">NTP.org</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
+<td class="legend">Signing keys</td>
+<td class="green">GrapheneOS proxy</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+
+<tr>
+<td class="legend semititle"><br />Google Play Services</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Implementation</td>
+<td>Sandboxed Play Services (optional)</td>
+<td>Unprivileged microG (optional)</td>
+<td>Privileged microG (optional)</td>
+<td>Privileged microG (optional)</td>
+<td>Privileged microG</td>
+<td rowspan="8">None by default. It's possible to <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google Apps manually</a> during the installation process, but this is not officially supported by LineageOS. Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>
+<td>Privileged Play Services</td>
+</tr>
+
+<tr>
+<td class="legend">FOSS? (see tooltips for details)</td>
+<td class="yellow tooltip">Google binaries in FOSS sandbox<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
+<td class="green tooltip">Yes<span class="tooltiptext">microG still involves running closed source Google Play code since the Google Play SDK and libraries are still present as part of each app you use with it.</span></td>
+<td class="green tooltip">Yes<span class="tooltiptext">microG still involves running closed source Google Play code since the Google Play SDK and libraries are still present as part of each app you use with it.</span></td>
+<td class="green tooltip">Yes<span class="tooltiptext">microG still involves running closed source Google Play code since the Google Play SDK and libraries are still present as part of each app you use with it.</span></td>
+<td class="green tooltip">Yes<span class="tooltiptext">microG still involves running closed source Google Play code since the Google Play SDK and libraries are still present as part of each app you use with it.</span></td>
+<!-- skipped -->
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Sandboxed/unprivileged?</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<!-- skipped -->
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Can be limited to work profile?</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<!-- skipped -->
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Signature spoofing needed?</td>
+<td class="green">No</td>
+<td class="red">Yes</td>
+<td class="red">Yes</td>
+<td class="red">Yes</td>
+<td class="red">Yes</td>
+<!-- skipped -->
+<td class="green">No</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend">App compatibility?</td>
+<td class="lgreen">Good</td>
+<td class="yellow">Decent</td>
+<td class="yellow">Decent</td>
+<td class="yellow">Decent</td>
+<td class="yellow">Decent</td>
+
+<td class="green">Perfect</td>
+</tr>
+-->
+
+<tr>
+<td class="legend">Push notifications via Google?</td>
+<td class="green">Yes</td>
+<td class="green">Optional</td>
+<td class="green">Optional</td>
+<td class="green">Optional</td>
+<td class="green">Optional</td>
+<!-- skipped -->
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Google Play Integrity/Safetynet?</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<!-- skipped -->
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend semititle"><br />Security</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Bootloader relocking (if supported by device)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Verified boot (if supported by device)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Secure application spawning</td>
+<td class="green">Yes (exec)</td>
+<td class="green">Yes (exec)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Hardened memory allocator</td>
+<td class="green">Yes</td>
+<td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Hardened kernel</td>
+<td class="green">Yes</td>
+<td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Hardened libc</td>
+<td class="green">Yes</td>
+<td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Hardened webview</td>
+<td class="green">Yes (Vanadium)</td>
+<td class="green tooltip">Yes (Mulch)<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+
+<tr>
+<td class="legend semititle"><br />Updates</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Security update speed</td>
+<td class="green">Fast</td>
+<td class="red">Slower</td>
+<td class="red">Slower</td>
+<td class="red">Slower</td>
+<td class="red">Slower</td>
+<td class="red">Slower</td>
+<td class="yellow">Depends on phone vendor</td>
+</tr>
+
+<tr>
+<td class="legend">Extended support after phone EoL date</td>
+<td class="lgreen">~1 year</td>
+<td class="green">Several years</td>
+<td class="lgreen">1-2 years</td>
+<td class="green">Several years</td>
+<td class="green">Several years</td>
+<td class="green">Several years</td>
+<td class="red">No</td>
+</tr>
+
+
+<tr>
+<td class="legend semititle"><br />Supported devices</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Asus</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Fairphone</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Google</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Motorola</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Oneplus</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Samsung</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Sony</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Xiaomi</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="red">No</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
+</tr>
+
+</tbody>
+</table>
+
+<footer><hr style="width: 50%"><p style="text-align: center">Comments, corrections, questions? Please drop me an e-mail at: <strong>eylenburg [at] airmail.cc</strong></p>
+<p style="text-align: center">Donations welcome:<br />
+<strong>Monero:</strong> <a href="monero:87z2UAoivrhUXa52N8YniyQDUrMLAio1QdJtmZhark2K9EKRLQ5Deaba76tXXvRnFQ1kPXutZFENcDgk7VTkxd5C1PfNcWt">87z2UAoivrhUXa52N8YniyQDUrMLAio1QdJtmZhark2K9EKRLQ5Deaba76tXXvRnFQ1kPXutZFENcDgk7VTkxd5C1PfNcWt</a><br />
+<strong>Bitcoin:</strong> <a href="bitcoin:bc1qyy98j05a6kr99qmycn0n36mv9sveq5a3g6rnwe">bc1qyy98j05a6kr99qmycn0n36mv9sveq5a3g6rnwe</a></p></footer>
+
+</body>
+</html>
