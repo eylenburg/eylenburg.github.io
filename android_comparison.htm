@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 275px;
---distrowidth: 220px;
+--distrowidth: 260px;
 }
 
 table.comparison {
@@ -159,7 +159,6 @@ border-bottom: 1px solid ivory;
 
 <p>This is a comparison of popular Android "ROMs" (or better: AOSP distributions). Please note I'm not affiliated with any of these projects and I am not giving any specific recommendation. If you think anything is factually incorrect, please let me know.</p>
 
-<p style="color: red;">THIS IS A WORK IN PROGRESS and I still need to make some changes, particularly I still need to digest <a href="https://github.com/eylenburg/eylenburg.github.io/issues/5">these detailed comments</a>.</p>
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
@@ -205,7 +204,18 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend semititle">Freedom</td>
+<td class="legend">Based on</td>
+<td>AOSP</td>
+<td>AOSP</td>
+<td>LineageOS</td>
+<td>LineageOS</td>
+<td>LineageOS</td>
+<td>AOSP</td>
+<td>AOSP</td>
+</tr>
+
+<tr>
+<td class="legend semititle"><br />Freedom</td>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
@@ -237,25 +247,58 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Network controls for apps</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
+<td class="legend tooltip">Network controls for apps<span class="tooltiptext">The controls on LineageOS-based operating systems are leaky as their approach only disabled direct network access (socket) but doesn't disable indirect access via the INTERNET permission, which provides multiple ways of bypassing them not requiring collusion between apps. This functionality is regularly used by apps with no malicious intent. Collusion between apps is an issue for all kinds of granted access, permissions, etc. and not specific to the INTERNET permission. If INTERNET permission is not blocked though, no collusion is required.</span></td>
+<td class="green tooltip">Direct and indirect access<span class="tooltiptext">In addition to blocking indirect access via INTERNET APIs, the GrapheneOS Network toggle also emulates the network being down and avoids running scheduled jobs which require the network.</span></td>
+<td class="green">Direct and indirect access</td>
+<td class="lgreen">Direct access only</td>
+<td class="lgreen">Direct access only</td>
+<td class="lgreen">Direct access only</td>
+<td class="lgreen">Direct access only</td>
 <td class="red">No</td>
 </tr>
 
 <tr>
 <td class="legend">Network-based location</td>
-<td class="green tooltip">Optional (Google Play Services)<span class="tooltiptext">otherwise will be redirected to GNSS-based location</span></td>
+<td class="green tooltip">Emulated (default), or Play Services<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td class="red">No</td>
-<td class="green">Optional (UnifiedNLP)</td>
-<td class="green">Optional (UnifiedNLP)</td>
-<td class="green">Yes (UnifiedNLP)</td>
+<td class="green">UnifiedNLP</td>
+<td class="green">UnifiedNLP</td>
+<td class="green">UnifiedNLP</td>
 <td class="red">No</td>
-<td class="green">Yes (Google)</td>
+<td class="green">Play Services</td>
+</tr>
+
+<tr>
+<td class="legend">DNS filtering (without VPN service)</td>
+<td class="lgreen">via Private DNS setting</td>
+<td class="green">Built-in filters in hosts file</td>
+<td class="lgreen">via Private DNS setting</td>
+<td class="green">Built-in iode-snort app</td>
+<td class="lgreen">via Private DNS setting</td>
+<td class="lgreen">via Private DNS setting</td>
+<td class="lgreen">via Private DNS setting</td>
+</tr>
+
+<tr>
+<td class="legend">E2E-encrypted phone backups</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="green">Yes (Seedvault)</td>
+<td class="yellow">Yes, but requires Google login</td>
+</tr>
+
+<tr>
+<td class="legend">Notification forwarding from other user profiles</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
 </tr>
 
 <tr>
@@ -270,30 +313,19 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Built-in tracker blocking</td>
-<td class="yellow">No, but can use private DNS</td>
-<td class="green">Yes (hosts file)</td>
-<td class="yellow">No, but can use private DNS</td>
-<td class="green">Yes (iode-snort)</td>
-<td class="yellow">No, but can use private DNS</td>
-<td class="yellow">No, but can use private DNS</td>
-<td class="yellow">No, but can use private DNS</td>
-</tr>
-
-<tr>
-<td class="legend">E2E-encrypted phone backups</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="green">Yes (Seedvault)</td>
-<td class="yellow">Yes, but requires Google login</td>
+<td class="legend">Google Pay compatible</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
 </tr>
 
 
 <tr>
-<td class="legend semititle"><br />Connections to Google</td>
+<td class="legend semititle"><br />Degoogling (connections to Google)</td>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
@@ -310,7 +342,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Network location provider</td>
-<td class="yellow tooltip">Google (if Play Services are installed)<span class="tooltiptext">otherwise will be redirected to GNSS-based location</span></td>
+<td class="yellow tooltip">Emulated (default) or Google<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td>n/a</td>
 <td class="green">UnifiedNLP</td>
 <td class="green">UnifiedNLP</td>
@@ -321,53 +353,78 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">SUPL</td>
-<td class="green">GrapheneOS proxy or none</td>
-<td class="yellow">Google or none</td>
-<td class="yellow">Google or none</td>
-<td class="yellow">Google or none</td>
+<td class="green">GrapheneOS (default), Google or none</td>
+<td class="yellow">Google (default), or none</td>
+<td class="yellow">Google (default), or none</td>
+<td class="yellow">Google (default), or none</td>
 <td class="red">Google</td>
-<td class="yellow">Google or none</td>
+<td class="yellow">Google (default), or none</td>
+<td class="red">Google</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend tooltip">PSDS (depends on device)<span class="tooltiptext">Default server depends on GPS chipset, e.g. phones with Qualcomm chips connect to a Qualcomm server and phones with Broadcom chips connect to a Broadcom server, except Google Pixels with Broadcom chips that connect to a Google server instead. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">GrapheneOS (default), Google/Qualcomm, or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="lred">Google/Broadcom/Qualcomm</td>
+<td class="yellow">Google/Broadcom/Qualcomm (default), or none</td>
+<td class="lred">Google/Broadcom/Qualcomm</td>
+</tr> 
+-->
+
+<tr>
+<td class="legend ">PSDS - Google Pixel 6 and later</td>
+<td class="green">GrapheneOS (default), Google, or none</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="red">Google</td>
+<td class="yellow">Google, or none</td>
 <td class="red">Google</td>
 </tr>
 
 <tr>
-<td class="legend">SUPL: IMSI sent?</td>
-<td class="green">No</td>
-<td class="green">No</td>
-<td class="green">No</td>
-<td class="green">No</td>
-<td class="red">Yes</td>
-<td class="green">No</td>
-<td class="red">Yes</td>
+<td class="legend ">PSDS - other devices</td>
+<td class="green">GrapheneOS (default), Qualcomm, or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">Broadcom/Qualcomm</td>
+<td class="green">Broadcom/Qualcomm, or none</td>
+<td class="green">Broadcom/Qualcomm</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend ">PSDS - other devices with Broadcom chips</td>
+<td>n/a (no supported devices)</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom</td>
+<td class="green">Broadcom (default), or none</td>
+<td class="lred">Broadcom</td>
 </tr>
 
 <tr>
-<td class="legend tooltip">PSDS (depends on device)<span class="tooltiptext">Default server depends on GPS chipset, e.g. phones with Qualcomm chips &rarr; Qualcomm server, phones with Broadcom chips &rarr; Broadcom server, Google Pixel &rarr; Google server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
-<td class="green">GrapheneOS proxy or none</td>
-<td class="green">Broadcom/Qualcomm or none</td>
-<td class="green">Broadcom/Qualcomm or none</td>
-<td class="green">Broadcom/Qualcomm or none</td>
-<td class="lred">Google/Broadcom/Qualcomm</td>
-<td class="yellow">Google/Broadcom/Qualcomm or none</td>
-<td class="lred">Google/Broadcom/Qualcomm</td>
-</tr>
-
-<tr>
-<td class="legend tooltip">PSDS: chipset serial number sent?<span class="tooltiptext">Click here for details and which device information are sent.</a></span></td>
-<td class="green">No</td>
-<td class="green">No</td>
-<td class="green">No</td>
-<td class="lred">on Qualcomm GPS chips</td>
-<td class="lred">on Qualcomm GPS chips</td>
-<td class="green">No</td>
-<td class="lred">on Qualcomm GPS chips</td>
+<td class="legend">PSDS - devices with Qualcomm chips</td>
+<td class="green">GrapheneOS (default), Qualcomm, or none</td>
+<td class="green">Qualcomm (default), or none</td>
+<td class="green">Qualcomm (default), or none</td>
+<td class="green">Qualcomm (default), or none</td>
+<td class="green">Qualcomm</td>
+<td class="green">Qualcomm (default), or none</td>
+<td class="green">Qualcomm</td>
 </tr>
 -->
 
 <tr>
-<td class="legend">Captive portal</td>
-<td class="green">GrapheneOS</td>
-<td class="green">Multiple options</td>
+<td class="legend">Connectivity check/captive portal</td>
+<td class="green">GrapheneOS (default), Google, or none</td>
+<td class="green">Multiple presets offered</td>
 <td class="yellow">Google, but can be changed</td>
 <td class="green">Kuketz.de</td>
 <td class="green">/e/foundation</td>
@@ -376,29 +433,40 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
+<td class="legend">DNS connectivity check</td>
+<td class="green">GrapheneOS (default), or Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+<td class="red">Google</td>
+</tr>
+
+<tr>
 <td class="legend">DNS server fallback</td>
 <td class="green">Cloudflare</td>
 <td class="green">Quad9</td>
 <td class="green">Cloudflare</td>
-<td class="lgreen">Quad9 (unsecured)</td>
+<td class="green">Quad9</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
 </tr>
 
 <tr>
-<td class="legend">NTP</td>
-<td class="green">GrapheneOS proxy</td>
-<td class="green">NTP.org</td>
-<td class="red">Google</td>
-<td class="green">NTP.org</td>
-<td class="green">NTP.org</td>
-<td class="red">Google</td>
-<td class="red">Google</td>
+<td class="legend">Network time</td>
+<td class="green">GrapheneOS proxy, or none</td>
+<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
+<td class="red">Google and carrier-based time</td>
+<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
+<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
+<td class="red">Google and carrier-based time</td>
+<td class="red">Google and carrier-based time</td>
 </tr>
 
 <tr>
-<td class="legend">Keystore provisioning</td>
+<td class="legend">Hardware attestation provisioning</td>
 <td class="green">GrapheneOS proxy</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
@@ -416,7 +484,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Implementation</td>
-<td>Sandboxed Play Services (optional)</td>
+<td class="tooltip">Sandboxed Play Services (optional)<span class="tooltiptext">GrapheneOS does not include sandboxed Google Play. It only includes an open source compatibility layer for users who choose to use it. Users can alternatively install microG on GrapheneOS, albeit GrapheneOS does not support signature spoofing. Not all microG functionality requires signature spoofing, for example FCM works with microG without signatures spoofing to the extent it works without special privileges (e.g. microG needs to use a privileged API to wake apps and keep them awake for a short period of time to handle FCM messages).</span></td>
 <td>Unprivileged microG (optional)</td>
 <td>Privileged microG (optional)</td>
 <td>Privileged microG (optional)</td>
@@ -427,11 +495,11 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">FOSS? (see tooltips for details)</td>
-<td class="lred tooltip">Google binaries in FOSS sandbox<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
-<td class="lgreen tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support, however, DivestOS blocks the use of Safetynet.</span></td>
-<td class="lgreen tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
-<td class="lgreen tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
-<td class="lgreen tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
+<td class="yellow tooltip">Google binaries in FOSS sandbox<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support, however, DivestOS blocks the use of Safetynet.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
 <!-- skipped -->
 <td class="red">No</td>
 </tr>
@@ -505,12 +573,129 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend semititle"><br />Security</td>
+<td class="legend semititle"><br />Privacy</td>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="legend">Bootloader relocking (if supported by device)</td>
+<td class="legend">Storage copes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Contact copes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Per-app sensor controls</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Per-connection DHCP state flushing</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Per-connection MAC address randomization</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">SUPL: IMSI or phone number sent?</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="green">No</td>
+<td class="red">Yes</td>
+<td class="green">No</td>
+<td class="red">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Closed cross-profile package leaks?</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Closed device identifier leaks?</td>
+<td class="green">Yes, <a href="https://grapheneos.org/features#closed-device-identifier-leaks" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Metadata stripping for screenshots/photos</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">PSDS: user agent sent?<span class="tooltiptext">May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">No</td>
+<td class="green">No (except for specific devices)</td>
+<td class="yellow">for Qualcomm chips but w/o serial number</td>
+<td class="lred">for Qualcomm GPS chips</td>
+<td class="lred">for Qualcomm GPS chips</td>
+<td class="yellow">for Qualcomm chips but w/o serial number</td>
+<td class="lred">for Qualcomm GPS chips</td>
+</tr>
+
+
+<tr>
+<td class="legend semititle"><br />Security</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<!--
+<tr>
+<td class="legend">Bootloader relocking (if supported by device)?</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
@@ -519,20 +704,32 @@ border-bottom: 1px solid ivory;
 <td class="red">No</td>
 <td class="green">Yes</td>
 </tr>
+-->
 
 <tr>
-<td class="legend">Verified boot (if supported by device)</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="lred">Uses test keys</td>
+<td class="legend">Verified boot (if supported by device)?</td>
+<td class="green">Yes, including system app updates</td>
+<td class="yellow">Yes, but excluding system app updates</td>
+<td class="yellow">Yes, but excluding system app updates</td>
+<td class="yellow">Yes, but excluding system app updates</td>
+<td class="lred">Uses test keys; excl. system app updates</td>
 <td class="red">No</td>
-<td class="green">Yes</td>
+<td class="yellow">Yes, but excluding system app updates</td>
 </tr>
 
 <tr>
-<td class="legend">Secure application spawning</td>
+<td class="legend">Hardware-based security verification</td>
+<td class="green">Yes <a href="https://grapheneos.org/features#auditor" target="_blank">(Auditor app and attestation service)</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow">Some devices, <a href="https://attestation.app/about" target="_blank">see here</a></td>
+</tr>
+
+<tr>
+<td class="legend">Secure application spawning?</td>
 <td class="green">Yes (exec)</td>
 <td class="green">Yes (exec)</td>
 <td class="red">No</td>
@@ -543,7 +740,7 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Hardened memory allocator</td>
+<td class="legend">Hardened memory allocator?</td>
 <td class="green">Yes</td>
 <td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
 <td class="red">No</td>
@@ -554,9 +751,9 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Hardened kernel</td>
-<td class="green">Yes</td>
-<td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="legend">Hardened kernel?</td>
+<td class="green">Yes, highest</td>
+<td class="lgreen tooltip">Yes, high (device-specific)<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -565,9 +762,9 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Hardened libc</td>
-<td class="green">Yes</td>
-<td class="green tooltip">Yes<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
+<td class="legend">Hardened libc?</td>
+<td class="green">Yes, highest</td>
+<td class="lgreen tooltip">Yes, high<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -576,7 +773,7 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Hardened webview</td>
+<td class="legend">Hardened webview?</td>
 <td class="green">Yes (Vanadium)</td>
 <td class="green tooltip">Yes (Mulch)<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
 <td class="red">No</td>
@@ -586,6 +783,60 @@ border-bottom: 1px solid ivory;
 <td class="red">No</td>
 </tr>
 
+<tr>
+<td class="legend">Hardened SELinux policy?</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Additional hardening</td>
+<td class="green">Highest, <a href="https://grapheneos.org/features" target="_blank">see here</a></td>
+<td class="yellow">Medium, <a href="https://divestos.org/pages/technical_details" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Secure TLS for SUPL?</td>
+<td class="green tooltip">TLSv1.2 if supported by device<span class="tooltiptext">Older Pixels with Qualcomm chips only support TLSv1.1</span></td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="red">TLSv1.1 or TLSv1.0</td>
+</tr>
+
+<tr>
+<td class="legend">Secured fallback DNS server endpoint?</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No (Quad9's unsecured DNS endpoint)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Secure connection to network time server?</td>
+<td class="green">HTTPS via GrapheneOS server</td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+</tr>
 
 <tr>
 <td class="legend semititle"><br />Updates</td>
@@ -596,15 +847,15 @@ border-bottom: 1px solid ivory;
 <td class="legend tooltip">Security update speed<span class="tooltiptext"><a href="https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
 <td class="green"><2 days</td>
 <td class="lgreen">1-3 weeks</td>
-<td class="lgreen">~1 week</td>
-<td class="yellow">~1 month</td>
-<td class="lred">~2 months</td>
-<td class="lgreen">1-2 weeks</td>
+<td class="yellow">~1 week, sometimes longer delays</td>
+<td class="lred">~1 month, sometimes longer delays</td>
+<td class="lred">~2 months, sometimes longer delays</td>
+<td class="yellow">1-2 weeks, sometimes longer delays</td>
 <td>Depends on phone vendor</td>
 </tr>
 
 <tr>
-<td class="legend">Security updates (ASB) after phone EoL date</td>
+<td class="legend tooltip">Partial security updates (ASB) after EoL date<span class="tooltiptext">missing most driver and firmware patches after the phone's end of life date</span></td>
 <td class="lgreen">~1 year</td>
 <td class="green">Several years</td>
 <td class="lgreen">1-2 years</td>
@@ -615,21 +866,21 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Number of Android versions supported</td>
-<td class="yellow">Usually 1 Android version</td>
-<td class="green">7 Android versions (incl. backports)</td>
-<td class="yellow">Usually 1 Android version</td>
-<td class="yellow">Usually 1 Android version</td>
-<td class="lgreen">2-3 Android versions</td>
-<td class="lgreen">Usually 3 Android versions</td>
-<td class="lgreen">Usually 3 Android versions</td>
+<td class="legend tooltip">Number of Android versions supported<span class="tooltiptext">Only the latest major release of AOSP has full security patches. Most privacy fixes are in fact only included for the new OS versions, not in the security patches. The ASB patches patches rarely include fixes for permission model / sandbox flaws resulting in privacy leaks since they're given Moderate severity and often require invasive changes including potential compatibility breaks.</span></td>
+<td>Usually 1 Android version</td>
+<td>7 Android versions (incl. backports)</td>
+<td>Usually 1 Android version</td>
+<td>Usually 1 Android version</td>
+<td>2-3 Android versions</td>
+<td>Usually 3 Android versions</td>
+<td>Usually 3 Android versions</td>
 </tr>
 
 <tr>
-<td class="legend tooltip">Webview speed<span class="tooltiptext"><a href="https://divestos.org/misc/ch-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
+<td class="legend tooltip">Webview update speed<span class="tooltiptext"><a href="https://divestos.org/misc/ch-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
 <td class="green"><2 days</td>
 <td class="green"><2 days</td>
-<td class="lgreen"><1 week</td>
+<td class="yellow"><1 week, sometimes longer delays</td>
 <td class="yellow"><2 weeks</td>
 <td class="red">Several weeks/months</td>
 <td class="yellow"><2 weeks</td>
