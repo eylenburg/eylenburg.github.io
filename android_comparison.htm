@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
---legendwidth: 275px;
---distrowidth: 260px;
+--legendwidth: 270px;
+--distrowidth: 230px;
 }
 
 table.comparison {
@@ -128,6 +128,10 @@ td.yellow,
 td.line {
 border-top: 1px solid ivory;
 border-bottom: 1px solid ivory;
+}
+
+sup {
+font-size: x-small;
 }
 </style>
 
@@ -259,7 +263,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Network-based location</td>
-<td class="green tooltip">Emulated (default), or Play Services<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
+<td class="green tooltip">Emulated <sup>default</sup>, or Play Services<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td class="red">No</td>
 <td class="green">UnifiedNLP</td>
 <td class="green">UnifiedNLP</td>
@@ -342,7 +346,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Network location provider</td>
-<td class="green tooltip">Emulated/GNSS (default) or Google<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
+<td class="green tooltip">Emulated/GNSS <sup>default</sup>, or Google<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td>n/a</td>
 <td class="green">UnifiedNLP</td>
 <td class="green">UnifiedNLP</td>
@@ -353,77 +357,79 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">SUPL</td>
-<td class="green">GrapheneOS (default), Google or none</td>
-<td class="yellow">Google (default), or none</td>
-<td class="yellow">Google (default), or none</td>
-<td class="yellow">Google (default), or none</td>
+<td class="green">GrapheneOS <sup>default</sup>, Google or none</td>
+<td class="yellow">Google <sup>default</sup>, or none</td>
+<td class="yellow">Google <sup>default</sup>, or none</td>
+<td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
-<td class="yellow">Google (default), or none</td>
+<td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
 
 <!--
 <tr>
-<td class="legend tooltip">PSDS (depends on device)<span class="tooltiptext">Default server depends on GPS chipset, e.g. phones with Qualcomm chips connect to a Qualcomm server and phones with Broadcom chips connect to a Broadcom server, except Google Pixels with Broadcom chips that connect to a Google server instead. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
-<td class="green">GrapheneOS (default), Google/Qualcomm, or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="legend tooltip">PSDS (depends on device)<span class="tooltiptext">Default server depends on GPS chipset, e.g. phones with Qualcomm chips connect to a Qualcomm server and phones with Broadcom GPS connect to a Broadcom server, except Google Pixels with Broadcom chips that connect to a Google server instead. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">GrapheneOS <sup>default</sup>, Google/Qualcomm, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
 <td class="lred">Google/Broadcom/Qualcomm</td>
-<td class="yellow">Google/Broadcom/Qualcomm (default), or none</td>
+<td class="yellow">Google/Broadcom/Qualcomm <sup>default</sup>, or none</td>
 <td class="lred">Google/Broadcom/Qualcomm</td>
 </tr> 
 -->
 
 <tr>
-<td class="legend ">PSDS - Google Pixel 6 and later</td>
-<td class="green">GrapheneOS (default), Google, or none</td>
-<td class="green">Broadcom (default), or none</td>
-<td class="green">Broadcom (default), or none</td>
-<td class="green">Broadcom (default), or none</td>
+<td class="legend tooltip">PSDS - Google Pixel 6 and later<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
 <td class="red">Google</td>
-<td class="yellow">Google, or none</td>
+<td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
 
+<!--
 <tr>
 <td class="legend ">PSDS - other devices</td>
-<td class="green">GrapheneOS (default), Qualcomm, or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
-<td class="green">Broadcom/Qualcomm (default), or none</td>
+<td class="green">GrapheneOS <sup>default</sup>, Qualcomm, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
 <td class="green">Broadcom/Qualcomm</td>
 <td class="green">Broadcom/Qualcomm, or none</td>
 <td class="green">Broadcom/Qualcomm</td>
 </tr>
+-->
 
 <!--
 <tr>
 <td class="legend ">PSDS - other devices with Broadcom chips</td>
 <td>n/a (no supported devices)</td>
-<td class="green">Broadcom (default), or none</td>
-<td class="green">Broadcom (default), or none</td>
-<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
 <td class="green">Broadcom</td>
-<td class="green">Broadcom (default), or none</td>
+<td class="green">Broadcom <sup>default</sup>, or none</td>
 <td class="lred">Broadcom</td>
 </tr>
 
 <tr>
 <td class="legend">PSDS - devices with Qualcomm chips</td>
-<td class="green">GrapheneOS (default), Qualcomm, or none</td>
-<td class="green">Qualcomm (default), or none</td>
-<td class="green">Qualcomm (default), or none</td>
-<td class="green">Qualcomm (default), or none</td>
+<td class="green">GrapheneOS <sup>default</sup>, Qualcomm, or none</td>
+<td class="green">Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Qualcomm <sup>default</sup>, or none</td>
+<td class="green">Qualcomm <sup>default</sup>, or none</td>
 <td class="green">Qualcomm</td>
-<td class="green">Qualcomm (default), or none</td>
+<td class="green">Qualcomm <sup>default</sup>, or none</td>
 <td class="green">Qualcomm</td>
 </tr>
 -->
 
 <tr>
 <td class="legend">Connectivity check/captive portal</td>
-<td class="green">GrapheneOS (default), Google, or none</td>
+<td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="green">Multiple presets offered</td>
 <td class="yellow">Google, but can be changed</td>
 <td class="green">Kuketz.de</td>
@@ -434,7 +440,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">DNS connectivity check</td>
-<td class="green">GrapheneOS (default), or Google</td>
+<td class="green">GrapheneOS <sup>default</sup>, or Google</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
@@ -456,7 +462,7 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Network time</td>
-<td class="green">GrapheneOS (default), or none</td>
+<td class="green">GrapheneOS <sup>default</sup>, or none</td>
 <td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
 <td class="red">Google and carrier-based time</td>
 <td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
@@ -646,11 +652,11 @@ border-bottom: 1px solid ivory;
 <tr>
 <td class="legend tooltip">PSDS: user agent sent?<span class="tooltiptext">May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
 <td class="green">No</td>
-<td class="lgreen">No (device-specific)</td>
-<td class="yellow">for Qualcomm chips but w/o serial number</td>
+<td class="lgreen">No (device-specific), <a href="https://divestos.org/pages/network_connections#psds">see here</a></td>
+<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
 <td class="lred">for Qualcomm GPS chips</td>
 <td class="lred">for Qualcomm GPS chips</td>
-<td class="yellow">for Qualcomm chips but w/o serial number</td>
+<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
 <td class="lred">for Qualcomm GPS chips</td>
 </tr>
 
@@ -708,18 +714,18 @@ border-bottom: 1px solid ivory;
 
 <tr>
 <td class="legend">Verified boot (if supported by device)?</td>
-<td class="green">Yes, including system app updates</td>
-<td class="yellow">Yes, but excluding system app updates</td>
-<td class="yellow">Yes, but excluding system app updates</td>
-<td class="yellow">Yes, but excluding system app updates</td>
-<td class="lred">Uses test keys; excl. system app updates</td>
+<td class="green">Yes, incl. system app updates</td>
+<td class="yellow">Yes, but excl. system app updates</td>
+<td class="yellow">Yes, but excl. system app updates</td>
+<td class="yellow">Yes, but excl. system app updates</td>
+<td class="lred">w/ test keys; excl. system app updates</td>
 <td class="red">No</td>
-<td class="yellow">Yes, but excluding system app updates</td>
+<td class="yellow">Yes, but excl. system app updates</td>
 </tr>
 
 <tr>
 <td class="legend">Hardware-based security verification</td>
-<td class="green">Yes <a href="https://grapheneos.org/features#auditor" target="_blank">(Auditor app and attestation service)</a></td>
+<td class="green">Yes, <a href="https://grapheneos.org/features#auditor" target="_blank"> see here</a></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -817,11 +823,11 @@ border-bottom: 1px solid ivory;
 </tr>
 
 <tr>
-<td class="legend">Secured fallback DNS server endpoint?</td>
+<td class="legend">Fallback DNS server with DNSSEC?</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<td class="red">No (Quad9's unsecured DNS endpoint)</td>
+<td class="red tooltip">No<span class="tooltiptext">uses Quad9's unsecured endpoint (9.9.9.10) with provides no security blacklist and no DNSSEC</span></td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
