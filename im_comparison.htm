@@ -52,6 +52,12 @@ position: -webkit-sticky;
 position: sticky;
 top: 0px;
 z-index: 10;
+background-color: white;
+font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+th {background-color: #222; color: white;  }
 }
 
 td img {
@@ -160,7 +166,7 @@ background-color: #999;
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
@@ -204,14 +210,14 @@ I have limited this comparison to only ten messengers:</p>
 <li>Snapchat: Quite popular, but more like a social media than pure IM, and not #1 in any country.</li>
 <li>QQ: Second most popular messenger in China. But if WeChat doesn't make it on list, QQ won't make it either.</li>
 <li>Wire, Wickr, Slack, Microsoft Teams, BBMe, Mattermost: Focus on enterprise users.</li>
-<li>Jami, Session: Low adoption.</li>
+<li>Simplex, Session, Jami: Great privacy, but low adoption.</li>
 <li>Instagram, LinkedIn: Mainly social media rather than a messenger.</li>
 <li>Mumble, Teamspeak: Voice chat focus.</li>
 </ul>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: August 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: October 2023</p>
 
 
 <table class="comparison">
@@ -456,22 +462,25 @@ I have limited this comparison to only ten messengers:</p>
 <td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
+
+<!--
 <tr>
 <td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Smartphones:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
+-->
 
 <tr>
 <td>Android</td>
-<td class="yes">Yes (APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="almost">Yes (no APK available)</td>
-<td class="yes">Yes (APK available)</td>
-<td class="almost">Yes (no APK available)</td>
-<td class="yes">Yes (APK available)</td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
+<td class="almost">Yes (needs Google Play for push notifications)<!-- (no APK available)--></td>
+<td class="almost">Yes (needs Google Play for push notifications)<!-- (APK available)--></td>
+<td class="yes">Yes<!-- (no APK available)--></td>
+<td class="yes">Yes<!-- (APK available)--></td>
 </tr>
 
 
@@ -489,6 +498,7 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 </tr>
 
+<!--
 <tr>
 <td>KaiOS</td>
 <td class="no">No</td>
@@ -502,7 +512,9 @@ I have limited this comparison to only ten messengers:</p>
 <td class="no">No</td>
 <td class="notreally">Older versions of KaiOS</td>
 </tr>
+-->
 
+<!--
 <tr>
 <td class="tooltip">Mobile GNU/Linux<span class="tooltiptext">Mobile distributions such as Sailfish OS, Ubuntu Touch, postmarketOS etc.</span></td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
@@ -516,6 +528,7 @@ I have limited this comparison to only ten messengers:</p>
 <td class="notreally tooltip">Can run Android version<span class="tooltiptext">using Anbox (most distributions) or Sailfish X Android App support</span></td>
 <td class="notreally tooltip">Can run Android version<span class="tooltiptext">using Anbox (most distributions) or Sailfish X Android App support</span></td>
 </tr>
+-->
 
 <!--
 <tr>
@@ -561,9 +574,11 @@ I have limited this comparison to only ten messengers:</p>
 </tr>
 -->
 
+<!--
 <tr>
 <td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Desktops:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
+</tr> -->
+
 <tr>
 <td>Windows</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
@@ -593,7 +608,7 @@ I have limited this comparison to only ten messengers:</p>
 </tr>
 
 <tr>
-<td class="tooltip">GNU/Linux <span class="tooltiptext">Desktop distributions such as Ubuntu, Debian, OpenSUSE, Fedora etc.</span></td>
+<td>GNU/Linux</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -607,7 +622,7 @@ I have limited this comparison to only ten messengers:</p>
 </tr>
 
 <tr>
-<td class="tooltip">Unix <span class="tooltiptext">e.g. FreeBSD, OpenBSD, NetBSD, DragonFlyBSD, Illumos, and  Solaris</span></td>
+<td class="tooltip">Unix &amp; BSD<span class="tooltiptext">e.g. FreeBSD, OpenBSD, NetBSD, DragonFlyBSD, Illumos, and  Solaris</span></td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="no">No</td>
 <td class="otherclients"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix client(s)</a></td>
@@ -667,7 +682,7 @@ I have limited this comparison to only ten messengers:</p>
 -->
 
 <tr>
-<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Web client</td>
+<td>Web browser</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -834,7 +849,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Find contacts from phone address book</td>
-<td class="otherclients tooltip">supported by <a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>
+<td class="otherclients tooltip"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>
 <td class="no">No</td>
 <td class="yes">Phone number &amp; Email</td>
 <td class="yes">Phone number</td>
@@ -1046,7 +1061,7 @@ I have limited this comparison to only ten messengers:</p>
 <td>Encryption: Forward secrecy</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="otherclients tooltip">supported by other Matrix clients<span class="tooltiptext">Supported by the Matrix protocol, but not the Element client</span></td>
+<td class="otherclients tooltip">other Matrix clients<span class="tooltiptext">Supported by the Matrix protocol, but not the Element client</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>

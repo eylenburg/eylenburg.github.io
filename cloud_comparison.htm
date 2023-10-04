@@ -68,6 +68,13 @@ table.comparison tr td:nth-last-of-type(1) {
 text-align: left;
 }
 
+table tr td:nth-child(8),
+table tr td:nth-child(14),
+table tr td:nth-child(17),
+table tr td:nth-child(19) {
+border-left: double black;
+}
+
 .center {
 text-align: center;
 }
@@ -188,7 +195,7 @@ input#NoEmail:checked ~ .NoEmailChild { display: none !important; visibility: hi
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
@@ -266,7 +273,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td colspan="6" rowspan="2">File sync</td>
 <td colspan="3" rowspan="2">Addressbook, Calendar &amp; Tasks</td>
 <td colspan="2" rowspan="2">Email</td>
-<td colspan="5">Pricing<span style="text-decoration: none;"> (single user, annual price in EUR)</span></td>
+<td colspan="5">Pricing<span style="font-size: smaller;"> (single user, annual price in EUR)<span style="color: red;"> (prices last updated in 2022)</span></span></td>
 </tr>
 
 <tr style="text-align: left; vertical-align: top;">
@@ -356,7 +363,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
@@ -371,13 +378,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- self-hosting -->
 <td>depends on setup</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail --><!-- Other -->
-<td colspan="2" class="na"></td>
+<td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi) or ~&euro;12 p.a. for cheap VPS</td><!-- price comment -->
@@ -399,7 +406,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="almost">Linux via <span class="tooltip">3rd party apps<span class="tooltiptext">such as GoodSync</span></span></td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM --><!-- Mail -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;108<br />(100 GB)</td>
@@ -416,7 +423,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Free</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <td class="yes">Yes</td>
 <td class="no">Neither calendar nor tasks</td>
 <td class="no">No</td>
@@ -446,7 +453,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM --><!-- Mail -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td colspan="2" class="px">&euro;120<br />(2 TB)</td>
@@ -491,13 +498,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->
 <td class="yes">Yes <em>(via EteSync Bridge)</em></td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
-<td colspan="2" class="na"></td>
+<td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Hosted by EteSync developers: &euro;21 p.a.;<br />Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi) or ~&euro;12 p.a. for cheap VPS</td><!-- price comment -->
@@ -550,7 +557,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM --><!-- Mail --><!-- Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;12<br />(100 GB)</td>
@@ -568,13 +575,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail --><!-- Other -->
-<td colspan="2" class="na"></td>
+<td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Free for syncing two devices, otherwise &euro;40 p.a.</td><!-- price comment -->
@@ -656,7 +663,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;22<br />(150 GB)</td>
@@ -710,7 +717,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;42<br />(100 GB)</td>
@@ -765,7 +772,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;36<br />(250 GB)</td>
@@ -850,7 +857,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM --><!-- Mail --><!-- Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;50<br />(400 GB)</td>
@@ -909,7 +916,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
-<td colspan="2" class="na"></td><!-- Zero access encryption --><!-- IMAP -->
+<td class="na"></td><td class="na"></td><!-- Zero access encryption --><!-- IMAP -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px" style="vertical-align: top;">
 <span class="tooltip">Hetzner <span class="tooltiptext">Storage Share</span></span>:<br />
@@ -941,7 +948,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="notreally">No Linux support</td><!-- desktop sync -->
 <td class="no">No</td><!-- mobile sync -->
 <!-- PIM --><!-- Mail & Notes -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;34<br />(500 GB)</td>
@@ -965,7 +972,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes <em>(except E2EE files)</em></td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td class="px">&euro;50<br />(500 GB)</td>
@@ -983,7 +990,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="almost tooltip">Yes (temporarily encrypted)<span class="tooltiptext">The data will be temporarily decrypted whenever modifications are made, e.g. in the browser or via an app using CalDAV</span></td><!-- E2EE -->
 <td class="mixed">Yes, but tasks missing on website</td><!-- has tasks? -->
@@ -1037,13 +1044,13 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- self-hosting -->
 <td>depends on setup</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail & Other -->
-<td colspan="2" class="na"></td>
+<td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi) or ~&euro;12 p.a. for cheap VPS</td><!-- price comment -->
@@ -1096,7 +1103,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px" style="vertical-align: top;">
 <em>Single user prices:</em><br />Luckycloud:<br />YourSecureCloud:<br /></td>
@@ -1145,7 +1152,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="no">Neither calendar nor tasks</td><!-- has tasks? -->
@@ -1176,7 +1183,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- mobile sync -->
 <!-- yes = all OS officially supported; almost = worst OS only supported through 3rd party, best officially; mixed = worst OS not supported at all, best officially; notreally = worst OS not supported at all, best only through 3rd party; no = no OS supported in any way -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="px na"></td>
 <td colspan="2" class="px">&euro;85<br />(2 TB)</td>
@@ -1201,7 +1208,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- mobile sync -->
 <!-- PIM, Mail, Other -->
 <td colspan="3">Serverless sync possible with DecSync</td>
-<td colspan="2" class="na"></td>
+<td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="4" class="px na"></td>
 <td>Self-hosted server cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
@@ -1224,7 +1231,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="no">No</td><!-- mobile sync -->
 <!-- PIM, Mail, Other -->
-<td colspan="5" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td colspan="2" class="na px"></td>
 <td class="px">&euro;100<br />(500 GB)</td>
@@ -1242,7 +1249,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="yes">Yes</td><!-- E2EE -->
 <td class="no">No tasks</td><!-- has tasks? -->
@@ -1296,7 +1303,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="no">In transit only</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td colspan="6" class="na"></td>
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->

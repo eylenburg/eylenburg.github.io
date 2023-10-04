@@ -46,7 +46,14 @@ position: -webkit-sticky;
 position: sticky;
 top: 0px;
 z-index: 10;
+background-color: white;
+font-weight: bold;
 }
+
+@media (prefers-color-scheme: dark) {
+th {background-color: #222; color: white;  }
+}
+
 
 td img {
 padding: 15px 0px;
@@ -142,7 +149,9 @@ border: 2px solid aqua;
 border-radius: 3px;
 }
 
+.marketsharecontent { display: none; }
 
+.marketsharecontent:target { display: block;  }
 
 
 </style>
@@ -157,7 +166,7 @@ border-radius: 3px;
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
@@ -188,14 +197,14 @@ border-radius: 3px;
 <li><strong>ArcaOS</strong>: While it is a legacy OS catering towards remaining users of OS/2, with fundamental limitations (e.g. stuck to 32-bit), Arca Noae has undertaken many significant improvements such as hardware compatibility or the possibility of using more than 4 GB RAM. ArcaOS can also run modern browsers.</li>
 <li><strong>RISC OS</strong>: Legacy OS from the late 80s that was open sourced in 2018. Used to be popular as a desktop OS in the UK. Limited in its design (e.g. no pre-emptive multitasking, no support for multi-core CPUs or 64-bit). Unlikely to ever become "relevant" again besides its legacy user base. Yet, it has recently received a modern web browser (Iris) and was ported to the Raspberry Pi. The comparison below refers to <span style="text-decoration: underline;">RISC OS 5</span>.</li>
 <li><strong>AmigaOS</strong>: Legacy OS from the 1980s with slow development progress. Back in the day it was an impressive OS for home users. Suffers from limited hardware support (32-bit PowerPC only) with no plans to change this. Disappointing browser situation (best browser is Odyssey Web Browser/OWB, which is still receiving updates as of 2022 but is fundamentally based on a 2013 version of Webkit with backports/updates added). Long-term outlook is unclear as it is proprietary, commercial OS. The comparison below refers to <span style="text-decoration: underline;">AmigaOS 4</span>.</li>
-<li><strong>MorphOS</strong>: Despite its negligible market share and limited hardware compatibility (PowerPC only, mostly obsolete devices; no support for multiple CPU cores or >2 GB RAM), this appears to be a relatively polished OS and has the most modern web browser (Wayfarer) for all AmigaOS-like operating systems. Good enough to be a daily driver for some.</li>
-<li><strong>AROS</strong>: An open source reimplementation of AmigaOS 3.1. While suffering from relatively slow development and few developers, it might survive AmigaOS and MorphOS in the long-term, as AROS runs on x86 hardware and has some other modern features the others lack (such as 64-bit support).</li>
+<li><strong>MorphOS</strong>: Despite its negligible market share and limited hardware compatibility (PowerPC only, mostly obsolete devices; no support for multiple CPU cores or >2 GB RAM), this appears to be a relatively polished OS and has the most modern web browser (Wayfarer) of all AmigaOS-like operating systems. Good enough to be a daily driver for some.</li>
+<li><strong>AROS</strong>: An open source reimplementation of AmigaOS 3.1. While suffering from relatively slow development and few developers, it might outlive AmigaOS and MorphOS in the long-term, as AROS runs on x86 hardware and has some other modern features the others lack (such as 64-bit support).</li>
 <li><strong>OpenVMS</strong>: An old operating system going back to the 1970s, which used to be sold on servers and workstations alike. Nowadays, it's only marketed towards the server market, in particular legacy OpenVMS users. Nevertheless, the DECWindows desktop environment is still being developed and officially supported. The current owner, VSI, recently ported OpenVMS to x86, although more with a focus on running as a virtual machine than on bare metal. OpenVMS has influenced Microsoft Windows.</li>
 </ul>
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: September 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: October 2023</p>
 
 
 <table class="comparison">
@@ -596,7 +605,7 @@ border-radius: 3px;
 </tr>
 
 <tr>
-<td>Power (ppc32, ppc64)</td>
+<td>Power (ppc32, ppc64(le))</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1389,11 +1398,11 @@ Dragonfly missing
 </tr>
 
 <tr>
-<td>Full disk encryption (incl. system)</td>
+<td>Full disk encryption</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1401,6 +1410,28 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of Unix -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>Secure/verified boot</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td><!-- end of Unix -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1639,7 +1670,7 @@ Dragonfly missing
 <td class="almost">Yes (paid)</td>
 </tr>
 
-
+<!--
 <tr>
 <td class="semititle"><br />Browser engine support (up to date)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
@@ -1651,12 +1682,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no tooltip">No<span class="tooltiptext">although Mozilla gives instructions how to run the Android or Linux app of Firefox on Chrome OS</span></td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
-<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td><!-- end of Unix -->
+<td class="almost tooltip">Unofficial<span class="tooltiptext">Firefox</span></td>
 <td class="no tooltip">Old (2008)<span class="tooltiptext">Firefox 2</span></td>
 <td class="no tooltip">Old (2018)<span class="tooltiptext">Firefox 45 ESR</span></td>
 <td class="no tooltip">Old (2008)<span class="tooltiptext">Firefox 2</span></td>
@@ -1673,12 +1704,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">GNOME Web</span></td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">WebPositive, GNOME Web</span></td>
 <td class="no">No</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Iris Browser</span></td>
@@ -1695,12 +1726,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
 <td class="no">No</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Chromium</span></td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Falkon Browser</span></td>
 <td class="almost tooltip">Unofficial<span class="tooltiptext">Dooble Browser</span></td>
 <td class="no">No</td>
@@ -1709,13 +1740,36 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
+-->
 
 
 <tr>
 <td class="semititle"><br />Native application support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
+<tr>
+<td class="tooltip">Modern, up-to-date browser<span class="tooltiptext">using Blink, WebKit, or Gecko engines</span></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="almost tooltip">Unofficial<span class="tooltiptext">e.g. Firefox, Chromium, GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">e.g. Firefox, GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">e.g. Firefox, Chromium, GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">e.g. Firefox, Chromium, GNOME Web</span></td>
+<td class="almost tooltip">Unofficial<span class="tooltiptext">e.g. Firefox</span></td><!-- end of Unix -->
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. WebPositive, GNOME Web, Falkon</span></td>
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. Dooble, Otter</span></td>
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. Iris</span></td>
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. Odyssey</span></td>
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. Wayfarer</span></td>
+<td class="mixed tooltip">Niche browsers<span class="tooltiptext">e.g. Odyssey</span></td>
+<td class="no">No</td>
+</tr>
 
+<!--
 <tr>
 <td class="tooltip">Microsoft Office core apps<span class="tooltiptext">Excel, Onenote, Outlook, Powerpoint, Word</span></td>
 <td class="yes">Yes</td>
@@ -1723,12 +1777,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of big 6 -->
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
@@ -1737,9 +1791,32 @@ Dragonfly missing
 <td class="notreally">Web version</td>
 <td class="no">No</td>
 </tr>
+-->
 
 <tr>
-<td>LibreOffice or CollaboraOffice</td>
+<td class="tooltip">Microsoft Office core apps (offline)<span class="tooltiptext">Excel, Onenote, Outlook, Powerpoint, Word</span></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td><!-- end of big 6 -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>LibreOffice or CollaboraOffice (offline)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1752,11 +1829,11 @@ Dragonfly missing
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td><!-- end of Unix -->
 <td class="almost">Unofficial</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
 <td class="no">No</td>
 </tr>
 
@@ -1849,60 +1926,29 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
-
-
-
 <tr>
-<td><br />Messaging &amp; Conferencing - official apps</td><td colspan="18"><br /><em>Open communication standards, e.g. E-Mail, SMS, Matrix, XMPP, or IRC can be implemented on any operating system as they don't depend on a specific application</em></td>
-</tr>
-
-<tr>
-<td style="text-indent: 10px;">WhatsApp</td>
+<td>WhatsApp (native version, not web client)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of big 6 -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
 <td class="no">No</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
+<td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
-</tr>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
 
 <tr>
-<td style="text-indent: 10px;">Telegram</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="notreally">Web version</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
-<td class="almost">Unofficial</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="notreally">Web version</td>
-<td class="no">No</td>
-</tr>
-
-
-<tr>
-<td style="text-indent: 10px;">Signal</td>
+<td>Signal</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1923,7 +1969,80 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
+
 <!--
+<tr>
+<td><br />Messaging &amp; Conferencing - official apps</td><td colspan="18"><br /><em>Open communication standards, e.g. E-Mail, SMS, Matrix, XMPP, or IRC can be implemented on any operating system as they don't depend on a specific application</em></td>
+</tr> -->
+
+<!--
+<tr>
+<td style="text-indent: 10px;">WhatsApp</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="no">No</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td style="text-indent: 10px;">Telegram</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="notreally">Web version</td>
+<td class="yes">Yes</td>
+<td class="almost">Unofficial</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="almost">Unofficial</td>
+<td class="notreally">Web version</td>
+<td class="almost">Unofficial</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="notreally">Web version</td>
+<td class="no">No</td>
+</tr>
+
+
+<tr>
+<td style="text-indent: 10px;">Signal</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
 <tr>
 <td style="text-indent: 10px;">iMessage</td>
 <td class="no">No</td>
@@ -1946,7 +2065,7 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
--->
+
 
 <tr>
 <td style="text-indent: 10px;">Microsoft Teams</td>
@@ -1955,12 +2074,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of big 6 -->
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
-<td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td><!-- end of Unix -->
+<td class="notreally">Web version</td>
+<td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="notreally">Web version</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1977,12 +2096,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes (PWA)</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
-<td class="notreally">Web version</td><!-- end of Unix -->
+<td class="notreally">Web version</td>
 <td class="notreally">Web version</td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
@@ -1991,14 +2110,15 @@ Dragonfly missing
 <td class="no tooltip">No<span class="tooltiptext">Web version is not fully compatible with OS/available browser</span></td>
 <td class="no">No</td>
 </tr>
+-->
 
-
+<!--
 <tr>
 <td><br />Cloud sync  - official apps</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
+</tr> -->
 
 <tr>
-<td style="text-indent: 10px;">Dropbox</td>
+<td>Dropbox</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
@@ -2021,7 +2141,7 @@ Dragonfly missing
 
 
 <tr>
-<td style="text-indent: 10px;">OneDrive</td>
+<td>OneDrive</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
@@ -2088,7 +2208,6 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
--->
 
 <tr>
 <td style="text-indent: 10px;">Nextcloud (client)</td>
@@ -2097,12 +2216,14 @@ Dragonfly missing
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+
 <td class="almost">Unofficial</td>
 <td class="no">No</td>
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
+
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2119,12 +2240,14 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2133,13 +2256,15 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
+-->
 
+<!--
 <tr>
 <td><br />Server applications</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
+</tr> -->
 
 <tr>
-<td style="text-indent: 10px;">Web server (built-in, Apache, nginx)</td>
+<td>Web server (built-in, Apache, nginx)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -2161,7 +2286,7 @@ Dragonfly missing
 </tr>
 
 <tr>
-<td style="text-indent: 10px;">Mail server (built-in, Dovecot, Exchange)</td>
+<td>Mail server (built-in, Dovecot, Exchange)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -2209,7 +2334,7 @@ Dragonfly missing
 -->
 
 <tr>
-<td style="text-indent: 10px;">Nextcloud Server</td>
+<td>Nextcloud Server</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2230,6 +2355,7 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
+<!--
 <tr>
 <td style="text-indent: 10px;">XMPP server <span style="font-size: 8.5pt;">(ejabberd, Prosody, Openfire)</span></td>
 <td class="yes">Yes</td>
@@ -2237,12 +2363,14 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2259,12 +2387,14 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+
 <td class="yes">Yes</td>
 <td class="almost">Unofficial</td>
 <td class="yes">Yes</td>
 <td class="almost">Unofficial</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
+
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2273,6 +2403,7 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
+-->	
 
 
 <tr>
@@ -2308,7 +2439,7 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 </p>
 
 <ul>
-<li>OS that have never been marketed towards end users in any way, e.g. <strong>z/OS, IBM i, MCP, VSEn, VxWorks, TRON, NonSteop OS, OS-9, BAE Systems STOP, ThreadX, FreeRTOS, ...</strong></li>
+<li>OS that have never been marketed towards end users in any way, e.g. <strong>z/OS, IBM i, MCP, VSEn, VxWorks, TRON, NonStop OS, OS-9, BAE Systems STOP, ThreadX, FreeRTOS, ...</strong></li>
 <li>OS that are not developed anymore, e.g. <strong>OS/2, Mac OS 9, IRIX, MS-DOS, BeOS/ZETA, AtheOS/Syllable, SkyOS, Symbian, Plan 9, BlackBerry OS 7, BlackBerry 10, REX OS, Nokia Series 30, Nokia Series 40, Nokia Asha OS, ...</strong></li>
 <li>OS that have not had any updates since 2020 even though they are not confirmed to be dead, e.g. <strong>UnixWare, Minix, Inferno, PhantomOS, Ghost, ...</strong></li>
 <li>This still leaves an extensive list of OS that I didn't include but are worth mentioning:</li>
@@ -2372,12 +2503,15 @@ There are of course many more operating systems, <a href="os_familytree.htm">for
 
 <h2>What about market share?</h2>
 
+<p style="font-size: large; font-weight: bold;"><a href="#Marketshare">Click here to show the estimated historical market shares of operating systems across personal devices</a> (from 2019, will not be updated anymore)</p>
 
+<div class="marketsharecontent" id="Marketshare">
 <p>The below diagram shows the historical market shares of operating systems across personal devices (meaning "workstations", "PC", desktops, laptops, tablets and smartphones, but excluding for example servers). At the bottom you will see a short genealogy of the major "consumer" operating systems. Many historical operating systems families are long dead, some other are somehow still alive but barely so or have stopped not targeting the personal computing or workstation market anymore.<br /><br />
 In some cases, the old OS name has been kept even though its successor was a completely different product, technologically speaking. This includes Windows (versions up to Win 98 and Win ME based on MS-DOS, versions since Win 2000 based on NT), Blackberry OS (version 10 based on QNX), and macOS (version 10 based on the Unix-like Nextstep).</p>
 
 <a href="pics/OS market share_full.png" target="_blank"><img src="pics/OS market share_full.png" style="max-width: 100%;" alt="List of Browser Engines and their historical market shares" />
 <p>Click here to open the picture in a new tab</p></a>
+</div>
 
 <footer><hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="mailto:eylenburg@airmail.cc">Please drop me an e-mail</a></strong> or <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">create an issue on Github</a></strong></p>
 <p style="text-align: center">Donations welcome:<br />

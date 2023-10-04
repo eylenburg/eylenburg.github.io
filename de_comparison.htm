@@ -41,6 +41,12 @@ position: -webkit-sticky;
 position: sticky;
 top: 0px;
 z-index: 10;
+background-color: white;
+font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+th {background-color: #222; color: white;  }
 }
 
 td img {
@@ -235,7 +241,7 @@ color: #eac895;
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
@@ -259,7 +265,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: September 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: Octobe 2023</p>
 
 <table class="comparison">
 <colgroup>
@@ -523,8 +529,8 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <tr>
 <td>Image viewer &amp; management</td>
 
-<td class="qttoolkit kdeapp">Gwenview, digiKam</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp"><span class="tooltip">eog<span class="tooltiptext">Eye of GNOME</span></span>, Image Viewer, Photos</td> <!-- Gnome -->
+<td class="qttoolkit kdeapp">Gwenview, digiKam, ...</td> <!-- Plasma -->
+<td class="gtktoolkit gnomeapp"><span class="tooltip">eog<span class="tooltiptext">Eye of GNOME</span></span>, Image Viewer, ... <!-- Photos --></td> <!-- Gnome -->
 
 <td class="gtktoolkit">Ristretto</td> <!-- Xfce -->
 <td class="gtktoolkit gnomeapp tooltip">Eye of MATE<span class="tooltiptext">fork of eog (Eye of GNOME)</span></td>  <!-- MATE -->
@@ -570,17 +576,17 @@ The desktop environment "landscape" has fragmented since the controversial initi
 </tr>
 
 
-
+<!--
 <tr>
 <td>Terminal</td>
 
-<td class="qttoolkit kdeapp">Konsole</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME Console, Terminal</td> <!-- Gnome -->
+<td class="qttoolkit kdeapp">Konsole</td> 
+<td class="gtktoolkit gnomeapp">GNOME Console, Terminal</td> 
 
-<td class="gtktoolkit">Xfce Terminal</td> <!-- Xfce -->
-<td class="gtktoolkit gnomeapp tooltip">MATE Terminal<span class="tooltiptext">fork of GNOME Terminal</span></td>  <!-- MATE -->
-<td>-</td> <!-- Cinnamon -->
-<td class="qttoolkit">QTerminal</td> <!-- LXQt -->
+<td class="gtktoolkit">Xfce Terminal</td>
+<td class="gtktoolkit gnomeapp tooltip">MATE Terminal<span class="tooltiptext">fork of GNOME Terminal</span></td>  
+<td>-</td>
+<td class="qttoolkit">QTerminal</td>
 <td>-</td>
 
 <td>macOS Terminal</td>
@@ -591,25 +597,25 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <tr>
 <td>Calculator</td>
 
-<td class="qttoolkit kdeapp">KCalc</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME Calculator</td> <!-- Gnome -->
+<td class="qttoolkit kdeapp">KCalc</td> 
+<td class="gtktoolkit gnomeapp">GNOME Calculator</td> 
 
-<td>-</td> <!-- Xfce -->
-<td class="gtktoolkit gnomeapp tooltip">MATE Calculator<span class="tooltiptext">fork of GNOME Calculator</span></td>  <!-- MATE -->
-<td>-</td> <!-- Cinnamon -->
-<td>-</td> <!-- LXQt -->
+<td>-</td>
+<td class="gtktoolkit gnomeapp tooltip">MATE Calculator<span class="tooltiptext">fork of GNOME Calculator</span></td> 
+<td>-</td> 
+<td>-</td> 
 <td>-</td>
 
 <td>macOS Calculator</td>
 <td>Windows Calculator</td>
 </tr>
-
+-->
 
 
 <tr>
 <td>Media player</td>
 
-<td class="qttoolkit kdeapp">Dragon, Kaffeine, KMPlayer</td> <!-- Plasma -->
+<td class="qttoolkit kdeapp">Dragon, Kaffeine, ... <!--KMPlayer--></td> <!-- Plasma -->
 <td class="gtktoolkit gnomeapp">GNOME Videos (Totem)</td> <!-- GNOME -->
 <td class="gtktoolkit">Parole</td> <!-- Xfce -->
 <td>-</td>  <!-- MATE -->
@@ -625,8 +631,8 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <tr>
 <td>Music library</td>
 
-<td class="qttoolkit kdeapp">Elisa, JuK, Strawberry</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">Music, Lollypop, Rhythmbox</td> <!-- GNOME -->
+<td class="qttoolkit kdeapp">Elisa, Strawberry, ... <!-- JuK --></td> <!-- Plasma -->
+<td class="gtktoolkit gnomeapp">GNOME Music, ... <!--Lollypop, Rhythmbox--></td> <!-- GNOME -->
 <td class="gtktoolkit">Xfmpc</td> <!-- Xfce -->
 <td>-</td> <!-- MATE -->
 <td>-</td> <!-- Cinnamon -->
@@ -668,7 +674,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Calendar</td>
 
 <td class="qttoolkit kdeapp">KOrganizer</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME Calendar, Evolution</td> <!-- GNOME -->
+<td class="gtktoolkit gnomeapp">GNOME Calendar <!--, Evolution--></td> <!-- GNOME -->
 <td class="gtktoolkit">Orage</td> <!-- Xfce -->
 <td>-</td> <!-- MATE -->
 <td>-</td> <!-- Cinnamon -->
@@ -679,20 +685,22 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Windows Calendar</rd>
 </tr>
 
+<!--
 <tr>
 <td>System monitor</td>
 
-<td class="qttoolkit kdeapp">Plasma System Monitor</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME System Monitor</td> <!-- GNOME -->
-<td class="gtktoolkit">Xfce Taskmanager</td> <!-- Xfce -->
-<td class="gnomeapp gtktoolkit tooltip">MATE System Monitor<span class="tooltiptext">fork of GNOME System Monitor</span></td> <!-- MATE -->
-<td>-</td> <!-- Cinnamon -->
-<td class="kdeapp">qps</td> <!-- LXQt -->
+<td class="qttoolkit kdeapp">Plasma System Monitor</td> <
+<td class="gtktoolkit gnomeapp">GNOME System Monitor</td> 
+<td class="gtktoolkit">Xfce Taskmanager</td> 
+<td class="gnomeapp gtktoolkit tooltip">MATE System Monitor<span class="tooltiptext">fork of GNOME System Monitor</span></td> 
+<td>-</td> 
+<td class="kdeapp">qps</td> 
 <td>-</td>
 
 <td>Activity Monitor</td>
 <td>Windows Task Manager</td>
 </tr>
+-->
 
 
 <tr height="10">
@@ -806,22 +814,24 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td>
 </tr>
 
+<!--
 <tr>
 <td>Integration with online accounts</td>
 
-<td>Google, Nextcloud, Owncloud</td> <!-- Plasma -->
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Gnome -->
+<td>Google, Nextcloud, Owncloud</td> 
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> 
 
-<td>-</td> <!-- Xfce -->
-<td>-</td> <!-- MATE -->
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> <!-- Cinnamon -->
-<td>-</td> <!-- LXQt -->
+<td>-</td>
+<td>-</td> 
+<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> 
+<td>-</td> 
 <td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td>
 
 
 <td>Apple, AOL, Google, Microsoft, Yahoo</td>
 <td>Microsoft</td>
 </tr>
+-->
 
 
 <tr height="10">
@@ -832,38 +842,23 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="semititle">Panel elements <span style="font-size: x-small; font-weight: normal; text-decoration: none;">w/o extensions or hidden settings/tweaks</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><td></td></td>
 </tr>
 
+<!--
 <tr>
 <td>App launcher: show all apps / sort apps by XDG category</td>
 
-<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">with alternative launcher</span></span>/Yes</td> <!-- Plasma -->
-<td class="mixed">Yes/<span class="tooltip">No<span class="tooltiptext">but can create custom app folders</span></span></td><!-- Gnome -->
+<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">with alternative launcher</span></span>/Yes</td> 
+<td class="mixed">Yes/<span class="tooltip">No<span class="tooltiptext">but can create custom app folders</span></span></td>
 
-<td class="yes">Yes/Yes</td> <!-- Xfce -->
-<td class="yes">Yes/Yes</td> <!-- MATE -->
-<td class="yes">Yes/Yes</td> <!-- Cinnamon -->
-<td class="mixed">No/Yes</td> <!-- LXQt -->
+<td class="yes">Yes/Yes</td>
+<td class="yes">Yes/Yes</td>
+<td class="yes">Yes/Yes</td> 
+<td class="mixed">No/Yes</td> 
 <td class="yes">Yes/Yes</td>
 
 <td class="mixed">Yes/<span class="tooltip">(n.a.)<span class="tooltiptext">no automatic categorization but can create custom app folders</span></span></td>
 <td class="mixed">Yes/<span class="tooltip">(n.a.)<span class="tooltiptext">no automatic categorization but can create custom app folders</span></span></td>
 </tr>
-
-
-<tr>
-<td>App launcher: quickly uninstall apps (e.g. right-click)</td>
-
-<td class="no">No</td> <!-- Plasma -->
-<td class="no">No</td><!-- Gnome -->
-
-<td class="no">No</td> <!-- Xfce -->
-<td class="no">No</td> <!-- MATE -->
-<td class="no">No</td> <!-- Cinnamon -->
-<td class="no">No</td> <!-- LXQt -->
-<td class="no">No</td>
-
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-</tr>
+-->
 
 
 <tr>
@@ -956,7 +951,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Icons for background apps (e.g. cloud sync, messenger)</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="yes">Yes</td> <!-- GNOME -->
+<td class="mixed tooltip">Limited<span class="tooltiptext">Background app indicators and sticky notifications, but no classic tray icons.</td> <!-- GNOME -->
     
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td> <!-- MATE -->
@@ -983,6 +978,23 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <td class="no">No (always global)</td>
 <td class="no">No (always local)</td>
+</tr>
+
+
+<tr>
+<td>Quickly uninstall apps from app launcher (e.g. right-click)</td>
+
+<td class="no">No</td> <!-- Plasma -->
+<td class="no">No</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
+
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 

@@ -130,6 +130,10 @@ border-top: 1px solid ivory;
 border-bottom: 1px solid ivory;
 }
 
+@media (prefers-color-scheme: dark) {
+td.green, td.lgreen, td.red, td.lred, td.yellow { color: black;  }
+}
+
 sup {
 font-size: x-small;
 }
@@ -146,7 +150,7 @@ font-size: x-small;
 <td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
 <td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm#today">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
+<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
 <td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
 <td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
 <td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
@@ -166,7 +170,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: September 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: October 2023</p>
 
 <table class="comparison">
 
@@ -273,14 +277,14 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">DNS filtering (without VPN service)</td>
-<td class="lgreen">via Private DNS setting</td>
-<td class="green">Built-in filters in hosts file</td>
-<td class="lgreen">via Private DNS setting</td>
-<td class="green">Built-in iode-snort app</td>
-<td class="lgreen">via Private DNS setting</td>
-<td class="lgreen">via Private DNS setting</td>
-<td class="lgreen">via Private DNS setting</td>
+<td class="legend">System-wide connection/tracker blocking</td>
+<td class="green">via Private DNS setting, or via VPN</td>
+<td class="green">hosts file, Private DNS, or VPN</td>
+<td class="lgreen">via Private DNS setting, or via VPN</td>
+<td class="green">iode-snort app, Private DNS, or VPN</td>
+<td class="lgreen">via Private DNS setting, or via VPN</td>
+<td class="lgreen">via Private DNS setting, or via VPN</td>
+<td class="lgreen">via Private DNS setting, or via VPN</td>
 </tr>
 
 <tr>
@@ -431,11 +435,11 @@ font-size: x-small;
 <td class="legend">Connectivity check/captive portal</td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="green">Multiple presets offered</td>
-<td class="yellow">Google, but can be changed</td>
+<td class="lgreen">Google, but can be changed</td>
 <td class="green">Kuketz.de</td>
 <td class="green">/e/foundation</td>
-<td class="yellow">Google, but can be changed</td>
-<td class="yellow">Google, but can be changed</td>
+<td class="lgreen">Google, but can be changed</td>
+<td class="lgreen">Google, but can be changed</td>
 </tr>
 
 <tr>
@@ -557,7 +561,7 @@ font-size: x-small;
 -->
 
 <tr>
-<td class="legend">Push notifications via Google?</td>
+<td class="legend">Push notifications via Google FCM?</td>
 <td class="green">Yes</td>
 <td class="green">Optional</td>
 <td class="green">Optional</td>
@@ -565,6 +569,17 @@ font-size: x-small;
 <td class="green">Optional</td>
 <!-- skipped -->
 <td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Can deny FCM registration for specific apps?</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<!-- skipped -->
+<td class="red">No</td>
 </tr>
 
 <tr>
