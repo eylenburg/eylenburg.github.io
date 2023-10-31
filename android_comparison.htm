@@ -499,7 +499,7 @@ font-size: x-small;
 <td>microG (optional)</td>
 <td>microG (optional)</td>
 <td>microG</td>
-<td rowspan="8">None by default. It's possible to <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google Apps manually</a> during the installation process, but this is not officially supported by LineageOS. Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>
+<td rowspan="7">None by default. It's possible to <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google Apps manually</a> during the installation process, but this is not officially supported by LineageOS. Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>
 <td>Play Services</td>
 </tr>
 
@@ -529,9 +529,9 @@ font-size: x-small;
 <td class="legend">Can be limited to work profile?</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API or Fused Locations will still work without FCM registration.</span></td>
+<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API or Fused Locations will still work without FCM registration.</span></td>
+<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API or Fused Locations will still work without FCM registration.</span></td>
 <!-- skipped -->
 <td class="red">No</td>
 </tr>
@@ -571,6 +571,7 @@ font-size: x-small;
 <td class="green">Yes</td>
 </tr>
 
+<!--
 <tr>
 <td class="legend">Can deny FCM registration for specific apps?</td>
 <td class="red">No</td>
@@ -578,9 +579,10 @@ font-size: x-small;
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<!-- skipped -->
+
 <td class="red">No</td>
 </tr>
+-->
 
 <tr>
 <td class="legend">Google Play Integrity/Safetynet?</td>
