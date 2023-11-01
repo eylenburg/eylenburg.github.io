@@ -170,7 +170,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: October 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: November 2023</p>
 
 <table class="comparison">
 
@@ -365,7 +365,7 @@ font-size: x-small;
 <td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="yellow">Google <sup>default</sup>, or none</td>
-<td class="red">Google</td>
+<td class="red">Google (?)</td>
 <td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
@@ -389,7 +389,7 @@ font-size: x-small;
 <td class="green">Broadcom <sup>default</sup>, or none</td>
 <td class="green">Broadcom <sup>default</sup>, or none</td>
 <td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="red">Google</td>
+<td class="red">Google (?)</td>
 <td class="yellow">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
@@ -529,9 +529,9 @@ font-size: x-small;
 <td class="legend">Can be limited to user or work profile?</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration.</span></td>
-<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration.</span></td>
-<td class="yellow tooltip">No, but can exclude apps from FCM<span class="tooltiptext">Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration.</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes (?)</td>
 <!-- skipped -->
 <td class="red">No</td>
 </tr>
@@ -583,6 +583,8 @@ font-size: x-small;
 <td class="red">No</td>
 </tr>
 -->
+
+<!-- Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration. -->
 
 <tr>
 <td class="legend">Google Play Integrity/Safetynet?</td>
@@ -661,7 +663,7 @@ font-size: x-small;
 <td class="green">No</td>
 <td class="green">No</td>
 <td class="green">No</td>
-<td class="red">Yes</td>
+<td class="red">Yes (?)</td>
 <td class="green">No</td>
 <td class="red">Yes</td>
 </tr>
@@ -671,8 +673,8 @@ font-size: x-small;
 <td class="green">No</td>
 <td class="lgreen">No (device-specific), <a href="https://divestos.org/pages/network_connections#psds">see here</a></td>
 <td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
-<td class="lred">for Qualcomm GPS chips</td>
-<td class="lred">for Qualcomm GPS chips</td>
+<td class="lred">for Qualcomm GPS chips (?)</td>
+<td class="lred">for Qualcomm GPS chips (?)</td>
 <td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
 <td class="lred">for Qualcomm GPS chips</td>
 </tr>
