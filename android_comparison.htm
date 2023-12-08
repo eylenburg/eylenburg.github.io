@@ -170,7 +170,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: December 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 8 December 2023</p>
 
 <table class="comparison">
 
@@ -240,12 +240,12 @@ font-size: x-small;
 
 <tr>
 <td class="legend">Deblobbed?</td>
-<td class="lgreen">Yes, somewhat</td>
+<td class="lgreen">Yes, significantly</td>
 <td class="green">Yes, extensively</td>
-<td class="lgreen">Yes, somewhat</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="lgreen">Yes, significantly</td>
+<td class="yellow">Yes, minimal</td>
+<td class="yellow">Yes, minimal</td>
+<td class="yellow">Yes, minimal</td>
 <td class="red">No</td>
 </tr>
 
@@ -467,10 +467,10 @@ font-size: x-small;
 <tr>
 <td class="legend">Network time</td>
 <td class="green">GrapheneOS <sup>default</sup>, or none</td>
-<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
+<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
 <td class="red">Google and carrier-based time</td>
-<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
-<td class="green"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers</span></span> and carrier-based time</td>
+<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
+<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
 <td class="red">Google and carrier-based time</td>
 <td class="red">Google and carrier-based time</td>
 </tr>
@@ -494,18 +494,29 @@ font-size: x-small;
 
 <tr>
 <td class="legend">Implementation</td>
-<td class="tooltip">GmsCompat (Google Play) (optional)<span class="tooltiptext">GrapheneOS does not include sandboxed Google Play, but it includes an open source compatibility layer for users who choose to use it. Users can alternatively install microG on GrapheneOS, albeit GrapheneOS does not support signature spoofing. Not all microG functionality requires signature spoofing, for example FCM works with microG without signatures spoofing to the extent it works without special privileges (e.g. microG needs to use a privileged API to wake apps and keep them awake for a short period of time to handle FCM messages).</span></td>
-<td>microG (optional)</td>
-<td>microG (optional)</td>
-<td>microG (optional)</td>
+<td class="tooltip">GmsCompat (sandboxed Google Play)<span class="tooltiptext">GrapheneOS does not include Google Play as a preinstalled app, but it includes an open source compatibility layer for users who choose to use it. Users can alternatively install microG on GrapheneOS, albeit GrapheneOS does not support signature spoofing. Not all microG functionality requires signature spoofing, for example FCM works with microG without signatures spoofing to the extent it works without special privileges (e.g. microG needs to use a privileged API to wake apps and keep them awake for a short period of time to handle FCM messages).</span></td>
 <td>microG</td>
-<td rowspan="7">None by default. It's possible to <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google Apps manually</a> during the installation process, but this is not officially supported by LineageOS. Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>
-<td>Play Services</td>
+<td>microG</td>
+<td>microG</td>
+<td>microG</td>
+<td rowspan="8">None by default. It's possible to <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google Apps manually</a> during the installation process, but this is not officially supported by LineageOS. Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>
+<td>Google Play Services</td>
+</tr>
+
+<tr>
+<td class="legend">Optional?</td>
+<td class="green">Yes (not preinstalled)</td>
+<td class="green">Yes (not preinstalled)</td>
+<td class="green">Yes (preinstalled but opt-out)</td>
+<td class="green">Yes (preinstalled but opt-out)</td>
+<td class="red">No (preinstalled without opt-out)</td>
+<!-- skipped -->
+<td class="red">No (preinstalled without opt-out)</td>
 </tr>
 
 <tr>
 <td class="legend">FOSS? (see tooltips for details)</td>
-<td class="yellow tooltip">Google binaries in FOSS sandbox<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
 <td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support, however, DivestOS blocks the use of Safetynet.</span></td>
 <td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
 <td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
@@ -516,8 +527,8 @@ font-size: x-small;
 
 <tr>
 <td class="legend">Sandboxed/unprivileged?</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
+<td class="green">Yes (regular app sandbox)</td>
+<td class="green">Yes (regular app sandbox)</td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -647,14 +658,14 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">Per-connection MAC address randomization</td>
-<td class="green">Yes</td>
-<td class="green">Yes</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="legend">MAC address randomization</td>
+<td class="green">Per connection</td>
+<td class="green">Per connection</td>
+<td class="lgreen">Per network</td>
+<td class="lgreen">Per network</td>
+<td class="lgreen">Per network</td>
+<td class="lgreen">Per network</td>
+<td class="lgreen">Per network</td>
 </tr>
 
 <tr>
@@ -682,7 +693,7 @@ font-size: x-small;
 <tr>
 <td class="legend">Closed cross-profile package leaks?</td>
 <td class="green">Yes</td>
-<td class="green">Yes</td>
+<td class="lgreen">Partially</td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -704,7 +715,7 @@ font-size: x-small;
 <tr>
 <td class="legend">Metadata stripping for screenshots</td>
 <td class="green">Yes, <a href="https://grapheneos.org/features#private-screenshots" target="_blank">see here </a></td>
-<td class="red">No</td>
+<td class="green">Yes, <a href="https://divestos.org/pages/news#2023-11" target="_blank">see here</a></td>
 <td class="green">Yes, <a href="https://calyxos.org/news/2023/10/04/october-security-update/" target="_blank">see here </a></td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -763,6 +774,17 @@ font-size: x-small;
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="yellow">Some devices, <a href="https://attestation.app/about" target="_blank">see here</a></td>
+</tr>
+
+<tr>
+<td class="legend">System app downgrade protection</td>
+<td class="green">Yes, for updates and boot with fs-verity</td>
+<td class="yellow">Yes, for updates and boot</td>
+<td class="red">Incomplete for updates, missing at boot</td>
+<td class="red">Incomplete for updates, missing at boot</td>
+<td class="red">Incomplete for updates, missing at boot</td>
+<td class="red">Incomplete for updates, missing at boot</td>
+<td class="red">Incomplete for updates, missing at boot</td>
 </tr>
 
 <tr>
@@ -840,6 +862,17 @@ font-size: x-small;
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Android Runtime <span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> compilation/profiling</td>
+<td class="green"><span class="tooltip">AOT<span class="tooltiptext">Ahead-Of-Time</span></span> compilation w/o profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
+<td class="red">Interpreter/<span class="tooltip">JIT<span class="tooltiptext">Just-In-Time</span></span> with profiling</td>
 </tr>
 
 <tr>
@@ -938,7 +971,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend semititle"><br />Supported devices</td>
-<td></td><td></td><td></td><td></td><td><br /><em>only showing "stable" releases</em></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -947,7 +980,7 @@ font-size: x-small;
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
 <td class="red">No</td>
-<td class="red">No <!--Unstable releases for older devices--></td>
+<td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
 <td class="green">Yes</td>
 </tr>
@@ -969,7 +1002,7 @@ font-size: x-small;
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="yellow">Older devices only</td>
-<td class="yellow">Older devices only <!-- newer have only unstable release --></td>
+<td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 </tr>
@@ -980,7 +1013,7 @@ font-size: x-small;
 <td class="yellow">Older devices only</td>
 <td class="green">Yes</td>
 <td class="red">No</td>
-<td class="red">No <!--Unstable releases for older devices--></td>
+<td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 </tr>
@@ -1013,7 +1046,7 @@ font-size: x-small;
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
-<td class="red">No <!--Unstable releases for older devices--></td>
+<td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
 <td class="green">Yes</td>
 </tr>
@@ -1024,7 +1057,7 @@ font-size: x-small;
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
-<td class="red">No <!--Unstable releases for older devices--></td>
+<td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
 <td class="green">Yes</td>
 </tr>
