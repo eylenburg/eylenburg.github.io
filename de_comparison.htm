@@ -265,7 +265,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 23 November 2023</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 2 January 2024</p>
 
 <table class="comparison">
 <colgroup>
@@ -722,11 +722,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>X11 + Wayland</td> <!-- Plasma -->
 <td>X11 + Wayland</td> <!-- Gnome -->
 
-<td>X11 only</td> <!-- Xfce -->
-<td>X11 only</td> <!-- MATE -->
-<td>X11 only</td> <!-- Cinnamon -->
-<td>X11 only</td> <!-- LXQt -->
-<td>X11 only</td>
+<td>X11</td> <!-- Xfce -->
+<td>X11</td> <!-- MATE -->
+<td>X11</td> <!-- Cinnamon -->
+<td>X11</td> <!-- LXQt -->
+<td>X11</td>
 
 <td>Quartz Compositor</td>
 <td>Desktop Window Manager</td>
@@ -734,19 +734,51 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 <tr>
-<td>HiDPI support</td>
+<td>Fractional scaling (for HiDPI monitors)</td>
 
-<td class="yes">Yes (fractional scaling)</td> <!-- Plasma -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Gnome -->
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="almost">Experimental</td> <!-- Gnome -->
 
-<td class="yes">Yes (fractional scaling)</td><!-- Xfce -->
-<td class="mixed">Yes (2x scaling)</td> <!-- MATE -->
-<td class="yes">Yes (fractional scaling)</td> <!-- Cinnamon -->
-<td class="no">No (only font size)</td> <!-- LXQt -->
-<td class="yes">Yes (fractional scaling)</td>
+<td class="yes">Yes</td><!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="yes">Yes</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes)</td>
 
-<td class="yes">Yes (fractional scaling)</td>
-<td class="yes">Yes (fractional scaling)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>HDR (high-dynamic range) support</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="no">No</td><!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
+
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Display colour profiles</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td> <!-- Gnome -->
+
+<td class="no">No</td><!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
+
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -1271,7 +1303,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Thumbnail support in file manager and <span class="tooltip">file picker<span class="tooltiptext">open/save dialogue</span></span></td>
 
 <td class="yes">Yes/Yes</td> <!-- Plasma -->
-<td class="yes">Yes/Yes</td> <!-- Gnome -->
+<td class="almost">Yes/<span class="tooltip">Depends<span class="tooltiptext">only if folder was opened previously in the file manager</span></span></td> <!-- Gnome -->
 
 <td class="mixed">Yes/No</td>  <!-- Xfce -->
 <td class="mixed">Yes/No</td>  <!-- MATE -->
