@@ -170,7 +170,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 2 January 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 12 January 2024</p>
 
 <table class="comparison">
 
@@ -435,11 +435,11 @@ font-size: x-small;
 <td class="legend">Connectivity check/captive portal</td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="green">Multiple presets offered</td>
-<td class="lgreen">Google, but can be changed</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="green">Kuketz.de</td>
 <td class="green">Murena.io</td>
-<td class="lgreen">Google, but can be changed</td>
-<td class="lgreen">Google, but can be changed</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 </tr>
 
 <tr>
@@ -467,12 +467,12 @@ font-size: x-small;
 <tr>
 <td class="legend">Network time</td>
 <td class="green">GrapheneOS <sup>default</sup>, or none</td>
-<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
-<td class="red">Google and carrier-based time</td>
-<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
-<td class="lgreen"><span class="tooltip">NTP.org pool<span class="tooltiptext">arbitrary providers, which can include Google-hosted servers or even malicious servers</span></span> and carrier-based time</td>
-<td class="red">Google and carrier-based time</td>
-<td class="red">Google and carrier-based time</td>
+<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
 </tr>
 
 <tr>
@@ -928,7 +928,7 @@ font-size: x-small;
 <td class="legend tooltip">Security update speed<span class="tooltiptext"><a href="https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
 <td class="green"><2 days</td>
 <td class="lgreen">1-3 weeks</td>
-<td class="yellow">~1 week, sometimes longer delays</td>
+<td class="lgreen tooltip">~1 week, sometimes longer delays<span class="tooltiptext">quicker updates in optional "security express" update channel</td>
 <td class="lred">~1 month, sometimes longer delays</td>
 <td class="lred">~2 months, sometimes longer delays</td>
 <td class="yellow">1-2 weeks, sometimes longer delays</td>
