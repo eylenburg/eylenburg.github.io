@@ -199,10 +199,6 @@ background-color: #aaa;
 }
 
 
-.reviewcontent { display: none; }
-
-.reviewcontent:target { display: block;  }
-
 @media (prefers-color-scheme: dark) {
 td.gtktoolkit,
 td.qttoolkit,
@@ -233,22 +229,8 @@ color: #eac895;
 </head>
 <body>
 
+<script src="top.js"></script>
 <header>
-<table class="menubar">
-<tr>
-<td><a href="os_comparison.htm">Compa&shy;rison of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
-<td><a href="os_familytree.htm">Fami&shy;ly Tree of Ope&shy;ra&shy;ting Sys&shy;tems</a></td>
-<td><a href="de_comparison.htm">Compa&shy;rison &amp; List of Desk&shy;top Envi&shy;ron&shy;ments</a></td>
-<td><a href="de_default.htm">Time&shy;line of De&shy;fault Desk&shy;top Envi&shy;ron&shy;ments</a></td>
-<td><a href="linux_comparison.htm">Compa&shy;rison of Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</a></td>
-<td><a href="linux_distros_over_time.htm">Linux Dis&shy;tri&shy;bu&shy;tions over Time</a></td>
-<td><a href="android_comparison.htm">Compa&shy;rison of Andro&shy;id ROMs</a></td>
-<td><a href="browser_comparison.htm">Compa&shy;rison of Brow&shy;sers</a></td>
-<td><a href="browser_engines.htm">His&shy;tory of Brow&shy;ser En&shy;gines</a></td>
-<td><a href="im_comparison.htm">Compa&shy;rison of Ins&shy;tant Mes&shy;sen&shy;gers</a></td>
-<td><a href="cloud_comparison.htm">Compa&shy;rison of Cloud, Sync &amp; E&shy;mail pro&shy;viders</a></td>
-</tr>
-</table>
 <p><a href="index.html">&larr; Sitemap</a></p>
 </header>
 
@@ -1908,10 +1890,9 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <hr>
 
-<p style="font-size: large; font-weight: bold;"><a href="#Review">Click here to show my review of 15 Linux desktop environments, with screenshots and comparison of RAM use</a> (from 2021, will not be updated anymore)</p>
-<hr>
+<details><summary style="font-size: large; font-weight: bold;">Click here to show my review of 15 Linux desktop environments, with screenshots and comparison of RAM use</> (from 2021, will not be updated anymore)</summary>
 
-<div class="reviewcontent" id="Review">
+<div>
 <h3>RAM Use</h3>
 <p>Below is a graph showing the RAM use in excess of the 261 MB used by the base system (without GDM3 or X.Org running).</p>
 <a href="pics/de_comp/RAM use.png" target="_blank"><img src="pics/de_comp/RAM use.png" style="max-width: 100%;" alt="RAM Use by Desktop Environment" /></a>
@@ -1986,6 +1967,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <ul><li>The oldest desktop environment developed for Linux, slightly preceding KDE and GNOME.</li><li>Traditionally the lightweight alternative to GNOME and KDE Plasma</li><li>Mature product with relatively slow development pace</li><li>However, recently KDE Plasma has become just as lightweight (in terms of RAM use) as Xfce, and some new desktops like LXQt are even more lightweight than those two</li><li>Comes with a small set of Xfce applications</li><li>Customizable and easy to use</li><li>Traditional workflow</li><li>Default design looks outdated, but can be themed</li><li><b>Conclusion: recommended</b></li><ul><li><b>Features: 4/5</b></li><li><b>Polish: 5/5</b></li><li><b>Resource usage: 2/5</b></li></ul></ul>
 
 </div>
+</details>
 
 <script src="bottom.js "></script>
 </body>

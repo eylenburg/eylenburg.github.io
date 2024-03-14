@@ -6,7 +6,7 @@ document.write(`
 
 <details style="text-align: center;">
 <summary>
-<span>Donations welcome! (click for details)</span></summary>
+<span>Donations welcome! (click here for details)</span></summary>
 <p>
 <strong>Monero:</strong> <a href="monero:87z2UAoivrhUXa52N8YniyQDUrMLAio1QdJtmZhark2K9EKRLQ5Deaba76tXXvRnFQ1kPXutZFENcDgk7VTkxd5C1PfNcWt">87z2UAoivrhUXa52N8YniyQDUrMLAio1QdJtmZhark2K9EKRLQ5Deaba76tXXvRnFQ1kPXutZFENcDgk7VTkxd5C1PfNcWt</a><br />
 <strong>Bitcoin:</strong> <a href="bitcoin:bc1qyy98j05a6kr99qmycn0n36mv9sveq5a3g6rnwe">bc1qyy98j05a6kr99qmycn0n36mv9sveq5a3g6rnwe</a><br />
@@ -23,6 +23,5 @@ document.write(`
 <div style="display: inline-block"><a href="kaspa:qqg3wea6twrhs2ha878763fqepesxcw5qeeul9cwn4v5w0xt3undggeen33tw"><img src="pics/logos/other/crypto/kas.svg" width="30" height="30" /></a></div>
 </div>
 </footer>
-</body>
 
 `);
