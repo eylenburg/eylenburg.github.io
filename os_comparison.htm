@@ -185,7 +185,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 6 March 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 18 March 2024</p>
 
 
 <table class="comparison">
@@ -997,7 +997,6 @@ AROS missing
 <td class="no">No</td>
 </tr>
 
-
 <tr>
 <td class="semititle"><br />File system support</td><td colspan="18"><br /><em>Only shown if supported by the base install without any third-party packages.</em></td>
 </tr>
@@ -1365,7 +1364,7 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="notreally">requires root</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Android implements features based on the firewall for data limits and restricting data access in various forms. However, there is no user-facing configuration interface included in Android and changing the firewall rules of the built-in firewall requires root access. An more user-friendly way to filter traffic are apps that use the VPN service feature.</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1387,7 +1386,7 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1404,6 +1403,7 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
+<!-- deleted because see here: https://github.com/eylenburg/eylenburg.github.io/issues/30
 <tr>
 <td>Secure/verified boot</td>
 <td class="yes">Yes</td>
@@ -1411,12 +1411,12 @@ Dragonfly missing
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1425,6 +1425,7 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
+-->
 
 <tr>
 <td>Per-app hardware access permissions</td>
@@ -1932,28 +1933,6 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 
-<tr>
-<td>Signal</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="no">No</td>
-</tr>
-
 
 <!--
 <tr>
@@ -2102,6 +2081,7 @@ Dragonfly missing
 <td><br />Cloud sync  - official apps</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr> -->
 
+<!--
 <tr>
 <td>Dropbox</td>
 <td class="yes">Yes</td>
@@ -2109,12 +2089,12 @@ Dragonfly missing
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2132,12 +2112,12 @@ Dragonfly missing
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="mixed tooltip">Yes (no sync)<span class="tooltiptext">Mobile app doesn't support real-time sync or folder pair sync, only camera upload and "offline files" are supported</span></td>
 <td class="no">No</td>
-<td class="no">No</td><!-- end of big 6 -->
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2147,7 +2127,7 @@ Dragonfly missing
 <td class="no">No</td>
 </tr>
 
-<!--
+
 <tr>
 <td style="text-indent: 10px;">Google Drive</td>
 <td class="yes">Yes</td>
@@ -2248,6 +2228,7 @@ Dragonfly missing
 <td><br />Server applications</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr> -->
 
+<!--
 <tr>
 <td>Web server (built-in, Apache, nginx)</td>
 <td class="yes">Yes</td>
@@ -2255,12 +2236,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -2277,12 +2258,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2291,6 +2272,7 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="yes">Yes</td>
 </tr>
+-->
 
 <!--
 <tr>
@@ -2318,6 +2300,7 @@ Dragonfly missing
 </tr>
 -->
 
+<!--
 <tr>
 <td>Nextcloud Server</td>
 <td class="no">No</td>
@@ -2325,12 +2308,12 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
 <td class="almost">Unofficial</td>
-<td class="no">No</td><!-- end of Unix -->
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -2339,6 +2322,7 @@ Dragonfly missing
 <td class="no">No</td>
 <td class="no">No</td>
 </tr>
+-->
 
 <!--
 <tr>
@@ -2390,6 +2374,31 @@ Dragonfly missing
 </tr>
 -->	
 
+<tr>
+<td class="semititle"><br /></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Run apps in background?</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="mixed tooltip">Limited<span class="tooltiptext">Apps are paused when backgrounded and resume when opened. It's not possible to run an app in the background as if it was in the foreground. Apps can only run a limited set of tasks in the background for a short period of time per Apple guidelines, or use structured backgrounding such as Background App Refresh.</span></td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of big 6 -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td><!-- end of Unix -->
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
 
 <tr>
 <td><br />Can run other OS's apps?</td>
