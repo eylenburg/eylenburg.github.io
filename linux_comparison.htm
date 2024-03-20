@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 275px;
---distrowidth: 90px;
+--distrowidth: 95px;
 }
 
 table.comparison {
@@ -20,7 +20,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 18 * var(--distrowidth));
+width: calc(var(--legendwidth) + 17 * var(--distrowidth));
 height: 100%;
 }
 
@@ -182,18 +182,18 @@ table.yeartable tr td img { max-width: 100px; max-height: 100px; min-width: 75px
 <p>It's a well known fact that there's hundreds of different Linux distributions, with many of them gaining sudden popularity or falling back into relative obscurity. As of 2023, I'd say the most important distributions - those that are here to stay for another decade at least and those that have a significant mindshare on the desktop - are just five: Debian, Ubuntu, Fedora, openSUSE, and Arch. Everything else is more of a niche distribution, be it for servers (RHEL, SLE), nerds and greybeards (Gentoo, Slackware), or to make an existing general-purpose distro slightly more user-friendly for novice users (Zorin, pop_OS).<br /><br >
 Distributions mostly differ in their package manager and their default choices (desktop environment and so on). Furthermore, there are clearly different tiers of difficulty from beginner-level to expert, for example like this:<br /><br />
 <em>Beginners. Easy to use and work out of the box.</em>
-<ul><li>Mint</li><li>(K)ubuntu</li><li>Solus</li></ul>
+<ul><li>Ubuntu / Kubuntu</li><li>Ubuntu-based distros like Mint, Pop_OS, or Zorin</li><li>Solus</li></ul>
 <em>Beginners to Intermediate. Same as above but some post-install tweaks needed (e.g. codecs, Nvidia).</em>
 <ul><li>Fedora</li><li>openSUSE</li><li>Mageia</li></ul>
 <em>Advanced users. Anyone can use them but to set everything up you need to be willing to read the documentation and get comfortable with the command line.</em>
 <ul><li>Debian</li><li>RHEL</li><li>Arch</li></ul>
 <em>Experts. Same as above but there is additional distro-specific knowledge to learn.</em>
 <ul><li>Slackware</li><li>NixOS</li><li>Gentoo</li></ul></p>
-<p>For this comparison I have focused mostly on "original" distributions rather than forks as there's often only superficial differences between closely related distros.
+<p>For this comparison I have focused mostly on "original" distributions rather than forks as there's often only superficial differences between closely related distros. For example, the only differences between Ubuntu and Mint would be that Mint is only available for x86_64, that fewer desktop environments are available "preinstalled" for Mint, that Mint doesn't have the longer update support that Ubuntu Pro offers, and that Mint preinstalls Flatpak instead of Snap.</p>
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 6 March 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 20 March 2024</p>
 
 <table class="comparison">
 
@@ -216,14 +216,12 @@ Distributions mostly differ in their package manager and their default choices (
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
 
 <thead>
 <tr>
 <td class="legend" rowspan="2"></td>
 <td rowspan="2">Debian</td>
 <td rowspan="2">Ubuntu</td>
-<td rowspan="2">Linux Mint</td>
 <td>openSUSE</td>
 <td rowspan="2">SUSE Linux Enterprise</td>
 <td>Fedora</td>
@@ -252,7 +250,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td></td>
 <td><img class="logo" src="pics/logos/distros/debian.png" /></td>
 <td><img class="logo" src="pics/logos/distros/ubuntu.png" /></td>
-<td><img class="logo" src="pics/logos/distros/mint.png" /></td>
 <td><img class="logo" src="pics/logos/distros/opensuse.png" /></td>
 <td><img class="logo" src="pics/logos/distros/sle.png" /></td>
 <td><img class="logo" src="pics/logos/distros/fedora.png" /></td>
@@ -272,14 +269,13 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Development &amp; Background</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Based on...</td>
 <td>Independent</td>
 <td>Debian</td>
-<td>Ubuntu</td>
 <td>Independent</td>
 <td>openSUSE</td>
 <td>Independent</td>
@@ -301,7 +297,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Initial release</td>
 <td>1993</td>
 <td>2004</td>
-<td>2006</td>
 <td colspan="2">1994 (Suse)</td>
 <td colspan="2">1995 (Red Hat)</td>
 <td>1998 (Mandrake)</td>
@@ -317,35 +312,10 @@ Distributions mostly differ in their package manager and their default choices (
 <td>2015</td>
 </tr>
 
-<!--
-<tr>
-<td class="legend">Availa&shy;ble preinstalled (major PC builders)?</td>
-<td>-</td>
-<td class="yes">Dell, Lenovo</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td><table class="split"><tr><td class="yes">Lenovo</td><td>-</td></tr></table></td>
-<td class="yes">Lenovo</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
--->
-
 <tr>
 <td class="legend">Community-driven or Corporate</td>
 <td>Community</td>
 <td>Corporate (Canonical)</td>
-<td>Community</td>
 <td>Community, with corporate backing (SUSE)</td>
 <td>Corporate (SUSE)</td>
 <td>Community, with corporate backing (IBM)</td>
@@ -365,7 +335,6 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Price</td>
-<td class="yes">Free</td>
 <td class="yes">Free</td>
 <td class="yes">Free</td>
 <td class="yes">Free</td>
@@ -392,7 +361,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Free</td>
 <td class="yes">Free</td>
 <td class="yes">Free</td>
-<td class="yes">Free</td>
 <td class="mixed tooltip">IBM does not allow sharing of source code<span class="tooltiptext">While IBM makes the source code Availa&shy;ble to subscribers as required by the GNU GPL, they reserve the right to cancel the subscriptions and therefore also further software updates from clients who share the source code with third parties. This clearly is a violation of the spirit and possibly even wording of the GNU GPL, as it essentially means you can only share the source code once before IBM cancels your subscription.</span></td>
 <td class="yes">Free</td>
 <td class="yes">Free</td>
@@ -407,17 +375,16 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Free</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Philosophy</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Primarily source-based vs binary packages</td>
 <td class="grey">Binary<br />&nbsp;</td>
-<td class="grey">Binary</td>
 <td class="grey">Binary</td>
 <td class="grey">Binary</td>
 <td class="grey">Binary</td>
@@ -438,7 +405,6 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Immutable or traditional?</td>
-<td class="grey">Traditional</td>
 <td class="grey">Traditional</td>
 <td class="grey">Traditional</td>
 <td><table class="split"><tr><td class="grey">Tradi&shy;tional</td><td class="tooltip purple">Immu&shy;table <span class="tooltiptext">snap&shy;shot-based</span></td></tr></table></td>
@@ -474,16 +440,14 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 </tr>
 
 <tr>
-<td class="legend">Policy of only allowing free software in repos?</td>
+<td class="legend">Only allows free software in repos?</td>
 <td class="grey">No <span style="font-size: x-small;">(despite such policy there is a non-free repo)</span></td>
-<td class="grey">No</td>
 <td class="grey">No</td>
 <td class="grey">No</td>
 <td class="grey">No</td>
@@ -502,16 +466,15 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">No</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Release schedule &amp; Reliability</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Release model</td>
-<td class="grey">Fixed</td>
 <td class="grey">Fixed</td>
 <td class="grey">Fixed</td>
 <td class="extracolour2 tooltip">Rolling (...)<span class="tooltiptext">There is also a fixed release version called Leap, but this comparison focuses on the rolling version called Tumbleweed.</span></td>
@@ -535,7 +498,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">LTS option (>5 yrs)</td>
 <td class="yes">Yes (5 years)</td>
 <td class="yes">Yes (12 years)</td>
-<td class="yes">Yes (5 years)</td>
 <td class="no">No</td>
 <td class="yes">Yes (13 years)</td>
 <td class="no">No</td>
@@ -554,8 +516,7 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 
 <tr>
-<td class="legend">Ability to roll back updates if something breaks</td>
-<td class="no">No</td>
+<td class="legend">Ability to roll back updates?</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes" span style="font-size: x-small;"><code>snapper rollback</code></td>
@@ -575,16 +536,15 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes" style="font-size: x-small;"><code>eopkg history</code></td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">CPU compatibility</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">amd64 (64-bit AMD/Intel)</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -608,7 +568,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">aarch64 (64-bit ARM)</td>
 <td class="yes">Yes</td>
 <td class="almost">Server image</td>
-<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="almost">Server image</td>
 <td class="yes">Yes</td>
@@ -630,7 +589,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">ppc64le (IBM POWER9/10)</td>
 <td class="yes">Yes</td>
 <td class="almost">Server image</td>
-<td class="no">No</td>
 <td class="almost">Server image</td>
 <td class="almost">Server image</td>
 <td class="yes">Yes</td>
@@ -652,7 +610,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">s390x (IBM Z)</td>
 <td class="yes">Yes</td>
 <td class="almost">Server image</td>
-<td class="no">No</td>
 <td class="almost">Server image</td>
 <td class="almost">Server image</td>
 <td class="almost">Server image</td>
@@ -674,7 +631,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">riscv64 (RISC-V)</td>
 <td class="mixed">Experimental</td>
 <td class="almost">Server image</td>
-<td class="no">No</td>
 <td class="mixed">Experimental</td>
 <td class="no">No</td>
 <td class="mixed">Experimental</td>
@@ -696,7 +652,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">i686 (legacy 32-bit Intel/AMD)</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -714,19 +669,18 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="no">No</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 
 <tr>
 <td class="legend semititle">Ease of use (default setup)</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Graphical installer?</td>
 <td class="yes">Yes (Debian-Install)</td>
 <td class="yes">Yes (Subiquity)</td>
-<td class="yes">Yes (Ubiquity)</td>
 <td class="yes">Yes (Yast)</td> <!-- soon Agama for MicroOS? -->
 <td class="yes">Yes (Yast)</td> <!-- soon Agama for ALP? -->
 <td class="yes">Yes (Anaconda)</td>
@@ -755,7 +709,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="yes">Yes (archinstall)</td>
 <td class="yes">Yes</td>
 <td class="no">No, needs to be done post-install</td>
@@ -769,7 +722,6 @@ Distributions mostly differ in their package manager and their default choices (
 <tr>
 <td class="legend">GUI for advanced system administration?</td>
 <td class="no">No</td>
-<td class="mixed">Limited (e.g. driver manager)</td>
 <td class="mixed">Limited (e.g. driver manager)</td>
 <td><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="no">No</td></tr></table></td>
 <td class="yes">Yes (Yast)</td>
@@ -795,7 +747,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="mixed">Updates only, not upgrades to next release</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -814,7 +765,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Offers to install proprietary codecs?</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -832,16 +782,15 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Installed by default</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Defaults</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Default browser</td>
-<td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
@@ -865,7 +814,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Default file system</td>
 <td class="grey">ext4</td>
 <td class="grey">ext4</td>
-<td class="grey">ext4</td>
 <td class="blue">btrfs</td>
 <td class="blue">btrfs</td>
 <td class="blue">btrfs</td>
@@ -887,7 +835,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Default swap approach</td>
 <td class="grey">Swap partition</td>
 <td class="blue">Swap file</td>
-<td class="blue">Swap file</td>
 <td><table class="split"><tr><td class="grey">Swap parti&shy;tion</td><td>No swap</td></tr></table></td>
 <td class="grey">Swap partition</td>
 <td class="purple">Swap on ZRAM</td>
@@ -906,8 +853,7 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 
 <tr>
-<td class="legend">it system</td>
-<td class="grey">systemd</td>
+<td class="legend">init system</td>
 <td class="grey">systemd</td>
 <td class="grey">systemd</td>
 <td class="grey">systemd</td>
@@ -941,7 +887,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">glibc</td>
 <td class="grey">glibc</td>
 <td class="grey">glibc</td>
-<td class="grey">glibc</td>
 <td class="blue">musl</td>
 <td class="greyblue">Choice of glibc or musl</td>
 <td class="grey">glibc</td>
@@ -951,7 +896,6 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Compiler used</td>
-<td class="grey">gcc</td>
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
@@ -971,19 +915,18 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">gcc</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Suppor&shy;ted desktops:</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr class="desktop">
 <td class="legend">KDE Plasma</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Kubuntu</td>
-<td rowspan="2" class="mixed">In repo</td>
-<td rowspan="7"><table class="split"><tr class="desktop"><td rowspan="3" class="almost"><div style="height: 35px !important;">Option during instal&shy;lation</div></td><td style="border-left: 1px solid lightgrey !important; height: 14.3%;" class="almost">Kalpa</td></tr><tr class="desktop"><td class="almost" style="border-left: 1px solid lightgrey !important; border-top: 1px solid ivory !important; height: 14.3%;">Aeon</td></tr><tr class="desktop"><td rowspan="5" class="no">No</td></tr><tr class="desktop"><td rowspan="4" class="mixed">In repo</td></tr></table></td>
+<td rowspan="7"><table class="split"><tr class="desktop"><td rowspan="3" class="almost"><div style="height: 36px !important;">Option during instal&shy;lation</div></td><td style="border-left: 1px solid lightgrey !important; height: 13.5%;" class="almost">Kalpa</td></tr><tr class="desktop"><td class="almost" style="border-left: 1px solid lightgrey !important; border-top: 1px solid ivory !important; height: 13.5%;">Aeon</td></tr><tr class="desktop"><td rowspan="5" class="no">No</td></tr><tr class="desktop"><td rowspan="4" class="mixed">In repo</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
 <td><table class="split"><tr><td class="almost">KDE Spin</td><td class="almost">Kinoite</td></tr></table></td>
 <td class="notreally">In EPEL</td>
@@ -1026,7 +969,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Xfce</td>
 <td rowspan="4" class="almost">Option during instal&shy;lation</td>
 <td class="almost">Xubuntu</td>
-<td class="almost">Mint<br />Xfce</td>
 
 <td rowspan="5" class="notreally">In Package Hub</td>
 <td rowspan="4"><table class="split"><tr class="desktop"><td class="almost">Xfce Spin</td><td rowspan="4" class="no">No</td></tr><tr class="desktop"><td class="almost" style="border-top: 1px solid ivory !important;">MATE Spin</td></tr><tr class="desktop"><td class="almost" style="border-top: 1px solid ivory !important;">Cinnamon Spin</td></tr><tr class="desktop"><td class="almost" style="border-top: 1px solid ivory !important;">LXQt Spin</td></tr></table></td>
@@ -1048,7 +990,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">MATE</td>
 
 <td class="almost">Ubuntu<br />MATE</td>
-<td class="almost">Mint<br />MATE</td>
 
 
 
@@ -1070,8 +1011,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Cinnamon</td>
 
 <td class="almost">Ubuntu<br />Cinnamon</td>
-<td class="almost">Mint<br />Cinnamon</td>
-
 
 
 
@@ -1092,7 +1031,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">LXQt</td>
 
 <td class="almost">Lubuntu<br />&nbsp</td>
-<td rowspan="2" class="mixed">In repo</td>
 
 
 
@@ -1138,16 +1076,15 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="almost">Budgie<br />Edition</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Package management</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Main package manager</td>
-<td>apt</td>
 <td>apt</td>
 <td>apt</td>
 <td><table class="split"><tr><td>zypper</td><td style="font-size: x-small;">transactional-update</td></tr></table></td>
@@ -1169,7 +1106,6 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Native binary package format</td>
-<td>DEB</td>
 <td>DEB</td>
 <td>DEB</td>
 <td>RPM</td>
@@ -1194,8 +1130,7 @@ Distributions mostly differ in their package manager and their default choices (
 <tr class="desktop">
 <td class="legend">Flatpak</td>
 <td rowspan="4" class="almost">Sup&shy;por&shy;ted</td>
-<td class="almost">Sup&shy;por&shy;ted</td>
-<td class="yes">Preinstalled</td>
+<td class="almost">Sup&shy;por&shy;ted<br />&nbsp;</td>
 <td rowspan="5"><table class="split"><tr><td class="yes" colspan="2">Preinstalled</td></tr><tr><td class="notreally" style="height: 20%">In OBS</td><td rowspan="4" class="no">No</td></tr><tr><td class="notreally tooltip" style="border-top: 1px solid ivory !important; height: 20%;">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td></tr><tr><td class="almost" style="height: 20%">Sup&shy;por&shy;ted</td></tr><tr><td class="yes" style="height: 20%">Should work</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
 <td class="yes">Preinstalled</td>
@@ -1217,7 +1152,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Snap</td>
 
 <td class="yes">Preinstalled<br />&nbsp;</td>
-<td rowspan="3" class="almost">Sup&shy;por&shy;ted</td>
 
 <td class="no">No</td>
 <td rowspan="3"><table class="split"><tr><td class="almost" style="height: 33.3%;">Sup&shy;por&shy;ted</td><td rowspan="3" class="no">No</td></tr><tr><td rowspan="2" class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a> and <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td></tr></table></td>
@@ -1283,7 +1217,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">AppImage</td>
 <td class="yes">Should work</td>
 <td class="yes">Should work</td>
-<td class="yes">Should work</td>
 
 <td class="yes">Should work</td>
 <td class="yes">Should work</td>
@@ -1301,19 +1234,18 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Should work</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Security</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Full-disk encryption option in installer</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
-<td><table class="split"><tr><td class="yes">Yes</td><td class="no tooltip">/home only<span class="tooltiptext">Replaced with systemd-homed encryption</span></td></tr></table></td>
+<td><table class="split"><tr><td class="yes">Yes</td><td class="notreally tooltip">/home only<span class="tooltiptext">Replaced with systemd-homed encryption</span></td></tr></table></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1338,7 +1270,6 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1354,7 +1285,6 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Kernel security module set up by default?</td>
-<td class="yes">AppArmor</td>
 <td class="yes">AppArmor</td>
 <td class="yes">AppArmor</td>
 <td><table class="split"><tr><td class="yes">App&shy;Armor</td><td class="yes">SE&shy;Linux</td></tr></table></td>
