@@ -3,7 +3,6 @@ document.write(`
 <footer>
 <hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="mailto:eylenburg@airmail.cc">Please drop me an e-mail</a></strong> or <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">create an issue on Github</a></strong></p>
 
-
 <details style="text-align: center;">
 <summary>
 <span>Donations welcome! (click here for details)</span></summary>
@@ -15,6 +14,8 @@ document.write(`
 <strong>Kaspa:</strong> <a href="kaspa:qqg3wea6twrhs2ha878763fqepesxcw5qeeul9cwn4v5w0xt3undggeen33tw">qqg3wea6twrhs2ha878763fqepesxcw5qeeul9cwn4v5w0xt3undggeen33tw</a>
 </p>
 </details>
+
+
 <div style="display: block; text-align: center;">
 <div style="display: inline-block"><a href="monero:87z2UAoivrhUXa52N8YniyQDUrMLAio1QdJtmZhark2K9EKRLQ5Deaba76tXXvRnFQ1kPXutZFENcDgk7VTkxd5C1PfNcWt"><img src="pics/logos/other/crypto/xmr.svg" width="30" height="30" /></a></div>
 <div style="display: inline-block"><a href="bitcoin:bc1qyy98j05a6kr99qmycn0n36mv9sveq5a3g6rnwe"><img src="pics/logos/other/crypto/btc.svg" width="30" height="30" /></a></div>

@@ -20,7 +20,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 10 * var(--imwidth));
+width: calc(var(--legendwidth) + 11 * var(--imwidth));
 }
 
 #bottom.table {
@@ -168,6 +168,7 @@ background-color: #999;
 <p>There are probably a hundred or more different instant messengers out there. But which one respects your privacy, is resistant to censorship attempts by governments and Big Tech, and is easy to use for normies? <br />
 I have limited this comparison to only ten messengers:</p>
 <ul>
+<li>SimpleX, a private messenger that doesn't need accounts or user ID</li>
 <li>XMPP, the pioneer of FOSS and federated instant messengers. XMPP is just a protocol and not an application; in this article it is represented by the Android app Conversations.</li>
 <li>Delta Chat, which is based on normal email and hence has the greatest theoretical userbase among all federated messengers.</li>
 <li>Matrix, a new and very promising federated protocol, here represented by the leading client Element.</li>
@@ -196,20 +197,21 @@ I have limited this comparison to only ten messengers:</p>
 <li>Snapchat: Quite popular, but more like a social media than pure IM, and not #1 in any country.</li>
 <li>QQ: Second most popular messenger in China. But if WeChat doesn't make it on list, QQ won't make it either.</li>
 <li>Wire, Wickr, Slack, Microsoft Teams, BBMe, Mattermost: Focus on enterprise users.</li>
-<li>SimpleX, Session, Jami: Great privacy, but low adoption. <span style="color: red; font-weight: bold;">I would actually like to add SimpleX in the future as it seems very promising. I'll add it when I have some time</span></li>
+<li>Session, Jami: Great privacy, but low adoption.</li>
 <li>Instagram, LinkedIn: Mainly social media rather than a messenger.</li>
 <li>Mumble, Teamspeak: Voice chat focus.</li>
 </ul>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 13 February 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 20 February 2024</p>
 
 
 <table class="comparison">
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
 <col style="border-left: double; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <!-- end federated + foss -->
@@ -237,17 +239,19 @@ I have limited this comparison to only ten messengers:</p>
 <td style="width: var(--imwidth);"></td>
 <td style="width: var(--imwidth);"></td>
 <td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
 </tr>
 
 <tr class="groups" style="font-size: large; font-weight: bold; border: none;">
 <td></td>
-<td colspan="3">Federated &amp; FOSS</td>
+<td colspan="3">Dcentralized/Federated &amp; FOSS</td>
 <td colspan="3">Centralized &amp; FOSS</td>
 <td colspan="4">Proprietary Market Leaders</td>
 </tr>
 
 <tr style="font-size: larger; font-weight: bold;">
 <th></th>
+<th>SimpleX</th>
 <th>Conversations <br />(XMPP)</th>
 <th>Delta Chat</th>
 <th>Element <br />(Matrix)</th>
@@ -265,6 +269,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td></td>
+<td style="vertical-align: middle;"><img src="pics/logos/messengers/simplex.png" style="height: 30px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/conversations.png" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/delta.svg" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/element.svg" style="height: 100px; max-width: 190px;" /></td>
@@ -279,11 +284,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Year introduced</td>
+<td class="line">2021</td>
 <td class="line">2014 (XMPP: 1999)</td>
 <td class="line">2017</td>
 <td class="line">2016 (Matrix: 2014)</td>
@@ -298,6 +304,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Developer</td>
+<td class="line">SimpleX Chat Ltd</td>
 <td class="line">mainly Daniel Gultsch</td>
 <td class="line">various developers</td>
 <td class="line">The Matrix.org Foundation CIC</td>
@@ -312,6 +319,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Domicile of developer</td>
+<td class="line">UK</td>
 <td class="line">Germany</td>
 <td class="line">n/a</td>
 <td class="line">UK</td>
@@ -326,9 +334,10 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Monthly active users</td>
-<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
-<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
-<td class="mau0 tooltip">n/a <span class="tooltiptext">cannot be determined due to server federation</span></td>
+<td class="mau0">n/a (decentralized)</td>
+<td class="mau0">n/a (decentralized)</td>
+<td class="mau0">n/a (decentralized)</td>
+<td class="mau0">n/a (decentralized)</td>
 <td class="mau1">40 million</td>
 <td class="mau3">550 million</td>
 <td class="mau1">10 million</td>
@@ -340,12 +349,13 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Play Store number of installs</td>
+<td class="mau1">50,000+</td>
 <td class="mau1 tooltip">100,000+<span class="tooltiptext">refers only to the Conversations app, which is only one of many XMPP messengers</span></td>
 <td class="mau1">100,000+</td>
-<td class="mau1 tooltip">500,000+<span class="tooltiptext">refers only to the Element app, which is only one of many XMPP messengers</span></td>
-<td class="mau3">50,000,000+</td>
-<td class="mau4">500,000,000+</td>
-<td class="mau2">1,000,000+</td>
+<td class="mau2 tooltip">1,000,000+<span class="tooltiptext">refers only to the Element app, which is only one of many XMPP messengers</span></td>
+<td class="mau3">100,000,000+</td>
+<td class="mau3">500,000,000+</td>
+<td class="mau2">5,000,000+</td>
 <td class="mau6">5,000,000,000+</td>
 <td class="mau4">500,000,000+</td>
 <td class="mau5">1,000,000,000+</td>
@@ -355,6 +365,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Protocol used</td>
+<td class="line">SimpleX + Signal</td>
 <td class="line">XMPP + OMEMO</td>
 <td class="line">IMAP/SMTP + OpenPGP</td>
 <td class="line">Matrix + Olm/Megolm</td>
@@ -369,6 +380,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Price</td>
+<td class="line">free</td>
 <td class="line tooltip">free<span class="tooltiptext">Free download on F-Droid. Play Store costs &euro;2.99. Alternatively, Quicksy (same developer, almost identical app) is free on the Play Store as well.</span></td>
 <td class="line">free</td>
 <td class="line">free</td>
@@ -384,11 +396,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Sustainability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Sustainability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>License of client/server</td>
+<td class="yes">AGPL</td>
 <td class="yes">GPL</td>
 <td class="yes">GPL</td>
 <td class="yes">Apache</td>
@@ -403,6 +416,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Server architecture</td>
+<td class="yes tooltip">Decentralized<span class="tooltiptext">Server just serve as relays and don't save messages once they have reached their recipient</span></td>
 <td class="yes">Federated</td>
 <td class="yes">Federated</td>
 <td class="yes">Federated</td>
@@ -420,6 +434,7 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -431,6 +446,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Compatibility with other messengers</td>
+<td class="no">No</td>
 <td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord</span></td>
 <td class="mixed">Normal Email if recipient does not use Delta Chat</td>
 <td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat</span></td>
@@ -445,18 +461,19 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <!--
 <tr>
-<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Smartphones:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Smartphones:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 -->
 
 <tr>
 <td>Android</td>
+<td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
@@ -472,6 +489,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>iOS</td>
+<td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -562,11 +580,12 @@ I have limited this comparison to only ten messengers:</p>
 
 <!--
 <tr>
-<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Desktops:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Desktops:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr> -->
 
 <tr>
 <td>Windows</td>
+<td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -581,6 +600,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>macOS</td>
+<td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -595,20 +615,22 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>GNU/Linux</td>
+<td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="notreally tooltip">Can run Android version<span class="tooltiptext">using Anbox</span></td>
-<td class="notreally tooltip">Can run Android version<span class="tooltiptext">using Anbox</span></td>
+<td class="no">No</td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="notreally tooltip">Can run Android version<span class="tooltiptext">using Anbox</span></td>
+<td class="no">No</td>
 </tr>
 
 <tr>
 <td class="tooltip">Unix &amp; BSD<span class="tooltiptext">e.g. FreeBSD, OpenBSD, NetBSD, DragonFlyBSD, Illumos, and  Solaris</span></td>
+<td class="no">No</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="no">No</td>
 <td class="otherclients"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix client(s)</a></td>
@@ -669,6 +691,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Web browser</td>
+<td class="no">No</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -683,11 +706,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Capability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Capability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Offline messages (if recipient is offline)</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -712,6 +736,7 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -726,10 +751,12 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
 <td>Voice and video calls</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -755,10 +782,12 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
 <td>Screensharing</td>
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="almost">Yes (not on mobile)</td>
@@ -773,6 +802,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Public/searchable groups</td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -787,6 +817,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Ephemeral (self-destructing) messages</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="mixed tooltip">Only on local device<span class="tooltiptext">Automatic message deletion on local device, but no remote deletion on other people's devices</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -801,6 +832,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Delete messages on device of recipients</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -815,7 +847,8 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td>Use with multiple accounts</td>
+<td>Use with multiple accounts/profiles</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="otherclients">Other Matrix client(s)</td>
@@ -830,11 +863,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Usability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Usability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Find contacts from phone address book</td>
+<td class="no">No</td>
 <td class="otherclients tooltip"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>
 <td class="no">No</td>
 <td class="yes">Phone number &amp; Email</td>
@@ -849,6 +883,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Automatic backups of chat history</td>
+<td class="no">No, need to manually export chat database for backups.</td>
 <td class="otherclients">Chat history is saved on the XMPP server, but useless without decryption keys, which some <a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> can back up automatically (Con&shy;ver&shy;sations: only <em>manual</em> backups to local device).</td>
 <td class="notreally">Local backups of chat history are possible but not automatic. Chat history is saved on the Email server, but useless without decryption keys, which need to be <em>manually</em> backed up to local device.</td>
 <td class="yes">Chat history is saved on the Matrix server, but useless without decryption keys, which can be automatically backed up to local device or Matrix homeserver</td>
@@ -863,6 +898,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Data can be transferred to new device</td>
+<td class="yes">Yes (export/import database)</td>
 <td class="yes">Yes (at least to new installation of Conversations)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -877,6 +913,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Use on multiple devices</td>
+<td class="mixed tooltip">You can link desktop &amp; mobile apps with some limitations (e.g. mobile app must be running in the background)<span class="tooltiptext">You can use mobile profiles on the desktop app, however this is only possible when both devices are connected to the same local network. If it is an Android app, you can move the app to background, but iOS app has to remain open. In both cases, while you are using mobile profiles from desktop, you won't be able to use mobile app.</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -891,7 +928,8 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td>Import chat history from other apps</td>
+<td>Import chat history from other messengers</td>
+<td class="no">No</td>
 <td class="no">No (from other XMPP clients only)</td>
 <td class="no">No</td>
 <td class="no">No (from other Matrix clients only)</td>
@@ -906,11 +944,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>User ID</td>
+<td>None (connect via 1-time invitation link or optional SimpleX contact address)</td>
 <td>XMPP address (user@server.tld)</td>
 <td>Email address (user@server.tld)</td>
 <td>Matrix ID (@user:server.tld)</td>
@@ -945,6 +984,7 @@ I have limited this comparison to only ten messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no tooltip">Phone number required<span class="tooltiptext">Could use a "burner SIM" for anonymous sign-up, but in many countries it is not legal to sell/buy SIM cards anonymously</span></td>
 <td class="almost tooltip">Possible with "Fragment" number (paid)<span class="tooltiptext">Has to be paid with "TON" cryptocoin. Alternatively, can sign up with phone number.</span></td>
 <td class="almost tooltip">Yes if purchased anonymously <span class="tooltiptext">Android license can be purchased from Threema directly using Bitcoin, while the iOS app can only be bought in the App Store (hence the latter is only anonymous if the Apple ID itself is anonymous, i.e. anonymous email address used to sign up and no phone number given)</td>
@@ -956,6 +996,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of 1:1 text messages</td>
+<td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
@@ -970,6 +1011,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of group chats</td>
+<td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
@@ -984,6 +1026,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of voice and video calls</td>
+<td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes">Yes</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
@@ -998,6 +1041,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td><span class="tooltip">E2E<span class="tooltiptext">end-to-end</span></span> encryption of chat backups</td>
+<td class="yes">Local database exports are encrypted</td>
 <td class="yes">Yes</td>
 <td class="mixed">Local backups: no,<br />on email server: yes</td>
 <td class="yes">Yes</td>
@@ -1012,6 +1056,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Minimal metadata</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1026,11 +1071,12 @@ I have limited this comparison to only ten messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Encryption: Authentification of contacts</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1046,6 +1092,7 @@ I have limited this comparison to only ten messengers:</p>
 <tr>
 <td>Encryption: Forward secrecy</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="otherclients tooltip">other Matrix clients<span class="tooltiptext">Supported by the Matrix protocol, but not the Element client</span></td>
 <td class="yes">Yes</td>
@@ -1060,6 +1107,7 @@ I have limited this comparison to only ten messengers:</p>
 <tr>
 <td>Encryption: Plausible deniability</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1073,6 +1121,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Post-quantum encryption</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1087,6 +1136,7 @@ I have limited this comparison to only ten messengers:</p>
 
 <tr>
 <td>Lock app with password/biometrics</td>
+<td class="mixed tooltip">Mobile apps only<span class="tooltiptext">additionally, <a href="https://simplex.chat/docs/guide/chat-profiles.html#hiding-and-muting-chat-profiles" target="_blank" style="color: white;">hidden chat profiles" can be locked with a password</a></span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1106,11 +1156,12 @@ I have limited this comparison to only ten messengers:</p>
 <h2>So, what's the conclusion?</h2>
 
 <ul>
-<li>In an ideal world, everyone would use federated messengers, so that no company has the power to ban users or sell out to a Big Tech oligopolist such as Meta, Apple, Google, Microsoft, or Amazon, and so that people can self-host their own servers and thereby circumvent censorship attempts.
-<ul><li>At the moment, Matrix seems to be the most promising. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery.</li>
+<li>In an ideal world, everyone would use decentralized or federated messengers, so that no company has the power to ban users or sell out to a Big Tech oligopolist such as Meta, Apple, Google, Microsoft, or Amazon, and so that people can self-host their own servers and thereby circumvent censorship attempts.
+<ul><li>At the moment, Matrix seems to be the most popular. It has decent client apps across all major platforms, supports all the important features, and has optional contact discovery.</li>
 <li>XMPP has a very lightweight and easy to set up server software. Furthermore it is a standardized protocol that has been around since 1999 and is the basis for other messengers such as Whatsapp. The main problem with XMPP is the fact that there isn't any client app which works across all major operating systems and has implemented all the important features (such as video calling). I believe that this is a roadblock to more widespread adoption among the less technologically inclined ("Oh you have an iPhone? Then you need to download Siskin, not Conversations."). </li>
-<li>Delta Chat has the advantage that everyone already has an email address so there are billions of potential users which already have each other saved in their address books. However, the email protocol has its own limits, for example you can't conduct voice or video calls. Because of this, I don't think that Delta Chat will have a realistic chance of ever replacing WhatsApp.</li></ul>
-<li>Signal is the next best choice. It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), <span style="text-decoration: line-through;">it can be used as the default SMS app on Android which is a huge selling point when trying to get friends and family to install it,</span><sup>not anymore</sup> and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously if your country forbids the anonymous purchase of SIM cards. Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do not allow third-party clients, so users of niche operating systems are excluded.</li>
+<li>Delta Chat has the advantage that everyone already has an email address so there are billions of potential users which already have each other saved in their address books. However, the email protocol has its own limits, for example you can't conduct voice or video calls. Because of this, I don't think that Delta Chat will have a realistic chance of ever replacing WhatsApp.</li>
+<li>SimpleX probably has the best privacy and anonymity of all the messengers compared here, but it is a relatively new app with few users.</li></ul>
+<li>Signal is the best choice among the centralized messengers  . It has the best privacy out of all major messengers (XMPP and Matrix leak metadata, Signal doesn't), <span style="text-decoration: line-through;">it can be used as the default SMS app on Android which is a huge selling point when trying to get friends and family to install it,</span><sup>not anymore</sup> and its interface and setup are familiar to anyone who has used WhatsApp. However, Signal needs your phone number, so you can't sign up anonymously if your country forbids the anonymous purchase of SIM cards. Otherwise, the main downside is that Signal is using centralized servers, hence there is always a risk that Signal will be acquired by a privacy-hostile company. Furthermore, the Signal developers do not allow third-party clients, so users of niche operating systems are excluded.</li>
 <li>Telegram has lots of features and encourages the development of third-party clients. It's probably the best messenger if you don't care too much about privacy. The main downside is that chats are not E2E encrypted by default, and the E2E encrypted secret chats don't sync across devices. Furthermore, it is centralized and was forced to censor in the past (e.g. in 2022 they blocked over 60 public channels for German users after being threatened by the German government). </li>
 <li>Threema is good from a privacy perspective and allows users to sign up without giving up their phone number. The main problem I see is that the app costs money. It's not much, and it's good to know how the development is financed, but it is a major showstopper for widespread adoption.</li>
 <li>Among the big proprietary messengers, Whatsapp, Line and Viber E2E-encrypt all messages by default, which is great. However, you can never be sure that the company or the government doesn't hold the keys to access your messages, as the apps are closed source and can't be audited. Furthermore, the cloud chat backups of the proprietary messengers are not E2E encrypted. If backups are not end-to-end encrypted, then even if you don't upload your chat history to the cloud, your conversation partner may do so, and this effectively makes the rest of the E2E encryption pointless, because Apple/Google and the US government can read your messages in the cloud backup. WhatsApp offers E2EE for backups as an optional feature, however unless <em>all</em> parties in a chat have it enabled, this encryption can be circumvented. Furthermore, device-level backups on iPhone will store the unencrypted Whatsapp chats in iCloud unless the user has enabled "advanced data protection" (E2EE device backup) which is an opt-in feature. Hence it is more likely than not that your conversation partner has an unencrypted chat backup in a cloud somewhere and that ultimately WhatsApp's end-to-end encryption is just privacy theatre if someone "serious" (like the US government) wants to see your chats.</li>
