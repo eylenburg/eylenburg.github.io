@@ -11,6 +11,7 @@ document.write(`
 <td><a href="browser_comparison.htm"><strong>Web Brow&shy;ser</strong> Compa&shy;rison</a></td>
 <td><a href="browser_engines.htm"><strong>Brow&shy;ser En&shy;gine</strong> His&shy;tory</a></td>
 <td><a href="im_comparison.htm"><strong>Ins&shy;tant Mes&shy;sen&shy;ger</strong> Compa&shy;rison</a></td>
+<td><a href="payments.htm"><strong>Pay&shy;ment Me&shy;thods</strong> Compa&shy;rison</a></td>
 <td><a href="cloud_comparison.htm"><strong>Cloud, Sync &amp; E&shy;mail Pro&shy;vider</strong> Compa&shy;rison</a></td>
 </tr>
 </table>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Payment Methods and Currencies</title>
+<meta name="description" content="Comparison of Instant Messengers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Firefox, Chrome, Edge, Safari, Brave, Vivaldi, Operating Systems, Desktop Environments, GNOME, KDE, Xfce, Linux, Unix, BSD, Solaris, Windows, macOS, Instant Messengers, Chat, Software, Cloud, Sync, Email, Privacy, Monero, Bitcoin, Bitcoin Cash, Litecoin">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+--legendwidth: 300px;
+--currencywidth: 175px;
+}
+
+table {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--legendwidth) + 9 * var(--currencywidth));
+}
+
+td {
+border: none;
+padding: 1px 1px;
+vertical-align: top;
+}
+
+td.yes,
+td.almost,
+td.no,
+td.mixed,
+td.notreally,
+td.line {
+border-top: 1px solid ivory;
+border-bottom: 1px solid ivory;
+}
+
+th {
+border: none;
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+z-index: 10;
+background-color: white;
+font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+th {background-color: #222; color: white;  }
+}
+
+td img {
+padding: 15px 0px;
+}
+
+table.comparison tr td:first-child {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+}
+
+.semititle {
+text-decoration: underline;
+font-weight: bold;
+vertical-align: bottom; }
+
+.center {
+text-align: center;
+}
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.yes {
+background-color: #CEE6BB;
+}
+
+.almost {
+background-color: #E7F2DD;
+}
+
+.mixed {
+background-color: #E7DEB1;
+}
+
+.notreally {
+background-color: #F5E0D6;
+}
+
+.no {
+background-color: #EBC1AD;
+}
+
+.otherclients {
+background-color: aliceblue;
+}
+
+.lightning { font-size: smaller; }
+
+</style>
+</head>
+<body>
+
+<script src="top.js"></script>
+<header>
+<p><a href="index.html">&larr; Sitemap</a></p>
+</header>
+
+
+<h1>Comparison of Payment Methods and Cryptocurrencies</h1>
+<p>INTRODUCTION GOES HERE - TO DO</p>
+
+
+<h2 class="center">Comparison of Payment Methods and Cryptocurrencies</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 21 March 2024</p>
+
+
+<table class="comparison">
+<colgroup>
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<!-- end fiat, begin crypto -->
+<col style="border-left: double; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+</colgroup>
+
+<thead>
+<tr style="height: 1px; display: none;">
+<td style="width: var(--legendwidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+</tr>
+
+<tr class="groups" style="font-size: large; font-weight: bold; border: none;">
+<td></td>
+<td colspan="5" style="border: 1px solid grey;">Fiat money</td>
+<td colspan="4" style="border: 1px solid grey;" >Cryptocurrencies</td>
+</tr>
+
+<tr style="font-size: larger; font-weight: bold;">
+<th></th>
+<th>Physical cash</th>
+<th>Bank transfer</th>
+<th>Bank-issued card (debit/credit)</th>
+<th>PayPal</th>
+<th>Central Bank Digital Currency (CBDC)</th>
+<th>Bitcoin (BTC)</th>
+<th>Bitcoin Cash (BCH)</th>
+<th>Litecoin (LTC)</th>
+<th>Monero (XMR)</th>
+</tr>
+
+</thead>
+<tbody>
+
+<tr>
+<td></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/cash.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/swift.svg" style="height: 30px; max-width: 190px;" /><img src="pics/logos/other/sepa.svg" style="height: 30px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/visa.svg" style="height: 30px; max-width: 190px;" /><img src="pics/logos/other/mastercard.svg" style="height: 30px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/paypal.svg" style="height: 30px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/cbdc.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/crypto/btc.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/crypto/bch.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/crypto/ltc.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/crypto/xmr.svg" style="height: 100px; max-width: 190px;" /></td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Utility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Scalability / number of transactions</td>
+<td class="yes">Theoretically unlimited number of transactions as payments are decentralized (peer-to-peer).</td>
+<td class="yes">Theoretically unlimited number of transactions as payments are decentralized (bank-to-bank).</td>
+<td class="yes">Technical limits are unknown. Reportedly, VISA processes ~24,000 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> and Mastercard ~5,000 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> on average.</td>
+<td class="yes">Technical limits are unknown. Reportedly, PayPal processes 192 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> on average.</td>
+<td class="line">TBC</td>
+<td class="no">No, the blockchain can process only 7 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> and is chronically congested. <br /><span class="yes lightning">The "Layer 2" <em>Lightning Network</em> allows "millions to billions" of <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>.</span></td>
+<td class="yes">Theoretically unlimited <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> due to variable blocksize (since May 2024).</td>
+<td class="mixed">No, the blockchain can process only 56 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>, although this is currently more than sufficient. <br /><span class="yes lightning">The "Layer 2" <em>Lightning Network</em> allows "millions to billions" of <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>.</span></td>
+<td class="yes">Theoretically unlimited <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> due to variable blocksize.</td>
+</tr>
+
+<tr>
+<td>Payment speed</td>
+<td class="yes">Instant</td>
+<td class="line">Depends on the bank or country, can be instant or take several days.</td>
+<td class="yes">Instant</td>
+<td class="yes">Instant</td>
+<td class="line">TBC</td>
+<td class="mixed">10 minutes for one block confirmation. <br /><span class="yes lightning">Instant with the "Layer 2" <em>Lightning Network</em>.</span></td>
+<td class="mixed">10 minutes for one block confirmation. <br /><span class="yes">Instant with 0-conf which is relatively safe for BCH due to double spend proofs.</span></td>
+<td class="mixed">2.5 minutes for one block confirmation. <br /><span class="yes lightning">Instant with the "Layer 2" <em>Lightning Network</em>.</span></td>
+<td class="mixed">20 minutes to fully confirm payment and be able to spend received money (10 block confirmations, 2 minutes per block).</td>
+</tr>
+
+<tr>
+<td>Transaction fees <br />(assuming <span style="text-decoration: underline;">no currency conversion</span>)</td>
+<td class="yes">None.<!-- (Although there indirect costs such as safe cash transports or the ATM network.)--></td>
+<td class="almost">Depends on the bank or country. Usually no fees, with some exceptions (e.g. for large transfers or certain international payments).</td>
+<td class="mixed">Depends on the card issuer and country. Various fees, both variable and fixed, are charged and add up to on average around 2-3% of the transaction value. The fees paid by the merchant/recipient.</td>
+<td class="mixed">Various fees are charged, usually paid by the merchant/recipient. A typical fee for a domestic online purchase would be 2.9% + $0.30. Payments to "friends and family" are free.</td>
+<td class="line">TBC</td>
+<td class="mixed"><span class="tooltip">Depends on the desired transfer speed and the network congestion. <span class="tooltiptext">Transactions are "competing" to be included in the next block - the higher the fee paid the quicker the transactions will be confirmed (and if the chosen fee is too low, the transaction may fail altogether). Due to the chronic network congestion and small blocksize, transactions tend to cost more than for other cryptocurrencies. During the crypto boom of 2017, average fees reached $60 per transaction. Fees are independent of the transaction value, hence network fees seem low for large transactions and high for small transactions.</span></span> From 03/2017 to 03/2024 the average fee was about <span class="tooltip">$3.50<span class="tooltiptext"><a href="https://bitinfocharts.com/comparison/transactionfees-btc-ltc-bch-xmr-sma90.html#log&alltime" target="_blank" style="color: white;">source</a></span></span> but of course this is highly dependent on the BTC/USD exchange rate. <br /><span class="lightning yes tooltip">Cheap transactions using the <em>Lightning Network</em> are also possible. <span class="tooltiptext">But will still incur fees for opening/closing the channel and the Lightning node</span></span></td>
+<td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
+<td class="yes">Very low fees at current network usage. Normally, a transaction costs a few USD cents.<br /><span class="lightning yes tooltip">Cheap transactions using the <em>Lightning Network</em> are also possible. <span class="tooltiptext">But will still incur fees for opening/closing the channel and the Lightning node</span></span></td>
+<td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Decentralization</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Can transactions or accounts be blocked?</td>
+<td class="yes">Not possible</td>
+<td class="no">Yes (by bank)</td>
+<td class="no">Yes (by bank or card issuer)</td>
+<td class="no">Yes (by PayPal)</td>
+<td class="no tooltip">Yes (by government/central bank)<span class="tooltiptext">CBDCs could empower the state to make it impossible to donate to a certain NGO or could prohibit certain people from purchasing certain items such as a flight ticket or alcohol.</span></td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+</tr>
+
+<tr>
+<td>Can funds be frozen or confiscated?</td>
+<td class="no">Yes, if physically confiscated.</td>
+<td class="no">Yes (by bank, police or government)</td>
+<td class="no">Yes (by bank, police or government)</td>
+<td class="no">Yes (by PayPal, police or government)</td>
+<td class="no tooltip">Yes (by central bank, police or government)<span class="tooltiptext">A CBDC can simply become an extension of the surveillance state and it could see citizens fined in a split second for behaviours deemed undesirable. Dissidents and activists could see their wallets emptied or taken offline.</span></td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
+</tr>
+
+<tr>
+<td class="tooltip">Fungibility <span class="tooltiptext">Fungibility means that it is not possible to identify a specific unit of money and therefore it is not possible for units of money to become "tainted" or accounts/wallets to be blacklisted by the authorities.</span></td>
+<td class="mixed">Generally yes, but it is possible to identify specific banknotes by their serial number.</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No. Each unit of money is uniquely identifiable and all transactions are centrally recorded.</td>
+<td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <br /><span class="lightning yes tooltip">Source of funds can be obscured by mixing (<em>CoinJoin</em>), with various downsides.<span class="tooltiptext">such as minimum funds needed, the time and fees for mixing, and the likely blacklisting of mixed coins from CEX and off-ramping providers</span></span></td>
+<td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <br /><span class="lightning yes tooltip">Source of funds can be obscured by mixing (<em>CashFusion</em>), with various downsides.<span class="tooltiptext">such as minimum funds needed, the time and fees for mixing, and the likely blacklisting of mixed coins from CEX and off-ramping providers</span></span></td>
+<td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted.</td>
+<td class="yes">Yes</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Anonymous accounts/wallets</td>
+<td class="yes">(no accounts)</td>
+<td class="no">No, KYC required by law</td>
+<td class="no">No, KYC required by law. <br /><span class="lightning yes tooltip">Except for certain prepaid cards paid with cash or crypto.<span class="tooltiptext">Not available in all countries; limited acceptance with merchants.</span></span></td>
+<td class="no">No, PayPal requires customer identification.</td>
+<td class="no">No (TBC)</td>
+<td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
+<td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
+<td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
+<td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
+</tr>
+
+<tr>
+<td>Transaction privacy</td>
+<td class="yes">Private by default. Even sender and receiver can remain anonymous from each other.</td>
+<td class="no">The involved banks and the government (on request) can view transactions. Sender and recipient know each other.</td>
+<td class="no">The involved banks, the card issuer, and the government (on request) can view transactions. Sender and recipient know each other.</td>
+<td class="no">PayPal and the government (on request) can view transactions. Sender and recipient know each other.</td>
+<td class="no">The government has direct visibility of financial transactions and the spending of everyone. Sender and recipient know each other.</td>
+<td class="no">Everyone can view transactions on the blockchain. <br /><span class="lightning mixed">Using the <em>Lightning Network</em> improves the privacy somewhat.</span></td>
+<td class="no">Everyone can view transactions on the blockchain.</td>
+<td class="no">Everyone can view transactions on the blockchain, <span class="tooltip yes">except for <em>MWEB</em> transactions<span class="tooltiptext">MWEB (Mimblewimble Extension Blocks) hides amounts and addresses. The downside is that coins might get blacklisted by CEX and off-ramping providers.</span></span><br /><span class="lightning mixed">Using the <em>Lightning Network</em> improves the privacy somewhat.</span></td>
+<td class="yes">Private by default. Even sender and receiver can remain anonymous from each other. View keys exist for opt-in transparency.</td>
+</tr>
+
+<tr>
+<td>Wealth privacy</td>
+<td class="yes">Only the owner knows his/her total wealth.</td>
+<td class="no">The bank and the government (on request) can see the funds on the account.</td>
+<td class="no">The bank and the government (on request) can see the funds on the account.</td>
+<td class="no">PayPal and the government (on request) can see the funds on the account.</td>
+<td class="no">The government can see the funds on the account.</td>
+<td class="no">Everyone can see the funds of a wallet on the blockchain.</td>
+<td class="no">Everyone can see the funds of a wallet on the blockchain.</td>
+<td class="no">Everyone can see the funds of a wallet on the blockchain, <span class="tooltip yes">except those relating to <em>MWEB</em> transactions. <span class="tooltiptext">Transactions that are done on MWEB remains private indefinitely and the corresponding wallet balances are therefore hidden. However, when moving funds from MWEB to the normal blockchain an aggregated transaction is created, thereby making the total funds publicly visible again.</span></span></td>
+<td class="yes">Only the owner knows his/her total wealth.</td>
+</tr>
+
+
+<tr>
+<td class="semititle"><br />Acceptance</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Useable for in-person payments (e.g. shop)?</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="line">TBC</td>
+<td class="mixed">Yes, but negligible point-of-sale adoption.</td>
+<td class="mixed">Yes, but negligible point-of-sale adoption.</td>
+<td class="mixed">Yes, but negligible point-of-sale adoption.</td>
+<td class="mixed">Yes, but negligible point-of-sale adoption.</td>
+</tr>
+
+<tr>
+<td>Useable for online payments?</td>
+<td class="no">No (except for cash in mail)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="line">TBC</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Useable for transfers between individuals?</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="yes">Yes</td>
+<td class="line">TBC</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td class="semititle"><br />Other considerations</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Automatic recurring payments?</td>
+<td class="no">No</td>
+<td class="yes">Yes (direct debit, standing order)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="line">TBC</td>
+<td class="no">No (unless supported by wallet app)</td>
+<td class="no">No (unless supported by wallet app)</td>
+<td class="no">No (unless supported by wallet app)</td>
+<td class="no">No (unless supported by wallet app)</td>
+</tr>
+
+<tr>
+<td>Chargebacks to protect buyers from fraud?</td>
+<td class="no">No, not possible with physical money</td>
+<td class="no">No, transactions are final</td>
+<td class="yes">Yes, under certain circumstances</td>
+<td class="yes">Yes, under certain circumstances</td>
+<td class="line">TBC</td>
+<td class="no">No, transactions are final</td>
+<td class="no">No, transactions are final</td>
+<td class="no">No, transactions are final</td>
+<td class="no">No, transactions are final</td>
+</tr>
+
+<tr>
+<td>Useable without electricity or Internet?</td>
+<td class="yes">Yes</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
+</tr>
+
+<tr>
+<td>"Store of Value" narrative</td>
+<td colspan="4" class="no">No, fiat money has an unlimited supply as the central bank can create new money, thereby devaluing existing money.</td>
+<td class="no">No. It is inflationary like all fiat money and additionally <span class="tooltip">can be programmed to expire after a certain time.<span class="tooltiptext">The government could theoretically give out money that expires within a certain period of time or money that could only be used on certain items, which could be used to induce behaviour that the government is seeking. For example, in the Chinese CBDC pilot program, money has an expiration date of a few weeks because authorities are hoping to drive consumption.</span></span></td>
+<td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
+<td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
+<td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
+<td class="almost">Probably yes. There is a perpetual coin issuance (tail emissions) with inflation asymptotically approaching zero. Supply is further reduced by lost wallet seeds.</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>So, what's the conclusion?</h2>
+
+<p><strong>&rarr; Use Monero if you can, and prefer cash otherwise. &larr;</strong></p>
+
+<script src="bottom.js "></script>
+</body>
+</html>
