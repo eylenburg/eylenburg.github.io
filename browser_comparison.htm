@@ -183,7 +183,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 28 March 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 3 May 2024</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
@@ -455,7 +455,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <tr>
 <td class="legend">Unix System V</td>
-<td colspan="3" class="almost tooltip">Solaris, Illumos. <span class="dropped">Dropped: HP-UX, AIX</span><span class="tooltiptext">All inofficial builds (not provided or supported by Mozilla). <br />Solaris is mentioned as a Tier-3 target by Mozilla: <br />https://firefox-source-docs.mozilla.org/contributing/build/supported.html</span></td>
+<td colspan="3" class="almost tooltip">Solaris, Illumos. <span class="dropped">Dropped: HP-UX, AIX, ...</span><span class="tooltiptext">Formerly also for IRIX and Unixware. All inofficial builds (not provided or supported by Mozilla). <br />Solaris is mentioned as a Tier-3 target by Mozilla: <br />https://firefox-source-docs.mozilla.org/contributing/build/supported.html</span></td>
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="no">No</td>
 <td colspan="3" class="no">No</td>
@@ -469,7 +469,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td colspan="3" class="yes">Yes</td>
 <td colspan="2" class="no">No</td>
 <td colspan="3" class="yes">Yes</td>
-<td colspan="3" class="yes">Ye</td>
+<td colspan="3" class="yes">Yes</td>
 <td colspan="3" class="yes">Yes</td>
 <td colspan="3" class="yes">Yes</td>
 <td colspan="3" class="yes">Yes</td>
@@ -2022,7 +2022,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="legend">Can disable JavaScript</td>
 <!-- Firefox -->
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android dropped">Dropped</td>
+<td class="android almost"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
@@ -2178,30 +2178,30 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <td class="legend">Support for JPEG XL image format</td>
 <!-- Firefox -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
+<td class="desktop ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios yes">Yes</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Edge -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop no">No</td>
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Brave -->
-<td class="desktop no">No</td>
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 </tr>
@@ -2706,7 +2706,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">in opera://flags</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -2886,7 +2886,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="legend">Can "sideload" extension (install from file)</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
-<td class="android almost tooltip">if signed<span class="tooltiptext">Extensions have to be verified and signed by Mozilla</span></td>
+<td class="android almost tooltip">hidden<span class="tooltiptext">It is possible to sideload extensions after enabling the developer options. Extensions have to be verified and signed by Mozilla. Otherwise it is also possible to disable the signing requirements in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</span></td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop dropped">Dropped (v12)</td>
