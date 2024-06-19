@@ -156,7 +156,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 7 June 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 19 June 2024</p>
 
 <table class="comparison">
 
@@ -255,9 +255,9 @@ font-size: x-small;
 <td class="legend">Network-based location</td>
 <td class="green tooltip">Emulated <sup>default</sup>, or Play Services<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td class="red">No</td>
-<td class="green">UnifiedNLP</td>
-<td class="green">UnifiedNLP</td>
-<td class="green">UnifiedNLP</td>
+<td class="green">microG location</td>
+<td class="green">microG location</td>
+<td class="green">microG location</td>
 <td class="red">No</td>
 <td class="green">Play Services</td>
 </tr>
@@ -308,7 +308,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend">Android Auto compatible</td>
-<td class="green tooltip">Yes, <a href="https://grapheneos.org/usage#android-auto" target="_blank">see here</a><span class="tooltiptext">GrapheneOS has permission toggles to enable the user to provide the least amount of permissions necessary (e.g. wired Android Auto requires less than wireless Android Auto).</span></td>
+<td class="green tooltip">Yes (<strong>sandboxed</strong>), <a href="https://grapheneos.org/usage#android-auto" target="_blank">see here</a><span class="tooltiptext">GrapheneOS has permission toggles to enable the user to provide the least amount of permissions necessary (e.g. wired Android Auto requires only USB access).</span></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -349,9 +349,9 @@ font-size: x-small;
 <td class="legend">Network location provider</td>
 <td class="green tooltip">Emulated/GNSS <sup>default</sup>, or Google<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td>n/a</td>
-<td class="green">UnifiedNLP</td>
-<td class="green">UnifiedNLP</td>
-<td class="green">UnifiedNLP</td>
+<td class="green">microG location</td>
+<td class="green">microG location</td>
+<td class="green">microG location</td>
 <td>n/a</td>
 <td class="red">Google</td>
 </tr>
@@ -608,12 +608,12 @@ font-size: x-small;
 <!-- Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration. -->
 
 <tr>
-<td class="legend">Google Play Integrity/Safetynet?</td>
+<td class="legend">Google Play Integrity?</td>
 <td class="lgreen tooltip">Passes Basic Integrity only, <a href="https://grapheneos.org/usage#banking-apps" target="_blank">see here</a><span class="tooltiptext">Passes MEETS_BASIC_INTEGRITY but not MEETS_DEVICE_INTEGRITY or MEETS_STRONG_INTEGRITY which require a certification from Google.</td>
 <td class="red">No</td>
-<td class="lgreen tooltip">Passes Basic Integrity only<span class="tooltiptext">Passes MEETS_BASIC_INTEGRITY but not MEETS_DEVICE_INTEGRITY or MEETS_STRONG_INTEGRITY which require a certification from Google.</td>
-<td class="lgreen tooltip">Passes Basic Integrity only<span class="tooltiptext">Passes MEETS_BASIC_INTEGRITY but not MEETS_DEVICE_INTEGRITY or MEETS_STRONG_INTEGRITY which require a certification from Google.</td>
-<td class="lgreen tooltip">Passes Basic Integrity only<span class="tooltiptext">Passes MEETS_BASIC_INTEGRITY but not MEETS_DEVICE_INTEGRITY or MEETS_STRONG_INTEGRITY which require a certification from Google.</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
 <!-- skipped -->
 <td class="green">Yes</td>
 </tr>
@@ -920,7 +920,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend tooltip">USB data line control?<span class="tooltiptext"><a href="https://github.com/eylenburg/eylenburg.github.io/issues/28" target="_blank">See here for details</a></span></td>
-<td class="green tooltip">Enhanced controls, <a href="https://grapheneos.org/features#usb-c-port-control" target="_blank">see here</a><span class="tooltiptext">GrapheneOS provides a USB port control feature with modes for Off, Charging-only, Charging-only while locked, Charging-only while locked except before first unlock (default) and On. This disables USB gadget mode, USB peripherals and USB alternate modes but also disables USB at the USB controller level in hardware to truly disable the data lines. It blocks connecting new devices as soon as the device is locked for the modes relating to unlocking. As soon as the devices connected while locked are disconnected, it gets disabled. It also has the special Off mode for even disabling charging while the OS is enabled to disable the separate USB-PD related data lines and protocol too. That's also at a hardware level. The default allows USB in BFU to support desktop usage, accessibility devices, etc. The expectation is that most users can switch it to "Charging-only while locked" if they don't need that and "Charging-only" if they don't use USB or at least while they aren't using it. "Off" mode is a special mode for high security situations and can be used to do things like disabling USB completely when leaving your home and then turning it back on to "Charging-only" when you get back. This is much different than the standard Android feature.</span></td>
+<td class="green tooltip">Enhanced controls, <a href="https://grapheneos.org/features#usb-c-port-control" target="_blank">see here</a><span class="tooltiptext">GrapheneOS provides a USB port control feature with modes for Off, Charging-only, Charging-only while locked (default), Charging-only while locked except before first unlock and On. This disables USB gadget mode, USB peripherals and USB alternate modes but also disables USB at the USB controller level in hardware to truly disable the data lines. It blocks connecting new devices as soon as the device is locked for the modes relating to unlocking. As soon as the devices connected while locked are disconnected, it gets disabled. It also has the special Off mode for even disabling charging while the OS is enabled to disable the separate USB-PD related data lines and protocol too. That's also at a hardware level. The default allows USB in BFU to support desktop usage, accessibility devices, etc. The expectation is that most users can switch it to "Charging-only while locked" if they don't need that and "Charging-only" if they don't use USB or at least while they aren't using it. "Off" mode is a special mode for high security situations and can be used to do things like disabling USB completely when leaving your home and then turning it back on to "Charging-only" when you get back. This is much different than the standard Android feature.</span></td>
 <td class="lgreen">Standard AOSP controls</td>
 <td class="lgreen">Standard AOSP controls</td>
 <td class="lgreen">Standard AOSP controls</td>
@@ -1040,13 +1040,13 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">Oneplus*</td>
+<td class="legend">Oneplus</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
-<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
 <td class="green">Yes (OxygenOS)</td>
 </tr>
 
@@ -1068,23 +1068,23 @@ font-size: x-small;
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
-<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
 <td class="green">Yes</td>
 </tr>
 
 <tr>
-<td class="legend">Xiaomi*</td>
+<td class="legend">Xiaomi</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
-<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
 <td class="green">Yes (HyperOS)</td>
 </tr>
 
 <tr>
-<td class="legend" style="text-align: right; font-style: italic;">* these manufacturers don't support bootloader unlocking anymore for all or most of their new devices</td>
+<td class="legend" style="text-align: right; font-style: italic;">* these manufacturers don't support bootloader unlocking anymore for all or most of their new devices. "Older devices only" = no devices released since 2023.</td>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
