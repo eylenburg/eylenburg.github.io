@@ -247,7 +247,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 19 June 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 5 July 2024</p>
 
 <table class="comparison">
 <colgroup>
@@ -415,7 +415,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="tooltip">Xfwm4<span class="tooltiptext">fork of Fvwm</span></td> <!-- Xfce -->
 <td class="gnomeapp tooltip">Marco<span class="tooltiptext">fork of Metacity</span></td> <!-- MATE -->
 <td class="gnomeapp tooltip">Muffin<span class="tooltiptext">fork of Mutter</span></td> <!-- Cinnamon -->
-<td class="tooltip">Openbox<span class="tooltiptext">fork of Blackbox</span></td> <!-- LXQt -->
+<td><span class="tooltip">Openbox<span class="tooltiptext">fork of Blackbox</span></span>, <span class="kdeapp">KWin</span>, or <span class="tooltip">Xfwm4<span class="tooltiptext">fork of Fvwm</span></span></td> <!-- LXQt -->
 <td class="gnomeapp tooltip">budgie-wm<span class="tooltiptext">fork of Mutter</span></td>
 
 <td>Quartz Compositor</td>
@@ -842,6 +842,22 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+</tr>
+
+<tr>
+<td>Shake mouse to enlarge and find cursor</td>
+
+<td class="yes">Yes</td> <!-- Plasma -->
+<td class="no">No</td><!-- Gnome -->
+
+<td class="no">No</td> <!-- Xfce -->
+<td class="no">No</td> <!-- MATE -->
+<td class="no">No</td> <!-- Cinnamon -->
+<td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
+
+<td class="yes">Yes</td>
+<td class="no">No</td>
 </tr>
 
 <!--
@@ -1301,7 +1317,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Thumbnail support in file manager and <span class="tooltip">file picker<span class="tooltiptext">open/save dialogue</span></span></td>
 
 <td class="yes">Yes/Yes</td> <!-- Plasma -->
-<td class="almost">Yes/<span class="tooltip">Depends<span class="tooltiptext">only if folder was opened previously in the file manager</span></span></td> <!-- Gnome -->
+<td class="mixed">Yes/<span class="tooltip">Limited<span class="tooltiptext">Thumbnails only work if the folder was opened previously in the file manager; if new files have been added in the meantime the folder needs to be reloaded in the file manager to generate thumbnails.</span></span></td> <!-- Gnome -->
 
 <td class="mixed">Yes/No</td>  <!-- Xfce -->
 <td class="mixed">Yes/No</td>  <!-- MATE -->

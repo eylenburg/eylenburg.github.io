@@ -204,7 +204,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 17 May 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 5 July 2024</p>
 
 
 <table class="comparison">
@@ -321,7 +321,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Domicile of developer</td>
 <td class="line">UK</td>
 <td class="line">Germany</td>
-<td class="line">n/a</td>
+<td class="line">Germany</td>
 <td class="line">UK</td>
 <td class="line">USA</td>
 <td class="line">UAE</td>
@@ -339,7 +339,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="mau0">n/a (decentralized)</td>
 <td class="mau0">n/a (decentralized)</td>
 <td class="mau1">40 million</td>
-<td class="mau3">550 million</td>
+<td class="mau4">900 million</td>
 <td class="mau1">10 million</td>
 <td class="mau5">1.3 billion</td>
 <td class="mau2">250 million</td>
@@ -447,9 +447,9 @@ I have limited this comparison to only eleven messengers:</p>
 <tr>
 <td>Compatibility with other messengers</td>
 <td class="no">No</td>
-<td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord</span></td>
-<td class="mixed">Normal Email if recipient does not use Delta Chat</td>
-<td class="yes tooltip">Yes, if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat</span></td>
+<td class="yes tooltip">Via transports if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord</span></td>
+<td class="yes">Fallback to normal Email; more via <a href="https://github.com/deltachat-bot/matterdelta" target="_blank">bridges</a></td>
+<td class="yes tooltip">Via <a href="https://matrix.org/ecosystem/bridges/" target="_blank">bridges</a> if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat</span></td>
 <td class="no">No (SMS in earlier versions)</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -819,7 +819,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Ephemeral (self-destructing) messages</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="mixed tooltip">Only on local device<span class="tooltiptext">Automatic message deletion on local device, but no remote deletion on other people's devices</span></td>
-<td class="no">No</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="no">No</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
@@ -867,10 +867,10 @@ I have limited this comparison to only eleven messengers:</p>
 </tr>
 
 <tr>
-<td>Find contacts from phone address book</td>
+<td>Find contacts from device address book</td>
 <td class="no">No</td>
 <td class="otherclients tooltip"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>
-<td class="no">No</td>
+<td class="yes">Email</td>
 <td class="yes">Phone number &amp; Email</td>
 <td class="yes">Phone number</td>
 <td class="yes">Phone number</td>
@@ -893,7 +893,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes (All data is saved on Facebook servers)</td> <!-- <td class="mixed">All data is saved on Facebook servers, except for "secret chats"</td> -->
 <td class="mixed">Backup to cloud only (Google Drive/iCloud), and text messages only</td>
 <td class="almost">Backup to cloud only (Google Drive/iCloud)</td>
-<td class="yes">Yes (local device or Google Drive/iCloud)</td>
+<td class="almost tooltip">Backup to cloud only (Google Drive/iCloud)<span class="tooltiptext"><a hfref="https://faq.whatsapp.com/6181521285295518/?cms_platform=android" target="_blank" style="color: white;">On old devices running Android 9 or below, local backup was also supported.</a></span></td>
 </tr>
 
 <tr>
