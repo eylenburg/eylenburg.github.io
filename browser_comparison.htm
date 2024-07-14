@@ -50,7 +50,7 @@ font-weight: bold;
 }
 
 @media (prefers-color-scheme: dark) {
-th {background-color: #222; color: white;  }
+th, .legend {background-color: #222; color: white;  }
 }
 
 td img {
@@ -160,6 +160,13 @@ background-color: white;}
 background-color: #222;}
 }
 
+@media (min-width: 578px){
+.legend{
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
+}
 </style>
 
 

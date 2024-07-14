@@ -38,7 +38,15 @@ font-weight: bold;
 }
 
 @media (prefers-color-scheme: dark) {
-thead tr td {background-color: #222; color: white;  }
+thead tr td, table.comparison tr>td:first-child, .legend {background-color: #222; color: white;  }
+}
+
+@media (min-width: 578px){
+table.comparison tr>td:first-child, .legend {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
 }
 
 td {
