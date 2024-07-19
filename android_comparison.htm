@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
---legendwidth: 270px;
+--legendwidth: 280px;
 --distrowidth: 230px;
 }
 
@@ -38,10 +38,6 @@ background-color: white;
 font-weight: bold;
 }
     
-.legend {
-background-color: white;
-}
-
 @media (prefers-color-scheme: dark) {
 thead tr td, .legend {background-color: #222; color: white;  }
 }
@@ -71,6 +67,7 @@ vertical-align: bottom; }
 text-align: left;
 white-space: nowrap;
 padding-right: 5px;
+background-color: white;
 }
 
 .center {
@@ -81,6 +78,7 @@ text-align: center;
 text-decoration: underline;
 text-decoration-style: dotted;
 text-decoration-color: darkred;
+z-index: 99999;
 }
 
 .tooltip .tooltiptext {
@@ -91,7 +89,6 @@ text-align: center;
 border-radius: 6px;
 padding: 5px 5px;
 position: absolute;
-z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
@@ -168,7 +165,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 25 June 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 19 July 2024</p>
 
 <table class="comparison">
 
@@ -264,7 +261,7 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">Network-based location</td>
+<td class="legend">Network-based location (without GNSS)</td>
 <td class="green tooltip">Emulated <sup>default</sup>, or Play Services<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td class="red">No</td>
 <td class="green">microG location</td>
@@ -358,7 +355,7 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">Network location provider</td>
+<td class="legend">Provider for network-based location</td>
 <td class="green tooltip">Emulated/GNSS <sup>default</sup>, or Google<span class="tooltiptext">Emulated by default (redirect to GNSS-based location), can use sandboxed Google Play via toggles when installed</span></td>
 <td>n/a</td>
 <td class="green">microG location</td>
@@ -548,14 +545,14 @@ font-size: x-small;
 -->
 
 <tr>
-<td class="legend">Sandboxed/unprivileged?</td>
-<td class="green">Yes (regular app sandbox)</td>
-<td class="green">Yes (regular app sandbox)</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="legend">Runs in standard app sandbox?</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
 <!-- skipped -->
-<td class="red">No</td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
 </tr>
 
 <tr>
@@ -754,6 +751,16 @@ font-size: x-small;
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Tracking through Android Advertising ID?</td>
+<td class="green tooltip">Not part of the system<span class="tooltiptext">if Play Services are installed by the user, the Advertising ID can be deleted in settings</span></td>
+<td class="green tooltip">Not part of the system<span class="tooltiptext">if microG is installed by the user, it will generate a random Advertising ID for each request</span></td>
+<td class="green tooltip">Randomized ID<span class="tooltiptext">microG will generate a random advertising ID for each request</span></td>
+<td class="green tooltip">Randomized ID<span class="tooltiptext">microG will generate a random advertising ID for each request</span></td><td class="green tooltip">Randomized ID<span class="tooltiptext">microG will generate a random advertising ID for each request</span></td>
+<td class="green tooltip">Not part of the system<span class="tooltiptext">if microG is installed by the user, it will generate a random Advertising ID for each request; if Play Services are installed by the user, the Advertising ID can be deleted in settings</span></td>
+<td class="lgreen">Yes, but can be deleted in settings</td>
 </tr>
 
 
@@ -957,10 +964,10 @@ font-size: x-small;
 <td class="legend tooltip">Can disable USB connections?<span class="tooltiptext">See here for details: <a href="https://github.com/eylenburg/eylenburg.github.io/issues/60" target="_blank" style="color: white;">[1]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/28" target="_blank" style="color: white;">[2]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/54" target="_blank" style="color: white;">[3]</a></span></td>
 <td class="green tooltip">Default (while locked), <a href="https://grapheneos.org/features#usb-c-port-and-pogo-pins-control" target="_blank">see here</a><span class="tooltiptext">Hardware and software</span></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
-<td class="yellow tooltip">Opt-in, software only (incomplete)<span class="tooltiptext">Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
+<td class="lgreen tooltip">Default (while locked), software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
-<td class="yellow tooltip">Opt-in, software only (incomplete)<span class="tooltiptext">Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
+<td class="yellow tooltip">Opt-in, software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
 <td class="lred tooltip">Device admin API<span class="tooltiptext">Requires installing a device admin app like Sentry. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections.</span></td>
 </tr>
 
@@ -981,7 +988,7 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend tooltip">Security update speed<span class="tooltiptext"><a href="https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
+<td class="legend tooltip">Security update speed (AOSP subset of ASB)<span class="tooltiptext" style="width: 550px; display: inline; white-space: pre-wrap;">It doesn't include information on how the device-related patches in the 2nd half of each ASB (Android Security Bulletin) get shipped, if they do at all. It's also missing the fact that full security patches require the latest monthly/quarterly/yearly updates. Additionally, you need to keep up with the vendor's releases which means falling behind on quarterly or yearly releases results in missing many of the High/Critical severity patches for Pixels or another device launching the new quarterly/yearly version in a reasonable time. The issue is that this heavily varies by device. Pixels require the alternate OS to always keep up to ship updates. Some other device ship yearly updates quickly too. Devices not shipping the latest OS release make it harder for the alternate OS to do it but it is possible, especially if they don't build the vendor image, etc. If the vendor doesn't ship the releases, then the firmware/driver code used from them will be missing the patches. For example, Fairphone is consistently 1 or 2 months behind on the Android Security Bulletin patches so CalyxOS, LineageOS, etc. on it is at least that far behind at all times for the non-AOSP half of the ASB. This is one of the reasons why GrapheneOS currently only supports Google Pixel devices. Every other OEM doesn't ship the monthly/quarterly updates and typically has major delays for yearly updates. Most also do a bad job shipping the backported patches.<br /><a href="https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for update speed data</a></span></td>
 <td class="green"><2 days</td>
 <td class="lgreen">1-3 weeks</td>
 <td class="lgreen tooltip">~1 week, sometimes longer delays<span class="tooltiptext">quicker updates in optional "security express" update channel</td>
@@ -1003,7 +1010,7 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend tooltip">Number of Android versions supported<span class="tooltiptext">Only the latest major release of AOSP has full security patches. Most privacy fixes are in fact only included for the new OS versions, not in the security patches. The ASB patches patches rarely include fixes for permission model / sandbox flaws resulting in privacy leaks since they're given Moderate severity and often require invasive changes including potential compatibility breaks.</span></td>
+<td class="legend tooltip">Number of Android versions supported<span class="tooltiptext" style="width: 550px; display: inline; white-space: pre-wrap;">Only the latest major release of AOSP has full security patches. Most privacy fixes are in fact only included for the new OS versions, not in the security patches. The ASB patches patches rarely include fixes for permission model / sandbox flaws resulting in privacy leaks since they're given Moderate severity and often require invasive changes including potential compatibility breaks.</span></td>
 <td>Usually 1 Android version</td>
 <td>7 Android versions (incl. backports)</td>
 <td>Usually 1 Android version</td>
@@ -1027,7 +1034,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend semititle"><br />Supported devices</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align: bottom;"><a href="https://grapheneos.org/faq#future-devices" target="_blank">Hardware requirements</a></td><td></td><td style="vertical-align: bottom;"><a href="https://calyxos.org/docs/guide/device-support/#preferences-for-supporting-a-new-device" target="_blank">Hardware requirements</a></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
