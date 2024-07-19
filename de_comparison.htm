@@ -45,8 +45,12 @@ background-color: white;
 font-weight: bold;
 }
 
+table.comparison tr>th:first-child, table.comparison tr>td:first-child {
+background-color: white;
+}
+
 @media (prefers-color-scheme: dark) {
-th {background-color: #222; color: white;  }
+th, table.comparison tr>th:first-child, table.comparison tr>td:first-child {background-color: #222; color: white;  }
 }
 
 td img {
@@ -223,6 +227,14 @@ color: #94d4ff;
 .gtktoolkit {
 color: #eac895;
 }
+}
+
+@media (min-width: 578px){
+table.comparison tr>th:first-child, table.comparison tr>td:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
 }
 
 </style>

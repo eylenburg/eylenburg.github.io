@@ -153,10 +153,22 @@ padding-right: 5px;
 background-color: lightgrey;
 color: black; }
 
+table.comparison tr>td:first-child {
+background-color: white;
+}
+
 @media (prefers-color-scheme: dark) {
-.na, .sticky {
+.na, .sticky, table.comparison tr>td:first-child{
 background-color: #222;
 color: white; }
+}
+
+@media (min-width: 578px){
+table.comparison tr>td:first-child{
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
 }
 
 label { font-size: small; }

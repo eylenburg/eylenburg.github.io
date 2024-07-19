@@ -37,9 +37,13 @@ thead tr td {
 background-color: white;
 font-weight: bold;
 }
+    
+.legend {
+background-color: white;
+}
 
 @media (prefers-color-scheme: dark) {
-thead tr td {background-color: #222; color: white;  }
+thead tr td, .legend {background-color: #222; color: white;  }
 }
 
 td {
@@ -134,6 +138,14 @@ border-bottom: 1px solid ivory;
 td.green, td.lgreen, td.red, td.lred, td.yellow { color: black;  }
 }
 
+@media (min-width: 578px){
+  .legend {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
+}
+
 sup {
 font-size: x-small;
 }
@@ -187,7 +199,7 @@ font-size: x-small;
 <tbody>
 
 <tr>
-<td></td>
+<td class="legend"></td>
 <td><img class="logo" src="pics/logos/android/grapheneos.svg" /></td>
 <td><img class="logo" src="pics/logos/android/divestos.svg" /></td>
 <td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/calyxos.jpg" /></td>
