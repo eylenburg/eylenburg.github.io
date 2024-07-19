@@ -194,7 +194,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 5 July 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 19 July 2024</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
@@ -822,7 +822,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 
 <tr>
-<td class="legend semititle"><br />Privacy</td>
+<td class="legend semititle"><br />Tracking</td>
 <!-- Firefox -->
 <td class="desktop"></td>
 <td class="android"></td>
@@ -1076,37 +1076,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 -->
 
 <tr>
-<td class="legend">Doesn't share your interests with advertisers?</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop almost tooltip">Opt-in<span class="tooltiptext">Topics API, a part of Chrome's "Privacy Sandbox", will analyze user's interests based on their browsing history, and share that information with advertisers to serve targeted ads.</span></td>
-<td class="android almost tooltip">Opt-in<span class="tooltiptext">Topics API, a part of Chrome's "Privacy Sandbox", will analyze user's interests based on their browsing history, and share that information with advertisers to serve targeted ads.</span></td>
-<td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr> 
-
-<tr>
 <td class="legend">Can grant ephemeral website permissions</td>
 <!-- Firefox -->
 <td class="desktop no">No</td>
@@ -1135,6 +1104,37 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Can disable built-in ad measurements/tracking?</td>
+<!-- Firefox -->
+<td class="desktop almost tooltip">Yes<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" tracks which ads you're clicking on, despite having "Privacy" in the name. It is enabled by default but can be enabled in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</td>
+<td class="ios yes">None</td>
+<!-- Safari -->
+<td class="desktop almost tooltip">Yes<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving measurements of ad effectiveness" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="ios_wide almost tooltip">Yes<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving ad measurements" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<!-- Chrome -->
+<td class="desktop almost tooltip">Yes<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
+<td class="almost almost tooltip">Yes<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
+<td class="ios yes">None</td>
+<!-- Edge -->
+<td class="desktop no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Edge as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="android no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Edge as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="ios yes">None</td>
+<!-- Opera -->
+<td class="desktop no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Opera as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="android no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Opera as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="ios yes">None</td>
+<!-- Vivaldi -->
+<td class="desktop yes tooltip">None<span class="tooltiptext">Vivaldi disables Chromium's "Privacy Sandbox"</span></td>
+<td class="android yes tooltip">None<span class="tooltiptext">Vivaldi disables Chromium's "Privacy Sandbox"</span></td>
+<td class="ios yes">None</td>
+<!-- Brave -->
+<td class="desktop yes tooltip">None<span class="tooltiptext">Brave disables Chromium's "Privacy Sandbox"</span></td>
+<td class="android yes tooltip">None<span class="tooltiptext">Brave disables Chromium's "Privacy Sandbox"</span></td>
+<td class="ios yes">None</td>
 </tr>
 
 <tr>
@@ -1641,7 +1641,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android almost"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span></td>
+<td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Opera -->
 <td class="desktop yes">Yes</td>
@@ -1936,540 +1936,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 
 
-<tr>
-<td class="legend semititle"><br />Advanced features</td>
-<!-- Firefox -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Safari -->
-<td class="desktop"></td>
-<td class="ios_wide"></td>
-<!-- Chrome -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Edge -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Opera -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Vivaldi -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-<!-- Brave -->
-<td class="desktop"></td>
-<td class="android"></td>
-<td class="ios"></td>
-</tr>
-
-<tr>
-<td class="legend">Can clear browsing history on exit</td>
-<!-- Firefox -->
-<td class="desktop almost tooltip">Yes (flawed)<span class="tooltiptext">If "clear history on exit" is selected, <br />the previous session will not be restored after restarting the browser, <br />even when "restore previous session" is enabled.</span></td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android almost tooltip">On start<span class="tooltiptext">You can set Brave to delete all browsing data (including cookies etc.) on exit, but not only the history. However, it is possible to set it to delete the history on start-up instead.</span></td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend">Multi-account containers</td>
-<!-- Firefox -->
-<td class="desktop almost">w/ official extension</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend">Can disable JavaScript</td>
-<!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android almost"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/content/javascript)</span></td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr> 
-
-<tr>
-<td class="legend">Supports <span class="tooltip">PWAs<span class="tooltiptext">Progressive Web Apps</span></span>/add to homescreen</td>
-<!-- Firefox -->
-<td class="desktop no">No</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-</tr>
-
-<tr>
-<td class="legend">Userscript support</td>
-<!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-
-
-<tr>
-<td class="legend">Portable settings profiles</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes (user.js)</td>
-<td class="android no tooltip">No<span class="tooltiptext">on rooted devices only</span></td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<tr>
-<td class="legend">Browser's UI elements can be modified</td>
-<!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-
-<td class="legend">Support for JPEG XL image format</td>
-<!-- Firefox -->
-<td class="desktop ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios yes">Yes</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-</tr>
-
-
-<tr>
-<td class="legend">Can use another HTML engine</td>
-
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop yes tooltip">Yes (Trident)<span class="tooltiptext">Internet Explorer mode on Windows</span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="android dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
-<td class="ios dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
-
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<!--
-<tr>
-<td class="legend">Set a custom user agent on a site-by-site basis</td>
-
-<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android dropped">Dropped</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-
-<td class="desktop almost">w/ official extension</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android_wide no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
--->
-
-<!--
-<tr>
-<td class="legend tooltip">Automatic tab hibernating<span class="tooltiptext">also called tab snoozing, freezing, unloading etc.</span></td>
-
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android_wide no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
--->
-
-<!--
-<tr>
-<td class="legend tooltip">Back/forward cache<span class="tooltiptext">re-load previously visited websites instantly from cache</span></td>
-
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android_wide yes">Yes</td>
-
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr>
--->
-
-<tr>
-<td class="legend tooltip">Can view and save files in cache<span class="tooltiptext">example use-case: stream a video, <br />find video file in cache, save video on device</span></td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr> 
-
-<!--
-<tr>
-<td class="legend">Can lock browser or profile with password</td>
-
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-
-<td class="desktop ext"><span class="dropped tooltip">Dropped (v64)<span class="tooltiptext">password-protected profiles</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-
-<td class="desktop no tooltip">No<span class="tooltiptext">Browser lock extensions for Chrome can be installed but can be easily circumvented on Vivaldi</span></td>
-<td class="android_wide no">No</td>
-
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-</tr> 
--->
-
-
-<tr>
-<td class="legend">Master password for password autofill</td>
-<!-- Firefox -->
-<td class="desktop almost tooltip">Yes (no mobile  sync)<span class="tooltiptext">Passwords will not sync to mobile devices if protected with master password</td>
-<td class="android dropped">Dropped</td><!-- v79 -->
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td><!-- coming in v 100 -->
-<td class="android almost">Device PIN</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
-<td class="android almost">Device PIN</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-</tr>
-
-<tr>
-<td class="legend">Site isolation</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios yes">Yes</td>
-<!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
-<!-- Chrome -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Vivaldi -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-<!-- Brave -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios yes">Yes</td>
-</tr>
-
 
 
 
@@ -2699,10 +2165,10 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 
 <tr>
-<td class="legend">DNS-over-HTTPS</td>
+<td class="legend">DNS-over-HTTPS support</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
-<td class="android dropped">Dropped</td><!-- only in about:config which is not possible anymore since v79 except in Nightly -->
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">Can be enabled in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</span></td><!-- only in about:config which is not possible anymore since v79 except in Nightly -->
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop no">No</td>
@@ -2729,9 +2195,40 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 </tr>
 
+<tr>
+<td class="legend">Oblivious-DNS-over-HTTPS support</td>
+<!-- Firefox -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop almost">in private mode</td>
+<td class="ios_wide almost">in private mode</td>
+<!-- Chrome -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop yes">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
 
 <tr>
-<td class="legend">Encrypted Client Hello</td>
+<td class="legend">Encrypted Client Hello support</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
@@ -2872,7 +2369,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">Yes</td>
-<td class="android no">No</td>
+<td class="android almost">Limited</td>
 <td class="ios no">No</td>
 <!-- Opera -->
 <td class="desktop yes">Yes</td>
@@ -2965,6 +2462,543 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td colspan="3">Google</td>
 <td colspan="3">Google</td>
 </tr>
+
+
+
+<tr>
+<td class="legend semititle"><br />Advanced features</td>
+<!-- Firefox -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+<!-- Safari -->
+<td class="desktop"></td>
+<td class="ios_wide"></td>
+<!-- Chrome -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+<!-- Edge -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+<!-- Opera -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+<!-- Vivaldi -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+<!-- Brave -->
+<td class="desktop"></td>
+<td class="android"></td>
+<td class="ios"></td>
+</tr>
+
+<tr>
+<td class="legend">Can clear browsing history on exit</td>
+<!-- Firefox -->
+<td class="desktop almost tooltip">Yes (flawed)<span class="tooltiptext">If "clear history on exit" is selected, <br />the previous session will not be restored after restarting the browser, <br />even when "restore previous session" is enabled.</span></td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android almost tooltip">On start<span class="tooltiptext">You can set Brave to delete all browsing data (including cookies etc.) on exit, but not only the history. However, it is possible to set it to delete the history on start-up instead.</span></td>
+<td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Multi-account containers</td>
+<!-- Firefox -->
+<td class="desktop almost">w/ official extension</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Can disable JavaScript</td>
+<!-- Firefox -->
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android almost"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/content/javascript)</span></td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Supports <span class="tooltip">PWAs<span class="tooltiptext">Progressive Web Apps</span></span>/add to homescreen</td>
+<!-- Firefox -->
+<td class="desktop no">No</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Userscript support</td>
+<!-- Firefox -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<!-- Chrome -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+
+
+<tr>
+<td class="legend">Portable settings profiles</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes (user.js)</td>
+<td class="android no tooltip">No<span class="tooltiptext">on rooted devices only</span></td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Browser's UI elements can be modified</td>
+<!-- Firefox -->
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop dropped">Dropped (v15)</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+
+<td class="legend">Support for JPEG XL image format</td>
+<!-- Firefox -->
+<td class="desktop ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios yes">Yes</td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Edge -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Opera -->
+<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Vivaldi -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Brave -->
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+</tr>
+
+
+<tr>
+<td class="legend">Can use another HTML engine</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes tooltip">Yes (Trident)<span class="tooltiptext">Internet Explorer mode on Windows</span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
+<td class="ios dropped tooltip">Dropped<span class="tooltiptext">Presto engine used in the "Extreme Data Savings" mode</span></td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend">Set a custom user agent on a site-by-site basis</td>
+
+<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android dropped">Dropped</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop almost">w/ official extension</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android_wide no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td class="legend tooltip">Automatic tab hibernating<span class="tooltiptext">also called tab snoozing, freezing, unloading etc.</span></td>
+
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android_wide no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td class="legend tooltip">Back/forward cache<span class="tooltiptext">re-load previously visited websites instantly from cache</span></td>
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android_wide yes">Yes</td>
+
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+</tr>
+-->
+
+<tr>
+<td class="legend tooltip">Can view and save files in cache<span class="tooltiptext">example use-case: stream a video, <br />find video file in cache, save video on device</span></td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop dropped">Dropped (v15)</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<!--
+<tr>
+<td class="legend">Can lock browser or profile with password</td>
+
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+
+<td class="desktop ext"><span class="dropped tooltip">Dropped (v64)<span class="tooltiptext">password-protected profiles</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+
+<td class="desktop no tooltip">No<span class="tooltiptext">Browser lock extensions for Chrome can be installed but can be easily circumvented on Vivaldi</span></td>
+<td class="android_wide no">No</td>
+
+<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+</tr>
+-->
+
+
+<tr>
+<td class="legend">Master password for password autofill</td>
+<!-- Firefox -->
+<td class="desktop almost tooltip">Yes (no mobile  sync)<span class="tooltiptext">Passwords will not sync to mobile devices if protected with master password</td>
+<td class="android dropped">Dropped</td><!-- v79 -->
+<td class="ios no">No</td>
+<!-- Safari -->
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
+<!-- Chrome -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td><!-- coming in v 100 -->
+<td class="android almost">Device PIN</td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop dropped">Dropped (v15)</td>
+<td class="android almost">Device PIN</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop no">No</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+</tr>
+
+<tr>
+<td class="legend">Site isolation (to enhance security)</td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios yes">Yes</td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Edge -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Opera -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Vivaldi -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios yes">Yes</td>
+</tr>
+
 
 <!--
 <tr>
