@@ -37,12 +37,13 @@ background-color: white;
 font-weight: bold;
 }
 
-table.comparison tr>td:first-child, .legend {
+.legend {
 background-color: white;
+z-index: 999;
 }
 
 @media (prefers-color-scheme: dark) {
-thead tr td, table.comparison tr>td:first-child, .legend {background-color: #222; color: white;  }
+thead tr td, .legend {background-color: #222; color: white;  }
 }
 
 @media (min-width: 578px){
@@ -387,7 +388,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Free</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Philosophy</td>
@@ -478,7 +479,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">No</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Release schedule &amp; Reliability</td>
@@ -548,7 +549,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes" style="font-size: x-small;"><code>eopkg history</code></td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">CPU compatibility</td>
@@ -681,7 +682,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="no">No</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 
 <tr>
@@ -794,7 +795,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Installed by default</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Defaults</td>
@@ -927,7 +928,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">gcc</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Suppor&shy;ted desktops:</td>
@@ -1088,7 +1089,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="almost">Budgie<br />Edition</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Package management</td>
@@ -1246,7 +1247,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">Should work</td>
 </tr>
 
-<tr><td height="10"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td class="legend semititle">Security</td>
