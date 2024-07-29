@@ -140,7 +140,11 @@ background-color: #EBC1AD;
 }
 
 .ext {
-background-color: #E7DEB1; 
+background-color: #CAEAEE /*aliceblue*/;
+}
+
+.hidden {
+background-color: #E7DEB1;
 }
 
 .dropped {
@@ -1636,11 +1640,11 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <!-- Chrome -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android almost"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android hidden"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span></td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -1648,11 +1652,11 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios dropped">Dropped</td>
 <!-- Vivaldi -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 </tr> 
@@ -1766,7 +1770,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Configurable placement of new tabs<span class="tooltiptext">e.g. next right vs. far right on tab bar</span></td>
 
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android dropped">Dropped</td>
 <td class="ios no">No</td>
 
@@ -2049,7 +2053,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -2186,7 +2190,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/security)</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/security)</span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
@@ -2237,24 +2241,24 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
-<td class="android almost tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
+<td class="android hidden tooltip">hidden<span class="tooltiptext">in chrome://flags</span></td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">need to start with command line switch</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">need to start with command line switch</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in opera://flags</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in opera://flags</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
-<td class="android almost tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
+<td class="android hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
-<td class="android almost tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
+<td class="android hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
 <td class="ios no">No</td>
 </tr>
 
@@ -2425,7 +2429,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="legend">Can "sideload" extension (install from file)</td>
 <!-- Firefox -->
 <td class="desktop almost tooltip">If signed<span class="tooltiptext">Extensions have to be verified and signed by Mozilla. Otherwise it is also possible to disable the signing requirements in about:config, but this only works in the Nightly, Developer and ESR versions of Firefox.</tooltip></td>
-<td class="android almost tooltip">hidden<span class="tooltiptext">It is possible to sideload extensions after enabling the developer options. Extensions have to be verified and signed by Mozilla. Otherwise it is also possible to disable the signing requirements in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</span></td>
+<td class="android hidden tooltip">hidden<span class="tooltiptext">It is possible to sideload extensions after enabling the developer options. Extensions have to be verified and signed by Mozilla. Otherwise it is also possible to disable the signing requirements in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</span></td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop dropped">Dropped (v12)</td>
@@ -2561,8 +2565,8 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Can disable JavaScript</td>
 <!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android almost"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android hidden"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
@@ -2580,7 +2584,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop almost tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/content/javascript)</span></td>
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in Chromium settings (vivaldi://settings/content/javascript)</span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
@@ -2687,7 +2691,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Browser's UI elements can be modified</td>
 <!-- Firefox -->
-<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip hidden">hidden<span class="tooltiptext">userChrome.css can be used, however since v69 this needs to be enabled first in about:config first</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -2706,7 +2710,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
+<td class="desktop almost"><span class="tooltip">limited<span class="tooltiptext">can rearrange the elements shown in the toolbar</span></span> / <span class="tooltip hidden">hidden<span class="tooltiptext">.css files can be used, however this needs to be enabled first in vivaldi://experiments</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Brave -->
@@ -2733,7 +2737,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop almost"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
