@@ -145,17 +145,20 @@ background-color: #CAEAEE /*aliceblue*/;
 
 .hidden {
 background-color: #E7DEB1;
+color: black;
 }
 
 .dropped {
-background-color: #F5E0D6; 
+background-color: #F5E0D6;
+font-size: 90%;
 }
 
 td.yes,
 td.almost,
 td.no,
 td.ext,
-td.dropped {
+td.dropped,
+td.hidden {
 border-top: 1px solid ivory;
 border-bottom: 1px solid ivory;
 }
@@ -596,18 +599,18 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Bookmarks bar or speed dial with folders</td>
 <!-- Firefox -->
-<td class="desktop yes">Yes (bookmarks bar)</td>
+<td class="desktop yes">Yes<span style="font-size: 90%;"> (bookmarks bar)</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop yes">Yes (bookmarks bar)</td>
+<td class="desktop yes">Yes<span style="font-size: 90%;"> (bookmarks bar)</span></td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop yes">Yes (bookmarks bar)</td>
+<td class="desktop yes">Yes<span style="font-size: 90%;"> (bookmarks bar)</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop yes">Yes (bookmarks bar)</td>
+<td class="desktop yes">Yes<span style="font-size: 90%;"> (bookmarks bar)</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -619,7 +622,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop yes">Yes (bookmarks bar)</td>
+<td class="desktop yes">Yes<span style="font-size: 90%;"> (bookmarks bar)</span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -628,22 +631,22 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Session manager</td>
 <!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android yes tooltip">Yes<span class="tooltiptext">Collections</span></td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop ext"><span class="dropped">Dropped (v79)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 79</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -651,7 +654,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -671,19 +674,19 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">MHTML/PNG</td>
-<td class="android yes">MHTML/PNG</td>
+<td class="android yes" style="font-size: 80%; vertical-align: middle;">MHTML/PNG</td>
 <td class="ios no">No</td>
 <!-- Opera -->
 <td class="desktop yes">(M)HTML/PDF</td>
-<td class="android yes">(M)HTML/PDF</td>
+<td class="android yes" style="font-size: 80%; vertical-align: middle;">(M)HTML/PDF</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
 <td class="desktop yes">(M)HTML/PNG/JPG</td>
-<td class="android yes">MHTML/PNG</td>
+<td class="android yes" style="font-size: 80%; vertical-align: middle;">MHTML/PNG</td>
 <td class="ios no">No</td>
 <!-- Brave -->
 <td class="desktop yes">(M)HTML</td>
-<td class="android yes">MHTML/PNG</td>
+<td class="android yes" style="font-size: 80%; vertical-align: middle;">MHTML/PNG</td>
 <td class="ios yes">PDF</td>
 </tr> 
 
@@ -749,7 +752,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android dropped">Dropped</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -770,7 +773,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios yes">Yes</td>
 <!-- Safari -->
 <td class="desktop no">No</td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios_wide ext">with extension</td>
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
@@ -801,7 +804,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop no">No</td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios_wide ext">with extension</td>
 <!-- Chrome -->
 <td class="desktop yes">Yes</td>
 <td class="android no">No</td>
@@ -866,7 +869,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
@@ -890,18 +893,18 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Ad blocking (cosmetic, alongside trackers)<span class="tooltiptext">incl. blocking of "acceptable ads" and "non-intrusive ads"</span></td>
 <!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="android ext">w/ ext.</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="ios_wide ext">with extension</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
@@ -953,22 +956,22 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Redirect Google AMP pages to original URL</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
 <td class="desktop no">No</td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="ios_wide ext">with extension</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1058,15 +1061,15 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop dropped">Dropped (v12.1)</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v74)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped">Dropped (v74)</span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v61)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped">Dropped (v61)</span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1113,15 +1116,15 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Can disable built-in ad measurements/tracking?</td>
 <!-- Firefox -->
-<td class="desktop almost tooltip">Yes<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="desktop almost tooltip">Optional<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
 <td class="android yes tooltip">None<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" is not supported on Android, for now, despite being seemingly enabled in about:config.</td>
 <td class="ios yes">None</td>
 <!-- Safari -->
-<td class="desktop almost tooltip">Yes<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving measurements of ad effectiveness" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
-<td class="ios_wide almost tooltip">Yes<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving ad measurements" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="desktop almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving measurements of ad effectiveness" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="ios_wide almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving ad measurements" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
 <!-- Chrome -->
-<td class="desktop almost tooltip">Yes<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
-<td class="almost almost tooltip">Yes<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
+<td class="desktop almost tooltip">Optional<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
+<td class="almost almost tooltip">Opt.<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
 <td class="ios yes">None</td>
 <!-- Edge -->
 <td class="desktop no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Edge as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
@@ -1193,8 +1196,8 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">No</td>
 <td class="ios_wide yes">No</td>
 <!-- Chrome -->
-<td class="desktop yes">Dropped</td>
-<td class="android yes">Dropped</td>
+<td class="desktop yes">Stopped</td>
+<td class="android yes">Stopped</td>
 <td class="ios yes">No</td>
 <!-- Edge -->
 <td class="desktop yes">No</td>
@@ -1521,7 +1524,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
@@ -1569,7 +1572,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Temporary downloads ("Open" file)<span class="tooltiptext">download files into a temporary location ("Open")<br />rather than save them in the Downloads folder ("Save")</span></td>
 <!-- Firefox -->
-<td class="desktop dropped tooltip">Dropped (v97)<span class="tooltiptext">feature was dropped in v97 but Firefox developers have announced that it will be brought back in the future with a setting in about:config</td>
+<td class="desktop dropped tooltip"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 97</span></span><span class="tooltiptext">feature was dropped in v97 but Firefox developers have announced that it will be brought back in the future with a setting in about:config</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -1584,7 +1587,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -1608,7 +1611,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
-<td class="desktop ext"><span class="dropped">Dropped (v79)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 79</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes tooltip">Yes<span class="tooltiptext">In Accessibility Settings &rarr; Simplified View for Web Pages</span></td>
 <td class="ios no">No</td>
 <!-- Edge -->
@@ -1616,7 +1619,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop ext">No <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -1624,7 +1627,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes tooltip">Yes<span class="tooltiptext">In Accessibility Settings &rarr; Simplified View for Web Pages</span></td>
 <td class="ios yes">Yes</td>
 <!-- Brave -->
-<td class="desktop ext">No <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android yes tooltip">Yes<span class="tooltiptext">In Accessibility Settings &rarr; Simplified View for Web Pages</span></td>
 <td class="ios yes">Yes</td>
 </tr> 
@@ -1633,18 +1636,18 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Enforce dark theme for websites<span class="tooltiptext">changes the website to a dark design to match the browser's or operating system's dark theme</span></td>
 <!-- Firefox -->
-<td class="desktop ext"><span class="tooltip">No <span class="tooltiptext">currently only available in Firefox Nightly</span></span><span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="android ext">w/ ext.</td>
 <td class="ios yes">Yes</td>
 <!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="ios_wide ext">with extension</td>
 <!-- Chrome -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android hidden"><span class="tooltip">hidden<span class="tooltiptext">in chrome://flags</span></span></td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -1652,11 +1655,11 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios dropped">Dropped</td>
 <!-- Vivaldi -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in brave://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 </tr> 
@@ -1664,7 +1667,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Upload file from clipboard</td>
 <!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
@@ -1708,7 +1711,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Tab groups/stacks/workspaces</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v45)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 45</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1739,14 +1742,14 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <td class="legend">Change between horizontal and vertical tabs</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
+<td class="desktop ext">No <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension and hiding native tar bar with userChrome.css</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop dropped">Dropped (v16)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 16</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1754,7 +1757,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1770,22 +1773,22 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Configurable placement of new tabs<span class="tooltiptext">e.g. next right vs. far right on tab bar</span></td>
 
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android dropped">Dropped</td>
 <td class="ios no">No</td>
 
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1793,7 +1796,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -1801,22 +1804,22 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">Configurable tab focus after closing tab<span class="tooltiptext">e.g. go back to adjacent tab or to last used tab</span></td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -1824,7 +1827,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -1868,7 +1871,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <td class="desktop dropped">Dropped (v9)</td>
 <td class="ios_wide no">No</td>
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">no</td>
 <td class="desktop yes">Yes</td>
@@ -1879,7 +1882,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios no">No</td>
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr> 
@@ -1986,23 +1989,23 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr>
@@ -2011,14 +2014,14 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend">Included in-browser proxy or VPN</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
@@ -2030,7 +2033,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes (free)</td>
 <td class="ios yes">Yes (free)</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android_wide no">No</td>
 
 <td class="desktop yes">Yes (Tor &amp; paid VPN)</td>
@@ -2053,7 +2056,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in edge://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -2090,7 +2093,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v58)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 58</span></span></td>
 <td class="android yes">Yes</td>
 <td class="ios dropped">Dropped</td>
 <!-- Vivaldi -->
@@ -2107,18 +2110,18 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <tr>
 <td class="legend tooltip">IPFS support<span class="tooltiptext">censorship-resistent protocol and P2P network</span></td>
 <!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
@@ -2126,7 +2129,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Brave -->
@@ -2396,7 +2399,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop dropped">Dropped (v13)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 13</span></span></td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
 <td class="desktop almost tooltip">Yes (limited features)<span class="tooltiptext">some features only available on Firefox:<br />
@@ -2432,7 +2435,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android hidden tooltip">hidden<span class="tooltiptext">It is possible to sideload extensions after enabling the developer options. Extensions have to be verified and signed by Mozilla. Otherwise it is also possible to disable the signing requirements in about:config, which in the stable version of Firefox is accessible via the undocumented URL chrome://geckoview/content/config.xhtml</span></td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop dropped">Dropped (v12)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 12</span></span></td>
 <td class="ios_wide no">No</td>
 <!-- Chrome -->
 <td class="desktop almost tooltip">Recurring warning<span class="tooltiptext">browser will keep warning and recommending to disable sideloaded extensions</span></td>
@@ -2565,8 +2568,8 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Can disable JavaScript</td>
 <!-- Firefox -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android hidden"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in about:config</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="android hidden"><span class="tooltip"><span style="font-size: 90%; vertical-align: top;">hidden</span><span class="tooltiptext">Was available as a setting until v68, since then only in about:config, which in the stable version of Firefox can only be accessed via the undocumented URL chrome://geckoview/content/config.xhtml</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td></td>
 <td class="ios no">No</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
@@ -2627,30 +2630,30 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Userscript support</td>
 <!-- Firefox -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="android ext">w/ ext.</td>
 <td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="ios_wide ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
+<td class="ios_wide ext">with extension</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr>
@@ -2706,7 +2709,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -2722,30 +2725,30 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 
 <td class="legend">Support for JPEG XL image format</td>
 <!-- Firefox -->
-<td class="desktop ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
-<td class="android ext"><span class="tooltip">No<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext tooltip">with extension<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></td>
+<td class="desktop ext tooltip">w/ ext.<span class="tooltiptext">Can be enabled via the image.jxl.enabled flag in about:config in Nightly only. This flag has no effect in the stable build.</span></td>
 <td class="ios yes">Yes</td>
 <!-- Safari -->
 <td class="desktop yes">Yes</td>
 <td class="ios_wide yes">Yes</td>
 <!-- Chrome -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Edge -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Opera -->
-<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop hidden"><span class="tooltip">hidden<span class="tooltiptext">in opera://flags</span></span> <span class="tooltip ext"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Vivaldi -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 <!-- Brave -->
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 </tr>
@@ -2786,7 +2789,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Set a custom user agent on a site-by-site basis</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped">Dropped (v71)</span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android dropped">Dropped</td>
 <td class="ios no">No</td>
 
@@ -2797,18 +2800,18 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext"><span class="dropped">Dropped (v15)</span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr>
@@ -2840,7 +2843,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="desktop yes">Yes</td>
 <td class="android_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 </tr>
@@ -2895,7 +2898,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
@@ -2919,22 +2922,22 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="desktop no">No</td>
 <td class="ios_wide no">No</td>
 
-<td class="desktop ext"><span class="dropped tooltip">Dropped (v64)<span class="tooltiptext">password-protected profiles</span></span> <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext"><span class="dropped tooltip">Dropped (v64)<span class="tooltiptext">password-protected profiles</span></span> <span class="tooltip"><small>(w/ ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 
 <td class="desktop no tooltip">No<span class="tooltiptext">Browser lock extensions for Chrome can be installed but can be easily circumvented on Vivaldi</span></td>
 <td class="android_wide no">No</td>
 
-<td class="desktop ext">No <span class="tooltip"><small>(ext.)</small><span class="tooltiptext">possible with 3rd party browser extension</span></span></td>
+<td class="desktop ext">with extension</td>
 <td class="android no">No</td>
 <td class="ios yes">Yes</td>
 </tr>
@@ -2959,7 +2962,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="android almost">Device PIN</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop dropped">Dropped (v15)</td>
+<td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
 <td class="android almost">Device PIN</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
