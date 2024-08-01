@@ -2,17 +2,17 @@ document.write(`
 
 <table class="menubar">
 <tr>
-<td><a href="os_comparison.htm"><strong>Ope&shy;ra&shy;ting Sys&shy;tem</strong> Compa&shy;rison</a></td>
-<td><a href="os_familytree.htm"><strong>Ope&shy;ra&shy;ting Sys&shy;tem</strong> His&shy;tory &amp; Fami&shy;ly Tree</a></td>
-<td><a href="android_comparison.htm"><strong>Andro&shy;id ROM</strong> Compa&shy;rison</a></td>
-<td><a href="linux_comparison.htm"><strong>Li&shy;nux Dis&shy;tri&shy;bu&shy;tion</strong> Compa&shy;rison &amp; Time&shy;line</a></td>
-<td><a href="de_comparison.htm"><strong>Desk&shy;top Envi&shy;ron&shy;ment</strong> Compa&shy;rison &amp; List</a></td>
-<td><a href="de_default.htm">Time&shy;line of De&shy;fault <strong>Desk&shy;top Envi&shy;ron&shy;ments</strong></a></td>
-<td><a href="browser_comparison.htm"><strong>Web Brow&shy;ser</strong> Compa&shy;rison</a></td>
-<td><a href="browser_engines.htm"><strong>Brow&shy;ser En&shy;gine</strong> His&shy;tory</a></td>
-<td><a href="im_comparison.htm"><strong>Ins&shy;tant Mes&shy;sen&shy;ger</strong> Compa&shy;rison</a></td>
-<td><a href="payments.htm"><strong>Pay&shy;ment Me&shy;thods</strong> Compa&shy;rison</a></td>
-<td><a href="cloud_comparison.htm"><strong>Cloud, Sync &amp; E&shy;mail Pro&shy;vider</strong> Compa&shy;rison</a></td>
+<td><a href="os_comparison.htm">(1a)<strong> Ope&shy;ra&shy;ting Sys&shy;tems</strong> - Compa&shy;rison</a></td>
+<td><a href="os_familytree.htm">(1b)<strong> Ope&shy;ra&shy;ting Sys&shy;tems</strong> - His&shy;tory &amp; Fami&shy;ly Tree</a></td>
+<td><a href="android_comparison.htm">(2)<strong> Andro&shy;id ROMs</strong> - Compa&shy;rison</a></td>
+<td><a href="linux_comparison.htm">(3)<strong> Li&shy;nux Dis&shy;tri&shy;bu&shy;tions</strong> - Compa&shy;rison &amp; Time&shy;line</a></td>
+<td><a href="de_comparison.htm">(4a)<strong> Desk&shy;top Envi&shy;ron&shy;ments</strong> - Compa&shy;rison &amp; List</a></td>
+<td><a href="de_default.htm">(4b) <strong>Desk&shy;top Envi&shy;ron&shy;ments</strong> - De&shy;fault DE Time&shy;line</a></td>
+<td><a href="browser_comparison.htm">(5a) <strong>Web Brow&shy;sers</strong> - Compa&shy;rison</a></td>
+<td><a href="browser_engines.htm">(5b) <strong>Web Brow&shy;sers</strong> - En&shy;gine His&shy;tory</a></td>
+<td><a href="im_comparison.htm">(6) <strong>Ins&shy;tant Mes&shy;sen&shy;gers</strong> - Compa&shy;rison</a></td>
+<td><a href="cloud_comparison.htm">(7) <strong>Cloud, Sync &amp; E&shy;mail Pro&shy;viders</strong> - Compa&shy;rison</a></td>
+<td><a href="payments.htm">(8) <strong>Pay&shy;ment Me&shy;thods</strong> - Compa&shy;rison</a></td>
 </tr>
 </table>
 
