@@ -13,7 +13,7 @@
   version='1.1'
   width='2270'
   height='38210'
-  viewBox='0 0 2270 38210'
+  viewbox='0 0 2270 38210'
 >
 
 <title>Operating Systems</title>
@@ -1577,6 +1577,13 @@
   <marker id='__stop_xv6' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_xv6)' />
   </marker>
+  <linearGradient id='__fadeout_Maestro' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_Maestro' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Maestro)' />
+  </marker>
   <linearGradient id='__fadeout_OS-9/68K__[Microware]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
     <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
@@ -1821,6 +1828,13 @@
   </linearGradient>
   <marker id='__stop_FlexOS__[Digital__Research]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_FlexOS__[Digital__Research])' />
+  </marker>
+  <linearGradient id='__fadeout_4860__OS__[IBM]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#0000CD' offset='0' stop-opacity='1' />
+    <stop stop-color='#0000CD' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_4860__OS__[IBM]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_4860__OS__[IBM])' />
   </marker>
   <linearGradient id='__fadeout_StreamOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#0000CD' offset='0' stop-opacity='1' />
@@ -6810,9 +6824,9 @@ style='opacity:0.6;' >
   <path id='__line_BRL__Unix' d='M 570 2455 C 735,2455 625,235 790,235 L 790 235 L 1147 235' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_BRL__Unix)' />
   <path id='__line_SPP-UX__[Convex]' d='M 1273 295 C 1293.25,295 1279.75,265 1300,265 L 1300 265 L 1357 265' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SPP-UX__[Convex])' />
   <path id='__line_Mini__Unix' d='M 570 2455 C 742.5,2455 627.5,265 800,265 L 800 265 L 847 265' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Mini__Unix)' />
-  <path id='__line_HI-UX__[Hitachi]' d='M 1063 295 C 1083.25,295 1069.75,325 1090,325 L 1090 325 L 2197 325' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_HI-UX__[Hitachi]' d='M 1063 295 C 1083.25,295 1069.75,325 1090,325 L 1090 325 L 2227 325' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UTS/M__[Fujitsu]' d='M 1010 2095 C 1030.25,2095 1016.75,2125 1037,2125 L 1037 2125 L 1197 2125' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UTS/M__[Fujitsu])' />
-  <path id='__line_HP-UX__[HP]' d='M 910 1255 C 932.5,1255 917.5,295 940,295 L 940 295 L 2197 295' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_HP-UX__[HP]' d='M 910 1255 C 932.5,1255 917.5,295 940,295 L 940 295 L 2227 295' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_MP-RAS__Unix__[NCR]' d='M 910 1255 C 932.5,1255 917.5,355 940,355 L 940 355 L 1357 355' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MP-RAS__Unix__[NCR])' />
   <path id='__line_MST__Unix__[Micro__Station__Technology]' d='M 910 1255 C 932.5,1255 917.5,385 940,385 L 940 385 L 1210 385' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MST__Unix__[Micro__Station__Technology])' />
   <path id='__line_Stellix__[Stardent]' d='M 910 1255 C 932.5,1255 917.5,415 940,415 L 940 415 L 1030 415' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Stellix__[Stardent])' />
@@ -6836,22 +6850,22 @@ style='opacity:0.6;' >
   <path id='__line_CX/UX__[Harris]' d='M 984 1255 C 1063.5,1255 1010.5,805 1090,805 L 1090 805 L 1300 805' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_CX/UX__[Harris])' />
   <path id='__line_UHC__Unix__[UHC]' d='M 992 1255 C 1065.5,1255 1016.5,865 1090,865 L 1090 865 L 1300 865' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UHC__Unix__[UHC])' />
   <path id='__line_RISC__Unix__[Acorn]' d='M 1026 1255 C 1096.5,1255 1049.5,895 1120,895 L 1120 895 L 1147 895' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_RISC__Unix__[Acorn])' />
-  <path id='__line_UX__(EWS-UX,__UP-UX)__[NEC]' d='M 1030 1255 C 1097.5,1255 1052.5,925 1120,925 L 1120 925 L 2197 925' stroke='#FF8585' style='stroke-width:4;' />
+  <path id='__line_UX__(EWS-UX,__UP-UX)__[NEC]' d='M 1030 1255 C 1097.5,1255 1052.5,925 1120,925 L 1120 925 L 2227 925' stroke='#FF8585' style='stroke-width:4;' />
   <path id='__line_SUPER-UX__[NEC]' d='M 1064 1255 C 1128.5,1255 1085.5,955 1150,955 L 1150 955 L 1905 955' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SUPER-UX__[NEC])' />
   <path id='__line_COSIX__[CS&amp;S]' d='M 1068 1255 C 1129.5,1255 1088.5,985 1150,985 L 1150 985 L 1477 985' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_COSIX__[CS&amp;S])' />
   <path id='__line_Atari__Unix__[Atari]' d='M 1073 1255 C 1130.75,1255 1092.25,1015 1150,1015 L 1150 1015 L 1257 1015' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Atari__Unix__[Atari])' />
   <path id='__line_Unleashed' d='M 2005 1105 C 2025.25,1105 2011.75,1135 2032,1135 L 2032 1135 L 2087 1135' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unleashed)' />
   <path id='__line_SORIX__[Siemens]' d='M 1078 1255 C 1132,1255 1096,1045 1150,1045 L 1150 1045 L 1240 1045' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SORIX__[Siemens])' />
-  <path id='__line_SmartOS' d='M 1800 1105 C 1801.5,1105 1800.5,1075 1802,1075 L 1802 1075 L 2197 1075' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_SmartOS' d='M 1800 1105 C 1801.5,1105 1800.5,1075 1802,1075 L 1802 1075 L 2227 1075' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Amiga__Unix__[Amiga]' d='M 1113 1255 C 1163.25,1255 1129.75,1075 1180,1075 L 1180 1075 L 1222 1075' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Amiga__Unix__[Amiga])' />
-  <path id='__line_OpenIndiana' d='M 1800 1105 C 1800,1105 1800,1165 1800,1165 L 1800 1165 L 2197 1165' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_OpenIndiana' d='M 1800 1105 C 1800,1105 1800,1165 1800,1165 L 1800 1165 L 2227 1165' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_FTX__[Stratus__Technologies]' d='M 1119 1255 C 1164.75,1255 1134.25,1105 1180,1105 L 1180 1105 L 1387 1105' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_FTX__[Stratus__Technologies])' />
-  <path id='__line_Illumos' d='M 1762 1045 C 1790.5,1045 1771.5,1105 1800,1105 L 1800 1105 L 2197 1105' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Illumos' d='M 1762 1045 C 1790.5,1045 1771.5,1105 1800,1105 L 1800 1105 L 2227 1105' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Unisys__Unix__[Unisys]' d='M 1156 1255 C 1196.5,1255 1169.5,1135 1210,1135 L 1210 1135 L 1540 1135' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unisys__Unix__[Unisys])' />
   <path id='__line_OpenSolaris' d='M 1669 1195 C 1714.75,1195 1684.25,1045 1730,1045 L 1730 1045 L 1805 1045' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OpenSolaris)' />
   <path id='__line_Consensys__Unix' d='M 1193 1255 C 1228.25,1255 1204.75,1165 1240,1165 L 1240 1165 L 1330 1165' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Consensys__Unix)' />
   <path id='__line_Trusted__Solaris__[Sun]' d='M 1413 1195 C 1433.25,1195 1419.75,1225 1440,1225 L 1440 1225 L 1505 1225' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Trusted__Solaris__[Sun])' />
-  <path id='__line_Solaris__[Sun]' d='M 1214 1255 C 1242.5,1255 1223.5,1195 1252,1195 L 1252 1195 L 2197 1195' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Solaris__[Sun]' d='M 1214 1255 C 1242.5,1255 1223.5,1195 1252,1195 L 1252 1195 L 2227 1195' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UTS__[Amdahl]' d='M 910 1255 C 917.5,1255 912.5,2095 920,2095 L 920 2095 L 1480 2095' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UTS__[Amdahl])' />
   <path id='__line_ZENY__Unix' d='M 1213 1255 C 1233.25,1255 1219.75,1285 1240,1285 L 1240 1285 L 1330 1285' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_ZENY__Unix)' />
   <path id='__line_Unix/NS__[NCR]' d='M 1202 1255 C 1230.5,1255 1211.5,1315 1240,1315 L 1240 1315 L 1297 1315' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unix/NS__[NCR])' />
@@ -6868,7 +6882,7 @@ style='opacity:0.6;' >
   <path id='__line_CTIX__[Convergent]' d='M 992 1255 C 1065.5,1255 1016.5,1645 1090,1645 L 1090 1645 L 1177 1645' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_CTIX__[Convergent])' />
   <path id='__line_TI__System__V__[Texas__Instruments]' d='M 958 1255 C 1034.5,1255 983.5,1675 1060,1675 L 1060 1675 L 1267 1675' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_TI__System__V__[Texas__Instruments])' />
   <path id='__line_Monterey' d='M 1423 1705 C 1443.25,1705 1429.75,1735 1450,1735 L 1450 1735 L 1515 1735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Monterey)' />
-  <path id='__line_AIX__[IBM]' d='M 954 1255 C 1033.5,1255 980.5,1705 1060,1705 L 1060 1705 L 2197 1705' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_AIX__[IBM]' d='M 954 1255 C 1033.5,1255 980.5,1705 1060,1705 L 1060 1705 L 2227 1705' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_DG/UX__[Data__General]' d='M 923 1255 C 1007,1255 951,1765 1035,1765 L 1035 1765 L 1517 1765' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DG/UX__[Data__General])' />
   <path id='__line_OPUS5__[Opus__Systems]' d='M 914 1255 C 1001,1255 943,1795 1030,1795 L 1030 1795 L 1180 1795' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OPUS5__[Opus__Systems])' />
   <path id='__line_RISC/OS__[MIPS]' d='M 911 1255 C 1000.25,1255 940.75,1825 1030,1825 L 1030 1825 L 1240 1825' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_RISC/OS__[MIPS])' />
@@ -6880,7 +6894,7 @@ style='opacity:0.6;' >
   <path id='__line_Regulus__[Alcyon]' d='M 910 1255 C 932.5,1255 917.5,2005 940,2005 L 940 2005 L 1180 2005' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Regulus__[Alcyon])' />
   <path id='__line_HCR__Unix__[Human__Computing__Resources]' d='M 910 1255 C 932.5,1255 917.5,2035 940,2035 L 940 2035 L 1210 2035' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HCR__Unix__[Human__Computing__Resources])' />
   <path id='__line_SPIX__[Bull__Computers]' d='M 910 1255 C 932.5,1255 917.5,2065 940,2065 L 940 2065 L 1177 2065' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SPIX__[Bull__Computers])' />
-  <path id='__line_UNIX__System__III__[AT&amp;T]' d='M 820 295 C 887.5,295 842.5,1255 910,1255 L 910 1255 L 2197 1255' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_UNIX__System__III__[AT&amp;T]' d='M 820 295 C 887.5,295 842.5,1255 910,1255 L 910 1255 L 2227 1255' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_CB__UNIX' d='M 588 2455 C 762,2455 646,295 820,295 L 820 295 L 910 295' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_CB__UNIX)' />
   <path id='__line_Micronix__[Morrow]' d='M 760 2455 C 827.5,2455 782.5,2125 850,2125 L 850 2125 L 997 2125' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Micronix__[Morrow])' />
   <path id='__line_UNIX__32V' d='M 774 2455 C 838.5,2455 795.5,2155 860,2155 L 860 2155 L 907 2155' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNIX__32V)' />
@@ -6908,15 +6922,15 @@ style='opacity:0.6;' >
   <path id='__line_Zeus__[Zilog]' d='M 790 2455 C 851.5,2455 810.5,2725 872,2725 L 872 2725 L 1030 2725' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Zeus__[Zilog])' />
   <path id='__line_UCLA__Secure__Unix' d='M 764 2455 C 828.5,2455 785.5,2755 850,2755 L 850 2755 L 877 2755' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UCLA__Secure__Unix)' />
   <path id='__line_Idris__[Whitesmiths]' d='M 760 2455 C 827.5,2455 782.5,2785 850,2785 L 850 2785 L 1147 2785' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Idris__[Whitesmiths])' />
-  <path id='__line_audioOS__[Apple]' d='M 1995 2935 C 2015.25,2935 2001.75,2965 2022,2965 L 2022 2965 L 2197 2965' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_bridgeOS__[Apple]' d='M 1955 2995 C 1975.25,2995 1961.75,3025 1982,3025 L 1982 3025 L 2197 3025' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_audioOS__[Apple]' d='M 1995 2935 C 2015.25,2935 2001.75,2965 2022,2965 L 2022 2965 L 2227 2965' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_bridgeOS__[Apple]' d='M 1955 2995 C 1975.25,2995 1961.75,3025 1982,3025 L 1982 3025 L 2227 3025' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_OpenDarwin' d='M 1513 2875 C 1533.25,2875 1519.75,2845 1540,2845 L 1540 2845 L 1867 2845' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OpenDarwin)' />
   <path id='__line_Mac__OS__X__Server__10__[Apple]' d='M 1515 3055 C 1515,3055 1515,3085 1515,3085 L 1515 3085 L 1837 3085' stroke='#8B008B' style='stroke-width:4;' marker-end='url(#__stop_Mac__OS__X__Server__10__[Apple])' />
-  <path id='__line_tvOS__[Apple]' d='M 1925 2935 C 1945.25,2935 1931.75,2905 1952,2905 L 1952 2905 L 2197 2905' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_watchOS__[Apple]' d='M 1899 2935 C 1927.5,2935 1908.5,2995 1937,2995 L 1937 2995 L 2197 2995' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_iOS__[Apple]' d='M 1636 3055 C 1676.5,3055 1649.5,2935 1690,2935 L 1690 2935 L 2197 2935' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_macOS__X__[Apple]' d='M 1480 2875 C 1506.25,2875 1488.75,3055 1515,3055 L 1515 3055 L 2197 3055' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_Darwin__[Apple]' d='M 1453 2845 C 1473.25,2845 1459.75,2875 1480,2875 L 1480 2875 L 2197 2875' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_tvOS__[Apple]' d='M 1925 2935 C 1945.25,2935 1931.75,2905 1952,2905 L 1952 2905 L 2227 2905' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_watchOS__[Apple]' d='M 1899 2935 C 1927.5,2935 1908.5,2995 1937,2995 L 1937 2995 L 2227 2995' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_iOS__[Apple]' d='M 1636 3055 C 1676.5,3055 1649.5,2935 1690,2935 L 1690 2935 L 2227 2935' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_macOS__X__[Apple]' d='M 1480 2875 C 1506.25,2875 1488.75,3055 1515,3055 L 1515 3055 L 2227 3055' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_Darwin__[Apple]' d='M 1453 2845 C 1473.25,2845 1459.75,2875 1480,2875 L 1480 2875 L 2227 2875' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Rhapsody' d='M 1403 2815 C 1423.25,2815 1409.75,2845 1430,2845 L 1430 2845 L 1515 2845' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Rhapsody)' />
   <path id='__line_NeXTSTEP__[NeXT__Computer]' d='M 1048 3235 C 1124.5,3235 1073.5,2815 1150,2815 L 1150 2815 L 1507 2815' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_NeXTSTEP__[NeXT__Computer])' />
   <path id='__line_MachTen__[Tenon]' d='M 1156 3235 C 1196.5,3235 1169.5,3115 1210,3115 L 1210 3115 L 1897 3115' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MachTen__[Tenon])' />
@@ -6932,9 +6946,9 @@ style='opacity:0.6;' >
   <path id='__line_OSF/1__AD__[Locus__Computing]' d='M 1243 3355 C 1263.25,3355 1249.75,3385 1270,3385 L 1270 3385 L 1330 3385' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1__AD__[Locus__Computing])' />
   <path id='__line_Hitachi__OSF/1-MJ__[Hitachi]' d='M 1210 3355 C 1219,3355 1213,3415 1222,3415 L 1222 3415 L 1330 3415' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Hitachi__OSF/1-MJ__[Hitachi])' />
   <path id='__line_OSF/1' d='M 1156 3235 C 1196.5,3235 1169.5,3355 1210,3355 L 1210 3355 L 1802 3355' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1)' />
-  <path id='__line_GNU/Hurd' d='M 1103 3235 C 1160.75,3235 1122.25,3475 1180,3475 L 1180 3475 L 2197 3475' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_GNU/Hurd' d='M 1103 3235 C 1160.75,3235 1122.25,3475 1180,3475 L 1180 3475 L 2227 3475' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Mach__(kernel)' d='M 926 3535 C 990.5,3535 947.5,3235 1012,3235 L 1012 3235 L 1387 3235' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Mach__(kernel))' />
-  <path id='__line_RetroBSD' d='M 1722 3535 C 1742.25,3535 1728.75,3505 1749,3505 L 1749 3505 L 2197 3505' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_RetroBSD' d='M 1722 3535 C 1742.25,3535 1728.75,3505 1749,3505 L 1749 3505 L 2227 3505' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_OS/MP__[Solbourne]' d='M 1183 4495 C 1203.25,4495 1189.75,4525 1210,4525 L 1210 4525 L 1300 4525' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OS/MP__[Solbourne])' />
   <path id='__line_BSD/OS' d='M 1303 3535 C 1323.25,3535 1309.75,3565 1330,3565 L 1330 3565 L 1592 3565' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_BSD/OS)' />
   <path id='__line_Genix__[National__Semiconductor]' d='M 877 4195 C 924.25,4195 892.75,3565 940,3565 L 940 3565 L 1177 3565' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Genix__[National__Semiconductor])' />
@@ -6946,18 +6960,18 @@ style='opacity:0.6;' >
   <path id='__line_AOS__[IBM]' d='M 1014 4195 C 1093.5,4195 1040.5,3745 1120,3745 L 1120 3745 L 1357 3745' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_AOS__[IBM])' />
   <path id='__line_MAXION/OS__[Concurrent]' d='M 1213 3775 C 1233.25,3775 1219.75,3805 1240,3805 L 1240 3805 L 1387 3805' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MAXION/OS__[Concurrent])' />
   <path id='__line_Real__Time__UNIX__[Concurrent]' d='M 1018 4195 C 1094.5,4195 1043.5,3775 1120,3775 L 1120 3775 L 1240 3775' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Real__Time__UNIX__[Concurrent])' />
-  <path id='__line_OpenBSD' d='M 1303 3835 C 1323.25,3835 1309.75,3865 1330,3865 L 1330 3865 L 2197 3865' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_NetBSD' d='M 1232 3895 C 1260.5,3895 1241.5,3835 1270,3835 L 1270 3835 L 2197 3835' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_GhostBSD' d='M 1758 4105 C 1778.25,4105 1764.75,4135 1785,4135 L 1785 4135 L 2197 4135' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_DragonFlyBSD' d='M 1553 3985 C 1588.25,3985 1564.75,3895 1600,3895 L 1600 3895 L 2197 3895' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_CellOS__[Sony__Playstation__3]' d='M 1647 3985 C 1675.5,3985 1656.5,3925 1685,3925 L 1685 3925 L 2197 3925' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_HardenedBSD' d='M 1843 3985 C 1863.25,3985 1849.75,3955 1870,3955 L 1870 3955 L 2197 3955' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_JunOS__[Juniper]' d='M 1368 3985 C 1418.25,3985 1384.75,4165 1435,4165 L 1435 4165 L 2197 4165' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_airyxOS' d='M 2083 4015 C 2103.25,4015 2089.75,4045 2110,4045 L 2110 4045 L 2197 4045' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_helloSystem' d='M 2053 3985 C 2073.25,3985 2059.75,4015 2080,4015 L 2080 4015 L 2197 4015' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_MidnightBSD' d='M 1668 3985 C 1703.25,3985 1679.75,4075 1715,4075 L 1715 4075 L 2197 4075' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_OpenBSD' d='M 1303 3835 C 1323.25,3835 1309.75,3865 1330,3865 L 1330 3865 L 2227 3865' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_NetBSD' d='M 1232 3895 C 1260.5,3895 1241.5,3835 1270,3835 L 1270 3835 L 2227 3835' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_GhostBSD' d='M 1758 4105 C 1778.25,4105 1764.75,4135 1785,4135 L 1785 4135 L 2227 4135' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_DragonFlyBSD' d='M 1553 3985 C 1588.25,3985 1564.75,3895 1600,3895 L 1600 3895 L 2227 3895' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_CellOS__[Sony__Playstation__3]' d='M 1647 3985 C 1675.5,3985 1656.5,3925 1685,3925 L 1685 3925 L 2227 3925' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_HardenedBSD' d='M 1843 3985 C 1863.25,3985 1849.75,3955 1870,3955 L 1870 3955 L 2227 3955' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_JunOS__[Juniper]' d='M 1368 3985 C 1418.25,3985 1384.75,4165 1435,4165 L 1435 4165 L 2227 4165' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_airyxOS' d='M 2083 4015 C 2103.25,4015 2089.75,4045 2110,4045 L 2110 4045 L 2227 4045' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_helloSystem' d='M 2053 3985 C 2073.25,3985 2059.75,4015 2080,4015 L 2080 4015 L 2227 4015' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_MidnightBSD' d='M 1668 3985 C 1703.25,3985 1679.75,4075 1715,4075 L 1715 4075 L 2227 4075' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_PC-BSD__[iXsystems]' d='M 1613 3985 C 1653.5,3985 1626.5,4105 1667,4105 L 1667 4105 L 2047 4105' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_PC-BSD__[iXsystems])' />
-  <path id='__line_FreeBSD' d='M 1223 3895 C 1258.25,3895 1234.75,3985 1270,3985 L 1270 3985 L 2197 3985' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_FreeBSD' d='M 1223 3895 C 1258.25,3895 1234.75,3985 1270,3985 L 1270 3985 L 2227 3985' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_BSD__Net/2' d='M 1119 4195 C 1183.5,4195 1140.5,3895 1205,3895 L 1205 3895 L 1325 3895' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_BSD__Net/2)' />
   <path id='__line_SunOS__[Sun]' d='M 877 4195 C 924.25,4195 892.75,4495 940,4495 L 940 4495 L 1325 4495' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SunOS__[Sun])' />
   <path id='__line_4.4BSD' d='M 1228 4195 C 1248.25,4195 1234.75,4225 1255,4225 L 1255 4225 L 1342 4225' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_4.4BSD)' />
@@ -6976,11 +6990,11 @@ style='opacity:0.6;' >
   <path id='__line_LSX' d='M 570 2455 C 735,2455 625,4555 790,4555 L 790 4555 L 1660 4555' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_LSX)' />
   <path id='__line_UNSW' d='M 570 2455 C 712.5,2455 617.5,4585 760,4585 L 760 4585 L 917 4585' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNSW)' />
   <path id='__line_UNICS__[AT&amp;T/Bell__Labs]' d='M 570 2455 L 1540 2455' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNICS__[AT&amp;T/Bell__Labs])' />
-  <path id='__line_Mimiker' d='M 1930 4675 L 2197 4675' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Mimiker' d='M 1930 4675 L 2227 4675' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_IOS-XR__[Cisco]' d='M 1583 4795 C 1603.25,4795 1589.75,4825 1610,4825 L 1610 4825 L 1957 4825' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_IOS-XR__[Cisco])' />
   <path id='__line_BlackBerry__10__[BlackBerry]' d='M 1843 4735 C 1863.25,4735 1849.75,4765 1870,4765 L 1870 4765 L 2017 4765' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_BlackBerry__10__[BlackBerry])' />
   <path id='__line_Blackberry__PlayBook__OS__[RIM]' d='M 1779 4795 C 1807.5,4795 1788.5,4735 1817,4735 L 1817 4735 L 1905 4735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Blackberry__PlayBook__OS__[RIM])' />
-  <path id='__line_QNX__Neutrino__[QNX__Software]' d='M 1322 4735 C 1350.5,4735 1331.5,4795 1360,4795 L 1360 4795 L 2197 4795' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_QNX__Neutrino__[QNX__Software]' d='M 1322 4735 C 1350.5,4735 1331.5,4795 1360,4795 L 1360 4795 L 2227 4795' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_QUNIX__[QNX__Software]' d='M 940 4735 L 1390 4735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_QUNIX__[QNX__Software])' />
   <path id='__line_MR' d='M 735 4915 C 755.25,4915 741.75,4945 762,4945 L 762 4945 L 1207 4945' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MR)' />
   <path id='__line_MSS' d='M 545 4885 C 565.25,4885 551.75,4915 572,4915 L 572 4915 L 762 4915' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MSS)' />
@@ -6997,29 +7011,29 @@ style='opacity:0.6;' >
   <path id='__line_DNIX__[Dataindustrier]' d='M 970 5275 L 1417 5275' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DNIX__[Dataindustrier])' />
   <path id='__line_EDIX' d='M 1150 5365 L 1330 5365' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_EDIX)' />
   <path id='__line_Escape' d='M 1742 5395 L 1987 5395' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Escape)' />
-  <path id='__line_FiwixOS' d='M 2027 5425 L 2197 5425' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_TrustyOS__[Google]' d='M 1858 5485 C 1878.25,5485 1864.75,5515 1885,5515 L 1885 5515 L 2197 5515' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Little__Kernel' d='M 1737 5485 L 2197 5485' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_FiwixOS' d='M 2027 5425 L 2227 5425' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_TrustyOS__[Google]' d='M 1858 5485 C 1878.25,5485 1864.75,5515 1885,5515 L 1885 5515 L 2227 5515' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Little__Kernel' d='M 1737 5485 L 2227 5485' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_REAL' d='M 1090 5575 L 1117 5575' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_REAL)' />
   <path id='__line_SIDIX' d='M 1150 5605 L 1330 5605' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SIDIX)' />
   <path id='__line_SOX__[Cobra__Tecnologia]' d='M 1150 5635 L 1330 5635' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SOX__[Cobra__Tecnologia])' />
   <path id='__line_TC/IX__[Control__Data]' d='M 1123 5695 C 1143.25,5695 1129.75,5725 1150,5725 L 1150 5725 L 1240 5725' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_TC/IX__[Control__Data])' />
-  <path id='__line_LynxOS' d='M 1060 5695 L 2197 5695' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_LynxOS' d='M 1060 5695 L 2227 5695' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Minix-VMD' d='M 1478 5785 C 1498.25,5785 1484.75,5815 1505,5815 L 1505 5815 L 1537 5815' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Minix-VMD)' />
   <path id='__line_MINIX' d='M 1090 5785 L 2002 5785' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MINIX)' />
   <path id='__line_MeikOS__[Meiko__Scientific]' d='M 1150 5875 L 1215 5875' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MeikOS__[Meiko__Scientific])' />
-  <path id='__line_MiNT/MultiTOS' d='M 1190 5905 L 2197 5905' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_MiNT/MultiTOS' d='M 1190 5905 L 2227 5905' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Thoroughbred/OS__[Omega]' d='M 970 5935 L 1120 5935' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Thoroughbred/OS__[Omega])' />
-  <path id='__line_LemonOS' d='M 2060 5965 L 2197 5965' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_LemonOS' d='M 2060 5965 L 2227 5965' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Meshix' d='M 1180 5995 L 1210 5995' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Meshix)' />
   <path id='__line_Cromix__[Cromemco]' d='M 850 6025 L 1057 6025' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Cromix__[Cromemco])' />
   <path id='__line_Oasis__[Phase__One__Systems]' d='M 790 6055 L 1747 6055' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Oasis__[Phase__One__Systems])' />
-  <path id='__line_Onyx' d='M 1960 6085 L 2197 6085' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Onyx' d='M 1960 6085 L 2227 6085' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Mulplix' d='M 1243 6145 C 1263.25,6145 1249.75,6175 1270,6175 L 1270 6175 L 1417 6175' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Mulplix)' />
   <path id='__line_Plurix' d='M 940 6145 L 1747 6145' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Plurix)' />
   <path id='__line_Punix' d='M 1720 6235 L 1872 6235' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Punix)' />
-  <path id='__line_Redox__OS' d='M 1937 6265 L 2197 6265' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Sortix' d='M 1812 6295 L 2197 6295' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Redox__OS' d='M 1937 6265 L 2227 6265' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Sortix' d='M 1812 6295 L 2227 6295' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_SeaOS' d='M 1840 6325 L 1987 6325' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SeaOS)' />
   <path id='__line_TUNIS' d='M 910 6355 L 937 6355' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_TUNIS)' />
   <path id='__line_USIX__[System__Six]' d='M 1270 6385 L 1530 6385' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_USIX__[System__Six])' />
@@ -7027,128 +7041,128 @@ style='opacity:0.6;' >
   <path id='__line_Xinu' d='M 1000 6445 L 1420 6445' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Xinu)' />
   <path id='__line_C__Executive__[JMI__Software]' d='M 1360 6475 L 1870 6475' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_C__Executive__[JMI__Software])' />
   <path id='__line_DRM__System__[NV__Philips]' d='M 1030 6505 L 1150 6505' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DRM__System__[NV__Philips])' />
-  <path id='__line_managarm' d='M 1922 6535 L 2197 6535' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_managarm' d='M 1922 6535 L 2227 6535' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_____________' d='M 1723 6625 C 1743.25,6625 1729.75,6655 1750,6655 L 1750 6655 L 1902 6655' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_____________)' />
   <path id='__line_Pintos' d='M 1573 6595 C 1593.25,6595 1579.75,6625 1600,6625 L 1600 6625 L 1750 6625' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Pintos)' />
   <path id='__line_NachOS' d='M 1240 6595 L 1600 6595' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_NachOS)' />
-  <path id='__line_Gramado' d='M 2085 6715 L 2197 6715' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Brutal' d='M 2120 6745 L 2197 6745' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Gramado' d='M 2085 6715 L 2227 6715' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Brutal' d='M 2120 6745 L 2227 6745' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Thix' d='M 1330 6775 L 1810 6775' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Thix)' />
-  <path id='__line_PonyOS' d='M 1810 6835 C 1825,6835 1815,6865 1830,6865 L 1830 6865 L 2197 6865' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_ToaruOS' d='M 1810 6835 L 2197 6835' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_PonyOS' d='M 1810 6835 C 1825,6835 1815,6865 1830,6865 L 1830 6865 L 2227 6865' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_ToaruOS' d='M 1810 6835 L 2227 6835' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UNOS__[Charles__River__Data__Systems]' d='M 910 6925 L 1405 6925' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNOS__[Charles__River__Data__Systems])' />
   <path id='__line_VMEexec__[Motorola]' d='M 1120 6955 L 1387 6955' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VMEexec__[Motorola])' />
-  <path id='__line_Data__ONTAP__[NetApp]' d='M 1240 6985 L 2197 6985' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Data__ONTAP__[NetApp]' d='M 1240 6985 L 2227 6985' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_GNO/ME__[Procyon]' d='M 1210 7015 L 1452 7015' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_GNO/ME__[Procyon])' />
   <path id='__line_LUnix' d='M 1480 7045 L 1897 7045' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_LUnix)' />
   <path id='__line_MERLIN__[Silicon__Valley__Software]' d='M 947 7075 L 1120 7075' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MERLIN__[Silicon__Valley__Software])' />
   <path id='__line_Sprite' d='M 1000 7105 L 1267 7105' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Sprite)' />
   <path id='__line_System/88__OS__[IBM]' d='M 1063 7165 C 1083.25,7165 1069.75,7195 1090,7195 L 1090 7195 L 1330 7195' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_System/88__OS__[IBM])' />
-  <path id='__line_VOS__[Stratus__Technologies]' d='M 942 7165 L 2197 7165' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_VOS__[Stratus__Technologies]' d='M 942 7165 L 2227 7165' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Soso' d='M 2017 7255 L 2122 7255' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Soso)' />
   <path id='__line_VSTa' d='M 1270 7285 L 1630 7285' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VSTa)' />
   <path id='__line_XDI__[Crescendo__Communications]' d='M 1180 7315 L 1957 7315' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_XDI__[Crescendo__Communications])' />
-  <path id='__line_OSv__[Clodius__Systems]' d='M 1890 7345 L 2197 7345' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_SerenityOS' d='M 2042 7375 L 2197 7375' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_skiftOS' d='M 2042 7405 L 2197 7405' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Aero' d='M 2115 7435 L 2197 7435' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Embox' d='M 1745 7465 L 2197 7465' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_OSv__[Clodius__Systems]' d='M 1890 7345 L 2227 7345' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_SerenityOS' d='M 2042 7375 L 2227 7375' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_skiftOS' d='M 2042 7405 L 2227 7405' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Aero' d='M 2115 7435 L 2227 7435' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Embox' d='M 1745 7465 L 2227 7465' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_ForthOS' d='M 1600 7495 L 1630 7495' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_ForthOS)' />
   <path id='__line_GiX' d='M 1510 7525 L 1540 7525' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_GiX)' />
-  <path id='__line_kerla' d='M 2112 7555 L 2197 7555' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_kerla' d='M 2112 7555 L 2227 7555' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_OS67' d='M 1922 7585 L 2122 7585' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OS67)' />
   <path id='__line_SteinsOS' d='M 2110 7615 L 2132 7615' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SteinsOS)' />
-  <path id='__line_Tilck' d='M 1962 7645 L 2197 7645' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Tilck' d='M 1962 7645 L 2227 7645' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Tupai' d='M 2022 7675 L 2030 7675' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Tupai)' />
-  <path id='__line_Valkyrie' d='M 2110 7705 L 2197 7705' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Winix' d='M 1997 7735 L 2197 7735' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Valkyrie' d='M 2110 7705 L 2227 7705' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Winix' d='M 1997 7735 L 2227 7735' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_xv7' d='M 2077 7765 L 2120 7765' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_xv7)' />
   <path id='__line_ZeX/OS' d='M 1690 7795 L 1810 7795' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_ZeX/OS)' />
   <path id='__line_Synthesis' d='M 1240 7825 L 1267 7825' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Synthesis)' />
-  <path id='__line_Octox' d='M 2185 7855 L 2197 7855' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Octox' d='M 2185 7855 L 2227 7855' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Multiplix' d='M 2140 7885 L 2187 7885' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Multiplix)' />
-  <path id='__line_rxv64' d='M 1660 7945 C 1669,7945 1663,7975 1672,7975 L 1672 7975 L 2197 7975' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_rxv64' d='M 1660 7945 C 1669,7945 1663,7975 1672,7975 L 1672 7975 L 2227 7975' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_xv6' d='M 1660 7945 L 2160 7945' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_xv6)' />
-  <path id='__line_Maestro' d='M 2047 8035 L 2197 8035' stroke='#FF8585' style='stroke-width:4;' />
+  <path id='__line_Maestro' d='M 2047 8035 L 2202 8035' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Maestro)' />
   <path id='__line_OS-9/68K__[Microware]' d='M 1202 8155 C 1230.5,8155 1211.5,8095 1240,8095 L 1240 8095 L 1300 8095' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OS-9/68K__[Microware])' />
   <path id='__line_OS-9000__[Microware]' d='M 1255 8155 C 1275.25,8155 1261.75,8125 1282,8125 L 1282 8125 L 1300 8125' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OS-9000__[Microware])' />
   <path id='__line_CD-RTOS' d='M 1073 8155 C 1108.25,8155 1084.75,8245 1120,8245 L 1120 8245 L 1450 8245' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_CD-RTOS)' />
   <path id='__line_David__[Microware]' d='M 1263 8155 C 1283.25,8155 1269.75,8185 1290,8185 L 1290 8185 L 1300 8185' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_David__[Microware])' />
-  <path id='__line_NitrOS-9' d='M 1202 8155 C 1230.5,8155 1211.5,8215 1240,8215 L 1240 8215 L 2197 8215' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_OS-9__RTOS__[Microware]' d='M 850 8155 L 2197 8155' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Plan__B' d='M 1613 8395 C 1648.25,8395 1624.75,8305 1660,8305 L 1660 8305 L 2197 8305' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_9front' d='M 1772 8395 C 1800.5,8395 1781.5,8335 1810,8335 L 1810 8335 L 2197 8335' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_NitrOS-9' d='M 1202 8155 C 1230.5,8155 1211.5,8215 1240,8215 L 1240 8215 L 2227 8215' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_OS-9__RTOS__[Microware]' d='M 850 8155 L 2227 8155' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Plan__B' d='M 1613 8395 C 1648.25,8395 1624.75,8305 1660,8305 L 1660 8305 L 2227 8305' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_9front' d='M 1772 8395 C 1800.5,8395 1781.5,8335 1810,8335 L 1810 8335 L 2227 8335' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Harvey__OS' d='M 1918 8395 C 1938.25,8395 1924.75,8365 1945,8365 L 1945 8365 L 2180 8365' stroke='#8B0000' style='stroke-width:4;' marker-end='url(#__stop_Harvey__OS)' />
-  <path id='__line_9ferno' d='M 2020 8545 C 2038.75,8545 2026.25,8575 2045,8575 L 2045 8575 L 2197 8575' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Jehanne' d='M 1933 8395 C 1953.25,8395 1939.75,8425 1960,8425 L 1960 8425 L 2197 8425' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Nix' d='M 1772 8395 C 1800.5,8395 1781.5,8455 1810,8455 L 1810 8455 L 2197 8455' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_9ferno' d='M 2020 8545 C 2038.75,8545 2026.25,8575 2045,8575 L 2045 8575 L 2227 8575' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Jehanne' d='M 1933 8395 C 1953.25,8395 1939.75,8425 1960,8425 L 1960 8425 L 2227 8425' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Nix' d='M 1772 8395 C 1800.5,8395 1781.5,8455 1810,8455 L 1810 8455 L 2227 8455' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_9atom' d='M 1763 8395 C 1798.25,8395 1774.75,8485 1810,8485 L 1810 8485 L 1877 8485' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_9atom)' />
   <path id='__line_purgatorio' d='M 1993 8515 C 2013.25,8515 1999.75,8545 2020,8545 L 2020 8545 L 2050 8545' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_purgatorio)' />
   <path id='__line_Inferno' d='M 1306 8395 C 1346.5,8395 1319.5,8515 1360,8515 L 1360 8515 L 2137 8515' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Inferno)' />
-  <path id='__line_Plan__9__[AT&amp;T/Bell__Labs]' d='M 1240 8395 L 2197 8395' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Plan__9__[AT&amp;T/Bell__Labs]' d='M 1240 8395 L 2227 8395' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_mOS' d='M 2052 8635 L 2132 8635' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_mOS)' />
-  <path id='__line_opuntiaOS' d='M 2062 8665 L 2197 8665' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_pranaOS' d='M 2122 8695 L 2197 8695' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_R9' d='M 2150 8725 L 2197 8725' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_MX__Linux' d='M 1873 8785 C 1893.25,8785 1879.75,8815 1900,8815 L 1900 8815 L 2197 8815' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_opuntiaOS' d='M 2062 8665 L 2227 8665' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_pranaOS' d='M 2122 8695 L 2227 8695' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_R9' d='M 2150 8725 L 2227 8725' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_MX__Linux' d='M 1873 8785 C 1893.25,8785 1879.75,8815 1900,8815 L 1900 8815 L 2227 8815' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_MEPIS' d='M 1498 9055 C 1559.5,9055 1518.5,8785 1580,8785 L 1580 8785 L 1900 8785' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MEPIS)' />
-  <path id='__line_Zorin__OS' d='M 1703 8935 C 1738.25,8935 1714.75,8845 1750,8845 L 1750 8845 L 2197 8845' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Ubuntu__Touch' d='M 1856 8935 C 1884.5,8935 1865.5,8875 1894,8875 L 1894 8875 L 2197 8875' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_KDE__Neon' d='M 1990 8935 C 2010.25,8935 1996.75,8905 2017,8905 L 2017 8905 L 2197 8905' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Linux__Mint' d='M 1632 8935 C 1667.25,8935 1643.75,9025 1679,9025 L 1679 9025 L 2197 9025' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Pop!_OS__[System76]' d='M 1985 8935 C 2005.25,8935 1991.75,8965 2012,8965 L 2012 8965 L 2197 8965' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_elementary__OS' d='M 1777 8935 C 1805.5,8935 1786.5,8995 1815,8995 L 1815 8995 L 2197 8995' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Ubuntu__[Canonical]' d='M 1569 9055 C 1609.5,9055 1582.5,8935 1623,8935 L 1623 8935 L 2197 8935' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Knoppix' d='M 1433 9055 C 1483.25,9055 1449.75,9235 1500,9235 L 1500 9235 L 2197 9235' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Sailfish__OS__[Jolla]' d='M 1870 9145 C 1890.25,9145 1876.75,9175 1897,9175 L 1897 9175 L 2197 9175' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Tizen__[Samsung]' d='M 1822 9115 C 1842.25,9115 1828.75,9085 1849,9085 L 1849 9085 L 2197 9085' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_mer' d='M 1808 9115 C 1828.25,9115 1814.75,9145 1835,9145 L 1835 9145 L 2197 9145' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Zorin__OS' d='M 1703 8935 C 1738.25,8935 1714.75,8845 1750,8845 L 1750 8845 L 2227 8845' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Ubuntu__Touch' d='M 1856 8935 C 1884.5,8935 1865.5,8875 1894,8875 L 1894 8875 L 2227 8875' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_KDE__Neon' d='M 1990 8935 C 2010.25,8935 1996.75,8905 2017,8905 L 2017 8905 L 2227 8905' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Linux__Mint' d='M 1632 8935 C 1667.25,8935 1643.75,9025 1679,9025 L 1679 9025 L 2227 9025' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Pop!_OS__[System76]' d='M 1985 8935 C 2005.25,8935 1991.75,8965 2012,8965 L 2012 8965 L 2227 8965' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_elementary__OS' d='M 1777 8935 C 1805.5,8935 1786.5,8995 1815,8995 L 1815 8995 L 2227 8995' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Ubuntu__[Canonical]' d='M 1569 9055 C 1609.5,9055 1582.5,8935 1623,8935 L 1623 8935 L 2227 8935' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Knoppix' d='M 1433 9055 C 1483.25,9055 1449.75,9235 1500,9235 L 1500 9235 L 2227 9235' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Sailfish__OS__[Jolla]' d='M 1870 9145 C 1890.25,9145 1876.75,9175 1897,9175 L 1897 9175 L 2227 9175' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Tizen__[Samsung]' d='M 1822 9115 C 1842.25,9115 1828.75,9085 1849,9085 L 1849 9085 L 2227 9085' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_mer' d='M 1808 9115 C 1828.25,9115 1814.75,9145 1835,9145 L 1835 9145 L 2227 9145' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_MeeGo' d='M 1765 9085 C 1785.25,9085 1771.75,9115 1792,9115 L 1792 9115 L 1855 9115' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MeeGo)' />
   <path id='__line_OS2005__[Nokia]' d='M 1628 9055 C 1648.25,9055 1634.75,9085 1655,9085 L 1655 9085 L 1835 9085' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OS2005__[Nokia])' />
-  <path id='__line_Hiweed' d='M 1544 9055 C 1589.75,9055 1559.25,9205 1605,9205 L 1605 9205 L 2197 9205' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Debian__GNU/Linux' d='M 1227 10105 C 1274.25,10105 1242.75,9055 1290,9055 L 1290 9055 L 2197 9055' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_ROSA__Linux' d='M 1780 9295 C 1800.25,9295 1786.75,9265 1807,9265 L 1807 9265 L 2197 9265' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_PCLinuxOS' d='M 1554 9295 C 1582.5,9295 1563.5,9355 1592,9355 L 1592 9355 L 2197 9355' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Mageia__Linux' d='M 1795 9295 C 1815.25,9295 1801.75,9325 1822,9325 L 1822 9325 L 2197 9325' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Mandrake__Linux__[MandrakeSoft]' d='M 1389 9385 C 1424.25,9385 1400.75,9295 1436,9295 L 1436 9295 L 2197 9295' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Hiweed' d='M 1544 9055 C 1589.75,9055 1559.25,9205 1605,9205 L 1605 9205 L 2227 9205' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Debian__GNU/Linux' d='M 1227 10105 C 1274.25,10105 1242.75,9055 1290,9055 L 1290 9055 L 2227 9055' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_ROSA__Linux' d='M 1780 9295 C 1800.25,9295 1786.75,9265 1807,9265 L 1807 9265 L 2227 9265' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_PCLinuxOS' d='M 1554 9295 C 1582.5,9295 1563.5,9355 1592,9355 L 1592 9355 L 2227 9355' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Mageia__Linux' d='M 1795 9295 C 1815.25,9295 1801.75,9325 1822,9325 L 1822 9325 L 2227 9325' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Mandrake__Linux__[MandrakeSoft]' d='M 1389 9385 C 1424.25,9385 1400.75,9295 1436,9295 L 1436 9295 L 2227 9295' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Conectiva__Linux' d='M 1341 9385 C 1392.75,9385 1358.25,9655 1410,9655 L 1410 9655 L 1620 9655' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Conectiva__Linux)' />
-  <path id='__line_Oracle__Linux__[Oracle]' d='M 1646 9535 C 1674.5,9535 1655.5,9595 1684,9595 L 1684 9595 L 2197 9595' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_EulerOS__[Huawei]' d='M 2103 9445 C 2123.25,9445 2109.75,9475 2130,9475 L 2130 9475 L 2197 9475' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_CentOS' d='M 1597 9535 C 1607.5,9535 1600.5,9445 1611,9445 L 1611 9445 L 2197 9445' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_AlmaLinux' d='M 2088 9535 C 2108.25,9535 2094.75,9505 2115,9505 L 2115 9505 L 2197 9505' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Oracle__Linux__[Oracle]' d='M 1646 9535 C 1674.5,9535 1655.5,9595 1684,9595 L 1684 9595 L 2227 9595' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_EulerOS__[Huawei]' d='M 2103 9445 C 2123.25,9445 2109.75,9475 2130,9475 L 2130 9475 L 2227 9475' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_CentOS' d='M 1597 9535 C 1607.5,9535 1600.5,9445 1611,9445 L 1611 9445 L 2227 9445' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_AlmaLinux' d='M 2088 9535 C 2108.25,9535 2094.75,9505 2115,9505 L 2115 9505 L 2227 9505' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Scientific__Linux' d='M 1597 9535 C 1606.75,9535 1600.25,9625 1610,9625 L 1610 9625 L 2102 9625' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Scientific__Linux)' />
-  <path id='__line_Rocky__Linux' d='M 2095 9535 C 2115.25,9535 2101.75,9565 2122,9565 L 2122 9565 L 2197 9565' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Red__Hat__Enterprise__Linux' d='M 1595 9415 C 1596.5,9415 1595.5,9535 1597,9535 L 1597 9535 L 2197 9535' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Fedora__Core' d='M 1568 9385 C 1588.25,9385 1574.75,9415 1595,9415 L 1595 9415 L 2197 9415' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Rocky__Linux' d='M 2095 9535 C 2115.25,9535 2101.75,9565 2122,9565 L 2122 9565 L 2227 9565' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Red__Hat__Enterprise__Linux' d='M 1595 9415 C 1596.5,9415 1595.5,9535 1597,9535 L 1597 9535 L 2227 9535' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Fedora__Core' d='M 1568 9385 C 1588.25,9385 1574.75,9415 1595,9415 L 1595 9415 L 2227 9415' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Red__Hat__Linux__[Red__Hat]' d='M 1227 10105 C 1312.5,10105 1255.5,9385 1341,9385 L 1341 9385 L 1597 9385' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Red__Hat__Linux__[Red__Hat])' />
-  <path id='__line_Manjaro' d='M 1795 9685 C 1815.25,9685 1801.75,9715 1822,9715 L 1822 9715 L 2197 9715' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Arch__Linux' d='M 1443 10105 C 1519.5,10105 1468.5,9685 1545,9685 L 1545 9685 L 2197 9685' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Fire__OS__[Amazon]' d='M 1788 9835 C 1823.25,9835 1799.75,9745 1835,9745 L 1835 9745 L 2197 9745' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_WearOS__[Google]' d='M 1867 9835 C 1895.5,9835 1876.5,9775 1905,9775 L 1905 9775 L 2197 9775' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Harmony__OS__[Huawei]' d='M 2040 9835 C 2060.25,9835 2046.75,9805 2067,9805 L 2067 9805 L 2197 9805' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Eelo' d='M 1963 9955 C 1983.25,9955 1969.75,9985 1990,9985 L 1990 9985 L 2197 9985' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_CalyxOS' d='M 2068 9835 C 2088.25,9835 2074.75,9865 2095,9865 L 2095 9865 L 2197 9865' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_CopperheadOS' d='M 1909 9835 C 1937.5,9835 1918.5,9895 1947,9895 L 1947 9895 L 2197 9895' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Android__Hardening' d='M 1853 9835 C 1888.25,9835 1864.75,9925 1900,9925 L 1900 9925 L 2197 9925' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_CyanogenMod' d='M 1740 9835 C 1758.75,9835 1746.25,9955 1765,9955 L 1765 9955 L 2197 9955' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Android__[Google]' d='M 1658 10105 C 1719.5,10105 1678.5,9835 1740,9835 L 1740 9835 L 2197 9835' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Void__Linux' d='M 1733 10105 C 1768.25,10105 1744.75,10015 1780,10015 L 1780 10015 L 2197 10015' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_NixOS' d='M 1844 10105 C 1872.5,10105 1853.5,10045 1882,10045 L 1882 10045 L 2197 10045' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Solus' d='M 1923 10105 C 1943.25,10105 1929.75,10075 1950,10075 L 1950 10075 L 2197 10075' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Manjaro' d='M 1795 9685 C 1815.25,9685 1801.75,9715 1822,9715 L 1822 9715 L 2227 9715' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Arch__Linux' d='M 1443 10105 C 1519.5,10105 1468.5,9685 1545,9685 L 1545 9685 L 2227 9685' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Fire__OS__[Amazon]' d='M 1788 9835 C 1823.25,9835 1799.75,9745 1835,9745 L 1835 9745 L 2227 9745' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_WearOS__[Google]' d='M 1867 9835 C 1895.5,9835 1876.5,9775 1905,9775 L 1905 9775 L 2227 9775' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Harmony__OS__[Huawei]' d='M 2040 9835 C 2060.25,9835 2046.75,9805 2067,9805 L 2067 9805 L 2227 9805' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Eelo' d='M 1963 9955 C 1983.25,9955 1969.75,9985 1990,9985 L 1990 9985 L 2227 9985' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_CalyxOS' d='M 2068 9835 C 2088.25,9835 2074.75,9865 2095,9865 L 2095 9865 L 2227 9865' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_CopperheadOS' d='M 1909 9835 C 1937.5,9835 1918.5,9895 1947,9895 L 1947 9895 L 2227 9895' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Android__Hardening' d='M 1853 9835 C 1888.25,9835 1864.75,9925 1900,9925 L 1900 9925 L 2227 9925' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_CyanogenMod' d='M 1740 9835 C 1758.75,9835 1746.25,9955 1765,9955 L 1765 9955 L 2227 9955' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Android__[Google]' d='M 1658 10105 C 1719.5,10105 1678.5,9835 1740,9835 L 1740 9835 L 2227 9835' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Void__Linux' d='M 1733 10105 C 1768.25,10105 1744.75,10015 1780,10015 L 1780 10015 L 2227 10015' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_NixOS' d='M 1844 10105 C 1872.5,10105 1853.5,10045 1882,10045 L 1882 10045 L 2227 10045' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Solus' d='M 1923 10105 C 1943.25,10105 1929.75,10075 1950,10075 L 1950 10075 L 2227 10075' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Lycoris__Desktop' d='M 1533 10465 C 1553.25,10465 1539.75,10495 1560,10495 L 1560 10495 L 1620 10495' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Lycoris__Desktop)' />
-  <path id='__line_Clear__Linux__[Intel]' d='M 1903 10105 C 1923.25,10105 1909.75,10135 1930,10135 L 1930 10135 L 2197 10135' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_KaiOS__[KaiOS__Technologies]' d='M 1968 10195 C 1988.25,10195 1974.75,10165 1995,10165 L 1995 10165 L 2197 10165' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_My__Home__Screen__[Panasonic]' d='M 1968 10195 C 1988.25,10195 1974.75,10225 1995,10225 L 1995 10225 L 2197 10225' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Clear__Linux__[Intel]' d='M 1903 10105 C 1923.25,10105 1909.75,10135 1930,10135 L 1930 10135 L 2227 10135' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_KaiOS__[KaiOS__Technologies]' d='M 1968 10195 C 1988.25,10195 1974.75,10165 1995,10165 L 1995 10165 L 2227 10165' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_My__Home__Screen__[Panasonic]' d='M 1968 10195 C 1988.25,10195 1974.75,10225 1995,10225 L 1995 10225 L 2227 10225' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Firefox__OS__[Mozilla]' d='M 1826 10105 C 1861.25,10105 1837.75,10195 1873,10195 L 1873 10195 L 1995 10195' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Firefox__OS__[Mozilla])' />
-  <path id='__line_Palm__webOS__[Palm]' d='M 1689 10105 C 1734.75,10105 1704.25,10255 1750,10255 L 1750 10255 L 2197 10255' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Alpine' d='M 1575 10105 C 1625.25,10105 1591.75,10285 1642,10285 L 1642 10285 L 2197 10285' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_ChromeOS__[Google]' d='M 1796 10315 C 1816.25,10315 1802.75,10345 1823,10345 L 1823 10345 L 2197 10345' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Enoch__Linux' d='M 1405 10105 C 1459,10105 1423,10315 1477,10315 L 1477 10315 L 2197 10315' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_SUSE__Linux__Enterprise__[SuSE]' d='M 1477 10375 C 1497.25,10375 1483.75,10405 1504,10405 L 1504 10405 L 2197 10405' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_SuSE__Linux__[SuSE]' d='M 1227 10105 C 1283.25,10105 1245.75,10375 1302,10375 L 1302 10375 L 2197 10375' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Palm__webOS__[Palm]' d='M 1689 10105 C 1734.75,10105 1704.25,10255 1750,10255 L 1750 10255 L 2227 10255' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Alpine' d='M 1575 10105 C 1625.25,10105 1591.75,10285 1642,10285 L 1642 10285 L 2227 10285' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_ChromeOS__[Google]' d='M 1796 10315 C 1816.25,10315 1802.75,10345 1823,10345 L 1823 10345 L 2227 10345' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Enoch__Linux' d='M 1405 10105 C 1459,10105 1423,10315 1477,10315 L 1477 10315 L 2227 10315' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_SUSE__Linux__Enterprise__[SuSE]' d='M 1477 10375 C 1497.25,10375 1483.75,10405 1504,10405 L 1504 10405 L 2227 10405' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_SuSE__Linux__[SuSE]' d='M 1227 10105 C 1283.25,10105 1245.75,10375 1302,10375 L 1302 10375 L 2227 10375' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Caldera__OpenLinux' d='M 1383 10435 C 1403.25,10435 1389.75,10465 1410,10465 L 1410 10465 L 1567 10465' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Caldera__OpenLinux)' />
-  <path id='__line_Slackware__Linux' d='M 1227 10105 C 1270.5,10105 1241.5,10435 1285,10435 L 1285 10435 L 2197 10435' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Linux' d='M 1227 10105 L 2197 10105' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Slackware__Linux' d='M 1227 10105 C 1270.5,10105 1241.5,10435 1285,10435 L 1285 10435 L 2227 10435' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Linux' d='M 1227 10105 L 2227 10105' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_System__[Apple]' d='M 1001 10555 L 1507 10555' stroke='#8B008B' style='stroke-width:4;' marker-end='url(#__stop_System__[Apple])' />
   <path id='__line_BlackBerry__OS__[RIM]' d='M 1450 10585 L 1895 10585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BlackBerry__OS__[RIM])' />
   <path id='__line_Concurrent__CPM-80__[Digital__Research]' d='M 819 10795 C 864.75,10795 834.25,10645 880,10645 L 880 10645 L 1022 10645' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_Concurrent__CPM-80__[Digital__Research])' />
@@ -7158,7 +7172,7 @@ style='opacity:0.6;' >
   <path id='__line_DOS__Plus__[Digital__Research]' d='M 1003 10795 C 1038.25,10795 1014.75,10705 1050,10705 L 1050 10705 L 1652 10705' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_DOS__Plus__[Digital__Research])' />
   <path id='__line_DataPac__Multiuser__DOS__[DataPac]' d='M 1202 10795 C 1230.5,10795 1211.5,10735 1240,10735 L 1240 10735 L 1417 10735' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_DataPac__Multiuser__DOS__[DataPac])' />
   <path id='__line_CCI__Multiuser__DOS__[Concurrent__Controls]' d='M 1218 10795 C 1238.25,10795 1224.75,10765 1245,10765 L 1245 10765 L 1282 10765' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_CCI__Multiuser__DOS__[Concurrent__Controls])' />
-  <path id='__line_4860__OS__[IBM]' d='M 1085 10915 C 1085,10915 1085,10945 1085,10945 L 1085 10945 L 2197 10945' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_4860__OS__[IBM]' d='M 1085 10915 C 1085,10915 1085,10945 1085,10945 L 1085 10945 L 2107 10945' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_4860__OS__[IBM])' />
   <path id='__line_DR__PalmDOS__[Digital__Research]' d='M 1220 10795 C 1240.25,10795 1226.75,10825 1247,10825 L 1247 10825 L 1282 10825' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_DR__PalmDOS__[Digital__Research])' />
   <path id='__line_Apple__CP/M__[Apple]' d='M 858 10795 C 878.25,10795 864.75,10825 885,10825 L 885 10825 L 907 10825' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_Apple__CP/M__[Apple])' />
   <path id='__line_IMS__Multiuser__DOS' d='M 1207 10795 C 1235.5,10795 1216.5,10855 1245,10855 L 1245 10855 L 1657 10855' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_IMS__Multiuser__DOS)' />
@@ -7170,7 +7184,7 @@ style='opacity:0.6;' >
   <path id='__line_StreamOS' d='M 1723 11035 C 1743.25,11035 1729.75,11005 1750,11005 L 1750 11005 L 1780 11005' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_StreamOS)' />
   <path id='__line_MicroOS' d='M 1560 11035 C 1580.25,11035 1566.75,11065 1587,11065 L 1587 11065 L 1687 11065' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_MicroOS)' />
   <path id='__line_doesmu' d='M 1273 11065 C 1293.25,11065 1279.75,11095 1300,11095 L 1300 11095 L 1327 11095' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_doesmu)' />
-  <path id='__line_PD-DOS' d='M 1285 11065 C 1305.25,11065 1291.75,11035 1312,11035 L 1312 11035 L 2197 11035' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_PD-DOS' d='M 1285 11065 C 1305.25,11065 1291.75,11035 1312,11035 L 1312 11035 L 2227 11035' stroke='#0000CD' style='stroke-width:4;' />
   <path id='__line_XDOS' d='M 1120 11065 L 1360 11065' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_XDOS)' />
   <path id='__line_MSX-DOS__[Microsoft]' d='M 973 11185 C 993.25,11185 979.75,11155 1000,11155 L 1000 11155 L 1027 11155' stroke='#0000CD' style='stroke-width:4;' marker-end='url(#__stop_MSX-DOS__[Microsoft])' />
   <path id='__line_PCVMS__[Wendin]' d='M 983 11305 C 1018.25,11305 994.75,11395 1030,11395 L 1030 11395 L 1150 11395' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_PCVMS__[Wendin])' />
@@ -7226,7 +7240,7 @@ style='opacity:0.6;' >
   <path id='__line_Embedded__DOS__[General__Software]' d='M 1180 12955 L 1720 12955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Embedded__DOS__[General__Software])' />
   <path id='__line_GDOS__[Miles__Gordon__Technology]' d='M 1060 12985 L 1300 12985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GDOS__[Miles__Gordon__Technology])' />
   <path id='__line_HDOS__[Heath__Company]' d='M 820 13015 L 1117 13015' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_HDOS__[Heath__Company])' />
-  <path id='__line_TASiS' d='M 1603 13075 C 1623.25,13075 1609.75,13105 1630,13105 L 1630 13105 L 2197 13105' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TASiS' d='M 1603 13075 C 1623.25,13075 1609.75,13105 1630,13105 L 1630 13105 L 2227 13105' stroke='#000' style='stroke-width:4;' />
   <path id='__line_IS-DOS' d='M 1210 13075 L 1630 13075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_IS-DOS)' />
   <path id='__line_MDOS/MIDAS__[Microsoft]' d='M 850 13165 L 877 13165' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MDOS/MIDAS__[Microsoft])' />
   <path id='__line_MK-DOS' d='M 1240 13195 L 1775 13195' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MK-DOS)' />
@@ -7234,15 +7248,15 @@ style='opacity:0.6;' >
   <path id='__line_Oric__DOS__[Tangerine]' d='M 940 13255 L 1060 13255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Oric__DOS__[Tangerine])' />
   <path id='__line_ROM-DOS__[Datalight]' d='M 1170 13285 L 1630 13285' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ROM-DOS__[Datalight])' />
   <path id='__line_RxDOS' d='M 1180 13315 L 1467 13315' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RxDOS)' />
-  <path id='__line_SMSQ/E' d='M 1093 13375 C 1113.25,13375 1099.75,13405 1120,13405 L 1120 13405 L 2197 13405' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SMSQ/E' d='M 1093 13375 C 1113.25,13375 1099.75,13405 1120,13405 L 1120 13405 L 2227 13405' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Sinclair__QDOS' d='M 1030 13375 L 1120 13375' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Sinclair__QDOS)' />
-  <path id='__line_SpartaDOS__X__[ICD__Inc]' d='M 1120 13465 L 2197 13465' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SpartaDOS__X__[ICD__Inc]' d='M 1120 13465 L 2227 13465' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SuperDOS' d='M 970 13495 L 1537 13495' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SuperDOS)' />
   <path id='__line_TR-DOS__[Technology__Research]' d='M 1000 13525 L 1690 13525' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TR-DOS__[Technology__Research])' />
   <path id='__line_TRSDOS__[Tandy]' d='M 580 13555 L 920 13555' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TRSDOS__[Tandy])' />
   <path id='__line_TurboDOS__[Software__2000]' d='M 940 13585 L 997 13585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TurboDOS__[Software__2000])' />
   <path id='__line_Altair__DOS__[MITS]' d='M 807 13615 L 850 13615' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Altair__DOS__[MITS])' />
-  <path id='__line_SimpleOS__(DOS-like)' d='M 2120 13645 L 2197 13645' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SimpleOS__(DOS-like)' d='M 2120 13645 L 2227 13645' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ICOS' d='M 823 13735 C 843.25,13735 829.75,13705 850,13705 L 850 13705 L 937 13705' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ICOS)' />
   <path id='__line_AOS/VS__II__[Data__General]' d='M 1128 13855 C 1148.25,13855 1134.75,13825 1155,13825 L 1155 13825 L 1225 13825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AOS/VS__II__[Data__General])' />
   <path id='__line_MP/OS__[Data__General]' d='M 985 13765 C 1005.25,13765 991.75,13795 1012,13795 L 1012 13795 L 1030 13795' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MP/OS__[Data__General])' />
@@ -7260,7 +7274,7 @@ style='opacity:0.6;' >
   <path id='__line_MOOS__[Robotron]' d='M 883 14065 C 903.25,14065 889.75,14095 910,14095 L 910 14095 L 1090 14095' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_MOOS__[Robotron])' />
   <path id='__line_VAXELN__[DEC]' d='M 1063 14185 C 1083.25,14185 1069.75,14155 1090,14155 L 1090 14155 L 1367 14155' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_VAXELN__[DEC])' />
   <path id='__line_MicroVMS__[DEC]' d='M 1000 14185 C 1020.25,14185 1006.75,14215 1027,14215 L 1027 14215 L 1087 14215' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_MicroVMS__[DEC])' />
-  <path id='__line_VAX-11/VMS__[DEC]' d='M 736 14065 C 776.5,14065 749.5,14185 790,14185 L 790 14185 L 2197 14185' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_VAX-11/VMS__[DEC]' d='M 736 14065 C 776.5,14065 749.5,14185 790,14185 L 790 14185 L 2227 14185' stroke='#008000' style='stroke-width:4;' />
   <path id='__line_DOS/RV__(OCPBM)__[Soviet__Union]' d='M 633 14065 C 683.25,14065 649.75,14245 700,14245 L 700 14245 L 1180 14245' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_DOS/RV__(OCPBM)__[Soviet__Union])' />
   <path id='__line_RSX-11M__[DEC]' d='M 622 14065 L 1445 14065' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_RSX-11M__[DEC])' />
   <path id='__line_RSX-11S__[DEC]' d='M 622 14335 L 1445 14335' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_RSX-11S__[DEC])' />
@@ -7268,44 +7282,44 @@ style='opacity:0.6;' >
   <path id='__line_RSX-15__[DEC]' d='M 605 14395 L 832 14395' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_RSX-15__[DEC])' />
   <path id='__line_RSX180' d='M 1030 14485 L 1810 14485' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_RSX180)' />
   <path id='__line_Windows__Phone__8__[Microsoft]' d='M 1824 14605 C 1852.5,14605 1833.5,14545 1862,14545 L 1862 14545 L 1960 14545' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__8__[Microsoft])' />
-  <path id='__line_Xbox__One__&amp;__X/S__system__software__[Microsoft]' d='M 1868 14605 C 1888.25,14605 1874.75,14575 1895,14575 L 1895 14575 L 2197 14575' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Xbox__One__&amp;__X/S__system__software__[Microsoft]' d='M 1868 14605 C 1888.25,14605 1874.75,14575 1895,14575 L 1895 14575 L 2227 14575' stroke='#008B8B' style='stroke-width:4;' />
   <path id='__line_Xbox__system__software__[Microsoft]' d='M 1508 14605 C 1528.25,14605 1514.75,14575 1535,14575 L 1535 14575 L 1777 14575' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Xbox__system__software__[Microsoft])' />
-  <path id='__line_Windows__Server__2000__[Microsoft]' d='M 1428 14605 C 1468.5,14605 1441.5,14725 1482,14725 L 1482 14725 L 2197 14725' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Windows__Server__2000__[Microsoft]' d='M 1428 14605 C 1468.5,14605 1441.5,14725 1482,14725 L 1482 14725 L 2227 14725' stroke='#008B8B' style='stroke-width:4;' />
   <path id='__line_Windows__10__Mobile__[Microsoft]' d='M 1923 14605 C 1943.25,14605 1929.75,14635 1950,14635 L 1950 14635 L 2012 14635' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Windows__10__Mobile__[Microsoft])' />
   <path id='__line_Windows__RT__[Microsoft]' d='M 1824 14605 C 1852.5,14605 1833.5,14665 1862,14665 L 1862 14665 L 2020 14665' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Windows__RT__[Microsoft])' />
   <path id='__line_Xbox__360__system__software__[Microsoft]' d='M 1608 14605 C 1643.25,14605 1619.75,14695 1655,14695 L 1655 14695 L 2030 14695' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Xbox__360__system__software__[Microsoft])' />
-  <path id='__line_Windows__NT__3.x__[Microsoft]' d='M 1218 14785 C 1268.25,14785 1234.75,14605 1285,14605 L 1285 14605 L 2197 14605' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_______' d='M 1510 14785 C 1530.25,14785 1516.75,14755 1537,14755 L 1537 14755 L 2197 14755' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_Windows__NT__3.x__[Microsoft]' d='M 1218 14785 C 1268.25,14785 1234.75,14605 1285,14605 L 1285 14605 L 2227 14605' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_______' d='M 1510 14785 C 1530.25,14785 1516.75,14755 1537,14755 L 1537 14755 L 2227 14755' stroke='#008000' style='stroke-width:4;' />
   <path id='__line_LAN__Manager__[Microsoft/3Com]' d='M 1097 14785 C 1112,14785 1102,14815 1117,14815 L 1117 14815 L 1300 14815' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_LAN__Manager__[Microsoft/3Com])' />
   <path id='__line_eComStation__[Serenity__Systems]' d='M 1505 14785 C 1525.25,14785 1511.75,14815 1532,14815 L 1532 14815 L 1820 14815' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_eComStation__[Serenity__Systems])' />
   <path id='__line_OS/2__[IBM/Microsoft]' d='M 1097 14785 L 1537 14785' stroke='#008000' style='stroke-width:4;' marker-end='url(#__stop_OS/2__[IBM/Microsoft])' />
-  <path id='__line_osFree' d='M 1540 14875 L 2197 14875' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_ExectOS' d='M 1990 14905 L 2197 14905' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_ReactOS' d='M 1432 14935 L 2197 14935' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_osFree' d='M 1540 14875 L 2227 14875' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_ExectOS' d='M 1990 14905 L 2227 14905' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_ReactOS' d='M 1432 14935 L 2227 14935' stroke='#008B8B' style='stroke-width:4;' />
   <path id='__line_Midori__[Microsoft]' d='M 1780 14995 C 1800.25,14995 1786.75,15025 1807,15025 L 1807 15025 L 1957 15025' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Midori__[Microsoft])' />
   <path id='__line_Singularity__[Microsoft]' d='M 1690 14995 L 1807 14995' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Singularity__[Microsoft])' />
   <path id='__line_Windows__Phone__7__[Microsoft]' d='M 1773 15115 C 1793.25,15115 1779.75,15085 1800,15085 L 1800 15085 L 1922 15085' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__7__[Microsoft])' />
   <path id='__line_Pocket__PC__[Microsoft]' d='M 1503 15115 C 1523.25,15115 1509.75,15145 1530,15145 L 1530 15145 L 1870 15145' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Pocket__PC__[Microsoft])' />
   <path id='__line_Windows__CE__[Microsoft]' d='M 1385 15115 L 2192 15115' stroke='#008B8B' style='stroke-width:4;' marker-end='url(#__stop_Windows__CE__[Microsoft])' />
-  <path id='__line_AspireOS' d='M 1813 15235 C 1833.25,15235 1819.75,15205 1840,15205 L 1840 15205 L 2197 15205' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_VMWAros' d='M 1682 15235 C 1710.5,15235 1691.5,15295 1720,15295 L 1720 15295 L 2197 15295' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_Apollo__OS' d='M 2083 15235 C 2103.25,15235 2089.75,15265 2110,15265 L 2110 15265 L 2197 15265' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_AROS' d='M 1360 15235 L 2197 15235' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_AspireOS' d='M 1813 15235 C 1833.25,15235 1819.75,15205 1840,15205 L 1840 15205 L 2227 15205' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_VMWAros' d='M 1682 15235 C 1710.5,15235 1691.5,15295 1720,15295 L 1720 15295 L 2227 15295' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_Apollo__OS' d='M 2083 15235 C 2103.25,15235 2089.75,15265 2110,15265 L 2110 15265 L 2227 15265' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_AROS' d='M 1360 15235 L 2227 15235' stroke='#FF8C00' style='stroke-width:4;' />
   <path id='__line_AtheOS' d='M 1330 15355 L 1867 15355' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_AtheOS)' />
   <path id='__line_PhOS/PhosphurOS' d='M 1525 15415 C 1545.25,15415 1531.75,15445 1552,15445 L 1552 15445 L 1582 15445' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_PhOS/PhosphurOS)' />
   <path id='__line_BeOS__[Be__Inc]' d='M 1360 15415 L 1715 15415' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_BeOS__[Be__Inc])' />
-  <path id='__line_MorphOS' d='M 1510 15505 L 2197 15505' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_OpenBeOS' d='M 1520 15565 C 1535,15565 1525,15595 1540,15595 L 1540 15595 L 2197 15595' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_MorphOS' d='M 1510 15505 L 2227 15505' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_OpenBeOS' d='M 1520 15565 C 1535,15565 1525,15595 1540,15595 L 1540 15595 L 2227 15595' stroke='#FF8C00' style='stroke-width:4;' />
   <path id='__line_NewOS' d='M 1520 15565 L 1630 15565' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_NewOS)' />
   <path id='__line_pOS__[ProDAD]' d='M 1360 15655 L 1420 15655' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_pOS__[ProDAD])' />
   <path id='__line_AmigaOS__3.5__[Haage__&amp;__Partner]' d='M 1423 15745 C 1443.25,15745 1429.75,15715 1450,15715 L 1450 15715 L 1540 15715' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_AmigaOS__3.5__[Haage__&amp;__Partner])' />
   <path id='__line_CDTV' d='M 1183 15745 C 1203.25,15745 1189.75,15775 1210,15775 L 1210 15775 L 1297 15775' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_CDTV)' />
   <path id='__line_Cambridge__Distributed__Computing__System' d='M 853 15775 C 873.25,15775 859.75,15805 880,15805 L 880 15805 L 1150 15805' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cambridge__Distributed__Computing__System)' />
-  <path id='__line_AmigaOS__4__[Hyperion]' d='M 1660 15745 C 1680.25,15745 1666.75,15775 1687,15775 L 1687 15775 L 2197 15775' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_Workbench__[Commodore]' d='M 1003 15775 C 1023.25,15775 1009.75,15745 1030,15745 L 1030 15745 L 2197 15745' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_AmigaOS__4__[Hyperion]' d='M 1660 15745 C 1680.25,15745 1666.75,15775 1687,15775 L 1687 15775 L 2227 15775' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_Workbench__[Commodore]' d='M 1003 15775 C 1023.25,15775 1009.75,15745 1030,15745 L 1030 15745 L 2227 15745' stroke='#FF8C00' style='stroke-width:4;' />
   <path id='__line_TripOS__[Commodore]' d='M 820 15775 L 1030 15775' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TripOS__[Commodore])' />
   <path id='__line_CuriOS' d='M 2105 15865 L 2165 15865' stroke='#FF8C00' style='stroke-width:4;' marker-end='url(#__stop_CuriOS)' />
-  <path id='__line_RISC__OS__5__[Castle__Technology]/__RISC__OS__Open' d='M 1535 15955 C 1555.25,15955 1541.75,15925 1562,15925 L 1562 15925 L 2197 15925' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RISC__OS__5__[Castle__Technology]/__RISC__OS__Open' d='M 1535 15955 C 1555.25,15955 1541.75,15925 1562,15925 L 1562 15925 L 2227 15925' stroke='#000' style='stroke-width:4;' />
   <path id='__line_NCOS__[Element__15]' d='M 1333 15955 C 1353.25,15955 1339.75,15985 1360,15985 L 1360 15985 L 1562 15985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_NCOS__[Element__15])' />
   <path id='__line_Arthur__[Acorn]' d='M 1090 15955 L 1777 15955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Arthur__[Acorn])' />
   <path id='__line_VM/CMS__[IBM]' d='M 595 16075 C 615.25,16075 601.75,16045 622,16045 L 622 16045 L 1507 16045' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_VM/CMS__[IBM])' />
@@ -7314,25 +7328,25 @@ style='opacity:0.6;' >
   <path id='__line_IM/370__[IBM]' d='M 1063 16105 C 1083.25,16105 1069.75,16075 1090,16075 L 1090 16075 L 1180 16075' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_IM/370__[IBM])' />
   <path id='__line_VM/IX__[Interactive/IBM]' d='M 962 16105 C 990.5,16105 971.5,16165 1000,16165 L 1000 16165 L 1180 16165' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_VM/IX__[Interactive/IBM])' />
   <path id='__line_VM/IS' d='M 1130 16105 C 1150.25,16105 1136.75,16135 1157,16135 L 1157 16135 L 1450 16135' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_VM/IS)' />
-  <path id='__line_VP/CSS__[IBM]' d='M 493 16075 C 513.25,16075 499.75,16105 520,16105 L 520 16105 L 2197 16105' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_VP/CSS__[IBM]' d='M 493 16075 C 513.25,16075 499.75,16105 520,16105 L 520 16105 L 2227 16105' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_CP/CMS__[IBM]' d='M 490 16075 L 640 16075' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_CP/CMS__[IBM])' />
   <path id='__line_DOS/ES__[Robotron]' d='M 643 16255 C 663.25,16255 649.75,16225 670,16225 L 670 16225 L 1180 16225' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_DOS/ES__[Robotron])' />
   <path id='__line_Edos__[TSCS]' d='M 613 16255 C 633.25,16255 619.75,16285 640,16285 L 640 16285 L 1000 16285' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_Edos__[TSCS])' />
-  <path id='__line_TOS/360__[IBM]' d='M 400 16255 L 2197 16255' stroke='#8B4513' style='stroke-width:4;' />
-  <path id='__line_OSIV/XSP__[Fujitsu]' d='M 1178 16375 C 1198.25,16375 1184.75,16345 1205,16345 L 1205 16345 L 2197 16345' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_TOS/360__[IBM]' d='M 400 16255 L 2227 16255' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_OSIV/XSP__[Fujitsu]' d='M 1178 16375 C 1198.25,16375 1184.75,16345 1205,16345 L 1205 16345 L 2227 16345' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_OSIV/ESPIII__[Fujitsu]' d='M 985 16375 C 1005.25,16375 991.75,16405 1012,16405 L 1012 16405 L 1205 16405' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OSIV/ESPIII__[Fujitsu])' />
   <path id='__line_OSIV/X8__[Fujitsu]' d='M 696 16495 C 736.5,16495 709.5,16375 750,16375 L 750 16375 L 1205 16375' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OSIV/X8__[Fujitsu])' />
   <path id='__line_BS3000__[Siemens]' d='M 1003 16435 C 1023.25,16435 1009.75,16465 1030,16465 L 1030 16465 L 1087 16465' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_BS3000__[Siemens])' />
-  <path id='__line_OSIV/F4__[Fujitsu]' d='M 714 16495 C 742.5,16495 723.5,16435 752,16435 L 752 16435 L 2197 16435' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_OSIV/F4__[Fujitsu]' d='M 714 16495 C 742.5,16495 723.5,16435 752,16435 L 752 16435 L 2227 16435' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_OS/PCP__[IBM]' d='M 463 16495 C 483.25,16495 469.75,16465 490,16465 L 490 16465 L 550 16465' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OS/PCP__[IBM])' />
   <path id='__line_OS/MVT__[IBM]' d='M 436 16495 C 476.5,16495 449.5,16615 490,16615 L 490 16615 L 700 16615' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OS/MVT__[IBM])' />
   <path id='__line_SRTOS__[IBM]' d='M 733 16495 C 753.25,16495 739.75,16525 760,16525 L 760 16525 L 1120 16525' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_SRTOS__[IBM])' />
-  <path id='__line_VOS2__[Hitachi]' d='M 712 16495 C 740.5,16495 721.5,16555 750,16555 L 750 16555 L 2197 16555' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_VOS2__[Hitachi]' d='M 712 16495 C 740.5,16495 721.5,16555 750,16555 L 750 16555 L 2227 16555' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_OS__ES__[Soviet__Union]' d='M 593 16495 C 628.25,16495 604.75,16585 640,16585 L 640 16585 L 1420 16585' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OS__ES__[Soviet__Union])' />
-  <path id='__line_IBSYS__[IBM]' d='M 340 16495 L 2197 16495' stroke='#8B4513' style='stroke-width:4;' />
-  <path id='__line_OS/400__[IBM]' d='M 1105 16675 C 1125.25,16675 1111.75,16705 1132,16705 L 1132 16705 L 2197 16705' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_IBSYS__[IBM]' d='M 340 16495 L 2227 16495' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_OS/400__[IBM]' d='M 1105 16675 C 1125.25,16675 1111.75,16705 1132,16705 L 1132 16705 L 2227 16705' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_CPF__[IBM]' d='M 820 16675 L 1147 16675' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_CPF__[IBM])' />
-  <path id='__line_SABRE__[IBM]' d='M 340 16765 L 2197 16765' stroke='#8B4513' style='stroke-width:4;' />
+  <path id='__line_SABRE__[IBM]' d='M 340 16765 L 2227 16765' stroke='#8B4513' style='stroke-width:4;' />
   <path id='__line_OSIV/F2__[Fujitsu]' d='M 763 16855 C 783.25,16855 769.75,16885 790,16885 L 790 16885 L 1060 16885' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_OSIV/F2__[Fujitsu])' />
   <path id='__line_BOS__[Fujitsu]' d='M 535 16825 C 555.25,16825 541.75,16855 562,16855 L 562 16855 L 790 16855' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_BOS__[Fujitsu])' />
   <path id='__line_BOS/360__[IBM]' d='M 430 16825 L 580 16825' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_BOS/360__[IBM])' />
@@ -7377,14 +7391,14 @@ style='opacity:0.6;' >
   <path id='__line_GOS/VS__[Mitsubishi]' d='M 1030 18295 L 1210 18295' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_GOS/VS__[Mitsubishi])' />
   <path id='__line_MPE-A__[HP]' d='M 667 18325 L 1447 18325' stroke='#8B4513' style='stroke-width:4;' marker-end='url(#__stop_MPE-A__[HP])' />
   <path id='__line_CodeZero' d='M 1690 18355 L 1780 18355' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_CodeZero)' />
-  <path id='__line_NOVA' d='M 1780 18385 L 2197 18385' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_NOVA' d='M 1780 18385 L 2227 18385' stroke='#FFD700' style='stroke-width:4;' />
   <path id='__line_Osker' d='M 1840 18415 L 1867 18415' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_Osker)' />
-  <path id='__line_P4' d='M 1462 18445 L 2197 18445' stroke='#FFD700' style='stroke-width:4;' />
-  <path id='__line_KataOS__[Google]' d='M 2135 18535 C 2155.25,18535 2141.75,18505 2162,18505 L 2162 18505 L 2197 18505' stroke='#FFD700' style='stroke-width:4;' />
-  <path id='__line_Neptune__OS' d='M 2058 18535 C 2078.25,18535 2064.75,18565 2085,18565 L 2085 18565 L 2197 18565' stroke='#FFD700' style='stroke-width:4;' />
-  <path id='__line_seL4' d='M 1600 18535 L 2197 18535' stroke='#FFD700' style='stroke-width:4;' />
-  <path id='__line_TUD:OS' d='M 1690 18655 C 1690,18655 1690,18685 1690,18685 L 1690 18685 L 2197 18685' stroke='#FFD700' style='stroke-width:4;' />
-  <path id='__line_Fiasco.OC/L4Re' d='M 1663 18625 C 1683.25,18625 1669.75,18655 1690,18655 L 1690 18655 L 2197 18655' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_P4' d='M 1462 18445 L 2227 18445' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_KataOS__[Google]' d='M 2135 18535 C 2155.25,18535 2141.75,18505 2162,18505 L 2162 18505 L 2227 18505' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_Neptune__OS' d='M 2058 18535 C 2078.25,18535 2064.75,18565 2085,18565 L 2085 18565 L 2227 18565' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_seL4' d='M 1600 18535 L 2227 18535' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_TUD:OS' d='M 1690 18655 C 1690,18655 1690,18685 1690,18685 L 1690 18685 L 2227 18685' stroke='#FFD700' style='stroke-width:4;' />
+  <path id='__line_Fiasco.OC/L4Re' d='M 1663 18625 C 1683.25,18625 1669.75,18655 1690,18655 L 1690 18655 L 2227 18655' stroke='#FFD700' style='stroke-width:4;' />
   <path id='__line_Fiasco' d='M 1440 18625 L 1690 18625' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_Fiasco)' />
   <path id='__line_L4/MIPS' d='M 1349 18805 C 1377.5,18805 1358.5,18745 1387,18745 L 1387 18745 L 1567 18745' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_L4/MIPS)' />
   <path id='__line_Gnuppix__GNU/Hurd-L4' d='M 1543 18805 C 1563.25,18805 1549.75,18775 1570,18775 L 1570 18775 L 1657 18775' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_Gnuppix__GNU/Hurd-L4)' />
@@ -7399,23 +7413,23 @@ style='opacity:0.6;' >
   <path id='__line_Orion__(L4__kernel)' d='M 1667 19015 C 1695.5,19015 1676.5,19075 1705,19075 L 1705 19075 L 2080 19075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Orion__(L4__kernel))' />
   <path id='__line_Iguana/Wombat__OS' d='M 1570 19015 C 1592.5,19015 1577.5,19105 1600,19105 L 1600 19105 L 1810 19105' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_Iguana/Wombat__OS)' />
   <path id='__line_L4Ka::Pistachio__(X.2)' d='M 1570 19015 L 1795 19015' stroke='#FFD700' style='stroke-width:4;' marker-end='url(#__stop_L4Ka::Pistachio__(X.2))' />
-  <path id='__line_ERIKA__Enterprise' d='M 1540 19195 L 2197 19195' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_ERCOS__[ETAS]' d='M 1390 19225 L 2197 19225' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_osCAN__[Vector__Informatik]' d='M 1522 19255 L 2197 19255' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_MICROSAR__OS__[Vector__Informatik]' d='M 1762 19285 L 2197 19285' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_ProOSEK/time__[3SOFT__Elektrobit]' d='M 1582 19345 C 1582,19345 1582,19375 1582,19375 L 1582 19375 L 2197 19375' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_ProOSEK__[3SOFT/Elektrobit]' d='M 1582 19345 L 2197 19345' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_RTA-OSEK__[ETAS]' d='M 1552 19435 L 2197 19435' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_RTA-OS__[ETAS]' d='M 1492 19465 L 2197 19465' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_tresos__[3SOFT/Elektrobit]' d='M 1450 19495 L 2197 19495' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_TTP-OS__[TTTech]' d='M 1420 19525 L 2197 19525' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_Arctic__Core' d='M 1600 19555 L 2197 19555' stroke='#FF00FF' style='stroke-width:4;' />
-  <path id='__line_FreeOSEK' d='M 1900 19585 L 2197 19585' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_ERIKA__Enterprise' d='M 1540 19195 L 2227 19195' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_ERCOS__[ETAS]' d='M 1390 19225 L 2227 19225' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_osCAN__[Vector__Informatik]' d='M 1522 19255 L 2227 19255' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_MICROSAR__OS__[Vector__Informatik]' d='M 1762 19285 L 2227 19285' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_ProOSEK/time__[3SOFT__Elektrobit]' d='M 1582 19345 C 1582,19345 1582,19375 1582,19375 L 1582 19375 L 2227 19375' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_ProOSEK__[3SOFT/Elektrobit]' d='M 1582 19345 L 2227 19345' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_RTA-OSEK__[ETAS]' d='M 1552 19435 L 2227 19435' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_RTA-OS__[ETAS]' d='M 1492 19465 L 2227 19465' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_tresos__[3SOFT/Elektrobit]' d='M 1450 19495 L 2227 19495' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_TTP-OS__[TTTech]' d='M 1420 19525 L 2227 19525' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_Arctic__Core' d='M 1600 19555 L 2227 19555' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_FreeOSEK' d='M 1900 19585 L 2227 19585' stroke='#FF00FF' style='stroke-width:4;' />
   <path id='__line_nxtOSEK' d='M 1690 19615 L 1897 19615' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_nxtOSEK)' />
   <path id='__line_ev3OSEK' d='M 1960 19645 L 1990 19645' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_ev3OSEK)' />
   <path id='__line_openOSEK' d='M 1640 19675 L 1882 19675' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_openOSEK)' />
   <path id='__line_TOPPERS-OSEK' d='M 1600 19705 L 1672 19705' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_TOPPERS-OSEK)' />
-  <path id='__line_Trampoline' d='M 1690 19735 L 2197 19735' stroke='#FF00FF' style='stroke-width:4;' />
+  <path id='__line_Trampoline' d='M 1690 19735 L 2227 19735' stroke='#FF00FF' style='stroke-width:4;' />
   <path id='__line_OSEKturbo__[Metrowerks]' d='M 1540 19765 L 1630 19765' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_OSEKturbo__[Metrowerks])' />
   <path id='__line_Trioz__OSEK__RTOS__[Trioztech]' d='M 1720 19795 L 1867 19795' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_Trioz__OSEK__RTOS__[Trioztech])' />
   <path id='__line_PICOS18__[Pragmatic]' d='M 1552 19825 L 1837 19825' stroke='#FF00FF' style='stroke-width:4;' marker-end='url(#__stop_PICOS18__[Pragmatic])' />
@@ -7424,23 +7438,23 @@ style='opacity:0.6;' >
   <path id='__line_AMOS/L__[Alpha__Microsystems]' d='M 925 19915 C 945.25,19915 931.75,19945 952,19945 L 952 19945 L 1402 19945' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AMOS/L__[Alpha__Microsystems])' />
   <path id='__line_AMOS__[Alpha__Microsystems]' d='M 790 19915 L 1087 19915' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AMOS__[Alpha__Microsystems])' />
   <path id='__line_AMIGOD' d='M 1137 20035 L 1207 20035' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AMIGOD)' />
-  <path id='__line_OSD/BC__[Fujitsu]' d='M 733 20155 C 753.25,20155 739.75,20185 760,20185 L 760 20185 L 2197 20185' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_OSD/XC__[Fujitsu]' d='M 733 20155 C 753.25,20155 739.75,20125 760,20125 L 760 20125 L 2197 20125' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_BS2000__[Siemens]' d='M 692 20095 C 720.5,20095 701.5,20155 730,20155 L 730 20155 L 2197 20155' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OSD/BC__[Fujitsu]' d='M 733 20155 C 753.25,20155 739.75,20185 760,20185 L 760 20185 L 2227 20185' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OSD/XC__[Fujitsu]' d='M 733 20155 C 753.25,20155 739.75,20125 760,20125 L 760 20125 L 2227 20125' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_BS2000__[Siemens]' d='M 692 20095 C 720.5,20095 701.5,20155 730,20155 L 730 20155 L 2227 20155' stroke='#000' style='stroke-width:4;' />
   <path id='__line_TSOS__[RCA]' d='M 520 20095 L 910 20095' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TSOS__[RCA])' />
-  <path id='__line_Coyotos' d='M 1693 20275 C 1713.25,20275 1699.75,20245 1720,20245 L 1720 20245 L 2197 20245' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_CapROS' d='M 1633 20275 C 1653.25,20275 1639.75,20305 1660,20305 L 1660 20305 L 2197 20305' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Coyotos' d='M 1693 20275 C 1713.25,20275 1699.75,20245 1720,20245 L 1720 20245 L 2227 20245' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_CapROS' d='M 1633 20275 C 1653.25,20275 1639.75,20305 1660,20305 L 1660 20305 L 2227 20305' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Gnosis' d='M 670 20275 L 1720 20275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Gnosis)' />
-  <path id='__line_Fabric__OS__[Brocade]' d='M 1453 20395 C 1473.25,20395 1459.75,20365 1480,20365 L 1480 20365 L 2197 20365' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Fabric__OS__[Brocade]' d='M 1453 20395 C 1473.25,20395 1459.75,20365 1480,20365 L 1480 20365 L 2227 20365' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ExtremeWare__[Extreme__Networks]' d='M 1322 20395 C 1350.5,20395 1331.5,20455 1360,20455 L 1360 20455 L 1600 20455' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ExtremeWare__[Extreme__Networks])' />
-  <path id='__line_VxWorks__AE__[Wind__River__Systems]' d='M 1473 20395 C 1493.25,20395 1479.75,20425 1500,20425 L 1500 20425 L 2197 20425' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_VRTX__[Wind__River__Systems]' d='M 940 20395 L 2197 20395' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_VxWorks__AE__[Wind__River__Systems]' d='M 1473 20395 C 1493.25,20395 1479.75,20425 1500,20425 L 1500 20425 L 2227 20425' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_VRTX__[Wind__River__Systems]' d='M 940 20395 L 2227 20395' stroke='#000' style='stroke-width:4;' />
   <path id='__line_GAMMA-11__[DEC]' d='M 1003 20545 C 1023.25,20545 1009.75,20515 1030,20515 L 1030 20515 L 1060 20515' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GAMMA-11__[DEC])' />
   <path id='__line_HT-11__[Heathkit]' d='M 793 20545 C 813.25,20545 799.75,20575 820,20575 L 820 20575 L 940 20575' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_HT-11__[Heathkit])' />
   <path id='__line_RT-11__[DEC]' d='M 685 20545 L 1445 20545' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RT-11__[DEC])' />
-  <path id='__line_INTEGRITY-178B__[Green__Hills__Software]' d='M 1483 20665 C 1503.25,20665 1489.75,20695 1510,20695 L 1510 20695 L 2197 20695' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_INTEGRITY-178B__[Green__Hills__Software]' d='M 1483 20665 C 1503.25,20665 1489.75,20695 1510,20695 L 1510 20695 L 2227 20695' stroke='#000' style='stroke-width:4;' />
   <path id='__line_INTEGRITY__[Green__Hills__Software]' d='M 1470 20635 C 1470,20635 1470,20665 1470,20665 L 1470 20665 L 1545 20665' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_INTEGRITY__[Green__Hills__Software])' />
-  <path id='__line_micro-velOSity__[Green__Hills__Software]' d='M 1470 20635 L 2197 20635' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_micro-velOSity__[Green__Hills__Software]' d='M 1470 20635 L 2227 20635' stroke='#000' style='stroke-width:4;' />
   <path id='__line_MULTI-8__[DEC]' d='M 602 20815 C 630.5,20815 611.5,20755 640,20755 L 640 20755 L 670 20755' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MULTI-8__[DEC])' />
   <path id='__line_MultOS/8__[DEC]' d='M 613 20815 C 633.25,20815 619.75,20785 640,20785 L 640 20785 L 670 20785' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MultOS/8__[DEC])' />
   <path id='__line_OS/78__[DEC]' d='M 793 20875 C 813.25,20875 799.75,20905 820,20905 L 820 20905 L 940 20905' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_OS/78__[DEC])' />
@@ -7455,7 +7469,7 @@ style='opacity:0.6;' >
   <path id='__line_LorenOS' d='M 1853 21205 C 1888.25,21205 1864.75,21115 1900,21115 L 1900 21115 L 1927 21115' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LorenOS)' />
   <path id='__line_StarlungOS' d='M 1862 21205 C 1890.5,21205 1871.5,21145 1900,21145 L 1900 21145 L 1927 21145' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_StarlungOS)' />
   <path id='__line_TachyonOS' d='M 1903 21205 C 1923.25,21205 1909.75,21175 1930,21175 L 1930 21175 L 2080 21175' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TachyonOS)' />
-  <path id='__line_PathOS' d='M 2073 21205 C 2093.25,21205 2079.75,21175 2100,21175 L 2100 21175 L 2197 21175' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_PathOS' d='M 2073 21205 C 2093.25,21205 2079.75,21175 2100,21175 L 2100 21175 L 2227 21175' stroke='#000' style='stroke-width:4;' />
   <path id='__line_TomOS' d='M 1723 21205 C 1743.25,21205 1729.75,21175 1750,21175 L 1750 21175 L 1777 21175' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TomOS)' />
   <path id='__line_AquariusOS' d='M 1690 21205 C 1735,21205 1705,21385 1750,21385 L 1750 21385 L 1960 21385' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AquariusOS)' />
   <path id='__line_grvtyfllsos' d='M 1963 21205 C 1983.25,21205 1969.75,21235 1990,21235 L 1990 21235 L 2017 21235' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_grvtyfllsos)' />
@@ -7464,13 +7478,13 @@ style='opacity:0.6;' >
   <path id='__line_CyberOS' d='M 1823 21205 C 1858.25,21205 1834.75,21295 1870,21295 L 1870 21295 L 1897 21295' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CyberOS)' />
   <path id='__line_mattOS' d='M 1726 21205 C 1766.5,21205 1739.5,21325 1780,21325 L 1780 21325 L 1900 21325' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_mattOS)' />
   <path id='__line_Shookos' d='M 1690 21205 C 1735,21205 1705,21355 1750,21355 L 1750 21355 L 1777 21355' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Shookos)' />
-  <path id='__line_MikeOS' d='M 1690 21205 L 2197 21205' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_SafeRTOS__[Wittenstein]' d='M 1682 21505 C 1710.5,21505 1691.5,21445 1720,21445 L 1720 21445 L 2197 21445' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_MuditaOS' d='M 2053 21505 C 2073.25,21505 2059.75,21475 2080,21475 L 2080 21475 L 2197 21475' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_OpenRTOS__[Wittenstein]' d='M 1673 21505 C 1708.25,21505 1684.75,21595 1720,21595 L 1720 21595 L 2197 21595' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Zepp__OS__[Huawei]' d='M 2083 21505 C 2103.25,21505 2089.75,21535 2110,21535 L 2110 21535 L 2197 21535' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Lua__RTOS' d='M 1862 21505 C 1890.5,21505 1871.5,21565 1900,21565 L 1900 21565 L 2197 21565' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_FreeRTOS' d='M 1600 21505 L 2197 21505' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MikeOS' d='M 1690 21205 L 2227 21205' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SafeRTOS__[Wittenstein]' d='M 1682 21505 C 1710.5,21505 1691.5,21445 1720,21445 L 1720 21445 L 2227 21445' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MuditaOS' d='M 2053 21505 C 2073.25,21505 2059.75,21475 2080,21475 L 2080 21475 L 2227 21475' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OpenRTOS__[Wittenstein]' d='M 1673 21505 C 1708.25,21505 1684.75,21595 1720,21595 L 1720 21595 L 2227 21595' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Zepp__OS__[Huawei]' d='M 2083 21505 C 2103.25,21505 2089.75,21535 2110,21535 L 2110 21535 L 2227 21535' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Lua__RTOS' d='M 1862 21505 C 1890.5,21505 1871.5,21565 1900,21565 L 1900 21565 L 2227 21565' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_FreeRTOS' d='M 1600 21505 L 2227 21505' stroke='#000' style='stroke-width:4;' />
   <path id='__line_K42__[IBM]' d='M 1360 21685 C 1360,21685 1360,21715 1360,21715 L 1360 21715 L 1660 21715' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_K42__[IBM])' />
   <path id='__line_Tornado' d='M 1333 21655 C 1353.25,21655 1339.75,21685 1360,21685 L 1360 21685 L 1660 21685' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Tornado)' />
   <path id='__line_Hurricane' d='M 1270 21655 L 1660 21655' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Hurricane)' />
@@ -7480,37 +7494,37 @@ style='opacity:0.6;' >
   <path id='__line_CAOS__[Amiga]' d='M 970 21895 L 1000 21895' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CAOS__[Amiga])' />
   <path id='__line_Cray__Operating__System__[Cray]' d='M 730 21925 L 1180 21925' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cray__Operating__System__[Cray])' />
   <path id='__line_Chippewa__Operating__System__[Cray]' d='M 400 21955 L 730 21955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Chippewa__Operating__System__[Cray])' />
-  <path id='__line_MicroC/OS__[Micrium]' d='M 1210 21985 L 2197 21985' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MicroC/OS__[Micrium]' d='M 1210 21985 L 2227 21985' stroke='#000' style='stroke-width:4;' />
   <path id='__line_MicroMore__[Access]' d='M 1450 22015 L 1660 22015' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MicroMore__[Access])' />
   <path id='__line_MicroMPX__[Encore]' d='M 1135 22075 C 1155.25,22075 1141.75,22105 1162,22105 L 1162 22105 L 1270 22105' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MicroMPX__[Encore])' />
   <path id='__line_MPX-32__[Systems__Engineering__Labs]' d='M 1000 22075 L 1162 22075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MPX-32__[Systems__Engineering__Labs])' />
-  <path id='__line_ackOS' d='M 2097 22165 L 2197 22165' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ackOS' d='M 2097 22165 L 2227 22165' stroke='#000' style='stroke-width:4;' />
   <path id='__line_A/ROSE__[Apple]' d='M 1122 22195 L 1150 22195' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_A/ROSE__[Apple])' />
   <path id='__line_Accent__(kernel)' d='M 883 22255 C 903.25,22255 889.75,22285 910,22285 L 910 22285 L 1030 22285' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Accent__(kernel))' />
   <path id='__line_Aleph__(kernel)' d='M 730 22255 L 910 22255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Aleph__(kernel))' />
   <path id='__line_Machine__Operating__System__(MOS)__[Acorn]' d='M 937 22345 L 1065 22345' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Machine__Operating__System__(MOS)__[Acorn])' />
   <path id='__line_Admiral' d='M 340 22375 L 370 22375' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Admiral)' />
   <path id='__line_AFROS' d='M 1532 22435 C 1538,22435 1534,22465 1540,22465 L 1540 22465 L 1750 22465' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_AFROS)' />
-  <path id='__line_EmuTOS' d='M 1532 22435 L 2197 22435' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_EmuTOS' d='M 1532 22435 L 2227 22435' stroke='#000' style='stroke-width:4;' />
   <path id='__line_AL/1' d='M 720 22525 L 730 22525' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AL/1)' />
-  <path id='__line_AlliedWare__[Allies__Telesis]' d='M 1690 22555 L 2197 22555' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_AlliedWare__[Allies__Telesis]' d='M 1690 22555 L 2227 22555' stroke='#000' style='stroke-width:4;' />
   <path id='__line_AMBOSS__[Siemens]' d='M 1120 22585 L 1725 22585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AMBOSS__[Siemens])' />
   <path id='__line_Amoeba' d='M 1210 22615 L 1375 22615' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Amoeba)' />
   <path id='__line_AN/FSQ-32' d='M 370 22645 L 580 22645' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AN/FSQ-32)' />
-  <path id='__line_Apache__Mynewt' d='M 1960 22675 L 2197 22675' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Apache__Mynewt' d='M 1960 22675 L 2227 22675' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Apple__II__Pascal__[Apple]' d='M 840 22735 C 860.25,22735 846.75,22765 867,22765 L 867 22765 L 1025 22765' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Apple__II__Pascal__[Apple])' />
   <path id='__line_p-System' d='M 790 22735 L 967 22735' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_p-System)' />
   <path id='__line_Lisa__OS__[Apple]' d='M 970 22825 L 1087 22825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Lisa__OS__[Apple])' />
   <path id='__line_ARX__[Acorn]' d='M 1120 22855 L 1150 22855' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ARX__[Acorn])' />
   <path id='__line_Atari__TOS__[Atari]' d='M 1055 22885 L 1327 22885' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Atari__TOS__[Atari])' />
   <path id='__line_Atlas__I__Supervisor' d='M 400 22915 L 460 22915' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Atlas__I__Supervisor)' />
-  <path id='__line_AuraOS' d='M 2005 22945 L 2197 22945' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_AuraOS' d='M 2005 22945 L 2227 22945' stroke='#000' style='stroke-width:4;' />
   <path id='__line_B1/B2/B3/B4__[NCR]' d='M 280 22975 L 700 22975' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_B1/B2/B3/B4__[NCR])' />
   <path id='__line_Bada__[Samsung]' d='M 1787 23005 L 1874 23005' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Bada__[Samsung])' />
-  <path id='__line_Baget__RTOS__(OS2000)' d='M 1540 23035 L 2197 23035' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Baget__RTOS__(OS2000)' d='M 1540 23035 L 2227 23035' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Banyan__VINES__[Banyan__Systems]' d='M 1000 23065 L 1417 23065' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Banyan__VINES__[Banyan__Systems])' />
-  <path id='__line_BareMetal__[Return__Infinity]' d='M 1720 23095 L 2197 23095' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Barrelfish__[Microsoft]' d='M 1900 23125 L 2197 23125' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_BareMetal__[Return__Infinity]' d='M 1720 23095 L 2227 23095' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Barrelfish__[Microsoft]' d='M 1900 23125 L 2227 23125' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Basic__Executive__System' d='M 280 23155 L 910 23155' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Basic__Executive__System)' />
   <path id='__line_Berkeley__Timesharing__System' d='M 400 23185 L 517 23185' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Berkeley__Timesharing__System)' />
   <path id='__line_BESYS__[Bell__Labs/AT&amp;T]' d='M 212 23215 L 577 23215' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BESYS__[Bell__Labs/AT&amp;T])' />
@@ -7518,8 +7532,8 @@ style='opacity:0.6;' >
   <path id='__line_BKY' d='M 580 23275 L 730 23275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BKY)' />
   <path id='__line_PC-BLIS' d='M 1003 23335 C 1023.25,23335 1009.75,23365 1030,23365 L 1030 23365 L 1150 23365' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PC-BLIS)' />
   <path id='__line_BLIS/COBOL__[Information__Processing__Inc]' d='M 580 23335 L 1150 23335' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BLIS/COBOL__[Information__Processing__Inc])' />
-  <path id='__line_A2__(a.k.a.__AOS__or__Bluebottle)' d='M 1123 23425 C 1143.25,23425 1129.75,23455 1150,23455 L 1150 23455 L 2197 23455' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Oberon' d='M 1090 23425 L 2197 23425' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_A2__(a.k.a.__AOS__or__Bluebottle)' d='M 1123 23425 C 1143.25,23425 1129.75,23455 1150,23455 L 1150 23455 L 2227 23455' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Oberon' d='M 1090 23425 L 2227 23425' stroke='#000' style='stroke-width:4;' />
   <path id='__line_BOS1810__[Robotron]' d='M 1030 23515 L 1180 23515' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BOS1810__[Robotron])' />
   <path id='__line_brickOS' d='M 1495 23545 L 1615 23545' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_brickOS)' />
   <path id='__line_BROS__[Robotron]' d='M 973 23605 C 993.25,23605 979.75,23635 1000,23635 L 1000 23635 L 1180 23635' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BROS__[Robotron])' />
@@ -7527,96 +7541,96 @@ style='opacity:0.6;' >
   <path id='__line_BS600__[Robotron]' d='M 1000 23695 L 1180 23695' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BS600__[Robotron])' />
   <path id='__line_BS-M__[Siemens]' d='M 1120 23725 L 1725 23725' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BS-M__[Siemens])' />
   <path id='__line_AOS__[Burroughs]' d='M 373 23785 C 393.25,23785 379.75,23815 400,23815 L 400 23815 L 430 23815' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AOS__[Burroughs])' />
-  <path id='__line_MCP__[Burroughs]' d='M 340 23785 L 2197 23785' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MCP__[Burroughs]' d='M 340 23785 L 2227 23785' stroke='#000' style='stroke-width:4;' />
   <path id='__line_CAL' d='M 520 23875 L 580 23875' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CAL)' />
   <path id='__line_Cambridge__CAP__OS' d='M 760 23905 L 817 23905' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cambridge__CAP__OS)' />
   <path id='__line_Cambridge__Ring' d='M 700 23935 L 1030 23935' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cambridge__Ring)' />
   <path id='__line_CAPS-11__[DEC]' d='M 645 23965 L 670 23965' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CAPS-11__[DEC])' />
   <path id='__line_CAPS-8__[DEC]' d='M 645 23995 L 670 23995' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CAPS-8__[DEC])' />
   <path id='__line_CCOS__[Corvus__Systems]' d='M 947 24025 L 1120 24025' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CCOS__[Corvus__Systems])' />
-  <path id='__line_ChibiOS/RT' d='M 1690 24055 L 2197 24055' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ChibiOS/RT' d='M 1690 24055 L 2227 24055' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Chios' d='M 610 24085 L 730 24085' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Chios)' />
-  <path id='__line_ChrysaLisp' d='M 1930 24115 L 2197 24115' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ChrysaLisp' d='M 1930 24115 L 2227 24115' stroke='#000' style='stroke-width:4;' />
   <path id='__line_clive' d='M 1957 24145 L 1987 24145' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_clive)' />
-  <path id='__line_Cyjon' d='M 2070 24175 L 2197 24175' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Cyjon' d='M 2070 24175 L 2227 24175' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SCOPE__[Control__Data]' d='M 400 24205 L 1030 24205' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SCOPE__[Control__Data])' />
-  <path id='__line_IOS__[Cisco]' d='M 1000 24235 L 2197 24235' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_IOS__[Cisco]' d='M 1000 24235 L 2227 24235' stroke='#000' style='stroke-width:4;' />
   <path id='__line_CNK__OS__[IBM]' d='M 1450 24265 L 1957 24265' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CNK__OS__[IBM])' />
   <path id='__line_Color__BASIC__[Microsoft]' d='M 880 24295 L 1237 24295' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Color__BASIC__[Microsoft])' />
   <path id='__line_CombOS__[Trueb__AG/Winter__AG]' d='M 1810 24325 L 1930 24325' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CombOS__[Trueb__AG/Winter__AG])' />
   <path id='__line_KERNAL__[Commodore]' d='M 790 24355 L 1180 24355' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KERNAL__[Commodore])' />
-  <path id='__line_Contiki' d='M 1600 24385 L 2197 24385' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Contiki' d='M 1600 24385 L 2227 24385' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Copland__[Apple]' d='M 1300 24415 L 1377 24415' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Copland__[Apple])' />
-  <path id='__line_COQOS__[OpenSynergy]' d='M 1750 24445 L 2197 24445' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_COQOS__[OpenSynergy]' d='M 1750 24445 L 2227 24445' stroke='#000' style='stroke-width:4;' />
   <path id='__line_COS-310/350__[DEC]' d='M 640 24475 L 670 24475' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_COS-310/350__[DEC])' />
-  <path id='__line_Cosmos' d='M 1780 24505 L 2197 24505' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Cosmos' d='M 1780 24505 L 2227 24505' stroke='#000' style='stroke-width:4;' />
   <path id='__line_CP-6__[Honeywell]' d='M 850 24535 L 1657 24535' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CP-6__[Honeywell])' />
   <path id='__line_CPC-OS__[Amstrad]' d='M 1000 24565 L 1207 24565' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CPC-OS__[Amstrad])' />
   <path id='__line_Croquet' d='M 1690 24595 L 1777 24595' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Croquet)' />
   <path id='__line_CSIRONET' d='M 370 24625 L 1030 24625' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CSIRONET)' />
   <path id='__line_CTOS__[Convergent__Technologies]' d='M 1060 24655 L 1480 24655' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CTOS__[Convergent__Technologies])' />
   <path id='__line_Danger__OS__[Danger__Ltd.]' d='M 1540 24685 L 1810 24685' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Danger__OS__[Danger__Ltd.])' />
-  <path id='__line_DBOS' d='M 2140 24715 L 2197 24715' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_DawnOS' d='M 1995 24745 L 2197 24745' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_DBOS' d='M 2140 24715 L 2227 24715' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_DawnOS' d='M 1995 24745 L 2227 24745' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Dartmouth__Time__Sharing__System__(DTSS)' d='M 400 24775 L 430 24775' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Dartmouth__Time__Sharing__System__(DTSS))' />
   <path id='__line_DECtape__Library__System__[DEC]' d='M 340 24805 L 370 24805' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DECtape__Library__System__[DEC])' />
-  <path id='__line_Deos__[DDC-I]' d='M 1420 24835 L 2197 24835' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Deos__[DDC-I]' d='M 1420 24835 L 2227 24835' stroke='#000' style='stroke-width:4;' />
   <path id='__line_DexOS' d='M 1750 24865 L 1930 24865' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DexOS)' />
   <path id='__line_DIPOS__[Nixdorf]' d='M 760 24895 L 1180 24895' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DIPOS__[Nixdorf])' />
   <path id='__line_DiscOS' d='M 1035 24925 L 1060 24925' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DiscOS)' />
   <path id='__line_AEGIS__[Apollo]' d='M 915 24955 L 1510 24955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AEGIS__[Apollo])' />
   <path id='__line_DNOS__[Texas__Instruments]' d='M 730 24985 L 1060 24985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DNOS__[Texas__Instruments])' />
-  <path id='__line_DNOS__[Dell]' d='M 1450 25015 L 2197 25015' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_DNOS__[Dell]' d='M 1450 25015 L 2227 25015' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Dragon__Slayer' d='M 1060 25045 L 1180 25045' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Dragon__Slayer)' />
-  <path id='__line_DRYOS__[Canon]' d='M 1690 25075 L 2197 25075' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Unison__RTOS__[RoweBots]' d='M 1723 25135 C 1743.25,25135 1729.75,25165 1750,25165 L 1750 25165 L 2197 25165' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_DSPnano__RTOS__[RowerBots]' d='M 1360 25135 L 2197 25135' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_DRYOS__[Canon]' d='M 1690 25075 L 2227 25075' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Unison__RTOS__[RoweBots]' d='M 1723 25135 C 1743.25,25135 1729.75,25165 1750,25165 L 1750 25165 L 2227 25165' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_DSPnano__RTOS__[RowerBots]' d='M 1360 25135 L 2227 25135' stroke='#000' style='stroke-width:4;' />
   <path id='__line_DX10__[Texas__Instruments]' d='M 730 25225 L 1060 25225' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DX10__[Texas__Instruments])' />
   <path id='__line_DYSEAC' d='M 70 25255 L 100 25255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DYSEAC)' />
-  <path id='__line_eCos' d='M 1450 25285 L 2197 25285' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_eCos' d='M 1450 25285 L 2227 25285' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Emerald' d='M 2095 25315 L 2130 25315' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Emerald)' />
   <path id='__line_eggos' d='M 2102 25345 L 2145 25345' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_eggos)' />
-  <path id='__line_eXpOS' d='M 1780 25375 L 2197 25375' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_eXpOS' d='M 1780 25375 L 2227 25375' stroke='#000' style='stroke-width:4;' />
   <path id='__line_EIEX__[Robotron]' d='M 910 25405 L 1180 25405' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_EIEX__[Robotron])' />
   <path id='__line_Elbrus-1' d='M 670 25435 L 1060 25435' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Elbrus-1)' />
   <path id='__line_EMAS' d='M 580 25465 L 880 25465' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_EMAS)' />
-  <path id='__line_embOS__[Segger]' d='M 1270 25495 L 2197 25495' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_embOS__[Segger]' d='M 1270 25495 L 2227 25495' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Enterprise__OS__[McDATA]' d='M 940 25525 L 1720 25525' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Enterprise__OS__[McDATA])' />
   <path id='__line_EOS__[ETA__Systems]' d='M 1060 25555 L 1180 25555' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_EOS__[ETA__Systems])' />
   <path id='__line_es__[Nintendo]' d='M 1677 25585 L 1887 25585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_es__[Nintendo])' />
-  <path id='__line_Essence' d='M 2002 25615 L 2197 25615' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Essence' d='M 2002 25615 L 2227 25615' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ETOS' d='M 640 25645 L 670 25645' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ETOS)' />
-  <path id='__line_EUROS__RTOS__[EUROS]' d='M 1090 25675 L 2197 25675' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_EUROS__RTOS__[EUROS]' d='M 1090 25675 L 2227 25675' stroke='#000' style='stroke-width:4;' />
   <path id='__line_EXEC__[Unisys]' d='M 280 25705 L 580 25705' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_EXEC__[Unisys])' />
   <path id='__line_Excelsior__[Soviet__Union]' d='M 1120 25735 L 1210 25735' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Excelsior__[Soviet__Union])' />
-  <path id='__line_Exec__8__[Unisys]' d='M 520 25765 L 2197 25765' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Exec__8__[Unisys]' d='M 520 25765 L 2227 25765' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Executive__[ICL]' d='M 700 25795 L 1030 25795' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Executive__[ICL])' />
   <path id='__line_Elate__(a.k.a.__Elate__or__TAOS)__[Tao__Group]' d='M 1240 25825 L 1690 25825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Elate__(a.k.a.__Elate__or__TAOS)__[Tao__Group])' />
   <path id='__line_Fontac__Monitor__[Fujitsu]' d='M 430 25855 L 820 25855' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Fontac__Monitor__[Fujitsu])' />
-  <path id='__line_Fuchsia__[Google]' d='M 1977 25885 L 2197 25885' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Future__OS' d='M 1150 25915 L 2197 25915' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Fuchsia__[Google]' d='M 1977 25885 L 2227 25885' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Future__OS' d='M 1150 25915 L 2227 25915' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Galileo__[Acorn]' d='M 1420 25945 L 1450 25945' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Galileo__[Acorn])' />
-  <path id='__line_GECOS/GCOS__[General__Electric]' d='M 340 25975 L 2197 25975' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_GECOS/GCOS__[General__Electric]' d='M 340 25975 L 2227 25975' stroke='#000' style='stroke-width:4;' />
   <path id='__line_GeekOS' d='M 1510 26005 L 1750 26005' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GeekOS)' />
   <path id='__line_(Open)Genera__[Genera]' d='M 1030 26035 L 1447 26035' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_(Open)Genera__[Genera])' />
-  <path id='__line_Genode' d='M 1720 26065 L 2197 26065' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Genode' d='M 1720 26065 L 2227 26065' stroke='#000' style='stroke-width:4;' />
   <path id='__line_GEORGE__[ICL]' d='M 550 26095 L 580 26095' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GEORGE__[ICL])' />
   <path id='__line_GEOS__[Berkeley__Softworks]' d='M 1060 26125 L 1300 26125' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GEOS__[Berkeley__Softworks])' />
   <path id='__line_MeetiX__OS' d='M 1963 26185 C 1983.25,26185 1969.75,26215 1990,26215 L 1990 26215 L 2067 26215' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MeetiX__OS)' />
-  <path id='__line_Ghost__OS' d='M 1840 26185 L 2197 26185' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Ghost__OS' d='M 1840 26185 L 2227 26185' stroke='#000' style='stroke-width:4;' />
   <path id='__line_GRiD-OS' d='M 940 26275 L 1120 26275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_GRiD-OS)' />
   <path id='__line_Gopher__OS' d='M 2000 26305 L 2035 26305' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Gopher__OS)' />
-  <path id='__line_GreenteaOS' d='M 2037 26335 L 2197 26335' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_GreenteaOS' d='M 2037 26335 L 2227 26335' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Halide' d='M 2097 26365 L 2105 26365' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Halide)' />
   <path id='__line_Hydrogen' d='M 1997 26395 L 2085 26395' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Hydrogen)' />
   <path id='__line_colorForth__OS' d='M 1510 26425 L 1870 26425' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_colorForth__OS)' />
-  <path id='__line_HeartOS__[DDC-I]' d='M 1720 26455 L 2197 26455' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_HelenOS' d='M 1690 26485 L 2197 26485' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_HeartOS__[DDC-I]' d='M 1720 26455 L 2227 26455' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_HelenOS' d='M 1690 26485 L 2227 26485' stroke='#000' style='stroke-width:4;' />
   <path id='__line_HEP/OS__[Denelcor]' d='M 910 26515 L 1057 26515' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_HEP/OS__[Denelcor])' />
   <path id='__line_hhuOS' d='M 2025 26545 L 2090 26545' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_hhuOS)' />
-  <path id='__line_House' d='M 1690 26575 L 2197 26575' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_House' d='M 1690 26575 L 2227 26575' stroke='#000' style='stroke-width:4;' />
   <path id='__line_HP-1000/RTE__[HP]' d='M 460 26605 L 1505 26605' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_HP-1000/RTE__[HP])' />
-  <path id='__line_Hubris__[Oxide]' d='M 2110 26635 L 2197 26635' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Hubris__[Oxide]' d='M 2110 26635 L 2227 26635' stroke='#000' style='stroke-width:4;' />
   <path id='__line_HYDRA' d='M 610 26665 L 1030 26665' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_HYDRA)' />
   <path id='__line_Interim__OS' d='M 1890 26695 L 1950 26695' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Interim__OS)' />
   <path id='__line_DMS__(IBM__Series/3)__[IBM]' d='M 523 26755 C 543.25,26755 529.75,26785 550,26785 L 550 26785 L 1057 26785' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DMS__(IBM__Series/3)__[IBM])' />
@@ -7640,9 +7654,9 @@ style='opacity:0.6;' >
   <path id='__line_ITOS__[CTM__Computer]' d='M 640 27325 L 1150 27325' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ITOS__[CTM__Computer])' />
   <path id='__line_ITS' d='M 490 27355 L 550 27355' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ITS)' />
   <path id='__line_includeOS' d='M 1920 27385 L 2090 27385' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_includeOS)' />
-  <path id='__line_________' d='M 2010 27475 C 2030.25,27475 2016.75,27445 2037,27445 L 2037 27445 L 2197 27445' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_________' d='M 2010 27475 C 2030.25,27475 2016.75,27445 2037,27445 L 2037 27445 L 2227 27445' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Shrine' d='M 1952 27475 C 1980.5,27475 1961.5,27535 1990,27535 L 1990 27535 L 2105 27535' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Shrine)' />
-  <path id='__line_____' d='M 2010 27475 C 2030.25,27475 2016.75,27505 2037,27505 L 2037 27505 L 2197 27505' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_____' d='M 2010 27475 C 2030.25,27475 2016.75,27505 2037,27505 L 2037 27505 L 2227 27505' stroke='#000' style='stroke-width:4;' />
   <path id='__line_J__Operating__System/LoseThos' d='M 1630 27475 L 2037 27475' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_J__Operating__System/LoseThos)' />
   <path id='__line_J/MultiJob__[ICL]' d='M 430 27595 L 730 27595' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_J/MultiJob__[ICL])' />
   <path id='__line_JAMB__[Robotron]' d='M 1000 27625 L 1180 27625' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_JAMB__[Robotron])' />
@@ -7650,35 +7664,35 @@ style='opacity:0.6;' >
   <path id='__line_JNode' d='M 1600 27685 L 1997 27685' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_JNode)' />
   <path id='__line_JOSS__(on__JOHNNIAC)' d='M 370 27715 L 460 27715' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_JOSS__(on__JOHNNIAC))' />
   <path id='__line_JX' d='M 1540 27745 L 1720 27745' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_JX)' />
-  <path id='__line_KasperskyOS__[Kaspersky]' d='M 1990 27775 L 2197 27775' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_KasperskyOS__[Kaspersky]' d='M 1990 27775 L 2227 27775' stroke='#000' style='stroke-width:4;' />
   <path id='__line_KDF9__Timesharing__Director__[English__Electric]' d='M 400 27805 L 430 27805' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KDF9__Timesharing__Director__[English__Electric])' />
   <path id='__line_KI-TELNEX' d='M 652 27835 L 762 27835' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KI-TELNEX)' />
-  <path id='__line_KnightOS' d='M 1920 27865 L 2197 27865' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Kitten__[Sandia]' d='M 1680 27955 C 1700.25,27955 1686.75,27925 1707,27925 L 1707 27925 L 2197 27925' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_KnightOS' d='M 1920 27865 L 2227 27865' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Kitten__[Sandia]' d='M 1680 27955 C 1700.25,27955 1686.75,27925 1707,27925 L 1707 27925 L 2227 27925' stroke='#000' style='stroke-width:4;' />
   <path id='__line_OpenCatamount__[Sandia]' d='M 1603 27955 C 1623.25,27955 1609.75,27985 1630,27985 L 1630 27985 L 1660 27985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_OpenCatamount__[Sandia])' />
   <path id='__line_SUNMOS__[Sandia]' d='M 1210 27955 L 1867 27955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SUNMOS__[Sandia])' />
   <path id='__line_KMON' d='M 1030 28045 L 1270 28045' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KMON)' />
   <path id='__line_KOBRA__[Robotron]' d='M 1030 28075 L 1180 28075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KOBRA__[Robotron])' />
   <path id='__line_Ostin' d='M 1843 28165 C 1863.25,28165 1849.75,28195 1870,28195 L 1870 28195 L 1897 28195' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Ostin)' />
-  <path id='__line_KolibriOS' d='M 1603 28135 C 1623.25,28135 1609.75,28165 1630,28165 L 1630 28165 L 2197 28165' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_MenuetOS' d='M 1510 28135 L 2197 28135' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_KolibriOS' d='M 1603 28135 C 1623.25,28135 1609.75,28165 1630,28165 L 1630 28165 L 2227 28165' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MenuetOS' d='M 1510 28135 L 2227 28135' stroke='#000' style='stroke-width:4;' />
   <path id='__line_LAP6-DIAL' d='M 690 28255 L 705 28255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LAP6-DIAL)' />
-  <path id='__line_LCOS__[Lancom__Systems]' d='M 1540 28285 L 2197 28285' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_LCOS__[Lancom__Systems]' d='M 1540 28285 L 2227 28285' stroke='#000' style='stroke-width:4;' />
   <path id='__line_leJOS' d='M 1497 28315 L 1955 28315' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_leJOS)' />
   <path id='__line_LEO__I__OS__[J.__Lyons__and__Co.]' d='M 10 28345 L 40 28345' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LEO__I__OS__[J.__Lyons__and__Co.])' />
-  <path id='__line_HarmoyOS__NEXT__[Huawei]' d='M 2160 28435 C 2180.25,28435 2166.75,28465 2187,28465 L 2187 28465 L 2197 28465' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_OpenHarmony__[Huawei]' d='M 2043 28405 C 2063.25,28405 2049.75,28435 2070,28435 L 2070 28435 L 2197 28435' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_LiteOS__[Huawei]' d='M 1990 28405 L 2197 28405' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_HarmoyOS__NEXT__[Huawei]' d='M 2160 28435 C 2180.25,28435 2166.75,28465 2187,28465 L 2187 28465 L 2227 28465' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OpenHarmony__[Huawei]' d='M 2043 28405 C 2063.25,28405 2049.75,28435 2070,28435 L 2070 28435 L 2227 28435' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_LiteOS__[Huawei]' d='M 1990 28405 L 2227 28405' stroke='#000' style='stroke-width:4;' />
   <path id='__line_LOS__' d='M 720 28525 L 1090 28525' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LOS__)' />
   <path id='__line_LSE/OS' d='M 1632 28555 L 1875 28555' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LSE/OS)' />
   <path id='__line_Magic__Cap__[General__Magic]' d='M 1300 28585 L 1390 28585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Magic__Cap__[General__Magic])' />
   <path id='__line_MAI__Basic__Four' d='M 1000 28615 L 1210 28615' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MAI__Basic__Four)' />
-  <path id='__line_MaRTE__OS' d='M 1480 28645 L 2197 28645' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MaRTE__OS' d='M 1480 28645 L 2227 28645' stroke='#000' style='stroke-width:4;' />
   <path id='__line_MARTOS__[AEG]' d='M 700 28675 L 1000 28675' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MARTOS__[AEG])' />
   <path id='__line_MARTOS-K__[AEG]' d='M 700 28705 L 1000 28705' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MARTOS-K__[AEG])' />
   <path id='__line_MDOS__[Micropolis]' d='M 760 28735 L 1360 28735' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MDOS__[Micropolis])' />
   <path id='__line_MEOS__[Robotron]' d='M 880 28765 L 1180 28765' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MEOS__[Robotron])' />
-  <path id='__line_Mezzano' d='M 1870 28795 L 2197 28795' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mezzano' d='M 1870 28795 L 2227 28795' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Michigan__Terminal__System__(MTS)' d='M 490 28825 L 1360 28825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Michigan__Terminal__System__(MTS))' />
   <path id='__line_RSTS-11__[DEC]' d='M 610 28855 L 1260 28855' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RSTS-11__[DEC])' />
   <path id='__line_Medos-2' d='M 880 28885 L 1090 28885' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Medos-2)' />
@@ -7692,25 +7706,25 @@ style='opacity:0.6;' >
   <path id='__line_MZOS__[Micropolis]' d='M 760 29125 L 1360 29125' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MZOS__[Micropolis])' />
   <path id='__line_Nanos' d='M 1022 29155 L 1030 29155' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Nanos)' />
   <path id='__line_Nanos__[Peter__Hultqvist]' d='M 1570 29185 L 1600 29185' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Nanos__[Peter__Hultqvist])' />
-  <path id='__line_Nanos__[NanoVMs]' d='M 2017 29215 L 2197 29215' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_NanOS__[strike11]' d='M 2150 29245 L 2197 29245' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Nanos__[NanoVMs]' d='M 2017 29215 L 2227 29215' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_NanOS__[strike11]' d='M 2150 29245 L 2227 29245' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Nemesis' d='M 1390 29275 L 1460 29275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Nemesis)' />
   <path id='__line_Netware__[Novell]' d='M 970 29305 L 1760 29305' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Netware__[Novell])' />
   <path id='__line_Newton__OS__[Apple]' d='M 1287 29335 L 1397 29335' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Newton__OS__[Apple])' />
-  <path id='__line_Switch__system__software__[Nintendo]' d='M 1968 29425 C 1988.25,29425 1974.75,29455 1995,29455 L 1995 29455 L 2197 29455' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_3DS__system__software__[Nintendo]' d='M 1785 29395 C 1805.25,29395 1791.75,29425 1812,29425 L 1812 29425 L 2197 29425' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Switch__system__software__[Nintendo]' d='M 1968 29425 C 1988.25,29425 1974.75,29455 1995,29455 L 1995 29455 L 2227 29455' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_3DS__system__software__[Nintendo]' d='M 1785 29395 C 1805.25,29395 1791.75,29425 1812,29425 L 1812 29425 L 2227 29425' stroke='#000' style='stroke-width:4;' />
   <path id='__line_DSi__system__software__[Nintendo]' d='M 1625 29395 L 1867 29395' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_DSi__system__software__[Nintendo])' />
-  <path id='__line_NonStop__[Tandem]' d='M 760 29515 L 2197 29515' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Nucleus__RTOS__[Accelerated]' d='M 1270 29545 L 2197 29545' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_NonStop__[Tandem]' d='M 760 29515 L 2227 29515' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Nucleus__RTOS__[Accelerated]' d='M 1270 29545 L 2227 29545' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Nut/OS' d='M 1540 29575 L 1927 29575' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Nut/OS)' />
-  <path id='__line_NuttX' d='M 1690 29605 L 2197 29605' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_NuttX' d='M 1690 29605 L 2227 29605' stroke='#000' style='stroke-width:4;' />
   <path id='__line_OctaOS' d='M 1775 29635 L 2025 29635' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_OctaOS)' />
-  <path id='__line_On__Time__RTOS-32__[On__Time__Informatik]' d='M 1360 29665 L 2197 29665' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_OpenComRTOS/Virtuoso__Next__[Altreonic]' d='M 1720 29695 L 2197 29695' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_On__Time__RTOS-32__[On__Time__Informatik]' d='M 1360 29665 L 2227 29665' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OpenComRTOS/Virtuoso__Next__[Altreonic]' d='M 1720 29695 L 2227 29695' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ORVYL' d='M 490 29725 L 1480 29725' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ORVYL)' />
   <path id='__line_Orange__Slice' d='M 2057 29755 L 2117 29755' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Orange__Slice)' />
   <path id='__line_OSC245__[Ferranti]' d='M 280 29785 L 1330 29785' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_OSC245__[Ferranti])' />
-  <path id='__line_OSE__&amp;__OS80__[ENEA__AB]' d='M 580 29815 L 2197 29815' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_OSE__&amp;__OS80__[ENEA__AB]' d='M 580 29815 L 2227 29815' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Palm__OS__[Palm]' d='M 1420 29845 L 1712 29845' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Palm__OS__[Palm])' />
   <path id='__line_PANOS__[Acorn]' d='M 1000 29875 L 1090 29875' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PANOS__[Acorn])' />
   <path id='__line_PAPL__[Robotron]' d='M 730 29905 L 1180 29905' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PAPL__[Robotron])' />
@@ -7723,36 +7737,36 @@ style='opacity:0.6;' >
   <path id='__line_PEARL__Operating__System__(POS)__[Brown,__Boverie__&amp;__Cie]' d='M 730 30175 L 1357 30175' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PEARL__Operating__System__(POS)__[Brown,__Boverie__&amp;__Cie])' />
   <path id='__line_PenPoint__OS__[GO__Corp]' d='M 1120 30205 L 1300 30205' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PenPoint__OS__[GO__Corp])' />
   <path id='__line_PERQ__[Three__Rivers]' d='M 880 30235 L 1087 30235' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PERQ__[Three__Rivers])' />
-  <path id='__line_Phantom__OS' d='M 1750 30265 L 2197 30265' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Phantom__OS' d='M 1750 30265 L 2227 30265' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Pick' d='M 430 30295 L 1330 30295' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Pick)' />
   <path id='__line_PilOS' d='M 1947 30325 L 2007 30325' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PilOS)' />
-  <path id='__line_PlayStation__Vita__system__software__[Sony]' d='M 1823 30385 C 1843.25,30385 1829.75,30415 1850,30415 L 1850 30415 L 2197 30415' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_PlayStation__Vita__system__software__[Sony]' d='M 1823 30385 C 1843.25,30385 1829.75,30415 1850,30415 L 1850 30415 L 2227 30415' stroke='#000' style='stroke-width:4;' />
   <path id='__line_PlayStation__Portable__system__software__[Sony]' d='M 1627 30385 L 1930 30385' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PlayStation__Portable__system__software__[Sony])' />
   <path id='__line_PRIMOS__[Prime]' d='M 730 30475 L 1405 30475' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PRIMOS__[Prime])' />
   <path id='__line_pSOS__[Software__Components__Group]' d='M 940 30505 L 1497 30505' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_pSOS__[Software__Components__Group])' />
   <path id='__line_RACS' d='M 460 30535 L 1297 30535' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RACS)' />
-  <path id='__line_Rainbow' d='M 1300 30565 L 2197 30565' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Rainbow' d='M 1300 30565 L 2227 30565' stroke='#000' style='stroke-width:4;' />
   <path id='__line_RBASIC__[Robotron]' d='M 1090 30595 L 1180 30595' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RBASIC__[Robotron])' />
   <path id='__line_RC__4000__MS__[Regnecentralen]' d='M 550 30625 L 580 30625' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RC__4000__MS__[Regnecentralen])' />
   <path id='__line_RTMOS__[General__Electric]' d='M 490 30655 L 730 30655' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RTMOS__[General__Electric])' />
-  <path id='__line_RIOT' d='M 1720 30685 L 2197 30685' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RIOT' d='M 1720 30685 L 2227 30685' stroke='#000' style='stroke-width:4;' />
   <path id='__line_RMOS__[Siemens]' d='M 1030 30715 L 1720 30715' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RMOS__[Siemens])' />
   <path id='__line_RMX/iRMX__[Intel]' d='M 760 30745 L 1480 30745' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RMX/iRMX__[Intel])' />
-  <path id='__line_RockBox' d='M 1552 30775 L 2197 30775' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_RTEMS' d='M 1300 30805 L 2197 30805' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RockBox' d='M 1552 30775 L 2227 30775' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RTEMS' d='M 1300 30805 L 2227 30805' stroke='#000' style='stroke-width:4;' />
   <path id='__line_RTOS-UH' d='M 1030 30835 L 1462 30835' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_RTOS-UH)' />
-  <path id='__line_RTXC__Quadros' d='M 730 30865 L 2197 30865' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RTXC__Quadros' d='M 730 30865 L 2227 30865' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SavaJe' d='M 1450 30895 L 1660 30895' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SavaJe)' />
   <path id='__line_Sanos' d='M 1540 30925 L 1840 30925' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Sanos)' />
-  <path id='__line_S30+__[Nokia]' d='M 1870 30955 L 2197 30955' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_S30+__[Nokia]' d='M 1870 30955 L 2227 30955' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SAGE__[IBM]' d='M 190 30985 L 220 30985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SAGE__[IBM])' />
-  <path id='__line_SCIOPTA__RTOS' d='M 1120 31015 L 2197 31015' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_SCOMP__[BAE__Systems]' d='M 1030 31045 L 2197 31045' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SCIOPTA__RTOS' d='M 1120 31015 L 2227 31015' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SCOMP__[BAE__Systems]' d='M 1030 31045 L 2227 31045' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SPSYS' d='M 705 31075 L 730 31075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SPSYS)' />
   <path id='__line_Scout' d='M 1300 31105 L 1420 31105' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Scout)' />
   <path id='__line_Torsion' d='M 1480 31135 L 1540 31135' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Torsion)' />
   <path id='__line_Sombrero' d='M 1360 31165 L 1690 31165' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Sombrero)' />
-  <path id='__line_ScreenOS__[Juniper]' d='M 1557 31195 L 2197 31195' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ScreenOS__[Juniper]' d='M 1557 31195 L 2227 31195' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SECOS' d='M 1480 31225 L 1500 31225' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SECOS)' />
   <path id='__line_SEPIA__[Kolter__Electronic]' d='M 1840 31255 L 2017 31255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SEPIA__[Kolter__Electronic])' />
   <path id='__line_Share/43__[Remington]' d='M 10 31285 L 130 31285' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Share/43__[Remington])' />
@@ -7767,37 +7781,37 @@ style='opacity:0.6;' >
   <path id='__line_SqueakOS' d='M 1450 31555 L 1510 31555' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SqueakOS)' />
   <path id='__line_S-OS' d='M 1060 31585 L 1300 31585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_S-OS)' />
   <path id='__line_Spring__[Sun__Microsystems]' d='M 1270 31615 L 1327 31615' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Spring__[Sun__Microsystems])' />
-  <path id='__line_Solar__OS' d='M 1600 31645 L 2197 31645' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Solar__OS' d='M 1600 31645 L 2227 31645' stroke='#000' style='stroke-width:4;' />
   <path id='__line_SRT8__[DEC]' d='M 702 31675 L 850 31675' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SRT8__[DEC])' />
   <path id='__line_STSS' d='M 430 31705 L 460 31705' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_STSS)' />
-  <path id='__line_SymbOS' d='M 1670 31735 L 2197 31735' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_SymbOS' d='M 1670 31735 L 2227 31735' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Symobi__[Miray__Software]' d='M 1660 31765 L 1717 31765' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Symobi__[Miray__Software])' />
   <path id='__line_SYSMIC__[R2E]' d='M 670 31795 L 1417 31795' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SYSMIC__[R2E])' />
   <path id='__line_SYS-PSA__[Robotron]' d='M 1030 31825 L 1180 31825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SYS-PSA__[Robotron])' />
   <path id='__line_SynestiaOS' d='M 2087 31855 L 2132 31855' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_SynestiaOS)' />
   <path id='__line_Taligent__[Apple]' d='M 1135 31885 L 1447 31885' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Taligent__[Apple])' />
   <path id='__line_Tape__Director__(WHIRLWIND__I)' d='M 130 31915 L 160 31915' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Tape__Director__(WHIRLWIND__I))' />
-  <path id='__line_TCOS__[T-Systems]' d='M 1210 31945 L 2197 31945' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TCOS__[T-Systems]' d='M 1210 31945 L 2227 31945' stroke='#000' style='stroke-width:4;' />
   <path id='__line_TDOS' d='M 550 31975 L 580 31975' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TDOS)' />
   <path id='__line_TENEX__[DEC]' d='M 550 32005 L 762 32005' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TENEX__[DEC])' />
   <path id='__line_TOPS-20__[DEC]' d='M 762 32035 L 1132 32035' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TOPS-20__[DEC])' />
   <path id='__line_THE__multiprogramming__system__' d='M 430 32065 L 547 32065' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_THE__multiprogramming__system__)' />
   <path id='__line_Thoth' d='M 850 32095 L 910 32095' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Thoth)' />
   <path id='__line_Thor__OS' d='M 1892 32125 L 2122 32125' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Thor__OS)' />
-  <path id='__line_Theseus' d='M 1995 32155 L 2197 32155' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Tock__OS' d='M 1940 32185 L 2197 32185' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_ThreadX__[Express__Logic]' d='M 1390 32215 L 2197 32215' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Theseus' d='M 1995 32155 L 2227 32155' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Tock__OS' d='M 1940 32185 L 2227 32185' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ThreadX__[Express__Logic]' d='M 1390 32215 L 2227 32215' stroke='#000' style='stroke-width:4;' />
   <path id='__line_TiMOS__[Alcatel-Lucent]' d='M 1600 32245 L 1750 32245' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TiMOS__[Alcatel-Lucent])' />
   <path id='__line_TinyOS' d='M 1480 32275 L 1857 32275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TinyOS)' />
-  <path id='__line_TI-RTOS__[Texas__Instruments]' d='M 1030 32305 L 2197 32305' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TI-RTOS__[Texas__Instruments]' d='M 1030 32305 L 2227 32305' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Titan__Supervisor' d='M 370 32335 L 670 32335' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Titan__Supervisor)' />
-  <path id='__line_CTRON' d='M 1000 32515 C 1000,32515 1000,32395 1000,32395 L 1000 32395 L 2197 32395' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_microITRON__' d='M 1000 32455 C 1000,32455 1000,32425 1000,32425 L 1000 32425 L 2197 32425' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_JTRON' d='M 1000 32455 C 1000,32455 1000,32485 1000,32485 L 1000 32485 L 2197 32485' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_ITRON' d='M 1000 32515 C 1000,32515 1000,32455 1000,32455 L 1000 32455 L 2197 32455' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_BTRON' d='M 1000 32515 C 1000,32515 1000,32575 1000,32575 L 1000 32575 L 2197 32575' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_eTRON' d='M 1000 32515 C 1000,32515 1000,32545 1000,32545 L 1000 32545 L 2197 32545' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_TRON' d='M 1000 32515 L 2197 32515' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_CTRON' d='M 1000 32515 C 1000,32515 1000,32395 1000,32395 L 1000 32395 L 2227 32395' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_microITRON__' d='M 1000 32455 C 1000,32455 1000,32425 1000,32425 L 1000 32425 L 2227 32425' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_JTRON' d='M 1000 32455 C 1000,32455 1000,32485 1000,32485 L 1000 32485 L 2227 32485' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ITRON' d='M 1000 32515 C 1000,32515 1000,32455 1000,32455 L 1000 32455 L 2227 32455' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_BTRON' d='M 1000 32515 C 1000,32515 1000,32575 1000,32575 L 1000 32575 L 2227 32575' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_eTRON' d='M 1000 32515 C 1000,32515 1000,32545 1000,32545 L 1000 32545 L 2227 32545' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TRON' d='M 1000 32515 L 2227 32515' stroke='#000' style='stroke-width:4;' />
   <path id='__line_T-Kernel' d='M 1540 32635 L 1832 32635' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_T-Kernel)' />
   <path id='__line_TME__[ICL]' d='M 850 32665 L 1120 32665' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TME__[ICL])' />
   <path id='__line_TMX__[NCR]' d='M 880 32695 L 1300 32695' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TMX__[NCR])' />
@@ -7808,48 +7822,48 @@ style='opacity:0.6;' >
   <path id='__line_TSX-32__[S&amp;H__Computer__Systems]' d='M 1150 32845 L 1567 32845' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TSX-32__[S&amp;H__Computer__Systems])' />
   <path id='__line_TX990/TXDS__[Texas__Instruments]' d='M 730 32875 L 1060 32875' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_TX990/TXDS__[Texas__Instruments])' />
   <path id='__line_UDOS__[Robotron]' d='M 970 32905 L 1180 32905' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_UDOS__[Robotron])' />
-  <path id='__line_Urbit' d='M 1870 32935 L 2197 32935' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Urbit' d='M 1870 32935 L 2227 32935' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Verex' d='M 850 32965 L 910 32965' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Verex)' />
   <path id='__line_V' d='M 910 32995 L 1120 32995' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_V)' />
-  <path id='__line_Vinix' d='M 2110 33025 L 2197 33025' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Vinix' d='M 2110 33025 L 2227 33025' stroke='#000' style='stroke-width:4;' />
   <path id='__line_VersaDOS' d='M 970 33055 L 1150 33055' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_VersaDOS)' />
-  <path id='__line_Visopsys' d='M 1420 33085 L 2197 33085' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_VM2000__[Siemens]' d='M 730 33115 L 2197 33115' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_VME/B__[ICL]' d='M 700 33145 L 2197 33145' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Visopsys' d='M 1420 33085 L 2227 33085' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_VM2000__[Siemens]' d='M 730 33115 L 2227 33115' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_VME/B__[ICL]' d='M 700 33145 L 2227 33145' stroke='#000' style='stroke-width:4;' />
   <path id='__line_VME/K__[ICL]' d='M 700 33175 L 910 33175' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_VME/K__[ICL])' />
   <path id='__line_VRX__[NCR]' d='M 760 33205 L 1240 33205' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_VRX__[NCR])' />
   <path id='__line_VSOS__[Wang]' d='M 790 33235 L 1240 33235' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_VSOS__[Wang])' />
-  <path id='__line_Zephyr' d='M 1935 33325 C 1955.25,33325 1941.75,33295 1962,33295 L 1962 33295 L 2197 33295' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_VSPworks__[Wind__River__Systems]' d='M 1518 33325 C 1538.25,33325 1524.75,33355 1545,33355 L 1545 33355 L 2197 33355' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Virtuoso__RTOS__[Eonic]' d='M 1210 33325 L 2197 33325' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Zephyr' d='M 1935 33325 C 1955.25,33325 1941.75,33295 1962,33295 L 1962 33295 L 2227 33295' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_VSPworks__[Wind__River__Systems]' d='M 1518 33325 C 1538.25,33325 1524.75,33355 1545,33355 L 1545 33355 L 2227 33355' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Virtuoso__RTOS__[Eonic]' d='M 1210 33325 L 2227 33325' stroke='#000' style='stroke-width:4;' />
   <path id='__line_IOS__U__[Nintendo]__(Wii__U)' d='M 1843 33415 C 1863.25,33415 1849.75,33445 1870,33445 L 1870 33445 L 2017 33445' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_IOS__U__[Nintendo]__(Wii__U))' />
   <path id='__line_IOP__OS__[Broad__On]__(Nintendo__Wii)' d='M 1630 33415 L 1900 33415' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_IOP__OS__[Broad__On]__(Nintendo__Wii))' />
   <path id='__line_WMCS__[WICAT]' d='M 960 33505 L 1270 33505' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_WMCS__[WICAT])' />
   <path id='__line_WPS__[Wang]' d='M 772 33535 L 1240 33535' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_WPS__[Wang])' />
   <path id='__line_Xerox__Alto__OS__[Xerpx' d='M 670 33565 L 1057 33565' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Xerox__Alto__OS__[Xerpx)' />
-  <path id='__line_Qubes__OS' d='M 2103 33625 C 2123.25,33625 2109.75,33655 2130,33655 L 2130 33655 L 2197 33655' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Xen__Hypervisor' d='M 1570 33625 L 2197 33625' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_ESX__[VMware]' d='M 1516 33715 L 2197 33715' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Qubes__OS' d='M 2103 33625 C 2123.25,33625 2109.75,33655 2130,33655 L 2130 33655 L 2227 33655' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Xen__Hypervisor' d='M 1570 33625 L 2227 33625' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ESX__[VMware]' d='M 1516 33715 L 2227 33715' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Viewpoint/GlobalView__[Xerox]' d='M 1030 33745 L 1180 33745' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Viewpoint/GlobalView__[Xerox])' />
   <path id='__line_Mungi' d='M 1270 33775 L 1720 33775' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Mungi)' />
   <path id='__line_Angel' d='M 1270 33805 L 1300 33805' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Angel)' />
   <path id='__line_KripayaOS' d='M 2110 33835 L 2110 33835' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_KripayaOS)' />
-  <path id='__line_Lyre' d='M 2095 33865 L 2197 33865' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Mako' d='M 2060 33895 L 2197 33895' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_MOROS' d='M 2077 33925 L 2197 33925' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Lyre' d='M 2095 33865 L 2227 33865' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mako' d='M 2060 33895 L 2227 33895' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MOROS' d='M 2077 33925 L 2227 33925' stroke='#000' style='stroke-width:4;' />
   <path id='__line_MyXomycota' d='M 1755 33955 L 1987 33955' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MyXomycota)' />
   <path id='__line_Nope__OS' d='M 1940 33985 L 2137 33985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Nope__OS)' />
-  <path id='__line_Mbed' d='M 1770 34015 L 2197 34015' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mbed' d='M 1770 34015 L 2227 34015' stroke='#000' style='stroke-width:4;' />
   <path id='__line_LegoOS' d='M 1982 34045 L 2102 34045' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LegoOS)' />
   <path id='__line_AdaOS' d='M 1480 34075 L 1690 34075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AdaOS)' />
   <path id='__line_Aegis__(1990s)' d='M 1330 34105 L 1390 34105' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Aegis__(1990s))' />
-  <path id='__line_Amazfit__OS__(non-Android)__[Huawei]' d='M 2020 34135 L 2197 34135' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Amazfit__OS__(non-Android)__[Huawei]' d='M 2020 34135 L 2227 34135' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Arax__OS' d='M 1660 34165 L 1960 34165' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Arax__OS)' />
-  <path id='__line_Ares__(Helios__microkernel)' d='M 2152 34195 L 2197 34195' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Ares__(Helios__microkernel)' d='M 2152 34195 L 2227 34195' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ARMOS__[Itoshea]' d='M 1930 34225 L 1960 34225' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ARMOS__[Itoshea])' />
   <path id='__line_ARMOS__[MaxMade]' d='M 2080 34255 L 2110 34255' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ARMOS__[MaxMade])' />
   <path id='__line_armOS__[Thanoskoutr]' d='M 2080 34285 L 2110 34285' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_armOS__[Thanoskoutr])' />
-  <path id='__line_ArvernsOS' d='M 2000 34315 L 2197 34315' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ArvernsOS' d='M 2000 34315 L 2227 34315' stroke='#000' style='stroke-width:4;' />
   <path id='__line_AscendereOS' d='M 1780 34345 L 1810 34345' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_AscendereOS)' />
   <path id='__line_Axid__OS' d='M 1840 34375 L 1960 34375' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Axid__OS)' />
   <path id='__line_BeRTOS' d='M 1600 34405 L 2020 34405' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BeRTOS)' />
@@ -7857,114 +7871,114 @@ style='opacity:0.6;' >
   <path id='__line_BRiX' d='M 1330 34465 L 1540 34465' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_BRiX)' />
   <path id='__line_CactusOS' d='M 2032 34495 L 2137 34495' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CactusOS)' />
   <path id='__line_ChaiOS' d='M 1925 34525 L 2097 34525' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ChaiOS)' />
-  <path id='__line_ClassiOS' d='M 1720 34555 L 2197 34555' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_ClassiOS' d='M 1720 34555 L 2227 34555' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Cleese' d='M 1742 34585 L 1915 34585' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cleese)' />
-  <path id='__line_Dusk__OS' d='M 2088 34645 C 2108.25,34645 2094.75,34675 2115,34675 L 2115 34675 L 2197 34675' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Dusk__OS' d='M 2088 34645 C 2108.25,34645 2094.75,34675 2115,34675 L 2115 34675 L 2227 34675' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Collapse__OS' d='M 2055 34645 L 2115 34645' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Collapse__OS)' />
   <path id='__line_CuBit' d='M 2085 34735 L 2120 34735' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_CuBit)' />
-  <path id='__line_CyanOS' d='M 2090 34765 L 2197 34765' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_CyanOS' d='M 2090 34765 L 2227 34765' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Daintree' d='M 2110 34795 L 2122 34795' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Daintree)' />
   <path id='__line_dgos' d='M 1982 34825 L 2150 34825' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_dgos)' />
   <path id='__line_Distaff' d='M 2090 34855 L 2097 34855' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Distaff)' />
-  <path id='__line_Drone__OS' d='M 2007 34885 L 2197 34885' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_eduOS-rs' d='M 1990 34915 L 2197 34915' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Drone__OS' d='M 2007 34885 L 2227 34885' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_eduOS-rs' d='M 1990 34915 L 2227 34915' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Elementary__Operating__System__(EOS)__[Coleco__Industries]' d='M 970 34945 L 1030 34945' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Elementary__Operating__System__(EOS)__[Coleco__Industries])' />
   <path id='__line_Etheryal' d='M 2110 34975 L 2115 34975' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Etheryal)' />
   <path id='__line_FLEX__[Technical__Systems__Consultants]' d='M 760 35005 L 1030 35005' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_FLEX__[Technical__Systems__Consultants])' />
   <path id='__line_FlorenceOS' d='M 2095 35035 L 2157 35035' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_FlorenceOS)' />
-  <path id='__line_fsaos' d='M 1900 35065 L 2197 35065' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_fsaos' d='M 1900 35065 L 2227 35065' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Funk' d='M 1640 35095 L 1785 35095' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Funk)' />
-  <path id='__line_FuzixOS' d='M 1922 35125 L 2197 35125' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_FuzixOS' d='M 1922 35125 L 2227 35125' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Genesis' d='M 2095 35155 L 2165 35155' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Genesis)' />
-  <path id='__line_Honor__Band__OS__[Huawei]' d='M 1960 35185 L 2197 35185' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Hoshi' d='M 1930 35215 L 2197 35215' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Honor__Band__OS__[Huawei]' d='M 1960 35185 L 2227 35185' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Hoshi' d='M 1930 35215 L 2227 35215' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Iiumos' d='M 2035 35245 L 2147 35245' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Iiumos)' />
   <path id='__line_IX' d='M 1960 35275 L 2015 35275' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_IX)' />
   <path id='__line_Kwast' d='M 2055 35305 L 2110 35305' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Kwast)' />
-  <path id='__line_langOS' d='M 1930 35335 L 2197 35335' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Lenovo__RTOS' d='M 1930 35365 L 2197 35365' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_langOS' d='M 1930 35335 L 2227 35335' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Lenovo__RTOS' d='M 1930 35365 L 2227 35365' stroke='#000' style='stroke-width:4;' />
   <path id='__line_LeOS' d='M 2085 35395 L 2092 35395' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_LeOS)' />
   <path id='__line_Lilith' d='M 2062 35425 L 2087 35425' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Lilith)' />
   <path id='__line_Cray__Time__Sharing__System__(CTSS)' d='M 913 35515 C 933.25,35515 919.75,35485 940,35485 L 940 35485 L 970 35485' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cray__Time__Sharing__System__(CTSS))' />
   <path id='__line_Network__Livermore__Time__Sharing__System__(NLTSS)' d='M 823 35515 C 843.25,35515 829.75,35545 850,35545 L 850 35545 L 1120 35545' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Network__Livermore__Time__Sharing__System__(NLTSS))' />
   <path id='__line_Livermore__Time__Sharing__System__(LTSS)' d='M 490 35515 L 1000 35515' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Livermore__Time__Sharing__System__(LTSS))' />
   <path id='__line_M3__[TU__Dresden]' d='M 1947 35605 L 2100 35605' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_M3__[TU__Dresden])' />
-  <path id='__line_Manticore' d='M 1982 35635 L 2197 35635' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Mi__Band__OS__[Xiaomi]' d='M 1960 35665 L 2197 35665' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Manticore' d='M 1982 35635 L 2227 35635' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mi__Band__OS__[Xiaomi]' d='M 1960 35665 L 2227 35665' stroke='#000' style='stroke-width:4;' />
   <path id='__line_MICA__[DEC]' d='M 1120 35695 L 1120 35695' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_MICA__[DEC])' />
   <path id='__line_Mikado' d='M 2065 35725 L 2077 35725' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Mikado)' />
-  <path id='__line_Mirage' d='M 1870 35755 L 2197 35755' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mirage' d='M 1870 35755 L 2227 35755' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Mojo__OS' d='M 1742 35785 L 1775 35785' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Mojo__OS)' />
-  <path id='__line_MollenOS' d='M 1910 35815 L 2197 35815' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_MollenOS' d='M 1910 35815 L 2227 35815' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Mongoose' d='M 2110 35845 L 2152 35845' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Mongoose)' />
-  <path id='__line_Mycelium' d='M 2075 35875 L 2197 35875' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Node__Replicated__Kernel' d='M 1937 35905 L 2197 35905' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_NoS__[veecle]' d='M 2140 35935 L 2197 35935' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Mycelium' d='M 2075 35875 L 2227 35875' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Node__Replicated__Kernel' d='M 1937 35905 L 2227 35905' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_NoS__[veecle]' d='M 2140 35935 L 2227 35935' stroke='#000' style='stroke-width:4;' />
   <path id='__line_OS|periment' d='M 1870 35965 L 1900 35965' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_OS|periment)' />
   <path id='__line_penOS' d='M 1210 35995 L 1240 35995' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_penOS)' />
   <path id='__line_PetrOS__[Trumpet__Software]' d='M 1510 36025 L 1660 36025' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PetrOS__[Trumpet__Software])' />
   <path id='__line_Pluto' d='M 2055 36055 L 2152 36055' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Pluto)' />
-  <path id='__line_Poplar' d='M 2007 36085 L 2197 36085' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Poplar' d='M 2007 36085 L 2227 36085' stroke='#000' style='stroke-width:4;' />
   <path id='__line_PoulpyOS' d='M 2120 36115 L 2125 36115' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_PoulpyOS)' />
   <path id='__line_ProteanOS' d='M 1810 36145 L 1930 36145' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ProteanOS)' />
-  <path id='__line_r3' d='M 2132 36175 L 2197 36175' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Realme__Wearable__OS' d='M 2080 36205 L 2197 36205' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_r3' d='M 2132 36175 L 2227 36175' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Realme__Wearable__OS' d='M 2080 36205 L 2227 36205' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Redleaf' d='M 2067 36235 L 2150 36235' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Redleaf)' />
   <path id='__line_Redshirt' d='M 2070 36265 L 2147 36265' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Redshirt)' />
   <path id='__line_Resea' d='M 2052 36295 L 2137 36295' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Resea)' />
   <path id='__line_rkernel' d='M 2117 36325 L 2125 36325' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_rkernel)' />
-  <path id='__line_RT-Thread' d='M 1660 36355 L 2197 36355' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RT-Thread' d='M 1660 36355 L 2227 36355' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Rumprun' d='M 1887 36385 L 2090 36385' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Rumprun)' />
   <path id='__line_Rustboot' d='M 1880 36415 L 1912 36415' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Rustboot)' />
-  <path id='__line_RustyHermut' d='M 1940 36445 L 2197 36445' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_RustyHermut' d='M 1940 36445 L 2227 36445' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Rux' d='M 1970 36475 L 2030 36475' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Rux)' />
-  <path id='__line_plain-OS' d='M 2095 36535 C 2115.25,36535 2101.75,36565 2122,36565 L 2122 36565 L 2197 36565' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_plain-OS' d='M 2095 36535 C 2115.25,36535 2101.75,36565 2122,36565 L 2122 36565 L 2227 36565' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Simple__OS' d='M 1897 36535 L 2125 36535' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Simple__OS)' />
-  <path id='__line_Snowdrop__OS' d='M 1960 36625 L 2197 36625' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_StardustOS' d='M 2080 36655 L 2197 36655' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Snowdrop__OS' d='M 1960 36625 L 2227 36625' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_StardustOS' d='M 2080 36655 L 2227 36655' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Stupid__Operating__System__(SOS)' d='M 1955 36685 L 2040 36685' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Stupid__Operating__System__(SOS))' />
   <path id='__line_swift-project1' d='M 1952 36715 L 2142 36715' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_swift-project1)' />
-  <path id='__line_TCL__RTOS' d='M 1990 36745 L 2197 36745' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TCL__RTOS' d='M 1990 36745 L 2227 36745' stroke='#000' style='stroke-width:4;' />
   <path id='__line_rCore' d='M 1970 36805 C 1990.25,36805 1976.75,36835 1997,36835 L 1997 36835 L 2132 36835' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_rCore)' />
   <path id='__line_THU__uCore__OS__Plus' d='M 1857 36805 L 2000 36805' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_THU__uCore__OS__Plus)' />
-  <path id='__line_Tifflin' d='M 1917 36895 L 2197 36895' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Tifflin' d='M 1917 36895 L 2227 36895' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Toddler' d='M 1960 36925 L 2070 36925' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Toddler)' />
-  <path id='__line_Twizzler' d='M 2137 36955 L 2197 36955' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Twizzler' d='M 2137 36955 L 2227 36955' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Tyndur' d='M 1690 36985 L 1777 36985' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Tyndur)' />
-  <path id='__line_TypOS' d='M 2120 37015 L 2197 37015' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_TypOS' d='M 2120 37015 L 2227 37015' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ultronOS' d='M 1980 37045 L 2017 37045' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ultronOS)' />
   <path id='__line_V2_OS' d='M 1450 37075 L 1540 37075' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_V2_OS)' />
-  <path id='__line_Vanadinite' d='M 2082 37105 L 2197 37105' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Vanadinite' d='M 2082 37105 L 2227 37105' stroke='#000' style='stroke-width:4;' />
   <path id='__line_ExOS' d='M 1393 37165 C 1413.25,37165 1399.75,37195 1420,37195 L 1420 37195 L 1480 37195' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ExOS)' />
   <path id='__line_XOK' d='M 1330 37165 L 1447 37165' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_XOK)' />
-  <path id='__line_xrOS__[Apple]' d='M 2140 37255 L 2197 37255' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_xrOS__[Apple]' d='M 2140 37255 L 2227 37255' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Zot__OS' d='M 1570 37285 L 1630 37285' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Zot__OS)' />
   <path id='__line_ZygOS' d='M 1990 37315 L 2020 37315' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ZygOS)' />
   <path id='__line_Ozone' d='M 1480 37345 L 1600 37345' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Ozone)' />
   <path id='__line_Orion__(Andromeda__kernel)' d='M 1815 37375 L 1935 37375' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Orion__(Andromeda__kernel))' />
   <path id='__line_Orion__(nyrarosu)' d='M 2130 37405 L 2132 37405' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Orion__(nyrarosu))' />
-  <path id='__line_BagrOS-4000' d='M 2050 37435 L 2197 37435' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_BagrOS-4000' d='M 2050 37435 L 2227 37435' stroke='#000' style='stroke-width:4;' />
   <path id='__line_POK' d='M 2020 37465 L 2150 37465' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_POK)' />
   <path id='__line_ORK+' d='M 1900 37495 L 2110 37495' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_ORK+)' />
-  <path id='__line_The__Operating__System__[dlandahl]' d='M 2155 37525 L 2197 37525' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_The__Operating__System__[dlandahl]' d='M 2155 37525 L 2227 37525' stroke='#000' style='stroke-width:4;' />
   <path id='__line_EXECUTIVE-WAITLIST__(Apollo__Guidance__Computer)' d='M 310 37555 L 640 37555' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_EXECUTIVE-WAITLIST__(Apollo__Guidance__Computer))' />
-  <path id='__line_Genera__/__OpenGenera__[Symbolics]' d='M 940 37585 L 2197 37585' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Lilos' d='M 2072 37615 L 2197 37615' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_IronOS' d='M 1967 37645 L 2197 37645' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Jio__Bharat__Platform' d='M 2185 37675 L 2197 37675' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Genera__/__OpenGenera__[Symbolics]' d='M 940 37585 L 2227 37585' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Lilos' d='M 2072 37615 L 2227 37615' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_IronOS' d='M 1967 37645 L 2227 37645' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Jio__Bharat__Platform' d='M 2185 37675 L 2227 37675' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Fomos' d='M 2187 37705 L 2190 37705' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Fomos)' />
-  <path id='__line_GeckOS' d='M 1150 37735 L 2197 37735' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_GeckOS' d='M 1150 37735 L 2227 37735' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Cal__TSS' d='M 520 37765 L 610 37765' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Cal__TSS)' />
   <path id='__line_Z80-RIO__[Zilog]' d='M 850 37795 L 880 37795' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_Z80-RIO__[Zilog])' />
-  <path id='__line_Gloire' d='M 2137 37855 C 2140.75,37855 2138.25,37885 2142,37885 L 2142 37885 L 2197 37885' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Ironclad' d='M 2137 37855 L 2197 37855' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_PX5__RTOS' d='M 2170 37945 L 2197 37945' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_FrameOS' d='M 2185 37975 L 2197 37975' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_C64__OS' d='M 2152 38005 L 2197 38005' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Gloire' d='M 2137 37855 C 2140.75,37855 2138.25,37885 2142,37885 L 2142 37885 L 2227 37885' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Ironclad' d='M 2137 37855 L 2227 37855' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_PX5__RTOS' d='M 2170 37945 L 2227 37945' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_FrameOS' d='M 2185 37975 L 2227 37975' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_C64__OS' d='M 2152 38005 L 2227 38005' stroke='#000' style='stroke-width:4;' />
   <path id='__line_chaos' d='M 1480 38035 L 2170 38035' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_chaos)' />
-  <path id='__line_Fusion__OS' d='M 2195 38065 L 2197 38065' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Fusion__OS' d='M 2195 38065 L 2227 38065' stroke='#000' style='stroke-width:4;' />
   <path id='__line_embeddedOS__[Apple]' d='M 1982 38095 L 2135 38095' stroke='#000' style='stroke-width:4;' marker-end='url(#__stop_embeddedOS__[Apple])' />
-  <path id='__line_sepOS__(Secure__Enclave__Processor)__[Apple]' d='M 1870 38125 L 2197 38125' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_sepOS__(Secure__Enclave__Processor)__[Apple]' d='M 1870 38125 L 2227 38125' stroke='#000' style='stroke-width:4;' />
 </g>
 
 <g inkscape:label='Dots' inkscape:groupmode='layer' id='layer_dots'
