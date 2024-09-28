@@ -259,7 +259,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 20 September 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 28 September 2024</p>
 
 <table class="comparison">
 <colgroup>
@@ -428,7 +428,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gnomeapp tooltip">Marco<span class="tooltiptext">fork of Metacity</span></td> <!-- MATE -->
 <td class="gnomeapp tooltip">Muffin<span class="tooltiptext">fork of Mutter</span></td> <!-- Cinnamon -->
 <td><span class="tooltip">Openbox<span class="tooltiptext">fork of Blackbox</span></span>, <span class="kdeapp">KWin</span>, or <span class="tooltip">Xfwm4<span class="tooltiptext">fork of Fvwm</span></span></td> <!-- LXQt -->
-<td class="gnomeapp tooltip">budgie-wm<span class="tooltiptext">fork of Mutter</span></td>
+<td class="gnomeapp tooltip">Magpie<span class="tooltiptext">fork of Mutter</span></td>
 
 <td>Quartz Compositor</td>
 <td>Desktop Window Manager</td>
@@ -810,7 +810,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 -->
 
 <tr>
-<td class="tooltip">Supports server-side decorations?<span class="tooltiptext">meaning the desktop environment will draw generic window decorations (e.g. close button) for applications that don't want to draw their own custom window decorations, e.g. <a style="color: white;" href="https://factorio.com/blog/post/fff-408" target="_blank">see here</a></span></td>
+<td class="tooltip">Supports server-side decorations (or default CSD)?<span class="tooltiptext">Meaning the desktop environment will draw generic window decorations (e.g. close button) for applications that don't want to draw their own custom window decorations.</span></td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
 <td class="mixed">X11: Yes; Wayland: No</td> <!-- Gnome -->
@@ -822,7 +822,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
 
-<td class="yes">Yes</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">MacOS technically doesn't have server-side but client-side decorations that are "injected" into the app by default. As they are added automatically by the OS they are essentially the same as server-side decorations same from a developer and user perspective; apps don't have to draw their own window decorations.</span></td>
 <td class="yes">Yes</td>
 </tr>
 
