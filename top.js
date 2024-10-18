@@ -13,6 +13,7 @@ document.write(`
 <td><a href="im_comparison.htm">(6) <strong>Ins&shy;tant Mes&shy;sen&shy;gers</strong> - Compa&shy;rison</a></td>
 <td><a href="cloud_comparison.htm">(7) <strong>Cloud, Sync &amp; E&shy;mail Pro&shy;viders</strong> - Compa&shy;rison</a></td>
 <td><a href="payments.htm">(8) <strong>Pay&shy;ment Me&shy;thods</strong> - Compa&shy;rison</a></td>
+<td><a href="excel.htm">(9) <strong>Spread&shy;sheet Pro&shy;grams</strong> - Compa&shy;rison</a></td>
 </tr>
 </table>
 

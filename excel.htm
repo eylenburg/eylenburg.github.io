@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison of Spreadsheet Programs</title>
+<meta name="description" content="Comparison of Spreadsheet Programs">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Technology, Browsers, Firefox, Chrome, Edge, Safari, Brave, Vivaldi, Operating Systems, Desktop Environments, GNOME, KDE, Xfce, Linux, Unix, BSD, Solaris, Windows, macOS, Instant Messengers, Chat, Software, Cloud, Sync, Email, Privacy, Excel, Libreoffice, Onlyoffice, Softmaker, WPS">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+--legendwidth: 370px;
+--columnwidth: 260px;
+}
+
+table {
+margin-top: 1em;
+text-align: center;
+border: none;
+table-layout: fixed;
+font-size: small;
+width: calc(var(--legendwidth) + 5 * var(--columnwidth));
+}
+
+td {
+border: none;
+padding: 1px 1px;
+vertical-align: top;
+}
+
+td.green,
+td.lgreen,
+td.yellow,
+td.lred,
+td.red,
+td.line {
+border-top: 1px solid ivory;
+border-bottom: 1px solid ivory;
+}
+
+th {
+border: none;
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+z-index: 10;
+background-color: white;
+font-weight: bold;
+}
+
+table.comparison tr>th:first-child, table.comparison tr>td:first-child {
+background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+th, table.comparison tr>th:first-child, table.comparison tr>td:first-child {background-color: #222; color: white;  }
+}
+
+@media (min-width: 578px){
+table.comparison tr>th:first-child, table.comparison tr>td:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  }
+}
+
+td img {
+padding: 15px 0px;
+}
+
+table.comparison tr td:first-child {
+text-align: left;
+white-space: nowrap;
+padding-right: 5px;
+}
+
+.semititle {
+text-decoration: underline;
+font-weight: bold;
+vertical-align: bottom; }
+
+.center {
+text-align: center;
+}
+
+.tooltip {
+text-decoration: underline;
+text-decoration-style: dotted;
+text-decoration-color: darkred;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+font-weight: normal;
+}
+
+.green {
+background-color: #CEE6BB;
+}
+
+.lgreen {
+background-color: #E7F2DD;
+}
+
+.yellow {
+background-color: #E7DEB1;
+}
+
+.lred {
+background-color: #F5E0D6;
+}
+
+.red {
+background-color: #EBC1AD;
+}
+
+.blue{
+background-color: aliceblue;
+}
+
+</style>
+</head>
+<body>
+
+<script src="top.js"></script>
+<header>
+<p><a href="index.html">&larr; Sitemap</a></p>
+</header>
+
+
+<h1>Comparison of Spreadsheet Programs</h1>
+<p>Microsoft Excel is the king of spreadsheet programs. It is ubiquitous in many office jobs and 99% of finance or accounting departments are completely dependent on it.</p> <a href="https://xkcd.com/2347/" target="_blank"><img src="pics/logos/excel/excel-xkcd.jpg" style="max-width: 100%; max-height: 250 px;"/></a>
+
+<p>Personally, I use it daily in my job and have become quite fond of it; Excel now is my <a href="https://en.wikipedia.org/wiki/Law_of_the_instrument" target="_blank">golden hammer</a>, a tool that I like to use for any task it might be remotely suitable for. I run Linux on my private computer and the lack of Excel has been annoying: complex Excel files won't calculate or display correctly in alternative apps and I don't like to re-learn the workflows and keyboard shortcuts (only noobs use the mouse). While it is kind of possible to <a href="https://gist.github.com/eylenburg/38e5da371b7fedc0662198efc66be57b" target="_blank">run Excel in Linux</a> it is not straight-forward most people recommend alternatives like LibreOffice or OnlyOffice instead. So I set out to compare these in detail, with the overall question: <strong>"Can this program replace Excel? Do we actually <em>need</em> Excel on Linux?"</strong><br /><br />
+I had a closer look at these applications:</p>
+<ul>
+<li><span style="font-weight: bold;">Microsoft Office/Excel</span>, the defining spreadsheet program that powers the world, even though it shouldn't</li>
+<li><span style="font-weight: bold;">LibreOffice</span>, the most popular free and open source (FOSS) alternative, preinstalled on many Linux distributions; a fork of the dormant OpenOffice and successor of the commercial StarOffice with its roots going back to 1985</li>
+<li><span style="font-weight: bold;">OnlyOffice</span>, a newer FOSS contender with an Excel-like ribbon interface, first released in 2014</li>
+<li><span style="font-weight: bold;">Softmaker Office</span>, a proprietary office suite from Germany that has been developed since 1987 and is available in free and paid versions</li>
+<li><span style="font-weight: bold;">WPS Office</span>, a proprietary office suite from China going back to 1988</li>
+</ul>
+<p>I limited this comparison to the best-known Excel alternatives and also excluded all those that are not sufficiently cross-platform (Windows, macOS, Linux). For example, not included in the comparison are:</p>
+<ul>
+<li><span style="font-weight: bold;">Apache OpenOffice</span>, as its development has become quite dormant and LibreOffice is a more modern and feature-rich fork</li>
+<li><span style="font-weight: bold;">Calligra Sheets</span>, a KDE app initially release in 2000 as part of KOffice but currently only available for Linux and Unix</li>
+<li><span style="font-weight: bold;">Gnumeric</span>, a GNOME app dating back to 2001 that is currently only available for Linux and Unix</li>
+<li><span style="font-weight: bold;">Ability Office</span>, an office suite developed since 1996 but which is available for Windows</li>
+<li><span style="font-weight: bold;">Quattro Pro</span>, initially released in 1988 and now part of WordPerfect Office, which is only available for Windows</li>
+<li><span style="font-weight: bold;">Apple Numbers</span>, part of the iWork office suite (initial release 2004) which is only available for MacOS and iOS</li>
+<li><span style="font-weight: bold;">Google Sheets</span>, as it's only available in the browser or as a mobile app</li>
+<li><span style="font-weight: bold;">Zoho Sheet</span>, as it's only available in the browser or as a mobile app</li>
+<li><span style="font-weight: bold;">Hancom Office</span>, a Korean office suite that's quite unknown abroad and is not available for Linux</li>
+<li><span style="font-weight: bold;">Polaris Office</span>, ditto</li>
+</ul>
+<p><a href="Testfile.xlsx">Here is a test spreadsheet created in Excel that I used to check the compatibility.</a></p>
+
+<h2 class="center">Comparison of Spreadsheet Programs</h2>
+<p class="center">Source: eylenburg.github.io</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 18 October 2024</p>
+
+
+<table class="comparison">
+<colgroup>
+<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+<col style="border-left: double; width: var(--columnwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+</colgroup>
+
+<thead>
+<tr style="height: 1px; display: none;">
+<td style="width: var(--legendwidth);"></td>
+<td style="width: var(--columnwidth);"></td>
+<td style="width: var(--columnwidth);"></td>
+<td style="width: var(--columnwidth);"></td>
+<td style="width: var(--columnwidth);"></td>
+<td style="width: var(--columnwidth);"></td>
+</tr>
+
+<tr style="font-size: larger; font-weight: bold;">
+<th></th>
+<th>Microsoft Office<br />Excel 365</th>
+<th>LibreOffice / CollaboraOffice<br />Calc</th>
+<th>OnlyOffice</th>
+<th>Softmaker Office / FreeOffice<br />Planmaker</th>
+<th>WPS Office<br />Spreadsheets</th>
+</tr>
+
+<tr>
+<td style="text-align: left;">Version tested</td>
+<td>2408</td>
+<td>2024.08</td>
+<td>8.1.1</td>
+<td>2024 (rev F1218.0824)</td>
+<td>11.1.0</th>
+</tr>
+
+</thead>
+<tbody>
+
+<tr>
+<td></td>
+<td style="vertical-align: middle;"><img src="pics/logos/excel/excel.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/excel/libreoffice.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/excel/onlyoffice.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/excel/softmaker.png" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/excel/wps.png" style="height: 100px; max-width: 190px;" /></td>
+</tr>
+
+<tr><td class="semititle"><br />  </td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>License</td>
+<td class="red">Proprietary</td>
+<td class="green">MPL</td>
+<td class="green">AGPL</td>
+<td class="red">Proprietary</td>
+<td class="red">Proprietary</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td class="red">Paid</td>
+<td class="green">Free</td>
+<td class="green">Free</td>
+<td class="yellow">Free or paid (more features)</td>
+<td class="yellow">Free or paid (more features)</td>
+</tr>
+
+<tr>
+<td>Works without registering for an account</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow">Only Linux version</td>
+</tr>
+
+<tr>
+<td class="semititle"><br />Platforms</td><td colspan="5" style="text-align: center; font-style: italic; font-size: small; vertical-align: bottom;">Some features may be limited to certain platforms, such as macros not working in the web or mobile versions.</td>
+</tr>
+
+<tr>
+<td>Windows</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>macOS</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Linux</td>
+<td class="red">No <a href="https://gist.github.com/eylenburg/38e5da371b7fedc0662198efc66be57b" target="_blank">(workarounds)</a></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Unix</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Web version</td>
+<td class="green">Yes</td>
+<td class="green">Yes (CollaboraOffice)</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Mobile version</td>
+<td class="lgreen">Yes (limited editing)</td>
+<td class="lgreen">Yes (CollaboraOffice) (limited editing)</td>
+<td class="lgreen">Yes (limited editing)</td>
+<td class="green">Yes</td>
+<td class="lgreen">Yes (limited editing)</td>
+</tr>
+
+<tr><td class="semititle"><br />File formats</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>XLSX support</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>ODS support</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Opening but not saving</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>CSV import and export</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Functions</td><td colspan="5" style="text-align: center; font-style: italic; font-weight: bold; vertical-align: bottom;"><a href="spreadsheet_functions.htm">CLICK HERE FOR A COMPLETE LIST OF FUNCTIONS IN ALL THESE APPLICATIONS</a></td></tr>
+
+<tr>
+<td>Total functions</td>
+<td class="green">515</td>
+<td class="green">516</td>
+<td class="lgreen">482</td>
+<td class="yellow">405</td>
+<td class="yellow">377</td>
+</tr>
+
+<tr>
+<td>No. of extra functions that are missing in Excel</td>
+<td>n/a</td>
+<td>56</td>
+<td>12</td>
+<td>32</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>No. of missing Excel functions</td>
+<td>n/a</td>
+<td class="lred">53</td>
+<td class="lred">43</td>
+<td class="red">140</td>
+<td class="red">146</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td style="font-size: 80%;"><code>ARRAYTOTEXT BINOM.DIST.RANGE BYCOL BYROW CALL CHOOSECOLS CHOOSEROWS CUBEKPIMEMBER CUBEMEMBER CUBEMEMBERPROPERTY CUBERANKEDMEMBER CUBESET CUBESETCOUNT CUBEVALUE DBCS DETECTLANGUAGE DROP ECMA.CEILING EXPAND FIELDVALUE FORECAST.ETS FORMULATEXT GROUPBY HSTACK IMAGE ISOMITTED LAMBDA MAKEARRAY MAP PHONETIC PIVOTBY PY REDUCE REGEXEXTRACT REGEXREPLACE REGEXTEST REGISTER.ID RTD SCAN SINGLE SKEW.P SQL.REQUEST STOCKHISTORY TAKE TEXTAFTER TEXTBEFORE TEXTSPLIT TOCOL TOROW TRANSLATE TRIMRANGE VALUETOTEXT VSTACK</code></td>
+<td  style="font-size: 80%;"><code>AREAS BAHTTEXT BYCOL BYROW CALL COUNTBLANK CUBEKPIMEMBER CUBEMEMBER CUBEMEMBERPROPERTY CUBERANKEDMEMBER CUBESET CUBESETCOUNT CUBEVALUE DBCS DETECTLANGUAGE ENCODEURL EUROCONVERT FIELDVALUE FILTERXML GROUPBY IMAGE INFO ISOMITTED JIS LAMBDA LET MAKEARRAY MAP PHONETIC PIVOTBY PY REDUCE REGEXEXTRACT REGEXREPLACE REGEXTEST REGISTER.ID RTD SCAN SINGLE SQL.REQUEST STOCKHISTORY TRANSLATE TRIMRANGE</code></td>
+<td  style="font-size: 70%;"><code>ACCRINT ACCRINTM AGGREGATE AMORDEGRC AMORLINC ARABIC ARRAYTOTEXT ASC BAHTTEXT BITAND BITLSHIFT BITOR BITRSHIFT BITXOR BYCOL BYROW CALL CEILING.MATH CEILING.PRECISE CHISQ.DIST CHISQ.INV CHOOSECOLS CHOOSEROWS COMBINA CONFIDENCE.T COUPDAYBS COUPDAYS COUPDAYSNC COUPNCD COUPNUM COUPPCD CSC CSCH CUBEKPIMEMBER CUBEMEMBER CUBEMEMBERPROPERTY CUBERANKEDMEMBER CUBESET CUBESETCOUNT CUBEVALUE DBCS DETECTLANGUAGE DISC DOLLAR DROP DURATION ECMA.CEILING ENCODEURL ERF.PRECISE ERFC.PRECISE EXPAND F.DIST F.INV FIELDVALUE FILTER FILTERXML FLOOR.MATH FLOOR.PRECISE FORECAST.ETS FORECAST.LINEAR GAMMALN.PRECISE GROUPBY HSTACK IMAGE IMCOSH IMCOT IMCSC IMCSCH IMSEC IMSECH IMSINH IMTAN INFO INTRATE ISO.CEILING ISOMITTED JIS LAMBDA LET MAKEARRAY MAP MDURATION MODE.MULT MUNIT NETWORKDAYS.INTL ODDFPRICE ODDFYIELD ODDLPRICE ODDLYIELD PDURATION PERMUTATIONA PHONETIC PIVOTBY PRICE PRICEDISC PRICEMAT PY RANDARRAY RECEIVED REDUCE REGEXEXTRACT REGEXREPLACE REGEXTEST REGISTER.ID RTD SCAN SEC SECH SEQUENCE SINGLE SKEW.P SORT SORTBY SQL.REQUEST STOCKHISTORY TAKE TBILLEQ TBILLPRICE TBILLYIELD TEXTAFTER TEXTBEFORE TEXTSPLIT TOCOL TOROW TRANSLATE TRIMRANGE UNICHAR UNICODE UNIQUE VALUETOTEXT VDB VSTACK WEBSERVICE WORKDAY.INTL WRAPCOLS WRAPROWS XLOOKUP XMATCH YEARFRAC YIELD</code></td>
+<td  style="font-size: 70%;"><code>ACOT ACOTH ARABIC ARRAYTOTEXT BASE BETA.DIST BETA.INV BYCOL BYROW CALL CEILING.MATH CEILING.PRECISE CHISQ.DIST.RT CHISQ.INV.RT CHISQ.TEST CHOOSECOLS CHOOSEROWS COMBINA CONFIDENCE.NORM CONFIDENCE.T COT COTH CSC CSCH CUBEKPIMEMBER CUBEMEMBER CUBEMEMBERPROPERTY CUBERANKEDMEMBER CUBESET CUBESETCOUNT CUBEVALUE DECIMAL DETECTLANGUAGE DROP ECMA.CEILING EFFECT ERF.PRECISE ERFC.PRECISE EUROCONVERT EVEN EXPAND EXPON.DIST F.DIST F.DIST.RT F.INV F.INV.RT F.TEST FILTERXML FLOOR.MATH FLOOR.PRECISE FORECAST.ETS FORECAST.LINEAR FVSCHEDULE GAMMA GAMMA.DIST GAMMA.INV GAUSS GROUPBY HSTACK HYPGEOM.DIST IMAGE IMCOSH IMCOT IMCSC IMCSCH IMSEC IMSECH IMSINH IMTAN INTRATE ISO.CEILING ISOMITTED ISOWEEKNUM JIS LAMBDA LET LOGNORM.DIST LOGNORM.INV MAKEARRAY MAP MODE.MULT MODE.SNGL MUNIT NEGBINOM.DIST NOMINAL ODDFPRICE ODDFYIELD ODDLPRICE ODDLYIELD PDURATION PERCENTILE.EXC PERCENTILE.INC PERCENTRANK.EXC PERCENTRANK.INC PERMUTATIONA PHI PIVOTBY POISSON.DIST PRICEDISC PY QUARTILE.EXC QUARTILE.INC RECEIVED REDUCE REGEXEXTRACT REGEXREPLACE REGEXTEST REGISTER.ID RRI SCAN SEC SECH SHEET SHEETS SINGLE SKEW.P SQL.REQUEST STDEV.P STDEVP STOCKHISTORY SUMXMY2 T.DIST T.DIST.2T T.DIST.RT T.INV T.INV.2T T.TEST TAKE TBILLEQ TBILLPRICE TBILLYIELD TEXTAFTER TEXTBEFORE TEXTSPLIT TOCOL TOROW TRANSLATE TRIMRANGE VALUETOTEXT VSTACK WEBSERVICE WEIBULL.DIST WRAPCOLS WRAPROWS XMATCH YIELDDISC</code></td>
+</tr>
+
+
+
+<tr><td class="semititle"><br />Basic spreadsheet features</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Create tables; filter data; sort data</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Pivot tables</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Data validation for cells</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Set print areas</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Hide and group rows and columns</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Hide and unhide sheets</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Comments (simple "notes" and threaded "comments")</td>
+<td class="green">Yes</td>
+<td class="yellow">Threaded will be converted to notes</td>
+<td class="green">Yes</td>
+<td class="yellow">Threaded will be converted to notes</td>
+<td class="yellow">Threaded will be converted to notes</td>
+</tr>
+
+<tr>
+<td>Freeze panes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Format cells as text when started with <code>'</code></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Name manager</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Hyperlinks in cells</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Link to other spreadsheet files</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="lgreen">Yes, via Copy &rarr; Paste Link<a href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Spreadsheet-Editor/UsageInstructions/AddExternalLinks.aspx" target="_blank">*</a></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Check, update and edit external links</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Merge cells</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Split text into multiple columns</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Only by delimiter, not by fixed width</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Apply formulas on multiple adjacent sheets<span class="tooltiptext">e.g. `=SUM(Sheet1:Sheet4!A1)` to sum cell A1 from these sheets</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Basic calculation features</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Data tables (in What-if Analysis)</td>
+<td class="green">Yes</td>
+<td class="green">Yes ("Multiple Operations")</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Goalseek</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Yes, but target must be an integer</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Can enable iterative calculation</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Can disable automatic recalculation</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Formatting compatibility with Excel</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Border styles and colours</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Two-colour fill for cell backgrounds</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow">Not all styles (e.g. no fill from centre)</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Pattern fill for cell backgrounds</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="yellow">Fewer patterns supported</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Conditional formatting</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Apply colour scales or insert data bars</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Text formatting:</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td>Rich text, including partial formatting in a cell</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Superscript and subscript</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Indentation</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Center across selection (without merging cells)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Accounting underline</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Wrap text</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Vertical and rotated text</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Number formatting:</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td class="tooltip"><code>#,##0_);[red](#,##0);-_)</code><span class="tooltiptext">For financial numbers: format with thousands separator, negative numbers in brackets and in red, hyphen for zero values, gap the size of a closing bracket for non-negative numbers to align all numbers on the right</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<td class="tooltip"><code>$0.0,,"m"_);[red]($0.0,,"m");-_)</code><span class="tooltiptext">Same as above, but shown number in millions of dollars with one decimal digit, e.g. 1500000 will be shown as $1.5m</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red tooltip">Doesn't display correctly<span class="tooltiptext">Displayed as $1,500,000m instead of $1.5m</span></td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td class="tooltip"><code>[=1]"Yes";"No"</code><span class="tooltiptext">Display value 1 as "Yes" and everything else as "No"</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red tooltip">Doesn't display correctly<span class="tooltiptext">1 = Yes is displayed, but need to define number format as <code>[=1]"Yes";"No";"No"</code> for the No to appear correctly</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td class="tooltip"><code>;;;</code><span class="tooltiptext">number is not displayed at all</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td class="tooltip">Date formatting, e.g. <code>dddd</code>, <code>dd mmm yyyy</code>, <code>yyyy-mm-dd</code><span class="tooltiptext">displayed as e.g. "Monday", "31 Dec 2024", "2024-12-31"</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+
+<tr><td class="semititle"><br />Object features and compatibility</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Insert shapes, arrows, textboxes, and images</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>SmartArt</td>
+<td class="green">Yes</td>
+<td class="lred">Can't be edited</td>
+<td class="yellow tooltip">Limited editing<span class="tooltiptext">Existing text can be edited as a textbox, but there is no SmartArt input dialogue like in Excel and e.g. the number of bullet points cannot be changed</span></td>
+<td class="red">Displayed with errors and can't be edited</td>
+<td class="lred">Can't be edited</td>
+</tr>
+
+<tr>
+<td>Mathematical formulas</td>
+<td class="green">Yes</td>
+<td class="lred tooltip">Yes, but Excel formulas not displayed<span class="tooltiptext">Characters in mathematical formulas created in Excel as displayed as <code>[?]</code></td>
+<td class="green">Yes</td>
+<td class="lred">Excel formulas can't be edited</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Group multiple objects</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Align and distribute objects</td>
+<td class="green">Yes</td>
+<td class="yellow">Align only, not distribute</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Save objects as picture</td>
+<td class="green">Yes</td>
+<td class="yellow">Only charts, not shapes</td>
+<td class="green">Yes</td>
+<td class="yellow">Only charts, not shapes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Apply effects on objects<span class="tooltiptext">such a shadow, reflection, glow, soft edges, 3D format, and 3D rotation</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="lred">No, only very basic shadows</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Line formatting (for shapes, arrows, textboxes &amp; charts):</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td>Basic options (colour, width, dash type, arrow type)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Gradient colour and transparency</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Compound style</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<td>Sketched style</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Fill formatting (for shapes, textboxes &amp; charts):</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td>Colour, including gradient fill and transparency</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Pattern, picture or texture fill</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Image effects:</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td>Brightness, contrast, recolour, saturation, sharpness, ...</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Partially supported</td>
+<td class="yellow">Partially supported</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Transparency</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Set transparent colour</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="lred">Displayed with errors</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Apply object effects and picture styles</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="lred">Displayed with errors</td>
+<td class="lred">Displayed with errors</td>
+<td class="lred">Displayed with errors</td>
+</tr>
+
+<tr><td class="semititle"><br />Chart types</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Line charts and area charts (normal/stacked/100%)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Bar and column charts (clustered or stacked)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Clustered AND stacked bar/column charts</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+<td>Pie charts (incl. doughnut and pie of pie)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Scatterplots (XY)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<td>Bubble charts</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">Bubble size is ignored</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Radar charts</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Surface charts</td>
+<td class="green">Yes</td>
+<td class="red">Shown as column chart</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">Shown as column chart</td>
+</tr>
+<tr>
+<td>Treemap and sunburst charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Others: histogram, funnel, waterfall, stock, box &amp; whisker</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<!--
+<tr>
+<td>Treemap charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Sunburst charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Histograms</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Funnel charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Waterfall charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Stock charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Box &amp; whisker charts</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+-->
+<tr>
+<td>Maps</td>
+<td class="green">Yes</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="red">No (error notice shown instead)</td>
+<td class="red">No (error notice shown instead)</td>
+</tr>
+<tr>
+<td>Sparklines</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No (doesn't display at all)</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Combination of different chart types</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Chart features and compatibility</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Secondary y-axis</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Custom number formatting for axis legends</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Positioning options for axis labels (high, low etc.)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Manually reposition individual data labels with mouse</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="lred">Won't add a connector line</td>
+<td class="lred">Won't add a connector line</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Skip empty values</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Skip <code>#N/A</code> values</td>
+<td class="green">Yes</td>
+<td class="red">No, shown as zeroes</td>
+<td class="red">No, shown as zeroes</td>
+<td class="yellow">Yes, but connected (no gap) in line chart</td>
+<td class="yellow">Yes, but connected (no gap) in line chart</td>
+</tr>
+
+<tr>
+<td>Treat dates as dates (not text) on x-axis</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No, dates are treated as text labels</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Date axis: show multiple values with same date together</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Date axis: ignore <code>#N/A</code> dates at the end of the range</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="tooltip">Dynamic ranges for data (as defined in name manager)<span class="tooltiptext">e.g. named ranges defined with <code>OFFSET()</code> function; the range is dynamic and can depend on other cell values</span></td>
+<td class="green">Yes</td>
+<td class="red">No, chart doesn't update if range changes</td>
+<td class="red">No, chart doesn't update if range changes</td>
+<td class="red">No, chart doesn't update if range changes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Axis titles or chart title linked to cell values</td>
+<td class="green">Yes</td>
+<td class="red">No, chart doesn't update if cells change</td>
+<td class="red">No, chart doesn't update if cells change</td>
+<td class="red">No, no titles shown</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Data labels linked to a range of cells</td>
+<td class="green">Yes</td>
+<td class="red">No, chart doesn't update if cells change</td>
+<td class="red">No, shows <code>CELLRANGE</code> as label</td>
+<td class="red">No, no data labels shown</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Pivot charts (create chart from pivot table)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />File protection features</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Encrypt file and require password to open</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Open read-only and require password to edit/modify</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No, password is ignored</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Read-only recommendation (but no password to edit)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No, opens in editing mode</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Password-protect workbook structure<span class="tooltiptext">such as hiding/unhiding or adding/removing or renaming sheets</td>
+<td class="green">Yes</td>
+<td class="red">Yes, but ignored for existing Excel files</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Password-protect individual sheets from being edited<span class="tooltiptext">can exempt specific cells from the restriction, e.g. <code>[ ] locked</code> in Excel cell formatting</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Supports "very hidden" sheets<span class="tooltiptext">This is a special type of hiding sheets in Excel, available though the Visual Basic editor. Very Hidden sheets cannot be unhidden in the "Unhide" dialogue.</span></td>
+<td class="green">Yes</td>
+<td class="red">No, treated like normal hidden sheet</td>
+<td class="red">No, treated like normal hidden sheet</td>
+<td class="red">No, treated like normal hidden sheet</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Basic workflow features</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Auto-complete formula when pressing Tab</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Enter array formulas with <code>Ctrl + Shift + Enter</code></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Select only visible cells when a filter is applied</td>
+<td class="yellow">Need to press <code>Alt + ;</code> shortcut</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Find &amp; Replace with basic options<span class="tooltiptext">e.g. search in sheet vs workbook, search in formula vs value, match case or not</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Duplicate or move whole rows/columns<span class="tooltiptext">Excel-like copy/cut-and-paste behaviour for rows/columns: Copying (cutting) and pasting rows/columns will duplicate (move) the rows/columns themselves rather than just the contents.</span></td>
+<td class="green">Yes</td>
+<td class="red tooltip">No, only pastes contents<span class="tooltiptext">Hence for moving a row, you need to first create a new empty row in the target location, then cut and paste the old row and then delete the old (now empty) row.</span></td>
+<td class="red tooltip">No, only pastes contents<span class="tooltiptext">Hence for moving a row, you need to first create a new empty row in the target location, then cut and paste the old row and then delete the old (now empty) row.</span></td>
+<td class="yellow tooltip">Yes, but need to select first cell to insert<span class="tooltiptext">Need to right-click on the first cell of the row/column in the target location and then select "insert" (doesn't work if selecting whole row/column with keyboard shortcut or by clicking on row/column heading.</span></td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Intelligent data autofill when dragging cell range down/right</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow tooltip">Limited<span class="tooltiptext">Passes easy example: fill rows with numbers 1, 2, 3 then drag down &rarr; it autofills 4, 5 etc.<br />Fails harder example: fill rows with dates (DD/MM/YY) e.g.  20/01/24, 20/02/24, 20/03/24 and then drag down. It doesn't continue filling the cells with 20/04/24, 20/05/24 and so on.</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Select all blank cells</td>
+<td class="green">Yes (in Go To &rarr; Special)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Trace precedents and dependents of a formula</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Evaluate formula</td>
+<td class="green">Yes</td>
+<td class="green">Yes ("function wizard")</td>
+<td class="red">No</td>
+<td class="green">Yes <span style="color: red;">(paid version only)</span></td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Display same file in multiple windows</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Autosave and autorecover (for crashes)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />"Paste Special" features</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Paste formulas only</td>
+<td class="green">Yes</td>
+<td class="yellow tooltip">Need to uncheck all other checkboxes<span class="tooltiptext">in Paste Special dialogue</span></td>
+<td class="green">Yes</td>
+<td class="yellow tooltip">Need to uncheck all other checkboxes<span class="tooltiptext">in Paste Special dialogue</span></td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste exact formula text without changing references</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Paste values only</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste format only</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste number format only</td>
+<td class="red tooltip">No<span class="tooltiptext">only "Values and number formats" or "Formulas and number formats"; or all formats, which includes the number format</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow tooltip">Need to uncheck all other checkboxes<span class="tooltiptext">in Paste Special dialogue</span></td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Paste comments and notes only</td>
+<td class="green">Yes</td>
+<td class="yellow tooltip">Need to uncheck all other checkboxes<span class="tooltiptext">in Paste Special dialogue</span></td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste as link (reference to cell)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste as picture</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste as linked picture</td>
+<td class="green">Yes</td>
+<td class="red">No, and existing ones are unlinked</td>
+<td class="red">No, and existing ones are unlinked</td>
+<td class="red">No, and existing ones are not displayed</td>
+<td class="lred">No, but existing linked pictures still work</td>
+</tr>
+
+<tr>
+<td>Paste column widths</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Paste as operation (multiply, add, ...)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Transpose while pasting (e.g. vertical &rarr; horizontal)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Skip blank cells while pasting</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr><td class="semititle"><br />Advanced features</td><td colspan="5" style="text-align: center; font-style: italic; font-size: small; vertical-align: bottom;">These might be mostly irrelevant for casual users, but could be indispensable for some companies' workflows and therefore block the adoption of an Excel alternative.</td></tr>
+
+<tr>
+<td>Power Pivot</td>
+<td class="green">Yes (add-in)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Power Query</td>
+<td class="green">Yes (<code>Get Data</code> / <code>Queries &amp; Connections</code>)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Import data from databases</td>
+<td class="green tooltip">Yes, various formats and sources<span class="tooltiptext">Databases: dBASE, SQL, Access, Oracle, IBM Db2, SAP HANA, ...<br />External sources: Websites, ODBC, OLEDB, Azure, Power Platform, MS Exchange, Salesforce, SharePoint, OData, HDFS, ...</span></td>
+<td class="green">dBASE and more via LibreOffice Base</td>
+<td class="red">No</td>
+<td class="green">SQLite, dBASE</td>
+<td class="green">ODBC, dBASE, Access</td>
+</tr>
+
+<tr>
+<td>Macros</td>
+<td class="green">Yes (VBA, Python)</td>
+<td class="green">Yes (BASIC, Python, JavaScript, BeanShell)</td>
+<td class="green">Yes (JavaScript)</td>
+<td class="lgreen">Yes (Windows only) <span style="color: red;">(paid version only)</span></td>
+<td class="red tooltip">No (?)<span class="tooltiptext">Unclear situation. Developer tab not found in the Linux version. Website says: "Unfortunately, WPS Office no longer supports the use of VBA. The Developer tab will only be visible if your computer has MSO (Microsoft Office) installed with a VBA environment." "As much as FreeOffice is a popular free substitute, it cannot create or run VBA-based macros." Others say macros and forms are limited to the enterprise version.</span></td>
+</tr>
+
+<tr>
+<td>Compatibility with Excel VBA macros</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red tooltip">No (?)<span class="tooltiptext">Unclear situation. Developer tab not found in the Linux version. Website says: "Unfortunately, WPS Office no longer supports the use of VBA. The Developer tab will only be visible if your computer has MSO (Microsoft Office) installed with a VBA environment." "As much as FreeOffice is a popular free substitute, it cannot create or run VBA-based macros." Others say macros and forms are limited to the enterprise version.</span></td>
+</tr>
+
+<tr>
+<td>Form controls</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow"><span class="tooltip">With restrictions<span class="tooltiptext">Buttons cannot execute macros</span></span> <span style="color: red;">(paid version only)</span></td>
+<td class="red tooltip">No (?)<span class="tooltiptext">Unclear situation. Developer tab not found in the Linux version. Website says: "Unfortunately, WPS Office no longer supports the use of VBA. The Developer tab will only be visible if your computer has MSO (Microsoft Office) installed with a VBA environment." "As much as FreeOffice is a popular free substitute, it cannot create or run VBA-based macros." Others say macros and forms are limited to the enterprise version.</span></td>
+</tr>
+
+<tr>
+<td>Statistical analysis (e.g. regression, ANOVA)</td>
+<td class="green">Yes ("AnalysisToolpak")</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Equation solving with constraints</td>
+<td class="green">Yes ("Solver")</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td>Third-party addins/plugins/extensions</td>
+<td class="green">Yes, vast catalogue</td>
+<td class="green">Yes, some</td>
+<td class="green">Yes, some</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr><td class="semititle"><br />Regional settings</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>Can change user interface language</td>
+<td class="green">Yes ("display language")</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green tooltip">Yes<span class="tooltiptext">At least on Linux, need to install the other languages first, <a href="https://github.com/wachin/wps-office-all-mui-win-language?tab=readme-ov-file" target="_blank" style="color: white;">see here.</span></td>
+</tr>
+
+<tr>
+<td>Can change language for function names</td>
+<td class="red">No (same as Windows system language)</td>
+<td class="green">Yes (same as UI, or always English)</td>
+<td class="green">Yes</td>
+<td class="lgreen">Yes (always same as UI)</td>
+<td class="lgreen tooltip">Yes (always same as UI)<span class="tooltiptext">At least on Linux, need to install the other languages first, <a href="https://github.com/wachin/wps-office-all-mui-win-language?tab=readme-ov-file" target="_blank" style="color: white;">see here.</span></td>
+</tr>
+
+<tr>
+<td class="tooltip">Can change decimal and thousands separator<span class="tooltiptext">to switch between English format (1,000,000.00) and European format (1.000.000,00)</span></td>
+<td class="red">No (same as Windows system settings)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Can change regional settings<span class="tooltiptext">date format, default currency, 24H vs 12H times, metrics vs imperial units, ...</span></td>
+<td class="red">No (same as Windows system settings)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td>Can change language for spell checking</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green tooltip">Yes<span class="tooltiptext">At least on Linux, need to install the other languages first, <a href="https://github.com/wachin/wps-office-all-mui-win-language?tab=readme-ov-file" target="_blank" style="color: white;">see here.</span></td>
+</tr>
+
+<tr><td class="semititle"><br />Keyboard shortcuts same as Excel</td><td colspan="5" style="text-align: center; font-style: italic; font-size: small; vertical-align: bottom;">While there is no right or wrong way to define keyboard shortcuts, Excel is the industry standard and matching its shortcuts can help make it easier for people to switch to alternatives.</td></tr>
+
+<tr>
+<td>Configurable keyboard shortcuts</td>
+<td class="red">No</td>
+<td class="green tooltip">Yes<span class="tooltiptext">But it's not possible to create sequential Alt shortcuts like Excel uses</span></td>
+<td class="red">No</td>
+<td class="green"><span class="tooltip">Yes<span class="tooltiptext">But it's not possible to create sequential Alt shortcuts like Excel uses</span></span> <span style="color: red;">(paid version only)</span></td>
+<td class="red">No (supported in WPS Writer only)</td>
+</tr>
+
+<tr><td style="text-align: left; font-style: italic; text-decoration: underline;">Matching Excel shortcuts:</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td>Basic shortcuts (<span class="tooltip"><code>Ctrl + C/X/V/F/B/I/U/S/Z/Y</code><span class="tooltiptext">Copy, Cut, Paste, Find, Bold, Italic, Underline, Save, Undo, Redo</span></span>)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + Home/End</code> and <code>Ctrl + &rarr;/&larr;/&uarr;/&darr;</code> to go to <span class="tooltip">first/last cell<span class="tooltiptext">of current range position or whole sheet respectively</span></span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + PgUp/PgDn</code> to go to next sheet</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + V</code> to paste values</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + V</code> to open cell format dialogue</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Only number format dialogue</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Shift/Ctrl + Space</code> to select row/column</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes (but will enter cell edit mode)</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + =</code> and <code>Ctrl + -</code> to add/remove row/column</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Removing is <code>Ctrl + Shift + -</code></td>
+<td class="yellow">Only for removing row/column</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>F2</code> to edit cell</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>...and <code>F2</code> again to toggle cell selection and moving text cursor</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow">Only once (cell &rarr; text) and not back</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>F4</code> to toggle absolute cell references (<code>$</code>) in cell edit mode</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<td><code>F5</code> for Go To dialogue</td>
+<td class="green">Yes</td>
+<td class="green">Yes (opens "Navigator")</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>F9</code> and <code>Shift + F9</code> to recalculate workbook/sheet</td>
+<td class="green">Yes</td>
+<td class="yellow"><code>F9</code> only (<code>Shift + F9</code> = Trace Precedents)</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + [</code> and <code>F5 + Enter</code> to go to first precedent and back</td>
+<td class="green">Yes</td>
+<td class="yellow"><code>Ctrl + [</code> only</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow"><code>Ctrl + [</code> only</td>
+</tr>
+<tr>
+<td><code>Alt + =</code> for quick sum</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Alt + Enter</code> for line break in formula and text</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code> and <code>Ctrl + R</code> to drag formula down/right</td>
+<td class="green">Yes</td>
+<td class="yellow"><code>Ctrl + D</code> only</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + 1/5</code> to format in <span class="tooltip">in comma<span class="tooltiptext">i.e. a number with thousands separators and two decimals</span></span> or percentage style</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+<tr>
+<td>Use <code>Alt</code> key to navigate the user interface using the keyboard*</td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow">Yes, but different shortcuts than Excel</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+</tbody>
+</table>
+
+<div style="width: calc(var(--legendwidth) + 5 * var(--columnwidth)); text-align: left; font-style: italic; font-size: small; vertical-align: bottom;">* Examples: <code>Alt &rarr; H &rarr; 5/6</code> for indent, <code>Alt &rarr; H &rarr; A &rarr; L/C/R</code> for alignment, <code>Alt &rarr; H &rarr; W</code> to wrap text, <code>Alt &rarr; H &rarr; 9/0</code> for removing/adding decimals, <code>Alt &rarr; E &rarr; S &rarr; V/T/F/C</code> to paste only values/formats/formulas/comments, <code>Alt &rarr; H &rarr; B &rarr; Enter/P/R/L/S/N</code> for bottom/top/right/left/outside/no borders, <code>Alt &rarr; R &rarr; C/D/TN/TE</code> for comments and notes, <code>Alt &rarr; H &rarr;  O &rarr; I/A</code> to fit cell width/height, <code>Alt &rarr; H &rarr; K/P</code> to format in comma and percentage style, <code>Alt &rarr; H &rarr; F &rarr; D &rarr; R</code> for Find &amp; Replace dialogue</p></div>
+
+<h2>So, what's the conclusion?</h2>
+
+<p>There's no program that's fully compatible with Excel. The unfortunate summary for Linux users is: if you need full Excel compatibility (to open existing Excel files or share your spreadsheets with others) the best solution is to use the web-based version of Excel or to run it in Wine/Crossover or Winapps/VM. In fact, all of the Excel alternatives have a mediocre to horrible compatibility, especially when it comes to charts and diagrams. The least bad was (to my surprise) WPS Office, which I rarely see recommended anywhere, possibly because it's Chinese and proprietary. The two free and open source options, LibreOffice and OnlyOffice, are both disappointing, but in different ways, with different flaws and incompatibilities, though overall LibreOffice comes out on top when looking at the comparison table above - yet I personally prefer OnlyOffice's user interface. I don't really see a strong reason to prefer Softmaker Office over the competition, but I was impressed by their mobie app which is basically a full-featured port of the desktop app, while all the others just have a spreadsheet viewer with only a few basic editing features.</p>
+
+<script src="bottom.js "></script>
+</body>
+</html>
