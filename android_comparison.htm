@@ -24,6 +24,35 @@ width: calc(var(--legendwidth) + 7 * var(--distrowidth));
 height: 100%;
 }
 
+table.comparison tr td:nth-child(2) {
+border-left: 1px dotted lightgrey;
+}
+
+table.appendix {
+text-align: center;
+table-layout: fixed;
+width: 100%;
+font-size: small;
+}
+
+table.appendix td {
+border: 1px solid #ddd;
+overflow-wrap: break-word;
+width: 25%;
+}
+
+table.appendix td:first-child {
+text-align: left;
+}
+
+table.appendix thead {
+position: sticky;
+position: -webkit-sticky;
+top: 0px;
+z-index: 10;
+font-size: small;
+}
+
 thead { 
 border: none;
 position: sticky; 
@@ -52,10 +81,6 @@ hyphens: auto;
 
 td img {
 padding: 15px 0px;
-}
-
-table.comparison tr td:nth-child(2) {
-border-left: 1px dotted lightgrey;
 }
 
 .semititle {
@@ -165,7 +190,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android ROMs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 9 October 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 8 November 2024</p>
 
 <table class="comparison">
 
@@ -1154,6 +1179,48 @@ font-size: x-small;
 
 </tbody>
 </table>
+
+<h3>Appendix: using different profiles in Android</h3>
+<p>It is possible to use different profiles to separate apps, files and other data from each other. From least to most separate from the main user profile, the options are: work profile, private space (since Android 15), and secondary users. Below is a comparison how they differ:</p>
+
+<table class="appendix">
+<thead>
+<tr><td></td><td style="font-weight: bold;">Work profile (with Shelter)</td><td style="font-weight: bold;">Private space</td><td style="font-weight: bold;">Secondary user profiles</td></tr>
+</thead>
+
+<tr><td colspan="4" style="text-decoration: underline;"><br />Privacy &amp; data access</td></tr>
+<tr><td>File access</td><td colspan="3">Separate</td></tr>
+<tr><td>Contact access</td><td colspan="3">Separate</td></tr>
+<tr><td>Calendar storage</td><td colspan="3">Separate</td></tr>
+<tr><td>Clipboard</td><td colspan="2">Shared with main profile</td><td>Separate</td></tr>
+<tr><td>VPN connections</td><td colspan="3">Separate</td></tr>
+<tr><td>Saved WiFi &amp; Bluetooth connections</td><td colspan="3">Shared with main profile</td></tr>
+<tr><td class="tooltip">System settings<span class="tooltiptext">including basic settings such as gestures vs buttons, light vs dark mode, sound etc.</span></td><td colspan="2">Mostly shared with main profile</td><td>Completely separate</td></tr>
+<tr><td>Call and SMS history</td><td colspan="2">Cannot access calls & SMS</td><td>Optional access ("turn on phone calls &amp; SMS")</td></tr>
+<tr><td>Communication with other apps</td><td colspan="3">Limited to other apps in same profile</td></tr>
+<tr><td>See which other apps are installed</td><td colspan="3">Limited to other apps in same profile</td></tr>
+
+<tr><td colspan="4" style="text-decoration: underline;"><br />Convenience</td></tr>
+<tr><td>Profile can run in background?</td><td colspan="3">Yes</td></tr>
+<tr><td>Profile can auto-start after reboot?</td><td>Yes</td><td colspan="2">No (need to unlock profile first)</td></tr>
+<tr><td>Clone apps from/to main profile</td><td>Yes, both ways (via Shelter)</td><td>No</td><td>GrapheneOS only, from main to secondary</td></tr>
+<tr><td>Can use biometrics in apps?</td><td>Yes</td><td colspan="2">Only if separate biometrics are set up for this profile</td></tr>
+
+<tr><td colspan="4" style="text-decoration: underline;"><br />Integration with main profile</td></tr>
+<tr><td>Integration in file manager as storage location</td><td>Yes (via Shelter)</td><td colspan="2">No</td></tr>
+<tr><td>Share files across profiles via "Share" menu</td><td colspan="2">Yes</td><td>No</td></tr>
+<tr><td>Can add app shortcut to (main profile's) home screen?</td><td>Yes</td><td colspan="2">No</td></tr>
+<tr><td>Can show app notifications in main profile?</td><td>Yes; same as notifications from apps running in main profile</td><td>Yes; no notification content, just app name shown</td><td>GrapheneOS only &amp; optional for each profile; no notification content, just app name shown</td></tr>
+
+<tr><td colspan="4" style="text-decoration: underline;"><br />Protection &amp; security</td></tr>
+<tr><td>PIN &amp; biometrics</td><td colspan="2">Can use same as main profile or set up a separate authentication</td><td>Needs to be set up separately but can also use none ("skip")</td></tr>
+<tr><td>Need to enter PIN/fingerprint to unlock profile</td><td>Only if separate work profile PIN was set up</td><td>Yes (can be after rebooting or after turning screen off)</td><td>Optional (only if a PIN was set up for the profile)</td></tr>
+<tr><td>After unlocking profile, need to enter PIN/fingerprint to start apps</td><td>No</td><td>Yes, after turning screen off</td><td>No</td></tr>
+<tr><td>Profile session can be shut down or paused?</td><td colspan="3">Yes</td></tr>
+
+</table>
+
+
 
 <script src="bottom.js "></script>
 
