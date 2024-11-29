@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 250px;
---imwidth: 150px;
+--imwidth: 138px;
 }
 
 table {
@@ -20,7 +20,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 11 * var(--imwidth));
+width: calc(var(--legendwidth) + 12 * var(--imwidth));
 }
 
 #bottom.table {
@@ -184,6 +184,7 @@ I have limited this comparison to only eleven messengers:</p>
 <li>XMPP, the pioneer of FOSS and federated instant messengers. XMPP is just a protocol and not an application; in this article it is represented by the Android app Conversations.</li>
 <li>Delta Chat, which is based on normal email and hence has the greatest theoretical userbase among all federated messengers.</li>
 <li>Matrix, a new and very promising federated protocol, here represented by the leading client Element.</li>
+<li>Session: Great privacy, FOSS, using a decentralized blockchain-based network for message transmission. Started as an anonymous fork of Signal.</li>
 <li>Signal, the most mainstream end-to-end (E2E) encrypted FOSS messenger.</li>
 <li>Telegram, the most mainstream FOSS messenger, and market leader in some countries.</li>
 <li>Threema, the most mainstream E2E-encrypted FOSS messenger with the option of anonymous accounts.</li>
@@ -208,21 +209,22 @@ I have limited this comparison to only eleven messengers:</p>
 <li>Kik: Quite popular, but not #1 anywhere</li>
 <li>Snapchat: Quite popular, but more like a social media than pure IM, and not #1 in any country.</li>
 <li>QQ: Second most popular messenger in China. But if WeChat doesn't make it on list, QQ won't make it either.</li>
+<li>Jami: Great privacy, but low adoption.</li>
 <li>Wire, Wickr, Slack, Microsoft Teams, BBMe, Mattermost: Focus on enterprise users.</li>
-<li>Session, Jami: Great privacy, but low adoption.</li>
 <li>Instagram, LinkedIn: Mainly social media rather than a messenger.</li>
 <li>Mumble, Teamspeak: Voice chat focus.</li>
 </ul>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 4 November 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 29 November 2024</p>
 
 
 <table class="comparison">
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
 <col style="border-left: double; width: var(--imwidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--imwidth);">
@@ -252,11 +254,12 @@ I have limited this comparison to only eleven messengers:</p>
 <td style="width: var(--imwidth);"></td>
 <td style="width: var(--imwidth);"></td>
 <td style="width: var(--imwidth);"></td>
+<td style="width: var(--imwidth);"></td>
 </tr>
 
 <tr class="groups" style="font-size: large; font-weight: bold; border: none;">
 <td></td>
-<td colspan="3">Decentralized/Federated &amp; FOSS</td>
+<td colspan="5">Decentralized/Federated &amp; FOSS</td>
 <td colspan="3">Centralized &amp; FOSS</td>
 <td colspan="4">Proprietary Market Leaders</td>
 </tr>
@@ -267,6 +270,7 @@ I have limited this comparison to only eleven messengers:</p>
 <th>Conversations <br />(XMPP)</th>
 <th>Delta Chat</th>
 <th>Element <br />(Matrix)</th>
+<th>Session</th>
 <th>Signal</th>
 <th>Telegram</th>
 <th>Threema</th>
@@ -285,6 +289,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td><img src="pics/logos/messengers/conversations.png" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/delta.svg" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/element.svg" style="height: 100px; max-width: 190px;" /></td>
+<td><img src="pics/logos/messengers/session.svg" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/signal.png" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/telegram.webp" style="height: 100px; max-width: 190px;" /></td>
 <td><img src="pics/logos/messengers/threema.png" style="height: 100px; max-width: 190px;" /></td>
@@ -296,7 +301,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />General information</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -305,6 +310,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="line">2014 (XMPP: 1999)</td>
 <td class="line">2017</td>
 <td class="line">2016 (Matrix: 2014)</td>
+<td class="line">2020</td>
 <td class="line">2014</td>
 <td class="line">2013</td>
 <td class="line">2012</td>
@@ -320,6 +326,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="line">mainly Daniel Gultsch</td>
 <td class="line">various developers</td>
 <td class="line">The Matrix.org Foundation CIC</td>
+<td class="line">Session Technology Foundation</td>
 <td class="line">Signal Technology Foundation</td>
 <td class="line">Telegram FZ LLC</td>
 <td class="line">Threema GmbH</td>
@@ -335,6 +342,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="line">Germany</td>
 <td class="line">Germany</td>
 <td class="line">UK</td>
+<td class="line">Switzerland</td>
 <td class="line">USA</td>
 <td class="line">UAE</td>
 <td class="line">Switzerland</td>
@@ -346,6 +354,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 <tr>
 <td>Monthly active users</td>
+<td class="mau0">n/a (decentralized)</td>
 <td class="mau0">n/a (decentralized)</td>
 <td class="mau0">n/a (decentralized)</td>
 <td class="mau0">n/a (decentralized)</td>
@@ -365,6 +374,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="mau1 tooltip">100,000+<span class="tooltiptext">refers only to the Conversations app, which is only one of many XMPP messengers</span></td>
 <td class="mau1">100,000+</td>
 <td class="mau2 tooltip">1,000,000+<span class="tooltiptext">refers only to the Element app, which is only one of many XMPP messengers</span></td>
+<td class="mau2">1,000,000+</td>
 <td class="mau3">100,000,000+</td>
 <td class="mau3">500,000,000+</td>
 <td class="mau2">5,000,000+</td>
@@ -381,6 +391,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="line">XMPP + OMEMO</td>
 <td class="line">IMAP/SMTP + OpenPGP</td>
 <td class="line">Matrix + Olm/Megolm</td>
+<td class="line">Session</td>
 <td class="line">Signal</td>
 <td class="line">MTProto</td>
 <td class="line">NaCl + Ibex</td>
@@ -398,6 +409,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="line">free</td>
 <td class="line">free</td>
 <td class="line">free</td>
+<td class="line">free</td>
 <td class="line" style="color: red;">&euro;3.99</td>
 <td class="line">free</td>
 <td class="line">free</td>
@@ -408,7 +420,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Sustainability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Sustainability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -417,6 +429,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">GPL</td>
 <td class="yes">GPL</td>
 <td class="yes">Apache</td>
+<td class="yes">GPL</td>
 <td class="yes">GPL</td>
 <td class="mixed">GPL/Proprietary</td>
 <td class="mixed">AGPL/Proprietary</td>
@@ -432,6 +445,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Federated</td>
 <td class="yes">Federated</td>
 <td class="yes">Federated</td>
+<td class="yes tooltip">Decentralized<span class="tooltiptext">Nodes hold onto messages until they are delivered, for up to two weeks.</span></td>
 <td class="no">Centralized</td>
 <td class="no">Centralized</td>
 <td class="no">Centralized</td>
@@ -447,6 +461,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">but requires staking cryptocurrency</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -462,6 +477,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes tooltip">Via transports if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord</span></td>
 <td class="yes">Fallback to normal Email; more via <a href="https://github.com/deltachat-bot/matterdelta" target="_blank">bridges</a></td>
 <td class="yes tooltip">Via <a href="https://matrix.org/ecosystem/bridges/" target="_blank">bridges</a> if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat</span></td>
+<td class="no">No</td>
 <td class="no">No (SMS in earlier versions)</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -473,18 +489,19 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Compatibility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <!--
 <tr>
-<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Smartphones:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Smartphones:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 -->
 
 <tr>
 <td>Android</td>
+<td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
 <td class="yes">Yes<!-- (APK available)--></td>
@@ -503,6 +520,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>iOS</td>
 <td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -592,13 +610,14 @@ I have limited this comparison to only eleven messengers:</p>
 
 <!--
 <tr>
-<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Desktops:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td style="text-indent: 10px; text-decoration: underline; font-style: italic;">Desktops:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr> -->
 
 <tr>
 <td>Windows</td>
 <td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -623,12 +642,14 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
 <td>GNU/Linux</td>
 <td class="yes">Yes</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -647,7 +668,8 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="otherclients"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix client(s)</a></td>
 <td class="no">No</td>
-<td class="almost"><span class="tooltip">FreeBSD <span class="tooltiptext">FreeBSD has a port of the standard Telegram app</span></span> / <span class="otherclients tooltip"><a href="https://telegram.org/apps" target="_blank" style="color: black; text-decoration: none;">other client(s)</a><span class="tooltiptext">For other Unix operating systems</span></span></td>
+<td class="no">No</td>
+<td class="almost" style="font-size: 85%;"><span class="tooltip">FreeBSD <span class="tooltiptext">FreeBSD has a port of the standard Telegram app</span></span> / <span class="otherclients tooltip"><a href="https://telegram.org/apps" target="_blank" style="color: black; text-decoration: none;">other client(s)</a><span class="tooltiptext">For other Unix operating systems</span></span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -708,6 +730,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -718,11 +741,12 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Capability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Capability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Offline messages (if recipient is offline)</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -749,10 +773,12 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
 <td>Voice messages</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -772,6 +798,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">but disabled by default</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -795,6 +822,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -803,6 +831,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="almost">Yes (not on mobile)</td>
+<td class="no">No</td>
 <td class="almost">Yes (not on mobile)</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -818,6 +847,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">but external at <a href="https://session.directory/" target="_blank">https://session.directory/</a> and <a href="https://sessioncommunities.online/" target="_blank">https://sessioncommunities.online/</a></span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -835,6 +865,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="no">No</td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Please note that this doesn't truly protect messages from being saved or read by other parties. See: <a href="https://www.freie-messenger.de/en/begriffe/pseudosicherheit/" target="_blank" style="color: white;">https://www.freie-messenger.de/en/begriffe/pseudosicherheit/</a></span></td>
@@ -848,6 +879,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -865,6 +897,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="otherclients">Other Matrix client(s)</td>
 <td class="no">No</td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -875,7 +908,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Usability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Usability</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -884,6 +917,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="otherclients tooltip"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>
 <td class="yes">Email</td>
 <td class="yes">Phone number &amp; Email</td>
+<td class="no">No</td>
 <td class="yes">Phone number</td>
 <td class="yes">Phone number</td>
 <td class="yes">Phone number &amp; Email</td>
@@ -899,6 +933,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="otherclients">Chat history is saved on the XMPP server, but useless without decryption keys, which some <a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> can back up automatically (Con&shy;ver&shy;sations: only <em>manual</em> backups to local device).</td>
 <td class="notreally">Local backups of chat history are possible but not automatic. Chat history is saved on the Email server, but useless without decryption keys, which need to be <em>manually</em> backed up to local device.</td>
 <td class="yes">Chat history is saved on the Matrix server, but useless without decryption keys, which can be automatically backed up to local device or Matrix homeserver</td>
+<td class="no">No</td>
 <td class="almost">Backup on local device only (no cloud backup which would protect against loss of device)</td>
 <td class="mixed">All data is saved on Telegram servers, except for "secret chats"</td>
 <td class="no">No</td>
@@ -914,6 +949,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes (at least to new installation of Conversations)</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="mixed">Yes, but only Android &harr; Android or iOS &harr; iOS, not supported on Desktop</td>
 <td class="mixed">Yes, except for secret chats</td>
 <td class="mixed">Yes, but only Android &harr; Android or iOS &harr; iOS, not supported on Desktop</td>
@@ -926,6 +962,7 @@ I have limited this comparison to only eleven messengers:</p>
 <tr>
 <td>Use on multiple devices</td>
 <td class="mixed">Can link desktop &amp; mobile app, but <span class="tooltip">mobile app must be running and be on the same local network.<span class="tooltiptext">If it is an Android app, you can move the app to background, but the iOS app has to remain open. In both cases, while you are using mobile profiles from desktop, you won't be able to use mobile app.</span></span></td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -945,6 +982,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No (from other XMPP clients only)</td>
 <td class="no">No</td>
 <td class="no">No (from other Matrix clients only)</td>
+<td class="no">No</td>
 <td class="no">No (SMS import possible in earlier versions)</td>
 <td class="yes">Yes (KakaoTalk, Line, WhatsApp)</td>
 <td class="no">No</td>
@@ -956,7 +994,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -965,6 +1003,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>XMPP address (user@server.tld)</td>
 <td>Email address (user@server.tld)</td>
 <td>Matrix ID (@user:server.tld)</td>
+<td>Alphanumeric Session ID (and optional paid username)</td>
 <td>Phone number or Username</td>
 <td>Phone number or "Fragment" number</td>
 <td>Threema ID (8-digit ID)</td>
@@ -997,6 +1036,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no tooltip">Phone number required<span class="tooltiptext">Could use a "burner SIM" for anonymous sign-up, but in many countries it is not legal to sell/buy SIM cards anonymously</span></td>
 <td class="almost tooltip">Possible with "Fragment" number (paid)<span class="tooltiptext">Has to be paid with "TON" cryptocoin. Alternatively, can sign up with phone number.</span></td>
 <td class="almost tooltip">Yes if purchased anonymously <span class="tooltiptext">Android license can be purchased from Threema directly using Bitcoin, while the iOS app can only be bought in the App Store (hence the latter is only anonymous if the Apple ID itself is anonymous, i.e. anonymous email address used to sign up and no phone number given)</td>
@@ -1013,6 +1053,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="mixed">Only in "secret chats"</td>
 <td class="yes">Yes</td>
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td> <!-- <td class="mixed tooltip">Only in "secret chats"<span class="tooltiptext">Impossible to verify as app is closed source</span></td> -->
@@ -1027,6 +1068,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if recipient is also using Delta Chat, other will be sent as unencrypted email</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">if supported by recipient's client app</span></td>
+<td class="yes">Yes (except "open groups")</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1045,6 +1087,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">Impossible to verify as app is closed source</span></td>
@@ -1057,6 +1100,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="mixed">Local backups: no,<br />on email server: yes</td>
 <td class="yes">Yes</td>
+<td class="line">(no backups)</td>
 <td class="yes">Yes</td>
 <td class="no">No ("secret chats" not backed up)</td>
 <td class="yes">Yes</td>
@@ -1073,6 +1117,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -1083,11 +1128,12 @@ I have limited this comparison to only eleven messengers:</p>
 
 
 <tr>
-<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Security</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Encryption: Authentification of contacts</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1107,6 +1153,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="otherclients tooltip">other Matrix clients<span class="tooltiptext">Supported by the Matrix protocol, but not the Element client</span></td>
+<td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1123,6 +1170,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="notreally">?</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1134,6 +1182,7 @@ I have limited this comparison to only eleven messengers:</p>
 <tr>
 <td>Post-quantum encryption</td>
 <td class="yes">Yes</td>
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1151,6 +1200,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
+<td class="mixed">Mobile apps only</td>
 <td class="mixed">Mobile apps only</td>
 <td class="mixed">Mobile apps only</td>
 <td class="yes">Yes</td>
