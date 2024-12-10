@@ -1,7 +1,7 @@
 document.write(`
 
 <footer>
-<hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="mailto:eylenburg@airmail.cc">Please drop me an e-mail</a></strong> or <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">create an issue on Github</a></strong></p>
+<hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="mailto:eylenburg@airmail.cc">Please drop me an e-mail</a> (<a href="09E0AF0BDD9CB718B8B336DC62D5FF8DB2A98ACF.asc">&#x1f511; PGP Key</a>)</strong> or <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">create an issue or pull request on Github</a></strong></p>
 
 <details style="text-align: center;">
 <summary>
