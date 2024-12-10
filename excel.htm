@@ -147,7 +147,8 @@ background-color: aliceblue;
 
 
 <h1>Comparison of Spreadsheet Programs</h1>
-<p>Microsoft Excel is the king of spreadsheet programs. It is ubiquitous in many office jobs and 99% of finance or accounting departments are completely dependent on it.</p> <a href="https://xkcd.com/2347/" target="_blank"><img src="pics/logos/excel/excel-xkcd.jpg" style="max-width: 100%; max-height: 250 px;"/></a>
+<p>Microsoft Excel is the king of spreadsheet programs. It is ubiquitous in many office jobs and 99% of finance or accounting departments are completely dependent on it.</p> <a href="https://xkcd.com/2347/" target="_blank"><img src="pics/excel-xkcd.jpg" style="max-width: 100%; max-height: 250 px;"/></a>
+<p style="font-size: small; text-align: center;">I have been informed that actually LibreOffice can have a better backwards compatibility with Excel 2003 compared to Excel 365. Sorry!</p>
 
 <p>Personally, I use it daily in my job and have become quite fond of it; Excel now is my <a href="https://en.wikipedia.org/wiki/Law_of_the_instrument" target="_blank">golden hammer</a>, a tool that I like to use for any task it might be remotely suitable for. I run Linux on my private computer and the lack of Excel has been annoying: complex Excel files won't calculate or display correctly in alternative apps and I don't like to re-learn the workflows and keyboard shortcuts (only noobs use the mouse). While it is kind of possible to <a href="https://gist.github.com/eylenburg/38e5da371b7fedc0662198efc66be57b" target="_blank">run Excel in Linux</a> it is not straight-forward most people recommend alternatives like LibreOffice or OnlyOffice instead. So I set out to compare these in detail, with the overall question: <strong>"Can this program replace Excel? Do we actually <em>need</em> Excel on Linux?"</strong><br /><br />
 I had a closer look at these applications:</p>
@@ -175,7 +176,7 @@ I had a closer look at these applications:</p>
 
 <h2 class="center">Comparison of Spreadsheet Programs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 5 December 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 10 December 2024</p>
 
 
 <table class="comparison">
@@ -1465,7 +1466,7 @@ I had a closer look at these applications:</p>
 <tr>
 <td>Compatibility with Excel VBA macros</td>
 <td class="green">Yes (Desktop only)</td>
-<td class="red">No</td>
+<td class="lgreen">Yes, but <a href="https://help.libreoffice.org/latest/en-US/text/sbasic/shared/vbasupport.html" target="_blank">incomplete</a></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red tooltip">No (?)<span class="tooltiptext">Unclear situation. Developer tab not found in the Linux version. Website says: "Unfortunately, WPS Office no longer supports the use of VBA. The Developer tab will only be visible if your computer has MSO (Microsoft Office) installed with a VBA environment." "As much as FreeOffice is a popular free substitute, it cannot create or run VBA-based macros." Others say macros and forms are limited to the enterprise version.</span></td>
@@ -1554,7 +1555,7 @@ I had a closer look at these applications:</p>
 <td class="green tooltip">Yes<span class="tooltiptext">At least on Linux, need to install the other languages first, <a href="https://github.com/wachin/wps-office-all-mui-win-language?tab=readme-ov-file" target="_blank" style="color: white;">see here.</span></td>
 </tr>
 
-<tr><td class="semititle"><br />Keyboard shortcuts same as Excel</td><td colspan="5" style="text-align: center; font-style: italic; font-size: small; vertical-align: bottom;">While there is no right or wrong way to define keyboard shortcuts, Excel is the industry standard and matching its shortcuts can help make it easier for people to switch to alternatives.</td></tr>
+<tr><td class="semititle"><br />Keyboard shortcuts same as Excel?</td><td colspan="5" style="text-align: center; font-style: italic; font-size: small; vertical-align: bottom;">While there is no right or wrong way to define keyboard shortcuts, Excel is the industry standard and matching its shortcuts can help make it easier for people to switch to alternatives.</td></tr>
 
 <tr>
 <td>Configurable keyboard shortcuts</td>
@@ -1656,7 +1657,7 @@ I had a closer look at these applications:</p>
 <tr>
 <td><code>F9</code> and <code>Shift + F9</code> to recalculate workbook/sheet</td>
 <td class="green">Yes</td>
-<td class="yellow"><code>F9</code> only (<code>Shift + F9</code> = Trace Precedents)</td>
+<td class="yellow"><code>F9</code> only <span class="tooltip">(<code>Ctrl + Shift + F9</code> for sheet)<span class="tooltiptext"><code>Shift + F9</code> = Trace Precedents, but it is possible to assign this shortcut for recalculating the current sheet like in Excel</span></span></td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
@@ -1670,9 +1671,9 @@ I had a closer look at these applications:</p>
 <td class="yellow"><code>Ctrl + [</code> only</td>
 </tr>
 <tr>
-<td><code>Alt + =</code> for quick sum</td>
+<td><code>Alt + =</code> for auto-sum</td>
 <td class="green">Yes</td>
-<td class="red">No</td>
+<td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="red">No</td>
 <td class="green">Yes</td>
@@ -1680,7 +1681,7 @@ I had a closer look at these applications:</p>
 <tr>
 <td><code>Alt + Enter</code> for line break in formula and text</td>
 <td class="green">Yes</td>
-<td class="red">No</td>
+<td class="red">No (<code>Shift + Enter</code>)</td>
 <td class="green">Yes</td>
 <td class="red">No</td>
 <td class="green">Yes</td>
@@ -1688,7 +1689,7 @@ I had a closer look at these applications:</p>
 <tr>
 <td><code>Ctrl + D</code> and <code>Ctrl + R</code> to drag formula down/right</td>
 <td class="green">Yes</td>
-<td class="yellow"><code>Ctrl + D</code> only</td>
+<td class="lgreen"><code>Ctrl + D</code> only (<code>Ctrl + R</code> can be assigned)</td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="green">Yes</td>
@@ -1704,7 +1705,7 @@ I had a closer look at these applications:</p>
 <tr>
 <td>Use <code>Alt</code> key to navigate the user interface using the keyboard*</td>
 <td class="green">Yes</td>
-<td class="red">No</td>
+<td class="yellow tooltip">Windows only; different shortcuts<span class="tooltiptext">Keyboard navigation using the <code>Alt</code> key is only possible with the traditional toolbar (not with the optional ribbon UI) and it is only available on Windows</span></td>
 <td class="yellow">Yes, but different shortcuts than Excel</td>
 <td class="red">No</td>
 <td class="red">No</td>
