@@ -8,6 +8,50 @@
 <meta name="keywords" content="Technology, Browsers, Firefox, Chrome, Edge, Safari, Brave, Vivaldi, Operating Systems, Desktop Environments, GNOME, KDE, Xfce, Linux, Unix, BSD, Solaris, Windows, macOS, Instant Messengers, Chat, Software, Cloud, Sync, Email, Privacy">
 <meta name="author" content="Alphonse Eylenburg">
 <link rel="stylesheet" href="style.css">
+<style>
+    .year-header {
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+
+    .timeline-table {
+        display: flex;
+        height: 30px;
+        white-space: nowrap;
+        margin-left: 10px;
+    }
+
+    .timeline-table div {
+        width: 29.018px;
+        text-align: center;
+        border-right: 1px solid #ccc;
+        line-height: 30px;
+        background-color: #f0f0f0;
+        font-size: 11px;
+    }
+
+    .timeline-table div:last-child {
+        border-right: none;
+    }
+
+    #toggleButton {
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #toggleButton.active {
+        background-color: lightcoral;
+    }
+
+    #toggleButton.inactive {
+        background-color: lightgreen;
+    }
+</style>
 </head>
 <body>
 
@@ -26,7 +70,13 @@ Currently, the family tree includes between around 1,120 different operating sys
 <p><strong>There are some missing system and some corrections that are not included in the graphic below yet. <a href="https://github.com/eylenburg/eylenburg.github.io/issues/80" target"_blank">Please see here for the issue tracker.</a></strong>
 <br />If you'd like to help out, you can <a href="https://github.com/eylenburg/os-family-tree">contribute here</a>.</p>
 
-<object type="image/svg+xml" data="pics/Eylenburg_Operating_System_Timeline_Family_Tree.svg"></object>
+<button id="toggleButton" class="active">Disable sticky timeline</button>
+
+<div class="year-header">
+    <div class="timeline-table" id="timelineTable"></div>
+</div>
+
+<object type="image/svg+xml" data="pics/Eylenburg_Operating_System_Timeline_Family_Tree.svg" id="svgGraphic"></object>
 
 <p><strong>If anyone would like to make corrections, please feel tell me.</strong><br />
 <i>Big Update August 2021: Thank you for everyone e-mailing me with suggestions after this webpage got posted on Hackernews by someone. I have added most of the suggestions, such as missing operating systems and a few mistakes.</i><br />
@@ -49,5 +99,58 @@ Currently, the family tree includes between around 1,120 different operating sys
 </ul>
 
 <script src="bottom.js "></script>
+<script>
+    // Toggle button functionality
+    const toggleButton = document.getElementById('toggleButton');
+    const yearHeader = document.querySelector('.year-header');
+
+    toggleButton.addEventListener('click', () => {
+        if (toggleButton.classList.contains('active')) {
+            yearHeader.style.display = 'none';
+            toggleButton.textContent = 'Enable sticky timeline';
+            toggleButton.classList.remove('active');
+            toggleButton.classList.add('inactive');
+        } else {
+            yearHeader.style.display = 'block';
+            toggleButton.textContent = 'Disable sticky timeline';
+            toggleButton.classList.remove('inactive');
+            toggleButton.classList.add('active');
+        }
+    });
+
+    // Dynamically adjust the timeline width to match the SVG width
+    function renderTimeline() {
+        const svgGraphic = document.getElementById('svgGraphic');
+        const timelineTable = document.getElementById('timelineTable');
+        const startYear = 1951;
+        const endYear = 2100;
+        const cellWidth = 30;
+
+        svgGraphic.addEventListener('load', () => {
+            const svgWidth = svgGraphic.getBoundingClientRect().width;
+
+            // Ensure the timeline container matches the SVG width
+            timelineTable.style.width = `${svgWidth}px`;
+
+            // Clear previous timeline content
+            timelineTable.innerHTML = '';
+
+            // Calculate the number of years that fit within the SVG width
+            const yearsToShow = Math.floor(svgWidth / cellWidth);
+
+            for (let year = startYear; year < startYear + yearsToShow; year++) {
+                const cell = document.createElement('div');
+                cell.textContent = year;
+                timelineTable.appendChild(cell);
+            }
+        });
+    }
+
+    // Call the function when the page loads
+    renderTimeline();
+
+    // Optional: Re-render the timeline on window resize
+    window.addEventListener('resize', renderTimeline);
+</script>
 </body>
 </html>
