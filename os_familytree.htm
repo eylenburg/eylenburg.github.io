@@ -16,6 +16,7 @@
     }
 
     .timeline-table {
+        color: black;
         display: flex;
         height: 30px;
         white-space: nowrap;
@@ -23,7 +24,7 @@
     }
 
     .timeline-table div {
-        width: 29.018px;
+        flex: 1;
         text-align: center;
         border-right: 1px solid #ccc;
         line-height: 30px;
@@ -33,6 +34,7 @@
 
     .timeline-table div:last-child {
         border-right: none;
+        margin-right: 20px;
     }
 
     #toggleButton {
@@ -71,6 +73,8 @@ Currently, the family tree includes between around 1,120 different operating sys
 <br />If you'd like to help out, you can <a href="https://github.com/eylenburg/os-family-tree">contribute here</a>.</p>
 
 <button id="toggleButton" class="active">Disable sticky timeline</button>
+
+<br>
 
 <div class="year-header">
     <div class="timeline-table" id="timelineTable"></div>
