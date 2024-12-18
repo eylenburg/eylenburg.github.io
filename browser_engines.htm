@@ -18,7 +18,7 @@
 
 <h1>History of Web Browser Engines from 1990 until today</h1>
 <h2>Many tried, few remain...</h2>
-<p style="color: red; font-size: small;">Last updated: July 2024</p>
+<p style="color: red; font-size: small;">Last updated: December 2024</p>
 
 <p>The loss of browser diversity since the rise of Chromium has been greatly lamented. Below you can find a graph that shows the historical and present browser engines (not browsers, but the HTML rendering engines), as well as from when to when they were developed. For the bigger engines, the market share is indicated by a coloured shape (see legend). <br /><br />
 We're now well into the "fourth era of dominance". NCSA Mosaic dominated at the beginning (first dominance), but it was dethroned by Netscape which briefly held the majority of the market share (second dominance), both of which then were overtaken by Internet Explorer (originally using the engine from Spyglass Mosaic, and later Trident) (third dominance), which then was weakened first by Firefox (Gecko engine) but finally dethroned by Chromium (Blink engine) (fourth dominance). In terms of active and relevant engines there's now only Blink (Chrome, Edge, Opera, Vivaldi, Brave, Samsung Internet, UC Browser and many more), WebKit (Safari and all iOS browsers), and Gecko (Firefox and its forks).<br /><br />But see for yourself:</p>
@@ -36,19 +36,29 @@ We're now well into the "fourth era of dominance". NCSA Mosaic dominated at the 
 <li><strong>Blink</strong>, a fork of WebKit. It's the dominant engine nowadays, and it underpins Chromium, which is the basis for Chrome, Edge, Opera, Brave, Vivaldi, Samsung Internet and most other browsers; QtWebengine, which is the basis for Falkon and Otter Browser; Android WebView; Windows WebView 2; and Electron, where Blink is used to render the UI of apps. Close to 80% market share. <span style="background-color: lightgreen;">Open source</span></li>
 </ul>
 
-<p><strong>2. Experimental new engines, not suitable for normal browsing (yet)</strong></p>
+<p><strong>2. Experimental but ambitious new engines, which have the potential to compete with the "big" ones</strong></p>
 <ul>
 <li><strong>Servo</strong>. This promising engine was developed by Mozilla, and parts of the Servo engine have been incorporated into Gecko. In 2020, Mozilla fired a quarter of their developers, which apparently included the whole Servo team. There have still been some commits to the code since then (presumably by hobbyists) but it is questionable if Servo will have a future. Update: Servo is now hosted by the Linux Foundation. <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong><a href="https://www.ekioh.com/blog" target="_blank">Flow</a></strong>, which focuses on TVs, but seems to be a promising newcomer. Unfortunately it's not open source so it's likely that the company will concentrate on their TV niche and that Flow won't ever become a real competitor to Blink. <span style="background-color: tomato;">Closed source</span></li>
 <li><strong>LibWeb</strong>, the engine powering Ladybird and the SerenityOS Browser. They have received some major donations want to publish an alpha version in 2026. Great to see another contender. <span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>ArkWeb</strong>, a new in-house engine from Huawei for its upcoming HarmonyOS Next mobile operating system that first surfaced in 2024. <span style="background-color: lightgreen;">Open source</span></li>
+</ul>
+
+<p><strong>3. Basic browser engines, not suitable for the "modern" web</strong></p>
+<ul>
 <li><strong>Hubbub</strong>, used only in NetSurf, a rather basic browser with no support for advanced web standards such as HTML 5. <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong>Dillo</strong>. Basic browser for simple websites only. While the last stable release was in 2015, there have been more commits since and the project was officially revived in 2024. <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong>Cobra</strong> and its fork <strong>CobraEvolution</strong>. These engines are used in the Lobo and LoboEvolution browsers, written in Java. It is unclear to me what's the state of this Lobo browser and engine and whether it's alive or dead, but LoboEvolution/CobraEvolution seems to be still in development. <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong>Gosub</strong>, a new basic web engine in development since late 2023. <span style="background-color: lightgreen;">Open source</span></li>
-<li><strong>ArkWeb</strong>, a new in-house engine from Huawei for its upcoming HarmonyOS Next mobile operating system that first surfaced in 2024. <span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>Ferus</strong>, a "toy web engine" based on Chawan (a TUI web browser), in development since early 2023. <span style="background-color: lightgreen;">Open source</span></li>
+<li>The engine of <strong>iBrowse</strong>, which is available for Amiga OS and seems to be a basic browser too without full web standards supports.<span style="background-color: tomato;">Closed source</span></li>
+<li><strong>KolibiOS WebView</strong>, which started as a text browser but has over time added some basic formatting and image support.<span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>Mycel</strong>, formerly Opposum, a very basic web browser for Plan 9, in development since 2020. <span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>HighWire</strong>. This basic browser for Atari and FreeMint had its last release in 2010 but is still being maintained with commit activity in the repo. <span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>Vaev</strong>. A browser engine built for SkiftOS since November 2023.<span style="background-color: lightgreen;">Open source</span></li>
 </ul>
 
-<p><strong>3. Zombie engines, not in active development but still not completely dead</strong></p>
+<p><strong>4. Zombie engines, not in active development but still not completely dead</strong></p>
 <ul>
 <li><strong>Trident</strong> (Internet Explorer), while technically Trident will still get security updates until the end of Windows 10 (no date announced), there haven't been any new features or development of standards support since Edge came out in 2015. Microsoft announced that they will stop supporting Internet Explorer on most versions of Windows in 2022, but engine itself will remain accessible in Edge's "IE Mode" and hence will still receive security updates if necessary. <a href="https://endoflife.date/internet-explorer" target="_blank">For the end of life, see here.</a> <span style="background-color: tomato;">Closed source</span></li>
 <li><strong>EdgeHTML</strong>, mostly known from its use in Legacy Edge, which was replaced by a newer Chromium-based Edge in 2020. Legacy Edge was forcefully removed via Windows Update in April 2021, but Microsoft confirmed that the EdgeHTML engine will still be supported with security updates, as it also been used for the built-in WebView in Windows UWP apps (superseded but not automatically replaced by Blink-based WebView 2). <span style="background-color: tomato;">Closed source</span></li>
@@ -57,19 +67,12 @@ We're now well into the "fourth era of dominance". NCSA Mosaic dominated at the 
 <li><strong>Arachne</strong>. This basic browser supports only the most basic of HTML and CSS. It's not really in active development but happens to get a minor update every couple of years. <span style="background-color: lightgreen;">Open source</span></li>
 </ul>
 
-<p><strong>4. Basic browsers for niche operating systems, not suitable for the "modern" web</strong></p>
-<ul>
-<li>The engine of <strong>iBrowse</strong>, which is available for Amiga OS and seems to be a basic browser too without full web standards supports.<span style="background-color: tomato;">Closed source</span></li>
-<li><strong>KolibiOS WebView</strong>, which started as a text browser but has over time added some basic formatting and image support.<span style="background-color: lightgreen;">Open source</span></li>
-<li><strong>Mycel</strong>, formerly Opposum, a very basic web browser for Plan 9, in development since 2020. <span style="background-color: lightgreen;">Open source</span></li>
-<li><strong>HighWire</strong>. This basic browser for Atari and FreeMint had its last release in 2010 but is still being maintained with commit activity in the repo. <span style="background-color: lightgreen;">Open source</span></li>
-</ul>
-
 <p><strong>5. Text browsers</strong></p>
 <ul>
 <li><strong>Lynx</strong> <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong>Links</strong> <span style="background-color: lightgreen;">Open source</span></li>
 <li><strong>w3m</strong> <span style="background-color: lightgreen;">Open source</span></li>
+<li><strong>chawan</strong> <span style="background-color: lightgreen;">Open source</span></li>
 </ul>
 
 <p><strong>6. Embedded rendering</strong></p>
