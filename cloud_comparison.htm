@@ -249,7 +249,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 29 November 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 19 December 2024</p>
 
 
 <table id="comparisonTable" class="comparison">
@@ -908,7 +908,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="yes">Yes (<span class="tooltip">Nextcloud Office<span class="tooltiptext">based on Collabora Office</span></span> and <span class="tooltip">others<span class="tooltiptext">OnlyOffice, Collabora Office, Hancom Office, Microsoft Office Online</span></span>)</td><!-- access/edit in browser -->
 <td class="yes">Yes</td><!--share files -->
 <td class="yes">Yes</td><!-- desktop sync -->
-<td class="mixed">via <span class="tooltip">3rd party apps<span class="tooltiptext">such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
+<td class="yes tooltip">Yes<span class="tooltiptext">using the official app or 3rd party apps such as FolderSync or AutoSync</span></span></td><!-- mobile sync -->
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
 <td class="yes">Yes</td><!-- has tasks? -->
@@ -1428,26 +1428,47 @@ The only one that doesn't really make sense is the Google ecosystem; they neithe
 <h4>Strategy 3a: E2EE one-stop solutions</h4>
 
 <ul>
-<li><strong>Proton</strong> (&euro;96 p.a. for 500 GB) <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">No desktop sync for ProtonDrive yet</span> <span class="bad">Can't edit files in browser</span> <span class="bad">No CalDAV/CardDAV</span> <span class="bad">No tasks in calendar</span> <span class="bad">No IMAP on mobile</span></li>
+<li><strong>Proton</strong> (&euro;96 p.a. for 500 GB) <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">No ProtonDrive app for Linux</span> <span class="bad">Can't edit files in browser</span> <span class="bad">No CalDAV/CardDAV</span> <span class="bad">No tasks in calendar</span> <span class="bad">No IMAP on mobile</span></li>
 </ul>
 
 <p>Sadly, there is only one provider out there that offers a combination of mail hosting, calendar/contacts, and file cloud with all items fully end-to-end encrypted. That one provider is Proton Technologies. Unfortunately, while ProtonMail is a great and mature product, the other offerings (ProtonCalendar and ProtonDrive) are still rather immature.</span>
 
 <h4>Strategy 3b: combination of multiple E2EE services</h4>
 
+<!--
 <ul>
 <li>Variant 1 - best in class (&euro;121 p.a. for 15 GB mail + 2 TB files) </li>
 <ul>
 <li>For email: <strong>Proton</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their mobile app</span></li>
 <li>For contacts, calendar, and tasks: <strong>EteSync</strong> <span class="good">E2EE</span>  <span class="good">Open Source</span> <span class="bad">Buggy?</span></li>
-<li>For file sync: <strong>Mega</strong> <span class="good">E2EE</span> <span class="good">Source available</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li></ul>
+<li>For file sync: <strong>Mega</strong> <span class="good">E2EE</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li></ul>
 <li>Variant 2 - a bit cheaper (&euro;111 p.a. for 5 GB mail + 2 TB files)</li>
 <ul>
-<li>For email and contacts/calendar/tasks: <strong>Posteo</strong> <span class="good">Zero access encryption</span> <span class="good">Open Source</span> <span class="bad">Data will get temporarily decrypted</span> <span class="bad">No tasks in web interface</span> <span class="bad">Can't use your own domain for emails</span></li>
+<li>For email and contacts/calendar/tasks: <strong>Posteo</strong> <span class="good">Open Source</span> <span class="bad">Data will get temporarily decrypted</span> <span class="bad">No tasks in web interface</span> <span class="bad">Can't use your own domain for emails</span></li>
 <li>For file sync: <strong>Filen</strong>  <span class="good">E2EE</span> <span class="good">Open Source</span>  <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
 </ul></ul>
+-->
 
-<p>For encrypted mail there are many options, so you can choose whatever you like. ProtonMail is often recommended as the best one, but there are many other good ones. For encrypted calendars and contacts, the only good option is EteSync. Posteo is an interesting alternative to both ProtonMail and EteSync, because it supports zero access encryption for not only email, but also contacts and calendars. Finally, there are several files clouds with end-to-end encryption, but only Mega and Filen have open source clients and support Linux. Of the two, Mega is the slightly superior choice as it has an API to integrate with other applications (e.g. FolderSync support for Android), and you can even set up WebDAV if you want.</p>
+<ul>
+<li>For email, choose from:</li>
+	<ul>
+	<li><strong>Proton</strong> <span class="good">Zero knowledge email encryption</span> <span class="good">Compatible with PGP</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their mobile app</span></li>
+	<li><strong>Mailbox.org</strong> <<span class="good">Zero knowledge email encryption (optional)</span> <span class="good">Compatible with PGP</span> <span class="good">IMAP</span></li>
+	</ul>
+<li>For contacts, calendar, and tasks, choose from:</li>
+	<ul>
+	<li><strong>Proton</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their apps</span></li>
+	<li><strong>EteSync</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> <span class="good">CalDAV/CardDAV</span> <span class="bad">Buggy?</span></li>
+	</ul>
+<li>For file sync, choose from:</li>
+	<ul>
+	<li><strong>Mega</strong> <span class="good">E2EE</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
+	<li><strong>Filen</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
+	<li><strong>Tresorit</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span> <span class="bad">Closed source</span></li>
+	</ul>
+</ul>
+
+<p>For encrypted mail there are several options. ProtonMail is often recommended as the best one as it is easy to use and compatible with PGP. Tuta is another name heared often, but they don't use PGP for their encryption, so there is no compatibility with users of other email providers, though their encryption method has the big advantage of also encrypting metadata. For encrypted calendars and contacts, the best option is in theory EteSync, but Proton and Tuta are also available if you don't mind using their apps on all platforms. Finally, there are several files clouds with end-to-end encryption and Linux support, such as Filen, Mega and Tresorit. Of these, Mega is the slightly superior choice as it has an API to integrate with other applications (e.g. FolderSync support for Android), and you can even set up WebDAV if you want.</p>
 
 
 <h3>Strategy 4: Self-host. No need for E2EE if your data isn't stored on someone else's computer.</h3>
