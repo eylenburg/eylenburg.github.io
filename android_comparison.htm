@@ -141,6 +141,10 @@ background-color: #F5E0D6;
 background-color: #EBC1AD;
 }
 
+.blue {
+background-color: aliceblue;
+}
+
 img.logo {
 max-width: 150px;
 max-height: 75px;
@@ -151,13 +155,14 @@ td.lgreen,
 td.red,
 td.lred,
 td.yellow,
+td.blue,
 td.line {
 border-top: 1px solid ivory;
 border-bottom: 1px solid ivory;
 }
 
 @media (prefers-color-scheme: dark) {
-td.green, td.lgreen, td.red, td.lred, td.yellow { color: black;  }
+td.green, td.lgreen, td.red, td.lred, td.yellow, td.blue { color: black;  }
 }
 
 @media (min-width: 578px){
@@ -190,7 +195,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 29 November 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 20 December 2024</p>
 
 <table class="comparison">
 
@@ -368,6 +373,33 @@ font-size: x-small;
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
+<!--
+LOGIC FOR COLOUR SCHEME:
+
+RED
+- connects to Google, no opt-out
+
+LIGHT RED
+- connects to Google by default but function can be turned off (no option of using another provider)
+
+YELLOW
+- function is off by default but can connect to Google if needed (no option of using another provider)
+
+LIGHT GREEN
+- connects to Google by default but can be changed to another provider
+
+GREEN
+- does not connect to Google by default but instead connects to the developer of the operating system (no third party needs to be trusted)
+- multiple providers offered and user can decide
+- no data shared with any provider
+
+BLUE
+- does not connect to Google by default but instead connects to another (non-Google) third party provider
+
+WHITE
+- function is not supported
+-->
+
 <tr>
 <td class="legend">eSIM activation</td>
 <td class="green tooltip">Google eUICC w/o data sharing<span class="tooltiptext">Disabled by default. Unlike the regular Google eUICC management app, it doesn't require Google Play and cannot share data with it. It doesn't communicate with Google servers unless the carrier is hosting with them, which would involve using their servers regardless.</span></td>
@@ -391,84 +423,34 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">SUPL</td>
+<td class="legend">SUPL (for Assisted GNSS)</td>
 <td class="green">GrapheneOS <sup>default</sup>, Google or none</td>
-<td class="yellow">Google <sup>default</sup>, or none</td>
-<td class="yellow">Google <sup>default</sup>, or none</td>
-<td class="yellow">Google <sup>default</sup>, or none</td>
-<td class="lgreen">None <sup>default</sup>, or Google</td>
-<td class="yellow">Google <sup>default</sup>, or none</td>
+<td class="lred">Google <sup>default</sup>, or none</td>
+<td class="lred">Google <sup>default</sup>, or none</td>
+<td class="lred">Google <sup>default</sup>, or none</td>
+<td class="yellow">None <sup>default</sup>, or Google</td>
+<td class="lred">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
-
-<!--
-<tr>
-<td class="legend tooltip">PSDS (depends on device)<span class="tooltiptext">Default server depends on GPS chipset, e.g. phones with Qualcomm chips connect to a Qualcomm server and phones with Broadcom GPS connect to a Broadcom server, except Google Pixels with Broadcom chips that connect to a Google server instead. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
-<td class="green">GrapheneOS <sup>default</sup>, Google/Qualcomm, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="lred">Google/Broadcom/Qualcomm</td>
-<td class="yellow">Google/Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="lred">Google/Broadcom/Qualcomm</td>
-</tr> 
--->
 
 <tr>
 <td class="legend tooltip">PSDS - Google Pixel 6 and later<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="lgreen">None <sup>default</sup>, or Google</td>
-<td class="yellow">Google <sup>default</sup>, or none</td>
+<td class="blue">Broadcom <sup>default</sup>, or none</td>
+<td class="blue">Broadcom <sup>default</sup>, or none</td>
+<td class="blue">Broadcom <sup>default</sup>, or none</td>
+<td class="yellow">None <sup>default</sup>, or Google</td>
+<td class="lred">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
-
-<!--
-<tr>
-<td class="legend ">PSDS - other devices</td>
-<td class="green">GrapheneOS <sup>default</sup>, Qualcomm, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Broadcom/Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Broadcom/Qualcomm</td>
-<td class="green">Broadcom/Qualcomm, or none</td>
-<td class="green">Broadcom/Qualcomm</td>
-</tr>
--->
-
-<!--
-<tr>
-<td class="legend ">PSDS - other devices with Broadcom chips</td>
-<td>n/a (no supported devices)</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="green">Broadcom</td>
-<td class="green">Broadcom <sup>default</sup>, or none</td>
-<td class="lred">Broadcom</td>
-</tr>
-
-<tr>
-<td class="legend">PSDS - devices with Qualcomm chips</td>
-<td class="green">GrapheneOS <sup>default</sup>, Qualcomm, or none</td>
-<td class="green">Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Qualcomm</td>
-<td class="green">Qualcomm <sup>default</sup>, or none</td>
-<td class="green">Qualcomm</td>
-</tr>
--->
 
 <tr>
 <td class="legend">Connectivity check/captive portal</td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="green">Multiple presets offered</td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="green">Kuketz.de</td>
-<td class="green">Murena.io</td>
+<td class="blue"><span class="tooltip">Kuketz.de (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
+<td class="green"><span class="tooltip">Murena.io (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 </tr>
@@ -486,11 +468,11 @@ font-size: x-small;
 
 <tr>
 <td class="legend">DNS server fallback</td>
-<td class="green">Cloudflare</td>
-<td class="green">Quad9</td>
-<td class="green">Cloudflare</td>
-<td class="green">Quad9</td>
-<td class="green">Quad9</td>
+<td class="blue">Cloudflare</td>
+<td class="blue">Quad9</td>
+<td class="blue">Cloudflare</td>
+<td class="blue">Quad9</td>
+<td class="blue">Quad9</td>
 <td class="red">Google</td>
 <td class="red">Google</td>
 </tr>
@@ -498,10 +480,10 @@ font-size: x-small;
 <tr>
 <td class="legend">Network time</td>
 <td class="green">GrapheneOS <sup>default</sup>, or none</td>
-<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
-<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
-<td class="lgreen"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
 </tr>
