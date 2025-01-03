@@ -357,36 +357,33 @@ font-size: x-small;
 
 
 <tr>
-<td class="legend semititle"><br />Degoogling (connections to Google)</td>
+<td class="legend semititle"><br />Degoogling (connections to Google)
+<span class="tooltip"><span style-" style="font-size: 50%; color: blue;">COLOURS</span><span class="tooltiptext">LOGIC FOR COLOUR SCHEME:
+<br /><br />
+RED<br />
+- connects to Google, no opt-out
+<br /><br />
+LIGHT RED<br />
+- connects to Google by default but function can be turned off (no option of using another provider)
+<br /><br />
+YELLOW<br />
+- function is off by default but can connect to Google if needed (no option of using another provider)
+<br /><br />
+LIGHT GREEN<br />
+- connects to Google by default but can be changed to another provider
+<br /><br />
+GREEN<br />
+- does not connect to Google by default but instead connects to the developer of the operating system (no third party needs to be trusted)<br />
+- multiple providers offered and user can decide<br />
+- no data shared with any provider
+<br /><br />
+BLUE<br />
+- does not connect to Google by default but instead connects to another (non-Google) third party provider
+<br /><br />
+WHITE<br />
+- function is not supported</span></span></td>
 <td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
-
-<!--
-LOGIC FOR COLOUR SCHEME:
-
-RED
-- connects to Google, no opt-out
-
-LIGHT RED
-- connects to Google by default but function can be turned off (no option of using another provider)
-
-YELLOW
-- function is off by default but can connect to Google if needed (no option of using another provider)
-
-LIGHT GREEN
-- connects to Google by default but can be changed to another provider
-
-GREEN
-- does not connect to Google by default but instead connects to the developer of the operating system (no third party needs to be trusted)
-- multiple providers offered and user can decide
-- no data shared with any provider
-
-BLUE
-- does not connect to Google by default but instead connects to another (non-Google) third party provider
-
-WHITE
-- function is not supported
--->
 
 <tr>
 <td class="legend">eSIM activation</td>
@@ -433,7 +430,7 @@ WHITE
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="blue"><span class="tooltip">Kuketz.de (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="green"><span class="tooltip">Murena.io (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
+<td class="green"><span class="tooltip">Murena.io (related to /e/) (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 <td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
 </tr>
@@ -700,7 +697,7 @@ WHITE
 <td class="green">Yes, incl. system app updates</td>
 <td class="yellow">Yes, but excl. system app updates</td>
 <td class="yellow">Yes, but excl. system app updates</td>
-<td class="lred" style="font-size: 90%;">w/ test keys; excl. system app updates</td>
+<td class="lred">w/ test keys; excl. system app updates</td>
 <td class="red">No</td>
 <td class="yellow">Yes, but excl. system app updates</td>
 </tr>
@@ -846,6 +843,16 @@ WHITE
 </tr>
 
 <tr>
+<td class="legend">Secure connection to network time server?</td>
+<td class="green">HTTPS via GrapheneOS server</td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+</tr>
+
+<tr>
 <td class="legend tooltip">Can disable USB-C and pogo pins data?<span class="tooltiptext">See here for details: <a href="https://github.com/eylenburg/eylenburg.github.io/issues/60" target="_blank" style="color: white;">[1]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/28" target="_blank" style="color: white;">[2]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/54" target="_blank" style="color: white;">[3]</a></span></td>
 <td class="green">Default (while locked), <a href="https://grapheneos.org/features#usb-c-port-and-pogo-pins-control" target="_blank">see here</a></td>
 <td class="red">No</td>
@@ -877,13 +884,23 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend">Secure connection to network time server?</td>
-<td class="green">HTTPS via GrapheneOS server</td>
-<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
-<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
-<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
-<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
-<td class="red">NTP w/o NTS and <span class="tooltip">carrier-based time<span class="tooltiptext">insecure because cellular networks lack proper authentication</span></span></td>
+<td class="legend">Auto-reboot timer for locked devices</td>
+<td class="green">Yes</td>
+<td class="lgreen tooltip">Yes, with flaws (no proper BFU state)<span class="tooltiptext">CalyxOS has a disabled-by-default port of an older GrapheneOS implementation of the auto-reboot feature, which was determined to not be as robust due to being able to bypass it by crashing `system_server`. It also lacks the memory clearing required to get the device properly back at rest for reboots. Therefore it can't return the device to a proper BFU (before first unlock) state like the GrapheneOS and iOS implementations.</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">2-factor fingerprint unlock</td>
+<td class="green">Yes (fingerprint + PIN), <a href="https://discuss.grapheneos.org/d/18585-2-factor-fingerprint-unlock-feature-is-now-fully-implemented" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
 </tr>
 
 <tr>
