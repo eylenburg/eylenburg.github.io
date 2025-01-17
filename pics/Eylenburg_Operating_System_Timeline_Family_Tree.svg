@@ -13,7 +13,7 @@
   version='1.1'
   width='2270'
   height='39110'
-  viewBox='0 0 2270 39110'
+  viewBox='0 0 2270 390110'
 >
 
 <title>Operating Systems</title>
@@ -818,11 +818,18 @@
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_NeXTSTEP__[NeXT__Computer])' />
   </marker>
   <linearGradient id='__fadeout_Rhapsody' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
-    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+    <stop stop-color='#ae80ae' offset='0' stop-opacity='1' />
+    <stop stop-color='#ae80ae' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Rhapsody' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Rhapsody)' />
+  </marker>
+  <linearGradient id='__fadeout_OpenDarwin' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_OpenDarwin' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_OpenDarwin)' />
   </marker>
   <linearGradient id='__fadeout_FreeDarwin' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
@@ -7022,7 +7029,8 @@ style='opacity:0.6;' >
   <path id='__line_Idris__[Whitesmiths]' d='M 760 2545 C 827.5,2545 782.5,2875 850,2875 L 850 2875 L 1147 2875' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Idris__[Whitesmiths])' />
   <path id='__line_tvOS__[Apple]' d='M 1892 3085 C 1920.5,3085 1901.5,3145 1930,3145 L 1930 3145 L 2227 3145' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_audioOS__[Apple]' d='M 1995 3085 C 2015.25,3085 2001.75,3115 2022,3115 L 2022 3115 L 2227 3115' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_OpenDarwin' d='M 1513 2965 C 1533.25,2965 1519.75,2935 1540,2935 L 1540 2935 L 2227 2935' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_OpenDarwin' d='M 1520 2965 C 1540.25,2965 1526.75,2935 1547,2935 L 1547 2935 L 1615 2935' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OpenDarwin)' />
+  <path id='__line_PureDarwin' d='M 1663 2965 C 1683.25,2965 1669.75,2935 1690,2935 L 1690 2935 L 2227 2935' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Mac__OS__X__Server__10__[Apple]' d='M 1515 3175 C 1515,3175 1515,3205 1515,3205 L 1515 3205 L 1837 3205' stroke='#ae80ae' style='stroke-width:4;' marker-end='url(#__stop_Mac__OS__X__Server__10__[Apple])' />
   <path id='__line_FreeDarwin' d='M 1633 2965 C 1653.25,2965 1639.75,2995 1660,2995 L 1660 2995 L 1687 2995' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_FreeDarwin)' />
   <path id='__line_bridgeOS__[Apple]' d='M 1937 2995 C 1954.25,2995 1942.75,3025 1960,3025 L 1960 3025 L 2227 3025' stroke='#8B008B' style='stroke-width:4;' />
@@ -7030,8 +7038,8 @@ style='opacity:0.6;' >
   <path id='__line_xrOS__[Apple]' d='M 2113 3085 C 2133.25,3085 2119.75,3055 2140,3055 L 2140 3055 L 2227 3055' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_iPhoneOS__[Apple]' d='M 1643 3175 C 1678.25,3175 1654.75,3085 1690,3085 L 1690 3085 L 2227 3085' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_macOS__X__[Apple]' d='M 1480 2965 C 1506.25,2965 1488.75,3175 1515,3175 L 1515 3175 L 2227 3175' stroke='#8B008B' style='stroke-width:4;' />
-  <path id='__line_Darwin__[Apple]' d='M 1453 2935 C 1473.25,2935 1459.75,2965 1480,2965 L 1480 2965 L 2227 2965' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Rhapsody' d='M 1403 2905 C 1423.25,2905 1409.75,2935 1430,2935 L 1430 2935 L 1515 2935' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Rhapsody)' />
+  <path id='__line_Darwin__[Apple]' d='M 1453 2935 C 1473.25,2935 1459.75,2965 1480,2965 L 1480 2965 L 2227 2965' stroke='#8B008B' style='stroke-width:4;' />
+  <path id='__line_Rhapsody' d='M 1403 2905 C 1423.25,2905 1409.75,2935 1430,2935 L 1430 2935 L 1515 2935' stroke='#ae80ae' style='stroke-width:4;' marker-end='url(#__stop_Rhapsody)' />
   <path id='__line_NeXTSTEP__[NeXT__Computer]' d='M 1044 3355 C 1123.5,3355 1070.5,2905 1150,2905 L 1150 2905 L 1507 2905' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_NeXTSTEP__[NeXT__Computer])' />
   <path id='__line_MachTen__[Tenon]' d='M 1156 3355 C 1196.5,3355 1169.5,3235 1210,3235 L 1210 3235 L 1897 3235' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MachTen__[Tenon])' />
   <path id='__line_Mach386__[mt__Xinu]' d='M 1198 3355 C 1233.25,3355 1209.75,3265 1245,3265 L 1245 3265 L 1342 3265' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Mach386__[mt__Xinu])' />
@@ -8238,8 +8246,8 @@ style='opacity:0.6;' >
   <circle id='__dot_Idris__[Whitesmiths]' cx='850' cy='2875' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_tvOS__[Apple]' cx='1930' cy='3145' r='10' fill='#8B008B' stroke='none' />
   <circle id='__dot_audioOS__[Apple]' cx='2022' cy='3115' r='10' fill='#8B008B' stroke='none' />
-  <circle id='__dot_OpenDarwin' cx='1540' cy='2935' r='10' fill='#8B008B' stroke='none' />
-    <circle cx='1690' cy='2935' r='5' fill='#8B008B' stroke='none' />
+  <circle id='__dot_OpenDarwin' cx='1547' cy='2935' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_PureDarwin' cx='1690' cy='2935' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Mac__OS__X__Server__10__[Apple]' cx='1515' cy='3205' r='10' fill='#ae80ae' stroke='none' />
   <circle id='__dot_FreeDarwin' cx='1660' cy='2995' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_bridgeOS__[Apple]' cx='1960' cy='3025' r='10' fill='#8B008B' stroke='none' />
@@ -8251,9 +8259,9 @@ style='opacity:0.6;' >
   <circle id='__dot_macOS__X__[Apple]' cx='1515' cy='3175' r='10' fill='#8B008B' stroke='none' />
     <circle cx='1810' cy='3175' r='5' fill='#8B008B' stroke='none' />
     <circle cx='1960' cy='3175' r='5' fill='#8B008B' stroke='none' />
-  <circle id='__dot_Darwin__[Apple]' cx='1480' cy='2965' r='10' fill='#8B0000' stroke='none' />
-  <circle id='__dot_Rhapsody' cx='1430' cy='2935' r='10' fill='#FF8585' stroke='none' />
-    <circle cx='1455' cy='2935' r='5' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Darwin__[Apple]' cx='1480' cy='2965' r='10' fill='#8B008B' stroke='none' />
+  <circle id='__dot_Rhapsody' cx='1430' cy='2935' r='10' fill='#ae80ae' stroke='none' />
+    <circle cx='1455' cy='2935' r='5' fill='#ae80ae' stroke='none' />
   <circle id='__dot_NeXTSTEP__[NeXT__Computer]' cx='1150' cy='2905' r='10' fill='#FF8585' stroke='none' />
     <circle cx='1360' cy='2905' r='5' fill='#FF8585' stroke='none' />
   <circle id='__dot_MachTen__[Tenon]' cx='1210' cy='3235' r='10' fill='#FF8585' stroke='none' />
@@ -9825,10 +9833,10 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1940' y='3141'  >tvOS [Apple]</text></a>
   <rect x='2031' y='3102' width='99' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2032' y='3111'  >audioOS [Apple]</text></a>
-  <rect x='1549' y='2922' width='72' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1550' y='2931'  >OpenDarwin</text></a>
-    <rect x='1694' y='2922' width='69' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1695' y='2931' >PureDarwin</text></a>
+  <rect x='1556' y='2922' width='72' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1557' y='2931'  >OpenDarwin</text></a>
+  <rect x='1699' y='2922' width='69' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1700' y='2931'  >PureDarwin</text></a>
   <rect x='1524' y='3192' width='168' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1525' y='3201'  >Mac OS X Server 10 [Apple]</text></a>
   <rect x='1669' y='2982' width='67' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
