@@ -13,7 +13,7 @@
   version='1.1'
   width='2270'
   height='39110'
-  viewBox='0 0 2270 39110'
+  viewBox='2270 39110'
 >
 
 <title>Operating Systems</title>
@@ -116,6 +116,9 @@
   </marker>
   <marker id='__connector_21' stroke='none' markerUnits='userSpaceOnUse' style='overflow:visible;'>
     <use xlink:href='#__connectors_start' fill='#8B0000'  />
+  </marker>
+  <marker id='__connector_22' stroke='none' markerUnits='userSpaceOnUse' style='overflow:visible;'>
+    <use xlink:href='#__connectors_start' fill='#0000CD'  />
   </marker>
 <rect id='__fadeout' height='1' width='7' y='-0.5' x='0'/>  <linearGradient id='__fadeout_USG' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
@@ -5521,6 +5524,13 @@
   <marker id='__stop_SkyOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_SkyOS)' />
   </marker>
+  <linearGradient id='__fadeout_Solar__OS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
+    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_Solar__OS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Solar__OS)' />
+  </marker>
   <linearGradient id='__fadeout_Sombrero' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#AAA' offset='0' stop-opacity='1' />
     <stop stop-color='#AAA' offset='1' stop-opacity='0' />
@@ -6914,6 +6924,7 @@ style='opacity:0.6;' >
   <line x1='910' y1='36717' x2='910' y2='37915' stroke='#000' stroke-width='3' stroke-dasharray='3,3' marker-start='url(#__connector_19)' />
   <line x1='1507' y1='16677' x2='1507' y2='16705' stroke='#8B4513' stroke-width='3' stroke-dasharray='3,3' marker-start='url(#__connector_20)' />
   <line x1='1270' y1='4583' x2='1270' y2='1345' stroke='#8B0000' stroke-width='3' stroke-dasharray='3,3' marker-start='url(#__connector_21)' />
+  <line x1='2215' y1='11693' x2='2215' y2='11365' stroke='#0000CD' stroke-width='3' stroke-dasharray='3,3' marker-start='url(#__connector_22)' />
 </g>
 
 <g inkscape:label='Lines' inkscape:groupmode='layer' id='layer_lines'
@@ -8015,7 +8026,7 @@ style='opacity:0.6;' >
   <path id='__line_SIPROS__[Control__Data]' d='M 340 35635 L 370 35635' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_SIPROS__[Control__Data])' />
   <path id='__line_SkyOS' d='M 1417 35665 L 1750 35665' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_SkyOS)' />
   <path id='__line_Snowdrop__OS' d='M 1960 35695 L 2227 35695' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Solar__OS' d='M 1600 35725 L 2227 35725' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_Solar__OS' d='M 1600 35725 L 2020 35725' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Solar__OS)' />
   <path id='__line_Sombrero' d='M 1360 35755 L 1690 35755' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Sombrero)' />
   <path id='__line_S-OS' d='M 1060 35785 L 1300 35785' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_S-OS)' />
   <path id='__line_SpecOS' d='M 2210 35815 L 2220 35815' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_SpecOS)' />
@@ -9456,7 +9467,7 @@ style='opacity:0.6;' >
   <circle id='__dot_SIPROS__[Control__Data]' cx='340' cy='35635' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_SkyOS' cx='1417' cy='35665' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Snowdrop__OS' cx='1960' cy='35695' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_Solar__OS' cx='1600' cy='35725' r='10' fill='#000' stroke='none' />
+  <circle id='__dot_Solar__OS' cx='1600' cy='35725' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Sombrero' cx='1360' cy='35755' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_S-OS' cx='1060' cy='35785' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_SpecOS' cx='2210' cy='35815' r='10' fill='#AAA' stroke='none' />
