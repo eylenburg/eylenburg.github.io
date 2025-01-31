@@ -197,7 +197,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 24 January 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 31 January 2025</p>
 
 <table class="comparison">
 
@@ -416,7 +416,18 @@ WHITE<br />
 </tr>
 
 <tr>
-<td class="legend tooltip">PSDS - Google Pixel 6 and later<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="legend tooltip">PSDS/XTRA <span style="font-size: 75%;">("Standard" depends on GPS chipset)</span><span class="tooltiptext">The standard server used depends on the GPS chipset, which is usually Qualcomm, Broadcom, or Samsung, or in the case of Tensor chips (Google Pixel 6 and later) they connect to a Google server. Some ROMs override these settings.<br /><a href="https://web.archive.org/web/20250111112822/https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">GrapheneOS <sup>default</sup>, <span class="tooltip">Standard<span class="tooltiptext">Google / Broadcom / Qualcomm / Samsung depending on the device. At the moment, only Google Pixels are supported by GrapheneOS, for which the standard connection is Google (since the Pixel 6)</span></span>, or none</td>
+<td class="blue"><span class="tooltip">Standard (excl. Google)<span class="tooltiptext">Broadcom / Qualcomm / Samsung depending on the device, for Google Pixel 6 and later (Tensor chip) the standard connection to Google is replaced with a connection to Broadcom instead <a href="https://www.kuketz-blog.de/calyxos-de-googled-geht-anders-custom-roms-teil2/" target="_blank">(source)</a></span></span> <sup>default</sup>, or none</td>
+<td class="blue"><span class="tooltip">Standard (excl. Google)<span class="tooltiptext">Broadcom / Qualcomm / Samsung depending on the device, for Google Pixel 6 and later (Tensor chip) the standard connection to Google is replaced with a connection to Broadcom instead <a href="https://www.kuketz-blog.de/iodeos-datenschutzfreundlich-aber-abstriche-bei-der-sicherheit-custom-roms-teil3/" target="_blank">(source)</a></span></span> <sup>default</sup>, or none</td>
+<td class="yellow">None <sup>default</sup>, or <span class="tooltip">Standard<span class="tooltiptext">Google / Broadcom / Qualcomm / Samsung depending on the device</span></span></td>
+<td class="lred"><span class="tooltip">Standard<span class="tooltiptext">Google / Broadcom / Qualcomm / Samsung depending on the device</span></span> <sup>default</sup>, or none</td>
+<td class="red"><span class="tooltip">Standard<span class="tooltiptext">Google / Broadcom / Qualcomm / Samsung depending on the device</span></span></td>
+</tr>
+
+<!--
+<tr>
+<td class="legend tooltip">PSDS - Google Pixel 6 and later (Tensor SoC)<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://web.archive.org/web/20250111112822/https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="blue">Broadcom <sup>default</sup>, or none</td>
 <td class="blue">Broadcom <sup>default</sup>, or none</td>
@@ -424,6 +435,17 @@ WHITE<br />
 <td class="lred">Google <sup>default</sup>, or none</td>
 <td class="red">Google</td>
 </tr>
+
+<tr>
+<td class="legend tooltip">PSDS - other phones (no Tensor SoC)<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://web.archive.org/web/20250111112822/https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="green">GrapheneOS <sup>default</sup>, Standard (Qualcomm/Broadcom/Samsung), or none</td>
+<td class="blue">Standard (Qualcomm/Broadcom/Samsung) <sup>default</sup>, or none</td>
+<td class="blue">Standard (Qualcomm/Broadcom/Samsung) <sup>default</sup>, or none</td>
+<td class="yellow">None <sup>default</sup>, or Standard (Qualcomm/Broadcom/Samsung)</td>
+<td class="blue">Standard (Qualcomm/Broadcom/Samsung) <sup>default</sup>, or none</td>
+<td class="blue">Standard (Qualcomm/Broadcom/Samsung)</td>
+</tr>
+-->
 
 <tr>
 <td class="legend">Connectivity check/captive portal</td>
@@ -627,12 +649,12 @@ WHITE<br />
 </tr>
 
 <tr>
-<td class="legend tooltip">PSDS: user agent sent?<span class="tooltiptext">May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="legend tooltip">Qualcomm XTRA: user agent sent?<span class="tooltiptext">Only relevant for phones with Qualcomm GPS chips. Doesn't apply to Broadcom or Samsung. May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
 <td class="green">No</td>
-<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
-<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
-<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
-<td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
+<td class="yellow tooltip">Partially (for Qualcomm chips)<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
+<td class="yellow tooltip">Partially (for Qualcomm chips)<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
+<td class="yellow tooltip">Partially (for Qualcomm chips)<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
+<td class="yellow tooltip">Partially (for Qualcomm chips)<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
 <td class="lred">for Qualcomm GPS chips</td>
 </tr>
 
@@ -674,6 +696,16 @@ WHITE<br />
 <td class="yellow">Available as option</td>
 <td class="red">No</td>
 <td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Location tagging for photos</td>
+<td class="green">Opt-in</td>
+<td class="green">Opt-in, <a href=https://calyxos.org/docs/guide/security/location/#exif-metadata" target="_blank">see here for more info</a></td>
+<td class="green">Opt-in</td>
+<td class="green">Opt-in</td>
+<td class="green">Opt-in</td>
+<td class="lgreen">Opt-out</td>
 </tr>
 
 <tr>
