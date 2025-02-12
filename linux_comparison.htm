@@ -194,14 +194,18 @@ table.yeartable tr td img { max-width: 100px; max-height: 100px; min-width: 75px
 
 <p>It's a well known fact that there's hundreds of different Linux distributions, with many of them gaining sudden popularity or falling back into relative obscurity. As of 2023, I'd say the most important distributions - those that are here to stay for another decade at least and those that have a significant mindshare on the desktop - are just five: Debian, Ubuntu, Fedora, openSUSE, and Arch. Everything else is more of a niche distribution, be it for servers (RHEL, SLE), nerds and greybeards (Gentoo, Slackware), or to make an existing general-purpose distro slightly more user-friendly for novice users (Zorin, pop_OS).<br /><br >
 Distributions mostly differ in their package manager and their default choices (desktop environment and so on). Furthermore, there are clearly different tiers of difficulty from beginner-level to expert, for example like this:<br /><br />
-<em>Beginners. Easy to use and work out of the box.</em>
-<ul><li>Ubuntu / Kubuntu</li><li>Ubuntu-based distros like Mint, Pop_OS, or Zorin</li><li>Solus</li></ul>
-<em>Beginners to Intermediate. Same as above but some post-install tweaks needed (e.g. codecs, Nvidia).</em>
-<ul><li>Fedora</li><li>openSUSE</li><li>Mageia</li></ul>
-<em>Advanced users. Anyone can use them but to set everything up you need to be willing to read the documentation and get comfortable with the command line.</em>
-<ul><li>Debian</li><li>RHEL</li><li>Arch</li></ul>
-<em>Experts. Same as above but there is additional distro-specific knowledge to learn.</em>
-<ul><li>Slackware</li><li>NixOS</li><li>Gentoo</li></ul></p>
+
+<em><strong>Beginners - big name distros.</strong> Easy to use, most things can be done through a GUI, and everything works out of the box. Some distros require a few one-off post-install tweaks (e.g. proprietary codecs, proprietary Nvidia drivers).</em>
+<ul><li>Ubuntu/Kubuntu</li><li>Ubuntu-based distros like Mint, Pop_OS, or Zorin.</li><li>Fedora</li><li>openSUSE</li></ul>
+
+<em><strong>Beginners - other distros.</strong> Same as above, but with less mindshare and third party support. This means proprietary app developers may not build binaries for these distributions, hardware and software may not get tested on these distributions, and generally there will be less support and fewer tutorials available online. These things don't mean the distro itself is less user-friendly, but it can make the transition for absolute beginners coming from Windows or macOS a bit harder.</em>
+<ul><li>OpenMandriva</li><li>Mageia</li><li>PCLinuxOS</li><li>Solus</li></ul>
+
+<em><strong>Advanced users</strong>. Anyone can use them but to set everything up you need to be willing to read the documentation and get comfortable with the command line and editing config files.</em>
+<ul><li>Arch</li><li>Debian</li><li>Red Hat Enterprise Linux and the RHELatives (like CentOS, Rocky, Alma)</li><li>SUSE Linux Enterprise</li></ul>
+
+<em><strong>Experts</strong>. Same as above but there is additional distro-specific knowledge to learn.</em>
+<ul><li>Slackware - no dependency resolution for packages</li><li>Gentoo - source-based distribution</li><li>Alpine - doesn't use GNU userland</li><li>NixOS and Guix System - declaratively configured using their own programming languages</li></ul></p>
 <p>For this comparison I have focused mostly on "original" distributions rather than forks as there's often only superficial differences between closely related distros. For example, the only differences between Ubuntu and Mint would be that Mint is only available for x86_64, that fewer desktop environments are available "preinstalled" for Mint, that Mint doesn't have the longer update support that Ubuntu Pro offers, and that Mint preinstalls Flatpak instead of Snap.</p>
 
 <h2 class="center">Comparison of Linux Distributions</h2>
