@@ -210,9 +210,29 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 10 December 2024</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 14 February 2025</p>
 
-<table class="comparison">
+<div>
+    <label><input type="checkbox" checked onchange="toggleColumn(1)"> Debian</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(2)"> Ubuntu</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(3)"> OpenSUSE</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(4)"> SUSE Linux Enterprise</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(5)"> Fedora</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(6)"> Red Hat Enterprise Linux</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(7)"> OpenMandriva</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(8)"> Mageia</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(9)"> PCLinuxOS</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(10)"> Arch</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(11)"> Slackware</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(12)"> Gentoo</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(13)"> Alpine</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(14)"> Void</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(15)"> NixOS</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(16)"> Guix System</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(17)"> Solus</label>
+</div>
+
+<table class="comparison" id="distrocomp">
 
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
@@ -233,31 +253,28 @@ Distributions mostly differ in their package manager and their default choices (
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--distrowidth);">
+</colgroup>
 
 <thead>
 <tr>
-<td class="legend" rowspan="2"></td>
-<td rowspan="2">Debian</td>
-<td rowspan="2">Ubuntu</td>
+<td class="legend"></td>
+<td>Debian</td>
+<td>Ubuntu</td>
 <td>openSUSE</td>
-<td rowspan="2">SUSE Linux Enterprise</td>
+<td>SUSE Linux Enterprise</td>
 <td>Fedora</td>
-<td rowspan="2">Red Hat Enterprise Linux</td>
-<td rowspan="2">Open<wbr>Mandriva<br /><span style="font-size: smaller;">ROME</span></td>
-<td rowspan="2">Mageia</td>
-<td rowspan="2">PCLinuxOS</td>
-<td rowspan="2">Arch</td>
-<td rowspan="2">Slackware</td>
-<td rowspan="2">Gentoo</td>
-<td rowspan="2">Alpine</td>
-<td rowspan="2">Void</td>
-<td rowspan="2">NixOS</td>
-<td rowspan="2">Guix System</td>
-<td rowspan="2">Solus</td>
-</tr>
-<tr>
-<td><table class="split"><tr><td style="word-break: break-all; font-size: smaller;">Tumble&shy;weed</td><td style="font-size: smaller;">Micro<wbr>OS</td></tr></table></td>
-<td><table class="split"><tr><td style="font-size: smaller;">Work&shy;station</td><td style="font-size: smaller;">Ato&shy;mic Desk&shy;top</td></tr></table></td>
+<td>Red Hat Enterprise Linux</td>
+<td>Open<wbr>Mandriva<br /><span style="font-size: smaller;">ROME</span></td>
+<td>Mageia</td>
+<td>PCLinuxOS</td>
+<td>Arch</td>
+<td>Slackware</td>
+<td>Gentoo</td>
+<td>Alpine</td>
+<td>Void</td>
+<td>NixOS</td>
+<td>Guix System</td>
+<td>Solus</td>
 </tr>
 </thead>
 
@@ -294,9 +311,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td>Independent</td>
 <td>Debian</td>
 <td>Independent</td>
-<td>openSUSE</td>
+<td>openSUSE <br />(soft fork)</td>
 <td>Independent</td>
-<td>Fedora</td>
+<td>Fedora <br />(soft fork)</td>
 <td>Independent</td>
 <td>Independent (forked from Mandriva)</td>
 <td>Independent (forked from Mandriva)</td>
@@ -314,9 +331,11 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Initial release</td>
 <td>1993</td>
 <td>2004</td>
-<td colspan="2">1994 (Suse)</td>
-<td colspan="2">1995 (Red Hat)</td>
-<td>1998 (Mandrake)</td>
+<td>1994 (as <br /><em>S.u.S.E.</em>)</td>
+<td>1994 (as <br /><em>S.u.S.E.</em>)</td>
+<td>1995 (as <br /><em>Red Hat</em>)</td>
+<td>1995 (as <br /><em>Red Hat</em>)</td>
+<td>1998 (as <br /><em>Mandrake</em>)</td>
 <td>2010</td>
 <td>2003</td>
 <td>2002</td>
@@ -396,7 +415,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Philosophy</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -487,7 +506,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Release schedule &amp; Reliability</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -691,7 +710,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Ease of use (default setup)</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -803,7 +822,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Defaults</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -936,7 +955,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Suppor&shy;ted desktops:</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1114,7 +1133,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Package management</td>
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -1946,6 +1965,20 @@ Distributions mostly differ in their package manager and their default choices (
 
 
 <script src="bottom.js "></script>
+
+<script>
+    function toggleColumn(columnIndex) {
+        const table = document.getElementById("distrocomp");
+        const rows = table.rows;
+
+        for (let i = 0; i < rows.length; i++) {
+            const cell = rows[i].cells[columnIndex];
+            if (cell) {
+                cell.style.display = cell.style.display === "none" ? "" : "none";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
