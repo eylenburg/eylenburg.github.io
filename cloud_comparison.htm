@@ -249,7 +249,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 10 January 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 28 February 2025</p>
 
 
 <table id="comparisonTable" class="comparison">
@@ -444,7 +444,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- self-hosting -->
 <td class="yes">Yes</td><!-- encrypted at rest -->
 <!-- File sync -->
-<td class="no">No</td><!-- E2EE -->
+<td class="mixed tooltip">"Business Plus", limited features<span class="tooltiptext">Only available with the "Business Plus" subscription. Has important limitations in use, such as end-to-end encryption not being available for the Dropbox mobile app or no upload/download through the Dropbox API.</span></td><!-- E2EE -->
 <td class="mixed">API</td><!-- WebDAV or API -->
 <td class="yes">Yes (Microsoft Office Online)</td><!-- access/edit in browser -->
 <td class="yes">Yes</td><!--share files -->
@@ -1213,7 +1213,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product NoMSO NonFree NoSelfHosting NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
+<tr class="product NonFree NoSelfHosting NoAndroidSync NoPIM NoPIMEncrypt NoDAV NoEmail NoEmailEncrypt NoIMAP">
 <td>Tresorit</td>
 <td><img src="pics/logos/cloud/tresorit.png" class="icon" /></td><!-- Logo -->
 <td>Tresorit AG</td><!-- Developer -->
@@ -1224,7 +1224,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <!-- File sync -->
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
-<td class="no">No (but can manage files in browser)</td><!-- access/edit in browser -->
+<td class="yes tooltip">Yes (Microsoft Office Online)<span class="tooltiptext">Integration with Microsoft Office 365. Files are decrypted in the browser, then sent to Office Online for editing, then re-encrypted and uploaded back to Tresorit's cloud. Microsoft will be able to see the files, but not Tresorit.</span></td><!-- access/edit in browser -->
 <td class="yes">Yes</td><!--share files -->
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="no">No</td><!-- mobile sync -->
