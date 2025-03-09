@@ -150,6 +150,12 @@ max-width: 150px;
 max-height: 75px;
 }
 
+@media (prefers-color-scheme: dark) {
+    #grapheneos-logo {
+    filter: invert(88%);
+    }
+}
+
 td.green,
 td.lgreen,
 td.red,
@@ -227,7 +233,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend"></td>
-<td><img class="logo" src="pics/logos/android/grapheneos.svg" /></td>
+<td><img class="logo" id="grapheneos-logo" src="pics/logos/android/grapheneos.svg" /></td>
 <td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/calyxos.jpg" /></td>
 <td style="vertical-align: middle;"><img class="logo" src="pics/logos/android/iodeos.png" /></td>
 <td><img class="logo" src="pics/logos/android/eos.png" /></td>
