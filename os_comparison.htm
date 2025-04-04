@@ -196,7 +196,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 18 February 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 4 April 2025</p>
 
 
 <table class="comparison">
@@ -1603,7 +1603,7 @@ Dragonfly missing
 
 <tr>
 <td>Can be used without online account</td>
-<td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workaround of opening command prompt via Shift+F10 and entering `OOBE\BYPASSNRO`</span></td>
+<td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workaround of opening command prompt via Shift+F10, entering `regedit` to open the Registry Editor, navigating to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE` and creating a new `DWORD (32-it)` value named `BypassNRO` with value data `1`.</span></td>
 <td class="almost tooltip">No App Store<span class="tooltiptext">cannot use App Store if not logged in with Apple account, but can still install apps from other sources</span></td>
 <td class="notreally tooltip">Very limited<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
 <td class="almost tooltip">No Play Store<span class="tooltiptext">cannot use Play Store if not logged in with Google account, but can still install apps from other sources</span></td>
