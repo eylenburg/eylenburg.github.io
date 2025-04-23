@@ -21,7 +21,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 14 * var(--columnwidth) + var(--lastwidth));
+width: calc(var(--legendwidth) + 12 * var(--columnwidth) + var(--lastwidth));
 }
 
 td {
@@ -172,16 +172,8 @@ background-color: #F2F2F2;
 <p>First of all, altchans must use the English language, at least on certain boards. <br /><br />Second, if statistics for posts per hour/day are available, I have ignored all boards with either less than 1 post per hour or less than 24 posts per day. For those altchans where no statistics are available (which will require manually counting the posting frequency!), I have excluded all boards that, when I checked, either had zero posts in the last hour or less than 10 threads bumped in the last 24 hours.
 <br /><br />Third, low-effort boards like /b/ and /pol/ don't count to "qualify" an altchan; if it doesn't have any active interest &amp; hobby boards, I don't bother listing it separately.
 <br /><br />
-This way I was able to exclude several Altchans where not a single board (except maybe /b/ or its equivalent) was fast enough to be included, namely:
-</p>
-<ul>
-<li>4chon.me</li>
-<li>28chan.org</li>
-<li>22chan.org</li>
-<li>Hikari3.ch</li>
-<li>Trashchan.xyz</li>
-<li>and many more!</li>
-</ul>
+This way I was able to exclude several Altchans where not a single board (except maybe /b/ or its equivalent) was fast enough to be included, for example 22chan.org, 28chan.org, 4chon.me, hikari3.ch, trashchan.xyz, and many more.</p>
+
 <p>Note that the posting activity is always just a snapshot and will fluctuate during different times of the day or might be higher on certain days e.g. weekends. Also: not all of this traffic is from 4chan refugees, some of the boards already had their own large communities before, though surely have seen increased activity since 4chan went offline.</p>
 
 <p><strong style="background-color: gold;">I intend to update this table regularly to see the changes over time.</strong></p>
@@ -211,16 +203,12 @@ This way I was able to exclude several Altchans where not a single board (except
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--lastwidth);">
 </colgroup>
 
 <thead>
 <tr style="height: 1px; display: none;">
 <td style="width: var(--legendwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
@@ -241,24 +229,38 @@ This way I was able to exclude several Altchans where not a single board (except
 <th class="blue">4chan.org<br />(pre-hack)</th>
 <th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, all Altchan boards together</em></th>
 <th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, top Altchan board</em></th>
-<th>Soyjak&shy;.st</th>
-<th>8chan&shy;.moe</th>
-<th>Kohlchan&shy;.net</th>
-<th>8kun&shy;.top</th>
-<th>Ylilauta&shy;.org</th>
-<th>Ourchan&shy;.org</th>
-<th>zzzchan&shy;.xyz</th>
-<th>7chan&shy;.org</th>
-<th>TVch&shy;.moe</th>
-<th>Smuglo&shy;.li</th>
-<th>Endchan&shy;.org</th>
+<th>Soyjak Party</th>
+<th>8chan</th>
+<th>Kohlchan</th>
+<th>8kun</th>
+<th>Ylilauta</th>
+<th>Ourchan</th>
+<th>Altchan Webring</th>
+<th>7chan</th>
+<th>Endchan</th>
 <th>Others</th>
 </tr>
 
 </thead>
 <tbody>
 
-<tr><td class="semititle"><br />  </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="semititle"><br />  </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+<td>URL</td>
+<td class="line">4chan.org</td>
+<td></td><td></td> <!-- for the % of 4chan columns -->
+<td class="line">soyjak.st</td>
+<td class="line">8chan.moe</td>
+<td class="line">kohlchan.net</td>
+<td class="line">8kun.top</td>
+<td class="line">ylilauta.org</td>
+<td class="line">ourchan.org</td>
+<td class="line">smuglo.li, tvch.moe, zzzchan.xyz, ...</td>
+<td class="line">7chan.org</td>
+<td class="line">endchan.org</td>
+<td class="line"></td>
+</tr>
 
 <tr>
 <td>Software used</td>
@@ -270,10 +272,8 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line">Vichan<!--OpenIB (fork of Vichan)--></td>
 <td class="line">yboard</td>
 <td class="line">jschan</td>
-<td class="line">jschan</td>
+<td class="line">(various)</td>
 <td class="line">Kusaba X</td>
-<td class="line">Vichan<!--NPFchan (fork of Vichan)--></td>
-<td class="line">Vichan<!--Infinity (fork of Vichan)--></td>
 <td class="line">Lynxchan<!--Infinity Now (fork of Lynxchan)--></td>
 <td class="line"></td>
 </tr>
@@ -291,12 +291,10 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line">Published PPH</td>
 <td class="line" style="color: red;">Manual counting</td>
 <td class="line">Published PPH</td>
-<td class="line">Published PPH</td>
-<td class="line">Published PPH</td>
 <td class="line" style="color: red;">Manual counting</td>
 </tr>
 
-<tr><td class="semititle"><br />  Posts per day:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="semititle"><br />  Posts per day:</td><td></td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td>Anime</td>
@@ -308,10 +306,8 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line">37<br />/a/</td>
+<td class="line">72 + 37<br />smug + zzz /a/</td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line">72<br />/a/</td>
 <td class="line"></td>
 <td class="line"></td>
 </tr>
@@ -322,8 +318,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td>7%</td><td>8%</td> <!-- for the % of 4chan columns -->
 <td class="green">672<br />/biz/</td>
 <td class="line">48<br />/biz/</td>
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -344,9 +338,7 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">24<br />/oven/</td>
+<td class="line">24<br />tvch.moe /oven/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -355,7 +347,7 @@ This way I was able to exclude several Altchans where not a single board (except
 <tr>
 <td>Comics &amp; Cartoons</td>
 <td class="line">13,184<br />/co/</td>
-<td>1%</td><td>1%</td> <!-- for the % of 4chan columns -->
+<td>6%</td><td>6%</td> <!-- for the % of 4chan columns -->
 <td class="line"></td>
 <td class="line">24<br />/co/</td>
 <td class="line"></td>
@@ -365,36 +357,14 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">120<br />plus4chan.org /co/</td>
+<td class="green">790<br />plus4chan.org /co/</td>
 </tr>
 
 <tr>
 <td>Fitness</td>
 <td class="line">3534<br />/fit/</td>
-<td rowspan="2" style="vertical-align: middle;">8%</td><td rowspan="2" style="vertical-align: middle;">8%</td> <!-- for the % of 4chan columns -->
-<td class="green" rowspan="2" style="vertical-align: middle;">1,560<br /><span class="tooltip">/fit/<span class="tooltiptext">includes sports as well</span></span></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Sports</td>
-<td class="line">16,184<br />/sp/</td>
- <!-- for the % of 4chan columns -->
-
-<td class="lgreen">96<br />/sports/</td>
-<td class="line"></td>
+<td>19%</td><td>19%</td> <!-- for the % of 4chan columns -->
+<td class="green">686<br /><span class="tooltip">/fit/ (partially)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for actual 4chan /fit/ content based on the number of relevant threads in the catalog</span></span></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -419,8 +389,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 <td class="line">24<br />Lainchain.org /Ω/ + /λ/</td>
 </tr>
 
@@ -430,8 +398,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td>2%</td><td>4%</td> <!-- for the % of 4chan columns -->
 <td class="lgreen">96<br />/k/</td>
 <td class="line">48<br />/k/</td>
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -456,32 +422,12 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>History</td>
-<td class="line">2,154<br />/his/</td>
-<td rowspan="2" style="vertical-align: middle;">5%</td><td rowspan="2" style="vertical-align: middle;">5%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td rowspan="2" style="vertical-align: middle;" class="lgreen">216<br />Petrarchan.com /pt/</td>
 </tr>
 
 <tr>
 <td>Literature</td>
 <td class="line">2,404<br />/lit/</td>
- <!-- for the % of 4chan columns -->
+<td>9%</td><td>9%</td> <!-- for the % of 4chan columns -->
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -491,24 +437,52 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-
+<td class="green">216<br />Petrarchan.com /pt/</td>
 </tr>
 
 <tr>
-<td>Paranormal</td>
-<td class="line">5,985<br />/x/</td>
-<td>9%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">240<br />/x/</td>
-<td class="green">528<br />/x/</td>
+<td>Sports</td>
+<td class="line">16,184<br />/sp/</td>
+<td>4%</td><td>8%</td> <!-- for the % of 4chan columns -->
+<td class="lgreen">873<br /><span class="tooltip">/fit/ (partially)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for /sp/ and /pw/ based on the number of relevant threads in the catalog</span></span></td>
+<td class="lgreen">96<br />/sports/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="lgreen">98<br />/x/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
+<td class="line"></td>
+<td class="green">1,058<br />Wapchan.org /sp/</td>
+</tr>
+
+<tr>
+<td>Traditional Games</td>
+<td class="line">7,016<br />/tg/</td>
+<td>3%</td><td>4%</td> <!-- for the % of 4chan columns -->
+<td class="line"></td>
+<td class="lgreen">192<br />/tg/</td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="lgreen">96<br />smuglo.li /tg/</td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+</tr>
+
+<tr>
+<td>Television &amp; Film</td>
+<td class="line">23,475<br />/tv/</td>
+<td>7%</td><td>9%</td> <!-- for the % of 4chan columns -->
+<td class="green">1,728<br />/tv/</td>
+<td class="lgreen">96<br />/tv/</td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line">70<br />/tv/</td>
+<td class="lgreen">192<br />tvch.moe /tv/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -524,10 +498,8 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line">74<br />/v/</td>
-<td class="lgreen">268<br />/v/</td>
+<td class="lgreen">268<br />zzzchan.xyz /v/</td>
 <td class="lgreen">216<br />/v/</td>
-<td class="line"></td>
-<td class="line"></td>
 <td class="line">24<br />/cog/</td>
 <td class="line"></td>
 </tr>
@@ -546,41 +518,19 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
-<td>Traditional Games</td>
-<td class="line">7,016<br />/tg/</td>
-<td>3%</td><td>4%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="lgreen">192<br />/tg/</td>
-<td class="line"></td>
-<td class="line"></td>
+<td>Paranormal</td>
+<td class="line">5,985<br />/x/</td>
+<td>9%</td><td>14%</td> <!-- for the % of 4chan columns -->
+<td class="lgreen">240<br />/x/</td>
+<td class="green">528<br />/x/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
+<td class="lgreen">98<br />/x/</td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">96<br />/tg/</td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Television &amp; Film</td>
-<td class="line">23,475<br />/tv/</td>
-<td>7%</td><td>9%</td> <!-- for the % of 4chan columns -->
-<td class="green">1,728<br />/tv/</td>
-<td class="lgreen">96<br />/tv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">70<br />/tv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">192<br />/tv/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -590,8 +540,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td>Animals &amp; Nature</td>
 <td class="line">477<br />/an/</td>
 <td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -618,8 +566,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
@@ -628,6 +574,20 @@ This way I was able to exclude several Altchans where not a single board (except
 <td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
 <td class="line"></td>
 <td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+</tr>
+
+<tr>
+<td>History</td>
+<td class="line">2,154<br />/his/</td>
+<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -654,16 +614,12 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
 <td>Outdoors</td>
 <td class="line">141<br />/out/</td>
 <td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -690,16 +646,12 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
 <td>Science</td>
 <td class="line">804<br />/sci/</td>
 <td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -726,16 +678,12 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
 <td>Travel</td>
 <td class="line">281<br />/trv/</td>
 <td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -762,8 +710,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
 </tr>
 
 <tr>
@@ -776,9 +722,7 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="lgreen">2,616<br />/pol/</td>
 <td class="line"></td>
 <td class="lgreen">1,233<br />/pol/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">24<br />/dup/</td>
+<td class="line">24<br />tvch.moe /dup/</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -790,8 +734,6 @@ This way I was able to exclude several Altchans where not a single board (except
 <td>7%</td><td>10%</td> <!-- for the % of 4chan columns -->
 <td class="green">768<br />/r9k/</td>
 <td class="line">72<br />/r9k/</td>
-<td class="line"></td>
-<td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -812,15 +754,13 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="lgreen">312<br />/random/</td>
 <td class="line"></td>
 <td class="lgreen">150<br />/b/</td>
-<td class="lgreen">176<br />/b/</td>
+<td class="lgreen">176<br />zzzchan.xyz /b/</td>
 <td class="lgreen">264<br />/b/</td>
-<td class="line">24<br />/dunk/</td>
-<td class="line"></td>
 <td class="line">120<br />/b/</td>
 <td class="line"><em>(many altchans - it's often the most active board)</em></td>
 </tr>
 
-<tr><td class="semititle"><br />All boards above</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="semititle"><br />All boards above</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td>Posts per day</td>
@@ -832,15 +772,13 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line" style="background-color: #eee;">2,928</td>
 <td class="line" style="background-color: #eee;">1,800</td>
 <td class="line" style="background-color: #eee;">1,625</td>
-<td class="line">481</td>
+<td class="line">889</td>
 <td class="line">480</td>
-<td class="line">264</td>
-<td class="line">168</td>
 <td class="line">120</td>
 <td class="line"></td>
 </tr>
 
-<tr><td class="semititle"><br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="semititle"><br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
 <tr>
 <td>Non-English boards</td>
@@ -850,9 +788,7 @@ This way I was able to exclude several Altchans where not a single board (except
 <td class="line"></td>
 <td class="green">2,472<br />&#x1f1e9;&#x1f1ea; German</td>
 <td class="line"></td>
-<td class="green">98,200<br />&#x1f1eb;&#x1f1ee; Finnish</td>
-<td class="line"></td>
-<td class="line"></td>
+<td class="green"><span class="tooltip">98,200<span class="tooltiptext">Ylilauta claims to have 3 million posts per month, so c. 100,000 per day. Everything except for the /int/ board is Finnish.</span></span><br />&#x1f1eb;&#x1f1ee; Finnish</td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
