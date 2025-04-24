@@ -11,6 +11,7 @@
 <style>
 :root {
 --legendwidth: 150px;
+--compwidth: 100px;
 --columnwidth: 150px;
 --lastwidth: 200px;
 }
@@ -21,7 +22,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 10 * var(--columnwidth) + var(--lastwidth));
+width: calc(var(--legendwidth) + 2 * var(--compwidth) + 8 * var(--columnwidth) + var(--lastwidth));
 }
 
 table.comparison_2025.04.22 {
@@ -167,7 +168,12 @@ background-color: #F2F2F2;
 
 <h1>Monitoring Activity in Altchans</h1>
 <h3>Background</h3>
-<p>On 16th April 2025, 4chan went offline following a hack from someone associated with Soyjak Party, another imageboard. The hacker leaked the source code and the emails of the janitors and soon after the 4chan admins took the server offline. When or if the site will go online again is not sure at the moment, but there are several "altchans" (alternatives to 4chan). Now, 1 week after 4chan went offline, I had a look around the various altchans to see where users have found refuge. Below, I have listed several altchans and their posts per day by board.</p>
+<p>On the 15th or 16th April 2025 (depending on timezone), 4chan went offline following a hack. The hacker leaked the source code and the emails of the jannies (janitors) and the 4chan admins responded by taking the server offline. When (or if) the site will go online again is unclear at the moment, but there are several "altchans" (alternatives to 4chan). I had a look around the various altchans to see where users have found refuge. Below, I have listed several altchans and their posts per day by board.</p>
+
+<details>
+<summary>Why was 4chan hacked?</summary>
+There is a lot of lore, but to summarise, the hacker was associated with the Soyjak Party (now at soyjak.st), which is another imageboard. This was motivated by a (mostly justified) dislike of the jannies on 4chan, who were accused of banning users too quickly and too arbitrarily and deleting too much content, with a special emphasis on the deletion of the /qa/ board in 2021, which was the home of the "Soyjak" community, which then mostly migrated to the Soyjak Party.
+</details>
 
 <h3>What's an imageboard?</h3>
 <p>It is a bit like a forum but with several important differences: </p>
@@ -180,9 +186,9 @@ background-color: #F2F2F2;
 
 <h3>Inclusion criteria</h3>
 <ol>
-<li>The majority of the posting needs to be in the English language. This excludes boards like the Japanese 2ch, the Polish Ziemniachan, or the Finnish Ylilauta (although the latter has an /int/ board).</li>
-<li>It must have relevant boards that are shown in the table below, so for example an imageboard that has only an /mlp/ equivalent wouldn't be shown because I have only compared stats for a subset of 4chan boards.</li>
-<li>For a board to show it needs to have at least <strong>100 posts per day</strong>). Boards that only one strong board (e.g. /b/) will be shown in the "other" column.</li>
+<li>The majority of the posting needs to be in the <strong>English</strong> language. Therfore, boards like the Japanese 2chan.net (the original inspiration for 4chan), the Russian 2ch.hk, the Polish Ziemniachan.org, or the Finnish Ylilauta.org are excluded.</li>
+<li>It must have <strong>relevant boards</strong> matching the selection of 4chan boards in the table below, so for example an imageboard that mainly has /mlp/ content wouldn't be shown.</li>
+<li>The table below only shows highly active boards, the arbitrary threshold being <strong>100 posts per day</strong>. Altchans that only have one single highly active board (e.g. /b/) will be shown in the "other" column.</li>
 </ol>
 
 
@@ -191,7 +197,7 @@ background-color: #F2F2F2;
 <li>Posting activity is always just a snapshot and will fluctuate during different times of the day or might be higher on certain days e.g. weekends.</li>
 <li>Some of the traffic might be from 4chan refugees, but some of the boards already had their own large communities before 4chan went offline.</li>
 <li>Some boards have more bots inflating the post count, for example Soyjak.st has a relatively lax captcha.</li>
-<li>Some boards on altchans may not correspond directly to a 4chan board, for example one 4chan board might be split into multiple smaller boards on altchans (e.g. /g/ becomes /tech/ and /prog/) or multiple 4chan boards can be combined in an altchan (e.g. /mu/ and /tv/ merged into a /mtv/ board). The former (splitting into smaller boards) might mean an altchan doesn't appear in the table below; the latter (merging into bigger boards) might overstate the actual use on a like-for-like comparison.</li>
+<li>Some boards on altchans may not correspond directly to a 4chan board, for example one 4chan board might be split into multiple smaller boards on altchans (e.g. /a/ becomes several anime-related boards) or multiple 4chan boards can be combined into one board (e.g. /mu/ and /tv/ merged into a /mtv/ board). The former (splitting into smaller boards) might mean an altchan is less likely to appear in the table below as the boards might have reached the posting threshold jointly, but not separately; likewise, the latter (merging into bigger boards) might overstate the actual use on a like-for-like comparison.</li>
 </ul>
 
 <h3>Data source</h3>
@@ -204,10 +210,11 @@ background-color: #F2F2F2;
 
 <h3>Monitored altchans</h3>
 <details>
-<summary><strong>Currently monitoring 44 imageboards</strong>, click here to see</summary>
+<summary><strong>Currently monitoring 45 imageboards</strong>, click here to see</summary>
 <ul>
     <li>22chan.org</li>
     <li>28chan.org</li>
+    <li>2ch.hk (/int/ only)</li>
     <li><span style="background-color: lightblue;">4chan.org</span></li>
     <li>4chon.me</li>
     <li>7chan.org</li>
@@ -248,7 +255,7 @@ background-color: #F2F2F2;
     <li>Uboachan.net</li>
     <li>Wapchan</li>
     <li>Wizchan.org</li>
-    <li>Ylilauta.org</li>
+    <li>Ylilauta.org (/int/ board only)</li>
     <li>zzzchan.xyz</li>
 </ul>
 </details>
@@ -274,8 +281,8 @@ background-color: #F2F2F2;
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
 <col style="border-left: double; width: var(--columnwidth); background-color: #D9E2F3;"> <!-- 4chan -->
-<col style="border-left: double; width: var(--columnwidth); background-color: #F2F2F2; font-style: italic;;"> <!-- % 4chan -->
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth); background-color: #F2F2F2; font-style: italic;"> <!-- % 4chan -->
+<col style="border-left: double; width: var(--compwidth); background-color: #F2F2F2; font-style: italic;;"> <!-- % 4chan -->
+<col style="border-left: 1px solid lightgrey; width: var(--compwidth); background-color: #F2F2F2; font-style: italic;"> <!-- % 4chan -->
 <col style="border-left: double; width: var(--columnwidth);"> <!-- start of Altchans -->
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
@@ -290,8 +297,8 @@ background-color: #F2F2F2;
 <tr style="height: 1px; display: none;">
 <td style="width: var(--legendwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
+<td style="width: var(--compwidth);"></td>
+<td style="width: var(--compwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
@@ -333,7 +340,7 @@ background-color: #F2F2F2;
 <td class="line">plus4chan.org</td>
 <td class="line">ourchan.org</td>
 <td class="line tooltip">9 websites<span class="tooltiptext">smuglo.li, tvch.moe, zzzchan.xyz, trashchan.xyz, prolikewoah.com, erischan.com, junkuchan.org, nukechan.net, alogs.space</span></td>
-<td class="line">monitoring another 28 websites, see above</td>
+<td class="line">monitoring another 29 websites, see above</td>
 </tr>
 
 <tr>
@@ -763,14 +770,14 @@ background-color: #F2F2F2;
 <td>Random</td>
 <td class="line">41,067<br />/b/</td>
 <td>44%</td><td>75%</td> <!-- for the % of 4chan columns -->
-<td class="green">18,086=7<br />/soy/ + /qa/</td>
+<td class="green">18,087<br />/soy/ + /qa/</td>
 <td class="green">3,432<br />/b/</td>
 <td class="green">3,104<br />/b/ (&#x1f1e9;&#x1f1ea;)</td>
 <td class="line">384<br />/random/</td>
 <td class="line">127<br />/baw/</td>
 <td class="line">259<br />/b/</td>
 <td class="line">251<br />zzzchan.xyz /b/</td>
-<td class="line" rowspan="2"><span class="green">Heolkek.cafe /ot/ 1,697;</span><br /> <span class="lgreen">Leftypol.org /siberia/ 796; <br />Onesixtwo.club /scv/ 751; <br />Kissu.mow /qa/ 546;</span> <br />Bantculture.com /bant/ 419; <br />Endchan.org /b/ 240; <br />Heyuri.net /b/ 221;<br />Mintboard.org /bone/ 218; <br />Soyzellig.party /zellig/ 213; <br />7chan.org /b/ 170; <br />Crystal.cafe /b/ 160</span></td>
+<td class="line" rowspan="2"><span class="green">Heolkek.cafe /ot/ 1,697</span><br /> <span class="lgreen">Leftypol.org /siberia/ 796 <br />Onesixtwo.club /scv/ 751 <br />Kissu.mow /qa/ 546</span> <br />Bantculture.com /bant/ 419 <br />Endchan.org /b/ 240 <br />Heyuri.net /b/ 221<br />Mintboard.org /bone/ 218 <br />Soyzellig.party /zellig/ 213 <br />7chan.org /b/ 170 <br />Crystal.cafe /b/ 160</span></td>
 </tr>
 
 <tr><td> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>     </tr> <!-- this is to make the last cell for /b/ on other boards longer without making the /b/ on the mainchans so big. add more or less <br />'s to adjust the height -->
