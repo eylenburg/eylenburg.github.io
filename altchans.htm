@@ -10,152 +10,284 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
---legendwidth: 150px;
---compwidth: 100px;
---columnwidth: 150px;
---lastwidth: 200px;
+  --legendwidth: 150px;
+  --4chwidth: 100px;
+  --columnwidth: 145px;
+  --lastwidth: 200px;
 }
 
 table.comparison {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
-width: calc(var(--legendwidth) + 2 * var(--compwidth) + 8 * var(--columnwidth) + var(--lastwidth));
-}
-
-table.comparison_2025.04.22 {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
-width: calc(150px + 12 * 120px + 200px);
+  margin-top: 1em;
+  text-align: center;
+  border: none;
+  table-layout: fixed;
+  font-size: small;
+  width: calc(var(--legendwidth) + 4 * var(--4chwidth) + 8 * var(--columnwidth) + var(--lastwidth));
 }
 
 td {
-border: none;
-padding: 1px 1px;
-vertical-align: top;
+  border: none;
+  padding: 1px;
+  vertical-align: top;
+  padding: 0;
 }
 
-td.green,
-td.lgreen,
-td.yellow,
-td.lred,
-td.red,
-td.line,
-td.blue,
-td.grey {
-border-top: 1px solid #eee;
-border-bottom: 1px solid #eee;
+.slow {
+  color: black;
+  background-color: #eee;
+}
+
+.dead {
+  color: #777;
+}
+
+.green {
+  background-color: #CEE6BB;
+}
+
+.lgreen {
+  background-color: #E7F2DD;
+}
+
+.vgreen {
+  background-color: #B3D894;
+}
+
+.blue {
+  background-color: #D9E2F3;
+}
+
+.grey {
+  background-color: #F2F2F2;
+}
+
+.comment {
+  color: black;
 }
 
 th {
-border: none;
-position: -webkit-sticky;
-position: sticky;
-top: 0px;
-z-index: 10;
-background-color: white;
-font-weight: bold;
-word-wrap: break-word;
-}
-
-table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison_2025.04.22 tr>th:first-child, table.comparison_2025.04.22 tr>td:first-child {
-background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-th, table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison_2025.04.22 tr>th:first-child, table.comparison_2025.04.22 tr>td:first-child {background-color: #222; color: white;  }
-td.green,
-td.lgreen,
-td.yellow,
-td.lred,
-td.red,
-td.line,
-td.blue,
-td.grey { color: #222; }
-}
-
-@media (min-width: 578px){
-table.comparison tr>th:first-child, table.comparison tr>td:first-child ,table.comparison_2025.04.22 tr>th:first-child, table.comparison_2025.04.22 tr>td:first-child  {
-  position: -webkit-sticky;
+  border: none;
   position: sticky;
-  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+table.comparison tr>th:first-child,
+table.comparison tr>td:first-child {
+  background-color: white;
+}
+
+@media (min-width: 578px) {
+  table.comparison tr>th:first-child,
+  table.comparison tr>td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 20;
   }
 }
 
 td img {
-padding: 15px 0px;
+  padding: 15px 0;
 }
 
-table.comparison tr td:first-child, table.comparison_2025.04.22 tr td:first-child  {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
+table.comparison tr td:first-child {
+  text-align: left;
+  white-space: nowrap;
+  padding-right: 5px;
 }
 
 .semititle {
-text-decoration: underline;
-font-weight: bold;
-vertical-align: bottom; }
+  text-decoration: underline;
+  font-weight: bold;
+  vertical-align: bottom;
+}
 
 .center {
-text-align: center;
+  text-align: center;
 }
 
 .tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: darkred;
 }
 
 .tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-z-index: 1;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
+  visibility: visible;
+  font-weight: normal;
 }
 
-.green {
-background-color: #CEE6BB;
+.legend-table {
+  table-layout: auto;
+  max-width: 500px;
+  border: none;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
 }
 
-.lgreen {
-background-color: #E7F2DD;
+.legend-table td {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: small;
 }
 
-.yellow {
-background-color: #E7DEB1;
+.d00,
+.d0,
+.d1 {
+  display: none;
 }
 
-.lred {
-background-color: #F5E0D6;
+#show-d00:checked ~ .table-container span.d00,
+#show-d0:checked ~ .table-container span.d0,
+#show-d1:checked ~ .table-container span.d1 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.red {
-background-color: #EBC1AD;
+.floating-radio-container {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 300px;
 }
 
-.blue {
-background-color: #D9E2F3;
+.floating-radio-container p {
+  font-weight: bold;
+  color: red;
+  margin: 0 0 10px 0;
+  font-size: 80%;
 }
 
-.grey {
-background-color: #F2F2F2;
+.floating-radio-container input[type="radio"] {
+  margin: 8px 0;
 }
 
+.floating-radio-container label {
+  font-size: 80%;
+  margin-left: 4px;
+}
+
+.floating-radio-container p.floating-comment {
+  font-size: 8pt;
+  font-weight: normal;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  th,
+  table.comparison tr>th:first-child,
+  table.comparison tr>td:first-child {
+    background-color: #222;
+    color: white;
+  }
+
+  @media (min-width: 578px) {
+    table.comparison tr>th:first-child,
+    table.comparison tr>td:first-child {
+      position: sticky;
+      left: 0;
+      background-color: #222;
+      z-index: 20;
+    }
+  }
+
+  .vgreen,
+  .green,
+  .lgreen,
+  td.dead,
+  td.line,
+  td.blue,
+  td.grey {
+    color: #222;
+  }
+
+  td.slow,
+  span.slow {
+    color: white;
+    background-color: #444;
+  }
+
+  th,
+  table.comparison tr>td:nth-child(2) {
+    color: white;
+    background-color: #26292b;
+  }
+
+  .green {
+    background-color: #394e1d;
+    color: white;
+  }
+
+  .lgreen {
+    background-color: #2b3916;
+    color: white;
+  }
+
+  .vgreen {
+    background-color: #4b6625;
+    color: white;
+  }
+
+  .blue {
+    background-color: #191970;
+  }
+
+  .dead {
+    color: #999;
+  }
+
+  .comment {
+    color: white;
+  }
+
+  .floating-radio-container {
+    background-color: rgba(40, 40, 40, 0.95);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .floating-radio-container p {
+    color: #ff5555;
+  }
+
+  .floating-radio-container label {
+    color: #dddddd;
+  }
+
+  .floating-radio-container input[type="radio"] {
+    accent-color: #ffffff;
+  }
+
+  .floating-radio-container p.floating-comment {
+    color: white;
+  }
+}
 </style>
 </head>
 <body>
@@ -168,51 +300,68 @@ background-color: #F2F2F2;
 
 <h1>Monitoring Activity in Altchans</h1>
 <h3>Background</h3>
-<p>On the 15th April 2025, 4chan went offline following a hack. The hacker leaked the source code and the emails of the jannies (janitors) and the 4chan admins responded by taking the server offline. When (or if) the site will go online again is unclear at the moment, but there are several "altchans" (alternatives to 4chan). I had a look around the various altchans to see where users have found refuge. Below, I have listed several altchans and their posts per day by board.</p>
+<p>On the 14-15 April 2025 (depending on time zone), 4chan went offline following a hack. The hacker was linked to the Soyjak Party (soyjak.st), a competing imageboard that was created in 2020 due to a (justified) dislike of 4chan <em>jannies</em> (janitors), who were accused of banning users and deleting content too quickly, culminating in the locking of the /qa/ board in 2021. The hacker leaked the source code and the email addresses of the jannies. The 4chan admins responded by taking the server offline. On 25 April, 4chan returned after being offline for 10 days (<a href="https://blog.4chan.org/post/781845918774394880/still-standing" target="_blank">blog post</a>)
 
-<p style="font-weight: bold; color: red;">It seems that as of 2025.04.25 18:00 UTC, 4chan is BACK. I still intend to keep monitoring the altchans to see how many users they bleed, and also to track the activity on 4chan compared to before the hack. Next update of this site is planned for some time next week (28 April - 2 May).</p>
-
-<details>
-<summary>Why was 4chan hacked?</summary>
-There is a lot of lore, but to summarise, the hacker was associated with the Soyjak Party (now at soyjak.st), which is another imageboard. This was motivated by a (mostly justified) dislike of the jannies on 4chan, who were accused of banning users too quickly and too arbitrarily and deleting too much content, with a special emphasis on the deletion of the /qa/ board in 2021, which was the home of the "Soyjak" community, which then mostly migrated to the Soyjak Party.
-</details>
+During the downtime, I was curious to see where 4chan's <a href="https://4chan.org/press" target="_blank">22 million users</a> had found refuge. Did they just turn off their computer and go outside, did they spend more time on  Reddit, Instagram and X, or did they migrate to one one of the many "altchans" (alternatives to 4chan)? I had a look around the various altchans to see where activity increased the most during 4chan's downtime and also how the numbers changed again after its return. The big table below lists several altchans, looking at their posts per day per board.</p>
 
 <h3>What's an imageboard?</h3>
 <p>It is a bit like a forum but with several important differences: </p>
 <ul>
-<li>Users can (and are encouraged to) upload pictures or videos alongside their posts, even if the picture doesn't add value to the discussion.</li>
-<li>User post anonymously, with no accounts or usernames. This means discussion are both more honest, with people voicing their real opinions on controversial topics (as you don't have a "reputation" to keep) and at the same time it encourages shitposting, trolling, pretending to be multiple people and so on.</li>
-<li>There are no likes, there is no karma, and if you ever get banned you just come back with a new IP. This means people feel free to speak their mind and don't need to fear the jannies or the opinion of the majority.</li>
-<li>Posts are ephemeral; there are a limited amount of allowed threads on any given board and for each new thread made an old one gets deleted or archived.</li>
+<li>Users can (and are encouraged to) upload pictures or videos alongside their posts. The picture doesn't have to add value to the discussion, it can also just be a meme or a reaction image.</li>
+<li>User post anonymously, with no accounts or usernames. This means discussion are both more honest, with people voicing their real opinions on controversial topics (as you don't have a "reputation" to keep) and at the same time it encourages <s>shit</s>funposting, trolling, pretending to be multiple people and so on.</li>
+<li>There are no likes, there is no karma, and if you ever get banned you just come back with a new IP. This means people feel free to speak their mind and don't need to fear the mods or the opinion of the majority.</li>
+<li>Posts are ephemeral; there are a limited amount of allowed threads on any given board and for each new thread made an old one gets deleted or archived. Often, there are bump limits as well, meaning that after a certain number of posts, a thread won't be bumped to the front page again and will inevitably get archived once enough other threads have been bumped or created; this means even the most popular thread can't live forever.</li>
 </ul>
+
+<p>Terminology: an <em>imageboard</em> is the website (or strictly speaking the forum software), <em>altchans</em> are all those imageboards that are not 4chan, and <em>boards</em> are the "sub-forums" on an imageboard focusing on a certain topic. In each board, people can make <em>threads</em> to which other users can reply (<em>posts</em>). The <em>jannies</em> work for free, deleting posts and asking <em>mods</em> to ban IP addresses of users who break the rules.</p>
 
 <h3>Inclusion criteria</h3>
 <ol>
-<li>The majority of the posting needs to be in the <strong>English</strong> language. Therfore, boards like the Japanese 2chan.net (the original inspiration for 4chan), the Russian 2ch.hk, the Polish Ziemniachan.org, or the Finnish Ylilauta.org are excluded.</li>
-<li>It must have <strong>relevant boards</strong> matching the selection of 4chan boards in the table below, so for example an imageboard that mainly has /mlp/ content wouldn't be shown.</li>
-<li>The table below only shows highly active boards, the arbitrary threshold being <strong>100 posts per day</strong>. Altchans that only have one single highly active board (e.g. /b/) will be shown in the "other" column.</li>
+<li>The columns show a selection of 8 altchans which offer a selection of diverse boards on all kinds of topics; therefore altchans that mostly cover a certain topic don't get their own column. The 8 altchans listed cover at least 14 of the topics that 4chan covers, while the rest cover at most 9 topics. I am monitoring many more altchans (see below for the list) but for them only very active boards are mentioned in the "Other" column at the end of the table.
+<li>For the "Other" column, the table only shows boards with more than 50 posts per day for on-topic boards and 100 posts per day for off-topic boards such as /b/.</li>
+<li>Only boards in the English language are included. Therefore, some imageboards like the Japanese 2chan.net (the original inspiration for 4chan), the Russian 9chan, or the Polish Ziemniachan and Karachan are excluded completely. For others, like the Russian Dvach (2ch.hk), the German Kohlchan, or the Finnish Ylilauta, only the English-language /int/ board is considered.</li>
+<li>Boards shown below must be relevant and matching the selection of 4chan boards in the table below, so many boards on altchans that don't have a 4chan equivalent aren't shown. (e.g. if an altchan has an /ai/ board this is ignored as 4chan doesn't have one).</li>
+<li>Niche boards are only shown if the "main" topic is also represented. For example, if an altchan only has a programming board, but not a general technology board (both would be covered by 4chan /g/) this programming board is ignored. Or if an altchan only has a KPOP board but not a general music board (like 4chan's /mu/, which includes KPOP discussions), this is ignored. But if the altchan has a /mu/ and /kpop/ board, then I would include both and sum up their posts to compare against 4chan's /mu/ board. Likewise, I have ignored all political boards that are not meant for general politics discussion (normally called /pol/ or similar), so for example anything that is meant for discussion of a specific ideology or political topic is ignored. The biggest example would be 8kun.top's /qresearch/ board. Likewise, anything with a name like /libertarian/ or /marxist/ or /fascist/ is ignored</li>
+<li>Some altchans like 8chan.moe, 8kun.top or endchan.org allow users to create their own boards, therefore there are hundreds or thousands of boards. Obviously, they can't all be included and most of them are dead anyway. In general, I have ignored any boards with less than 750 posts (as of end of April 2025), and if multiple boards for the same topic exist I sometimes excluded the less active ones.</li>
 </ol>
 
+<details>
+<summary style="text-decoration: underline;">Several 4chan boards are not covered (click here to see the list)</summary>
+<ul>
+<li>Cosplay &amp; EGL	/cgl/</li>
+<li>Cute Male	/cm/</li>
+<li>Flash	/f/ (RIP)</li>
+<li>Wallpapers/General	/wg/</li>
+<li>Worksafe GIF	/wsg/</li>
+<li>Quests	/qst/</li>
+<li>Advice	/adv/</li>
+<li>LGBT	/lgbt/</li>
+<li>Pony	/mlp/</li>
+<li>Current News	/news/</li>
+<li>Cams &amp; Meetups	/soc/</li>
+<li>All Adult Boards</li>
+</ul>
+</details>
+
+<h3>Data source</h3>
+<ol>
+<li>The preferred method is looking at the number of the latest post at different days and times to calculate the posting frequency for different times.</li>
+<li><a href="https://marge.moe" target="_blank">marge.moe</a>, a website which tracks the activity of several altchans.</li>
+<li>Some altchans publish by-board "post per hour/day" (PPH/PPD) overview. Unfortunately, often only PPH is shown, which is a relatively useless figure as it will fluctuate a lot during a 24h period.</li>
+<li>As a last resort, (which only applies to Ylilauta where post numbers appear to be global rather than by board), it is possible to manually count the number of threads and replies made in the last x hours and estimate the PPD from there.</li>
+</ol>
 
 <h3>Caveats</h3>
 <ul>
 <li>Posting activity is always just a snapshot and will fluctuate during different times of the day or might be higher on certain days e.g. weekends.</li>
-<li>Some of the traffic might be from 4chan refugees, but some of the boards already had their own large communities before 4chan went offline.</li>
-<li>Some boards have more bots inflating the post count, for example Soyjak.st has a relatively lax captcha.</li>
-<li>Some boards on altchans may not correspond directly to a 4chan board, for example one 4chan board might be split into multiple smaller boards on altchans (e.g. /a/ becomes several anime-related boards) or multiple 4chan boards can be combined into one board (e.g. /mu/ and /tv/ merged into a /mtv/ board). The former (splitting into smaller boards) might mean an altchan is less likely to appear in the table below as the boards might have reached the posting threshold jointly, but not separately; likewise, the latter (merging into bigger boards) might overstate the actual use on a like-for-like comparison.</li>
+<li>Some imageboards have more bots inflating the post count, for example Soyjak.st has a relatively lax captcha and similarly the post count for 8chan.moe's /vg/ board was inflated by spam messages from the same ID until they enabled per post captchas. On the other hand, some imageboards are very strict and even prevent actual users from posting, for example by banning certain countries or not allowing posting from a VPN or Tor, or - in 4chan's case - discouraging posting with timers or requiring email verification to post.</li>
+<li>As mentioned above, some boards on an altchan may not correspond directly to a 4chan board, for example discussion that is covered one 4chan board might be split into multiple smaller boards on altchans (e.g. /a/ becomes several anime-related boards) or, vice versa, multiple 4chan boards can be combined into one board (e.g. /mu/ and /tv/ merged into a /media/ board). The former (several smaller boards) might mean an altchan is less likely to appear in the table below as none of the boards managed to reach the posting threshold (50 PPD) to appear in the "Other" column, even if they would have been active enough when summing up their PPDs; the latter (have a few larger boards with a broader scope) might overstate the actual activity. In most cases I have not bothered to make a true "like-for-like" comparison.</li>
 </ul>
 
-<h3>Data source</h3>
-<ol>
-<li><a href="https://marge.moe" target="_blank">marge.moe</a> which tracks the posts of several altchans (thanks to the person who told me about this website!)</li>
-<li>An altchan's own by-board "post per hour/day" (PPH/PPD) overview, if available. PPH is less useful as it will fluctuate during different times, but often only PPH is published.</li>
-<li>If no statistics are available, the next option is looking at the number of the latest post at different days and times to calculate the posting frequency.</li>
-<li>As a last resort, which only applies to Ylilauta where post numbers appear to be global rather than by board, it would be possible to manually count the number of threads and replies made in the last x hours and calculate the PPD from there.</li>
-</ol>
-
 <h3>Monitored altchans</h3>
+<p>I am currently monitoring the activity across <strong>40 imageboards</strong>.</p>
 <details>
-<summary><strong>Currently monitoring 45 imageboards</strong>, click here to see</summary>
+<summary style="text-decoration: underline;">Click here to see the full list.</summary>
 <ul>
     <li>22chan.org</li>
     <li>28chan.org</li>
@@ -220,1208 +369,1508 @@ There is a lot of lore, but to summarise, the hacker was associated with the Soy
     <li><span style="background-color: lightblue;">4chan.org</span></li>
     <li>4chon.me</li>
     <li>7chan.org</li>
+    <li>76chan.org (formerly sportschan.org)</li>
     <li>8chan.se</li>
     <li>8kun.top</li>
     <li>Alogs.space</li>
     <li>Bantculture.com</li>
     <li>Crystal.cafe</li>
     <li>Endchan.org</li>
-    <li>Erischan.com</li>
+    <li>Ernstchan.top (/int/ only)</li>
     <li>Heolkek.cafe</li>
     <li>Heyuri.net</li>
     <li>Hikari3.ch</li>
-    <li>Junkuchan.org</li>
+    <li>Holotower.org</li>
     <li>Kissu.moe</li>
-    <li>Kohlchan.net</li>
+    <li>Kohlchan.net (/int/ only)</li>
     <li>Lainchan.org</li>
-    <li>Leftypol.org</li>
     <li>Merorin.com</li>
     <li>Mintboard.org</li>
-    <li>mlpg.co</li>
-    <li>nhnb.org</li>
-    <li>Nukechan.net</li>
     <li>Onesixtwo.club</li>
     <li>Ourchan.org</li>
     <li>Petrarchan.com</li>
     <li>Plus4chan.org</li>
-    <li>Ponyville.us</li>
     <li>Prolikewoah.com</li>
     <li>Sidson.city</li>
     <li>Smuglo.li</li>
     <li>Soyjak.st</li>
     <li>Soyzellig.party</li>
-    <li>Sportschan.org</li>
     <li>Sushigirl.us</li>
     <li>Trashchan.xyz</li>
     <li>tvch.moe</li>
     <li>Uboachan.net</li>
     <li>Wapchan</li>
     <li>Wizchan.org</li>
-    <li>Ylilauta.org (/int/ board only)</li>
+    <li>Ylilauta.org (/int/ only)</li>
     <li>zzzchan.xyz</li>
 </ul>
 </details>
 
 
-<p><strong style="background-color: gold;">I intend to update this table regularly to see the changes over time.</strong></p>
+<!-- What to update in this file when adding a new date (d2, d3 etc.)
+- Add new radio button for d2, d3, etc. (above the table)
+- Add the CSS code for the new radio button in the <style> section so that toggling the radio button changes the visibility of then <span>s with pure CSS
+- Add new radio button for the floating selector (in the Javascript at the bottom of the document).
+- Add the dX label to the "PPD data source" row.
+- Change the date for 4chan PPD (column 5)
+- Change the "last updated" date above the table and in the index.html
+- Add then <span> tags to the table for all boards x chans. If no change (e.g. slow/dead so no PPD mentioned), can just add dX to the previous one.
+- Check formatting, there should be no "jumping" when toggling the radio buttons.
+-->
 
-
-<br />
-
-
-<table>
-<tr><td class="green">green = has at least 1000 posts per day</td></tr>
-<tr><td class="lgreen">light green = has at least 500 posts per day</td></tr>
-</table>
+<!-- Date abbreviations:
+d00 = pre-hack, 2025.04.14
+d0 = pre-return, 2025.04.24
+d1 = 1st week after return, 2025.05.02
+d2 = ...
+-->
 
 <h2 class="center">Activity of Altchans</h2>
-<p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: large;">As of Thursday 24 April 2025 - 9 days after the hack</p>
+<p class="center">Source: eylenburg.github.io<br />last updated: 2025.05.02</p>
 
+<div>
+<p style="font-weight: bold; color: red;">Select a date to show below:</span></p>
+    <input type="radio" id="show-d00" name="spanSelector">
+    <label for="show-d00" style="font-size: 125%; font-weight: bold;">Show activity before 4chan hack (~2025.04.14)</label>
+<br />
+    <input type="radio" id="show-d0" name="spanSelector">
+    <label for="show-d0" style="font-size: 125%; font-weight: bold;">Show activity before 4chan's return (~2025.04.24)</label>
+<br />
+    <input type="radio" id="show-d1" name="spanSelector" checked>
+    <label for="show-d1" style="font-size: 125%; font-weight: bold;">Show week to 2025.05.02 (1 week after 4chan's return)</label>
+<p style="font-size: 8pt; font-weight: normal">(Tip: you can click on one of the radio buttons and then use your up/down arrow keys to flick through the dates.)</p>
 
+<p>Note: all PPD (post per day) figures rounded to the next 25. Boards with less than 1 PPD are "dead" and marked with the &dagger; symbol.</p
+>
+<div class="table-container">
 <table class="comparison">
 <colgroup>
-<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
-<col style="border-left: double; width: var(--columnwidth); background-color: #D9E2F3;"> <!-- 4chan -->
-<col style="border-left: double; width: var(--compwidth); background-color: #F2F2F2; font-style: italic;;"> <!-- % 4chan -->
-<col style="border-left: 1px solid lightgrey; width: var(--compwidth); background-color: #F2F2F2; font-style: italic;"> <!-- % 4chan -->
-<col style="border-left: double; width: var(--columnwidth);"> <!-- start of Altchans -->
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--lastwidth); text-align:left;">
+  <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
+  <col style="border-left: double; width: var(--4chwidth);"> <!-- 4chan -->
+  <col style="border-left: 1px solid lightgrey; width: var(--4chwidth); "> <!-- % 4chan -->
+  <col style="border-left: 1px solid lightgrey; width: var(--4chwidth); "> <!-- % 4chan -->
+  <col style="border-left: 1px solid lightgrey; width: var(--4chwidth); "> <!-- % 4chan -->
+  <col style="border-left: double; width: var(--columnwidth);"> <!-- start of Altchans -->
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
+  <col style="border-left: 1px solid lightgrey; width: var(--lastwidth); text-align:left;">
 </colgroup>
-
 <thead>
 <tr style="height: 1px; display: none;">
-<td style="width: var(--legendwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--compwidth);"></td>
-<td style="width: var(--compwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--lastwidth);"></td>
+  <td style="width: var(--legendwidth);"></td>
+  <td style="width: var(--4chwidth);"></td>
+  <td style="width: var(--4chwidth);"></td>
+  <td style="width: var(--4chwidth);"></td>
+  <td style="width: var(--4chwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--columnwidth);"></td>
+  <td style="width: var(--lastwidth);"></td>
 </tr>
-
 <tr style="font-size: larger; font-weight: bold;">
-<th>Selected 4chan boards</th>
-<th class="blue">4chan.org<br />(pre-hack)</th>
-<th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, top Altchan board</em></th>
-<th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, all Altchan boards together</em></th>
-<th>Soyjak Party</th>
-<th>8chan</th>
-<th>Kohlchan</th>
-<th>8kun</th>
-<th>Plus4Chan</th>
-<th>Ourchan</th>
-<th>Webring<br /><span style="font-size: 75%">(TVch, ZZZchan, Smugloli etc.)</span></th>
-<th>Others</th>
+  <th></th>
+  <th class="blue" colspan="4" style="border-bottom: 1px dotted black;"><strong>4chan.org</strong></th>
+  <th>Soyjak Party</th>
+  <th>8chan</th>
+  <th>8kun</th>
+  <th>Ourchan</th>
+  <th>zzzchan</th>
+  <th>TVch</th>
+  <th>7chan</th>
+  <th>Endchan</th>
+  <th>Others (31 websites)</th>
 </tr>
-
+<tr>
+  <th></th>
+  <th class="blue">Board</th>
+  <th class="blue">Avg PPD in 2020</th>
+  <th class="blue">PPD before April 2025 hack</th>
+  <th class="blue">
+    <span class="d00">PPD on 2025.04.14</span>
+    <span class="d0">PPD on 2025.04.24</span>
+    <span class="d1">PPD on 2025.05.02</span>
+  </th>
+  <th>soyjak.st</th>
+  <th>8chan.moe</th>
+  <th>8kun.top</th>
+  <th>ourchan.org</th>
+  <th>zzzchan.xyz</th>
+  <th>tvch.moe</th>
+  <th>7chan.org</th>
+  <th>endchan.org</th>
+  <th style="font-style: italic; font-weight: normal;">boards &ge;50 PPD (&ge;100 for /b/)</th>
+</tr>
 </thead>
 <tbody>
-
-<tr><td class="semititle"><br />  </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
 <tr>
-<td>URL</td>
-<td class="line">4chan.org</td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">soyjak.st</td>
-<td class="line">8chan.moe</td>
-<td class="line">kohlchan.net</td>
-<td class="line">8kun.top</td>
-<td class="line">plus4chan.org</td>
-<td class="line">ourchan.org</td>
-<td class="line tooltip">9 websites<span class="tooltiptext">smuglo.li, tvch.moe, zzzchan.xyz, trashchan.xyz, prolikewoah.com, erischan.com, junkuchan.org, nukechan.net, alogs.space</span></td>
-<td class="line">monitoring another 29 websites, see above</td>
+  <td>Year founded</td>
+  <td colspan="4">2003</td>
+  <td>2020</td>
+  <td>2020</td>
+  <td>2013 (8ch.net)</td>
+  <td>2025</td>
+  <td>2020</td>
+  <td>2020</td>
+  <td>2005</td>
+  <td>2015</td>
+  <td></td>
 </tr>
-
 <tr>
-<td>Software used</td>
-<td class="line">Yotsuba</td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">Vichan</td>
-<td class="line">Lynxchan</td>
-<td class="line">Lynxchan</td>
-<td class="line">Vichan<!--OpenIB (fork of Vichan)--></td>
-<td class="line">Koba</td>
-<td class="line">jschan</td>
-<td class="line">(various)</td>
-<td class="line"></td>
+  <td>Imageboard software</td>
+  <td colspan="4">Yotsuba</td>
+  <td>vichan</td>
+  <td>lynxchan</td>
+  <td>vichan</td>
+  <td>jschan</td>
+  <td>jschan</td>
+  <td>vichan</td>
+  <td>kusaba</td>
+  <td>lynxchan</td>
+  <td></td>
 </tr>
-
 <tr>
-<td>Traffic estimate based on</td>
-<td class="line"><a href="https://archive.ph/j5Kis" target="_blank">4stats.io<!-- (2025.04.15)--></a></td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">Marge.moe PPD stats</td>
-<td class="line">PPH stats on hompage</td>
-<td class="line">Marge.moe PPD stats</td>
-<td class="line">PPH stats on hompage</td>
-<td class="line">Last post number</td>
-<td class="line">PPH stats on hompage</td>
-<td class="line">(depends)</td>
-<td class="line">(depends)</td>
+  <td>Can post with proxy?</td>
+  <td colspan="4">No (needs 4chan Pass)</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td></td>
 </tr>
-
-<tr><td class="semititle"><br />  Posts per day:</td><td></td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
 <tr>
-<td>Anime</td>
-<td class="line">31,447<br />/a/</td>
-<td>12%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="line">437<br />/a/</td>
-<td class="green">3,816<br />/a/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">100<br />smuglo.li /a/</td>
-<td class="line"></td>
+  <td>PPD data source</td>
+  <td colspan="4">4stats.io</td>
+  <td><span class="d00 d0">Post count</span><span class="d1 d2 d3 d4 d5 d6 d7 d8 d9 d10">Marge.moe</span></td>
+  <td>Post count</td>
+  <td>Post count</td>
+  <td>Post count</td>
+  <td><span class="d00 d0">Post count</span><span class="d1 d2 d3 d4 d5 d6 d7 d8 d9 d10">Marge.moe</span></td>
+  <td><span class="d00 d0">Post count</span><span class="d1 d2 d3 d4 d5 d6 d7 d8 d9 d10">Marge.moe</span></td>
+  <td>Post count</td>
+  <td>Post count</td>
+  <td></td>
 </tr>
-
+<tr><td class="legend"><span style="text-decoration: underline; font-style: italic;"><br />Hobby &amp; Interest Boards:</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="font-style: italic; text-decoration: underline;">minimum 50 PPD to be shown:</td></tr>
 <tr>
-<td>Business &amp; Finance</td>
-<td class="line">9,588<br />/biz/</td>
-<td>16%</td><td>17%</td> <!-- for the % of 4chan columns -->
-<td class="green">1,518<br />/biz/</td>
-<td class="line">120<br />/biz/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Anime &amp; Manga<br />&nbsp;</td>
+  <td>/a/, /c/, /w/</td>
+  <td class="vgreen">47,825</td><!-- 4chan 2020 -->
+  <td class="vgreen">33,875</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">27,400<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 lgreen">/a/<br />50 PPD</span>
+    <span class="d0 green">/a/<br />1,025 PPD</span>
+    <span class="d1 lgreen">/a/<br />200 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 lgreen">/a/<br />50 PPD</span>
+    <span class="d0 green">/a/ + /animu/<br >5,725 PPD</span>
+    <span class="d1 green">/a/ + /animu/<br />1,200 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/a/ + /animu/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/a/ + /animu/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d0 d1 slow">/a/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d0 lgreen">/a/<br />125 PPD</span>
+    <span class="d1 slow">/a/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 dead">/a/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/a/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 d0 slow">/am/ + /AM/<br />&nbsp;</span>
+    <span class="d1 dead">/am/ + /AM/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- other -->
+    <span class="d00 lgreen">smuglo.li /a/ + /kohi/ + /cute/<br />425 PPD</span>
+    <span class="d0 green">smuglo.li /a/ + /kohi/ + /cute/<br />1,100 PPD</span>
+    <span class="d1 lgreen">smuglo.li /a/ + /kohi/ + /cute/<br />550 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Comics &amp; Cartoons</td>
-<td class="line">13,184<br />/co/</td>
-<td>12%</td><td>12%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="green">1,582<br />/co/ + /md/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Art &amp; Creative<br />&nbsp;</td>
+  <td>/i/, /ic/, /gd, /3/, /po/</td>
+  <td class="green">2,800</td><!-- 4chan 2020 -->
+  <td class="green">1,350</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">1,250<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/loomis/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/ic/ + /loomis/<br >125 PPD</span>
+    <span class="d1 slow">/ic/ + /loomis/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch -->
+    <span class="d00 d1 dead">/art/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/art/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Fitness</td>
-<td class="line">3534<br />/fit/</td>
-<td>34%</td><td>34%</td> <!-- for the % of 4chan columns -->
-<td class="green">1,209<br /><span class="tooltip">/fit/ (partial)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for actual 4chan /fit/ content based on the number of relevant threads in the catalog</span></span></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Animals &amp; Nature<br />&nbsp;</td>
+  <td>/an/</td>
+  <td class="green">1,425</td><!-- 4chan 2020 -->
+  <td class="lgreen">500</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">475<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/an/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/an/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Technology</td>
-<td class="line">9,783<br />/g/</td>
-<td>5%</td><td>9%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">536<br />/tech/</td>
-<td class="line">312<br />/t/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Business &amp; Finance<br />&nbsp;</td>
+  <td>/biz/</td>
+  <td class="vgreen">19,450</td><!-- 4chan 2020 -->
+  <td class="vgreen">10,150</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">4,175<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 green">/biz/<br />1,150 PPD</span>
+    <span class="d1 lgreen">/biz/<br />175 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d0 lgreen">/biz/<br >275 PPD</span>
+    <span class="d1 lgreen">/biz/<br />75 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 dead">/biz/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/biz/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d0 d1 slow">/biz/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
-<tr>
-<td>Weapons</td>
-<td class="line">3,941<br />/k/</td>
-<td>3%</td><td>3%</td> <!-- for the % of 4chan columns -->
-<td class="line">114<br />/k/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Music</td>
-<td class="line">11,756<br />/mu/</td>
-<td>5%</td><td>5%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">531<br />/mtv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Literature</td>
-<td class="line">2,404<br />/lit/</td>
-<td>6%</td><td>6%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">156<br />Petrarchan.com /pt/</td>
-</tr>
-
-<tr>
-<td>Sports</td>
-<td class="line">16,184<br />/sp/</td>
-<td>13%</td><td>18%</td> <!-- for the % of 4chan columns -->
-<td class="green">3,144<br /><span class="tooltip">/fit/ (partial)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for /sp/ and /pw/ based on the number of relevant threads in the catalog</span></span></td>
-<td class="line">168<br />/sports/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"><span class="lgreen">904<br />Wapchan.org /sp/</span></td>
-</tr>
-
-<tr>
-<td>Traditional Games</td>
-<td class="line">7,016<br />/tg/</td>
-<td>5%</td><td>5%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line">336<br />/tg/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Television &amp; Film</td>
-<td class="line">23,475<br />/tv/</td>
-<td>11%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="green">2,639<br />/tv/</td>
-<td class="line">312<br />/tv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">435<br />tvch.moe /tv/</td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Video Games</td>
-<td class="line">194,493<br /><span style="font-size: 100%">/v/ /vg/ /vm/ /vmg/ /vr/</span></td>
-<td>14%</td><td>16%</td> <!-- for the % of 4chan columns -->
-<td class="green">3,546<br />/v/</td>
-<td class="green">26,568<br /><span style="font-size: 100%">/v/ /vb/ /vg/ /gacha/</span></td>
-<td class="line"></td>
-<td class="line">100<br />/v/</td>
-<td class="line">267<br />/cog/</td>
-<td class="line"></td>
-<td class="line">289<br />zzzchan.xyz /v/</td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Pokemon</td>
-<td class="line">4,680<br />/vp/</td>
-<td>11%</td><td>11%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="lgreen">504<br />/vp/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Paranormal</td>
-<td class="line">5,985<br />/x/</td>
-<td>22%</td><td>33%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">519<br />/x/</td>
-<td class="green">1,320<br />/x/</td>
-<td class="line"></td>
-<td class="line">144<br />/x/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Animals &amp; Nature</td>
-<td class="line">477<br />/an/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-
-<tr>
-<td>Food &amp; Cooking</td>
-<td class="line">2004<br />/ck/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Do It Yourself</td>
-<td class="line">234<br />/diy/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Fashion</td>
-<td class="line">628<br />/fa/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>History</td>
-<td class="line">2,154<br />/his/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Auto</td>
-<td class="line">1,758<br />/o/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Outdoors</td>
-<td class="line">141<br />/out/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Photography</td>
-<td class="line">212<br />/p/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Science</td>
-<td class="line">804<br />/sci/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Toys</td>
-<td class="line">1,000<br />/toy/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Travel</td>
-<td class="line">281<br />/trv/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>International</td>
-<td class="line">33,703<br />/int/</td>
-<td>32%</td><td>66%</td> <!-- for the % of 4chan columns -->
-<td class="green">6,418<br />/int/</td>
-<td class="green">2,688<br />/int/</td>
-<td class="green">10,749<br />/int/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"><span class="green"><span class="tooltip">c.2,500<span class="tooltiptext">rough estimate based on manual counting</span></span><br />Ylilauta.org /int/</span></td>
-</tr>
-
-<tr>
-<td>Politics</td>
-<td class="line">83,157<br />/pol/</td>
-<td>18%</td><td>26%</td> <!-- for the % of 4chan columns -->
-<td class="green">14,984<br />/pol/</td>
-<td class="green">2,688<br />/pol/</td>
-<td class="line"></td>
-<td class="green">2,112<br />/pol/</td>
-<td class="line"></td>
-<td class="lgreen">683<br />/pol/</td>
-<td class="line"></td>
-<td class="line"><span class="green">1,322<br />leftypol.org /leftypol/</span></td>
-</tr>
-
-<tr>
-<td>R9K</td>
-<td class="line">10,632<br />/r9k/</td>
-<td>14%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="green">1,429<br />/r9k/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-</tr>
-
-<tr>
-<td>Random</td>
-<td class="line">41,067<br />/b/</td>
-<td>44%</td><td>75%</td> <!-- for the % of 4chan columns -->
-<td class="green">18,087<br />/soy/ + /qa/</td>
-<td class="green">3,432<br />/b/</td>
-<td class="green">3,104<br />/b/ (&#x1f1e9;&#x1f1ea;)</td>
-<td class="line">384<br />/random/</td>
-<td class="line">127<br />/baw/</td>
-<td class="line">259<br />/b/</td>
-<td class="line">251<br />zzzchan.xyz /b/</td>
-<td class="line" rowspan="2"><span class="green">Heolkek.cafe /ot/ 1,697</span><br /> <span class="lgreen">Leftypol.org /siberia/ 796 <br />Onesixtwo.club /scv/ 751 <br />Kissu.moe /qa/ 546</span> <br />Bantculture.com /bant/ 419 <br />Endchan.org /b/ 240 <br />Heyuri.net /b/ 221<br />Mintboard.org /bone/ 218 <br />Soyzellig.party /zellig/ 213 <br />7chan.org /b/ 170 <br />Crystal.cafe /b/ 160</span></td>
-</tr>
-
-<tr><td> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>     </tr> <!-- this is to make the last cell for /b/ on other boards longer without making the /b/ on the mainchans so big. add more or less <br />'s to adjust the height -->
-
-<tr><td class="semititle"><br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
-</tbody>
-</table>
-
-<br />
-
-<details>
-<summary style="font-size: x-large; font-weight: bold; border: 1px solid black;">Show previous numbers - 22 April 2025 (7 days after the hack). (Note that I used a different methodology)</summary>
-
-<table>
-<tr><td class="green">green = has at least 5% of 4chan's traffic</td></tr>
-<tr><td class="lgreen">light green = has at least 4 posts per hour</td></tr>
-</table>
-
-<h2 class="center">Activity of Altchans</h2>
-<p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: large;">As of Tuesday 22 April 2025 - 7 days after the hack</p>
-
-
-<table class="comparison_2025.04.22">
-<colgroup>
-<col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
-<col style="border-left: double; width: var(--columnwidth); background-color: #D9E2F3;"> <!-- 4chan -->
-<col style="border-left: double; width: var(--columnwidth); background-color: #F2F2F2; font-style: italic;;"> <!-- % 4chan -->
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth); background-color: #F2F2F2; font-style: italic;"> <!-- % 4chan -->
-<col style="border-left: double; width: var(--columnwidth);"> <!-- start of Altchans -->
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--lastwidth);">
-</colgroup>
-
-<thead>
-<tr style="height: 1px; display: none;">
-<td style="width: var(--legendwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
-<td style="width: var(--lastwidth);"></td>
-</tr>
-
-<tr style="font-size: larger; font-weight: bold;">
-<th>Selected 4chan boards</th>
-<th class="blue">4chan.org<br />(pre-hack)</th>
-<th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, top Altchan board</em></th>
-<th class="grey" style="font-size: 75%;"><em>% of 4chan traffic, all Altchan boards together</em></th>
-<th>Soyjak Party</th>
-<th>8chan</th>
-<th>Kohlchan</th>
-<th>8kun</th>
-<th>Ylilauta</th>
-<th>Ourchan</th>
-<th>Altchan Webring</th>
-<th>7chan</th>
-<th>Endchan</th>
-<th>Others</th>
-</tr>
-
-</thead>
 <tbody>
-
-<tr><td class="semititle"><br />  </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
 <tr>
-<td>URL</td>
-<td class="line">4chan.org</td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">soyjak.st</td>
-<td class="line">8chan.moe</td>
-<td class="line">kohlchan.net</td>
-<td class="line">8kun.top</td>
-<td class="line">ylilauta.org</td>
-<td class="line">ourchan.org</td>
-<td class="line">smuglo.li, tvch.moe, zzzchan.xyz, ...</td>
-<td class="line">7chan.org</td>
-<td class="line">endchan.org</td>
-<td class="line tooltip">(monitoring 10 altchans)<span class="tooltiptext">22chan.org, 28chan.org, 4chon.me, crystal.cafe, hikari3.ch, lainchan.org, petrarchan.com, plus4chan.org, wapchan.org, wizchan.org</span></td>
+  <td class="legend">Food &amp; Cooking<br />&nbsp;</td>
+  <td>/ck/</td>
+  <td class="green">5,350</td><!-- 4chan 2020 -->
+  <td class="green">2,150</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">2,000<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/ck/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/ck/<br >125 PPD</span>
+    <span class="d1 slow">/ck/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 dead">/ck/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/ck/<br />&nbsp;</span>
+    <span class="d1 lgreen">/ck/<br />100 PPD</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d0 d1 slow">/ck/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch -->
+    <span class="d00 dead">/oven/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/oven/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Software used</td>
-<td class="line">Yotsuba</td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">Vichan</td>
-<td class="line">Lynxchan</td>
-<td class="line">Lynxchan</td>
-<td class="line">Vichan<!--OpenIB (fork of Vichan)--></td>
-<td class="line">yboard</td>
-<td class="line">jschan</td>
-<td class="line">(various)</td>
-<td class="line">Kusaba X</td>
-<td class="line">Lynxchan<!--Infinity Now (fork of Lynxchan)--></td>
-<td class="line"></td>
+  <td class="legend">Comics &amp; Cartoons<br />&nbsp;</td>
+  <td>/co/</td>
+  <td class="vgreen">21,075</td><!-- 4chan 2020 -->
+  <td class="vgreen">14,075</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">12,575<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 slow">/co/<br />&nbsp;</span>
+    <span class="d0 lgreen">/co/<br >450 PPD</span>
+    <span class="d1 lgreen">/co/<br />200 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/co/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/co/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 d0 d1 slow">/co/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/co/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/co/<br />&nbsp;</span>
+  </td>
+  <td><!-- other -->
+    <span class="d00 lgreen">plus4chan.org /co/, /md/, /sssr/<br />625 PPD</span>
+    <span class="d0 green">plus4chan.org /co/, /md/, /sssr/<br />1,575 PPD</span>
+    <span class="d1 green">plus4chan.org /co/, /md/, /sssr/<br />1,150 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Traffic estimate based on</td>
-<td class="line"><a href="https://archive.ph/j5Kis" target="_blank">4stats.io<!-- (2025.04.15)--></a></td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line">Stats available</td>
-<td class="line">Stats available</td>
-<td class="line">Stats available</td>
-<td class="line">Stats available</td>
-<td class="line">Last post number</td>
-<td class="line">Stats available</td>
-<td class="line">Stats available</td>
-<td class="line">Last post number</td>
-<td class="line">Stats available</td>
-<td class="line">(depdends)</td>
+  <td class="legend">Do it yourself<br />&nbsp;</td>
+  <td>/diy/</td>
+  <td class="lgreen">750</td><!-- 4chan 2020 -->
+  <td class="lgreen">250</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">225<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan -->
+    <span class="d00 d1 dead">/diy/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/diy/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 d1 dead">/diy/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/diy/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
-<tr><td class="semititle"><br />  Posts per day:</td><td></td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
 <tr>
-<td>Anime</td>
-<td class="line">31,447<br />/a/</td>
-<td>8%</td><td>10%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">696<br />/a/</td>
-<td class="green">2,376<br />/a/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">72 + 37<br />smug + zzz /a/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Fashion<br />&nbsp;</td>
+  <td>/fa/</td>
+  <td class="green">3,225</td><!-- 4chan 2020 -->
+  <td class="lgreen">675</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">500<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/fa/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/fa/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan -->
+    <span class="d00 d0 d1 slow">/fa/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Business &amp; Finance</td>
-<td class="line">9,588<br />/biz/</td>
-<td>7%</td><td>8%</td> <!-- for the % of 4chan columns -->
-<td class="green">672<br />/biz/</td>
-<td class="line">48<br />/biz/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Fitness &amp; Health<br />&nbsp;</td>
+  <td>/fit/</td>
+  <td class="vgreen">12,000</td><!-- 4chan 2020 -->
+  <td class="green">3,800</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">3,100<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /fit/-related content</span></span><br />1,575 PPD</span>
+    <span class="d1 lgreen">/fit/<br />275 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 d1 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/fit/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Food &amp; Cooking</td>
-<td class="line">2004<br />/ck/</td>
-<td>1%</td><td>1%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">24<br />tvch.moe /oven/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Technology<br />&nbsp;</td>
+  <td>/g/</td>
+  <td class="vgreen">14,800</td><!-- 4chan 2020 -->
+  <td class="green">10,550</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">9,825<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 lgreen">/tech/<br >750 PPD</span>
+    <span class="d1 lgreen">/tech/<br />100 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 slow">/t/<br />&nbsp;</span>
+    <span class="d0 lgreen">/t/<br >725 PPD</span>
+    <span class="d1 lgreen">/t/<br />200 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/g/ + /prog/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/g/ + /prog/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/g/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/g/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 slow">/tech/<br />&nbsp;</span>
+    <span class="d0 d1 slow">/tech/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/tech/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/tech/<br />&nbsp;</span>
+  </td>
+  </td>
+  <td>
+  <span class="d0 lgreen">lainchan.org /Ω/<br />75 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Comics &amp; Cartoons</td>
-<td class="line">13,184<br />/co/</td>
-<td>6%</td><td>6%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line">24<br />/co/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="green">790<br />plus4chan.org /co/</td>
+  <td class="legend">History &amp; Humanities<br />&nbsp;</td>
+  <td>/his/</td>
+  <td class="green">8,350</td><!-- 4chan 2020 -->
+  <td class="green">2,300</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">2,200<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 d0 d1 dead">/hi/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 dead">/his/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/his/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Fitness</td>
-<td class="line">3534<br />/fit/</td>
-<td>19%</td><td>19%</td> <!-- for the % of 4chan columns -->
-<td class="green">686<br /><span class="tooltip">/fit/ (partially)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for actual 4chan /fit/ content based on the number of relevant threads in the catalog</span></span></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Japan &amp; Otaku Culture<br />&nbsp;</td>
+  <td>/jp/</td>
+  <td class="vgreen">10,775</td><!-- 4chan 2020 -->
+  <td class="green">6,575</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">5,250<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/jp/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/jp/<br >200 PPD</span>
+    <span class="d1 lgreen">/jp/<br />100 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d0 d1 dead">/jp/ + /2hu/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan -->
+    <span class="d00 slow">/japan/, /2hu/, /rozen/<br />&nbsp;</span>
+    <span class="d0 slow">/japan/, /2hu/, /rozen/<br />&nbsp;</span>
+    <span class="d1 lgreen">/japan/, /2hu/, /rozen/<br />75 PPD</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 dead">/jp/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/jp/<br />&nbsp;</span>
+  </td>
+  <td>
+    <span class="d1 lgreen">kissu.moe /jp/<br />200 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Technology</td>
-<td class="line">9,783<br />/g/</td>
-<td>8%</td><td>10%</td> <!-- for the % of 4chan columns -->
-<td class="green">816<br />/tech/</td>
-<td class="lgreen">168<br />/t/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">24<br />Lainchain.org /Ω/ + /λ/</td>
+  <td class="legend">Weapons<br />&nbsp;</td>
+  <td>/k/</td>
+  <td class="vgreen">13,500</td><!-- 4chan 2020 -->
+  <td class="green">4,225</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">3,375<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 lgreen">/k/<br />175 PPD</span>
+    <span class="d1 slow">/k/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/k/<br >300 PPD</span>
+    <span class="d1 lgreen">/k/<br />50 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/k/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/k/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 slow">/k/<br />&nbsp;</span>
+    <span class="d0 d1 slow">/k/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 d1 dead">/w/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/w/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Weapons</td>
-<td class="line">3,941<br />/k/</td>
-<td>2%</td><td>4%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">96<br />/k/</td>
-<td class="line">48<br />/k/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Literature<br />&nbsp;</td>
+  <td>/lit/</td>
+  <td class="green">9,100</td><!-- 4chan 2020 -->
+  <td class="green">2,550</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">2,375<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/lit/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d0 slow">/lit/<br />&nbsp;</span>
+    <span class="d1 dead">/lit/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d1 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/lit/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch -->
+    <span class="d00 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/lit/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 d0 slow">/lit/<br />&nbsp;</span>
+    <span class="d1 dead">/lit/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other -->
+    <span class="d0 lgreen">petrarchan.com /pt/<br />175 PPD</span>
+    <span class="d1 lgreen">petrarchan.com /pt/<br />100 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Music</td>
-<td class="line">11,756<br />/mu/</td>
-<td>4%</td><td>4%</td> <!-- for the % of 4chan columns -->
-<td class="green">504<br />/mtv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Mecha<br />&nbsp;</td>
+  <td>/m/</td>
+  <td class="green">2,900</td><!-- 4chan 2020 -->
+  <td class="green">1,975</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">1,800<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/m/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/m/<br />&nbsp;</span>
+    <span class="d1 lgreen">/m/<br />50 PPD</span>
+  </td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Literature</td>
-<td class="line">2,404<br />/lit/</td>
-<td>9%</td><td>9%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="green">216<br />Petrarchan.com /pt/</td>
+  <td class="legend">Music<br />&nbsp;</td>
+  <td>/mu/</td>
+  <td class="vgreen">27,000</td><!-- 4chan 2020 -->
+  <td class="vgreen">12,550</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">8,725<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 lgreen">/mtv/<br />275 PPD</span>
+    <span class="d0 lgreen">/mtv/<br />850 PPD</span>
+    <span class="d1 lgreen">/mtv/<br />175 PPD</span>
+  </td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/mu/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/mu/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/mu/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/mu/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+  <td><!-- tvch -->
+    <span class="d00 dead">/ost/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/ost/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span><br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/mu/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/mu/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Sports</td>
-<td class="line">16,184<br />/sp/</td>
-<td>4%</td><td>8%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">873<br /><span class="tooltip">/fit/ (partially)<span class="tooltiptext">This /fit/ board includes /fit/, /sp/ and /pw/ content; this number is the estimate for /sp/ and /pw/ based on the number of relevant threads in the catalog</span></span></td>
-<td class="lgreen">96<br />/sports/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="green">1,058<br />Wapchan.org /sp/</td>
+  <td class="legend">Transport<br />&nbsp;</td>
+  <td>/n/</td>
+  <td class="lgreen">400</td><!-- 4chan 2020 -->
+  <td class="lgreen">75</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">50<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Traditional Games</td>
-<td class="line">7,016<br />/tg/</td>
-<td>3%</td><td>4%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="lgreen">192<br />/tg/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">96<br />smuglo.li /tg/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Auto<br />&nbsp;</td>
+  <td>/o/</td>
+  <td class="green">4,700</td><!-- 4chan 2020 -->
+  <td class="green">1,875</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">1,675<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 d1 slow">/cftf/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d0 d1 dead">/o/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/o/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/o/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Television &amp; Film</td>
-<td class="line">23,475<br />/tv/</td>
-<td>7%</td><td>9%</td> <!-- for the % of 4chan columns -->
-<td class="green">1,728<br />/tv/</td>
-<td class="lgreen">96<br />/tv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">70<br />/tv/</td>
-<td class="lgreen">192<br />tvch.moe /tv/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Outdoors<br />&nbsp;</td>
+  <td>/out/</td>
+  <td class="green">1,025</td><!-- 4chan 2020 -->
+  <td class="lgreen">150</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">125<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/out/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/out/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d1 dead">/out/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/out/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Video Games</td>
-<td class="line">194,493<br /><span style="font-size: 80%">/v/ /vg/ /vm/ /vmg/ /vr/</span></td>
-<td>13%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">1,848<br />/v/</td>
-<td class="green">25,752<br /><span style="font-size: 80%">/v/ /vb/ /vg/ /gacha/</span></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line">74<br />/v/</td>
-<td class="lgreen">268<br />zzzchan.xyz /v/</td>
-<td class="lgreen">216<br />/v/</td>
-<td class="line">24<br />/cog/</td>
-<td class="line"></td>
+  <td class="legend">Photography<br />&nbsp;</td>
+  <td>/p/</td>
+  <td class="lgreen">350</td><!-- 4chan 2020 -->
+  <td class="lgreen">225</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">250<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d0 d1 dead">/p/ &dagger;<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Pokemon</td>
-<td class="line">4,680<br />/vp/</td>
-<td>2%</td><td>2%</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="lgreen">96<br />/vp/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Pro Wrestling<br />&nbsp;</td>
+  <td>/pw/</td>
+  <td>(did not exist)</td><!-- 4chan 2020 -->
+  <td class="green">8,200</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">7,425<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /pw/-related content</span></span><br />1,625 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/wooo/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/wooo/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/wooo/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/wooo/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch -->
+    <span class="d00 dead">/wooo/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/wooo/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Paranormal</td>
-<td class="line">5,985<br />/x/</td>
-<td>9%</td><td>14%</td> <!-- for the % of 4chan columns -->
-<td class="lgreen">240<br />/x/</td>
-<td class="green">528<br />/x/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">98<br />/x/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Science<br />&nbsp;</td>
+  <td>/sci/</td>
+  <td class="green">3,475</td><!-- 4chan 2020 -->
+  <td class="lgreen">875</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">775<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/sci/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/sci/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d1 dead">/sci/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/sci/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan -->
+    <span class="d00 d1 dead">/sci/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/sci/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Animals &amp; Nature</td>
-<td class="line">477<br />/an/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Sports<br />&nbsp;</td>
+  <td>/sp/ + /xs/</td>
+  <td class="green">3,475</td><!-- 4chan 2020 -->
+  <td class="vgreen">17,050</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">15,850<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /sp/-related content</span></span><br />2,450 PPD</span>
+    <span class="d1 lgreen">/asp/<br />400 PPD</span>
+  </td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/sp/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/sp/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/sp/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/sp/<br />&nbsp;</span>
+  </td>
+  <td><!-- other -->
+    <span class="d0 lgreen">wapchan.org /sp/<br />900 PPD</span>
+    <span class="d1 lgreen">wapchan.org /sp/ - 150 PPD<br />76chan.org /sp/ - 125 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Do It Yourself</td>
-<td class="line">234<br />/diy/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Traditional Games<br />&nbsp;</td>
+  <td>/tg/</td>
+  <td class="vgreen">19,225</td><!-- 4chan 2020 -->
+  <td class="green">7,550</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">5,575<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/tg/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/tg/<br />250 PPD</span>
+    <span class="d1 lgreen">/tg/<br />75 PPD</span>
+  </td>
+  <td><!-- 8kun -->  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch -->
+    <span class="d00 d1 dead">/top/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/top/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 d1 dead">/tg/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/tg/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Fashion</td>
-<td class="line">628<br />/fa/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Toys<br />&nbsp;</td>
+  <td>/toy/</td>
+  <td class="green">1,900</td><!-- 4chan 2020 -->
+  <td class="green">1,075</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">1,150<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun -->
+    <span class="d00 d1 dead">/toy/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/toy/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>History</td>
-<td class="line">2,154<br />/his/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Travel<br />&nbsp;</td>
+  <td>/trv/</td>
+  <td class="lgreen">525</td><!-- 4chan 2020 -->
+  <td class="lgreen">300</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 lgreen">200<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan --></td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Auto</td>
-<td class="line">1,758<br />/o/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Television &amp; Film<br />&nbsp;</td>
+  <td>/tv/</td>
+  <td class="vgreen">51,175</td><!-- 4chan 2020 -->
+  <td class="vgreen">25,100</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">21,775<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 green">/tv/<br />2,250 PPD</span>
+    <span class="d1 lgreen">/tv/<br />250 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/tv/ + /vhs/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/tv/ + /vhs/<br >200 PPD</span>
+    <span class="d1 slow">/tv/ + /vhs/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 d0 dead">/tv/ &dagger;<br />&nbsp;</span>
+    <span class="d1 slow">/tv/<br />&nbsp;</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/tv/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/tv/<br />50 PPD</span>
+    <span class="d1 slow">/tv/<br />&nbsp;</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 d0 d1 slow">/vhs/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch -->
+    <span class="d00 lgreen">/tv/<br />50 PPD</span>
+    <span class="d0 lgreen">/tv/<br />450 PPD</span>
+    <span class="d1 lgreen">/tv/<br />100 PPD</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span><br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/tv/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/tv/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Outdoors</td>
-<td class="line">141<br />/out/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Video Games<br />&nbsp;</td>
+  <td style="font-size: 80%;">/v/, /vg/, /vm/, /vmg/, /vr/, /vrpg/, /vst/</td>
+  <td class="vgreen">275,625</td><!-- 4chan 2020 -->
+  <td class="vgreen">210,075</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">165,150<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d0 vgreen">/v/<br />25,425 PPD</span>
+    <span class="d1 lgreen">/v/<br />350 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 lgreen">/v/, /vb/, /vg/<br />325 PPD</span>
+    <span class="d0 vgreen"><span style="font-size: 80%;">/v/, /gacha/, /vb/, /vg/, /vgg/</span><br />45,900 PPD</span>
+    <span class="d1 vgreen"><span style="font-size: 80%;">/v/, /gacha/, /vb/, /vg/, /vgg/</span><br />23,450 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 slow">/v/ + /vr/<br />&nbsp;</span>
+    <span class="d0 lgreen">/v/ + /vr/<br />100 PPD</span>
+    <span class="d1 lgreen">/v/ + /vr/<br />50 PPD</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 d1 slow">/v/<br />&nbsp;</span>
+    <span class="d0 lgreen">/v/<br />100 PPD</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 lgreen">/v/<br />75 PPD</span>
+    <span class="d0 lgreen">/v/<br />300 PPD</span>
+    <span class="d1 lgreen">/v/<br />175 PPD</span>
+  </td>
+  <td><!-- tvch -->
+    <span class="d00 dead">/ch3/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/ch3/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 dead">/vg/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/vg/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 dead">/v/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/v/<br />&nbsp;</span>
+  </td>
+  <td><!-- other -->
+    <span class="d0 lgreen">plus4chan.org /cog/<br />275 PPD</span>
+    <span class="d1 lgreen">plus4chan.org /cog/<br />75 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Photography</td>
-<td class="line">212<br />/p/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Pokemon<br />&nbsp;</td>
+  <td>/vp/</td>
+  <td class="vgreen">10,750</td><!-- 4chan 2020 -->
+  <td class="green">5,000</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">4,250<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d0 lgreen">/vp/<br />400 PPD</span>
+    <span class="d1 lgreen">/vp/<br />250 PPD</span>
+  </td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Science</td>
-<td class="line">804<br />/sci/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Vtubers<br />&nbsp;</td>
+  <td>/vt/</td>
+  <td>(did not exist)</td><!-- 4chan 2020 -->
+  <td class="vgreen">64,825</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">46,225<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak --></td>
+  <td><!-- 8chan -->
+    <span class="d00 dead">/vyt/ &dagger;<br />&nbsp;</span>
+    <span class="d0 vgreen">/vyt/<br />11,950 PPD</span>
+    <span class="d1 green">/vyt/<br />8,425 PPD</span>
+  </td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan --></td>
+  <td><!-- other -->
+    <span class="d00 lgreen">holotower.org /hlgg/<br />50 PPD</span>
+    <span class="d0 vgreen">holotower.org /hlgg/<br />22,925 PPD</span>
+    <span class="d1 vgreen">holotower.org /hlgg/<br />24,100 PPD</span>
+  </td>
 </tr>
-
 <tr>
-<td>Toys</td>
-<td class="line">1,000<br />/toy/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Paranormal<br />&nbsp;</td>
+  <td>/x/</td>
+  <td class="green">9,200</td><!-- 4chan 2020 -->
+  <td class="green">6,425</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">5,700<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 slow">/x/<br />&nbsp;</span>
+    <span class="d0 lgreen">/x/<br />700 PPD</span>
+    <span class="d1 lgreen">/x/<br />75 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 slow">/x/<br />&nbsp;</span>
+    <span class="d0 lgreen">/x/<br />400 PPD</span>
+    <span class="d1 lgreen">/x/<br />100 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 slow">/x/<br />&nbsp;</span>
+    <span class="d0 lgreen">/x/<br />150 PPD</span>
+    <span class="d1 lgreen">/x/<br />50 PPD</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
+    <span class="d0 lgreen">/x/<br />100 PPD</span>
+    <span class="d1 lgreen">/x/<br />50 PPD</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/x/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch -->
+    <span class="d00 d1 dead">/truth/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/truth/<br />&nbsp;</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/x/<br />&nbsp;</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
+    <span class="d0 d1 slow">/x/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
+<tr><td class="legend"><span style="text-decoration: underline; font-style: italic;">Off-Topic Boards:</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td  style="font-style: italic; text-decoration: underline;">minimum 100 PPD to be shown:</td></tr>
 <tr>
-<td>Travel</td>
-<td class="line">281<br />/trv/</td>
-<td colspan="2"><em>no viable alternative</em></td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">International<br />&nbsp;</td>
+  <td>/int/</td>
+  <td class="vgreen">58,100</td><!-- 4chan 2020 -->
+  <td class="vgreen">36,225</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">32,000<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 slow">/int/<br />&nbsp;</span>
+    <span class="d0 green">/int/<br />7,350 PPD</span>
+    <span class="d1 green">/int/<br />1,075 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d0 green">/int/<br />2,700 PPD</span>
+    <span class="d1 slow">/int/<br />&nbsp;</span>
+  </td>
+  <td><!-- 8kun --></td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan --></td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/int/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/int/<br />&nbsp;</span>
+  </td>
+  <td><!-- other -->
+    <span class="green d00">kohlchan.net /int/ - 7,000 PPD</span><span class="green d00">ylilauta.org /int/ - <span class="tooltip">c.1,500 PPD<span class="tooltiptext">rough estimate</span></span></span>
+    <span class="d0 vgreen">kohlchan.net /int/ - 10,750 PPD</span><span class="d0 green">ylilauta.org /int/ - <span class="tooltip">c.2,500 PPD<span class="tooltiptext">rough estimate</span></span></span>
+    <span class="d1 vgreen">kohlchan.net /int/ - 8,325 PPD</span><span class="d1 green">ylilauta.org /int/ - <span class="tooltip">c.2,000 PPD<span class="tooltiptext">rough estimate</span></span></span>
+  </td>
 </tr>
-
 <tr>
-<td>International</td>
-<td class="line">33,703<br />/int/</td>
-<td>21%</td><td>46%</td> <!-- for the % of 4chan columns -->
-<td class="green">5,688<br />/int/</td>
-<td class="lgreen">1,104<br />/int2/</td>
-<td class="green">7,056<br />/int/</td>
-<td class="line"></td>
-<td class="lgreen">1,800<br />/int/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">Politics<br />&nbsp;</td>
+  <td>/pol/</td>
+  <td class="vgreen">131,725</td><!-- 4chan 2020 -->
+  <td class="vgreen">89,475</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">71,475<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 green">/pol/<br />6,000 PPD</span>
+    <span class="d0 vgreen">/pol/<br />13,925 PPD</span>
+    <span class="d1 green">/pol/<br />5,150 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 slow">/pol/<br />&nbsp;</span>
+    <span class="d0 green">/pol/<br />1,950 PPD</span>
+    <span class="d1 lgreen">/pol/<br />450 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 lgreen">/pol/<br />100 PPD</span>
+    <span class="d0 green">/pol/<br />2,125 PPD</span>
+    <span class="d1 green">/pol/<br />1,675 PPD</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 lgreen">/pol/<br />75 PPD</span>
+    <span class="d0 green">/pol/<br />700 PPD</span>
+    <span class="d1 lgreen">/pol/<br />250 PPD</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 d1 dead">/pol/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/pol/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch -->
+    <span class="d00 dead">/dup/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/dup/<br />&nbsp;</span>
+    <span class="d1 lgreen">/dup/<br />50 PPD</span>
+  </td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 d0 d1 slow">/pol/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>Politics</td>
-<td class="line">83,157<br />/pol/</td>
-<td>13%</td><td>18%</td> <!-- for the % of 4chan columns -->
-<td class="green">10,464<br />/pol/</td>
-<td class="lgreen">864<br />/pol/</td>
-<td class="line"></td>
-<td class="lgreen">2,616<br />/pol/</td>
-<td class="line"></td>
-<td class="lgreen">1,233<br />/pol/</td>
-<td class="line">24<br />tvch.moe /dup/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
+  <td class="legend">R9K<br />&nbsp;</td>
+  <td>/r9k/</td>
+  <td class="vgreen">16,875</td><!-- 4chan 2020 -->
+  <td class="vgreen">11,475</td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 green">8,725<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 slow">/r9k/<br />&nbsp;</span>
+    <span class="d0 green">/r9k/<br />1,375 PPD</span>
+    <span class="d1 lgreen">/r9k/<br />300 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 d1 slow">/r9k/<br />&nbsp;</span>
+    <span class="d0 lgreen">/r9k/<br />75 PPD</span>
+  </td>
+  <td><!-- 8kun -->  </td>
+  <td><!-- ourchan --></td>
+  <td><!-- zzzchan -->
+    <span class="d00 d1 dead">/r9k/ + /hikki/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/r9k/ + /hikki/<br />&nbsp;</span>
+  </td>
+  <td><!-- tvch --></td>
+  <td><!-- 7chan --></td>
+  <td><!-- endchan -->
+    <span class="d00 d1 dead">/r10k/ &dagger;<br />&nbsp;</span>
+    <span class="d0 slow">/r10k/<br />&nbsp;</span>
+  </td>
+  <td><!-- other --></td>
 </tr>
-
 <tr>
-<td>R9K</td>
-<td class="line">10,632<br />/r9k/</td>
-<td>7%</td><td>10%</td> <!-- for the % of 4chan columns -->
-<td class="green">768<br />/r9k/</td>
-<td class="line">72<br />/r9k/</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="lgreen">Wizchan.org (for men)<br />Crystal.cafe (for women)</td>
+  <td class="legend">Random<br />&nbsp;</td>
+  <td>/b/, /bant/, /s4s/</td>
+  <td><span class="vgreen" style="  display: block; width: 100%; margin: 0; padding: 0; box-sizing: border-box;">87,900<br />&nbsp;</span></td><!-- 4chan 2020 -->
+  <td><span class="vgreen" style="  display: block; width: 100%; margin: 0; padding: 0; box-sizing: border-box;">56,150<br />&nbsp;</span></td><!-- 4chan pre-hack -->
+  <td><!-- 4chan current PPD-->
+    <span class="d00">&larr;</span>
+    <span class="d0 dead">(offline)</span>
+    <span class="d1 vgreen">39,300<br />&nbsp;</span>
+  </td>
+  <td><!-- soyjak -->
+    <span class="d00 vgreen">/soy/ + /qa/<br />10,225 PPD</span>
+    <span class="d0 vgreen">/soy/ + /qa/<br />25,375 PPD</span>
+    <span class="d1 vgreen">/soy/ + /qa/<br />13,475 PPD</span>
+  </td>
+  <td><!-- 8chan -->
+    <span class="d00 lgreen">/b/<br />225 PPD</span>
+    <span class="d0 green">/b/<br />3,375 PPD</span>
+    <span class="d1 lgreen">/b/<br />975 PPD</span>
+  </td>
+  <td><!-- 8kun -->
+    <span class="d00 lgreen">/random/<br />100 PPD</span>
+    <span class="d0 lgreen">/random/<br />400 PPD</span>
+    <span class="d1 lgreen">/random/<br />675 PPD</span>
+  </td>
+  <td><!-- ourchan -->
+    <span class="d00 slow">/b/, /bant/<br />&nbsp;</span>
+    <span class="d0 lgreen">/b/, /bant/<br />275 PPD</span>
+    <span class="d1 lgreen">/b/, /bant/<br />100 PPD</span>
+  </td>
+  <td><!-- zzzchan -->
+    <span class="d00 lgreen">/b/<br />225 PPD</span>
+    <span class="d0 lgreen">/b/<br />250 PPD</span>
+    <span class="d1 lgreen">/b/<br />275 PPD</span>
+  </td>
+  <td><!-- tvch -->
+    <span class="d00 slow">/dunk/<br />&nbsp;</span>
+    <span class="d0 slow">/dunk/<br />&nbsp;</span>
+    <span class="d1 lgreen">/dunk/<br />50 PPD</span>
+  </td>
+  <td><!-- 7chan -->
+    <span class="d00 slow">/b/<br />&nbsp;</span>
+    <span class="d0 lgreen">/b/<br />175 PPD</span>
+    <span class="d1 lgreen">/b/<br />75 PPD</span>
+  </td>
+  <td><!-- endchan -->
+    <span class="d00 d1 slow">/b/<br />&nbsp;</span>
+    <span class="d0 lgreen">/b/<br />250 PPD</span>
+  </td>
+  <td rowspan="6"><!-- other -->
+      <span class="d00 green">heolkek.cafe /ot/ - 2,425 PPD</span>
+      <span class="d00 green">onesixtwo.club /scv/ - 1,400 PPD</span>
+      <span class="d00 lgreen">mintboard.org /bone/ - 300 PPD</span>
+      <span class="d00 lgreen">soyzellig.party /zellig/ + /qa/ - 250 PPD</span>
+      <span class="d00 lgreen">bantculture.com /bant/ - 175 PPD</span>
+      <span class="d00 lgreen">heyuri.net /b/ - 100 PPD</span>
+
+      <span class="d0 green">heolkek.cafe /ot/ - 1,700 PPD</span>
+      <span class="d0 lgreen">onesixtwo.club /scv/ - 750 PPD</span>
+      <span class="d0 lgreen">kissu.moe /qa/ - 550 PPD</span>
+      <span class="d0 lgreen">bantculture.com /bant/ - 425 PPD</span>
+      <span class="d0 lgreen">heyuri.net /b/ - 225 PPD</span>
+      <span class="d0 lgreen">mintboard.org /bone/ - 225 PPD</span>
+      <span class="d0 lgreen">soyzellig.party /zellig/ - 225 PPD</span>
+      <span class="d0 lgreen">crystal.cafe /b/ - 175 PPD</span>
+      <span class="d0 lgreen">plus4chan.org /baw/ - 125 PPD</span>
+
+      <span class="d1 lgreen">onesixtwo.club /scv/ - 925 PPD</span>
+      <span class="d1 lgreen">heolkek.cafe /ot/ - 500 PPD</span>
+      <span class="d1 lgreen">mintboard.org /bone/ - 325 PPD</span>
+      <span class="d1 lgreen">soyzellig.party /zellig/ - 275PPD</span>
+      <span class="d1 lgreen">kissu.moe /qa/ - 275PPD</span>
+      <span class="d1 lgreen">bantculture.com /bant/ - 275 PPD</span>
+      <span class="d1 lgreen">heyuri.net /b/ - 175 PPD</span>
+  </td>
 </tr>
-
-<tr>
-<td>Random</td>
-<td class="line">41,067<br />/b/</td>
-<td>31%</td><td>37%</td> <!-- for the % of 4chan columns -->
-<td class="green">12,648<br />/soy/, /qa/</td>
-<td class="lgreen">1,248<br />/b/</td>
-<td class="line"></td>
-<td class="lgreen">312<br />/random/</td>
-<td class="line"></td>
-<td class="lgreen">150<br />/b/</td>
-<td class="lgreen">176<br />zzzchan.xyz /b/</td>
-<td class="lgreen">264<br />/b/</td>
-<td class="line">120<br />/b/</td>
-<td class="line"><em>(many altchans - it's often the most active board)</em></td>
-</tr>
-
-<tr><td class="semititle"><br />All boards above</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
-<tr>
-<td>Posts per day</td>
-<td class="line">515,722</td>
-<td></td><td></td> <!-- for the % of 4chan columns -->
-<td class="line" style="background-color: #ccc;">37,728</td>
-<td class="line" style="background-color: #ccc;">32,712</td>
-<td class="line" style="background-color: #eee;">7,056</td>
-<td class="line" style="background-color: #eee;">2,928</td>
-<td class="line" style="background-color: #eee;">1,800</td>
-<td class="line" style="background-color: #eee;">1,625</td>
-<td class="line">889</td>
-<td class="line">480</td>
-<td class="line">120</td>
-<td class="line"></td>
-</tr>
-
-<tr><td class="semititle"><br /> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
-<tr>
-<td>Non-English boards</td>
-<td class="line">n/a</td>
-<td>n/a</td><td>n/a</td> <!-- for the % of 4chan columns -->
-<td class="line"></td>
-<td class="line"></td>
-<td class="green">2,472<br />&#x1f1e9;&#x1f1ea; German</td>
-<td class="line"></td>
-<td class="green"><span class="tooltip">98,200<span class="tooltiptext">Ylilauta claims to have 3 million posts per month, so c. 100,000 per day. Everything except for the /int/ board is Finnish.</span></span><br />&#x1f1eb;&#x1f1ee; Finnish</td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"></td>
-<td class="line"><em>(several altchans - including the original 2channel &#x1f1ef;&#x1f1f5;)</em></td>
-</tr>
-
+<!-- the following lines are just a quick fix so that the green colour for /b/ in column 3 and 4 doesn't extend all the way down -->
+<tr><td></td><td></td><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
+</div>
+</div>
 
-</details>
+<h4>Legend:</h4>
+<table class="legend-table">
+<tr><td><span class="vgreen" style="display: block; width: 100%;">&nbsp;at least 10,000 post per day&nbsp;</span></td></tr>
+<tr><td><span class="green" style="display: block; width: 100%;">&nbsp;at least 1000 posts per day&nbsp;</span></td></tr>
+<tr><td><span class="lgreen" style="display: block; width: 100%;">&nbsp;at least 50 posts per day&nbsp;</span></td></tr>
+<tr><td><span class="slow" style="display: block; width: 100%;">&nbsp;1-50 posts per day&nbsp;</span></td></tr>
+<tr><td><span class="dead" style="display: block; width: 100%;">&nbsp;less than 1 post per day, "dead" ("&dagger;")&nbsp;</span></td></tr>
+</table>
 
 <h2>So, what's the conclusion?</h2>
 
-<p>The most active overall boards are <strong>Soyjak.st</strong> and <strong>8chan.moe</strong> with a large margin. However, a large share of 8chan's traffic is for the video game boards and a large share of Soyjak Party's traffic is for the soyjak meme boards - or just bot spam. Following up is Kohlchan with it's large English-language /int/ board. <br /><br />
-The hobby &amp; interest boards are still quite slow on all of the altchans and there's no real replacement for 4chan yet. If you were active on boards like /g/, /fit/, /o/, /an/, /fa/, /sci/, /his/, /k/, /biz/, /lit/ and so on, there's not a great alternative to these places. The altchans are still quite slow for these interests and other popular places like Reddit have anti-features like default sorting of comments by upvotes, mandatory usernames, "karma", and insufferable powermods.</p>
+<p>
+The 4chan hack and subsequent 10-day downtime in April 2025 significantly disrupted its user base, prompting a temporary migration to various altchans. Data from the pre-hack period, during the downtime, and one week after 4chan's return (2025.05.02) reveals notable shifts in posting activity. <strong>During the downtime most altchans experienced substantial increases in posts per day (PPD)</strong> across multiple boards, absorbing a significant portion of 4chan's displaced users. For instance, Soyjak.st's /soy/ + /qa/ boards surged from 10,225 PPD to 25,375 PPD, and 8chan.moe's various video game boards jumped from 325 PPD to 45,900 PPD and its Vtuber board grew by almost 12,000 PPD. While <strong>Soyjak.st and 8chan.moe emerged as primary refuges</strong>, niche altchans managed to capture specific communities, such as holotower.org for Vtubers (22,925 PPD), kohlchan.net for /int/ernational discussions (10,750 PPD), Plus4chan.org for comics and Smuglo.li for anime. However, the limited activity on hobby and interest boards across altchans suggests that <strong>many of 4chan's boards lack popular alternatives</strong> (e.g., /g/, /fit/, /lit/). Some altchans had been positioning themselves as alternatives for specific interests, such as TVch.moe for /tv/, Petrarchan.com for /lit/ or Lainchan.org for /g/, but they only experienced moderate activity during 4chan''s downtime.<br /><br />
+<strong>After 4chan's return, its PPD recovered but did not fully rebound to pre-hack levels a week after.</strong> For example, the various video game boards together dropped from 210,075 PPD pre-hack to 165,150 PPD, /pol/ fell from 89,475 PPD to 71,475 PPD, and /biz/ even shrank to less than half of its pre-hack activity. This suggests some users either remained active on altchans or reduced their overall imageboard activity. <strong>Many altchans retained somewhat elevated activity compared to pre-hack levels</strong>, with Soyjak.st's /soy/ + /qa/ at 13,475 PPD (still above the pre-hack 10,225 PPD) and 8chan.moe's video game boards at 23,450 PPD (down from 45,900 PPD but significantly above the previous 325 PPD). Holotower.org's /hlgg/ board notably increased to 24,100 PPD, surpassing its downtime peak, indicating strong retention for Vtuber discussions (whereas 4chan's /vt/ PPD did not fully recover).<br /><br />
+While 4chan remains the dominant imageboard, the hack exposed its user base's <strong>willingness to explore alternatives</strong> - but for the majority of users it also showed a <strong>lack of coordination and insufficient knowledge of other imageboards</strong> I wonder what would have happened if 4chan had been offline for a month or longer - or forever. Would another imageboard have emerged as the dominant one, would users have split their time across multiple imageboards, would certain niche imageboards have managed to assert themselves for their specific community, or would people just move to Reddit, X or traditional forums?<br /><br />
+<strong>I hope this table might serve as some sort of starting point for where to shelter in case of another 4chan downtime, or which alternatives to check out today.</strong>
+<br /><br /><em>I intend to update this table regularly to see the changes over time.</em>
+</p>
 
 <script src="bottom.js "></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Create the floating radio container
+    const floatingContainer = document.createElement('div');
+    floatingContainer.className = 'floating-radio-container';
+    floatingContainer.innerHTML = `
+        <button id="close-floating-container" style="position: absolute; top: 5px; right: 5px; background: none; border: none; font-size: 10px; cursor: pointer; color: #ff5555;">Close</button>
+        <p>Select a date to show:</p>
+        <input type="radio" id="float-show-d00" name="floatSpanSelector">
+        <label for="float-show-d00">Before 4chan hack (~2025.04.14)</label><br />
+        <input type="radio" id="float-show-d0" name="floatSpanSelector">
+        <label for="float-show-d0">Before 4chan's return (~2025.04.24)</label><br />
+        <input type="radio" id="float-show-d1" name="floatSpanSelector">
+        <label for="float-show-d1">Week to 2025.05.02 (1 week after return)</label>
+        <p class="floating-comment">(Tip: you can click on one of the radio buttons and then use your up/down arrow keys to flick through the dates.)</p>
+    `;
+    document.body.appendChild(floatingContainer);
+
+    // Get references to main and floating radio buttons
+    const mainRadios = {
+        d00: document.getElementById('show-d00'),
+        d0: document.getElementById('show-d0'),
+        d1: document.getElementById('show-d1')
+    };
+    const floatRadios = {
+        d00: document.getElementById('float-show-d00'),
+        d0: document.getElementById('float-show-d0'),
+        d1: document.getElementById('float-show-d1')
+    };
+
+    // Synchronize radio buttons
+    const syncRadios = (source, target) => {
+        for (const key in source) {
+            if (source[key].checked) {
+                target[key].checked = true;
+            }
+        }
+    };
+
+    // Add event listeners for main radios
+    for (const key in mainRadios) {
+        mainRadios[key].addEventListener('change', () => syncRadios(mainRadios, floatRadios));
+    }
+
+    // Add event listeners for floating radios
+    for (const key in floatRadios) {
+        floatRadios[key].addEventListener('change', () => syncRadios(floatRadios, mainRadios));
+    }
+
+    // Initialize sync
+    syncRadios(mainRadios, floatRadios);
+
+    // Add event listener for close button
+    const closeButton = document.getElementById('close-floating-container');
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            floatingContainer.style.display = 'none';
+        });
+    }
+
+    // Use IntersectionObserver to monitor radio button and table visibility
+    const radioButton = document.querySelector('#show-d00');
+    const tableContainer = document.querySelector('.table-container');
+
+    if (radioButton && tableContainer) {
+        let isRadioVisible = false;
+        let isTableVisible = false;
+
+        // Check if viewport width is at least 578px
+        const isWideEnough = () => window.innerWidth >= 578;
+
+        // Observer for radio button
+        const radioObserver = new IntersectionObserver((entries) => {
+            isRadioVisible = entries[0].isIntersecting;
+            updateFloatingContainer();
+        }, { threshold: 0.1 });
+
+        // Observer for table container
+        const tableObserver = new IntersectionObserver((entries) => {
+            isTableVisible = entries[0].isIntersecting;
+            updateFloatingContainer();
+        }, { threshold: 0.1 });
+
+        // Function to update floating container visibility
+        const updateFloatingContainer = () => {
+            if (isWideEnough()) {
+                floatingContainer.style.display = (!isRadioVisible && isTableVisible) ? 'block' : 'none';
+            } else {
+                floatingContainer.style.display = 'none';
+            }
+        };
+
+        // Start observing
+        radioObserver.observe(radioButton);
+        tableObserver.observe(tableContainer);
+
+        // Update visibility on window resize
+        window.addEventListener('resize', updateFloatingContainer);
+
+        // Initial visibility check
+        updateFloatingContainer();
+    }
+});
+</script>
 </body>
 </html>
