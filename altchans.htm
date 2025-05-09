@@ -150,13 +150,15 @@ table.comparison tr td:first-child {
 
 .d00,
 .d0,
-.d1 {
+.d1,
+.d2 {
   display: none;
 }
 
 #show-d00:checked ~ .table-container span.d00,
 #show-d0:checked ~ .table-container span.d0,
-#show-d1:checked ~ .table-container span.d1 {
+#show-d1:checked ~ .table-container span.d1,
+#show-d2:checked ~ .table-container span.d2 {
   display: block;
   width: 100%;
   margin: 0;
@@ -408,9 +410,10 @@ During the downtime, I was curious to see where 4chan's <a href="https://4chan.o
 
 
 <!-- What to update in this file when adding a new date (d2, d3 etc.)
-- Add new radio button for d2, d3, etc. (above the table)
-- Add the CSS code for the new radio button in the <style> section so that toggling the radio button changes the visibility of then <span>s with pure CSS
+- Add new radio button for d2, d3, etc. (above the table), make sure only the last one is 'checked'
+- Add the CSS code for the new spans (.dX) and radio button (#show-dX) in the <style> section so that toggling the radio button changes the visibility of then <span>s with pure CSS
 - Add new radio button for the floating selector (in the Javascript at the bottom of the document).
+- Add reference to the new radio button in the Javascript in "const mainRadios" and "const flaotRadios"
 - Add the dX label to the "PPD data source" row.
 - Change the date for 4chan PPD (column 5)
 - Change the "last updated" date above the table and in the index.html
@@ -426,7 +429,7 @@ d2 = ...
 -->
 
 <h2 class="center">Activity of Altchans</h2>
-<p class="center">Source: eylenburg.github.io<br />last updated: 2025.05.02</p>
+<p class="center">Source: eylenburg.github.io<br />last updated: 2025.05.09</p>
 
 <div>
 <p style="font-weight: bold; color: red;">Select a date to show below:</span></p>
@@ -436,8 +439,11 @@ d2 = ...
     <input type="radio" id="show-d0" name="spanSelector">
     <label for="show-d0" style="font-size: 125%; font-weight: bold;">Show activity before 4chan's return (~2025.04.24)</label>
 <br />
-    <input type="radio" id="show-d1" name="spanSelector" checked>
+    <input type="radio" id="show-d1" name="spanSelector">
     <label for="show-d1" style="font-size: 125%; font-weight: bold;">Show week to 2025.05.02 (1 week after 4chan's return)</label>
+<br />
+    <input type="radio" id="show-d2" name="spanSelector" checked>
+    <label for="show-d2" style="font-size: 125%; font-weight: bold;">Show week to 2025.05.09 (2 weeks after 4chan's return)</label>
 <p style="font-size: 8pt; font-weight: normal">(Tip: you can click on one of the radio buttons and then use your up/down arrow keys to flick through the dates.)</p>
 
 <p>Note: all PPD (post per day) figures rounded to the next 25. Boards with less than 1 PPD are "dead" and marked with the &dagger; symbol.</p
@@ -499,6 +505,7 @@ d2 = ...
     <span class="d00">PPD on 2025.04.14</span>
     <span class="d0">PPD on 2025.04.24</span>
     <span class="d1">PPD on 2025.05.02</span>
+    <span class="d2">PPD on 2025.05.09</span>
   </th>
   <th>soyjak.st</th>
   <th>8chan.moe</th>
@@ -574,41 +581,47 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">27,400<br />&nbsp;</span>
+    <span class="d2 vgreen">26,300<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 lgreen">/a/<br />50 PPD</span>
     <span class="d0 green">/a/<br />1,025 PPD</span>
     <span class="d1 lgreen">/a/<br />200 PPD</span>
+    <span class="d2 lgreen">/a/<br />100 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 lgreen">/a/<br />50 PPD</span>
     <span class="d0 green">/a/ + /animu/<br >5,725 PPD</span>
     <span class="d1 green">/a/ + /animu/<br />1,200 PPD</span>
+    <span class="d2 lgreen">/a/<br />100 PPD</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/a/ + /animu/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/a/ + /animu/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/a/ + /animu/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 d0 d1 slow">/a/<br />&nbsp;</span>
+    <span class="d2 dead">/a/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
     <span class="d0 lgreen">/a/<br />125 PPD</span>
     <span class="d1 slow">/a/<br />&nbsp;</span>
+    <span class="d2 dead">/a/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
     <span class="d00 dead">/a/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/a/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/a/<br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
     <span class="d00 d0 slow">/am/ + /AM/<br />&nbsp;</span>
-    <span class="d1 dead">/am/ + /AM/ &dagger;<br />&nbsp;</span>
+    <span class="d1 d2 dead">/am/ + /AM/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- other -->
-    <span class="d00 lgreen">smuglo.li /a/ + /kohi/ + /cute/<br />425 PPD</span>
-    <span class="d0 green">smuglo.li /a/ + /kohi/ + /cute/<br />1,100 PPD</span>
-    <span class="d1 lgreen">smuglo.li /a/ + /kohi/ + /cute/<br />550 PPD</span>
+    <span class="d00 lgreen">smuglo.li /a/ + /kohi/<br />425 PPD</span>
+    <span class="d0 green">smuglo.li /a/ + /kohi/<br />1,100 PPD</span>
+    <span class="d1 lgreen">smuglo.li /a/ + /kohi/<br />550 PPD</span>
+    <span class="d2 lgreen">smuglo.li /a/ + /kohi/<br />475 PPD</span>
   </td>
 </tr>
 <tr>
@@ -620,19 +633,20 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">1,250<br />&nbsp;</span>
+    <span class="d2 green">1,125<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/loomis/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/ic/ + /loomis/<br >125 PPD</span>
-    <span class="d1 slow">/ic/ + /loomis/<br />&nbsp;</span>
+    <span class="d1 d2 slow">/ic/ + /loomis/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun --></td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch -->
     <span class="d00 d1 dead">/art/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/art/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/art/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan --></td>
   <td><!-- endchan --></td>
@@ -647,11 +661,12 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">475<br />&nbsp;</span>
+    <span class="d2 lgreen">350<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/an/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/an/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/an/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
@@ -670,21 +685,24 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">4,175<br />&nbsp;</span>
+    <span class="d2 green">5,625<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 green">/biz/<br />1,150 PPD</span>
     <span class="d1 lgreen">/biz/<br />175 PPD</span>
+    <span class="d2 slow">/biz/<br />&nbsp;</span>
   </td>
   <td><!-- 8chan -->
     <span class="d0 lgreen">/biz/<br >275 PPD</span>
     <span class="d1 lgreen">/biz/<br />75 PPD</span>
+    <span class="d2 lgreen">/biz/<br />50 PPD</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 dead">/biz/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/biz/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/biz/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
-    <span class="d00 d0 d1 slow">/biz/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/biz/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
@@ -702,25 +720,26 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">2,000<br />&nbsp;</span>
+    <span class="d2 green">1,875<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
-    <span class="d00 dead">/ck/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/ck/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/ck/<br >125 PPD</span>
     <span class="d1 slow">/ck/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 dead">/ck/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/ck/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/ck/<br />&nbsp;</span>
     <span class="d1 lgreen">/ck/<br />100 PPD</span>
   </td>
   <td><!-- ourchan -->
-    <span class="d00 d0 d1 slow">/ck/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/ck/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch -->
     <span class="d00 dead">/oven/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/oven/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/oven/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan --></td>
   <td><!-- endchan --></td>
@@ -735,31 +754,34 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">12,575<br />&nbsp;</span>
+    <span class="d2 vgreen">12,100<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 slow">/co/<br />&nbsp;</span>
     <span class="d0 lgreen">/co/<br >450 PPD</span>
     <span class="d1 lgreen">/co/<br />200 PPD</span>
+    <span class="d2 lgreen">/co/<br />50 PPD</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/co/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/co/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/co/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 d0 d1 slow">/co/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/co/<br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/co/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/co/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/co/<br />&nbsp;</span>
   </td>
   <td><!-- other -->
     <span class="d00 lgreen">plus4chan.org /co/, /md/, /sssr/<br />625 PPD</span>
     <span class="d0 green">plus4chan.org /co/, /md/, /sssr/<br />1,575 PPD</span>
     <span class="d1 green">plus4chan.org /co/, /md/, /sssr/<br />1,150 PPD</span>
+    <span class="d2 lgreen">plus4chan.org /co/, /md/, /sssr/<br />800 PPD</span>
   </td>
 </tr>
 <tr>
@@ -771,18 +793,19 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">225<br />&nbsp;</span>
+    <span class="d2 lgreen">200<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun --></td>
   <td><!-- ourchan -->
-    <span class="d00 d1 dead">/diy/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/diy/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/diy/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 d1 dead">/diy/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/diy/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/diy/<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
@@ -797,16 +820,17 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">500<br />&nbsp;</span>
+    <span class="d2 lgreen">600<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/fa/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/fa/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/fa/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan -->
-    <span class="d00 d0 d1 slow">/fa/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/fa/<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
@@ -822,30 +846,32 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">3,100<br />&nbsp;</span>
+    <span class="d2 green">3,325<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /fit/-related content</span></span><br />1,575 PPD</span>
     <span class="d1 lgreen">/fit/<br />275 PPD</span>
+    <span class="d2 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- 8chan -->
-    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/fit/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/fit/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
-    <span class="d00 d1 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/fit/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 dead">/fit/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/fit/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/fit/<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
@@ -860,32 +886,34 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">9,825<br />&nbsp;</span>
+    <span class="d2 green">8,425<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 lgreen">/tech/<br >750 PPD</span>
     <span class="d1 lgreen">/tech/<br />100 PPD</span>
+    <span class="d2 lgreen">/tech/<br />50 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 slow">/t/<br />&nbsp;</span>
     <span class="d0 lgreen">/t/<br >725 PPD</span>
     <span class="d1 lgreen">/t/<br />200 PPD</span>
+    <span class="d2 lgreen">/t/<br />50 PPD</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/g/ + /prog/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/g/ + /prog/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/g/ + /prog/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 dead">/g/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/g/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/g/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
-    <span class="d00 slow">/tech/<br />&nbsp;</span>
-    <span class="d0 d1 slow">/tech/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/tech/<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/tech/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/tech/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/tech/<br />&nbsp;</span>
   </td>
   </td>
@@ -902,6 +930,7 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">2,200<br />&nbsp;</span>
+    <span class="d2 green">2,350<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
@@ -910,10 +939,10 @@ d2 = ...
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 d0 d1 dead">/hi/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 dead">/hi/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 dead">/his/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/his/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/his/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
@@ -927,30 +956,32 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">5,250<br />&nbsp;</span>
+    <span class="d2 green">4,075<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/jp/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/jp/<br >200 PPD</span>
     <span class="d1 lgreen">/jp/<br />100 PPD</span>
+    <span class="d2 slow">/jp/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 d0 d1 dead">/jp/ + /2hu/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 dead">/jp/ + /2hu/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan -->
-    <span class="d00 slow">/japan/, /2hu/, /rozen/<br />&nbsp;</span>
-    <span class="d0 slow">/japan/, /2hu/, /rozen/<br />&nbsp;</span>
+    <span class="d00 d0 d2 slow">/japan/, /2hu/, /rozen/<br />&nbsp;</span>
     <span class="d1 lgreen">/japan/, /2hu/, /rozen/<br />75 PPD</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
     <span class="d00 dead">/jp/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/jp/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/jp/<br />&nbsp;</span>
   </td>
   <td>
     <span class="d1 lgreen">kissu.moe /jp/<br />200 PPD</span>
+    <span class="d2 lgreen">kissu.moe /jp/<br />125 PPD</span>
   </td>
 </tr>
 <tr>
@@ -962,31 +993,32 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">3,375<br />&nbsp;</span>
+    <span class="d2 green">4,650<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 lgreen">/k/<br />175 PPD</span>
-    <span class="d1 slow">/k/<br />&nbsp;</span>
+    <span class="d1 d2 slow">/k/<br />&nbsp;</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/k/<br >300 PPD</span>
     <span class="d1 lgreen">/k/<br />50 PPD</span>
+    <span class="d2 slow">/k/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/k/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/k/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 dead">/k/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/k/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/k/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
-    <span class="d00 slow">/k/<br />&nbsp;</span>
-    <span class="d0 d1 slow">/k/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/k/<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 d1 dead">/w/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/w/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/w/<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
@@ -1001,33 +1033,35 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">2,375<br />&nbsp;</span>
+    <span class="d2 green">2,875<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/lit/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/lit/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/lit/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 d0 slow">/lit/<br />&nbsp;</span>
-    <span class="d1 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d1 d2 dead">/lit/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 d1 dead">/lit/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/lit/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/lit/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch -->
-    <span class="d00 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/lit/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/lit/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan -->
     <span class="d00 d0 slow">/lit/<br />&nbsp;</span>
-    <span class="d1 dead">/lit/ &dagger;<br />&nbsp;</span>
+    <span class="d1 d2 dead">/lit/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
   <td><!-- other -->
     <span class="d0 lgreen">petrarchan.com /pt/<br />175 PPD</span>
     <span class="d1 lgreen">petrarchan.com /pt/<br />100 PPD</span>
+    <span class="d2 lgreen">petrarchan.com /pt/<br />50 PPD</span>
   </td>
 </tr>
 <tr>
@@ -1039,11 +1073,12 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">1,800<br />&nbsp;</span>
+    <span class="d2 green">2,350<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/m/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/m/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/m/<br />&nbsp;</span>
     <span class="d1 lgreen">/m/<br />50 PPD</span>
   </td>
   <td><!-- 8kun --></td>
@@ -1063,32 +1098,34 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">8,725<br />&nbsp;</span>
+    <span class="d2 green">8,975<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 lgreen">/mtv/<br />275 PPD</span>
     <span class="d0 lgreen">/mtv/<br />850 PPD</span>
     <span class="d1 lgreen">/mtv/<br />175 PPD</span>
+    <span class="d2 lgreen">/mtv/<br />100 PPD</span>
   </td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/mu/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/mu/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/mu/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 dead">/mu/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/mu/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/mu/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
   <td><!-- tvch -->
     <span class="d00 dead">/ost/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/ost/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/ost/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan -->
-    <span class="d00 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span><br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/mu/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/mu/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/mu/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
@@ -1102,6 +1139,7 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">50<br />&nbsp;</span>
+    <span class="d2 lgreen">75<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
@@ -1122,16 +1160,17 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">1,675<br />&nbsp;</span>
+    <span class="d2 green">1,825<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
-    <span class="d0 d1 slow">/cftf/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/cftf/<br />&nbsp;</span>
   </td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d0 d1 dead">/o/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 dead">/o/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
-    <span class="d00 dead">/o/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/o/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/o/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
@@ -1149,16 +1188,17 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">125<br />&nbsp;</span>
+    <span class="d2 lgreen">175<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/out/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/out/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/out/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 d1 dead">/out/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/out/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/out/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
@@ -1175,11 +1215,12 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">250<br />&nbsp;</span>
+    <span class="d2 lgreen">275<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d0 d1 dead">/p/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 dead">/p/ &dagger;<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan --></td>
@@ -1197,22 +1238,23 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">7,425<br />&nbsp;</span>
+    <span class="d2 green">7,625<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /pw/-related content</span></span><br />1,625 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 dead">/wooo/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/wooo/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/wooo/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/wooo/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/wooo/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/wooo/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch -->
-    <span class="d00 dead">/wooo/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/wooo/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/wooo/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan --></td>
@@ -1228,21 +1270,22 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">775<br />&nbsp;</span>
+    <span class="d2 lgreen">750<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
-    <span class="d00 dead">/sci/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/sci/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/sci/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->  </td>
   <td><!-- ourchan -->
     <span class="d00 d1 dead">/sci/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/sci/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/sci/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
   <td><!-- 7chan -->
-    <span class="d00 d1 dead">/sci/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/sci/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/sci/<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
@@ -1257,27 +1300,30 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">15,850<br />&nbsp;</span>
+    <span class="d2 vgreen">15,450<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 green"><span class="tooltip">/fit/ (pt.)<span class="tooltiptext">/sp/ and /pw/ content was included in /fit/, the PPD here is just for /sp/-related content</span></span><br />2,450 PPD</span>
     <span class="d1 lgreen">/asp/<br />400 PPD</span>
+    <span class="d2 lgreen">/asp/<br />150 PPD</span>
   </td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->  </td>
   <td><!-- ourchan -->
-    <span class="d00 dead">/sp/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/sp/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/sp/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/sp/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/sp/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/sp/<br />&nbsp;</span>
   </td>
   <td><!-- other -->
     <span class="d0 lgreen">wapchan.org /sp/<br />900 PPD</span>
     <span class="d1 lgreen">wapchan.org /sp/ - 150 PPD<br />76chan.org /sp/ - 125 PPD</span>
+    <span class="d2 lgreen">wapchan.org /sp/ - 75 PPD<br />76chan.org /sp/ - 75 PPD</span>
   </td>
 </tr>
 <tr>
@@ -1289,22 +1335,24 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">5,575<br />&nbsp;</span>
+    <span class="d2 green">6,350<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/tg/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/tg/<br />250 PPD</span>
     <span class="d1 lgreen">/tg/<br />75 PPD</span>
+    <span class="d2 slow">/tg/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->  </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan --></td>
   <td><!-- tvch -->
-    <span class="d00 d1 dead">/top/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/top/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/top/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan -->
-    <span class="d00 d1 dead">/tg/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/tg/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/tg/<br />&nbsp;</span>
   </td>
   <td><!-- endchan --></td>
@@ -1319,11 +1367,12 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">1,150<br />&nbsp;</span>
+    <span class="d2 lgreen">925<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
   <td><!-- 8kun -->
-    <span class="d00 d1 dead">/toy/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/toy/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/toy/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan --></td>
@@ -1342,6 +1391,7 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 lgreen">200<br />&nbsp;</span>
+    <span class="d2 lgreen">300<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan --></td>
@@ -1362,39 +1412,42 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">21,775<br />&nbsp;</span>
+    <span class="d2 vgreen">23,000<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 green">/tv/<br />2,250 PPD</span>
     <span class="d1 lgreen">/tv/<br />250 PPD</span>
+    <span class="d2 lgreen">/tv/<br />50 PPD</span>
   </td>
   <td><!-- 8chan -->
-    <span class="d00 dead">/tv/ + /vhs/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/tv/ + /vhs/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/tv/ + /vhs/<br >200 PPD</span>
     <span class="d1 slow">/tv/ + /vhs/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 d0 dead">/tv/ &dagger;<br />&nbsp;</span>
-    <span class="d1 slow">/tv/<br />&nbsp;</span>
+    <span class="d1 d2 slow">/tv/<br />&nbsp;</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 dead">/tv/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/tv/<br />50 PPD</span>
-    <span class="d1 slow">/tv/<br />&nbsp;</span>
+    <span class="d1 d2 slow">/tv/<br />&nbsp;</span>
   </td>
   <td><!-- zzzchan -->
-    <span class="d00 d0 d1 slow">/vhs/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/vhs/<br />&nbsp;</span>
   </td>
   <td><!-- tvch -->
     <span class="d00 lgreen">/tv/<br />50 PPD</span>
     <span class="d0 lgreen">/tv/<br />450 PPD</span>
     <span class="d1 lgreen">/tv/<br />100 PPD</span>
+    <span class="d2 lgreen">/tv/<br />50 PPD</span>
   </td>
   <td><!-- 7chan -->
-    <span class="d00 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span> &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow"><span class="tooltip">/me/ (pt.)<span class="tooltiptext">combination of /mu/ and /tv/</span></span><br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/tv/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/tv/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/tv/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
@@ -1408,41 +1461,45 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">165,150<br />&nbsp;</span>
+    <span class="d2 vgreen">169,150<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d0 vgreen">/v/<br />25,425 PPD</span>
     <span class="d1 lgreen">/v/<br />350 PPD</span>
+    <span class="d2 lgreen">/v/<br />125 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 lgreen">/v/, /vb/, /vg/<br />325 PPD</span>
     <span class="d0 vgreen"><span style="font-size: 80%;">/v/, /gacha/, /vb/, /vg/, /vgg/</span><br />45,900 PPD</span>
     <span class="d1 vgreen"><span style="font-size: 80%;">/v/, /gacha/, /vb/, /vg/, /vgg/</span><br />23,450 PPD</span>
+    <span class="d2 vgreen">/v/, /gacha/, /vb/, /vg/<br />13,100 PPD</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 slow">/v/ + /vr/<br />&nbsp;</span>
+    <span class="d00 d2 slow">/v/ + /vr/<br />&nbsp;</span>
     <span class="d0 lgreen">/v/ + /vr/<br />100 PPD</span>
     <span class="d1 lgreen">/v/ + /vr/<br />50 PPD</span>
   </td>
   <td><!-- ourchan -->
-    <span class="d00 d1 slow">/v/<br />&nbsp;</span>
+    <span class="d00 d1 d2 slow">/v/<br />&nbsp;</span>
     <span class="d0 lgreen">/v/<br />100 PPD</span>
   </td>
   <td><!-- zzzchan -->
     <span class="d00 lgreen">/v/<br />75 PPD</span>
     <span class="d0 lgreen">/v/<br />300 PPD</span>
     <span class="d1 lgreen">/v/<br />175 PPD</span>
+    <span class="d2 lgreen">/v/<br />150 PPD</span>
   </td>
   <td><!-- tvch -->
-    <span class="d00 dead">/ch3/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/ch3/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/ch3/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan -->
     <span class="d00 dead">/vg/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/vg/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/vg/<br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
     <span class="d00 dead">/v/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/v/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/v/<br />&nbsp;</span>
   </td>
   <td><!-- other -->
     <span class="d0 lgreen">plus4chan.org /cog/<br />275 PPD</span>
@@ -1458,11 +1515,13 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">4,250<br />&nbsp;</span>
+    <span class="d2 green">3,900<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d0 lgreen">/vp/<br />400 PPD</span>
     <span class="d1 lgreen">/vp/<br />250 PPD</span>
+    <span class="d2 lgreen">/vp/<br />200 PPD</span>
   </td>
   <td><!-- 8kun --></td>
   <td><!-- ourchan --></td>
@@ -1481,12 +1540,14 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">46,225<br />&nbsp;</span>
+    <span class="d2 vgreen">32,900<br />&nbsp;</span>
   </td>
   <td><!-- soyjak --></td>
   <td><!-- 8chan -->
     <span class="d00 dead">/vyt/ &dagger;<br />&nbsp;</span>
     <span class="d0 vgreen">/vyt/<br />11,950 PPD</span>
     <span class="d1 green">/vyt/<br />8,425 PPD</span>
+    <span class="d2 green">/vyt/<br />7,550 PPD</span>
   </td>
   <td><!-- 8kun --></td>
   <td><!-- ourchan --></td>
@@ -1498,6 +1559,7 @@ d2 = ...
     <span class="d00 lgreen">holotower.org /hlgg/<br />50 PPD</span>
     <span class="d0 vgreen">holotower.org /hlgg/<br />22,925 PPD</span>
     <span class="d1 vgreen">holotower.org /hlgg/<br />24,100 PPD</span>
+    <span class="d2 vgreen">holotower.org /hlgg/<br />19,450 PPD</span>
   </td>
 </tr>
 <tr>
@@ -1509,19 +1571,21 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">5,700<br />&nbsp;</span>
+    <span class="d2 green">6,375<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 slow">/x/<br />&nbsp;</span>
     <span class="d0 lgreen">/x/<br />700 PPD</span>
     <span class="d1 lgreen">/x/<br />75 PPD</span>
+    <span class="d2 lgreen">/x/<br />50 PPD</span>
   </td>
   <td><!-- 8chan -->
-    <span class="d00 slow">/x/<br />&nbsp;</span>
+    <span class="d00 d2 slow">/x/<br />&nbsp;</span>
     <span class="d0 lgreen">/x/<br />400 PPD</span>
     <span class="d1 lgreen">/x/<br />100 PPD</span>
   </td>
   <td><!-- 8kun -->
-    <span class="d00 slow">/x/<br />&nbsp;</span>
+    <span class="d00 d2 slow">/x/<br />&nbsp;</span>
     <span class="d0 lgreen">/x/<br />150 PPD</span>
     <span class="d1 lgreen">/x/<br />50 PPD</span>
   </td>
@@ -1529,21 +1593,22 @@ d2 = ...
     <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
     <span class="d0 lgreen">/x/<br />100 PPD</span>
     <span class="d1 lgreen">/x/<br />50 PPD</span>
+    <span class="d2 lgreen">/x/<br />75 PPD</span>
   </td>
   <td><!-- zzzchan -->
     <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/x/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/x/<br />&nbsp;</span>
   </td>
   <td><!-- tvch -->
-    <span class="d00 d1 dead">/truth/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/truth/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/truth/<br />&nbsp;</span>
   </td>
   <td><!-- 7chan -->
     <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
-    <span class="d0 d1 slow">/x/<br />&nbsp;</span>
+    <span class="d0 d1 d2 slow">/x/<br />&nbsp;</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 dead">/x/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d2 dead">/x/ &dagger;<br />&nbsp;</span>
     <span class="d0 d1 slow">/x/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
@@ -1558,15 +1623,17 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">32,000<br />&nbsp;</span>
+    <span class="d2 vgreen">37,100<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 slow">/int/<br />&nbsp;</span>
     <span class="d0 green">/int/<br />7,350 PPD</span>
     <span class="d1 green">/int/<br />1,075 PPD</span>
+    <span class="d2 lgreen">/int/<br />250 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d0 green">/int/<br />2,700 PPD</span>
-    <span class="d1 slow">/int/<br />&nbsp;</span>
+    <span class="d1 d2 slow">/int/<br />&nbsp;</span>
   </td>
   <td><!-- 8kun --></td>
   <td><!-- ourchan --></td>
@@ -1574,13 +1641,14 @@ d2 = ...
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/int/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/int/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/int/<br />&nbsp;</span>
   </td>
   <td><!-- other -->
     <span class="green d00">kohlchan.net /int/ - 7,000 PPD</span><span class="green d00">ylilauta.org /int/ - <span class="tooltip">c.1,500 PPD<span class="tooltiptext">rough estimate</span></span></span>
     <span class="d0 vgreen">kohlchan.net /int/ - 10,750 PPD</span><span class="d0 green">ylilauta.org /int/ - <span class="tooltip">c.2,500 PPD<span class="tooltiptext">rough estimate</span></span></span>
     <span class="d1 vgreen">kohlchan.net /int/ - 8,325 PPD</span><span class="d1 green">ylilauta.org /int/ - <span class="tooltip">c.2,000 PPD<span class="tooltiptext">rough estimate</span></span></span>
+    <span class="d2 vgreen">kohlchan.net /int/ - 7,525 PPD</span><span class="d2 green">ylilauta.org /int/ - <span class="tooltip">c.2,000 PPD<span class="tooltiptext">rough estimate</span></span></span>
   </td>
 </tr>
 <tr>
@@ -1592,39 +1660,44 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">71,475<br />&nbsp;</span>
+    <span class="d2 vgreen">90,675<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 green">/pol/<br />6,000 PPD</span>
     <span class="d0 vgreen">/pol/<br />13,925 PPD</span>
     <span class="d1 green">/pol/<br />5,150 PPD</span>
+    <span class="d2 lgreen">/pol/<br />525 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 slow">/pol/<br />&nbsp;</span>
     <span class="d0 green">/pol/<br />1,950 PPD</span>
     <span class="d1 lgreen">/pol/<br />450 PPD</span>
+    <span class="d2 lgreen">/pol/<br />125 PPD</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 lgreen">/pol/<br />100 PPD</span>
     <span class="d0 green">/pol/<br />2,125 PPD</span>
     <span class="d1 green">/pol/<br />1,675 PPD</span>
+    <span class="d2 green">/pol/<br />450 PPD</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 lgreen">/pol/<br />75 PPD</span>
     <span class="d0 green">/pol/<br />700 PPD</span>
     <span class="d1 lgreen">/pol/<br />250 PPD</span>
+    <span class="d2 lgreen">/pol/<br />200 PPD</span>
   </td>
   <td><!-- zzzchan -->
-    <span class="d00 d1 dead">/pol/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/pol/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/pol/<br />&nbsp;</span>
   </td>
   <td><!-- tvch -->
     <span class="d00 dead">/dup/ &dagger;<br />&nbsp;</span>
-    <span class="d0 slow">/dup/<br />&nbsp;</span>
+    <span class="d0 d2 slow">/dup/<br />&nbsp;</span>
     <span class="d1 lgreen">/dup/<br />50 PPD</span>
   </td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
-    <span class="d00 d0 d1 slow">/pol/<br />&nbsp;</span>
+    <span class="d00 d0 d1 d2 slow">/pol/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
 </tr>
@@ -1637,26 +1710,28 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 green">8,725<br />&nbsp;</span>
+    <span class="d2 green">9,525<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 slow">/r9k/<br />&nbsp;</span>
     <span class="d0 green">/r9k/<br />1,375 PPD</span>
     <span class="d1 lgreen">/r9k/<br />300 PPD</span>
+    <span class="d2 lgreen">/r9k/<br />200 PPD</span>
   </td>
   <td><!-- 8chan -->
-    <span class="d00 d1 slow">/r9k/<br />&nbsp;</span>
+    <span class="d00 d1 d2 slow">/r9k/<br />&nbsp;</span>
     <span class="d0 lgreen">/r9k/<br />75 PPD</span>
   </td>
   <td><!-- 8kun -->  </td>
   <td><!-- ourchan --></td>
   <td><!-- zzzchan -->
-    <span class="d00 d1 dead">/r9k/ + /hikki/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/r9k/ + /hikki/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/r9k/ + /hikki/<br />&nbsp;</span>
   </td>
   <td><!-- tvch --></td>
   <td><!-- 7chan --></td>
   <td><!-- endchan -->
-    <span class="d00 d1 dead">/r10k/ &dagger;<br />&nbsp;</span>
+    <span class="d00 d1 d2 dead">/r10k/ &dagger;<br />&nbsp;</span>
     <span class="d0 slow">/r10k/<br />&nbsp;</span>
   </td>
   <td><!-- other --></td>
@@ -1670,44 +1745,52 @@ d2 = ...
     <span class="d00">&larr;</span>
     <span class="d0 dead">(offline)</span>
     <span class="d1 vgreen">39,300<br />&nbsp;</span>
+    <span class="d2 vgreen">39,350<br />&nbsp;</span>
   </td>
   <td><!-- soyjak -->
     <span class="d00 vgreen">/soy/ + /qa/<br />10,225 PPD</span>
     <span class="d0 vgreen">/soy/ + /qa/<br />25,375 PPD</span>
     <span class="d1 vgreen">/soy/ + /qa/<br />13,475 PPD</span>
+    <span class="d2 vgreen">/soy/ + /qa/<br />14,275 PPD</span>
   </td>
   <td><!-- 8chan -->
     <span class="d00 lgreen">/b/<br />225 PPD</span>
     <span class="d0 green">/b/<br />3,375 PPD</span>
     <span class="d1 lgreen">/b/<br />975 PPD</span>
+    <span class="d2 lgreen">/b/<br />500 PPD</span>
   </td>
   <td><!-- 8kun -->
     <span class="d00 lgreen">/random/<br />100 PPD</span>
     <span class="d0 lgreen">/random/<br />400 PPD</span>
     <span class="d1 lgreen">/random/<br />675 PPD</span>
+    <span class="d2 lgreen">/random/<br />150 PPD</span>
   </td>
   <td><!-- ourchan -->
     <span class="d00 slow">/b/, /bant/<br />&nbsp;</span>
     <span class="d0 lgreen">/b/, /bant/<br />275 PPD</span>
     <span class="d1 lgreen">/b/, /bant/<br />100 PPD</span>
+    <span class="d2 lgreen">/b/, /bant/<br />75 PPD</span>
   </td>
   <td><!-- zzzchan -->
     <span class="d00 lgreen">/b/<br />225 PPD</span>
     <span class="d0 lgreen">/b/<br />250 PPD</span>
     <span class="d1 lgreen">/b/<br />275 PPD</span>
+    <span class="d2 lgreen">/b/<br />200 PPD</span>
   </td>
   <td><!-- tvch -->
     <span class="d00 slow">/dunk/<br />&nbsp;</span>
     <span class="d0 slow">/dunk/<br />&nbsp;</span>
     <span class="d1 lgreen">/dunk/<br />50 PPD</span>
+    <span class="d2 lgreen">/dunk/<br />100 PPD</span>
   </td>
   <td><!-- 7chan -->
     <span class="d00 slow">/b/<br />&nbsp;</span>
     <span class="d0 lgreen">/b/<br />175 PPD</span>
     <span class="d1 lgreen">/b/<br />75 PPD</span>
+    <span class="d2 lgreen">/b/<br />50 PPD</span>
   </td>
   <td><!-- endchan -->
-    <span class="d00 d1 slow">/b/<br />&nbsp;</span>
+    <span class="d00 d1 d2 slow">/b/<br />&nbsp;</span>
     <span class="d0 lgreen">/b/<br />250 PPD</span>
   </td>
   <td rowspan="6"><!-- other -->
@@ -1735,6 +1818,14 @@ d2 = ...
       <span class="d1 lgreen">kissu.moe /qa/ - 275 PPD</span>
       <span class="d1 lgreen">bantculture.com /bant/ - 275 PPD</span>
       <span class="d1 lgreen">heyuri.net /b/ - 175 PPD</span>
+
+      <span class="d2 green">heolkek.cafe /ot/ - 1,050 PPD</span>
+      <span class="d2 lgreen">onesixtwo.club /scv/ - 875 PPD</span>
+      <span class="d2 lgreen">mintboard.org /bone/ - 400 PPD</span>
+      <span class="d2 lgreen">bantculture.com /bant/ - 400 PPD</span>
+      <span class="d2 lgreen">soyzellig.party /zellig/ - 175 PPD</span>
+      <span class="d2 lgreen">kissu.moe /qa/ - 125 PPD</span>
+      <span class="d2 lgreen">heyuri.net /b/ - 125 PPD</span>
   </td>
 </tr>
 <!-- the following lines are just a quick fix so that the green colour for /b/ in column 3 and 4 doesn't extend all the way down -->
@@ -1760,8 +1851,9 @@ d2 = ...
 <h2>So, what's the conclusion?</h2>
 
 <p>
-The 4chan hack and subsequent 10-day downtime in April 2025 significantly disrupted its user base, prompting a temporary migration to various altchans. Data from the pre-hack period, during the downtime, and one week after 4chan's return (2025.05.02) reveals notable shifts in posting activity. <strong>During the downtime most altchans experienced substantial increases in posts per day (PPD)</strong> across multiple boards, absorbing a significant portion of 4chan's displaced users. For instance, Soyjak.st's /soy/ + /qa/ boards surged from 10,225 PPD to 25,375 PPD, and 8chan.moe's various video game boards jumped from 325 PPD to 45,900 PPD and its Vtuber board grew by almost 12,000 PPD. While <strong>Soyjak.st and 8chan.moe emerged as primary refuges</strong>, niche altchans managed to capture specific communities, such as holotower.org for Vtubers (22,925 PPD), kohlchan.net for /int/ernational discussions (10,750 PPD), Plus4chan.org for comics and Smuglo.li for anime. However, the limited activity on hobby and interest boards across altchans suggests that <strong>many of 4chan's boards lack popular alternatives</strong> (e.g., /g/, /fit/, /lit/). Some altchans had been positioning themselves as alternatives for specific interests, such as TVch.moe for /tv/, Petrarchan.com for /lit/ or Lainchan.org for /g/, but they only experienced moderate activity during 4chan''s downtime.<br /><br />
-<strong>After 4chan's return, its PPD recovered but did not fully rebound to pre-hack levels a week after.</strong> For example, the various video game boards together dropped from 210,075 PPD pre-hack to 165,150 PPD, /pol/ fell from 89,475 PPD to 71,475 PPD, and /biz/ even shrank to less than half of its pre-hack activity. This suggests some users either remained active on altchans or reduced their overall imageboard activity. <strong>Many altchans retained somewhat elevated activity compared to pre-hack levels</strong>, with Soyjak.st's /soy/ + /qa/ at 13,475 PPD (still above the pre-hack 10,225 PPD) and 8chan.moe's video game boards at 23,450 PPD (down from 45,900 PPD but significantly above the previous 325 PPD). Holotower.org's /hlgg/ board notably increased to 24,100 PPD, surpassing its downtime peak, indicating strong retention for Vtuber discussions (whereas 4chan's /vt/ PPD did not fully recover).<br /><br />
+The 4chan hack and subsequent 10-day downtime in April 2025 significantly disrupted its user base, prompting a temporary migration to various altchans. Data from the pre-hack period, during the downtime, and one and two weeks after 4chan's return reveals notable shifts in posting activity. <strong>During the downtime most altchans experienced substantial increases in posts per day (PPD)</strong> across multiple boards, absorbing a significant portion of 4chan's displaced users. For instance, Soyjak.st's /soy/ + /qa/ boards surged from 10,225 PPD to 25,375 PPD, and 8chan.moe's various video game boards jumped from 325 PPD to 45,900 PPD and its Vtuber board grew by almost 12,000 PPD. While <strong>Soyjak.st and 8chan.moe emerged as primary refuges</strong>, niche altchans managed to capture specific communities, such as holotower.org for Vtubers (22,925 PPD), kohlchan.net for /int/ernational discussions (10,750 PPD), Plus4chan.org for comics and Smuglo.li for anime. However, the limited activity on hobby and interest boards across altchans suggests that <strong>many of 4chan's boards lack popular alternatives</strong> (e.g., /g/, /fit/, /lit/). Some altchans had been positioning themselves as alternatives for specific interests, such as TVch.moe for /tv/, Petrarchan.com for /lit/ or Lainchan.org for /g/, but they only experienced moderate activity during 4chan''s downtime.<br /><br />
+<strong>One week after 4chan's return, its PPD recovered but did not fully rebound to pre-hack levels.</strong> For example, the various video game boards together dropped from 210,075 PPD pre-hack to 165,150 PPD, /pol/ fell from 89,475 PPD to 71,475 PPD, and /biz/ even shrank to less than half of its pre-hack activity. This suggests some users either remained active on altchans or reduced their overall imageboard activity. <strong>Many altchans retained somewhat elevated activity compared to pre-hack levels</strong>, with Soyjak.st's /soy/ + /qa/ at 13,475 PPD (still above the pre-hack 10,225 PPD) and 8chan.moe's video game boards at 23,450 PPD (down from 45,900 PPD but significantly above the previous 325 PPD). Holotower.org's /hlgg/ board notably increased to 24,100 PPD, surpassing its downtime peak, indicating strong retention for Vtuber discussions (whereas 4chan's /vt/ PPD did not fully recover).<br /><br />
+<strong>During the second week after 4chan's return, most altchan boards experienced a further decline in posts per day</strong>, though some showed resilience or even growth. Notable winners during the second week post-return included Soyjak.st's /soy/ board and Heolkek.cafe's /ot/ board. 4chan's /pol/ board also saw a significant rebound, while the politics boards on altchans declined further. Significant losers included Soyjak.st's /pol/, which plummeted from 5,150 PPD to 525 PPD, and 8chan.moe's video game boards (/v/, /gacha/, /vb/, /vg/), which dropped from 23,450 PPD to 13,100 PPD. Holotower.org's /hlgg/ (Vtubers) also saw a notable decline from 24,100 PPD to 19,450 PPD, though it remained highly active. Many smaller boards across all altchans continued to shrink, often sinking below the 50 PPD threshold and now often barely surpassing their pre-hack PPD. Hobby and interest boards (e.g., /g/, /fit/, /lit/) on altchans remain underdeveloped and are unlikely to reach critical mass anytime soon. Nevertheless, <strong>most altchans remain more active than they were before the hack</strong>, indicating some retention of users who perhaps discovered these websites during the hack and now continue visiting them once in a while. 4chan's boards, while still recovering 2 weeks after the return, tend to remain below their pre-hack PPDs, suggesting either a permanent loss of some users or at least reduced engagement. For instance, 4chan's video games boards dropped from 210,075 PPD to 169,150 PPD, /vt/ from 64,825 PPD to 32,900 PPD, and /a/ from 33,875 PPD to 26,300 PPD.<br /><br />
 While 4chan remains the dominant imageboard, the hack exposed its user base's <strong>willingness to explore alternatives</strong> - but for the majority of users it also showed a <strong>lack of coordination and insufficient knowledge of other imageboards</strong> I wonder what would have happened if 4chan had been offline for a month or longer - or forever. Would another imageboard have emerged as the dominant one, would users have split their time across multiple imageboards, would certain niche imageboards have managed to assert themselves for their specific community, or would people just move to Reddit, X or traditional forums?<br /><br />
 <strong>I hope this table might serve as some sort of starting point for where to shelter in case of another 4chan downtime, or which alternatives to check out today.</strong>
 <br /><br /><em>I intend to update this table regularly to see the changes over time.</em>
@@ -1781,7 +1873,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <input type="radio" id="float-show-d0" name="floatSpanSelector">
         <label for="float-show-d0">Before 4chan's return (~2025.04.24)</label><br />
         <input type="radio" id="float-show-d1" name="floatSpanSelector">
-        <label for="float-show-d1">Week to 2025.05.02 (1 week after return)</label>
+        <label for="float-show-d1">Week to 2025.05.02 (1 week after return)</label><br />
+        <input type="radio" id="float-show-d2" name="floatSpanSelector">
+        <label for="float-show-d2">Week to 2025.05.09 (2 weeks after return)</label>
         <p class="floating-comment">(Tip: you can click on one of the radio buttons and then use your up/down arrow keys to flick through the dates.)</p>
     `;
     document.body.appendChild(floatingContainer);
@@ -1790,12 +1884,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainRadios = {
         d00: document.getElementById('show-d00'),
         d0: document.getElementById('show-d0'),
-        d1: document.getElementById('show-d1')
+        d1: document.getElementById('show-d1'),
+        d2: document.getElementById('show-d2')
     };
     const floatRadios = {
         d00: document.getElementById('float-show-d00'),
         d0: document.getElementById('float-show-d0'),
-        d1: document.getElementById('float-show-d1')
+        d1: document.getElementById('float-show-d1'),
+        d2: document.getElementById('float-show-d2')
     };
 
     // Synchronize radio buttons
