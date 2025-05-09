@@ -210,7 +210,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 16 April 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 9 May 2025</p>
 
 <div>
     <label><input type="checkbox" checked onchange="toggleColumn(1)"> Debian</label>
@@ -1158,27 +1158,6 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 
 <tr>
-<td class="legend">Main package manager</td>
-<td>apt</td>
-<td>apt</td>
-<td><table class="split"><tr><td>zypper</td><td style="font-size: x-small;">transactional-update</td></tr></table></td>
-<td>zypper</td>
-<td><table class="split"><tr><td>dnf</td><td>rpm-ostree</td></tr></table></td>
-<td>dnf</td>
-<td>dnf</td>
-<td>urpmi</td>
-<td>apt-rpm</td>
-<td>pacman</td>
-<td>slackpkg</td>
-<td>portage</td>
-<td>apk</td>
-<td>xbps</td>
-<td>Nix</td>
-<td>Guix</td>
-<td>eopkg</td>
-</tr>
-
-<tr>
 <td class="legend">Native binary package format</td>
 <td class="blue">DEB</td>
 <td class="blue">DEB</td>
@@ -1194,9 +1173,30 @@ Distributions mostly differ in their package manager and their default choices (
 <td>GPKG.TAR</td>
 <td>APK</td>
 <td>XBPS</td>
-<td>NAR.XZ</td>
-<td>"substitutes"</td>
+<td>NAR.XZ (Nix)</td>
+<td>NAR.XZ (Guix)</td>
 <td>EOPKG</td>
+</tr>
+
+<tr>
+<td class="legend">Main package manager</td>
+<td class="blue">apt</td>
+<td class="blue">apt</td>
+<td><table class="split"><tr><td class="purple">zypper</td><td style="font-size: x-small;">transactional-update</td></tr></table></td>
+<td class="purple">zypper</td>
+<td><table class="split"><tr><td class="grey">dnf</td><td>rpm-ostree</td></tr></table></td>
+<td class="grey">dnf</td>
+<td class="grey">dnf</td>
+<td>urpmi</td>
+<td class="blue">apt-rpm</td>
+<td>pacman</td>
+<td>slackpkg</td>
+<td>portage</td>
+<td>apk</td>
+<td>xbps</td>
+<td>Nix</td>
+<td>Guix</td>
+<td>eopkg</td>
 </tr>
 
 <tr><td class="legend" style="text-align: left; text-decoration: underline;">Suppor&shy;ted "universal" package formats:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -1265,6 +1265,28 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 
 <tr>
+<td class="legend tooltip">Distrobox preinstalled?<span class="tooltiptext">Can run any other distro in a container and install packages in those distros, giving <em>any</em> distro compatibility with e.g. Ubuntu DEBs or Fedora RPMs or Arch's AUR</span></td>
+<td class="line"></td>
+<td class="line"></td>
+<td><table class="split"><tr><td class="line"></td><td class="yes">Yes</td></tr></table></td>
+<td class="line"></td>
+<td><table class="split"><tr><td class="line"></td><td class="yes">Yes <span class="tooltip">(tool&shy;bx)<span class="tooltiptext">similar to distrobox but lacking some features</span></span></td></tr></table></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+<td class="line"></td>
+</tr>
+
+<!--
+<tr>
 <td class="legend">Nix</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
@@ -1325,11 +1347,11 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
-</tr>
+</tr> -->
 
 <tr>
 <td class="legend"></td>
-<td colspan="17" style="font-style: italic; text-align: center;">Other cross-platform package managers such as `<strong>brew</strong>`, `<strong>pkgsrc</strong>` or `<strong>0install</strong>` are widely compatible across Linux distributions, but are not preinstalled on any of the listed distributions.</td>
+<td colspan="17" style="font-style: italic; text-align: center;">Other cross-platform package managers such as `<strong>nix</strong>`, `<strong>guix</strong>`, `<strong>brew</strong>`, `<strong>pkgsrc</strong>` or `<strong>0install</strong>` as well as as OCI containers (`<strong>docker</strong>`/`<strong>podman</strong>`) are widely compatible across Linux distributions.</td>
 </tr>
 
 <tr><td height="10" class="legend"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
