@@ -196,7 +196,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 23 April 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 10 June 2025</p>
 
 
 <table class="comparison">
@@ -483,7 +483,7 @@ border-radius: 3px;
 <tr>
 <td>Can be installed by user?</td>
 <td class="yes">Yes</td>
-<td class="mixed tooltip">Prohibited<span class="tooltiptext">Can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
+<td class="mixed tooltip">Prohibited<span class="tooltiptext">Versions up to macOS 26 Tahoe can be installed on normal x86 PCs ("Hackintosh") but this is against Apple's EULA and is a legal grey zone.</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes tooltip">Some devices<span class="tooltiptext">"Chrome OS Flex", some features are missing or limited</span></td>
@@ -555,7 +555,7 @@ border-radius: 3px;
 <tr>
 <td>x86 (x86/i386, amd64/x86_64/x64)</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes</td>
+<td class="yes">Yes (until 2028)</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -2413,8 +2413,8 @@ Dragonfly missing
 
 <tr>
 <td><br />Can run other OS's apps?</td>
-<td><br /><span class="yes"><strong>Linux</strong></span>,<br /><span class="yes"><strong>Android</strong></span><br />(until 03/25)</td>
-<td><br /><span class="yes tooltip"><strong>iOS</strong><span class="tooltiptext">on ARM Macs</span></span>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via CrossOver (third-party app)</span></td>
+<td><br /><span class="yes tooltip"><strong>Linux</strong><span class="tooltiptext">WSL</span></span><!--,<br /><span class="yes"><strong>Android</strong></span><br />(until 03/25)--></td>
+<td><br /><span class="yes tooltip"><strong>iOS</strong><span class="tooltiptext">on ARM Macs</span></span>,<br /><span class="yes tooltip"><strong>Linux</strong><span class="tooltiptext">with Linux containers starting with macOS 26</span></span>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via CrossOver (third-party app)</span></td>
 <td></td>
 <td><br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via Wine/Winlator (third-party app)</span></td>
 <td><br /><span class="yes"><strong>Linux</strong></span>,<br /><span class="yes"><strong>Android</strong></span>,<br /><span class="mixed tooltip"><strong>Windows</strong><span class="tooltiptext">via CrossOver (third-party app)</span></td>
@@ -2488,7 +2488,7 @@ https://awesomekling.substack.com/p/forking-ladybird-and-stepping-down-serenityo
 
 <ul>
 <li><span class="good">Windows:</span> Supported by Qemu/KVM, Qemu/NVMM, Virtualbox, VMware, Hyper-V and many other popular virtual machine hypervisors. Theoretically you need a license key, but an unregistered Windows will still run with minor restrictions (also there's tons of resources on Windows piracy...).</li>
-<li><span class="good">macOS:</span> Supported by Qemu/KVM and Virtualbox. Apple does not allow macOS to run on non-Apple hardware, not even in a virtual machine. Nevertheless, there are plenty of guides online how to install a virtual macOS. The future looks bleaker however - in a few years <span style="text-decoration: underline;">Apple will drop support for x86</span>, and then you'd be forced to do <em>emulation</em> rather than <em>virtualization</em> on your PC. The last Macs with Intel CPU were sold in 2023 so I would expect Hackintoshes to get OS or security updates until 2030 at most.</li>
+<li><span class="good">macOS:</span> Supported by Qemu/KVM and Virtualbox. Apple does not allow macOS to run on non-Apple hardware, not even in a virtual machine. Nevertheless, there are plenty of guides online how to install a virtual macOS. The future looks bleaker however: <span style="text-decoration: underline;">Apple will drop support for x86 in 2028</span>, and then you'd be forced to do <em>emulation</em> rather than <em>virtualization</em> on your PC. macOS 26 "Tahoe", to be released in 09/2025, will be the last version of macOS supporting x86 CPUs and will receive security updates until late 2028.</li>
 <li><span class="itsover">iOS/iPadOS:</span> Does not run on x86 hardware and I'm not aware of any emulator with full iOS support. Obviously, Apple would try to shut it down anyway. There is an iOS simulator that is part of XCode (Apple's IDE), however XCode itself is only available for macOS. So if you don't have a Mac, the only way to kind of run iOS would be to install macOS in a VM (see above), then install XCode, and then start the included iOS Simulator.</li>
 <li><span class="good">Android:</span> There used to be a project called Android-x86 which made it possible to run "vanilla" Android on a PC (in a virtual machine or on bare metal), but the project has been discontinued. A alternative could be Bliss OS, which is an Android-based operating system for PCs that is in active development, although still lagging behind upstream. It should run on Qemu and Virtualbox.</li>
 <li><span class="good">Chrome OS:</span> The "real" Chrome OS that comes preinstalled on Chromebooks is not available for download, however there is Chrome OS Flex, which can be downloaded but has some <a href="https://support.google.com/chromeosflex/answer/11542901" target="_blank">major restrictions</a> such as no Linux or Android app support. Chrome OS Flex appears to run only on on Qemu.</li>
