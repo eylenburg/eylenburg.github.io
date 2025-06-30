@@ -1809,7 +1809,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <details><summary style="text-align: center; font-size: 24pt;">2020</summary>
 <div class="content2020" id="2020">
-<p style="text-align: center; font-size: large; font-weight: bold;">Year 2020 - 79% homogeneity</p>
+<p style="text-align: center; font-size: large; font-weight: bold;">Year 2020 - 75% homogeneity</p>
 <table class="yeartable">
 <tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment<sup>1</sup></td><td>Preferred Toolkit for Applications<sup>2</sup></td><td>Default Display Server<sup>2</sup></td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
@@ -1900,9 +1900,9 @@ Distributions mostly differ in their package manager and their default choices (
 </details>
 
 
-<details><summary style="text-align: center; font-size: 24pt;">Today (2024)</summary>
+<details><summary style="text-align: center; font-size: 24pt;">2025</summary>
 <div class="contenttoday" id="today">
-<p style="text-align: center; font-size: large; font-weight: bold;">As of today (2024) - 78% homogeneity</p>
+<p style="text-align: center; font-size: large; font-weight: bold;">Year 2025 - 68% homogeneity</p>
 <table class="yeartable">
 <tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment<sup>1</sup></td><td>Preferred Toolkit for Applications<sup>2</sup></td><td>Default Display Server<sup>2</sup></td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
@@ -1950,9 +1950,9 @@ Distributions mostly differ in their package manager and their default choices (
 
 
 <tr>
-<td rowspan="2" style="vertical-align: middle;" ><strong>Fedora Workstation</strong></td>
-<td><img src="pics/logos/other/gnome_foot.webp" /></td>
-<td><img src="pics/logos/other/gtk.svg" /></td>
+<td rowspan="2" style="vertical-align: middle;" ><strong>Fedora Editions</strong></td>
+<td style="height: 100px;"><img src="pics/logos/other/combination/kde+gnome.png" /></td>
+<td><img src="pics/logos/other/combination/qt+gtk.png" /></td>
 <td><img src="pics/logos/other/wayland.svg" /></td>
 <td><img src="pics/logos/other/systemd.svg" /></td>
 <td><img src="pics/logos/other/combination/rpm+flatpak.png" /></td>
@@ -1960,8 +1960,8 @@ Distributions mostly differ in their package manager and their default choices (
 <td><img src="pics/logos/other/selinux.svg" /></td>
 </tr>
 <tr>
-<td>GNOME</td>
-<td>GTK</td>
+<td>GNOME or KDE</td>
+<td colspan="2">depends on selected desktop</td>
 <td>Wayland</td>
 <td>systemd</td>
 <td>RPM &amp; Flatpak</td>
@@ -1976,17 +1976,17 @@ Distributions mostly differ in their package manager and their default choices (
 <td><img src="pics/logos/other/combination/qt+gtk.png" /></td>
 <td><img src="pics/logos/other/combination/x11+wayland.png" /></td>
 <td><img src="pics/logos/other/systemd.svg" /></td>
-<td><img src="pics/logos/other/rpm.svg" /></td>
+<td><img src="pics/logos/other/combination/rpm+flatpak.png" /></td>
 <td><img src="pics/logos/other/btrfs.webp" /></td>
-<td><img src="pics/logos/other/apparmor.svg" /></td>
+<td><img src="pics/logos/other/selinux.svg" /></td>
 </tr>
 <tr>
 <td>KDE/GNOME/Xfce</td>
 <td colspan="2">depends on selected desktop</td>
 <td>systemd</td>
-<td>RPM packages</td>
+<td>RPM &amp; Flatpak</td>
 <td>btrfs</td>
-<td>AppArmor</td>
+<td>SELinux</td>
 </tr>
 
 </table>
@@ -1996,7 +1996,8 @@ Distributions mostly differ in their package manager and their default choices (
 <p style="text-align: center;">Source: eylenburg.github.io</p>
 <p style="font-size: small;">Footnotes:<br />
 1: default or pre-selected desktop, same methodology as <a href="de_default.htm">here</a><br />
-2: for default/pre-selected desktop</p>
+2: for default/pre-selected desktop<br />
+Calculation of homogeneity: for each category (e.g. desktop environment) find the most common value, e.g. GNOME. Then for each distro, assign 1 if it is the that value (i.e. uses GNOME), 0 if it doesn't (uses another desktop), or something like 0.5 or 0.33 or 0.67 there's multiple options (e.g. choice of GNOME/KDE/Xfce would mean 0.33 homogeneity for desktop environment (most common is GNOME) and 0.67 for toolkit (most common is GTK, used by GNOME and Xfce) and 0.67 for display server (most common is wayland, used by GNOME and KDE)). Sum up every column, then take the average of all rows/categories.</p>
 
 
 <h2 id="popularity">Appendix II: Linux distributions' relative popularity (on Distrowatch) over time</h2>
