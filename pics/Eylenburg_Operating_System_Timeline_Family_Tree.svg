@@ -2038,13 +2038,6 @@
   <marker id='__stop_FlexOS__[Digital__Research]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_FlexOS__[Digital__Research])' />
   </marker>
-  <linearGradient id='__fadeout_4860__OS__[IBM]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
-    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
-  </linearGradient>
-  <marker id='__stop_4860__OS__[IBM]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
-    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_4860__OS__[IBM])' />
-  </marker>
   <linearGradient id='__fadeout_StreamOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
     <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
@@ -7531,7 +7524,7 @@ style='opacity:0.6;' >
   <path id='__line_DOS__Plus__[Digital__Research]' d='M 996 12415 C 1036.5,12415 1009.5,12295 1050,12295 L 1050 12295 L 1630 12295' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DOS__Plus__[Digital__Research])' />
   <path id='__line_DataPac__Multiuser__DOS__[DataPac]' d='M 1202 12415 C 1230.5,12415 1211.5,12355 1240,12355 L 1240 12355 L 1417 12355' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DataPac__Multiuser__DOS__[DataPac])' />
   <path id='__line_IMS__Multiuser__DOS' d='M 1218 12415 C 1238.25,12415 1224.75,12385 1245,12385 L 1245 12385 L 1657 12385' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_IMS__Multiuser__DOS)' />
-  <path id='__line_4860__OS__[IBM]' d='M 1085 12535 C 1085,12535 1085,12565 1085,12565 L 1085 12565 L 2107 12565' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_4860__OS__[IBM])' />
+  <path id='__line_4680__OS__[IBM]' d='M 1085 12535 C 1085,12535 1085,12565 1085,12565 L 1085 12565 L 2227 12565' stroke='#0000CD' style='stroke-width:4;' />
   <path id='__line_DR__PalmDOS__[Digital__Research]' d='M 1220 12415 C 1240.25,12415 1226.75,12445 1247,12445 L 1247 12445 L 1282 12445' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DR__PalmDOS__[Digital__Research])' />
   <path id='__line_Apple__CP/M__[Apple]' d='M 858 12415 C 878.25,12415 864.75,12445 885,12445 L 885 12445 L 907 12445' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Apple__CP/M__[Apple])' />
   <path id='__line_CCI__Multiuser__DOS__[Concurrent__Controls]' d='M 1207 12415 C 1235.5,12415 1216.5,12475 1245,12475 L 1245 12475 L 1282 12475' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_CCI__Multiuser__DOS__[Concurrent__Controls])' />
@@ -8871,8 +8864,8 @@ style='opacity:0.6;' >
   <circle id='__dot_IMS__Multiuser__DOS' cx='1245' cy='12385' r='10' fill='#b0b0eb' stroke='none' />
     <circle cx='1390' cy='12385' r='5' fill='#b0b0eb' stroke='none' />
     <circle cx='1570' cy='12385' r='5' fill='#b0b0eb' stroke='none' />
-  <circle id='__dot_4860__OS__[IBM]' cx='1085' cy='12565' r='10' fill='#b0b0eb' stroke='none' />
-    <circle cx='1290' cy='12565' r='5' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_4680__OS__[IBM]' cx='1085' cy='12565' r='10' fill='#0000CD' stroke='none' />
+    <circle cx='1290' cy='12565' r='5' fill='#0000CD' stroke='none' />
   <circle id='__dot_DR__PalmDOS__[Digital__Research]' cx='1247' cy='12445' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_Apple__CP/M__[Apple]' cx='885' cy='12445' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_CCI__Multiuser__DOS__[Concurrent__Controls]' cx='1245' cy='12475' r='10' fill='#b0b0eb' stroke='none' />
@@ -10887,7 +10880,7 @@ style='opacity:0.6;' >
     <rect x='1574' y='12372' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
     <a xlink:href=''><text x='1575' y='12381' >REAL/NG</text></a>
   <rect x='1094' y='12552' width='88' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1095' y='12561'  >4860 OS [IBM]</text></a>
+  <a xlink:href=''><text x='1095' y='12561'  >4680 OS [IBM]</text></a>
     <rect x='1294' y='12552' width='51' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
     <a xlink:href=''><text x='1295' y='12561' >4690 OS</text></a>
   <rect x='1256' y='12432' width='191' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
