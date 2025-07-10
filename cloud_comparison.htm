@@ -249,7 +249,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 19 June 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 10 July 2025</p>
 
 
 <table id="comparisonTable" class="comparison">
@@ -563,6 +563,28 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Lifetime purchase options also available.</td><!-- price comment -->
 </tr>
 
+<tr class="product NoMSO NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync">
+<td>ForwardEmail</td>
+<td><img src="pics/logos/cloud/forwardemail.svg" class="icon" /></td><!-- Logo -->
+<td>Forward Email LLC</td><!-- Developer -->
+<td>&#x1F1FA;&#x1F1F8;<br />USA</td><!-- Jurisdiction -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<!-- File sync -->
+<td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
+<!-- PIM -->
+<td class="almost tooltip">Yes (temporarily decrypted)<span class="tooltiptext">The data will be temporarily decrypted when the user logs it, but only for that session and only in RAM</span></td><!-- E2EE -->
+<td class="no">No tasks (TBC)</td><!-- has tasks? -->
+<td class="yes">Yes</td><!-- CardDAV/CalDAV -->
+<!-- Mail -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="yes">Yes <em><span class="tooltip">(needs PGP support in client)<span class="tooltiptext">To use encrypted mail (zero access encryption), the user will need to decrypt them on the local device, e.g. using Thunderbird, or the OpenKeychain app on Android</span></span></em></td><!-- IMAP -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td class="px">&euro;31<br />(10 GB)</td>
+<td colspan="3" class="px na"></td>
+<td></td><!-- price comment -->
+</tr>
 
 <tr class="product NoMSO NonFree NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoPIMEncrypt NoEmail NoEmailEncrypt NoIMAP">
 <td>fruux</td>
@@ -994,7 +1016,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="mixed">Yes, but tasks missing on website</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
-<td class="yes tooltip">Yes</td><!-- Zero access encryption -->
+<td class="yes">Yes</td><!-- Zero access encryption -->
 <td class="yes">Yes</td><!-- IMAP -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td class="px">&euro;21<br />(5 GB)</td>
@@ -1453,7 +1475,8 @@ The only one that doesn't really make sense is the Google ecosystem; they neithe
 <li>For email, choose from:</li>
 	<ul>
 	<li><strong>Proton</strong> <span class="good">Zero knowledge email encryption</span> <span class="good">Compatible with PGP</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their mobile app</span></li>
-	<li><strong>Mailbox.org</strong> <<span class="good">Zero knowledge email encryption (optional)</span> <span class="good">Compatible with PGP</span> <span class="good">IMAP</span></li>
+	<li><strong>Mailbox.org</strong> <span class="good">Zero knowledge email encryption (optional)</span> <span class="good">Compatible with PGP</span> <span class="good">IMAP</span></li>
+	<li><strong>ForwardEmail</strong> <span class="good">Zero knowledge email encryption (optional)</span> <span class="good">Compatible with PGP</span> <span class="good">IMAP</span></li>
 	</ul>
 <li>For contacts, calendar, and tasks, choose from:</li>
 	<ul>
@@ -1464,7 +1487,7 @@ The only one that doesn't really make sense is the Google ecosystem; they neithe
 	<ul>
 	<li><strong>Mega</strong> <span class="good">E2EE</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
 	<li><strong>Filen</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
-	<li><strong>Tresorit</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span> <span class="bad">Closed source</span></li>
+	<li><strong>Tresorit</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Closed source</span></li>
 	</ul>
 </ul>
 
