@@ -11,7 +11,7 @@
 <style>
 :root {
 --legendwidth: 300px;
---currencywidth: 175px;
+--currencywidth: 145px;
 }
 
 table {
@@ -20,7 +20,7 @@ text-align: center;
 border: none;
 table-layout: fixed;
 font-size: small;
-width: calc(var(--legendwidth) + 9 * var(--currencywidth));
+width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 }
 
 td {
@@ -148,13 +148,15 @@ background-color: aliceblue;
 
 <h2 class="center">Comparison of Payment Methods</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 14 July 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 25 July 2025</p>
 
 
 <table class="comparison">
 <colgroup>
 <col style="text-align: left; white-space: nowrap; padding-right: 5px; width: var(--legendwidth);"> <!-- legend -->
 <col style="border-left: double; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
@@ -178,11 +180,13 @@ background-color: aliceblue;
 <td style="width: var(--currencywidth);"></td>
 <td style="width: var(--currencywidth);"></td>
 <td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
 </tr>
 
 <tr class="groups" style="font-size: large; font-weight: bold; border: none;">
 <td></td>
-<td colspan="5" style="border: 1px solid grey;">Fiat money</td>
+<td colspan="7" style="border: 1px solid grey;">Fiat money</td>
 <td colspan="4" style="border: 1px solid grey;" >Cryptocurrencies</td>
 </tr>
 
@@ -191,7 +195,9 @@ background-color: aliceblue;
 <th>Physical cash</th>
 <th>Bank transfer</th>
 <th>Bank-issued card (debit/credit)</th>
+<th>Mobile wallet (e.g. Apple &amp; Google)</th>
 <th>PayPal</th>
+<th>GNU Taler</th>
 <th>Central Bank Digital Currency (CBDC)</th>
 <th>Bitcoin (BTC)</th>
 <th>Bitcoin Cash (BCH)</th>
@@ -207,7 +213,9 @@ background-color: aliceblue;
 <td style="vertical-align: middle;"><img src="pics/logos/other/cash.svg" style="height: 100px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/swift.svg" style="height: 30px; max-width: 190px;" /><img src="pics/logos/other/sepa.svg" style="height: 30px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/visa.svg" style="height: 30px; max-width: 190px;" /><img src="pics/logos/other/mastercard.svg" style="height: 30px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/applepay.svg" style="height: 30px; max-width: 190px;" /><img src="pics/logos/other/googlepay.svg" style="height: 30px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/paypal.svg" style="height: 30px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/gnutaler.svg" style="height: 50px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/cbdc.svg" style="height: 100px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/crypto/btc.svg" style="height: 100px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/crypto/bch.svg" style="height: 100px; max-width: 190px;" /></td>
@@ -216,8 +224,8 @@ background-color: aliceblue;
 </tr>
 
 
-<tr>
-<td class="semititle"><br />Utility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<!-- <tr> -->
+<td class="semititle"><br />Utility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -225,7 +233,9 @@ background-color: aliceblue;
 <td class="yes">Theoretically unlimited number of transactions as payments are decentralized (peer-to-peer).</td>
 <td class="yes">Theoretically unlimited number of transactions as payments are decentralized (bank-to-bank).</td>
 <td class="yes">Technical limits are unknown. Reportedly, VISA processes ~24,000 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> and Mastercard ~5,000 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> on average.</td>
+<td class="yes">Technical limits are unknown but high. Relies on card payment networks.</td>
 <td class="yes">Technical limits are unknown. Reportedly, PayPal processes 192 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> on average.</td>
+<td class="yes">Theoretically unlimited number of transactions as payments are decentralized (transactions processed via Taler exchanges).</td>
 <td class="line">TBC</td>
 <td class="no">No, the blockchain can process only 7 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> and is chronically congested. <br /><span class="yes lightning">The "Layer 2" <em>Lightning Network</em> allows "millions to billions" of <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>.</span></td>
 <td class="yes">Theoretically unlimited <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> due to variable blocksize (since May 2024).</td>
@@ -237,6 +247,8 @@ background-color: aliceblue;
 <td>Payment speed</td>
 <td class="yes">Instant</td>
 <td class="line">Depends on the bank or country, can be instant or take several days.</td>
+<td class="yes">Instant</td>
+<td class="yes">Instant</td>
 <td class="yes">Instant</td>
 <td class="yes">Instant</td>
 <td class="line">TBC</td>
@@ -251,7 +263,9 @@ background-color: aliceblue;
 <td class="yes">None.<!-- (Although there indirect costs such as safe cash transports or the ATM network.)--></td>
 <td class="almost">Depends on the bank or country. Usually no fees, with some exceptions (e.g. for large transfers or certain international payments).</td>
 <td class="mixed">Depends on the card issuer and country. Various fees, both variable and fixed, are charged and add up to on average around 2-3% of the transaction value. The fees are paid by the merchant/recipient.</td>
+<td class="mixed">Card payment fees add up to around 2-3% of the transaction value. The fees are paid by the merchant/recipient. Apple furthermore charges the payer's bank a 0.15% fee.</td>
 <td class="mixed">Various fees are charged, usually paid by the merchant/recipient. A typical fee for a domestic online purchase would be 2.9% + $0.30. Payments to "friends and family" are free.</td>
+<td class="yes">Very low fees, a transaction normally costs less than a USD cent.</td>
 <td class="line">TBC</td>
 <td class="mixed"><span class="tooltip">Depends on the desired transfer speed and the network congestion. <span class="tooltiptext">Transactions are "competing" to be included in the next block - the higher the fee paid the quicker the transactions will be confirmed (and if the chosen fee is too low, the transaction may fail altogether). Due to the chronic network congestion and small blocksize, transactions tend to cost more than for other cryptocurrencies. During the crypto boom of 2017, average fees reached $60 per transaction. Fees are independent of the transaction value, hence network fees seem low for large transactions and high for small transactions.</span></span> From 03/2017 to 03/2024 the average fee was about <span class="tooltip">$3.50<span class="tooltiptext"><a href="https://bitinfocharts.com/comparison/transactionfees-btc-ltc-bch-xmr-sma90.html#log&alltime" target="_blank" style="color: white;">source</a></span></span> but of course this is highly dependent on the BTC/USD exchange rate. <br /><span class="lightning yes tooltip">Cheap transactions using the <em>Lightning Network</em> are also possible. <span class="tooltiptext">But will still incur fees for opening/closing the channel and the Lightning node</span></span></td>
 <td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
@@ -261,7 +275,7 @@ background-color: aliceblue;
 
 
 <tr>
-<td class="semititle"><br />Decentralization</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Decentralization</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -269,7 +283,9 @@ background-color: aliceblue;
 <td class="yes">Not possible</td>
 <td class="no">Yes (by bank)</td>
 <td class="no">Yes (by bank or card issuer)</td>
+<td class="no">Yes (by bank, card issuer, or Apple/Google)</td>
 <td class="no">Yes (by PayPal)</td>
+<td class="mixed">For merchants only (Taler exchanges can refuse to process fund deposits to a merchant or refreshing coins)</td>
 <td class="no tooltip">Yes (by government/central bank)<span class="tooltiptext">CBDCs could empower the state to make it impossible to donate to a certain NGO or could prohibit certain people from purchasing certain items such as a flight ticket or alcohol.</span></td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
@@ -282,7 +298,9 @@ background-color: aliceblue;
 <td class="no">Yes, if physically confiscated.</td>
 <td class="no">Yes (by bank, police or government)</td>
 <td class="no">Yes (by bank, police or government)</td>
+<td class="no">Yes (by bank, police or government)</td>
 <td class="no">Yes (by PayPal, police or government)</td>
+<td class="almost">No, but Taler exchanges can reject withdrawal requests (converting Taler coins back into "normal" money)</td>
 <td class="no tooltip">Yes (by central bank, police or government)<span class="tooltiptext">A CBDC can simply become an extension of the surveillance state and it could see citizens fined in a split second for behaviours deemed undesirable. Dissidents and activists could see their wallets emptied or taken offline.</span></td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
@@ -296,6 +314,8 @@ background-color: aliceblue;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
+<td class="no">No</td>
+<td class="yes">Yes. Blind signatures are used to ensure money units are indistinguishable and cannot be tracked, blacklisted or tainted.</td>
 <td class="no">No. Each unit of money is uniquely identifiable and all transactions are centrally recorded.</td>
 <td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <br /><span class="lightning yes tooltip">Source of funds can be obscured by mixing (<em>CoinJoin</em>), with various downsides.<span class="tooltiptext">such as minimum funds needed, the time and fees for mixing, and the likely blacklisting of mixed coins from CEX and off-ramping providers</span></span></td>
 <td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <br /><span class="lightning yes tooltip">Source of funds can be obscured by mixing (<em>CashFusion</em>), with various downsides.<span class="tooltiptext">such as minimum funds needed, the time and fees for mixing, and the likely blacklisting of mixed coins from CEX and off-ramping providers</span></span></td>
@@ -305,7 +325,7 @@ background-color: aliceblue;
 
 
 <tr>
-<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -313,7 +333,9 @@ background-color: aliceblue;
 <td class="yes">(no accounts)</td>
 <td class="no">No, KYC required by law</td>
 <td class="no">No, KYC required by law. <br /><span class="lightning yes tooltip">Except for certain prepaid cards paid with cash or crypto.<span class="tooltiptext">Not available in all countries; limited acceptance with merchants.</span></span></td>
+<td class="no">No, KYC (via banks or card issuers) required by law.</td>
 <td class="no">No, PayPal requires customer identification.</td>
+<td class="no">No, requires bank account linkage. Merchants are auditable for tax purposes.</td>
 <td class="no">No (TBC)</td>
 <td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
 <td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
@@ -326,7 +348,9 @@ background-color: aliceblue;
 <td class="yes">Private by default. Even sender and recipient can remain anonymous from each other.</td>
 <td class="no">The involved banks and the government (on request) can view transactions. Sender and recipient know each other.</td>
 <td class="no">The involved banks, the card issuer, and the government (on request) can view transactions. Sender and recipient know each other.</td>
+<td class="no tooltip">Google, the involved banks, the card issuer, and the government (on request) can view transactions. The buyer's identity is hidden from the merchant.<span class="tooltiptext">With Apple Pay, when a transaction occurs, the merchant receives the Device Account Number (DAN) and a transaction-specific dynamic security code, rather than the user's actual card details. Apple does not store or process transaction data on its servers, limiting its knowledge of the transaction details. Google Pay just acts as an intermediary for card payments. When a payment is made, Google uses a virtual card linked to the user's stored card details on its servers. As a result, Google has more visibility into transaction details compared to Apple.</span></td>
 <td class="no">PayPal and the government (on request) can view transactions. Sender and recipient know each other.</td>
+<td class="mixed">Taler enables buyer-side anonymity, both from the merchant and other third parties like banks. Merchants' total revenues are recorded for tax purposes.</td>
 <td class="no">The government has direct visibility of financial transactions and the spending of everyone. Sender and recipient know each other.</td>
 <td class="no">Everyone can view transactions on the blockchain. <br /><span class="lightning mixed">Using the <em>Lightning Network</em> slightly improves privacy.</span></td>
 <td class="no">Everyone can view transactions on the blockchain.</td>
@@ -338,8 +362,10 @@ background-color: aliceblue;
 <td>Wealth privacy</td>
 <td class="yes">Only the owner knows his/her total wealth.</td>
 <td class="no">The bank and the government (on request) can see the funds on the account.</td>
-<td class="no">The bank and the government (on request) can see the funds on the account.</td>
+<td class="no">The bank and the government (on request) can see the funds on the linked bank account.</td>
+<td class="no">The bank and the government (on request) can see the funds on the linked bank account.</td>
 <td class="no">PayPal and the government (on request) can see the funds on the account.</td>
+<td class="almost">Funds held as Taler coins in a wallet are not visible, but a bank account needs to be linked for withdrawals.</td>
 <td class="no">The government can see the funds on the account.</td>
 <td class="no">Everyone can see the funds of a wallet on the blockchain.</td>
 <td class="no">Everyone can see the funds of a wallet on the blockchain.</td>
@@ -349,7 +375,7 @@ background-color: aliceblue;
 
 
 <tr>
-<td class="semititle"><br />Acceptance</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Acceptance</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -357,7 +383,9 @@ background-color: aliceblue;
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
-<td class="yes">Yes (with phone app)</td>
+<td class="yes">Yes</td>
+<td class="almost">Yes (with phone app, in participating countries)</td>
+<td class="mixed">Yes, but very little adoption (pilot phase).</td>
 <td class="line">TBC</td>
 <td class="mixed">Yes, but negligible point-of-sale adoption.</td>
 <td class="mixed">Yes, but negligible point-of-sale adoption.</td>
@@ -371,6 +399,8 @@ background-color: aliceblue;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
+<td class="mixed">Yes, but very little adoption (pilot phase).</td>
 <td class="line">TBC</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -383,7 +413,9 @@ background-color: aliceblue;
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
+<td class="almost">Yes (P2P transfers in participating countries)</td>
 <td class="yes">Yes</td>
+<td class="no">No</td>
 <td class="line">TBC</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -392,13 +424,15 @@ background-color: aliceblue;
 </tr>
 
 <tr>
-<td class="semititle"><br />Other considerations</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Other considerations</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td>Automatic recurring payments?</td>
 <td class="no">No</td>
 <td class="yes">Yes (direct debit, standing order)</td>
+<td class="yes">Yes</td>
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="line">TBC</td>
@@ -413,7 +447,9 @@ background-color: aliceblue;
 <td class="no">No, not possible with physical money</td>
 <td class="mixed tooltip">Depends on country/bank<span class="tooltiptext">Bank transfers can generally not be undone, but in obvious cases of fraud, banks will usually cooperate and attempt to return the funds. In some countries, banks may even be legally required to refund fraud victims.</span></td>
 <td class="yes">Yes, under certain circumstances</td>
+<td class="yes">Yes, via card issuer policies</td>
 <td class="yes">Yes, under certain circumstances</td>
+<td class="no">No, transactions are final</td>
 <td class="line">TBC</td>
 <td class="no">No, transactions are final</td>
 <td class="no">No, transactions are final</td>
@@ -432,11 +468,13 @@ background-color: aliceblue;
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
+<td class="no">No</td>
+<td class="no">No</td>
 </tr>
 
 <tr>
 <td>"Store of Value" narrative</td>
-<td colspan="4" class="no">No, fiat money has an unlimited supply as the central bank can create new money, thereby devaluing existing money.</td>
+<td colspan="6" class="no">No, fiat money has an unlimited supply as the central bank can create new money, thereby devaluing existing money.</td>
 <td class="no">No. It is inflationary like all fiat money and additionally <span class="tooltip">can be programmed to expire after a certain time.<span class="tooltiptext">The government could theoretically give out money that expires within a certain period of time or money that could only be used on certain items, which could be used to induce behaviour that the government is seeking. For example, in the Chinese CBDC pilot program, money has an expiration date of a few weeks because authorities are hoping to drive consumption.</span></span></td>
 <td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
 <td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
