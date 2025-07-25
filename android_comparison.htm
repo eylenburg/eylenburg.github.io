@@ -211,7 +211,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 9 June 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 25 July 2025</p>
 
 <table class="comparison">
 
@@ -809,58 +809,8 @@ WHITE<br />
 </tr>
 
 <tr>
-<td class="legend">Hardened memory allocator?</td>
-<td class="green">Yes</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
 <td class="legend">Hardware memory tagging?</td>
 <td class="green">Yes, if supported by device</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Hardened kernel?</td>
-<td class="green">Yes, highest</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Hardened libc?</td>
-<td class="green">Yes, highest</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Hardened webview?</td>
-<td class="green">Yes (Vanadium)</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Hardened SELinux policy?</td>
-<td class="green">Yes</td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -886,16 +836,6 @@ WHITE<br />
 <td class="red">None</td>
 <td class="red">None</td>
 <td class="red">None</td>
-</tr>
-
-<tr>
-<td class="legend">Additional hardening</td>
-<td class="green">Yes, <a href="https://grapheneos.org/features" target="_blank">see here</a></td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
 </tr>
 
 <tr>
@@ -952,7 +892,7 @@ WHITE<br />
 <tr>
 <td class="legend tooltip">Can disable USB connections?<span class="tooltiptext">See here for details: <a href="https://github.com/eylenburg/eylenburg.github.io/issues/60" target="_blank" style="color: white;">[1]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/28" target="_blank" style="color: white;">[2]</a>, <a href="https://github.com/eylenburg/eylenburg.github.io/issues/54" target="_blank" style="color: white;">[3]</a></span></td>
 <td class="green tooltip">Default (while locked), <a href="https://grapheneos.org/features#usb-c-port-and-pogo-pins-control" target="_blank">see here</a><span class="tooltiptext">Hardware and software</span></td>
-<td class="lgreen tooltip">Default (while locked), software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
+<td class="lgreen tooltip">Default (while locked), software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
 <td class="yellow tooltip">Opt-in, software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
@@ -1007,6 +947,16 @@ WHITE<br />
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Hardened system components</td>
+<td class="green">Yes, hardened memory allocator, kernel, libc, webview (Vanadium), SELinux policy, and additional hardening. <a href="https://grapheneos.org/features" target="_blank">See here</a></td>
+<td class="red">No (same as AOSP)</td>
+<td class="red">No (same as AOSP)</td>
+<td class="red">No (same as AOSP)</td>
+<td class="red">No (same as AOSP)</td>
+<td class="red">No (same as AOSP)</td>
 </tr>
 
 <tr>
