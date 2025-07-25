@@ -1891,6 +1891,13 @@
   <marker id='__stop_DivestOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_DivestOS)' />
   </marker>
+  <linearGradient id='__fadeout_Clear__Linux__[Intel]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_Clear__Linux__[Intel]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Clear__Linux__[Intel])' />
+  </marker>
   <linearGradient id='__fadeout_Firefox__OS__[Mozilla]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
     <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
@@ -7578,7 +7585,7 @@ style='opacity:0.6;' >
   <path id='__line_NixOS' d='M 1844 11395 C 1872.5,11395 1853.5,11335 1882,11335 L 1882 11335 L 2257 11335' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Solus' d='M 1923 11395 C 1943.25,11395 1929.75,11365 1950,11365 L 1950 11365 L 2257 11365' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Lycoris__Desktop' d='M 1533 12205 C 1553.25,12205 1539.75,12235 1560,12235 L 1560 12235 L 1620 12235' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Lycoris__Desktop)' />
-  <path id='__line_Clear__Linux__[Intel]' d='M 1903 11395 C 1923.25,11395 1909.75,11425 1930,11425 L 1930 11425 L 2257 11425' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Clear__Linux__[Intel]' d='M 1903 11395 C 1923.25,11395 1909.75,11425 1930,11425 L 1930 11425 L 2246 11425' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Clear__Linux__[Intel])' />
   <path id='__line_My__Home__Screen__[Panasonic]' d='M 1968 11485 C 1988.25,11485 1974.75,11455 1995,11455 L 1995 11455 L 2257 11455' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_KaiOS__[KaiOS__Technologies]' d='M 1968 11485 C 1988.25,11485 1974.75,11515 1995,11515 L 1995 11515 L 2257 11515' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Firefox__OS__[Mozilla]' d='M 1826 11395 C 1861.25,11395 1837.75,11485 1873,11485 L 1873 11485 L 1995 11485' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Firefox__OS__[Mozilla])' />
@@ -8917,7 +8924,7 @@ style='opacity:0.6;' >
   <circle id='__dot_NixOS' cx='1882' cy='11335' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Solus' cx='1950' cy='11365' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Lycoris__Desktop' cx='1560' cy='12235' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_Clear__Linux__[Intel]' cx='1930' cy='11425' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_Clear__Linux__[Intel]' cx='1930' cy='11425' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_My__Home__Screen__[Panasonic]' cx='1995' cy='11455' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_KaiOS__[KaiOS__Technologies]' cx='1995' cy='11515' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Firefox__OS__[Mozilla]' cx='1873' cy='11485' r='10' fill='#FF8585' stroke='none' />
