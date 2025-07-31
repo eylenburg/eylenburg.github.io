@@ -293,7 +293,6 @@ span.tooltiptext a {
     display: none;
   }
 
-  table.menubar tr td:hover .submenu,
   table.menubar tr td:focus-within .submenu {
     display: block;
   }
