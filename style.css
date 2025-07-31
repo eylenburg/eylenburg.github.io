@@ -28,15 +28,40 @@ table.menubar tr td {
   border: 1px solid darkgrey;
   hyphens: auto;
   vertical-align: middle;
+  position: relative; /* Added for positioning the submenu */
 }
 
 table.menubar tr td a {
   color: black;
   text-decoration: none;
+  display: inline-block;
+  padding: 10px;
 }
 
 table.menubar tr td a:hover {
   text-decoration: underline;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #eee;
+  border: 1px solid darkgrey;
+  z-index: 1; /* To appears above other elements */
+}
+
+table.menubar tr td:hover .submenu,
+table.menubar tr td:focus-within .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
 }
 
 table.comparison {
@@ -257,7 +282,20 @@ span.tooltiptext a {
   }
 
   table.menubar td {
-    display: inline-block; width: 100%; padding: 10px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .submenu {
+    position: static; /* Change to static for mobile */
+    display: none;
+  }
+
+  table.menubar tr td:hover .submenu,
+  table.menubar tr td:focus-within .submenu {
+    display: block;
   }
 }
 

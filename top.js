@@ -14,7 +14,11 @@ document.write(`
 <td><a href="cloud_comparison.htm">(7) <strong>Cloud, Sync &amp; E&shy;mail Pro&shy;viders</strong> - Compa&shy;rison</a></td>
 <td><a href="payments.htm">(8) <strong>Pay&shy;ment Me&shy;thods</strong> - Compa&shy;rison</a></td>
 <td><a href="excel.htm">(9) <strong>Spread&shy;sheet Pro&shy;grams</strong> - Compa&shy;rison</a></td>
-<td><a href="altchans.htm">(10) <strong>Altchans</strong> - image&shy;board acti&shy;vity be&shy;yond 4chan</a></td>
+<td><a href="#"><strong>Other articles</strong></a>
+    <div class="submenu">
+        <a href="altchans.htm"><strong>Altchans</strong> - image&shy;board acti&shy;vity be&shy;yond 4chan</a>
+    </div>
+</td>
 </tr>
 </table>
 
