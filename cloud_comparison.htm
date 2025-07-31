@@ -19,49 +19,16 @@
 --comment: 350px;
 }
 
-
-table {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
+table.comparison {
 width: calc(var(--product) + var(--logo) + 16 * var(--item) + 4 * var(--price) + var(--comment));
-hyphens: auto;
 }
 
-td {
-border: none;
+table.comparison td {
 padding: 1px 5px 1px 5px;
 vertical-align: center;
-hyphens: auto;
-}
-
-.sticky {
-position: -webkit-sticky;
-position: sticky;
-top: 0px;
-z-index: 10;
-background-color: lightgrey;
-color: black;
-}
-
-thead.sticky tr td {
-border-left: 1px solid lightgrey;
-}
-
-td img {
-padding: 15px 0px;
-}
-
-tr.product td {
-border: 1px solid lightgrey;
 }
 
 table.comparison tr td:first-child {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
 font-weight: bold;
 }
 
@@ -74,53 +41,6 @@ table tr td:nth-child(14),
 table tr td:nth-child(17),
 table tr td:nth-child(19) {
 border-left: double black;
-}
-
-.center {
-text-align: center;
-}
-
-
-.tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
-}
-
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
-}
-
-.yes {
-background-color: #CEE6BB;
-}
-
-.almost {
-background-color: #E7F2DD;
-}
-
-.mixed {
-background-color: #E7DEB1;
-}
-
-.notreally {
-background-color: #F5E0D6;
-}
-
-.no {
-background-color: #EBC1AD;
 }
 
 img.icon {
@@ -144,7 +64,6 @@ background: green;
 font-size: x-small;
 }
 
-
 .px {
 text-align: right;
 padding-right: 5px;
@@ -154,25 +73,15 @@ padding-right: 5px;
 background-color: lightgrey;
 color: black; }
 
-table.comparison tr>td:first-child {
-background-color: white;
-}
-
 @media (prefers-color-scheme: dark) {
-.na, .sticky, table.comparison tr>td:first-child{
+.na {
 background-color: #222;
 color: white; }
 }
 
-@media (min-width: 578px){
-table.comparison tr>td:first-child{
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  }
+label {
+font-size: small;
 }
-
-label { font-size: small; }
 
 input#BigTech:checked ~ #comparisonTable .BigTech { display: none !important; visibility: hidden; }
 input#NonFree:checked ~ #comparisonTable .NonFree { display: none !important; visibility: hidden; }
@@ -190,13 +99,11 @@ input#NoEmail:checked ~ #comparisonTable .NoEmail { display: none !important; vi
 input#NoEmailEncrypt:checked ~ #comparisonTable .NoEmailEncrypt { display: none !important; visibility: hidden; }
 input#NoIMAP:checked ~ #comparisonTable .NoIMAP { display: none !important; visibility: hidden; }
 
-<!--
 input#NoFiles:checked ~ .NoFilesChild { display: none !important; visibility: hidden; }
 input#NoPIM:checked ~ .NoPIMChild { display: none !important; visibility: hidden; }
 input#NoEmail:checked ~ .NoEmailChild { display: none !important; visibility: hidden; }
--->
-
 </style>
+
 </head>
 <body>
 

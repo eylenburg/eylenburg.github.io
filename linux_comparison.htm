@@ -16,57 +16,7 @@
 }
 
 table.comparison {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
 width: calc(var(--legendwidth) + 17 * var(--distrowidth));
-height: 100%;
-}
-
-thead { 
-border: none;
-position: sticky; 
-position: -webkit-sticky;
-top: 0px;
-z-index: 10;
-}
-
-thead tr td {
-background-color: white;
-font-weight: bold;
-}
-
-.legend {
-background-color: white;
-z-index: 999;
-}
-
-@media (prefers-color-scheme: dark) {
-thead tr td, .legend {background-color: #222; color: white;  }
-}
-
-@media (min-width: 578px){
-table.comparison tr>td:first-child, .legend {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  }
-}
-
-td {
-border: none;
-padding: 0px;
-vertical-align: top;
-hyphens: auto;
-word-break: break-word;
-overflow-wrap: break-word;
-white-space: normal;
-}
-
-td img {
-padding: 15px 0px;
 }
 
 table.split {
@@ -74,115 +24,87 @@ border: none;
 table-layout: fixed;
 width: calc(var(--distrowidth));
 height: 100%;
+margin: 0em !important;
 }
 
 table.split tr td {
 border: none !important;
-width: 50%;
-overflow-wrap: break-word;
-hyphens: auto;
+width: 50% !important;
+hyphens: auto !important;
+border: none !important;
+padding: 1px 1px !important;
+vertical-align: top !important;
+word-break: break-word !important;
+overflow-wrap: break-word !important;
+white-space: normal !important;
+text-align: center !important;
+}
+
+td.splitcell {
+padding: 0px 0px !important;
+}
+
+/* need to specify the colours again because otherwise the style.css will apply white colour to the first column */
+table.split tr td.yes {
+  background-color: #CEE6BB;
+}
+
+table.split tr td.almost {
+  background-color: #E7F2DD !important;
+}
+
+table.split tr td.mixed {
+  background-color: #E7DEB1;
+}
+
+table.split tr td.notreally {
+  background-color: #F5E0D6;
+}
+
+table.split tr td.no {
+  background-color: #EBC1AD;
+}
+
+table.split tr td.grey {
+  background-color: lightgrey;
+}
+
+table.split tr td.blue2 {
+  background-color: lightblue;
+}
+
+table.split tr td.purple {
+background-color: plum;
 }
 
 table.comparison tr td:nth-child(2) {
 border-left: 1px dotted lightgrey;
 }
 
-/*
-tr.desktop td, table.split tr.desktop td, table.split tr.desktop td div {
-vertical-align: middle;
-} */
-
-.semititle {
-text-decoration: underline;
-font-weight: bold;
-vertical-align: bottom; }
-
-.legend {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
-}
-
-.center {
-text-align: center;
-}
-
-.tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
-}
-
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
-}
-
-.yes {
-background-color: #CEE6BB;
-}
-
-.almost {
-background-color: #E7F2DD;
-}
-
-.mixed {
-background-color: #E7DEB1;
-}
-
-.notreally {
-background-color: #F5E0D6;
-}
-
-.no {
-background-color: #EBC1AD;
-}
-
 img.logo {
 width: 90%;
-}
-
-td.yes,
-td.almost,
-td.no,
-td.mixed,
-td.notreally,
-td.line,
-td.grey, td.blue, td.greyblue, td.extracolour1, td.extracolour2, td.purple, td.purple2, td.purple3 {
-border-top: 1px solid ivory;
-border-bottom: 1px solid ivory;
-}
-
-.grey { background-color: lightgrey; }
-.blue { background-color: lightblue; }
-.greyblue { background-color: #B0C6CD; }
-.extracolour2 {background-color: darkkhaki; }
-.extracolour1 {background-color: tan; }
-.purple { background-color: plum; }
-.purple2 { background-color: thistle; }
-.purple3 { background-color: violet; }
-
-@media (prefers-color-scheme: dark) {
-td.grey, td.blue, td.greyblue, td.extracolour1, td.extracolour2, td.purple, td.purple2, td.purple3 { color: black;  }
 }
 
 table.yeartable tr td { vertical-align: middle; text-align: center; width: 12.5%; background-color: white; color: black; }
 
 table.yeartable tr td img { max-width: 100px; max-height: 100px; min-width: 75px; }
 .content2000, .content2005, .content2010, .content2015, .content2020, .contenttoday { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  table.split tr td.yes,
+  table.split tr td.almost,
+  table.split tr td.mixed,
+  table.split tr td.notreally,
+  table.split tr td.no,
+  table.split tr td.grey,
+  table.split tr td.blue2,
+  table.split tr td.purple {
+    color: black;
+  }
+}
 </style>
 
+</head>
 <body>
 
 
@@ -418,7 +340,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Philosophy</td>
-<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td class="splitcell"><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td class="splitcell"><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work-<br />station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -438,7 +360,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">Binary</td>
 <td class="greyblue">Hybrid</td>
 <td class="greyblue">Hybrid</td>
-<td class="blue">Source-based</td>
+<td class="blue2">Source-based</td>
 <td class="grey">Binary</td>
 </tr>
 
@@ -446,9 +368,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Immutable or traditional?</td>
 <td class="grey">Traditional</td>
 <td class="grey">Traditional</td>
-<td><table class="split"><tr><td class="grey">Tradi&shy;tional</td><td class="tooltip purple">Immu&shy;table <span class="tooltiptext">snap&shy;shot-based</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="grey">Tradi&shy;tional</td><td class="tooltip purple">Immu&shy;table <span class="tooltiptext">snap&shy;shot-based</span></td></tr></table></td>
 <td class="grey">Traditional</td>
-<td><table class="split"><tr><td class="grey">Tradi&shy;tional</td><td class="tooltip purple">Immu&shy;table <span class="tooltiptext">image-based</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="grey">Tradi&shy;tional</td><td class="tooltip purple">Immu&shy;table <span class="tooltiptext">image-based</span></td></tr></table></td>
 <td class="grey">Traditional</td>
 <td class="grey">Traditional</td>
 <td class="grey">Traditional</td>
@@ -509,7 +431,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Release schedule &amp; Reliability</td>
-<td></td><td></td><td></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td class="splitcell"><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work-<br />station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -560,7 +482,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="no">No</td>
 <td class="yes" span style="font-size: x-small;"><code>snapper rollback</code></td>
 <td class="yes" span style="font-size: x-small;"><code>snapper rollback</code></td>
-<td><table class="split"><tr><td class="no">No</td><td class="yes" style="font-size: x-small;"><code>rpm-ostree rollback</code></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="no">No</td><td class="yes" style="font-size: x-small;"><code>rpm-ostree rollback</code></td></tr></table></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -630,7 +552,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="almost">Server image</td>
 <td class="almost">Server image</td>
 <td class="almost">Server image</td>
-<td><table class="split"><tr><td class="yes">Yes</td><td class="no tooltip">No<span class="tooltiptext">dropped from Fedora 42 onwards</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="yes">Yes</td><td class="no tooltip">No<span class="tooltiptext">dropped from Fedora 42 onwards</span></td></tr></table></td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -713,14 +635,14 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Ease of use (default setup)</td>
-<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td class="splitcell"><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Graphical installer?</td>
 <td class="yes">Yes (Debian-Install)</td>
 <td class="yes">Yes (Subiquity)</td>
-<td><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="yes tooltip">Yes (Tik)<span class="tooltiptext">Aeon only, Kalpa uses Yast but this might change in the future</span></td></tr></table></td> <!-- soon Agama? -->
+<td class="splitcell"><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="yes tooltip">Yes (Tik)<span class="tooltiptext">Aeon only, Kalpa uses Yast but this might change in the future</span></td></tr></table></td> <!-- soon Agama? -->
 <td class="yes">Yes (Yast)</td> <!-- soon Agama for ALP? -->
 <td class="yes">Yes (Anaconda)</td>
 <td class="yes">Yes (Anaconda)</td>
@@ -762,7 +684,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">GUI for advanced system administration?</td>
 <td class="no">No</td>
 <td class="mixed">Limited (e.g. driver manager)</td>
-<td><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="no">No</td></tr></table></td>
 <td class="yes">Yes (Yast)</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -825,7 +747,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Defaults</td>
-<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td class="splitcell"><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -836,7 +758,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
-<td class="blue">Chromium</td>
+<td class="blue2">Chromium</td>
 <td class="grey">Firefox</td>
 <td class="grey">Firefox</td>
 <td>-</td>
@@ -856,7 +778,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="purple">btrfs</td>
 <td class="purple">btrfs</td>
 <td class="purple">btrfs</td>
-<td class="blue">xfs</td>
+<td class="blue2">xfs</td>
 <td class="grey">ext4</td>
 <td class="grey">ext4</td>
 <td class="grey">ext4</td>
@@ -873,8 +795,8 @@ Distributions mostly differ in their package manager and their default choices (
 <tr>
 <td class="legend">Default swap approach</td>
 <td class="grey">Swap partition</td>
-<td class="blue">Swap file</td>
-<td><table class="split"><tr><td class="grey">Swap part.</td><td class="purple tooltip">ZRAM<span class="tooltiptext">Aeon only, Kalpa has no swap but this might change in the future</span></td></tr></table></td>
+<td class="blue2">Swap file</td>
+<td class="splitcell"><table class="split"><tr><td class="grey">Swap part.</td><td class="purple tooltip">ZRAM<span class="tooltiptext">Aeon only, Kalpa has no swap but this might change in the future</span></td></tr></table></td>
 <td class="grey">Swap partition</td>
 <td class="purple">ZRAM</td>
 <td class="grey">Swap partition</td>
@@ -901,9 +823,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">systemd</td>
 <td class="grey">systemd</td>
 <td class="grey">systemd</td>
-<td class="blue">SysV init</td>
+<td class="blue2">SysV init</td>
 <td class="grey">systemd</td>
-<td class="blue">SysV init</td>
+<td class="blue2">SysV init</td>
 <td class="purple">OpenRC</td>
 <td class="purple">OpenRC</td>
 <td class="purple">runit</td>
@@ -926,7 +848,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">GNU</td>
 <td class="grey">GNU</td>
 <td class="grey">GNU</td>
-<td class="blue">Busybox</td>
+<td class="blue2">Busybox</td>
 <td class="grey">GNU</td>
 <td class="grey">GNU</td>
 <td class="grey">GNU</td>
@@ -947,7 +869,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">glibc</td>
 <td class="grey">glibc</td>
 <td class="grey">glibc</td>
-<td class="blue">musl</td>
+<td class="blue2">musl</td>
 <td class="greyblue">Choice of glibc or musl</td>
 <td class="grey">glibc</td>
 <td class="grey">glibc</td>
@@ -968,7 +890,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">bash</td>
 <td class="grey">bash</td>
 <td class="grey">bash</td>
-<td class="blue">ash</td>
+<td class="blue2">ash</td>
 <td class="grey">bash</td>
 <td class="grey">bashc</td>
 <td class="grey">bash</td>
@@ -983,7 +905,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
-<td class="blue">clang</td>
+<td class="blue2">clang</td>
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
 <td class="grey">gcc</td>
@@ -1000,16 +922,16 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Suppor&shy;ted desktops:</td>
-<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td class="splitcell"><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td class="splitcell"><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work-<br />station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">KDE Plasma</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Kubuntu</td>
-<td><table class="split"><tr><td class="almost">Option d. inst.</td><td class="almost tooltip">Kalpa<span class="tooltiptext">Still experimental</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Option d. inst.</td><td class="almost tooltip">Kalpa<span class="tooltiptext">Still experimental</span></td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="yes">KDE Edition</td><td class="almost">Kinoite</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="yes">KDE Edition</td><td class="almost">Kinoite</td></tr></table></td>
 <td class="notreally">In EPEL</td>
 <td class="yes">Default</td>
 <td class="yes tooltip">Pre-selected choice<span class="tooltiptext">Also available as Live Image</span></td>
@@ -1029,9 +951,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">GNOME</td>
 <td class="yes">Pre-selected choice</td>
 <td class="yes">Default</td>
-<td><table class="split"><tr><td class="almost">Option d. inst.</td><td class="almost tooltip">Aeon<span class="tooltiptext">Still experimental</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Option d. inst.</td><td class="almost tooltip">Aeon<span class="tooltiptext">Still experimental</span></td></tr></table></td>
 <td class="yes">Default</td>
-<td><table class="split"><tr><td class="yes">Work&shy;station</td><td class="almost">Silver&shy;blue</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="yes">Work-<br />station</td><td class="almost">Silver&shy;blue</td></tr></table></td>
 <td class="yes">Default</td>
 <td class="almost">GNOME Spin</td>
 <td class="almost tooltip">Option during instal&shy;lation<span class="tooltiptext">Also available as Live Image</span></td>
@@ -1050,9 +972,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Xfce</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Xubuntu</td>
-<td><table class="split"><tr><td class="almost">Option d. inst.</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Option d. inst.</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="almost">Xfce Spin</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Xfce Spin</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In EPEL</td>
 <td class="mixed">In repo</td>
 <td class="almost">Avai&shy;lable as Live Image</td>
@@ -1071,9 +993,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">MATE</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Ubuntu MATE</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="almost">MATE Spin</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">MATE Spin</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In EPEL</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
@@ -1092,9 +1014,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">LXQt</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Lubuntu</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="almost">LXQt Spin</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">LXQt Spin</td><td class="no">No</td></tr></table></td>
 <td class="no">No</td>
 <td class="almost">LXQt Spin</td>
 <td class="mixed">In repo</td>
@@ -1113,9 +1035,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Cinnamon</td>
 <td class="almost">Option during instal&shy;lation</td>
 <td class="almost">Ubuntu Cinnamon</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="almost">Cinnamon Spin</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Cinnamon Spin</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In EPEL</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
@@ -1134,9 +1056,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Budgie</td>
 <td class="mixed">In repo</td>
 <td class="almost">Ubuntu Budgie</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In Package Hub</td>
-<td><table class="split"><tr><td class="almost">Budgie Spin</td><td class="almost">Budgie Atomic</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Budgie Spin</td><td class="almost">Budgie Atomic</td></tr></table></td>
 <td class="no">No</td>
 <td class="mixed">In repo</td>
 <td class="no">No</td>
@@ -1178,13 +1100,13 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend semititle">Package management</td>
-<td></td><td></td><td><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work&shy;station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td class="splitcell"><table class="split"><tr><td style="word-break: break-all; font-size: smaller; font-weight: bold;">Tumble-<br />weed</td><td style="font-size: smaller; font-weight: bold;">Micro<wbr>OS</td></tr></table></td><td></td><td class="splitcell"><table class="split"><tr><td style="font-size: smaller; font-weight: bold;">Work-<br />station</td><td style="font-size: smaller; font-weight: bold;">Ato&shy;mic Desk&shy;top</td></tr></table></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="legend">Native binary package format</td>
-<td class="blue">DEB</td>
-<td class="blue">DEB</td>
+<td class="blue2">DEB</td>
+<td class="blue2">DEB</td>
 <td class="grey">RPM</td>
 <td class="grey">RPM</td>
 <td class="grey">RPM</td>
@@ -1204,15 +1126,15 @@ Distributions mostly differ in their package manager and their default choices (
 
 <tr>
 <td class="legend">Main package manager</td>
-<td class="blue">apt</td>
-<td class="blue">apt</td>
-<td><table class="split"><tr><td class="purple">zypper</td><td style="font-size: x-small;">transactional-update</td></tr></table></td>
+<td class="blue2">apt</td>
+<td class="blue2">apt</td>
+<td class="splitcell"><table class="split"><tr><td class="purple">zypper</td><td style="font-size: x-small;">transactional-update</td></tr></table></td>
 <td class="purple">zypper</td>
-<td><table class="split"><tr><td class="grey">dnf</td><td>rpm-ostree</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="grey">dnf</td><td>rpm-ostree</td></tr></table></td>
 <td class="grey">dnf</td>
 <td class="grey">dnf</td>
 <td>urpmi</td>
-<td class="blue">apt-rpm</td>
+<td class="blue2">apt-rpm</td>
 <td>pacman</td>
 <td>slackpkg</td>
 <td>portage</td>
@@ -1250,9 +1172,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Snap</td>
 <td class="mixed">In repo</td>
 <td class="yes">Preinstalled<br />&nbsp;</td>
-<td><table class="split"><tr><td class="notreally">In OBS</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="notreally">In OBS</td><td class="no">No</td></tr></table></td>
 <td class="no">No</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally">In EPEL</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1271,7 +1193,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">AppImage</td>
 <td class="almost">Should work</td>
 <td class="almost">Should work</td>
-<td><table class="split"><tr><td class="almost">Should work</td><td class="no tooltip">No<span class="tooltiptext">due to missing libfuse2</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="almost">Should work</td><td class="no tooltip">No<span class="tooltiptext">due to missing libfuse2</span></td></tr></table></td>
 <td class="almost">Should work</td>
 <td class="almost">Should work</td>
 <td class="almost">Should work</td>
@@ -1292,9 +1214,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend tooltip">Distrobox preinstalled?<span class="tooltiptext">Can run any other distro in a container and install packages in those distros, giving <em>any</em> distro compatibility with e.g. Ubuntu DEBs or Fedora RPMs or Arch's AUR</span></td>
 <td class="line"></td>
 <td class="line"></td>
-<td><table class="split"><tr><td class="line"></td><td class="yes">Yes</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="line"></td><td class="yes">Yes</td></tr></table></td>
 <td class="line"></td>
-<td><table class="split"><tr><td class="line"></td><td class="yes">Yes <span class="tooltip">(tool&shy;bx)<span class="tooltiptext">similar to distrobox but lacking some features</span></span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="line"></td><td class="yes">Yes <span class="tooltip">(tool&shy;bx)<span class="tooltiptext">similar to distrobox but lacking some features</span></span></td></tr></table></td>
 <td class="line"></td>
 <td class="line"></td>
 <td class="line"></td>
@@ -1314,9 +1236,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Nix</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
-<td><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td><td class="no">No</td></tr></table></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td>
-<td><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td><td class="no">No</td></tr></table></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://nix.dev/install-nix" target="_blank">Nix</a></span></td>
@@ -1335,9 +1257,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Guix</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="no">No</td></tr></table></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td>
-<td><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td><td class="no">No</td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td><td class="no">No</td></tr></table></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td>
 <td class="notreally tooltip">Install script<span class="tooltiptext">via generic installer script for <a href="https://guix.gnu.org/manual/en/html_node/Installation.html" target="_blank">Guix</a></span></td>
@@ -1356,9 +1278,9 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">OCI containers (docker/podman)</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="yes tooltip">Pre&shy;in&shy;stalled<span class="tooltiptext">podman</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="yes tooltip">Pre&shy;in&shy;stalled<span class="tooltiptext">podman</span></td></tr></table></td>
 <td class="mixed">In repo</td>
-<td><table class="split"><tr><td class="mixed">In repo</td><td class="yes tooltip">Pre&shy;in&shy;stalled<span class="tooltiptext">podman</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed">In repo</td><td class="yes tooltip">Pre&shy;in&shy;stalled<span class="tooltiptext">podman</span></td></tr></table></td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
 <td class="mixed">In repo</td>
@@ -1389,7 +1311,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Full-disk encryption option in installer</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td><table class="split"><tr><td class="yes">Yes</td><td class="yes tooltip">Yes<span class="tooltiptext">Mandatory for Aeon, <a href="https://en.opensuse.org/index.php?title=Portal:Aeon/Encryption" target="_blank" style="color: white;">see here</a>, but not (yet) for Kalpa</span></td></tr></table></td>
+<td class="splitcell"><table class="split"><tr><td class="yes">Yes</td><td class="yes tooltip">Yes<span class="tooltiptext">Mandatory for Aeon, <a href="https://en.opensuse.org/index.php?title=Portal:Aeon/Encryption" target="_blank" style="color: white;">see here</a>, but not (yet) for Kalpa</span></td></tr></table></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>

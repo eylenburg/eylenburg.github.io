@@ -15,122 +15,8 @@
 --dewidth: 153px;
 }
 
-table {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
+table.comparison {
 width: calc(var(--legendwidth) + 10 * var(--dewidth));
-}
-
-#bottom.table {
-text-align: left;
-table-layout:fixed;
-white-space: nowrap;
-}
-
-td {
-border: none;
-padding: 1px 1px;
-vertical-align: top;
-}
-
-th {
-border: none;
-position: -webkit-sticky;
-position: sticky;
-top: 0px;
-z-index: 10;
-background-color: white;
-font-weight: bold;
-}
-
-table.comparison tr>th:first-child, table.comparison tr>td:first-child {
-background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-th, table.comparison tr>th:first-child, table.comparison tr>td:first-child {background-color: #222; color: white;  }
-}
-
-td img {
-padding: 15px 0px;
-}
-
-table.comparison tr td:first-child {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
-}
-
-.semititle {
-text-decoration: underline;
-font-weight: bold;
-vertical-align: bottom; }
-
-.center {
-text-align: center;
-}
-
-.tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
-}
-
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
-}
-
-.yes {
-background-color: #CEE6BB;
-}
-
-.almost {
-background-color: #E7F2DD;
-}
-
-.mixed {
-background-color: #E7DEB1;
-}
-
-.notreally {
-background-color: #F5E0D6;
-}
-
-.no {
-background-color: #EBC1AD;
-}
-
-td.yes,
-td.almost,
-td.no,
-td.mixed,
-td.notreally,
-td.line,
-td.gtktoolkit,
-td.qttoolkit,
-td.kdeapp,
-td.gnomeapp {
-border-top: 1px solid ivory;
-border-bottom: 1px solid ivory;
-}
-
-tr.groups td {
-padding-bottom: 10px;
 }
 
 .gtktoolkit {
@@ -170,7 +56,6 @@ background-color: #b3d667;
 background-color: #63BE7B;
 }
 
-
 /* background colors for market shares */
 
 /* <1% */
@@ -203,42 +88,33 @@ background-color: #bbb;
 background-color: #aaa;
 }
 
-
 @media (prefers-color-scheme: dark) {
-td.gtktoolkit,
-td.qttoolkit,
-td.gnomeapp,
-td.kdeapp{
-border-top: none;
-border-bottom: none;
-border-top: none;
-border-bottom: none;
+    td.gtktoolkit,
+    td.qttoolkit,
+    td.gnomeapp,
+    td.kdeapp{
+    border-top: none;
+    border-bottom: none;
+    border-top: none;
+    border-bottom: none;
+    }
+    .gnomeapp {
+    background-color: #825717;
+    color: white;
+    }
+    .kdeapp {
+    background-color: #063756;
+    color: white;
+    }
+    .qttoolkit {
+    color: #94d4ff;
+    }
+    .gtktoolkit {
+    color: #eac895;
+    }
 }
-.gnomeapp {
-background-color: #825717;
-color: white;
-}
-.kdeapp {
-background-color: #063756;
-color: white;
-}
-.qttoolkit {
-color: #94d4ff;
-}
-.gtktoolkit {
-color: #eac895;
-}
-}
-
-@media (min-width: 578px){
-table.comparison tr>th:first-child, table.comparison tr>td:first-child {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  }
-}
-
 </style>
+
 </head>
 <body>
 

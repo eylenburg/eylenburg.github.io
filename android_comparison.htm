@@ -16,13 +16,7 @@
 }
 
 table.comparison {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
-font-size: small;
 width: calc(var(--legendwidth) + 6 * var(--distrowidth));
-height: 100%;
 }
 
 table.comparison tr td:nth-child(2) {
@@ -40,6 +34,7 @@ table.appendix td {
 border: 1px solid #ddd;
 overflow-wrap: break-word;
 width: 25%;
+border-color: #444;
 }
 
 table.appendix td:first-child {
@@ -53,98 +48,12 @@ top: 0px;
 z-index: 10;
 font-size: small;
 }
-
-thead { 
-border: none;
-position: sticky; 
-position: -webkit-sticky;
-top: 0px;
-z-index: 10;
-font-size: large;
-}
-
-thead tr td {
-background-color: white;
-font-weight: bold;
-}
     
+/*
 @media (prefers-color-scheme: dark) {
 thead tr td, .legend {background-color: #222 !important; color: white;  }
 }
-
-td {
-border: none;
-padding: 0px;
-vertical-align: top;
-overflow-wrap: break-word;
-hyphens: auto;
-}
-
-td img {
-padding: 15px 0px;
-}
-
-.semititle {
-text-decoration: underline;
-font-weight: bold;
-vertical-align: bottom; }
-
-.legend {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
-background-color: white;
-}
-
-.center {
-text-align: center;
-}
-
-.tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
-z-index: 99999;
-}
-
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
-}
-
-.green {
-background-color: #CEE6BB;
-}
-
-.lgreen {
-background-color: #E7F2DD;
-}
-
-.yellow {
-background-color: #E7DEB1;
-}
-
-.lred {
-background-color: #F5E0D6;
-}
-
-.red {
-background-color: #EBC1AD;
-}
-
-.blue {
-background-color: aliceblue;
-}
+*/
 
 .foss {
 color: white;
@@ -163,29 +72,6 @@ max-height: 75px;
     #grapheneos-logo {
     filter: invert(88%);
     }
-}
-
-td.green,
-td.lgreen,
-td.red,
-td.lred,
-td.yellow,
-td.blue,
-td.line {
-border-top: 1px solid ivory;
-border-bottom: 1px solid ivory;
-}
-
-@media (prefers-color-scheme: dark) {
-td.green, td.lgreen, td.red, td.lred, td.yellow, td.blue { color: black;  }
-}
-
-@media (min-width: 578px){
-  .legend {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  }
 }
 
 sup {

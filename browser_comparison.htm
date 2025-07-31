@@ -26,40 +26,8 @@
 margin-right: 1em;
 }
 
-table {
-margin-top: 1em;
-text-align: center;
-border: none;
-table-layout: fixed;
+table.comparison {
 font-size: 12px;
-}
-
-td {
-border: none;
-padding: 1px 1px;
-vertical-align: top;
-}
-
-th {
-border: none;
-position: -webkit-sticky;
-position: sticky;
-top: 0px;
-z-index: 10;
-background-color: white;
-font-weight: bold;
-}
-
-.legend {
-background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-th, .legend {background-color: #222; color: white;  }
-}
-
-td img {
-padding: 15px 0px;
 }
 
 tr.noncore td {
@@ -84,105 +52,9 @@ white-space: nowrap;
 visibility: visible; 
 }
 
-
 #android:checked~#theTable .android,
 #ios:checked~#theTable .ios {
 visibility: visible;
-}
-
-
-.legend {
-text-align: left;
-white-space: nowrap;
-padding-right: 5px;
-}
-
-.semititle {
-text-decoration: underline; 
-font-weight: bold; 
-vertical-align: bottom; }
-
-.center {
-text-align: center;
-}
-
-.tooltip {
-text-decoration: underline;
-text-decoration-style: dotted;
-text-decoration-color: darkred;
-}
-
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 5px;
-position: absolute;
-z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-font-weight: normal;
-}
-
-.yes, .green {
-background-color: #CEE6BB; 
-}
-
-.almost {
-background-color: #E7F2DD; 
-}
-
-.no {
-background-color: #EBC1AD; 
-}
-
-.ext {
-background-color: #CAEAEE /*aliceblue*/;
-}
-
-.hidden {
-background-color: #E7DEB1;
-color: black;
-}
-
-.dropped {
-background-color: #F5E0D6;
-font-size: 90%;
-}
-
-.antifeature {
-background-color: thistle; /* use this for anti-freedom features that may be desired by some users but don't deserve a green colour */
-}
-
-td.yes, td.green,
-td.almost,
-td.no,
-td.ext,
-td.dropped,
-td.hidden,
-td.antifeature {
-border-top: 1px solid ivory;
-border-bottom: 1px solid ivory;
-}
-
-.firstcolumn {
-background-color: white;}
-
-@media (prefers-color-scheme: dark) {
-.firstcolumn {
-background-color: #222;}
-}
-
-@media (min-width: 578px){
-.legend{
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  }
 }
 </style>
 
@@ -213,7 +85,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
 <input id="ios" type="checkbox" checked /><label for="ios"> Show iOS browsers</label>
 
-<table id="theTable">
+<table class="comparison" id="theTable">
 
 <colgroup>
 <col style="width: var(--legendwidth);">
@@ -2995,11 +2867,11 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <td class="ios no">No</td>
 <!-- Edge -->
 <td class="desktop yes">Yes</td><!-- coming in v 100 -->
-<td class="android almost">Device PIN</td>
+<td class="android almost" style="font-size: 80%;">Device PIN</td>
 <td class="ios no">No</td>
 <!-- Opera -->
 <td class="desktop dropped"><span class="tooltip">Dropped<span class="tooltiptext">dropped in version 15</span></span></td>
-<td class="android almost">Device PIN</td>
+<td class="android almost" style="font-size: 80%;">Device PIN</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
 <td class="desktop no">No</td>
