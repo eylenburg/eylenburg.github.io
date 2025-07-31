@@ -196,7 +196,7 @@ table.comparison td img {
   padding: 5px 5px;
   position: absolute;
   z-index: 1;
-  width: 200px;
+  max-width: 300px;
   font-weight: normal;
 }
 
