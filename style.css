@@ -197,6 +197,7 @@ table.comparison td img {
   position: absolute;
   z-index: 1;
   max-width: 300px;
+  min-width: 150px;
   font-weight: normal;
 }
 
@@ -272,6 +273,14 @@ span.tooltiptext a {
   background-color: thistle;
 }
 
+@media (min-width: 578px){
+  table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison td.legend {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+  }
+}
+
 @media all and (max-width: 760px) {
   table.menubar {
     display: block;
@@ -295,14 +304,6 @@ span.tooltiptext a {
 
   table.menubar tr td:focus-within .submenu {
     display: block;
-  }
-}
-
-@media (min-width: 578px){
-  table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison td.legend {
-    position: -webkit-sticky;
-    position: sticky;
-    left: 0;
   }
 }
 
