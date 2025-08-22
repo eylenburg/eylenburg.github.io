@@ -98,7 +98,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 2 August 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 22 August 2025</p>
 
 <table class="comparison">
 
@@ -234,6 +234,16 @@ font-size: x-small;
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Factory Reset Protection (for stolen devices)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow tooltip">Yes, but requires Google login<span class="tooltiptext">If the device is stolen and then factory reset, it will not allow setup and use until the original Google account credentials used on the device are entered. To disable FRP before factory reset, one must remove all Google accounts from the device (requiring the passwords). If the device was used without a Google account it will not trigger FRP meaning the device can be reset and reused freely.</span></td>
 </tr>
 
 <tr>
@@ -672,7 +682,7 @@ WHITE<br />
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
-<td class="yellow">Some devices, <a href="https://attestation.app/about" target="_blank">see here</a></td>
+<td class="green">Yes, mandatory since Android 8</a></td>
 </tr>
 
 <tr>
@@ -702,7 +712,7 @@ WHITE<br />
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
-<td class="red">No</td>
+<td class="lred tooltip">Advanced Protection, very limited scope<span class="tooltiptext">If Advanced Protection mode is enabled, it enables hardware memory tagging (when supported by the hardware) but only for apps that are explicitly opting in to it and not for the kernel or most of the base OS.</span></td>
 </tr>
 
 <tr>
@@ -727,12 +737,12 @@ WHITE<br />
 
 <tr>
 <td class="legend">Secure TLS for SUPL?</td>
-<td class="green">TLSv1.2</td>
-<td class="red">TLSv1.1 or TLSv1.0</td>
-<td class="red">TLSv1.1 or TLSv1.0</td>
-<td class="red">TLSv1.1 or TLSv1.0</td>
-<td class="red">TLSv1.1 or TLSv1.0</td>
-<td class="red">TLSv1.1 or TLSv1.0</td>
+<td class="green tooltip">TLSv1.3 or TLSv1.2<span class="tooltiptext">GrapheneOS still uses TLSv1.2-only for SUPL on Broadcom GNSS devices but moved to TLSv1.3-only for SUPL on Samsung GNSS devices.</span></td>
+<td class="yellow tooltip">TLSv1.3/1.2/1.1/1.0 depending on device<span class="tooltiptext">Some older end-of-life devices only support TLSv1.1 or TLSv1.0</span></td>
+<td class="yellow tooltip">TLSv1.3/1.2/1.1/1.0 depending on device<span class="tooltiptext">Some older end-of-life devices only support TLSv1.1 or TLSv1.0</span></td>
+<td class="yellow tooltip">TLSv1.3/1.2/1.1/1.0 depending on device<span class="tooltiptext">Some older end-of-life devices only support TLSv1.1 or TLSv1.0</span></td>
+<td class="yellow tooltip">TLSv1.3/1.2/1.1/1.0 depending on device<span class="tooltiptext">Some older end-of-life devices only support TLSv1.1 or TLSv1.0</span></td>
+<td class="yellow tooltip">TLSv1.3/1.2/1.1/1.0 depending on device<span class="tooltiptext">Some older end-of-life devices only support TLSv1.1 or TLSv1.0</span></td>
 </tr>
 
 <tr>
@@ -783,7 +793,7 @@ WHITE<br />
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
 <td class="lred"><em>? (TBC - like Lineage or stock?)</em></td>
 <td class="yellow tooltip">Opt-in, software only<span class="tooltiptext">Incomplete implementation. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections. The mode for disabling USB connections while locked continues allowing new connections until existing connections end, including a connection through another method such as a pogo pins USB connection to a stand.</span></td>
-<td class="lred tooltip">Device admin API<span class="tooltiptext">Requires installing a device admin app like Sentry. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections.</span></td>
+<td class="yellow"><span class="tooltip">Advanced Protection<span class="tooltiptext">When Advanced Protection Mode is enabled, it blocks new USB connections at a software level after the device is locked</span></span> or <span class="tooltip">Device admin API<span class="tooltiptext">Requires installing a device admin app like Sentry. Can only disable high level software attack surface. Cannot disable USB until after early boot. Lacks a way to block new USB connections without ending existing connections.</span></span></td>
 </tr>
 
 <tr>
@@ -819,11 +829,11 @@ WHITE<br />
 <tr>
 <td class="legend">Auto-reboot timer for locked devices</td>
 <td class="green">Yes</td>
-<td class="yellow tooltip">Yes, with flaws (no proper BFU state)<span class="tooltiptext">CalyxOS has a disabled-by-default port of an older GrapheneOS implementation of the auto-reboot feature, which was determined to not be as robust due to being able to bypass it by crashing `system_server`. It also lacks the memory clearing required to get the device properly back at rest for reboots. Therefore it can't return the device to a proper BFU (before first unlock) state like the GrapheneOS and iOS implementations.</span></td>
+<td class="yellow tooltip">Yes, with flaws (no proper BFU state)<span class="tooltiptext">CalyxOS has a disabled-by-default port of an older GrapheneOS implementation of the auto-reboot feature, which was determined to not be as robust due to being able to bypass it by crashing <code>system_server</code>. It also lacks the memory clearing required to get the device properly back at rest for reboots. Therefore it can't return the device to a proper BFU (before first unlock) state like the GrapheneOS and iOS implementations.</span></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
-<td class="red">No</td>
+<td class="yellow tooltip">Advanced Protection mode, with flaws<span class="tooltiptext">If Advanced Protection Mode is enabled, it provides a 72 hour auto-reboot timer. However, it appears to lack memory zeroing and therefore can't return the device to a proper BFU (before first unlock) state like the GrapheneOS and iOS implementations. It is unclear if the implementation is protected from a core system process crashing (<code>system_server</code>) preventing a trigger of the auto-reboot.</span></td>
 </tr>
 
 <tr>
@@ -893,7 +903,7 @@ WHITE<br />
 
 <tr>
 <td class="legend tooltip">Webview update speed<span class="tooltiptext"><a href="https://divestos.org/misc/ch-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
-<td class="green"><2 days</td>
+<td class="green"><1 day</td>
 <!--<td class="yellow"><1 week, sometimes longer delays</td>--><td class="red"><a href="https://calyxos.org/news/2025/08/01/a-letter-to-our-community/" target="_blank">Currently no updates</td>
 <td class="yellow"><2 weeks</td>
 <td class="red">Several weeks/months</td>
