@@ -139,7 +139,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 2 August 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 3 September 2025</p>
 
 <div>
     <label><input type="checkbox" checked onchange="toggleColumn(1)"> Debian</label>
@@ -896,9 +896,30 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="grey">bash</td>
 <td class="blue2">ash</td>
 <td class="grey">bash</td>
-<td class="grey">bashc</td>
 <td class="grey">bash</td>
 <td class="grey">bash</td>
+<td class="grey">bash</td>
+</tr>
+
+<tr>
+<td class="legend">Default privilege escalation tool</td>
+<td class="grey tooltip">su<span class="tooltiptext">If no root password is entered during the installation, the root account is locked and <code>su</code> can't be used; Debian will set up <code>sudo</code> instead.</span></td>
+<td class="blue2 tooltip">sudo<span class="tooltiptext">By default, the root account is locked and <code>su</code> can't be used</span></td>
+<td class="greyblue">sudo and su</td>
+<td class="greyblue">sudo and su</td>
+<td class="blue2 tooltip">sudo<span class="tooltiptext">By default, the root account is locked and <code>su</code> can't be used</span></td>
+<td class="greyblue">sudo and su</td>
+<td class="blue2 tooltip">sudo<span class="tooltiptext">By default, the root account is locked and <code>su</code> can't be used</span></td>
+<td class="grey">su</td>
+<td class="grey">su</td>
+<td class="grey">su</td>
+<td class="grey">su</td>
+<td class="grey">su</td>
+<td class="grey tooltip">su<span class="tooltiptext"><code>doas</code> is recommended by Alpine (with <code>sudo</code> being downgraded to the community repo), but it not installed by default</span></td>
+<td class="greyblue">sudo and su</td>
+<td class="greyblue">sudo and su</td>
+<td class="greyblue">sudo and su</td>
+<td class="blue2 tooltip">sudo<span class="tooltiptext">By default, the root account is locked and <code>su</code> can't be used</span></td>
 </tr>
 
 <tr>
@@ -1976,3 +1997,4 @@ Calculation of homogeneity: for each category (e.g. desktop environment) find th
 
 </body>
 </html>
+
