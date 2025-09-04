@@ -139,7 +139,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 3 September 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 4 September 2025</p>
 
 <div>
     <label><input type="checkbox" checked onchange="toggleColumn(1)"> Debian</label>
@@ -1215,24 +1215,24 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 
 <tr>
-<td class="legend">AppImage</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="splitcell"><table class="split"><tr><td class="almost">Should work</td><td class="no tooltip">No<span class="tooltiptext">due to missing libfuse2</span></td></tr></table></td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
-<td class="almost">Should work</td>
+<td class="legend">AppImage (note: many require <code>libfuse2</code> to run)</td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td><td class="notreally tooltip">No<span class="tooltiptext">Some AppImages might run, but most will fail due to missing libfuse2</span></td></tr></table></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="splitcell"><table class="split"><tr><td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td><td class="notreally tooltip">No<span class="tooltiptext">Some AppImages might run, but most will fail due to missing libfuse2</span></td></tr></table></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="almost tooltip">Should work<span class="tooltiptext"><code>libfuse2</code> is installed by default</span></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
+<td class="almost tooltip">Should work<span class="tooltiptext"><code>libfuse2</code> is installed by default</span></td>
+<td class="mixed tooltip">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></td>
 <td class="no tooltip">Most likely not working<span class="tooltiptext">due to missing glibc</span></td>
-<td class="mixed tooltip">Should work with glibc<span class="tooltiptext">but not musl</span></td>
+<td class="mixed tooltip">Should work with glibc<span class="tooltiptext">but not musl; also most AppImages require installation of <code>libfuse2</code></span></td>
 <td class="almost">Should work <span style="font-size: x-small;">(<code>appimage-run</code>)</span></td>
-<td class="almost">Should work <span style="font-size: x-small;">(<span class="tooltip"><code>--emulate-fhs</code><span class="tooltiptext">guix shell --container --emulate-fhs</span></span>)</span></td>
-<td class="almost">Should work</td>
+<td class="almost"><span class="tooltiptext">Can work<span class="tooltiptext">Many AppImages require installation of <code>libfuse2</code> to run</span></span> <span style="font-size: x-small;">(<span class="tooltip"><code>--emulate-fhs</code><span class="tooltiptext">guix shell --container --emulate-fhs</span></span>)</span></td>
+<td class="almost tooltip">Should work<span class="tooltiptext"><code>libfuse2</code> is installed by default</span></td>
 </tr>
 
 <tr>
@@ -1997,4 +1997,5 @@ Calculation of homogeneity: for each category (e.g. desktop environment) find th
 
 </body>
 </html>
+
 
