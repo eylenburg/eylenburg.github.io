@@ -89,7 +89,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 16 June 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 8 September 2025</p>
 
 
 <table class="comparison">
@@ -1425,11 +1425,11 @@ Dragonfly missing
 </tr>
 
 <tr>
-<td>Allows app "sideloading"</td>
+<td>Can install apps from any source or developer</td>
 <td class="yes">Yes</td>
-<td class="yes tooltip">Yes<span class="tooltiptext">Since macOS 15.1, apps needs to be "signed", which requires the developer to pay Apple an annual fee. The only way to run "unsigned" apps is by disabling "gatekeeper" via a terminal command or whitelisting apps by running `<code>xattr -d com.apple.quarantine path/to/app</code>` in the terminal. It is also possible to open System Settings and then go to "Privacy &amp; Security", select the app and click on "open anyway".</span></td>
+<td class="almost tooltip">Yes, but...<span class="tooltiptext">Since macOS 15.1, apps needs to be "signed", which requires the developer to pay Apple an annual fee. The only way to run "unsigned" apps is by disabling "gatekeeper" via a terminal command or whitelisting apps by running `<code>xattr -d com.apple.quarantine path/to/app</code>` in the terminal. It is also possible to open System Settings and then go to "Privacy &amp; Security", select the app and click on "open anyway".</span></td>
 <td class="notreally tooltip">Very limited<span class="tooltiptext">Installations are only allowed from the App Store, except for apps transferred as IPA files from a macOS or Windows devices, but they expire after 7 days. Additionally, users in the EU can install apps from websites or third-party app stores, but this is very limited as well and the distributor needs to pay Apple; <a href="https://www.theregister.com/2024/04/17/apple_eu_ios_web_downloads/" target="_blank" style="color: white;">see details<a>    .</span></td>
-<td class="yes">Yes</td>
+<td class="yes">Yes, <span class="lred tooltip">for now<span class="tooltiptext">Google has announced that from 2026-27 (depending on country), apps can only be "sideloaded" (installed from an APK file or alternative app store) if the developer has registered with Google. To register, developers need to pay a fee and reveal their identity to Google. The only workaround to install apps from outside the Play Store from non-approved developers will be via <code>adb</code> (when connected to a PC or using Shizuku). These restrictions only apply to "certified" Google devices, i.e. those that have Play Services and Play Protect preinstalled, meaning it will not affect AOSP, "custom ROMs" (such as GrapheneOS or LineageOS) or Chinese phones.</span></span></td>
 <td class="almost tooltip">via ADB<span class="tooltiptext">through Linux subsystem</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
@@ -1499,7 +1499,7 @@ Dragonfly missing
 <td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workaround of opening command prompt via Shift+F10 and then either (a) entering `start ms-cxh:localonly` or (b) entering `regedit` to open the Registry Editor followed by navigating to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE` and creating a new `DWORD (32-it)` value named `BypassNRO` with value data `1`.</span></td>
 <td class="almost tooltip">No App Store<span class="tooltiptext">cannot use App Store if not logged in with Apple account, but can still install apps from other sources</span></td>
 <td class="notreally tooltip">Very limited<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
-<td class="almost tooltip">No Play Store<span class="tooltiptext">cannot use Play Store if not logged in with Google account, but can still install apps from other sources</span></td>
+<td class="almost tooltip">No Play Store<span class="tooltiptext">Cannot use Play Store if not logged in with Google account, but can still install apps from other sources. However, in the future it will become harder to install apps without a Google account, as Google has announced that from 2026-27 (depending on country), apps can only be "sideloaded" (installed from an APK file or alternative app store) if the developer has registered with Google. To register, developers need to pay a fee and reveal their identity to Google. The only workaround to install apps from outside the Play Store from non-approved developers will be via <code>adb</code> (when connected to a PC or using Shizuku). These restrictions only apply to "certified" Google devices, i.e. those that have Play Services and Play Protect preinstalled, meaning it will not affect AOSP, "custom ROMs" (such as GrapheneOS or LineageOS) or Chinese phones.</span></td>
 <td class="no tooltip">No<span class="tooltiptext">except guest accounts</span></td>
 <td class="yes">Yes</td><!-- end of big 6 -->
 <td class="yes">Yes</td>
