@@ -90,7 +90,8 @@ table.comparison tr td:first-child {
   padding-right: 5px;
 }
 
-table.comparison th, table.comparison thead {
+table.comparison th,
+table.comparison thead {
   border: none;
   position: -webkit-sticky;
   position: sticky;
@@ -101,7 +102,10 @@ table.comparison th, table.comparison thead {
   text-align: center;
 }
 
-table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison td.legend, .firstcolumn {
+table.comparison tr>th:first-child,
+table.comparison tr>td:first-child,
+table.comparison td.legend,
+.firstcolumn {
   background-color: white;
 }
 
@@ -207,6 +211,26 @@ span.tooltiptext a {
   color: white;
 }
 
+td.legend.tooltip .tooltiptext,
+table.comparison tr td.tooltip:first-child .tooltiptext {
+  /* make the black box a fixed width and allow wrapping */
+  width: 550px !important;
+  max-width: 550px !important; /* override the 300px for normal tooltiptext */
+  min-width: 0 !important;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: block !important;
+  box-sizing: border-box;
+  z-index: 9999 !important; /* keep it above neighboring rows and sticky headers */
+}
+
+/* While hovered, lift the whole cell above neighboring rows (prevents their white backgrounds from covering the tooltip) */
+td.legend.tooltip:hover,
+table.comparison tr td.tooltip:first-child:hover {
+  z-index: 50;
+}
+
 .smaller {
   font-size: smaller;
 }
@@ -272,10 +296,17 @@ span.tooltiptext a {
 }
 
 @media (min-width: 578px){
-  table.comparison tr>th:first-child, table.comparison tr>td:first-child, table.comparison td.legend {
+  table.comparison tr>th:first-child,
+  table.comparison tr>td:first-child,
+  table.comparison td.legend {
     position: -webkit-sticky;
     position: sticky;
     left: 0;
+  }
+  /* On mobile the first column isn't sticky, so ensure the cell is a positioned anchor for the absolutely-positioned tooltip. This won't affect desktop. */
+  td.legend.tooltip,
+  table.comparison tr td.tooltip:first-child {
+    position: relative;
   }
 }
 
