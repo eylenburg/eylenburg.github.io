@@ -137,7 +137,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 <h2 class="center">Comparison of Desktop Environments (short version)</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 2 August 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 18 September 2025</p>
 
 <table class="comparison">
 <colgroup>
@@ -488,7 +488,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Media player</td>
 
 <td class="qttoolkit kdeapp">Dragon, Kaffeine, ... <!--KMPlayer--></td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME Videos (Totem)</td> <!-- GNOME -->
+<td class="gtktoolkit gnomeapp">Showtime, Totem</td> <!-- GNOME -->
 <td class="gtktoolkit">Parole</td> <!-- Xfce -->
 <td>-</td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp tooltip">xplayer<span class="tooltiptext">fork of Totem</span></td> <!-- Cinnamon -->
@@ -592,7 +592,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Display server support</td>
 
 <td>X11 + Wayland</td> <!-- Plasma -->
-<td>X11 + Wayland</td> <!-- Gnome -->
+<td>Wayland</td> <!-- Gnome -->
 
 <td>X11</td> <!-- Xfce -->
 <td>X11</td> <!-- MATE -->
@@ -691,7 +691,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="tooltip">Can draw generic window decorations ("server-side decorations")<span class="tooltiptext">Meaning the desktop environment will draw generic window decorations (such as minimize, maximize and close buttons) for applications that don't want to draw their own custom window decorations. In the Linux world, this is usually known as "server-side decorations" (SSD) (drawn by window manager) as opposed to "client-side decorations" (CSD) (drawn by app, hence apps will all have different looks for the title bars and window buttons).</span></td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="mixed">X11: Yes; Wayland: No</td> <!-- Gnome -->
+<td class="no tooltip">No<span class="tooltiptext">On X11, GNOME supported server-side decorations, but the X11 session has been disabled since GNOME 49, released in September 2025. On Wayland, <a href="https://wayland.app/protocols/xdg-decoration-unstable-v1" target="_blank">GNOME is the only major desktop not supporting server-side decorations</a></span></td> <!-- Gnome -->
 
 
 <td class="yes">Yes</td><!-- Xfce -->
@@ -1918,4 +1918,5 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <script src="bottom.js "></script>
 </body>
 </html>
+
 
