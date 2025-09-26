@@ -304,10 +304,11 @@ table.comparison tr td.tooltip:first-child:hover {
     left: 0;
   }
   /* On mobile the first column isn't sticky, so ensure the cell is a positioned anchor for the absolutely-positioned tooltip. This won't affect desktop. */
-  td.legend.tooltip,
+  /* Removed again because it affected scrolling on desktop */
+  /* td.legend.tooltip,
   table.comparison tr td.tooltip:first-child {
     position: relative;
-  }
+  } */
 }
 
 @media all and (max-width: 760px) {
