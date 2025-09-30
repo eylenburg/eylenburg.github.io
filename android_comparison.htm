@@ -93,7 +93,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 26 September 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 30 September 2025</p>
 
 <table class="comparison">
 
@@ -867,7 +867,17 @@ WHITE<br />
 </tr>
 
 <tr>
-<td class="legend tooltip">Security update speed (AOSP subset of ASB)<span class="tooltiptext">It doesn't include information on how the device-related patches in the 2nd half of each ASB (Android Security Bulletin) get shipped, if they do at all. It's also missing the fact that full security patches require the latest monthly/quarterly/yearly updates. Additionally, you need to keep up with the vendor's releases which means falling behind on quarterly or yearly releases results in missing many of the High/Critical severity patches for Pixels or another device launching the new quarterly/yearly version in a reasonable time. The issue is that this heavily varies by device. Pixels require the alternate OS to always keep up to ship updates. Some other device ship yearly updates quickly too. Devices not shipping the latest OS release make it harder for the alternate OS to do it but it is possible, especially if they don't build the vendor image, etc. If the vendor doesn't ship the releases, then the firmware/driver code used from them will be missing the patches. For example, Fairphone is consistently 1 or 2 months behind on the Android Security Bulletin patches so CalyxOS, LineageOS, etc. on it is at least that far behind at all times for the non-AOSP half of the ASB. This is one of the reasons why GrapheneOS currently only supports Google Pixel devices. Every other OEM doesn't ship the monthly/quarterly updates and typically has major delays for yearly updates. Most also do a bad job shipping the backported patches.<br /><a href="https://web.archive.org/web/20240328045058/https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for update speed data</a></span></td>
+<td class="legend tooltip">Security preview releases<span class="tooltiptext">Since 2025 H2, Google will distribute security patches to OEMs (phone manufacturers) 3-4 months before the "official" publication date. Until that date, they are not allowed to publish source codes or details, but it is allowed to publish the binaries and list the fixed CVEs. This change in Google's policy delays getting patches to users and sophisticated attackers will have no issue getting the patches from one of many people at Android OEMs with early access. It furthermore restricts the ability of open source and non-commercial Android distributions to patch security issues on time as the security patches are only distributed to official OEMs and it is not allowed to republish the source code before the embargo ends.</span></td>
+<td class="green tooltip">Yes (optional)<span class="tooltiptext">Users can opt in to security patches that are still under the embargo for source code and details. Thanks to a cooperation with an Android OEM, GrapheneOS is able to ship these security patches as binaries before the "offical" publication date. However, the patches can't be included in the regular open-source releases until the embargo ends.</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red tooltip">No<span class="tooltiptext">As of September 2025, No OEMs are actually publishing updated binaries during the embargo period despite Google's policy allowing a "binary-only exception" to ship patches earlier. This exception exists in theory to allow shipping binary-only patches without the typical source code embargo delay, but it is not being used in practice by OEMs, including Google for Pixels.</span></td>
+</tr>
+    
+<tr>
+<td class="legend tooltip">Security update speed (AOSP subset of ASB)<span class="tooltiptext">It doesn't explain how the device-specific patches in the second half of each Android Security Bulletin are actually delivered, or if they ever make it to end users. Since autumn 2025, Google no longer publishes all security fixes immediately into AOSP each month. Instead, they distribute patches under embargo to OEMs, and the corresponding changes only appear publicly in the source code 3–4 months later. This means that full security patching now depends even more on keeping up with your vendor's own releases, because relying on AOSP directly will always leave you months behind. Falling behind on quarterly or yearly OEM releases results in missing many security fixes until the next major release for that device. The situation varies greatly: Pixels still set the standard because Pixel updates track the embargoed patches promptly, while many vendors are slow to roll out quarterly or yearly releases. Some devices that fail to ship a timely new Android version make it almost impossible for an alternate OS to provide complete patches. If the vendor doesn't ship updated firmware or drivers, alternate OS projects have no path to apply those fixes themselves. For example, Fairphone historically trailed by 1–2 months even before the embargo change, and therefore projects like CalyxOS or LineageOS on Fairphone remain at least that far behind.<br /><a href="https://web.archive.org/web/20240328045058/https://divestos.org/misc/a-dates.txt" target="_blank" style="color: white;">Click here for update speed data</a></span></td>
 <td class="green">Usually same day</td>
 <!--<td class="lgreen">Days to weeks</td>--><td class="red"><a href="https://calyxos.org/news/2025/08/01/a-letter-to-our-community/" target="_blank">Currently no updates</td>
 <td class="yellow">2-4 weeks, sometimes longer</td>
@@ -1086,3 +1096,4 @@ The below is a non-comprehensive list of mobile operating systems, both those yo
 
 </body>
 </html>
+
