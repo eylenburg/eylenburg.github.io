@@ -350,7 +350,7 @@ table.comparison tr td.tooltip:first-child:hover {
     color: #333399;
   }
 
-  .green, .lgreen, .yellow, .lred, .red, .dred, .blue, .blue2, .grey, .greyblue, .purple, .dropped, .ext, .yes, .hidden, .antifeature, .dropped, .no, .notreally, .mixed, .almost, .kdeapp, .gnomeapp, .mktshare1, .mktshare5, .mktshare20, .mktshare30, .mktshare40, .mktshare100, .otherclients, .mau0, .mau1, .mau2, .mau3, .mau4, .mau5, .mau6, .extracolour, .extracolour2 {
+  .green, .lgreen, .yellow, .lred, .red, .dred, .blue, .blue2, .grey, .greyblue, .purple, .dropped, .ext, .yes, .hidden, .antifeature, .dropped, .no, .notreally, .mixed, .almost, .kdeapp, .gnomeapp, .mktshare1, .mktshare5, .mktshare20, .mktshare30, .mktshare40, .mktshare100, .otherclients, .mau0, .mau1, .mau2, .mau3, .mau4, .mau5, .mau6, .extracolour1, .extracolour2 {
     color: black;
   }
 
@@ -369,3 +369,4 @@ table.comparison tr td.tooltip:first-child:hover {
     color: white;
   }
 }
+
