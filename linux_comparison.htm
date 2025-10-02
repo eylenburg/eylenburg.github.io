@@ -139,7 +139,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <h2 class="center">Comparison of Linux Distributions</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 26 September 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 2 October 2025</p>
 
 <div>
     <label><input type="checkbox" checked onchange="toggleColumn(1)"> Debian</label>
@@ -617,7 +617,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">i686 (legacy 32-bit Intel/AMD)</td>
 <td class="no">No</td>
 <td class="no">No</td>
-<td class="yes">Yes</td>
+<td class="splitcell"><table class="split"><tr><td class="yes tooltip">Yes<span class="tooltiptext">Tumbleweed only, Leap 16 dropped support</span></td><td class="no">No</td></tr></table></td> 
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -646,8 +646,8 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">Graphical installer?</td>
 <td class="yes">Yes (Debian-Install)</td>
 <td class="yes">Yes (Subiquity)</td>
-<td class="splitcell"><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="yes tooltip">Yes (Tik)<span class="tooltiptext">Aeon only, Kalpa uses Yast but this might change in the future</span></td></tr></table></td> <!-- soon Agama? -->
-<td class="yes">Yes (Yast)</td> <!-- soon Agama for ALP? -->
+<td class="splitcell"><table class="split"><tr><td class="yes tooltip">Yes (Yast)<span class="tooltiptext">Leap is using Agama since Leap 16, Tumbleweed is expected to switch to Agama in the future</span></td><td class="yes tooltip">Yes<br /><span style="font-size: 90%;">(Tik/ Agama)<span class="tooltiptext">Aeon uses Tik, Kalpa uses Agama but might switch to Tik in the future</span></span></td></tr></table></td> 
+<td class="yes">Yes (Agama)</td> 
 <td class="yes">Yes (Anaconda)</td>
 <td class="yes">Yes (Anaconda)</td>
 <td class="yes">Yes (Calamares)</td>
@@ -688,10 +688,10 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="legend">GUI for advanced system administration?</td>
 <td class="no">No</td>
 <td class="mixed">Limited (e.g. driver manager)</td>
-<td class="splitcell"><table class="split"><tr><td class="yes">Yes (Yast)</td><td class="no">No</td></tr></table></td>
-<td class="yes">Yes (Yast)</td>
+<td class="splitcell"><table class="split"><tr><td class="yes tooltip">Yes (Yast)<span class="tooltiptext">Tumbleweed only. Leap is using Cockpit (web UI) instead, like SLE. Both Tumbleweed and Leap also use Myrlyn for package and repo management.</span></td><td class="no">No</td></tr></table></td>
+<td class="yes">Yes (<span class="tooltip">Cockpit<span class="tooltiptext">web UI</span></span>)</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="yes">Yes (<span class="tooltip">Cockpit<span class="tooltiptext">web UI</span></span>)</td>
 <td class="yes">Yes (Control Center)</td>
 <td class="yes">Yes (Control Center)</td>
 <td class="yes">Yes (Control Center)</td>
@@ -1403,7 +1403,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td class="yes">AppArmor</td>
 <td class="yes">AppArmor</td>
 <td class="yes">SELinux</td>
-<td class="yes">AppArmor</td> <!-- soon SELinux in ALP? -->
+<td class="yes">SELinux</td>
 <td class="yes">SELinux</td>
 <td class="yes">SELinux</td>
 <td class="no">No</td>
@@ -1897,7 +1897,7 @@ Distributions mostly differ in their package manager and their default choices (
 
 <details><summary style="text-align: center; font-size: 24pt;">2025</summary>
 <div class="contenttoday" id="today">
-<p style="text-align: center; font-size: large; font-weight: bold;">Year 2025 - 70% homogeneity</p>
+<p style="text-align: center; font-size: large; font-weight: bold;">Year 2025 - 71% homogeneity</p>
 <table class="yeartable">
 <tr style="font-weight: bold;"><td>Major Linux Distributions</td><td>Default Desktop Environment<sup>1</sup></td><td>Preferred Toolkit for Applications<sup>2</sup></td><td>Default Display Server<sup>2</sup></td><td>Default Init Software</td><td>Default Package Formats</td><td>Default File System</td><td>Default Security Module</td></tr>
 
@@ -1969,7 +1969,7 @@ Distributions mostly differ in their package manager and their default choices (
 <td rowspan="2" style="vertical-align: middle;" ><strong>OpenSUSE Leap</strong></td>
 <td><img src="pics/logos/other/combination/kde+gnome+xfce.png" /></td>
 <td><img src="pics/logos/other/combination/qt+gtk.png" /></td>
-<td><img src="pics/logos/other/combination/x11+wayland.png" /></td>
+<td><img src="pics/logos/other/wayland.svg" /></td>
 <td><img src="pics/logos/other/systemd.svg" /></td>
 <td><img src="pics/logos/other/combination/rpm+flatpak.png" /></td>
 <td><img src="pics/logos/other/btrfs.webp" /></td>
@@ -1977,7 +1977,8 @@ Distributions mostly differ in their package manager and their default choices (
 </tr>
 <tr>
 <td>KDE/GNOME/Xfce</td>
-<td colspan="2">depends on selected desktop</td>
+<td>depends on selected desktop</td>
+<td>Wayland</td>
 <td>systemd</td>
 <td>RPM &amp; Flatpak</td>
 <td>btrfs</td>
