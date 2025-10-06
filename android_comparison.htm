@@ -521,7 +521,7 @@ WHITE<br />
 
 <tr>
 <td class="legend tooltip">Disables Play Integrity install checks?<span class="tooltiptext">These checks, undertaken by Play Store, involve validating the app's developer credentials, authenticity, and confirming the app is a genuine Play Store version via cryptographic signatures or developer verification services provided by Google. These checks are about confirming the app is genuine and unmodified, but they are fundamentally anti-competitive as they enforce the use of Play Store linked to a Google account to download apps. While these checks purport to ensure app authenticity and security, they are fundamentally anti-competitive since they restrict users to obtaining apps only from the Play Store and require Google services licensing, thereby locking out alternative app sources or operating systems. Many apps use the Play Integrity API to block apps installed from alternative sources such as APK sideloads or Aurora Store, which harms user choice and fair competition. Disabling these checks can be useful for use apps that were "sideloaded", e.g. installed from Aurora Store or APK.</span></td>
-<td class="lgreen tooltip">Yes if signature matches<span class="tooltiptext">GrapheneOS disables or bypasses certain restrictive Play Store install checks after cryptographically verifying the Play Store source stamp signature of the app. This allows apps to run even if installed from alternative sources like Aurora Store or APKs. However, some apps may perform their own installation source (<code>PackageManager.getInstallerPackageName</code>) checks independently, which is why spoofing the install source might still be necessary to pass those app-specific checks.</span></td>
+<td class="green tooltip">Yes (if signature matches)<span class="tooltiptext">GrapheneOS disables or bypasses certain restrictive Play Store install checks after cryptographically verifying the Play Store source stamp signature of the app. This allows apps to run even if installed from alternative sources like Aurora Store or APKs. However, some apps may perform their own installation source (<code>PackageManager.getInstallerPackageName</code>) checks independently, which is why spoofing the install source might still be necessary to pass those app-specific checks.</span></td>
 <td class="red">No</td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -530,7 +530,7 @@ WHITE<br />
 </tr>
 
 <tr>
-<td class="legend tooltip">Option to mark apps as installed by Play Store?<span class="tooltiptext">in addition to the the checks undertaken by Play Integrity ( see above), apps can check if they were installed by querying the system's installer package name (e.g. <code>com.android.vending</code> for Play Store). Some apps block or restrict functionality if installed from outside the Play Store based on this check.</span></td>
+<td class="legend tooltip">Option to mark apps as installed by Play Store?<span class="tooltiptext">In addition to the the checks undertaken by Play Integrity (see above), apps can check if they were installed by querying the system's installer package name (e.g. <code>com.android.vending</code> for Play Store). Some apps block or restrict functionality if installed from outside the Play Store based on this check.</span></td>
 <td class="red tooltip">No<span class="tooltiptext">GrapheneOS is not spoofing the installation source at the moment but there are plans to eventually add such a feature.</span></td>
 <td class="lgreen tooltip">Done if installed from Aurora Store<span class="tooltiptext">Apps installed from Aurora Store are automatically marked as installed from Play Store, without further signature checks</span></td>
 <td class="lgreen tooltip">Done if installed from Aurora Store<span class="tooltiptext">Apps installed from Aurora Store are automatically marked as installed from Play Store, without further signature checks</span></td>
@@ -1107,5 +1107,6 @@ The below is a non-comprehensive list of mobile operating systems, both those yo
 
 </body>
 </html>
+
 
 
