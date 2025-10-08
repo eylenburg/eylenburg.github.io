@@ -93,7 +93,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 7 October 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 8 October 2025</p>
 
 <table class="comparison">
 
@@ -281,6 +281,17 @@ font-size: x-small;
 <td class="yellow">Depends on regions and manufacturer</td>
 </tr>
 
+    Hardware-backed attestation API support
+<tr>
+<td class="legend tooltip">Hardware-backed attestation API support<span class="tooltiptext">Hardware-backed attestation works through a standard Android hardware attestation API that is available on every device launched with Android 8 or later. This hardware attestation API can be used by apps independently of Google Play Services, meaning apps do not have to rely on the Play Integrity API or other Google Play Services components for device integrity verification. The Play Integrity API itself is based on this hardware attestation API but adds Google's additional layers, including licensing checks. Using the native hardware attestation API allows for verifying security on devices or OSes that do not license Google Mobile Services.</span></td>
+<td class="green">Yes, <a href="https://grapheneos.org/articles/attestation-compatibility-guide" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+    
 <tr>
 <td class="legend tooltip">Option to enable screenshots in all apps<span class="tooltiptext">including apps blocking screenshots (<code>FLAG_SECURE</code>)</span></td>
 <td class="red">No</td>
@@ -1107,6 +1118,7 @@ The below is a non-comprehensive list of mobile operating systems, both those yo
 
 </body>
 </html>
+
 
 
 
