@@ -89,7 +89,7 @@ border-radius: 3px;
 
 <h2 class="center">Comparison of Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 18 September 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 10 October 2025</p>
 
 
 <table class="comparison">
@@ -1496,7 +1496,7 @@ Dragonfly missing
 
 <tr>
 <td>Can be used without online account</td>
-<td class="mixed tooltip">Not officially<span class="tooltiptext">Setting up "local accounts" is hidden during setup, needs undocumented workaround of opening command prompt via Shift+F10 and then either (a) entering `start ms-cxh:localonly` or (b) entering `regedit` to open the Registry Editor followed by navigating to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE` and creating a new `DWORD (32-it)` value named `BypassNRO` with value data `1`.</span></td>
+<td class="mixed tooltip">Pro/Enterprise<span class="tooltiptext">Setting up "local accounts" in Windows 11 Home is hidden during setup, needs <a href="https://github.com/the-P1neapple/WinJS-Microsoft-Account-Bypass?tab=readme-ov-file" target="_blank">undocumented workarounds</a> or unattended install (<code>autounattend.xml</code>). Pro and Enterprise versions of Windows can create local accounts via "Set up for work or school -> Sign-in options -> Domain join instead".</span></td>
 <td class="almost tooltip">No App Store<span class="tooltiptext">cannot use App Store if not logged in with Apple account, but can still install apps from other sources</span></td>
 <td class="notreally tooltip">Very limited<span class="tooltiptext">e.g. cannot use App Store (and "sideloading" is not permitted on iOS!) or use iMessage if not logged in with Apple account</span></td>
 <td class="almost tooltip">No Play Store<span class="tooltiptext">Cannot use Play Store if not logged in with Google account, but can still install apps from other sources. However, in the future it will become harder to install apps without a Google account, as Google has announced that from 2026-27 (depending on country), apps can only be "sideloaded" (installed from an APK file or alternative app store) if the developer has registered with Google. To register, developers need to pay a fee and reveal their identity to Google. The only workaround to install apps from outside the Play Store from non-approved developers will be via <code>adb</code> (when connected to a PC or using Shizuku). These restrictions only apply to "certified" Google devices, i.e. those that have Play Services and Play Protect preinstalled, meaning it will not affect AOSP, "custom ROMs" (such as GrapheneOS or LineageOS) or Chinese phones.</span></td>
