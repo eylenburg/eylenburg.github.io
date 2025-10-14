@@ -19,8 +19,14 @@ table {
 width: calc(var(--legendwidth) + 14 * var(--columnwidth));
 }
 
-details > *:not(summary) {
-font-size: smaller;
+/* Make all details content smaller, except summary */
+details {
+  font-size: smaller;
+}
+
+/* Restore the summary (and everything inside it) to normal size */
+details > summary {
+  font-size: small; /* this is the size specified for table.comparison in style.css */
 }
 
 </style>
@@ -61,7 +67,7 @@ To give some more examples:</p>
 
 <h2 class="center">Digital Freedom across the World - Country Comparison</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 10 October 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 14 October 2025</p>
 
 
 <div>
@@ -299,7 +305,7 @@ To give some more examples:</p>
 
 <tr>
 <td><strong>Mandatory Online ID</strong><br /><span class="smaller">incl. mandatory age verification or imprint obligations</span></td>
-<td class="lred"><details><summary><strong>Age verification in some states</strong></summary> Age verification laws are in place in several US states, but not on a federal level. <span class="blue">The Kids Online Safety Act (proposed 2025) and SCREEN Act (proposed 2025) aim to implement restrictions on a federal level.</span></summary></td>
+<td class="lred"><details><summary><strong>Age verification in some states</strong></summary> <strong>Age verification laws for the web are in place in several US states</strong>, but not on a federal level. <span class="blue">The Kids Online Safety Act (proposed 2025) and SCREEN Act (proposed 2025) aim to implement restrictions on a federal level.</span> The Californian <strong>Digital Age Assurance Act</strong> requires operating systems, device manufacturers, app stores and app developers - with no exemptions for FOSS e.g. Linux distributions - to send age-related signals to application developers. However, it does not require ID checks to verify the claimed age.</summary></td>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary> <span class="blue">Bill S-209, aimed at mandatory age verification for access to online adult content, returned to the Senate for first reading in May 2025. Debate continues in Parliament with a focus on privacy and implementation challenges. The bill has not yet been enacted.</span></summary></td>
 <td class="red"><details><summary><strong>Age verification</strong></summary> The <strong>Online Safety Bill 2024</strong> mandate age verification to restrict the use of social media by minors under the age of 16. Furthermore, age verification requirements have been extended to YouTube and search engines like Google and Bing.</details></td>
 <td class="red"><details><summary><strong>Age verification &amp; imprint</strong></summary> The <strong>Online Safety Act 2023</strong> requires age verification for a variety of <span class="tooltip">'potentially harmful' content<span class="tooltiptext">Sexually explicit content. Content which encourages, promotes or provides instructions for: suicide,deliberate self-injury, or disordered eating or behaviors associated with an eating disorder. Content which is abusive or incites hatred against people by targeting any of the following characteristics: race, religion, sex, sexual orientation, disability, or gender reassignment. Bullying content. Violent content which: encourages, promotes or provides instructions for an act of serious violence against a person, or depicts real or realistic serious violence against a person, an animal, or a fictional creature, including the graphic depiction of a serious injury. Content which encourages, promotes, or provides instructions for a challenge or stunt highly likely to result in serious injury to the person who does it or to someone else. Content which encourages a person to ingest, inject, inhale, or self-administer a physically harmful substance, or a substance in physically harmful quantity. Content that shames or otherwise stigmatises body types or physical features. Content that promotes or romanticizes depression, hopelessness and despair.</span></span> (not just limited to sexually explicit content). The <strong>Electronic Commerce (EC Directive) Regulations 2002</strong> have imprint obligations not just for commercial websites, but even for private websites with a small commercial element such as advertising banners.</details></td>
