@@ -93,7 +93,7 @@ font-size: x-small;
   
 <h2 class="center">Comparison of Android-based Operating Systems</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 10 October 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 14 October 2025</p>
 
 <table class="comparison">
 
@@ -166,10 +166,6 @@ font-size: x-small;
 <td class="red">No</td>
 </tr>
 
-<tr>
-<td class="legend semititle"><br />Features</td>
-<td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
 
 <tr>
 <td class="legend">Can install apps from any source or developer?</td>
@@ -178,7 +174,12 @@ font-size: x-small;
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<td class="mixed tooltip">Restrictions from 2026/27<span class="tooltiptext">Google has announced that from 2026-27 (depending on country), apps can only be "sideloaded" (installed from an APK file or alternative app store) if the developer has registered with Google. To register, developers need to pay a fee and reveal their identity to Google. The only workaround to install apps from outside the Play Store from non-approved developers will be via <code>adb</code> (when connected to a PC or using Shizuku). These restrictions only apply to "certified" Google devices, i.e. those that have Play Services and Play Protect preinstalled, meaning it will not affect "custom ROMs" or Chinese phones.</span></td>
+<td class="mixed tooltip">Whitelisted developers (2026/27) or via <code>adb</code><span class="tooltiptext">Google has announced that from 2026-27 (depending on country), apps can only be "sideloaded" (installed from an APK file or alternative app store) if the developer has registered with Google. To register, developers need to pay a fee and reveal their identity to Google. The only workaround to install apps from outside the Play Store from non-approved developers will be via <code>adb</code> (when connected to a PC or using Shizuku). These restrictions only apply to "certified" Google devices, i.e. those that have Play Services and Play Protect preinstalled, meaning it will not affect "custom ROMs" or Chinese phones.</span></td>
+</tr>
+
+<tr>
+<td class="legend semititle"><br />Major Features</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -222,36 +223,6 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend">Notification forwarding from other user profiles</td>
-<td class="green">Yes</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Duress PIN (to wipe device)</td>
-<td class="green">Yes, <a href="https://grapheneos.org/features#duress" target="_blank">see here</a></td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-</tr>
-
-<tr>
-<td class="legend">Factory Reset Protection (for stolen devices)</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="yellow tooltip">Yes, but requires Google login<span class="tooltiptext">If the device is stolen and then factory reset, it will not allow setup and use until the original Google account credentials used on the device are entered. To disable FRP before factory reset, one must remove all Google accounts from the device (requiring the passwords). If the device was used without a Google account it will not trigger FRP meaning the device can be reset and reused freely.</span></td>
-</tr>
-
-<tr>
 <td class="legend">Android Auto compatible</td>
 <td class="green tooltip">Yes (sandboxed), <a href="https://grapheneos.org/usage#android-auto" target="_blank">see here</a><span class="tooltiptext">GrapheneOS has permission toggles to enable the user to provide the least amount of permissions necessary (e.g. wired Android Auto requires only USB access).</span></td>
 <td class="lgreen">Yes (w/ privileged permissions), <a href="https://calyxos.org/docs/guide/android-auto/" target="_blank">see here</a></td>
@@ -272,6 +243,51 @@ font-size: x-small;
 </tr>
 
 <tr>
+<td class="legend tooltip">RCS support in Google Messages<span class="tooltiptext">requires Google Play Services and to work</span></td>
+<td class="green">Yes, <a href="https://grapheneos.org/releases#2025092700">see here</a></td>
+<td class="red">No (blocked by Google)</td>
+<td class="red">No (blocked by Google)</td>
+<td class="red">No (blocked by Google)</td>
+<td class="red">No (blocked by Google)</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend semititle"><br />Advanced &amp; device-specific features</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="legend">Factory reset protection (for stolen devices)</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow tooltip">Yes, but requires Google login<span class="tooltiptext">If the device is stolen and then factory reset, it will not allow setup and use until the original Google account credentials used on the device are entered. To disable FRP before factory reset, one must remove all Google accounts from the device (requiring the passwords). If the device was used without a Google account it will not trigger FRP meaning the device can be reset and reused freely.</span></td>
+</tr>
+
+<tr>
+<td class="legend">Duress PIN (to wipe device)</td>
+<td class="green">Yes, <a href="https://grapheneos.org/features#duress" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+</tr>
+
+<tr>
+<td class="legend">Parental controls</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green tooltip">Yes<span class="tooltiptext">IodeOS has built-in parental controls focused on blocking unwanted data transmission rather than detailed activity monitoring like Family Link. The parental controls in IodeOS allow parents to block categories of content and "recipients," such as "Porn" to censor adult websites and "Social" to block social network apps. It also allowed parents to disable Internet access for specified apps (with password protection).</span></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="yellow tooltip">Yes, but requires Google login<span class="tooltiptext">Google Family Link requires a Google account but provides a comprehensive parental control experience, including detailed app usage monitoring and screen time management, the ability to remotely approve or block apps from being downloaded, device location tracking, and content and privacy restrictions enforced through Google Play Services.</span></td>
+</tr>
+
+<tr>
 <td class="legend">Call recording</td>
 <td class="green">Yes</td>
 <td class="yellow">Only in selected regions, <a href="https://github.com/CalyxOS/platform_packages_apps_Dialer/blob/android13/java/com/android/dialer/callrecord/res/xml/call_record_states.xml" target="_blank">see here</a></td>
@@ -282,15 +298,15 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend tooltip">Hardware-backed attestation API support<span class="tooltiptext">Hardware-backed attestation works through a standard Android hardware attestation API that is available on every device launched with Android 8 or later. This hardware attestation API can be used by apps independently of Google Play Services, meaning apps do not have to rely on the Play Integrity API or other Google Play Services components for device integrity verification. The Play Integrity API itself is based on this hardware attestation API but adds Google's additional layers, including licensing checks. Using the native hardware attestation API allows for verifying security on devices or OSes that do not license Google Mobile Services.</span></td>
-<td class="green">Yes, <a href="https://grapheneos.org/articles/attestation-compatibility-guide" target="_blank">see here</a></td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="legend">Notification forwarding from other user profiles</td>
 <td class="green">Yes</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
 </tr>
-    
+
 <tr>
 <td class="legend tooltip">Option to enable screenshots in all apps<span class="tooltiptext">including apps blocking screenshots (<code>FLAG_SECURE</code>)</span></td>
 <td class="red">No</td>
@@ -302,13 +318,33 @@ font-size: x-small;
 </tr>
 
 <tr>
-<td class="legend tooltip">Force VoLTE, VoNR, 5G, VoWiFi<span class="tooltiptext">Previously, users could change or set carrier network features like VoLTE (Voice over LTE), VoNR (Voice over New Radio, i.e. 5G voice), and WiFi Calling using <code>adb</code> shell commands or apps like PixelIMS, which allowed overriding carrier settings. With the December 2025 Android Security Bulletin patches, Google removed support for these carrier override settings via <code>adb</code>.</span></td>
-<td class="green tooltip">Yes<span class="tooltiptext">In "Carrier settings overrides" in the Settings app.</span></td>
-<td class="lred tooltip">via <code>adb</code>, deprecated<span class="tooltiptext">Removed in AOSP code with December 2025 security update; as of October 2025, CalyxOS has not yet included this update in their latest release, but unless they patch AOSP to still allow carrier settings overrides, this feature will be removed once they catch up with security updates. So far there has been no announcement that they will deviate from AOSP.</td>
-<td class="lred tooltip">via <code>adb</code>, deprecated<span class="tooltiptext">Removed in AOSP code with December 2025 security update; as of October 2025, IodeOS has not yet included this update in their latest release, but unless they patch AOSP to still allow carrier settings overrides, this feature will be removed once they catch up with security updates. So far there has been no announcement that they will deviate from AOSP.</td>
-<td class="lred tooltip">via <code>adb</code>, deprecated<span class="tooltiptext">Removed in AOSP code with December 2025 security update; as of October 2025, /e/ has not yet included this update in their latest release, but unless they patch AOSP to still allow carrier settings overrides, this feature will be removed once they catch up with security updates. So far there has been no announcement that they will deviate from AOSP.</td>
-<td class="lred tooltip">via <code>adb</code>, deprecated<span class="tooltiptext">Removed in AOSP code with December 2025 security update; as of October 2025, LineageOS has not yet included this update in their latest release, but unless they patch AOSP to still allow carrier settings overrides, this feature will be removed once they catch up with security updates. So far there has been no announcement that they will deviate from AOSP.</td>
-<td class="red tooltip">No<span class="tooltiptext">removed in Dec 2025 security update</span></td>
+<td class="legend tooltip">Hardware-backed attestation API support<span class="tooltiptext">Hardware-backed attestation works through a standard Android hardware attestation API that is available on every device launched with Android 8 or later. This hardware attestation API can be used by apps independently of Google Play Services, meaning apps do not have to rely on the Play Integrity API or other Google Play Services components for device integrity verification. The Play Integrity API itself is based on this hardware attestation API but adds Google's additional layers, including licensing checks. Using the native hardware attestation API allows for verifying security on devices or OSes that do not license Google Mobile Services.</span></td>
+<td class="green">Yes, <a href="https://grapheneos.org/articles/attestation-compatibility-guide" target="_blank">see here</a></td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend">Charging limit (e.g. 80%) on supported devices</span></td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">(Pixel only:) Force VoLTE, VoNR, 5G, VoWiFi<span class="tooltiptext">Previously, users of Pixel phones could change or set carrier network features like VoLTE (Voice over LTE), VoNR (Voice over New Radio, i.e. 5G voice), and WiFi Calling (VoWiFi), which is useful for users of imported Pixel phones in regions where these features are not supported. This carrier settings override was possible using <code>adb</code> shell commands or apps like Pixel IMS. With the December 2025 Android Security Bulletin patches (published in October 2025), Google removed support for these carrier override settings via <code>adb</code>, although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>.<br /><br />Note that this was only possible on Pixel phones as they uniquely allowed this override because Google's implementation of the Android telephony framework granted higher-than-usual privileges to <code>adb</code> on Pixel devices. This was originally intended as a test and debugging mechanism for developers and engineers, making it possible to override carrier-related telephony settings through ADB commands. Google's decision to open this up for Pixels (until Q4 2024) was a quirk and it was never part of general Android policy or documentation for end users.</span></td>
+<td class="green tooltip">Yes (for Google Pixel)<span class="tooltiptext">In "Carrier settings overrides" in the Settings app.</span></td>
+<td class="yellow tooltip">via Pixel IMS app<span class="tooltiptext">Removed in AOSP code with a security update in October 2025 (which has NOT yet been implemented by CalyxOS); although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>, though it can also be patched by Google in the future.</td>
+<td class="yellow tooltip">via Pixel IMS app<span class="tooltiptext">Removed in AOSP code with a security update in October 2025 (which has NOT yet been implemented by IodeOS); although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>, though it can also be patched by Google in the future.</td>
+<td class="yellow tooltip">via Pixel IMS app<span class="tooltiptext">Removed in AOSP code with a security update in October 2025 (which has NOT yet been implemented by /e/); although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>, though it can also be patched by Google in the future.</td>
+<td class="yellow tooltip">via Pixel IMS app<span class="tooltiptext">Removed in AOSP code with a security update in October 2025 (which has NOT yet been implemented by LineageOS); although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>, though it can also be patched by Google in the future.</td>
+<td class="yellow tooltip">via Pixel IMS app<span class="tooltiptext">Removed in AOSP code with a security update in October 2025; although <a href="https://www.androidauthority.com/pixel-ims-update-fix-3606811/" target="_blank">as of 14 October 2025, the developer behind the Pixel IMS app has implemented a workaround</a>, though it can also be patched by Google in the future.</td>
 </tr>
 
 
@@ -475,7 +511,7 @@ WHITE<br />
 <td>microG</td>
 <td>microG</td>
 <td>microG</td>
-<td rowspan="7">None by default. It's possible to install microG manually (LineageOS <a href="https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/383574" target="_blank">supports signature spoofing for microG</a> since 2024). Alternatively, there are <a href="https://lineage.microg.org/" target="_blank">ROMs with microG preinstalled</a> or one can <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google apps</a> during the installation process, but this is not officially supported by LineageOS. <!--Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>-->
+<td rowspan="7">None by default. <br />It's possible to install microG manually (LineageOS <a href="https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/383574" target="_blank">supports signature spoofing for microG</a> since 2024). Alternatively, there are <a href="https://lineage.microg.org/" target="_blank">ROMs with microG preinstalled</a> or one can <a href="https://wiki.lineageos.org/gapps" target="_blank">add Google apps</a> during the installation process, but this is not officially supported by LineageOS. <!--Alternatively, there is the <a href="https://lineage.microg.org/" target="_blank">LineageOS for microG</a> project that integrates microG in LineageOS.</td>-->
 <td>Google Play Services</td>
 </tr>
 
@@ -1021,6 +1057,16 @@ WHITE<br />
 <td class="yellow">Older devices only</td>
 <td class="yellow">Older devices only</td>
 <td class="green">Yes (OneUI)</td>
+</tr>
+
+<tr>
+<td class="legend">Shiftphone</td>
+<td class="red">No</td>
+<td class="red">No</td>
+<td class="green">Yes</td>
+<td class="green">Yes</td>
+<td class="yellow">Older devices only</td>
+<td class="green">Yes</td>
 </tr>
 
 <tr>
