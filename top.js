@@ -18,6 +18,7 @@ document.write(`
 <td><a href="#"><strong>Other articles</strong></a>
     <div class="submenu">
         <a href="altchans.htm"><strong>Altchans</strong> - imageboard activity beyond 4chan</a>
+        <a href="small_phones.htm"><strong>All phones are huge</strong> - a data-backed rant</a>
     </div>
 </td>
 </tr>
