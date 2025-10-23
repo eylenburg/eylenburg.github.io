@@ -79,7 +79,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 17 October 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 23 October 2025</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
 <input id="android" type="checkbox" checked /><label for="android"> Show Android browsers</label>
@@ -925,11 +925,8 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
 </tr> 
 
-
-
-
 <tr>
-<td class="legend">Partitioning of third-party storage</td>
+<td class="legend">Partitioning of third-party cookies</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
@@ -952,11 +949,42 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Vivaldi -->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
-<td class="ios no">No</td>
+<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
 <!-- Brave -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
 <td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+</tr>
+
+<tr>
+<td class="legend tooltip">Partitioning of third-party storage (excl. cookies)<span class="tooltiptext">See <a href="https://privacytests.org/" target="_blank">PrivacyTests.org</a> for detailed tests of state partitioning.</span></td>
+<!-- Firefox -->
+<td class="desktop yes">Yes</td>
+<td class="desktop almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing</span></td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Safari -->
+<td class="desktop yes">Yes</td>
+<td class="ios_wide yes">Yes</td>
+<!-- Chrome -->
+<td class="desktop almost">Mostly</td>
+<td class="desktop almost">Mostly</td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Edge -->
+<td class="desktop almost">Mostly</td>
+<td class="desktop almost">Mostly</td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Opera -->
+<td class="desktop almost">Mostly</td>
+<td class="desktop almost">Mostly</td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Vivaldi -->
+<td class="desktop almost">Mostly</td>
+<td class="desktop almost">Mostly</td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<!-- Brave -->
+<td class="desktop yes">Yes</td>
+<td class="android yes">Yes</td>
+<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
 </tr>
 
 <!--
@@ -1032,24 +1060,24 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="desktop almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving measurements of ad effectiveness" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
 <td class="ios_wide almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving ad measurements" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
 <!-- Chrome -->
-<td class="desktop almost tooltip">Optional<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
-<td class="almost almost tooltip">Opt.<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). It can be disabled in the settings where it's called "Ad Topics", "Ad Measurement" and "Site-Suggested Ads".</span></td>
+<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
+<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
 <td class="ios yes">None</td>
 <!-- Edge -->
-<td class="desktop no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Edge as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
-<td class="android no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Edge as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
+<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
 <td class="ios yes">None</td>
 <!-- Opera -->
-<td class="desktop no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Opera as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
-<td class="android no tooltip">No<span class="tooltiptext">Chromiums's "Privacy Sandbox" will, despite having "Privacy" in the name, analyze user's interests based on their browsing history (via Topics API) and share that information with advertisers to serve targeted ad, and track which ads you're clicking on (Attribution Reporting API). Both APIs are supported by Opera as per MDN Web Docs, with no obvious way to opt out in the browser.</span></td>
+<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
+<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
 <td class="ios yes">None</td>
 <!-- Vivaldi -->
-<td class="desktop yes tooltip">None<span class="tooltiptext">Vivaldi disables Chromium's "Privacy Sandbox"</span></td>
-<td class="android yes tooltip">None<span class="tooltiptext">Vivaldi disables Chromium's "Privacy Sandbox"</span></td>
+<td class="desktop yes tooltip">None<span class="tooltiptext">Vivaldi has always disabled Chromium's now-discontinued "Privacy Sandbox"</span></td>
+<td class="android yes tooltip">None<span class="tooltiptext">Vivaldi has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
 <td class="ios yes">None</td>
 <!-- Brave -->
-<td class="desktop yes tooltip">None<span class="tooltiptext">Brave disables Chromium's "Privacy Sandbox"</span></td>
-<td class="android yes tooltip">None<span class="tooltiptext">Brave disables Chromium's "Privacy Sandbox"</span></td>
+<td class="desktop yes tooltip">None<span class="tooltiptext">Brave has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
+<td class="android yes tooltip">None<span class="tooltiptext">Brave has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
 <td class="ios yes">None</td>
 </tr>
 
@@ -1776,7 +1804,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Firefox -->
 <td class="desktop"></td>
 <td class="android yes">Yes</td>
-<td class="ios no tooltip">No<span class="tooltiptext">This feature is available in the Beta version and <a href="https://connect.mozilla.org/t5/ideas/swipe-between-open-tabs-on-ios/idi-p/2088/" target="_blank">allegedly for some users in the stable version as a progressive rollout feature</a>.</span></td>
+<td class="ios yes">Yes</td>
 <!-- Safari -->
 <td class="desktop"></td>
 <td class="ios_wide yes">Yes</td>
@@ -2191,16 +2219,16 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Opera -->
-<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in opera://flags</span></td>
+<td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Vivaldi -->
 <td class="desktop hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
-<td class="android hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
+<td class="android yes">Yes</td>
 <td class="ios no">No</td>
 <!-- Brave -->
 <td class="desktop hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
-<td class="android hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
+<td class="android yes">Yes</td>
 <td class="ios no">No</td>
 </tr>
 
@@ -2507,7 +2535,7 @@ https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox</span
 <tr>
 <td class="legend">Switch between browser profiles</td>
 <!-- Firefox -->
-<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in about:profiles</span></td>
+<td class="desktop yes">Yes</td>
 <td class="android no">No</td>
 <td class="ios no">No</td>
 <!-- Safari -->
