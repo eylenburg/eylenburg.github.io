@@ -1143,30 +1143,53 @@ if using separate PIN/biometrics for private space: Yes, after the screen was tu
 
 <h3>Appendix 2: Which other alternative mobile operating systems are there?</h3>
 
-Besides <strong>Android</strong> and Android-based free &amp; open source operating systems (see the table above), the only <em>viable</em> alternative for most people is Apple's <strong>iOS</strong>. There have been many attempts to establish a third mobile OS, but so far none of them have been successful:
+<p>Besides <strong>Android</strong> and Android-based free &amp; open source operating systems (see the table above), the only <em>viable</em> alternative for most people is Apple's <strong>iOS</strong>. There have been many attempts to establish a third mobile OS, but so far none of them have been successful:
 
-The below is a non-comprehensive list of mobile operating systems, both those you can try today and those that tried and failed in the past:
+The below is a non-comprehensive list of mobile operating systems, both those you can try today and those that tried and failed in the past:</p>
 
 <ul>
 <li><strong>iOS</strong></li>
-<li><strong>Android</strong>, both preinstalled proprietary distributions like Samsung's OneUI or Xiaomi's HyperOS, and open source forks of AOSP, such as GrapheneOS <span class="foss">FOSS</span> or LineageOS <span class="foss">FOSS</span></li>
-<li>Windows Mobile/Phone (&dagger; 2020)</li>
-<li>BlackBerry OS (&dagger; 2018)</li>
-<li>Symbian (&dagger; 2012)</li>
-<li>Mobile Linux distributions which can run generic (desktop) Linux applications, such as <strong>postmarketOS</strong> <span class="foss">FOSS</span> and <strong>PureOS</strong> <span class="foss">FOSS</span> or mobile spins of desktop Linux distros such as Fedora, OpenSUSE, OpenMandriva, Debian (Mobian), Manjaro etc. <span class="foss">FOSS</span> (<a href="https://wiki.pine64.org/index.php?title=PinePhone_Software_Releases" target="_blank">see here for a good list</a>) </li>
-<li>Other mobile OS using the Linux kernel but unable to run generic (desktop) Linux apps so they need apps specifically developed for them (Android technically also fits in this category):</li>
+<li>Using the Linux kernel:</li>
   <ul>
-  <li><strong>SailfishOS</strong></li>
-  <li><strong>Ubuntu Touch</strong> <span class="foss">FOSS</span></li>
-  <li><strong>KaiOS</strong></li>
-  <li>FirefoxOS (&dagger; 2015) <span class="foss">FOSS</span></li>
-  <li>Tizen (&dagger; 2017 - for smartphones at least, it's still used in Smart TVs)</li>
-  <li>Meego (&dagger; 2012) <span class="foss">FOSS</span></li>
-  <li>Maemo (&dagger; 2011)</li>
-  <li>webOS (&dagger; 2011 - for smartphones at least, it's still used in Smart TVs)</li>
+  <li>Not compatible with desktop GNU/Linux apps and each other, instead they each use their own app ecosystem:</li>
+    <ul>
+    <li><strong>Android</strong>, both preinstalled proprietary distributions like Samsung's OneUI or Xiaomi's HyperOS, and open source forks of AOSP such as GrapheneOS <span class="foss">FOSS</span> or LineageOS <span class="foss">FOSS</span></li>
+    <li><del>FirefoxOS</del> (&dagger; 2015) <span class="foss">FOSS</span></li>
+      <ul><li><strong>KaiOS</strong></li></ul>
+    <li><del>webOS</del> (&dagger; 2011) - This OS still is used in LG SmartTVs, but it's dead on phones.</li>
+      <ul><li><strong>LuneOS</strong> <span class="foss">FOSS</span></li></ul>
+    <li><del>Tizen</del> (&dagger; 2017) (successor of MeeGo, see below, but uses its own apps) - This OS still is used in Samsung SmartTVs, but it's dead on phones.</li>
+    <li><strong>Sailfish OS</strong> (successor of MeeGo, see below, but uses its own apps)</li>
+    <li><strong>Ubuntu Touch</strong> <span class="foss">FOSS</span> (experimental support for desktop Ubuntu apps (.deb and Snap) but normal Ubuntu Touch apps have the "Click" format which is not supported by any other Linux distributions)</li>
+    </ul>
   </ul>
-
+  <ul>
+  <li>Part of the main GNU/Linux ecosystem - can run desktop Linux apps and each other's apps:</li>
+    <ul>
+    <li><strong>postmarketOS</strong> <span class="foss">FOSS</span></li>
+    <li>Various mobile distributions based on Debian GNU/Linux:</li>
+      <ul>
+      <li><strong>Mobian</strong> <span class="foss">FOSS</span></li>
+        <ul><li><strong>Droidian</strong> <span class="foss">FOSS</span></li></ul>
+      <li><strong>PureOS</strong> <span class="foss">FOSS</span> (for the Librem 5 smartphone)</li>
+      <li><strong>FuriOS</strong> <span class="foss">FOSS</span> (for the FuriPhone FLX series)</li>
+      </ul>
+    <li><del>Maemo</del> (&dagger; 2011) <span class="foss">FOSS</span></li>
+      <ul>
+        <li><strong>Maemo Leste</strong> <span class="foss">FOSS</span></li>
+        <li><del>MeeGo</del> (&dagger; 2012) <span class="foss">FOSS</span></li>
+          <ul><li><strong>Nemo Mobile</strong> <span class="foss">FOSS</span></li></ul>
+      </ul>
+    <li>Linux distributions that are mainly focusing on PCs may also be available with a mobile UI, but they usually don't run on any smartphones due to missing hardware compatibility - <em>Fedora KDE Mobile Desktop</em> is one example. Rather, the focus is on other touchscreen devices such as tablets and 2-in-1 laptops that come preinstalled with Windows. Honourable mention goes to <strong>Manjaro ARM</strong> <span class="foss">FOSS</span> which was chosen as the default OS (with Plasma Mobile UI) for the Pinephone.</li>
+    </ul>
+  </ul>
+<li><del>Windows Pocket PC &rarr; Windows Mobile &rarr; Windows Phone &rarr; Windows 10 Mobile</del> (&dagger; 2020)</li>
+<li><del>BlackBerry OS &rarr; BlackBerry 10</del> (&dagger; 2018)</li>
+<li><del>Symbian</del> (&dagger; 2012)</li>
+<li><del>Palm OS</del> (&dagger; 2007)</li>
 </ul>
+
+<p>Sailfish OS, Ubuntu Touch and FuriOS have integrated support for Android apps, though no full compatibility is guaranteed. Other Linux phones usually have the option of running Android apps via the Waydroid compatibility layer, if installed by the user.</p>
 
 
 <script src="bottom.js "></script>
