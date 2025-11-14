@@ -10,10 +10,50 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .gold { background-color: gold; }
+
 div.article { border: 3px solid #222; width: 97%; margin: 5px; padding-left: 10px; }
+
+img.invert { filter: invert(1) hue-rotate(180deg); }
+
 @media (prefers-color-scheme: dark) {
   .gold { color: black; }
   div.article { border: 3px solid white; }
+  img.invert2 { filter: invert(1) hue-rotate(180deg); }
+}
+
+}
+
+.header-block {
+  width: 97%;
+  overflow: hidden;
+}
+
+.image-row {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;          /* keep all icons in one row */
+  gap: 0.5rem;                /* spacing between icons */
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 60px;
+  max-height: 60px;
+  width: 100%;                /* allow shrinking */
+  flex: 1 1 0;                /* shrink proportionally if needed */
+  min-width: 20px;            /* prevent collapsing to zero */
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 </style>
 </head>
@@ -22,24 +62,81 @@ div.article { border: 3px solid #222; width: 97%; margin: 5px; padding-left: 10p
 <h1>Sitemap - Eylenburg.github.io</h1>
 
 <div class="article">
-<h2>(1a) <strong><a href="os_comparison.htm">Operating Systems - Comparison Table</a></strong> (18 systems)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(1a) <strong><a href="os_comparison.htm">Operating Systems - Comparison Table</a></strong> (18 systems)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/desktops/windows.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/macos.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/ios.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/android.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/chromeos.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/Tux.svg" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/freebsd.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/netbsd.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/openbsd.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/dragonflybsd.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/illumos.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/haiku.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/arcaos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/risc os.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/amigaos.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/morphos.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/aros.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/openvms.svg" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />including Windows, macOS, iOS, Android, Chrome OS, GNU/Linux, FreeBSD, NetBSD, OpenBSD, DragonFly BSD, Illumos, Haiku, ArcaOS, RISC OS, MorphOS, AmigaOS, AROS, and OpenVMS.
 <br /><br />Also shown: How to run them in a virtual machine
 <br /><br />And: Estimated market share of consumer operating systems since 1970!</p>
 </div>
 
 <div class="article">
-<h2>(1b) <strong><a href="os_familytree.htm">Operating Systems - Timeline and Family Tree</a></strong> from 1950 to Today</h2><p> <span class="gold">(last update: July 2025)</span>
+<h2>(1b) <strong><a href="os_familytree.htm">Operating Systems - Timeline and Family Tree</a></strong> from 1950 to Today</h2>
+<p> <span class="gold">(last update: July 2025)</span>
 <br />includes over 1,190 operating systems since the beginning of computing!</p>
 </div>
 
 <div class="article">
-<h2>(2) &nbsp;<strong><a href="android_comparison.htm">Android-based Operating Systems - Comparison Table</a></strong> (6 ROMs)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(2) &nbsp;<strong><a href="android_comparison.htm">Android-based Operating Systems - Comparison Table</a></strong> (6 ROMs)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/android/grapheneos.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/android/calyxos.jpg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/android/iodeos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/android/eos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/android/lineageos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/android/android.svg" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />Comparison of 6 Android ROMs: GrapheneOS, <s>DivestOS</s>, CalyxOS, iodeOS, /e/, LineageOS, and stock Android.</p>
 </div>
 
 <div class="article">
-<h2>(3) &nbsp;<strong><a href="linux_comparison.htm">Linux Distributions - Comparison Table &amp; Timeline</a></strong> (17 distributions)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(3) &nbsp;<strong><a href="linux_comparison.htm">Linux Distributions - Comparison Table &amp; Timeline</a></strong> (17 distributions)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/distros/debian.png" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/ubuntu.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/opensuse.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/sle.png" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/fedora.png" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/redhat.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/openmandriva.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/mageia.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/pclinuxos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/arch.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/slackware.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/gentoo.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/alpine.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/void.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/nixos.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/guixsd.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/distros/solus.png" style="height: 59px;" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />Comparison of almost 17 (actually 19) Linux distributions: Debian, Ubuntu, openSUSE Tumbleweed &amp; openSUSE MicroOS, SUSE Linux Enterprise, Fedora Workstation &amp; Fedora Atomic Desktop, Red Hat Enterprise Linux, OpenMandriva ROME, Mageia, PCLinuxOS, Arch, Slackware, Gentoo, Alpine, Void, NixOS, Guix System, and Solus.
 
 <br /><br />In the Appendix: How heterogeneous are the distributions today and how heterogeneous have they been historically? Looking at the most important distributions and their choice of desktop environment, widget toolkit, display server, package format, file system, init sofware, and security module from the year 2000 until today. 
@@ -48,49 +145,191 @@ div.article { border: 3px solid #222; width: 97%; margin: 5px; padding-left: 10p
 </div>
 
 <div class="article">
-<h2>(4a) <strong><a href="de_comparison.htm">Desktop Environments - Comparison Table &amp; List</a></strong> (9 desktops)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(4a) <strong><a href="de_comparison.htm">Desktop Environments - Comparison Table &amp; List</a></strong> (9 desktops)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/desktops/plasma.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/gnome.png" class="invert2" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/xfce.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/mate.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/cinnamon.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/lxqt.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/budgie.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/desktops/macos.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/OS/windows.svg" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />including Microsoft Windows, Aqua (macOS), KDE Plasma, GNOME, Xfce, MATE, Cinnamon, LXQt, Budgie (and formerly also: CDE, Enlightenment, Trinity, Unity, Pantheon, Lumina, Deepin, and UKUI).
 <br /><br />Also includes are very exhaustive list of available desktop environments, including discontinued and mobile ones.
 <br /><br />Also shown: Screenshots and short personal reviews of all the major desktops!</p>
 </div>
 
 <div class="article">
-<h2>(4b) <strong><a href="de_default.htm">Desktop Environments - Default Choices for Linux and Unix</a></strong> from 1990 to Today</h2><p> <span class="gold">(last update: April 2025)</span>
+<h2>(4b) <strong><a href="de_default.htm">Desktop Environments - Default Choices for Linux and Unix</a></strong> from 1990 to Today</h2>
+<p> <span class="gold">(last update: April 2025)</span>
 <br />Timeline since 1990 showing the most important distributions and their default desktops (KDE, GNOME, Xfce and others)</p>
 </div>
 
 <div class="article">
-<h2>(5a) <strong><a href="browser_comparison.htm">Web Browsers - Comparison Table</a></strong> (7 browsers)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(5a) <strong><a href="browser_comparison.htm">Web Browsers - Comparison Table</a></strong> (7 - or actually 20 - browsers)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/browsers/firefox.png" style="height: 59px;"  /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/safari.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/chrome.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/edge.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/opera.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/vivaldi.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/browsers/brave.webp" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />including Chrome, Edge, Safari, Firefox, Opera, Brave, and Vivaldi. Desktop, Android and iOS. </p>
 </div>
 
 <div class="article">
-<h2>(5b) <strong><a href="browser_engines.htm">Web Browers - History of Browser Engines</a></strong> from 1990 to Today</h2><p> <span class="gold">(last update: March / October 2025)</span>
+<h2>(5b) <strong><a href="browser_engines.htm">Web Browers - History of Browser Engines</a></strong> from 1990 to Today</h2>
+<p> <span class="gold">(last update: March / October 2025)</span>
 <br />Many tried, few remain. Will any Chromium competitors be left in a few years?</p>
 </div>
 
 <div class="article">
-<h2>(6) &nbsp;<strong><a href="im_comparison.htm">Instant Messengers - Comparison Table</a></strong> (12 messengers)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(6) &nbsp;<strong><a href="im_comparison.htm">Instant Messengers - Comparison Table</a></strong> (12 messengers)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/messengers/simplex.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/conversations.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/delta.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/element.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/session.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/signal.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/telegram.webp" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/threema.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/facebook.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/line.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/viber.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/messengers/whatsapp.png" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br />including SimpleX, XMPP/Conversations, Delta Chat, Matrix/Element, Session, Signal, Telegram, Threema, Facebook Messenger, Line, Viber, and WhatsApp </p>
 </div>
 
 <div class="article">
-<h2>(7) &nbsp;<strong><a href="cloud_comparison.htm">Cloud, Sync &amp; Email Services - Comparison Table</a></strong> (39 providers)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(7) &nbsp;<strong><a href="cloud_comparison.htm">Cloud, Sync &amp; Email Services - Comparison Table</a></strong> (39 providers)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/cloud/aurora.png" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/murena.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/forwardemail.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/icedrive.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/kolab.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/mailfence.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/nordlocker.svg" class="invert" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/radicale.jpg" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/sync.com.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/woelkli.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/baikal.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/etesync.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/fruux.png" class="invert" /></div>
+  </div>
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/cloud/icloud.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/koofr.jpg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/mega.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/pcloud.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/runbox.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/syncthing.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/yahoo.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/box.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/fastmail.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/gmx.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/infomaniak.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/linshare.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/microsoft.png" /></div>
+  </div>
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/cloud/posteo.jpg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/seafile.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/tresorit.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/yandex.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/dropbox.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/filen.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/google.png" style="height: 59px;" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/internxt.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/mailbox.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/nextcloud.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/protonmail.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/startmail.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/tutanota.png" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/cloud/zoho.png" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br/>Who can compete with Apple, Microsoft and Google while offering more privacy and features? Comparison of about 40 different providers with some recommendations at the end </p>
 </div>
 
 <div class="article">
-<h2>(8) &nbsp;<strong><a href="payments.htm">Payment Methods - Comparison Table</a></strong> (11+ payment systems)</h2><p> <span class="gold">(last update: July 2025)</span>
+<h2>(8) &nbsp;<strong><a href="payments.htm">Payment Methods - Comparison Table</a></strong> (11+ payment systems)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/other/cash.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/swift.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/sepa.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/visa.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/mastercard.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/applepay.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/googlepay.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/paypal.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/gnutaler.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/cbdc.svg" class="invert2" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/crypto/btc.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/crypto/bch.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/crypto/ltc.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/other/crypto/xmr.svg" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: July 2025)</span>
 <br />including various cryptocurrencies (Monero, Bitcoin, Bitcoin Cash and Litecoin), GNU Taler, and traditional payment methods</p>
 </div>
 
 <div class="article">
-<h2>(9) &nbsp;<strong><a href="excel.htm">Spreadsheet Programs - Comparison Table</a></strong> (5 spreadsheet programs)</h2><p> <span class="gold">(last update: May 2025)</span>
+<h2>(9) &nbsp;<strong><a href="excel.htm">Spreadsheet Programs - Comparison Table</a></strong> (5 spreadsheet programs)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><img src="pics/logos/excel/excel.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/excel/libreoffice.svg"/></div>
+    <div class="image-wrapper"><img src="pics/logos/excel/onlyoffice.svg" /></div>
+    <div class="image-wrapper"><img src="pics/logos/excel/softmaker.png" /></div>
+    <div class="image-wrapper"><img src="pics/logos/excel/wps.png" /></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: May 2025)</span>
 <br />comparing Microsoft Excel and its most popular Linux-compatible alternatives LibreOffice Calc, OnlyOffice, Softmaker Planmaker, and WPS Office </p>
 </div>
 
 <div class="article">
-<h2>(10) &nbsp;<strong><a href="countries.htm">Digital Freedom across the World</a></strong> (14 countries)</h2><p> <span class="gold">(last update: November 2025)</span>
+<h2>(10) &nbsp;<strong><a href="countries.htm">Digital Freedom across the World</a></strong> (14 countries)</h2>
+<div class="header-block">
+  <div class="image-row">
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127482;&#127480;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127462;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127462;&#127482;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127468;&#127463;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127465;&#127466;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127467;&#127479;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127481;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127469;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127480;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127479;&#127482;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127463;&#127479;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127475;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127475;</span></div>
+    <div class="image-wrapper"><span style="font-size: x-large;">&#127471;&#127477;</span></div>
+  </div>
+</div>
+<p> <span class="gold">(last update: November 2025)</span>
 <br /><s>Which countries are serious about keeping their citizens safe from harm online?</s> Which countries restrict free speech, censor the web, block VPNs, have age verification, or ban encryption? (and more). Documenting the slippery slope into tyranny.</p>
 </div>
 
