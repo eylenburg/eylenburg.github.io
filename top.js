@@ -17,8 +17,9 @@ document.write(`
 <td><a href="countries.htm">(10) <strong>Digital Freedom</strong> across the World</a></td>
 <td><a href="#"><strong>Other articles</strong></a>
     <div class="submenu">
-        <a href="altchans.htm"><strong>Altchans</strong> - imageboard activity beyond 4chan</a>
-        <a href="small_phones.htm"><strong>All phones are huge</strong> - a data-backed rant</a>
+        <a href="small_phones.htm">[2025] <strong>All phones are huge</strong> - a data-backed rant</a>
+        <a href="altchans.htm">[2025] <strong>Altchans</strong> - imageboard activity beyond 4chan</a>
+        <a href="os_marketshare.htm">[2018] <strong>Historical OS Market Share</strong> since 1970</a>
     </div>
 </td>
 </tr>
