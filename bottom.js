@@ -1,7 +1,7 @@
 document.write(`
 
 <footer>
-<hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="mailto:eylenburg@airmail.cc">Please drop me an e-mail</a> (<a href="supporting/09E0AF0BDD9CB718B8B336DC62D5FF8DB2A98ACF.asc">&#x1f511; PGP Key</a>)</strong> or <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">create an issue or pull request on Github</a></strong></p>
+<hr style="width: 50%"><p style="text-align: center">Do you have any comments or corrections? <strong><a href="https://github.com/eylenburg/eylenburg.github.io/issues" target="_blank">Please create an issue or pull request on Github</a></strong> or <strong><a href="mailto:eylenburg@airmail.cc">drop me an e-mail</a> (<a href="supporting/09E0AF0BDD9CB718B8B336DC62D5FF8DB2A98ACF.asc">&#x1f511; PGP Key</a>)</strong> <sup class="tooltip">WARNING<span class="tooltiptext">Some unprofessional email providers will silently drop emails sent from my provider (so I won't even land in your spam folder, you will just never get my reply). These providers include Vodafone/Arcor, United Internet (GMX, Mail.com, Web.de, 1&amp1, Freenet.de) and possibly more.</span></sup></p>
 
 <details style="text-align: center;">
 <summary>
