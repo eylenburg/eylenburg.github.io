@@ -4,7 +4,7 @@ document.write(`
 <tr>
 <td><a href="os_comparison.htm">(1a)<strong> Operating Systems</strong> - Comparison</a></td>
 <td><a href="os_familytree.htm">(1b)<strong> Operating Systems</strong> - History &amp; Family Tree</a></td>
-<td><a href="android_comparison.htm">(2)<strong> Android "ROMs"</strong> - Comparison</a></td>
+<td><a href="android_comparison.htm">(2)<strong> Android Distributions</strong> - Comparison</a></td>
 <td><a href="linux_comparison.htm">(3)<strong> Linux Distributions</strong> - Comparison &amp; Timeline</a></td>
 <td><a href="de_comparison.htm">(4a)<strong> Desktop Environments</strong> - Comparison &amp; List</a></td>
 <td><a href="de_default.htm">(4b) <strong>Desktop Environments</strong> - Default DE Timeline</a></td>
