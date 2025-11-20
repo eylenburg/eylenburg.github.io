@@ -19,6 +19,7 @@ document.write(`
     <div class="submenu">
         <a href="small_phones.htm">[2025] <strong>All phones are huge</strong> - a data-backed rant</a>
         <a href="altchans.htm">[2025] <strong>Altchans</strong> - imageboard activity beyond 4chan</a>
+        <a href="linux_distrowatch.htm">[2023] <strong>Linux distro popularity</strong> (on Distrowatch)</a>
         <a href="os_marketshare.htm">[2018] <strong>Historical OS Market Share</strong> since 1970</a>
     </div>
 </td>
