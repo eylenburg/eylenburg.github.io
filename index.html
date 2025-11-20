@@ -9,15 +9,15 @@
 <meta name="author" content="Alphonse Eylenburg">
 <link rel="stylesheet" href="style.css">
 <style>
-/* mobile default = single column */
+/* mobile or narrow window = single column */
 .articles {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-/* desktop = two columns */
-@media (min-width: 900px) {
+/* desktop large window = two columns */
+@media (min-width: 1070px) {
   .articles {
     display: grid;
     grid-template-columns: 1fr 1fr;  /* 2 columns */
