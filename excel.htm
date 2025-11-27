@@ -60,7 +60,7 @@ width: calc(var(--legendwidth) + 5 * var(--columnwidth));
 
 <h2 class="center">Comparison of Spreadsheet Programs</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 30 May 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 27 November 2025</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -620,6 +620,15 @@ width: calc(var(--legendwidth) + 5 * var(--columnwidth));
 <td class="green">Yes</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
+</tr>
+
+<tr>
+<td class="tooltip">Place images in cell<span class="tooltiptext">This means the picture will move with the cell when rows are cut and pasted, and it will automatically resize to fit the new dimensions of the cell when the row height or column width is changed. This behaviour is distinct from floating pictures, which are not tied to cell dimensions and may not move or resize with the grid.</span></td>
+<td class="green">Yes</td>
+<td class="red">No</td>
+<td class="yellow tooltip">Still floating, but resizing with cells<span class="tooltiptext">You can select "Move and size with cells" in the "advanced image settings" (right-click on image), but the picture will only adjust its size when column width or row height are changed or if new rows/columns are inserted or rows/columns covered by the image are removed. However, the image still remains "floating" across one or multiple cells rather than being truly embedded into a cell, e.g. the image doesn't move with the cell when cells are cut/copied and pasted</span></td>
+<td class="red">No</td>
+<td class="green tooltip">Yes<span class="tooltiptext">"Embed to cell" feature</span></td>
 </tr>
 
 <tr>
