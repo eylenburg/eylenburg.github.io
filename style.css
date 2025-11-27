@@ -187,6 +187,7 @@ table.comparison td img {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: darkred;
+  text-decoration-thickness: 2px;
 }
 
 .tooltip .tooltiptext {
