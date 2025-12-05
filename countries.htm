@@ -83,7 +83,7 @@ To give some more examples:</p>
 
 <h2 class="center">Digital Freedom across the World - Country Comparison</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 4 December 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 5 December 2025</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -126,17 +126,17 @@ To give some more examples:</p>
 </tr>
 
 <tr>
-<th></th>
+<th id="tableheader"></th>
 <th><strong>Legal restrictions of free speech online</strong><br />
   <details><summary><span style="font-weight: normal;" class="smaller">Explanation</span></summary><br /><span style="font-weight: normal;">Not counting as "speech" in this context are: pornography, copyright infringement, defamation, fraud, and inciting imminent targeted violence.<br /><br />Vague laws without clear definitions of which expressions and opinions are illegal automatically result in "red".</span></details>
 </th>
 <th><strong>Internet censorship</strong><br /><span class="smaller">(direct or indirect)</span><br />
   <details><summary><span style="font-weight: normal;" class="smaller">Explanation</span></summary><br /><span style="font-weight: normal;">Direct censorship would be for example the government ordering ISPs to block certain websites, while indirect censorship can include pressuring third parties to censor without a court order, e.g. government fining social media companies which don't remove enough "harmful" material.</span></details>
 </th>
-<th><strong>Encryption bans</strong><br /><span class="smaller">(incl. government backdoors or client-side scanning)</span></th>
+<th><strong>Encryption bans<a href="#statetrojan">*</a></strong><br /><span class="smaller">(incl. government backdoors or client-side scanning)</span></th>
 <th><strong>Ban of anonymous VPNs, Tor, or I2P</strong></th>
 <th><strong>Mandatory Online ID</strong><br /><span class="smaller">(incl. age verification or imprint obligations)</span></th>
-<th><strong>Key disclosure laws</strong><br /><span class="smaller">(obligation to decrypt data or disclose passwords)</span></th>
+<th><strong>Key disclosure laws<a href="#statetrojan">*</a></strong><br /><span class="smaller">(obligation to decrypt data or disclose passwords)</span></th>
 <th><strong>Ban of anonymous digital payments</strong><br /><span class="smaller">(e.g. Monero)</span></th>
 <th><strong>Mandatory non-targeted metadata retention</strong><br /><span class="smaller">(for Internet &amp; telecom data)</span></th>
 <th><strong>Mandatory registration for SIM cards</strong></th>
@@ -222,7 +222,7 @@ To give some more examples:</p>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary> <span class="blue">Various EU proposals, including <span class="tooltip"><strong>eIDAS Art. 45</strong><span class="tooltiptext">eIDAS 2.0, and specifically Article 45, remains highly controversial due to concerns it would allow governments to intercept secure web traffic by mandating third-party trusted certificate authorities. As of July 2025, the text is still in trilogue negotiations, and final adoption or rejection remains undecided</span></span>, the <span class="tooltip"><strong>ProtectEU strategy</strong><span class="tooltiptext">The ProtectEU strategy and related Roadmap are at the initial policy stage, aiming to provide law enforcement with "lawful and effective" access to encrypted data. As of July 2025, no legislative bill has been passed, but the Commission’s plan has raised alarm among privacy advocates</span></span> and the <span class="tooltip"><strong>HLG Recommendations on 'Access to Data for Effective Law Enforcement'</strong><span class="tooltiptext">The EU's High Level Group’s recommendations - including weakening end-to-end encryption and regulating VPNs - are not legally binding but inform legislative proposals. No formal law has passed as of July 2025, but these recommendations continue to shape digital policy debates.</span></span> aim to ban end-to-end encryption or mandate backdoors or circumvent it using client-side scanning. <span class="blue"><a href="https://www.patrick-breyer.de/en/reality-check-eu-council-chat-control-vote-is-not-a-retreat-but-a-green-light-for-indiscriminate-mass-surveillance-and-the-end-of-right-to-communicate-anonymously/" target="_blank"><strong>"Chat Control 2.0"</strong>,</a> <a href="https://reclaimthenet.org/eu-council-approves-new-chat-control-mandate-pushing-mass-surveillance" target="_blank">was approved by the EU Council on 2025.11.26</a>. While earlier versions included mandatory client-side scanning to circumvent end-to-end encryption in chats, the final version made it 'voluntary', however companies are encouraged to do 'voluntary' scanning of private messages, as it would give them legal certainty. Furthermore, a planned Commission review in 3 years could lead to mandatory scanning for some providers. National authorities may force 'high-risk; services to adopt risk-mitigation tech such as client-side scanning. The EU Parliament still needs to approve Chat Control with an expected vote in H1 2026.  </span></details></td>
 <td class="green"><strong>No bans</strong></td>
 <td class="red"><details><summary><strong>Imprint obligation &amp; social media ID queries</strong></summary> <strong>§5 TMG</strong> prescribes imprint obligations not just commercial websites, but also for private websites with a small commercial element such as advertising banners. The EU's <strong>Digital Services Act</strong> will require mandatory age verification to access 'potentially harmful' content online, though it is not yet implemented in Germany. It also requires social media platforms to supply the government with the identity of people publishing 'harmful' (but mostly legal) opinions; 90% of the requests received by X in 2024 came from Germany. <span class="blue"><a href="https://www.patrick-breyer.de/en/reality-check-eu-council-chat-control-vote-is-not-a-retreat-but-a-green-light-for-indiscriminate-mass-surveillance-and-the-end-of-right-to-communicate-anonymously/" target="_blank"><strong>"Chat Control 2.0"</strong>,</a> <a href="https://reclaimthenet.org/eu-council-approves-new-chat-control-mandate-pushing-mass-surveillance" target="_blank">approved by the EU Council on 2025.11.27</a> but not yet voted on by the EU Parliament, would also require age or ID verification for creating an email or messenger account. Furthermore, the <a href="https://reclaimthenet.org/eu-parliament-votes-for-mandatory-digital-id-and-age-verification-threatening-online-privacy" target="_blank">EU Parliament on 2025.11.27 approved <strong>report A10-0213/2025</strong>, proposing mandatory recurring age verification</a> (every 3 months) for social media, video platforms and AI chatbots. While this was only a non-binding resolution (i.e. it does not have direct legal force or become national law) it is still expected to significantly influence national policies and EU regulatory development.</span></details></td>
-<td class="lred"><details><summary><strong>Passwords no, biometrics yes</strong> </summary> German law distinguishes between biometric data and passwords. Forcing biometric unlocks is more likely to be considered permissible because it involves physical evidence, whereas compelling a password may infringe on the right against self-incrimination. However, case law on this is limited and evolving. A 2019 case in Bavaria allowed police to use a suspect's fingerprint to unlock a phone, though the decision was controversial and not universally binding. Unlocking a cell phone by forcibly placing a defendant's finger on the phone's fingerprint sensor was ruled legal in 2025 by a court (OLG Bremen ruling Ref. 1 ORs 26/24 8.1.25) and police is also allowed to take fingerprints and attempt to use them for unlocking a device later (LG Ravensburg AZ 2 Qs 9/23 jug.)</details></td>
+<td class="lred"><details><summary><strong>Passwords no, biometrics yes</strong> </summary> German law distinguishes between biometric data and passwords. Forcing biometric unlocks is more likely to be considered permissible because it involves physical evidence, whereas compelling a password may infringe on the right against self-incrimination. However, case law on this is limited and evolving. A 2019 case in Bavaria allowed police to use a suspect's fingerprint to unlock a phone, though the decision was controversial and not universally binding. Unlocking a cell phone by forcibly placing a defendant's finger on the phone's fingerprint sensor was ruled legal in 2025 by a court (OLG Bremen ruling Ref. 1 ORs 26/24 8.1.25) and police is also allowed to take fingerprints and attempt to use them for unlocking a device later (LG Ravensburg AZ 2 Qs 9/23 jug.). <!--In addition, <strong>law enforcement is explicitly allowed to use malware ("Staatstrojaner" in order to get remote access to a suspect's device</strong>. In two states (Berlin and Mecklenburg-Vorpommern) <a href="https://www.heise.de/en/news/Berlin-Police-can-secretly-enter-homes-for-state-trojan-installation-11103284.html" target="_blank">police can even secretly enter homes to install the state trojan</a>.--></details></td>
 <td class="lred"><details><summary><strong>Partially banned</strong></summary> Art. 79 of the EU's Anti-Money Laundering Regulation states that, starting in 2027, financial service providers such as banks and crypto exchanges are not allowed to handle privacy-preserving cryptocurrencies such as Monero. However, it will remain legal to hold, send and receive Monero in self-custodial wallets, and to accept Monero payments (e.g. VPN providers).</details></td>
 <td class="green"><details><summary><strong>None</strong></summary> Despite several attempts to introduce a data retention law (Vorratsdaten&shy;speicherung) and passing parliament, it has been declared unconstitutional. There is currently no mandatory data retention in Germany.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
@@ -297,9 +297,9 @@ To give some more examples:</p>
 
 
 <tr>
-<td><span class="country">Russia</span> <span class="flag">&#127479;&#127482;</span><br /><span class="update">Last updated: 2025.12.02</span></td>
+<td><span class="country">Russia</span> <span class="flag">&#127479;&#127482;</span><br /><span class="update">Last updated: 2025.12.05</span></td>
 <td class="dred"><details><summary><strong>Severe limitations of speech</strong></summary> Illegal speech includes vaguely defined <strong>'hate speech'</strong>, <strong>'extremist' policitical positions</strong>, <strong>'humiliation of human dignity'</strong>, disseminating <strong>'unreliable' information and 'disinformation'</strong>, <strong>discrediting the Russian Army</strong> (including criticism of the invasion of Ukraine or the actions of the Soviets in WW2), <strong>Holocaust denial</strong> and <strong>'rehabilitating' National Socialism</strong>. Most important laws are §280, §282 and §354 of the Penal Code, but this is not a comprehensive list.</details></td>
-<td class="dred"><details><summary><strong>Pervasive censorship</strong></summary> <strong>Pervasive censorship and blocking</strong> (including deep packet inspection), especially since the 2022 invasion of Ukraine. <strong>Russians face fines for 'deliberately searching' online</strong> for <span class="tooltip">'extremist materials'<span class="tooltiptext">As of 09/2025, this includes more than 5,000 resources from an ever-growing blacklist compiled by the Ministry of Justice. Examples include a book by opposition leader Alexei Navalny, who died in prison in 2024, and Ukrainian songs.</span></span> The Russian government has increasingly tightened its grip on the internet, especially in response to political protests and dissent. Blocked websites and apps include Youtube, Facebook, Instagram, X/Twitter, Rumble, Archive.to, Signal, SimpleX, Discord, and voice calls on WhatsApp and Telegram.</details></td>
+<td class="dred"><details><summary><strong>Pervasive censorship</strong></summary> <strong>Pervasive censorship and blocking</strong> (including deep packet inspection), especially since the 2022 invasion of Ukraine. <strong>Russians face fines for 'deliberately searching' online</strong> for <span class="tooltip">'extremist materials'<span class="tooltiptext">As of 09/2025, this includes more than 5,000 resources from an ever-growing blacklist compiled by the Ministry of Justice. Examples include a book by opposition leader Alexei Navalny, who died in prison in 2024, and Ukrainian songs.</span></span> The Russian government has increasingly tightened its grip on the internet, especially in response to political protests and dissent. Blocked websites and apps include Youtube, Facebook, Instagram, X/Twitter, Rumble, Archive.to, Signal, SimpleX, Discord, Snapchat, Roblox, Facetime, and calls on WhatsApp and Telegram.</details></td>
 <td class="dred"><details><summary><strong>Yes (banned <span style="white-space: nowrap;">w/o</span> backdoor)</strong></summary> The Yarovaya Law requires encryption backdoors. Russia restricts the use of end-to-end encrypted services that do not provide authorities with access to decrypted data, hence E2EE service are de facto banned in Russia. Most recently, TLS 1.3, ESNI, DNS over HTTPS (DoH), and DNS over TLS (DoT) have been banned. </details></td>
 <td class="dred"><details><summary><strong>Mostly blocked, use is illegal</strong></summary> Yarovaya Law (2016): VPNs must identify their users and keep logs. VPN apps forced to be removed from app stores. Illegal to advertise VPNs, with fines even for individuals for 'promoting' VPNs. VPN connections are blocked, employing deep packet inspection. VPN users can be fined.</details></td>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary> <span class="blue">A proposed Russian law from 10/2025 plans to mandate the use of the state's biometric and e-government systems for mandatory age verification to access all adult or 'potentially harmful' online content; this measure broadly defines restricted content and would require users to authenticate their government identity each time, effectively eliminating online anonymity. </span></details></td>
@@ -378,6 +378,8 @@ To give some more examples:</p>
 </tbody>
 </table>
 
+<p id="statetrojan"><a href="#tableheader">*^</a> In many countries, law enforcement is explicitly permitted to install malware ("state trojan", "equipment interference") in order to remotely access a suspect's devices, circumventing the need to break encryption or force disclosure of passwords. This is legal in <em>at least</em> the USA, Australia, UK, Germany, France, Italy, Switzerland, Russia, and China; possibly most countries in practice. In most countries police is even allowed to secretly enter a suspect's home in order to physically install malware.</p>
+
 <p>Colour guide:
 <br /><span class="green">No, not restricted, as good as it gets</span>
 <br /><span class="lgreen">No, not restricted for now but such laws are being planned at the moment</span>
@@ -428,15 +430,15 @@ Step 4: Normalise the index so that China has an oppression index of 1.</p></det
 <p>The result - excluding proposed laws - looks like this:</p>
 <table class="index" style="width: fit-content;">
   <tr style="font-weight: bold;"><td>Country</td><td>Oppression Index</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray;">As good as it gets</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">As good as it gets</td></tr>
     <tr><td>USA</td><td>0.10</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray;">Decent, but getting worse</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Decent, but getting worse</td></tr>
     <tr><td>USA - states with age verification laws</td><td>0.21</td></tr>
     <tr><td>Japan</td><td>0.22</td></tr>
     <tr><td>Iceland</td><td>0.30</td></tr>
     <tr><td>Canada</td><td>0.31</td></tr>
     <tr><td>Switzerland*</td><td>0.34</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray;">Unfree countries, avoid if you can</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Unfree countries, avoid if you can</td></tr>
     <tr><td>Italy</td><td>0.54</td></tr>
     <tr><td>Brazil</td><td>0.58</td></tr>
     <tr><td>Germany</td><td>0.61</td></tr>
@@ -445,7 +447,7 @@ Step 4: Normalise the index so that China has an oppression index of 1.</p></det
     <tr><td>Australia</td><td>0.71</td></tr>
     <tr><td>UK</td><td>0.77</td></tr>
     <tr><td>Russia</td><td>0.83</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray;">Where we'll end up if we don't fight back</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Where we'll end up if we don't fight back</td></tr>
     <tr><td>PR China</td><td>1.00</td></tr>
 </table>
 <p>*would increase to 0.36 with the planned smartphone-only digital ID</p>
