@@ -2714,19 +2714,33 @@
   <marker id='__stop_OMOS__[Robotron]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_OMOS__[Robotron])' />
   </marker>
-  <linearGradient id='__fadeout_VAXELN__[DEC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
-    <stop stop-color='#9dd19d' offset='1' stop-opacity='0' />
-  </linearGradient>
-  <marker id='__stop_VAXELN__[DEC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
-    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_VAXELN__[DEC])' />
-  </marker>
   <linearGradient id='__fadeout_MicroVMS__[DEC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
     <stop stop-color='#9dd19d' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_MicroVMS__[DEC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MicroVMS__[DEC])' />
+  </marker>
+  <linearGradient id='__fadeout_Desktop-VMS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
+    <stop stop-color='#9dd19d' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_Desktop-VMS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Desktop-VMS)' />
+  </marker>
+  <linearGradient id='__fadeout_MOS__VP' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
+    <stop stop-color='#9dd19d' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_MOS__VP' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MOS__VP)' />
+  </marker>
+  <linearGradient id='__fadeout_VAXELN__[DEC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
+    <stop stop-color='#9dd19d' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_VAXELN__[DEC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_VAXELN__[DEC])' />
   </marker>
   <linearGradient id='__fadeout_SM-EVM__[Soviet__Union]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#9dd19d' offset='0' stop-opacity='1' />
@@ -7249,7 +7263,7 @@
 <g inkscape:label='Domains' inkscape:groupmode='layer' id='layer_domains' >
   <rect x='570' y='55' width='1720' height='5550' rx='15' ry='15' fill='url(#__domain_UNICS__[AT&amp;T/Bell__Labs])' />
   <rect x='1227' y='10645' width='1063' height='1980' rx='15' ry='15' fill='url(#__domain_Linux)' />
-  <rect x='1097' y='16765' width='1193' height='330' rx='15' ry='15' fill='url(#__domain_OS/2__[IBM/Microsoft])' />
+  <rect x='1097' y='16795' width='1193' height='330' rx='15' ry='15' fill='url(#__domain_OS/2__[IBM/Microsoft])' />
 </g>
 
 <g inkscape:label='Connectors' inkscape:groupmode='layer' id='layer_connectors'
@@ -7469,7 +7483,7 @@ style='opacity:0.6;' >
   <path id='__line_MachTen__[Tenon]' d='M 1128 5185 C 1189.5,5185 1148.5,4915 1210,4915 L 1210 4915 L 1897 4915' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MachTen__[Tenon])' />
   <path id='__line_HP__OSF/1__[HP]' d='M 1210 5035 C 1210,5035 1210,4945 1210,4945 L 1210 4945 L 1237 4945' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HP__OSF/1__[HP])' />
   <path id='__line_Paragon__OSF/1__[Paragon]' d='M 1210 5035 C 1232.5,5035 1217.5,4975 1240,4975 L 1240 4975 L 1450 4975' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Paragon__OSF/1__[Paragon])' />
-  <path id='__line_OSF/MK' d='M 1250 5035 C 1270.25,5035 1256.75,5005 1277,5005 L 1277 5005 L 1865 5005' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/MK)' />
+  <path id='__line_OSF/MK' d='M 1250 5035 C 1270.25,5035 1256.75,5005 1277,5005 L 1277 5005 L 1750 5005' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/MK)' />
   <path id='__line_DEC__OSF/1__[DEC]' d='M 1210 5035 C 1210,5035 1210,5125 1210,5125 L 1210 5125 L 1360 5125' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DEC__OSF/1__[DEC])' />
   <path id='__line_OSF/1__AD__[Locus__Computing]' d='M 1243 5035 C 1263.25,5035 1249.75,5065 1270,5065 L 1270 5065 L 1330 5065' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1__AD__[Locus__Computing])' />
   <path id='__line_Hitachi__OSF/1-MJ__[Hitachi]' d='M 1210 5035 C 1219,5035 1213,5095 1222,5095 L 1222 5095 L 1330 5095' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Hitachi__OSF/1-MJ__[Hitachi])' />
@@ -7592,7 +7606,7 @@ style='opacity:0.6;' >
   <path id='__line_Unite__RTOS' d='M 1150 9145 L 1300 9145' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unite__RTOS)' />
   <path id='__line_UNOS__[Charles__River__Data__Systems]' d='M 910 9175 L 1405 9175' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNOS__[Charles__River__Data__Systems])' />
   <path id='__line_USIX__[System__Six]' d='M 1270 9205 L 1530 9205' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_USIX__[System__Six])' />
-  <path id='__line_____' d='M 1483 9265 C 1503.25,9265 1489.75,9295 1510,9295 L 1510 9295 L 2257 9295' stroke='#FF8585' style='stroke-width:4;' />
+  <path id='__line_____' d='M 1483 9265 C 1503.25,9265 1489.75,9295 1510,9295 L 1510 9295 L 2257 9295' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UZIX' d='M 1390 9265 L 1510 9265' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UZIX)' />
   <path id='__line_Valkyrie' d='M 2110 9355 L 2257 9355' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Vinix' d='M 2110 9385 L 2257 9385' stroke='#8B0000' style='stroke-width:4;' />
@@ -7810,48 +7824,50 @@ style='opacity:0.6;' >
   <path id='__line_RSX-20F__[DEC]' d='M 703 16315 C 738.25,16315 714.75,16225 750,16225 L 750 16225 L 1447 16225' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-20F__[DEC])' />
   <path id='__line_Micro/RSX__[DEC]' d='M 883 16255 C 903.25,16255 889.75,16285 910,16285 L 910 16285 L 1452 16285' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_Micro/RSX__[DEC])' />
   <path id='__line_RSX-11M+__[DEC]' d='M 842 16315 C 870.5,16315 851.5,16255 880,16255 L 880 16255 L 1452 16255' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-11M+__[DEC])' />
-  <path id='__line_DOS/RV__(OCPBM)__[Soviet__Union]' d='M 628 16315 C 682,16315 646,16525 700,16525 L 700 16525 L 1180 16525' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_DOS/RV__(OCPBM)__[Soviet__Union])' />
+  <path id='__line_DOS/RV__(OCPBM)__[Soviet__Union]' d='M 623 16315 C 680.75,16315 642.25,16555 700,16555 L 700 16555 L 1180 16555' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_DOS/RV__(OCPBM)__[Soviet__Union])' />
   <path id='__line_OMOS__[Robotron]' d='M 1063 16345 C 1083.25,16345 1069.75,16375 1090,16375 L 1090 16375 L 1180 16375' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_OMOS__[Robotron])' />
   <path id='__line_MOOS__[Robotron]' d='M 883 16315 C 903.25,16315 889.75,16345 910,16345 L 910 16345 L 1090 16345' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_MOOS__[Robotron])' />
-  <path id='__line_VAXELN__[DEC]' d='M 1063 16435 C 1083.25,16435 1069.75,16405 1090,16405 L 1090 16405 L 1367 16405' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_VAXELN__[DEC])' />
-  <path id='__line_MicroVMS__[DEC]' d='M 1000 16435 C 1020.25,16435 1006.75,16465 1027,16465 L 1027 16465 L 1087 16465' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_MicroVMS__[DEC])' />
+  <path id='__line_MicroVMS__[DEC]' d='M 1000 16435 C 1020.25,16435 1006.75,16405 1027,16405 L 1027 16405 L 1087 16405' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_MicroVMS__[DEC])' />
+  <path id='__line_Desktop-VMS' d='M 1123 16435 C 1143.25,16435 1129.75,16405 1150,16405 L 1150 16405 L 1177 16405' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_Desktop-VMS)' />
+  <path id='__line_VAXELN__[DEC]' d='M 902 16435 C 930.5,16435 911.5,16495 940,16495 L 940 16495 L 1370 16495' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_VAXELN__[DEC])' />
+  <path id='__line_MOS__VP' d='M 1063 16435 C 1083.25,16435 1069.75,16465 1090,16465 L 1090 16465 L 1180 16465' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_MOS__VP)' />
   <path id='__line_VAX-11/VMS__[DEC]' d='M 736 16315 C 776.5,16315 749.5,16435 790,16435 L 790 16435 L 2257 16435' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_SM-EVM__[Soviet__Union]' d='M 633 16315 C 683.25,16315 649.75,16495 700,16495 L 700 16495 L 1180 16495' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_SM-EVM__[Soviet__Union])' />
+  <path id='__line_SM-EVM__[Soviet__Union]' d='M 628 16315 C 682,16315 646,16525 700,16525 L 700 16525 L 1180 16525' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_SM-EVM__[Soviet__Union])' />
   <path id='__line_RSX-11M__[DEC]' d='M 622 16315 L 1445 16315' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-11M__[DEC])' />
-  <path id='__line_RSX-11S__[DEC]' d='M 622 16585 L 1445 16585' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-11S__[DEC])' />
-  <path id='__line_IAS__[DEC]' d='M 703 16645 C 723.25,16645 709.75,16675 730,16675 L 730 16675 L 877 16675' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_IAS__[DEC])' />
-  <path id='__line_RSX-15__[DEC]' d='M 605 16645 L 832 16645' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-15__[DEC])' />
-  <path id='__line_RSX180' d='M 1030 16735 L 1810 16735' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX180)' />
-  <path id='__line_Windows__Phone__8__[Microsoft]' d='M 1802 16855 C 1830.5,16855 1811.5,16795 1840,16795 L 1840 16795 L 1960 16795' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__8__[Microsoft])' />
-  <path id='__line_Xbox__One__&amp;__X/S__system__software__[Microsoft]' d='M 1868 16855 C 1888.25,16855 1874.75,16825 1895,16825 L 1895 16825 L 2257 16825' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_Xbox__system__software__[Microsoft]' d='M 1508 16855 C 1528.25,16855 1514.75,16825 1535,16825 L 1535 16825 L 1777 16825' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Xbox__system__software__[Microsoft])' />
-  <path id='__line_Windows__Server__2000__[Microsoft]' d='M 1428 16855 C 1468.5,16855 1441.5,16975 1482,16975 L 1482 16975 L 2257 16975' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_Windows__10__Mobile__[Microsoft]' d='M 1923 16855 C 1943.25,16855 1929.75,16885 1950,16885 L 1950 16885 L 1990 16885' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__10__Mobile__[Microsoft])' />
-  <path id='__line_Windows__RT__[Microsoft]' d='M 1802 16855 C 1830.5,16855 1811.5,16915 1840,16915 L 1840 16915 L 2020 16915' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__RT__[Microsoft])' />
-  <path id='__line_Xbox__360__system__software__[Microsoft]' d='M 1608 16855 C 1643.25,16855 1619.75,16945 1655,16945 L 1655 16945 L 2030 16945' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Xbox__360__system__software__[Microsoft])' />
-  <path id='__line_Windows__NT__3.x__[Microsoft]' d='M 1218 17035 C 1268.25,17035 1234.75,16855 1285,16855 L 1285 16855 L 2257 16855' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_______' d='M 1510 17035 C 1530.25,17035 1516.75,17005 1537,17005 L 1537 17005 L 2257 17005' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_LAN__Manager__[Microsoft/3Com]' d='M 1097 17035 C 1112,17035 1102,17065 1117,17065 L 1117 17065 L 1300 17065' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_LAN__Manager__[Microsoft/3Com])' />
-  <path id='__line_eComStation__[Serenity__Systems]' d='M 1483 17035 C 1503.25,17035 1489.75,17065 1510,17065 L 1510 17065 L 1820 17065' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_eComStation__[Serenity__Systems])' />
-  <path id='__line_OS/2__[IBM/Microsoft]' d='M 1097 17035 L 1537 17035' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_OS/2__[IBM/Microsoft])' />
-  <path id='__line_osFree' d='M 1540 17125 L 2257 17125' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_Voyager' d='M 1630 17155 L 2257 17155' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_ExectOS' d='M 1990 17185 L 2257 17185' stroke='#008000' style='stroke-width:4;' />
-  <path id='__line_Ekush__OS' d='M 1543 17245 C 1563.25,17245 1549.75,17275 1570,17275 L 1570 17275 L 1630 17275' stroke='#85D3D3' style='stroke-width:4;' marker-end='url(#__stop_Ekush__OS)' />
-  <path id='__line_ReactOS' d='M 1432 17245 L 2257 17245' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_Free95' d='M 2235 17335 L 2257 17335' stroke='#008B8B' style='stroke-width:4;' />
-  <path id='__line_Midori__[Microsoft]' d='M 1780 17395 C 1800.25,17395 1786.75,17425 1807,17425 L 1807 17425 L 1957 17425' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Midori__[Microsoft])' />
-  <path id='__line_Singularity__[Microsoft]' d='M 1690 17395 L 1807 17395' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Singularity__[Microsoft])' />
-  <path id='__line_Windows__Phone__7__[Microsoft]' d='M 1773 17515 C 1793.25,17515 1779.75,17485 1800,17485 L 1800 17485 L 1900 17485' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__7__[Microsoft])' />
-  <path id='__line_Pocket__PC__[Microsoft]' d='M 1503 17515 C 1523.25,17515 1509.75,17545 1530,17545 L 1530 17545 L 1870 17545' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Pocket__PC__[Microsoft])' />
-  <path id='__line_Windows__CE__[Microsoft]' d='M 1385 17515 L 2170 17515' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__CE__[Microsoft])' />
-  <path id='__line_AspireOS' d='M 1813 17635 C 1833.25,17635 1819.75,17605 1840,17605 L 1840 17605 L 2257 17605' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_VMWAros' d='M 1682 17635 C 1710.5,17635 1691.5,17695 1720,17695 L 1720 17695 L 2257 17695' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_Apollo__OS' d='M 2083 17635 C 2103.25,17635 2089.75,17665 2110,17665 L 2110 17665 L 2257 17665' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_AROS' d='M 1360 17635 L 2257 17635' stroke='#FF8C00' style='stroke-width:4;' />
-  <path id='__line_PyroOS' d='M 1845 17755 C 1845,17755 1845,17755 1845,17755 L 1845 17755 L 1867 17755' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_PyroOS)' />
-  <path id='__line_AtheOS' d='M 1330 17755 L 1555 17755' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_AtheOS)' />
-  <path id='__line_Syllable' d='M 1555 17815 L 1867 17815' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_Syllable)' />
+  <path id='__line_RSX-11S__[DEC]' d='M 622 16615 L 1445 16615' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-11S__[DEC])' />
+  <path id='__line_IAS__[DEC]' d='M 703 16675 C 723.25,16675 709.75,16705 730,16705 L 730 16705 L 877 16705' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_IAS__[DEC])' />
+  <path id='__line_RSX-15__[DEC]' d='M 605 16675 L 832 16675' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX-15__[DEC])' />
+  <path id='__line_RSX180' d='M 1030 16765 L 1810 16765' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_RSX180)' />
+  <path id='__line_Windows__Phone__8__[Microsoft]' d='M 1802 16885 C 1830.5,16885 1811.5,16825 1840,16825 L 1840 16825 L 1960 16825' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__8__[Microsoft])' />
+  <path id='__line_Xbox__One__&amp;__X/S__system__software__[Microsoft]' d='M 1868 16885 C 1888.25,16885 1874.75,16855 1895,16855 L 1895 16855 L 2257 16855' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Xbox__system__software__[Microsoft]' d='M 1508 16885 C 1528.25,16885 1514.75,16855 1535,16855 L 1535 16855 L 1777 16855' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Xbox__system__software__[Microsoft])' />
+  <path id='__line_Windows__Server__2000__[Microsoft]' d='M 1428 16885 C 1468.5,16885 1441.5,17005 1482,17005 L 1482 17005 L 2257 17005' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Windows__10__Mobile__[Microsoft]' d='M 1923 16885 C 1943.25,16885 1929.75,16915 1950,16915 L 1950 16915 L 1990 16915' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__10__Mobile__[Microsoft])' />
+  <path id='__line_Windows__RT__[Microsoft]' d='M 1802 16885 C 1830.5,16885 1811.5,16945 1840,16945 L 1840 16945 L 2020 16945' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__RT__[Microsoft])' />
+  <path id='__line_Xbox__360__system__software__[Microsoft]' d='M 1608 16885 C 1643.25,16885 1619.75,16975 1655,16975 L 1655 16975 L 2030 16975' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Xbox__360__system__software__[Microsoft])' />
+  <path id='__line_Windows__NT__3.x__[Microsoft]' d='M 1218 17065 C 1268.25,17065 1234.75,16885 1285,16885 L 1285 16885 L 2257 16885' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_______' d='M 1510 17065 C 1530.25,17065 1516.75,17035 1537,17035 L 1537 17035 L 2257 17035' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_LAN__Manager__[Microsoft/3Com]' d='M 1097 17065 C 1112,17065 1102,17095 1117,17095 L 1117 17095 L 1300 17095' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_LAN__Manager__[Microsoft/3Com])' />
+  <path id='__line_eComStation__[Serenity__Systems]' d='M 1483 17065 C 1503.25,17065 1489.75,17095 1510,17095 L 1510 17095 L 1820 17095' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_eComStation__[Serenity__Systems])' />
+  <path id='__line_OS/2__[IBM/Microsoft]' d='M 1097 17065 L 1537 17065' stroke='#9dd19d' style='stroke-width:4;' marker-end='url(#__stop_OS/2__[IBM/Microsoft])' />
+  <path id='__line_osFree' d='M 1540 17155 L 2257 17155' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_Voyager' d='M 1630 17185 L 2257 17185' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_ExectOS' d='M 1990 17215 L 2257 17215' stroke='#008000' style='stroke-width:4;' />
+  <path id='__line_Ekush__OS' d='M 1543 17275 C 1563.25,17275 1549.75,17305 1570,17305 L 1570 17305 L 1630 17305' stroke='#85D3D3' style='stroke-width:4;' marker-end='url(#__stop_Ekush__OS)' />
+  <path id='__line_ReactOS' d='M 1432 17275 L 2257 17275' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Free95' d='M 2235 17365 L 2257 17365' stroke='#008B8B' style='stroke-width:4;' />
+  <path id='__line_Midori__[Microsoft]' d='M 1780 17425 C 1800.25,17425 1786.75,17455 1807,17455 L 1807 17455 L 1957 17455' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Midori__[Microsoft])' />
+  <path id='__line_Singularity__[Microsoft]' d='M 1690 17425 L 1807 17425' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Singularity__[Microsoft])' />
+  <path id='__line_Windows__Phone__7__[Microsoft]' d='M 1773 17545 C 1793.25,17545 1779.75,17515 1800,17515 L 1800 17515 L 1900 17515' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__Phone__7__[Microsoft])' />
+  <path id='__line_Pocket__PC__[Microsoft]' d='M 1503 17545 C 1523.25,17545 1509.75,17575 1530,17575 L 1530 17575 L 1870 17575' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Pocket__PC__[Microsoft])' />
+  <path id='__line_Windows__CE__[Microsoft]' d='M 1385 17545 L 2170 17545' stroke='#85d3d3' style='stroke-width:4;' marker-end='url(#__stop_Windows__CE__[Microsoft])' />
+  <path id='__line_AspireOS' d='M 1813 17665 C 1833.25,17665 1819.75,17635 1840,17635 L 1840 17635 L 2257 17635' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_VMWAros' d='M 1682 17665 C 1710.5,17665 1691.5,17725 1720,17725 L 1720 17725 L 2257 17725' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_Apollo__OS' d='M 2083 17665 C 2103.25,17665 2089.75,17695 2110,17695 L 2110 17695 L 2257 17695' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_AROS' d='M 1360 17665 L 2257 17665' stroke='#FF8C00' style='stroke-width:4;' />
+  <path id='__line_Syllable' d='M 1528 17785 C 1548.25,17785 1534.75,17815 1555,17815 L 1555 17815 L 1867 17815' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_Syllable)' />
+  <path id='__line_PyroOS' d='M 1845 17785 C 1845,17785 1845,17785 1845,17785 L 1845 17785 L 1867 17785' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_PyroOS)' />
+  <path id='__line_AtheOS' d='M 1330 17785 L 1555 17785' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_AtheOS)' />
   <path id='__line_PhOS/PhosphurOS' d='M 1525 17875 C 1545.25,17875 1531.75,17905 1552,17905 L 1552 17905 L 1582 17905' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_PhOS/PhosphurOS)' />
   <path id='__line_BeOS__[Be__Inc]' d='M 1360 17875 L 1715 17875' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_BeOS__[Be__Inc])' />
   <path id='__line_CuriOS' d='M 2105 17965 L 2165 17965' stroke='#ffd198' style='stroke-width:4;' marker-end='url(#__stop_CuriOS)' />
@@ -8942,8 +8958,8 @@ style='opacity:0.6;' >
   <circle id='__dot_Unite__RTOS' cx='1150' cy='9145' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_UNOS__[Charles__River__Data__Systems]' cx='910' cy='9175' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_USIX__[System__Six]' cx='1270' cy='9205' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_____' cx='1510' cy='9295' r='10' fill='#FF8585' stroke='none' />
-    <circle cx='1900' cy='9295' r='5' fill='#FF8585' stroke='none' />
+  <circle id='__dot_____' cx='1510' cy='9295' r='10' fill='#8B0000' stroke='none' />
+    <circle cx='1900' cy='9295' r='5' fill='#8B0000' stroke='none' />
   <circle id='__dot_UZIX' cx='1390' cy='9265' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Valkyrie' cx='2110' cy='9355' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Vinix' cx='2110' cy='9385' r='10' fill='#8B0000' stroke='none' />
@@ -9213,73 +9229,75 @@ style='opacity:0.6;' >
   <circle id='__dot_RSX-20F__[DEC]' cx='750' cy='16225' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_Micro/RSX__[DEC]' cx='910' cy='16285' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_RSX-11M+__[DEC]' cx='880' cy='16255' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_DOS/RV__(OCPBM)__[Soviet__Union]' cx='700' cy='16525' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_DOS/RV__(OCPBM)__[Soviet__Union]' cx='700' cy='16555' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_OMOS__[Robotron]' cx='1090' cy='16375' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_MOOS__[Robotron]' cx='910' cy='16345' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_VAXELN__[DEC]' cx='1090' cy='16405' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_MicroVMS__[DEC]' cx='1027' cy='16465' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_MicroVMS__[DEC]' cx='1027' cy='16405' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_Desktop-VMS' cx='1150' cy='16405' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_VAXELN__[DEC]' cx='940' cy='16495' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_MOS__VP' cx='1090' cy='16465' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_VAX-11/VMS__[DEC]' cx='790' cy='16435' r='10' fill='#008000' stroke='none' />
     <circle cx='880' cy='16435' r='5' fill='#008000' stroke='none' />
     <circle cx='1210' cy='16435' r='5' fill='#008000' stroke='none' />
-  <circle id='__dot_SM-EVM__[Soviet__Union]' cx='700' cy='16495' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_SM-EVM__[Soviet__Union]' cx='700' cy='16525' r='10' fill='#9dd19d' stroke='none' />
   <circle id='__dot_RSX-11M__[DEC]' cx='622' cy='16315' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_RSX-11S__[DEC]' cx='622' cy='16585' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_IAS__[DEC]' cx='730' cy='16675' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_RSX-15__[DEC]' cx='605' cy='16645' r='10' fill='#9dd19d' stroke='none' />
-    <circle cx='622' cy='16645' r='5' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_RSX180' cx='1030' cy='16735' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_Windows__Phone__8__[Microsoft]' cx='1840' cy='16795' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Xbox__One__&amp;__X/S__system__software__[Microsoft]' cx='1895' cy='16825' r='10' fill='#008B8B' stroke='none' />
-  <circle id='__dot_Xbox__system__software__[Microsoft]' cx='1535' cy='16825' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Windows__Server__2000__[Microsoft]' cx='1482' cy='16975' r='10' fill='#008B8B' stroke='none' />
-    <circle cx='1577' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1722' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1860' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1960' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='2045' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='2127' cy='16975' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='2225' cy='16975' r='5' fill='#008B8B' stroke='none' />
-  <circle id='__dot_Windows__10__Mobile__[Microsoft]' cx='1950' cy='16885' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Windows__RT__[Microsoft]' cx='1840' cy='16915' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Xbox__360__system__software__[Microsoft]' cx='1655' cy='16945' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Windows__NT__3.x__[Microsoft]' cx='1285' cy='16855' r='10' fill='#008B8B' stroke='none' />
-    <circle cx='1360' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1482' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1510' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1692' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1765' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1865' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='1947' cy='16855' r='5' fill='#008B8B' stroke='none' />
-    <circle cx='2137' cy='16855' r='5' fill='#008B8B' stroke='none' />
-  <circle id='__dot_______' cx='1537' cy='17005' r='10' fill='#008000' stroke='none' />
-    <circle cx='2000' cy='17005' r='5' fill='#008000' stroke='none' />
-  <circle id='__dot_LAN__Manager__[Microsoft/3Com]' cx='1117' cy='17065' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_eComStation__[Serenity__Systems]' cx='1510' cy='17065' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_OS/2__[IBM/Microsoft]' cx='1097' cy='17035' r='10' fill='#9dd19d' stroke='none' />
-  <circle id='__dot_osFree' cx='1540' cy='17125' r='10' fill='#008000' stroke='none' />
-  <circle id='__dot_Voyager' cx='1630' cy='17155' r='10' fill='#008000' stroke='none' />
-  <circle id='__dot_ExectOS' cx='1990' cy='17185' r='10' fill='#008000' stroke='none' />
-  <circle id='__dot_Ekush__OS' cx='1570' cy='17275' r='10' fill='#85D3D3' stroke='none' />
-  <circle id='__dot_ReactOS' cx='1432' cy='17245' r='10' fill='#008B8B' stroke='none' />
-  <circle id='__dot_Free95' cx='2235' cy='17335' r='10' fill='#008B8B' stroke='none' />
-  <circle id='__dot_Midori__[Microsoft]' cx='1807' cy='17425' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Singularity__[Microsoft]' cx='1690' cy='17395' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Windows__Phone__7__[Microsoft]' cx='1800' cy='17485' r='10' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Pocket__PC__[Microsoft]' cx='1530' cy='17545' r='10' fill='#85d3d3' stroke='none' />
-    <circle cx='1582' cy='17545' r='5' fill='#85d3d3' stroke='none' />
-    <circle cx='1640' cy='17545' r='5' fill='#85d3d3' stroke='none' />
-    <circle cx='1692' cy='17545' r='5' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_Windows__CE__[Microsoft]' cx='1385' cy='17515' r='10' fill='#85d3d3' stroke='none' />
-    <circle cx='1672' cy='17515' r='5' fill='#85d3d3' stroke='none' />
-    <circle cx='1792' cy='17515' r='5' fill='#85d3d3' stroke='none' />
-  <circle id='__dot_AspireOS' cx='1840' cy='17605' r='10' fill='#FF8C00' stroke='none' />
-  <circle id='__dot_VMWAros' cx='1720' cy='17695' r='10' fill='#FF8C00' stroke='none' />
-    <circle cx='1780' cy='17695' r='5' fill='#FF8C00' stroke='none' />
-  <circle id='__dot_Apollo__OS' cx='2110' cy='17665' r='10' fill='#FF8C00' stroke='none' />
-  <circle id='__dot_AROS' cx='1360' cy='17635' r='10' fill='#FF8C00' stroke='none' />
-  <circle id='__dot_PyroOS' cx='1845' cy='17755' r='10' fill='#ffd198' stroke='none' />
-  <circle id='__dot_AtheOS' cx='1330' cy='17755' r='10' fill='#ffd198' stroke='none' />
+  <circle id='__dot_RSX-11S__[DEC]' cx='622' cy='16615' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_IAS__[DEC]' cx='730' cy='16705' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_RSX-15__[DEC]' cx='605' cy='16675' r='10' fill='#9dd19d' stroke='none' />
+    <circle cx='622' cy='16675' r='5' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_RSX180' cx='1030' cy='16765' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_Windows__Phone__8__[Microsoft]' cx='1840' cy='16825' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Xbox__One__&amp;__X/S__system__software__[Microsoft]' cx='1895' cy='16855' r='10' fill='#008B8B' stroke='none' />
+  <circle id='__dot_Xbox__system__software__[Microsoft]' cx='1535' cy='16855' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Windows__Server__2000__[Microsoft]' cx='1482' cy='17005' r='10' fill='#008B8B' stroke='none' />
+    <circle cx='1577' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1722' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1860' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1960' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='2045' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='2127' cy='17005' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='2225' cy='17005' r='5' fill='#008B8B' stroke='none' />
+  <circle id='__dot_Windows__10__Mobile__[Microsoft]' cx='1950' cy='16915' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Windows__RT__[Microsoft]' cx='1840' cy='16945' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Xbox__360__system__software__[Microsoft]' cx='1655' cy='16975' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Windows__NT__3.x__[Microsoft]' cx='1285' cy='16885' r='10' fill='#008B8B' stroke='none' />
+    <circle cx='1360' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1482' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1510' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1692' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1765' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1865' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='1947' cy='16885' r='5' fill='#008B8B' stroke='none' />
+    <circle cx='2137' cy='16885' r='5' fill='#008B8B' stroke='none' />
+  <circle id='__dot_______' cx='1537' cy='17035' r='10' fill='#008000' stroke='none' />
+    <circle cx='2000' cy='17035' r='5' fill='#008000' stroke='none' />
+  <circle id='__dot_LAN__Manager__[Microsoft/3Com]' cx='1117' cy='17095' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_eComStation__[Serenity__Systems]' cx='1510' cy='17095' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_OS/2__[IBM/Microsoft]' cx='1097' cy='17065' r='10' fill='#9dd19d' stroke='none' />
+  <circle id='__dot_osFree' cx='1540' cy='17155' r='10' fill='#008000' stroke='none' />
+  <circle id='__dot_Voyager' cx='1630' cy='17185' r='10' fill='#008000' stroke='none' />
+  <circle id='__dot_ExectOS' cx='1990' cy='17215' r='10' fill='#008000' stroke='none' />
+  <circle id='__dot_Ekush__OS' cx='1570' cy='17305' r='10' fill='#85D3D3' stroke='none' />
+  <circle id='__dot_ReactOS' cx='1432' cy='17275' r='10' fill='#008B8B' stroke='none' />
+  <circle id='__dot_Free95' cx='2235' cy='17365' r='10' fill='#008B8B' stroke='none' />
+  <circle id='__dot_Midori__[Microsoft]' cx='1807' cy='17455' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_Singularity__[Microsoft]' cx='1690' cy='17425' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_Windows__Phone__7__[Microsoft]' cx='1800' cy='17515' r='10' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Pocket__PC__[Microsoft]' cx='1530' cy='17575' r='10' fill='#85d3d3' stroke='none' />
+    <circle cx='1582' cy='17575' r='5' fill='#85d3d3' stroke='none' />
+    <circle cx='1640' cy='17575' r='5' fill='#85d3d3' stroke='none' />
+    <circle cx='1692' cy='17575' r='5' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_Windows__CE__[Microsoft]' cx='1385' cy='17545' r='10' fill='#85d3d3' stroke='none' />
+    <circle cx='1672' cy='17545' r='5' fill='#85d3d3' stroke='none' />
+    <circle cx='1792' cy='17545' r='5' fill='#85d3d3' stroke='none' />
+  <circle id='__dot_AspireOS' cx='1840' cy='17635' r='10' fill='#FF8C00' stroke='none' />
+  <circle id='__dot_VMWAros' cx='1720' cy='17725' r='10' fill='#FF8C00' stroke='none' />
+    <circle cx='1780' cy='17725' r='5' fill='#FF8C00' stroke='none' />
+  <circle id='__dot_Apollo__OS' cx='2110' cy='17695' r='10' fill='#FF8C00' stroke='none' />
+  <circle id='__dot_AROS' cx='1360' cy='17665' r='10' fill='#FF8C00' stroke='none' />
   <circle id='__dot_Syllable' cx='1555' cy='17815' r='10' fill='#ffd198' stroke='none' />
+  <circle id='__dot_PyroOS' cx='1845' cy='17785' r='10' fill='#ffd198' stroke='none' />
+  <circle id='__dot_AtheOS' cx='1330' cy='17785' r='10' fill='#ffd198' stroke='none' />
   <circle id='__dot_PhOS/PhosphurOS' cx='1552' cy='17905' r='10' fill='#ffd198' stroke='none' />
   <circle id='__dot_BeOS__[Be__Inc]' cx='1360' cy='17875' r='10' fill='#ffd198' stroke='none' />
     <circle cx='1600' cy='17875' r='5' fill='#ffd198' stroke='none' />
@@ -11413,140 +11431,144 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='920' y='16281'  >Micro/RSX [DEC]</text></a>
   <rect x='889' y='16242' width='103' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='890' y='16251'  >RSX-11M+ [DEC]</text></a>
-  <rect x='709' y='16512' width='200' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='710' y='16521'  >DOS/RV (OCPBM) [Soviet Union]</text></a>
+  <rect x='709' y='16542' width='200' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='710' y='16551'  >DOS/RV (OCPBM) [Soviet Union]</text></a>
   <rect x='1099' y='16362' width='106' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1100' y='16371'  >OMOS [Robotron]</text></a>
   <rect x='919' y='16332' width='106' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='920' y='16341'  >MOOS [Robotron]</text></a>
-  <rect x='1099' y='16392' width='92' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1100' y='16401'  >VAXELN [DEC]</text></a>
-  <rect x='1036' y='16452' width='101' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1037' y='16461'  >MicroVMS [DEC]</text></a>
+  <rect x='1036' y='16392' width='101' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1037' y='16401'  >MicroVMS [DEC]</text></a>
+  <rect x='1159' y='16392' width='79' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1160' y='16401'  >Desktop-VMS</text></a>
+  <rect x='949' y='16482' width='92' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='950' y='16491'  >VAXELN [DEC]</text></a>
+  <rect x='1099' y='16452' width='49' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1100' y='16461'  >MOS VP</text></a>
   <rect x='799' y='16422' width='118' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='800' y='16431'  >VAX-11/VMS [DEC]</text></a>
     <rect x='924' y='16422' width='59' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
     <a xlink:href=''><text x='925' y='16431' >VAX/VMS</text></a>
     <rect x='1214' y='16422' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
     <a xlink:href=''><text x='1215' y='16431' >OpenVMS</text></a>
-  <rect x='709' y='16482' width='140' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='710' y='16491'  >SM-EVM [Soviet Union]</text></a>
+  <rect x='709' y='16512' width='140' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='710' y='16521'  >SM-EVM [Soviet Union]</text></a>
   <rect x='631' y='16302' width='95' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='632' y='16311'  >RSX-11M [DEC]</text></a>
-  <rect x='631' y='16572' width='93' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='632' y='16581'  >RSX-11S [DEC]</text></a>
-  <rect x='739' y='16662' width='62' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='740' y='16671'  >IAS [DEC]</text></a>
-  <rect x='614' y='16632' width='86' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='615' y='16641'  >RSX-15 [DEC]</text></a>
-    <rect x='707' y='16632' width='52' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='708' y='16641' >RSX-11D</text></a>
-  <rect x='1039' y='16722' width='47' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1040' y='16731'  >RSX180</text></a>
-  <rect x='1849' y='16782' width='172' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1850' y='16791'  >Windows Phone 8 [Microsoft]</text></a>
-  <rect x='1904' y='16812' width='260' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1905' y='16821'  >Xbox One &amp; X/S system software [Microsoft]</text></a>
-  <rect x='1544' y='16812' width='193' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1545' y='16821'  >Xbox system software [Microsoft]</text></a>
-  <rect x='1491' y='16962' width='195' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1492' y='16971'  >Windows Server 2000 [Microsoft]</text></a>
-    <rect x='1693' y='16962' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1694' y='16971' >Windows Server 2003</text></a>
-    <rect x='1726' y='16962' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1727' y='16971' >Windows Server 2008</text></a>
-    <rect x='1864' y='16962' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1865' y='16971' >Windows Server 2012</text></a>
-    <rect x='1999' y='16962' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2000' y='16971' >Windows Server 2016</text></a>
-    <rect x='2133' y='16962' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2134' y='16971' >Windows Server 2019</text></a>
-    <rect x='2267' y='16962' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2268' y='16971' >Windows Server 2022</text></a>
-    <rect x='2401' y='16962' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2402' y='16971' >Windows Server 2025</text></a>
-  <rect x='1959' y='16872' width='180' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1960' y='16881'  >Windows 10 Mobile [Microsoft]</text></a>
-  <rect x='1849' y='16902' width='139' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1850' y='16911'  >Windows RT [Microsoft]</text></a>
-  <rect x='1664' y='16932' width='219' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1665' y='16941'  >Xbox 360 system software [Microsoft]</text></a>
-  <rect x='1294' y='16842' width='161' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1295' y='16851'  >Windows NT 3.x [Microsoft]</text></a>
-    <rect x='1462' y='16842' width='84' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1463' y='16851' >Windows NT 4</text></a>
-    <rect x='1486' y='16842' width='85' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1487' y='16851' >Windows 2000</text></a>
-    <rect x='1577' y='16842' width='73' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1578' y='16851' >Windows XP</text></a>
-    <rect x='1696' y='16842' width='85' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1697' y='16851' >Windows Vista</text></a>
-    <rect x='1776' y='16842' width='63' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1777' y='16851' >Windows 7</text></a>
-    <rect x='1869' y='16842' width='63' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1870' y='16851' >Windows 8</text></a>
-    <rect x='1951' y='16842' width='70' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1952' y='16851' >Windows 10</text></a>
-    <rect x='2141' y='16842' width='69' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2142' y='16851' >Windows 11</text></a>
-  <rect x='1546' y='16992' width='12' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1547' y='17001'  >   </text></a>
-    <rect x='2004' y='16992' width='121' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='2005' y='17001' >ArcaOS [Arca Noae]</text></a>
-  <rect x='1126' y='17052' width='188' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1127' y='17061'  >LAN Manager [Microsoft/3Com]</text></a>
-  <rect x='1519' y='17052' width='190' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1520' y='17061'  >eComStation [Serenity Systems]</text></a>
-  <rect x='1106' y='17022' width='126' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1107' y='17031'  >OS/2 [IBM/Microsoft]</text></a>
-  <rect x='1549' y='17112' width='40' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1550' y='17121'  >osFree</text></a>
-  <rect x='1639' y='17142' width='48' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1640' y='17151'  >Voyager</text></a>
-  <rect x='1999' y='17172' width='49' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='2000' y='17181'  >ExectOS</text></a>
-  <rect x='1579' y='17262' width='57' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1580' y='17271'  >Ekush OS</text></a>
-  <rect x='1441' y='17232' width='51' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1442' y='17241'  >ReactOS</text></a>
-  <rect x='2244' y='17322' width='41' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='2245' y='17331'  >Free95</text></a>
-  <rect x='1816' y='17412' width='102' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1817' y='17421'  >Midori [Microsoft]</text></a>
-  <rect x='1699' y='17382' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1700' y='17391'  >Singularity [Microsoft]</text></a>
-  <rect x='1809' y='17472' width='172' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1810' y='17481'  >Windows Phone 7 [Microsoft]</text></a>
-  <rect x='1539' y='17532' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1540' y='17541'  >Pocket PC [Microsoft]</text></a>
-    <rect x='1673' y='17532' width='129' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1674' y='17541' >Windows Mobile 2003</text></a>
-    <rect x='1673' y='17532' width='106' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1674' y='17541' >Windows Mobile 5</text></a>
-    <rect x='1809' y='17532' width='116' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1810' y='17541' >Windows Mobile 6.x</text></a>
-  <rect x='1394' y='17502' width='141' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1395' y='17511'  >Windows CE [Microsoft]</text></a>
-    <rect x='1676' y='17502' width='141' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1677' y='17511' >Windows Embedded CE</text></a>
-    <rect x='1796' y='17502' width='175' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1797' y='17511' >Windows Embedded Compact</text></a>
-  <rect x='1849' y='17592' width='55' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1850' y='17601'  >AspireOS</text></a>
-  <rect x='1729' y='17682' width='57' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1730' y='17691'  >VMWAros</text></a>
-    <rect x='1793' y='17682' width='86' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1794' y='17691' >Icaros Desktop</text></a>
-  <rect x='2119' y='17652' width='59' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='2120' y='17661'  >Apollo OS</text></a>
-  <rect x='1369' y='17622' width='35' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1370' y='17631'  >AROS</text></a>
-  <rect x='1854' y='17742' width='44' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1855' y='17751'  >PyroOS</text></a>
-  <rect x='1339' y='17742' width='44' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1340' y='17751'  >AtheOS</text></a>
+  <rect x='631' y='16602' width='93' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='632' y='16611'  >RSX-11S [DEC]</text></a>
+  <rect x='739' y='16692' width='62' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='740' y='16701'  >IAS [DEC]</text></a>
+  <rect x='614' y='16662' width='86' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='615' y='16671'  >RSX-15 [DEC]</text></a>
+    <rect x='707' y='16662' width='52' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='708' y='16671' >RSX-11D</text></a>
+  <rect x='1039' y='16752' width='47' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1040' y='16761'  >RSX180</text></a>
+  <rect x='1849' y='16812' width='172' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1850' y='16821'  >Windows Phone 8 [Microsoft]</text></a>
+  <rect x='1904' y='16842' width='260' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1905' y='16851'  >Xbox One &amp; X/S system software [Microsoft]</text></a>
+  <rect x='1544' y='16842' width='193' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1545' y='16851'  >Xbox system software [Microsoft]</text></a>
+  <rect x='1491' y='16992' width='195' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1492' y='17001'  >Windows Server 2000 [Microsoft]</text></a>
+    <rect x='1693' y='16992' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1694' y='17001' >Windows Server 2003</text></a>
+    <rect x='1726' y='16992' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1727' y='17001' >Windows Server 2008</text></a>
+    <rect x='1864' y='16992' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1865' y='17001' >Windows Server 2012</text></a>
+    <rect x='1999' y='16992' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2000' y='17001' >Windows Server 2016</text></a>
+    <rect x='2133' y='16992' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2134' y='17001' >Windows Server 2019</text></a>
+    <rect x='2267' y='16992' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2268' y='17001' >Windows Server 2022</text></a>
+    <rect x='2401' y='16992' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2402' y='17001' >Windows Server 2025</text></a>
+  <rect x='1959' y='16902' width='180' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1960' y='16911'  >Windows 10 Mobile [Microsoft]</text></a>
+  <rect x='1849' y='16932' width='139' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1850' y='16941'  >Windows RT [Microsoft]</text></a>
+  <rect x='1664' y='16962' width='219' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1665' y='16971'  >Xbox 360 system software [Microsoft]</text></a>
+  <rect x='1294' y='16872' width='161' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1295' y='16881'  >Windows NT 3.x [Microsoft]</text></a>
+    <rect x='1462' y='16872' width='84' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1463' y='16881' >Windows NT 4</text></a>
+    <rect x='1486' y='16872' width='85' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1487' y='16881' >Windows 2000</text></a>
+    <rect x='1577' y='16872' width='73' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1578' y='16881' >Windows XP</text></a>
+    <rect x='1696' y='16872' width='85' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1697' y='16881' >Windows Vista</text></a>
+    <rect x='1776' y='16872' width='63' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1777' y='16881' >Windows 7</text></a>
+    <rect x='1869' y='16872' width='63' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1870' y='16881' >Windows 8</text></a>
+    <rect x='1951' y='16872' width='70' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1952' y='16881' >Windows 10</text></a>
+    <rect x='2141' y='16872' width='69' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2142' y='16881' >Windows 11</text></a>
+  <rect x='1546' y='17022' width='12' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1547' y='17031'  >   </text></a>
+    <rect x='2004' y='17022' width='121' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='2005' y='17031' >ArcaOS [Arca Noae]</text></a>
+  <rect x='1126' y='17082' width='188' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1127' y='17091'  >LAN Manager [Microsoft/3Com]</text></a>
+  <rect x='1519' y='17082' width='190' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1520' y='17091'  >eComStation [Serenity Systems]</text></a>
+  <rect x='1106' y='17052' width='126' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1107' y='17061'  >OS/2 [IBM/Microsoft]</text></a>
+  <rect x='1549' y='17142' width='40' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1550' y='17151'  >osFree</text></a>
+  <rect x='1639' y='17172' width='48' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1640' y='17181'  >Voyager</text></a>
+  <rect x='1999' y='17202' width='49' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='2000' y='17211'  >ExectOS</text></a>
+  <rect x='1579' y='17292' width='57' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1580' y='17301'  >Ekush OS</text></a>
+  <rect x='1441' y='17262' width='51' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1442' y='17271'  >ReactOS</text></a>
+  <rect x='2244' y='17352' width='41' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='2245' y='17361'  >Free95</text></a>
+  <rect x='1816' y='17442' width='102' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1817' y='17451'  >Midori [Microsoft]</text></a>
+  <rect x='1699' y='17412' width='128' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1700' y='17421'  >Singularity [Microsoft]</text></a>
+  <rect x='1809' y='17502' width='172' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1810' y='17511'  >Windows Phone 7 [Microsoft]</text></a>
+  <rect x='1539' y='17562' width='127' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1540' y='17571'  >Pocket PC [Microsoft]</text></a>
+    <rect x='1673' y='17562' width='129' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1674' y='17571' >Windows Mobile 2003</text></a>
+    <rect x='1673' y='17562' width='106' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1674' y='17571' >Windows Mobile 5</text></a>
+    <rect x='1809' y='17562' width='116' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1810' y='17571' >Windows Mobile 6.x</text></a>
+  <rect x='1394' y='17532' width='141' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1395' y='17541'  >Windows CE [Microsoft]</text></a>
+    <rect x='1676' y='17532' width='141' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1677' y='17541' >Windows Embedded CE</text></a>
+    <rect x='1796' y='17532' width='175' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1797' y='17541' >Windows Embedded Compact</text></a>
+  <rect x='1849' y='17622' width='55' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1850' y='17631'  >AspireOS</text></a>
+  <rect x='1729' y='17712' width='57' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1730' y='17721'  >VMWAros</text></a>
+    <rect x='1793' y='17712' width='86' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1794' y='17721' >Icaros Desktop</text></a>
+  <rect x='2119' y='17682' width='59' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='2120' y='17691'  >Apollo OS</text></a>
+  <rect x='1369' y='17652' width='35' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1370' y='17661'  >AROS</text></a>
   <rect x='1564' y='17802' width='46' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1565' y='17811'  >Syllable</text></a>
+  <rect x='1854' y='17772' width='44' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1855' y='17781'  >PyroOS</text></a>
+  <rect x='1339' y='17772' width='44' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1340' y='17781'  >AtheOS</text></a>
   <rect x='1561' y='17892' width='114' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1562' y='17901'  >PhOS/PhosphurOS</text></a>
   <rect x='1369' y='17862' width='85' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
