@@ -2389,155 +2389,155 @@
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_CP/A__[Robotron])' />
   </marker>
   <linearGradient id='__fadeout_BonnyDOS/286' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_BonnyDOS/286' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_BonnyDOS/286)' />
   </marker>
   <linearGradient id='__fadeout_PC-MOS/386__[Software__Link]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_PC-MOS/386__[Software__Link]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_PC-MOS/386__[Software__Link])' />
   </marker>
   <linearGradient id='__fadeout_PTS-DOS__[PhysTechSoft]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_PTS-DOS__[PhysTechSoft]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_PTS-DOS__[PhysTechSoft])' />
   </marker>
   <linearGradient id='__fadeout_Paragon__DOS__[Paragon]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Paragon__DOS__[Paragon]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Paragon__DOS__[Paragon])' />
   </marker>
   <linearGradient id='__fadeout_Altair__DOS__[MITS]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Altair__DOS__[MITS]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Altair__DOS__[MITS])' />
   </marker>
   <linearGradient id='__fadeout_AMSDOS__[Amstrad]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_AMSDOS__[Amstrad]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_AMSDOS__[Amstrad])' />
   </marker>
   <linearGradient id='__fadeout_ANDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_ANDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_ANDOS)' />
   </marker>
   <linearGradient id='__fadeout_Apple__DOS__[Apple]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Apple__DOS__[Apple]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Apple__DOS__[Apple])' />
   </marker>
   <linearGradient id='__fadeout_Apple__SOS__[Apple]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Apple__SOS__[Apple]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Apple__SOS__[Apple])' />
   </marker>
   <linearGradient id='__fadeout_Atari__DOS__[Atari]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Atari__DOS__[Atari]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Atari__DOS__[Atari])' />
   </marker>
   <linearGradient id='__fadeout_Batch-11/DOS-11__[DEC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Batch-11/DOS-11__[DEC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Batch-11/DOS-11__[DEC])' />
   </marker>
   <linearGradient id='__fadeout_CDOS__[Cromemco]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_CDOS__[Cromemco]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_CDOS__[Cromemco])' />
   </marker>
   <linearGradient id='__fadeout_CMB__DOS__[Commodore]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_CMB__DOS__[Commodore]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_CMB__DOS__[Commodore])' />
   </marker>
   <linearGradient id='__fadeout_CSI-DOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_CSI-DOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_CSI-DOS)' />
   </marker>
   <linearGradient id='__fadeout_DOS__XL__[Optimized__Systems]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_DOS__XL__[Optimized__Systems]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_DOS__XL__[Optimized__Systems])' />
   </marker>
   <linearGradient id='__fadeout_Embedded__DOS__[General__Software]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Embedded__DOS__[General__Software]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Embedded__DOS__[General__Software])' />
   </marker>
   <linearGradient id='__fadeout_GDOS__[Miles__Gordon__Technology]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_GDOS__[Miles__Gordon__Technology]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_GDOS__[Miles__Gordon__Technology])' />
   </marker>
   <linearGradient id='__fadeout_HDOS__[Heath__Company]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_HDOS__[Heath__Company]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_HDOS__[Heath__Company])' />
   </marker>
   <linearGradient id='__fadeout_IS-DOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_IS-DOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_IS-DOS)' />
   </marker>
   <linearGradient id='__fadeout_MDOS/MIDAS__[Microsoft]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_MDOS/MIDAS__[Microsoft]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MDOS/MIDAS__[Microsoft])' />
   </marker>
   <linearGradient id='__fadeout_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_SSB-DOS__(Smoke__Signal__DOS)__[TSC])' />
   </marker>
   <linearGradient id='__fadeout_MiniDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_MiniDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MiniDOS)' />
@@ -2557,99 +2557,99 @@
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_INOS__[Introl])' />
   </marker>
   <linearGradient id='__fadeout_MK-DOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_MK-DOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_MK-DOS)' />
   </marker>
   <linearGradient id='__fadeout_NewDOS/80__[Apparat]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_NewDOS/80__[Apparat]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_NewDOS/80__[Apparat])' />
   </marker>
   <linearGradient id='__fadeout_NetDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_NetDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_NetDOS)' />
   </marker>
   <linearGradient id='__fadeout_Oric__DOS__[Tangerine]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Oric__DOS__[Tangerine]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Oric__DOS__[Tangerine])' />
   </marker>
   <linearGradient id='__fadeout_Pocket__OS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Pocket__OS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Pocket__OS)' />
   </marker>
   <linearGradient id='__fadeout_ProDOS__[Apple]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_ProDOS__[Apple]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_ProDOS__[Apple])' />
   </marker>
   <linearGradient id='__fadeout_GS/OS__[Apple]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_GS/OS__[Apple]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_GS/OS__[Apple])' />
   </marker>
   <linearGradient id='__fadeout_ROM-DOS__[Datalight]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_ROM-DOS__[Datalight]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_ROM-DOS__[Datalight])' />
   </marker>
   <linearGradient id='__fadeout_RxDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_RxDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_RxDOS)' />
   </marker>
   <linearGradient id='__fadeout_Sinclair__QDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_Sinclair__QDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Sinclair__QDOS)' />
   </marker>
   <linearGradient id='__fadeout_SuperDOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_SuperDOS' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_SuperDOS)' />
   </marker>
   <linearGradient id='__fadeout_TR-DOS__[Technology__Research]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_TR-DOS__[Technology__Research]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_TR-DOS__[Technology__Research])' />
   </marker>
   <linearGradient id='__fadeout_TRSDOS__[Tandy]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_TRSDOS__[Tandy]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_TRSDOS__[Tandy])' />
   </marker>
   <linearGradient id='__fadeout_TurboDOS__[Software__2000]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#AAA' offset='0' stop-opacity='1' />
-    <stop stop-color='#AAA' offset='1' stop-opacity='0' />
+    <stop stop-color='#b0b0eb' offset='0' stop-opacity='1' />
+    <stop stop-color='#b0b0eb' offset='1' stop-opacity='0' />
   </linearGradient>
   <marker id='__stop_TurboDOS__[Software__2000]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_TurboDOS__[Software__2000])' />
@@ -8161,51 +8161,51 @@ style='opacity:0.6;' >
   <path id='__line_OS/M__[Robotron]' d='M 940 14215 C 962.5,14215 947.5,14455 970,14455 L 970 14455 L 1180 14455' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_OS/M__[Robotron])' />
   <path id='__line_DAC__[Robotron]' d='M 940 14215 C 940,14215 940,14485 940,14485 L 940 14485 L 1180 14485' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DAC__[Robotron])' />
   <path id='__line_SCP__[Robotron]' d='M 940 14215 L 1180 14215' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_SCP__[Robotron])' />
-  <path id='__line_BonnyDOS/286' d='M 1720 14575 L 1930 14575' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_BonnyDOS/286)' />
-  <path id='__line_PC-MOS/386__[Software__Link]' d='M 1060 14605 L 1237 14605' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_PC-MOS/386__[Software__Link])' />
-  <path id='__line_Paragon__DOS__[Paragon]' d='M 1300 14665 C 1318.75,14665 1306.25,14695 1325,14695 L 1325 14695 L 1537 14695' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Paragon__DOS__[Paragon])' />
-  <path id='__line_PTS-DOS__[PhysTechSoft]' d='M 1300 14665 L 1537 14665' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_PTS-DOS__[PhysTechSoft])' />
-  <path id='__line_Altair__DOS__[MITS]' d='M 807 14755 L 850 14755' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Altair__DOS__[MITS])' />
-  <path id='__line_AMSDOS__[Amstrad]' d='M 1000 14785 L 1207 14785' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_AMSDOS__[Amstrad])' />
-  <path id='__line_ANDOS' d='M 1180 14815 L 1417 14815' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ANDOS)' />
-  <path id='__line_Apple__DOS__[Apple]' d='M 802 14845 L 905 14845' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Apple__DOS__[Apple])' />
-  <path id='__line_Apple__SOS__[Apple]' d='M 905 14875 L 970 14875' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Apple__SOS__[Apple])' />
-  <path id='__line_Atari__DOS__[Atari]' d='M 850 14905 L 1117 14905' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Atari__DOS__[Atari])' />
-  <path id='__line_Batch-11/DOS-11__[DEC]' d='M 580 14935 L 712 14935' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Batch-11/DOS-11__[DEC])' />
-  <path id='__line_CDOS__[Cromemco]' d='M 802 14965 L 907 14965' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CDOS__[Cromemco])' />
-  <path id='__line_CMB__DOS__[Commodore]' d='M 790 14995 L 1117 14995' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CMB__DOS__[Commodore])' />
-  <path id='__line_CSI-DOS' d='M 1000 15025 L 1297 15025' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CSI-DOS)' />
-  <path id='__line_DOS__XL__[Optimized__Systems]' d='M 940 15055 L 1027 15055' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_DOS__XL__[Optimized__Systems])' />
-  <path id='__line_Embedded__DOS__[General__Software]' d='M 1180 15085 L 1720 15085' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Embedded__DOS__[General__Software])' />
-  <path id='__line_GDOS__[Miles__Gordon__Technology]' d='M 1060 15115 L 1300 15115' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_GDOS__[Miles__Gordon__Technology])' />
-  <path id='__line_HDOS__[Heath__Company]' d='M 820 15145 L 1117 15145' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_HDOS__[Heath__Company])' />
-  <path id='__line_TASiS' d='M 1603 15205 C 1623.25,15205 1609.75,15235 1630,15235 L 1630 15235 L 2287 15235' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_IS-DOS' d='M 1210 15205 L 1630 15205' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_IS-DOS)' />
-  <path id='__line_MDOS/MIDAS__[Microsoft]' d='M 850 15295 L 877 15295' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_MDOS/MIDAS__[Microsoft])' />
-  <path id='__line_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' d='M 790 15385 C 810.25,15385 796.75,15355 817,15355 L 817 15355 L 1030 15355' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_SSB-DOS__(Smoke__Signal__DOS)__[TSC])' />
+  <path id='__line_BonnyDOS/286' d='M 1720 14575 L 1930 14575' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_BonnyDOS/286)' />
+  <path id='__line_PC-MOS/386__[Software__Link]' d='M 1060 14605 L 1237 14605' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_PC-MOS/386__[Software__Link])' />
+  <path id='__line_Paragon__DOS__[Paragon]' d='M 1300 14665 C 1318.75,14665 1306.25,14695 1325,14695 L 1325 14695 L 1537 14695' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Paragon__DOS__[Paragon])' />
+  <path id='__line_PTS-DOS__[PhysTechSoft]' d='M 1300 14665 L 1537 14665' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_PTS-DOS__[PhysTechSoft])' />
+  <path id='__line_Altair__DOS__[MITS]' d='M 807 14755 L 850 14755' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Altair__DOS__[MITS])' />
+  <path id='__line_AMSDOS__[Amstrad]' d='M 1000 14785 L 1207 14785' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_AMSDOS__[Amstrad])' />
+  <path id='__line_ANDOS' d='M 1180 14815 L 1417 14815' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_ANDOS)' />
+  <path id='__line_Apple__DOS__[Apple]' d='M 802 14845 L 905 14845' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Apple__DOS__[Apple])' />
+  <path id='__line_Apple__SOS__[Apple]' d='M 905 14875 L 970 14875' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Apple__SOS__[Apple])' />
+  <path id='__line_Atari__DOS__[Atari]' d='M 850 14905 L 1117 14905' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Atari__DOS__[Atari])' />
+  <path id='__line_Batch-11/DOS-11__[DEC]' d='M 580 14935 L 712 14935' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Batch-11/DOS-11__[DEC])' />
+  <path id='__line_CDOS__[Cromemco]' d='M 802 14965 L 907 14965' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_CDOS__[Cromemco])' />
+  <path id='__line_CMB__DOS__[Commodore]' d='M 790 14995 L 1117 14995' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_CMB__DOS__[Commodore])' />
+  <path id='__line_CSI-DOS' d='M 1000 15025 L 1297 15025' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_CSI-DOS)' />
+  <path id='__line_DOS__XL__[Optimized__Systems]' d='M 940 15055 L 1027 15055' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DOS__XL__[Optimized__Systems])' />
+  <path id='__line_Embedded__DOS__[General__Software]' d='M 1180 15085 L 1720 15085' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Embedded__DOS__[General__Software])' />
+  <path id='__line_GDOS__[Miles__Gordon__Technology]' d='M 1060 15115 L 1300 15115' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_GDOS__[Miles__Gordon__Technology])' />
+  <path id='__line_HDOS__[Heath__Company]' d='M 820 15145 L 1117 15145' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_HDOS__[Heath__Company])' />
+  <path id='__line_TASiS' d='M 1603 15205 C 1623.25,15205 1609.75,15235 1630,15235 L 1630 15235 L 2287 15235' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_IS-DOS' d='M 1210 15205 L 1630 15205' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_IS-DOS)' />
+  <path id='__line_MDOS/MIDAS__[Microsoft]' d='M 850 15295 L 877 15295' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_MDOS/MIDAS__[Microsoft])' />
+  <path id='__line_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' d='M 790 15385 C 810.25,15385 796.75,15355 817,15355 L 817 15355 L 1030 15355' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_SSB-DOS__(Smoke__Signal__DOS)__[TSC])' />
   <path id='__line_INOS__[Introl]' d='M 1003 15415 C 1023.25,15415 1009.75,15445 1030,15445 L 1030 15445 L 1150 15445' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_INOS__[Introl])' />
   <path id='__line_UniFLEX__[TSC]' d='M 775 15385 C 795.25,15385 781.75,15415 802,15415 L 802 15415 L 1030 15415' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UniFLEX__[TSC])' />
-  <path id='__line_MiniDOS' d='M 760 15385 L 817 15385' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_MiniDOS)' />
-  <path id='__line_MK-DOS' d='M 1240 15505 L 1775 15505' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_MK-DOS)' />
-  <path id='__line_NewDOS/80__[Apparat]' d='M 880 15535 L 920 15535' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_NewDOS/80__[Apparat])' />
-  <path id='__line_NetDOS' d='M 2092 15565 L 2107 15565' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_NetDOS)' />
-  <path id='__line_Oric__DOS__[Tangerine]' d='M 940 15595 L 1060 15595' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Oric__DOS__[Tangerine])' />
-  <path id='__line_PDOS' d='M 1660 15625 L 2287 15625' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Pocket__OS' d='M 1810 15655 L 1870 15655' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Pocket__OS)' />
-  <path id='__line_GS/OS__[Apple]' d='M 1073 15715 C 1093.25,15715 1079.75,15745 1100,15745 L 1100 15745 L 1255 15745' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_GS/OS__[Apple])' />
-  <path id='__line_ProDOS__[Apple]' d='M 970 15715 L 1255 15715' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ProDOS__[Apple])' />
-  <path id='__line_ROM-DOS__[Datalight]' d='M 1170 15805 L 1630 15805' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ROM-DOS__[Datalight])' />
-  <path id='__line_rou2exOS' d='M 2239 15835 L 2287 15835' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_RxDOS' d='M 1180 15865 L 1467 15865' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_RxDOS)' />
-  <path id='__line_SimpleOS__(DOS-like)' d='M 2120 15895 L 2287 15895' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_SMSQ/E' d='M 1093 15955 C 1113.25,15955 1099.75,15985 1120,15985 L 1120 15985 L 2287 15985' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Sinclair__QDOS' d='M 1030 15955 L 1120 15955' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Sinclair__QDOS)' />
-  <path id='__line_SpartaDOS__X__[ICD__Inc]' d='M 1120 16045 L 2287 16045' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_ST-DOS' d='M 2170 16075 L 2287 16075' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_SuperDOS' d='M 970 16105 L 1537 16105' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_SuperDOS)' />
-  <path id='__line_TR-DOS__[Technology__Research]' d='M 1000 16135 L 1690 16135' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_TR-DOS__[Technology__Research])' />
-  <path id='__line_TRSDOS__[Tandy]' d='M 580 16165 L 920 16165' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_TRSDOS__[Tandy])' />
-  <path id='__line_TurboDOS__[Software__2000]' d='M 940 16195 L 997 16195' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_TurboDOS__[Software__2000])' />
+  <path id='__line_MiniDOS' d='M 760 15385 L 817 15385' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_MiniDOS)' />
+  <path id='__line_MK-DOS' d='M 1240 15505 L 1775 15505' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_MK-DOS)' />
+  <path id='__line_NewDOS/80__[Apparat]' d='M 880 15535 L 920 15535' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_NewDOS/80__[Apparat])' />
+  <path id='__line_NetDOS' d='M 2092 15565 L 2107 15565' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_NetDOS)' />
+  <path id='__line_Oric__DOS__[Tangerine]' d='M 940 15595 L 1060 15595' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Oric__DOS__[Tangerine])' />
+  <path id='__line_PDOS' d='M 1660 15625 L 2287 15625' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_Pocket__OS' d='M 1810 15655 L 1870 15655' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Pocket__OS)' />
+  <path id='__line_GS/OS__[Apple]' d='M 1073 15715 C 1093.25,15715 1079.75,15745 1100,15745 L 1100 15745 L 1255 15745' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_GS/OS__[Apple])' />
+  <path id='__line_ProDOS__[Apple]' d='M 970 15715 L 1255 15715' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_ProDOS__[Apple])' />
+  <path id='__line_ROM-DOS__[Datalight]' d='M 1170 15805 L 1630 15805' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_ROM-DOS__[Datalight])' />
+  <path id='__line_rou2exOS' d='M 2239 15835 L 2287 15835' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_RxDOS' d='M 1180 15865 L 1467 15865' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_RxDOS)' />
+  <path id='__line_SimpleOS__(DOS-like)' d='M 2120 15895 L 2287 15895' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_SMSQ/E' d='M 1093 15955 C 1113.25,15955 1099.75,15985 1120,15985 L 1120 15985 L 2287 15985' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_Sinclair__QDOS' d='M 1030 15955 L 1120 15955' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Sinclair__QDOS)' />
+  <path id='__line_SpartaDOS__X__[ICD__Inc]' d='M 1120 16045 L 2287 16045' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_ST-DOS' d='M 2170 16075 L 2287 16075' stroke='#0000CD' style='stroke-width:4;' />
+  <path id='__line_SuperDOS' d='M 970 16105 L 1537 16105' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_SuperDOS)' />
+  <path id='__line_TR-DOS__[Technology__Research]' d='M 1000 16135 L 1690 16135' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_TR-DOS__[Technology__Research])' />
+  <path id='__line_TRSDOS__[Tandy]' d='M 580 16165 L 920 16165' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_TRSDOS__[Tandy])' />
+  <path id='__line_TurboDOS__[Software__2000]' d='M 940 16195 L 997 16195' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_TurboDOS__[Software__2000])' />
   <path id='__line_ICOS' d='M 823 16285 C 843.25,16285 829.75,16255 850,16255 L 850 16255 L 937 16255' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ICOS)' />
   <path id='__line_AOS/VS__II__[Data__General]' d='M 1128 16405 C 1148.25,16405 1134.75,16375 1155,16375 L 1155 16375 L 1225 16375' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_AOS/VS__II__[Data__General])' />
   <path id='__line_MP/OS__[Data__General]' d='M 985 16315 C 1005.25,16315 991.75,16345 1012,16345 L 1012 16345 L 1030 16345' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_MP/OS__[Data__General])' />
@@ -8870,7 +8870,7 @@ style='opacity:0.6;' >
   <path id='__line_pSOS__[Software__Components__Group]' d='M 940 38395 L 1497 38395' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_pSOS__[Software__Components__Group])' />
   <path id='__line_Pure64' d='M 2080 38425 L 2287 38425' stroke='#000' style='stroke-width:4;' />
   <path id='__line_PX5__RTOS' d='M 2170 38455 L 2287 38455' stroke='#000' style='stroke-width:4;' />
-  <path id='__line_Quasar' d='M 1892 38485 L 1897 38485' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Quasar)' />
+  <path id='__line_Quasar' d='M 1870 38485 L 1897 38485' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Quasar)' />
   <path id='__line_QNodeOS' d='M 2230 38515 L 2287 38515' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Quark__Operating__System' d='M 2005 38545 L 2010 38545' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Quark__Operating__System)' />
   <path id='__line_Quilt__OS' d='M 1900 38575 L 1960 38575' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Quilt__OS)' />
@@ -9640,54 +9640,54 @@ style='opacity:0.6;' >
   <circle id='__dot_OS/M__[Robotron]' cx='970' cy='14455' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_DAC__[Robotron]' cx='940' cy='14485' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_SCP__[Robotron]' cx='940' cy='14215' r='10' fill='#b0b0eb' stroke='none' />
-  <circle id='__dot_BonnyDOS/286' cx='1720' cy='14575' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_PC-MOS/386__[Software__Link]' cx='1060' cy='14605' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Paragon__DOS__[Paragon]' cx='1325' cy='14695' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_PTS-DOS__[PhysTechSoft]' cx='1300' cy='14665' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Altair__DOS__[MITS]' cx='807' cy='14755' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_AMSDOS__[Amstrad]' cx='1000' cy='14785' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_ANDOS' cx='1180' cy='14815' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Apple__DOS__[Apple]' cx='802' cy='14845' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Apple__SOS__[Apple]' cx='905' cy='14875' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Atari__DOS__[Atari]' cx='850' cy='14905' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Batch-11/DOS-11__[DEC]' cx='580' cy='14935' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_CDOS__[Cromemco]' cx='802' cy='14965' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_CMB__DOS__[Commodore]' cx='790' cy='14995' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_CSI-DOS' cx='1000' cy='15025' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_DOS__XL__[Optimized__Systems]' cx='940' cy='15055' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Embedded__DOS__[General__Software]' cx='1180' cy='15085' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_GDOS__[Miles__Gordon__Technology]' cx='1060' cy='15115' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_HDOS__[Heath__Company]' cx='820' cy='15145' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_TASiS' cx='1630' cy='15235' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_IS-DOS' cx='1210' cy='15205' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_MDOS/MIDAS__[Microsoft]' cx='850' cy='15295' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' cx='817' cy='15355' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_BonnyDOS/286' cx='1720' cy='14575' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_PC-MOS/386__[Software__Link]' cx='1060' cy='14605' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Paragon__DOS__[Paragon]' cx='1325' cy='14695' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_PTS-DOS__[PhysTechSoft]' cx='1300' cy='14665' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Altair__DOS__[MITS]' cx='807' cy='14755' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_AMSDOS__[Amstrad]' cx='1000' cy='14785' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_ANDOS' cx='1180' cy='14815' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Apple__DOS__[Apple]' cx='802' cy='14845' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Apple__SOS__[Apple]' cx='905' cy='14875' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Atari__DOS__[Atari]' cx='850' cy='14905' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Batch-11/DOS-11__[DEC]' cx='580' cy='14935' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_CDOS__[Cromemco]' cx='802' cy='14965' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_CMB__DOS__[Commodore]' cx='790' cy='14995' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_CSI-DOS' cx='1000' cy='15025' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_DOS__XL__[Optimized__Systems]' cx='940' cy='15055' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Embedded__DOS__[General__Software]' cx='1180' cy='15085' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_GDOS__[Miles__Gordon__Technology]' cx='1060' cy='15115' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_HDOS__[Heath__Company]' cx='820' cy='15145' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_TASiS' cx='1630' cy='15235' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_IS-DOS' cx='1210' cy='15205' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_MDOS/MIDAS__[Microsoft]' cx='850' cy='15295' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_SSB-DOS__(Smoke__Signal__DOS)__[TSC]' cx='817' cy='15355' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_INOS__[Introl]' cx='1030' cy='15445' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_UniFLEX__[TSC]' cx='802' cy='15415' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_MiniDOS' cx='760' cy='15385' r='10' fill='#AAA' stroke='none' />
-    <circle cx='787' cy='15385' r='5' fill='#AAA' stroke='none' />
-    <circle cx='802' cy='15385' r='5' fill='#AAA' stroke='none' />
-  <circle id='__dot_MK-DOS' cx='1240' cy='15505' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_NewDOS/80__[Apparat]' cx='880' cy='15535' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_NetDOS' cx='2092' cy='15565' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Oric__DOS__[Tangerine]' cx='940' cy='15595' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_PDOS' cx='1660' cy='15625' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_Pocket__OS' cx='1810' cy='15655' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_GS/OS__[Apple]' cx='1100' cy='15745' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_ProDOS__[Apple]' cx='970' cy='15715' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_ROM-DOS__[Datalight]' cx='1170' cy='15805' r='10' fill='#AAA' stroke='none' />
-    <circle cx='1512' cy='15805' r='5' fill='#AAA' stroke='none' />
-  <circle id='__dot_rou2exOS' cx='2239' cy='15835' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_RxDOS' cx='1180' cy='15865' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_SimpleOS__(DOS-like)' cx='2120' cy='15895' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_SMSQ/E' cx='1120' cy='15985' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_Sinclair__QDOS' cx='1030' cy='15955' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_SpartaDOS__X__[ICD__Inc]' cx='1120' cy='16045' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_ST-DOS' cx='2170' cy='16075' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_SuperDOS' cx='970' cy='16105' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_TR-DOS__[Technology__Research]' cx='1000' cy='16135' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_TRSDOS__[Tandy]' cx='580' cy='16165' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_TurboDOS__[Software__2000]' cx='940' cy='16195' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_MiniDOS' cx='760' cy='15385' r='10' fill='#b0b0eb' stroke='none' />
+    <circle cx='787' cy='15385' r='5' fill='#b0b0eb' stroke='none' />
+    <circle cx='802' cy='15385' r='5' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_MK-DOS' cx='1240' cy='15505' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_NewDOS/80__[Apparat]' cx='880' cy='15535' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_NetDOS' cx='2092' cy='15565' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_Oric__DOS__[Tangerine]' cx='940' cy='15595' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_PDOS' cx='1660' cy='15625' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_Pocket__OS' cx='1810' cy='15655' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_GS/OS__[Apple]' cx='1100' cy='15745' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_ProDOS__[Apple]' cx='970' cy='15715' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_ROM-DOS__[Datalight]' cx='1170' cy='15805' r='10' fill='#b0b0eb' stroke='none' />
+    <circle cx='1512' cy='15805' r='5' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_rou2exOS' cx='2239' cy='15835' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_RxDOS' cx='1180' cy='15865' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_SimpleOS__(DOS-like)' cx='2120' cy='15895' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_SMSQ/E' cx='1120' cy='15985' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_Sinclair__QDOS' cx='1030' cy='15955' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_SpartaDOS__X__[ICD__Inc]' cx='1120' cy='16045' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_ST-DOS' cx='2170' cy='16075' r='10' fill='#0000CD' stroke='none' />
+  <circle id='__dot_SuperDOS' cx='970' cy='16105' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_TR-DOS__[Technology__Research]' cx='1000' cy='16135' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_TRSDOS__[Tandy]' cx='580' cy='16165' r='10' fill='#b0b0eb' stroke='none' />
+  <circle id='__dot_TurboDOS__[Software__2000]' cx='940' cy='16195' r='10' fill='#b0b0eb' stroke='none' />
   <circle id='__dot_ICOS' cx='850' cy='16255' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_AOS/VS__II__[Data__General]' cx='1155' cy='16375' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_MP/OS__[Data__General]' cx='1012' cy='16345' r='10' fill='#AAA' stroke='none' />
@@ -10481,7 +10481,7 @@ style='opacity:0.6;' >
     <circle cx='1360' cy='38395' r='5' fill='#AAA' stroke='none' />
   <circle id='__dot_Pure64' cx='2080' cy='38425' r='10' fill='#000' stroke='none' />
   <circle id='__dot_PX5__RTOS' cx='2170' cy='38455' r='10' fill='#000' stroke='none' />
-  <circle id='__dot_Quasar' cx='1892' cy='38485' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_Quasar' cx='1870' cy='38485' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_QNodeOS' cx='2230' cy='38515' r='10' fill='#000' stroke='none' />
   <circle id='__dot_Quark__Operating__System' cx='2005' cy='38545' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Quilt__OS' cx='1900' cy='38575' r='10' fill='#AAA' stroke='none' />
@@ -13552,8 +13552,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='2090' y='38421'  >Pure64</text></a>
   <rect x='2179' y='38442' width='63' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2180' y='38451'  >PX5 RTOS</text></a>
-  <rect x='1901' y='38472' width='42' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1902' y='38481'  >Quasar</text></a>
+  <rect x='1879' y='38472' width='42' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1880' y='38481'  >Quasar</text></a>
   <rect x='2239' y='38502' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2240' y='38511'  >QNodeOS</text></a>
   <rect x='2014' y='38532' width='142' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
