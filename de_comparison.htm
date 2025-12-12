@@ -12,11 +12,11 @@
 <style>
 :root {
 --legendwidth: 355px;
---dewidth: 153px;
+--dewidth: 138px;
 }
 
 table.comparison {
-width: calc(var(--legendwidth) + 10 * var(--dewidth));
+width: calc(var(--legendwidth) + 11 * var(--dewidth));
 }
 
 .gtktoolkit {
@@ -112,6 +112,10 @@ background-color: #aaa;
     .gtktoolkit {
     color: #eac895;
     }
+
+    img.invert {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
 
 </style>
@@ -129,7 +133,7 @@ background-color: #aaa;
 
 <p>The below table shows a comparison of the main desktop environments available for Linux and Unix, as well as the macOS and Microsoft Windows for the sake of comparability.<br /><br />
 For Linux (and some Unix operation systems), there are the "Big Two" desktops, KDE and GNOME, as well as many smaller ones and the option of running a stand-alone window manager.<br /><br />
-The desktop environment "landscape" has fragmented since the controversial initial release of GNOME 3 in 2011, which spawned a number of soft and hard forks as well as newly created desktops that are nevertheless based on some of GNOME technology or which were created out of disagreement with the GNOME developers; these include MATE (a continuation of GNOME 2), Linux Mint's Cinnamon (based on GNOME 3 tech), Solus's Budgie, elementaryOS's Pantheon, pop_OS!'s COSMIC, Ubuntu Unity's UnityX, Ubuntu Kylin's UKUI. <br /><br />KDE only had one notable fork, Trinity, which is a continuation of KDE 3.<br /><br />Other notable desktop environments not mentioned so far include Xfce, LXQt, Deepin Desktop, CDE, Lumina, as well as Enlightenment and its fork Moksha.</p>
+The desktop environment "landscape" has fragmented since the controversial initial release of GNOME 3 in 2011, which spawned a number of soft and hard forks as well as newly created desktops that are nevertheless based on some of GNOME technology or which were created out of disagreement with the GNOME developers; these include MATE (a continuation of GNOME 2), Linux Mint's Cinnamon (based on GNOME 3 tech), Solus's Budgie, elementaryOS's Pantheon, pop_OS!'s COSMIC, Ubuntu Unity's UnityX, Ubuntu Kylin's UKUI. <br /><br />KDE only had one notable fork, Trinity, which is a continuation of KDE 3.<br /><br />Other notable desktop environments not mentioned so far include Xfce, LXQt, COSMIC, Deepin Desktop, CDE, Lumina, as well as Enlightenment and its fork Moksha.</p>
 
 <hr>
 <p style="font-weight: bold; font-size: large;;"><a href="old/de_comparison_2022old.htm">Click here to see an older version of this comparison which includes additional desktop environments (Pantheon, Deepin, UKUI, CDE, Enlightenment, Trinity, UnityX, and Lumina)</a>. This extended comparison was up to date as of beginning 2022 but will not be updated anymore.</p>
@@ -151,7 +155,8 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
-<!-- end 4x popular alternatives -->
+<col style="border-left: 1px solid lightgrey; width: var(--dewidth);">
+<!-- end 5x popular alternatives -->
 <col style="border-left: double; width: var(--dewidth);">
 <col style="border-left: double; width: var(--dewidth);">
 <!-- end macoS and Windows -->
@@ -160,6 +165,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <thead>
 <tr style="height: 1px; display: none;">
 <td style="width: var(--legendwidth);"></td>
+<td style="width: var(--dewidth);"></td>
 <td style="width: var(--dewidth);"></td>
 <td style="width: var(--dewidth);"></td>
 <td style="width: var(--dewidth);"></td>
@@ -179,6 +185,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <th>MATE</th>
 <th>Cinnamon</th>
 <th>LXQt</th>
+<th>COSMIC</th>
 <th>Budgie</th>
 <th>Aqua (macOS)</th>
 <th>Windows Shell</th>
@@ -189,18 +196,19 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <tr>
 <td></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/plasma.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
-<td style="vertical-align: middle; "><img src="pics/logos/desktops/gnome.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
+<td style="vertical-align: middle; "><img src="pics/logos/desktops/gnome.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" class="invert" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/xfce.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/mate.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/cinnamon.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/lxqt.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
+<td style="vertical-align: middle; "><img src="pics/logos/desktops/cosmic.svg" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" class="invert" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/budgie.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/macos.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 <td style="vertical-align: middle; "><img src="pics/logos/desktops/windows.png" style="max-height: 100px; max-width: calc(var(--dewidth) - 10px);" /></td>
 </tr>
 
 <tr>
-<td class="semititle">General</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">General</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
@@ -214,6 +222,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>GPL, LGPL</td> <!-- MATE -->
 <td>GPL</td> <!-- Cinnamon -->
 <td>GPL, LGPL</td> <!-- LXQt -->
+<td>GPL</td>
 <td>GPL, LGPL</td>
 
 <td>Proprietary</td>
@@ -231,6 +240,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>2011</td> <!-- MATE -->
 <td>2011</td> <!-- Cinnamon -->
 <td>2013</td> <!-- LXQt -->
+<td>2024</td>
 <td>2013</td>
 
 <td>2000</td>
@@ -252,33 +262,16 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>-</td>
 <td>-</td>
 
-<tr>
-<td>Corporate and government backing</td>
-
-<td class="line">Blue Systems, Canonical, Google, Qt Group, SUSE</td> <!-- Plasma -->
-<td class="line">IBM (Red Hat), Canonical, Google, SUSE, System76</td> <!-- Gnome -->
-
-<td class="line">-</td> <!-- Xfce -->
-<td class="line">-</td> <!-- MATE -->
-<td class="line">-</td> <!-- Cinnamon -->
-<td class="line">-</td> <!-- LXQt -->
-<td class="line">-</td> 
-
-<td  class="line">Apple</td>
-<td  class="line">Microsoft</td>
-
-</tr>
-
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">Application suite</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Application suite</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
-<tr><td>Legend: <span class="kdeapp">KDE app or fork</span> <span class="gnomeapp">GNOME app or fork</span> <span class="qttoolkit">uses Qt</span> <span class="gtktoolkit">uses GTK</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr><td>Legend: <span class="kdeapp">KDE app or fork</span> <span class="gnomeapp">GNOME app or fork</span> <span class="qttoolkit">uses Qt</span> <span class="gtktoolkit">uses GTK</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -291,6 +284,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit">GTK</td> <!-- MATE -->
 <td class="gtktoolkit">GTK</td> <!-- Cinnamon -->
 <td class="qttoolkit">Qt</td> <!-- LXQt -->
+<td>Iced</td>
 <td class="gtktoolkit">GTK</td>
 
 <td>Cocoa</td>
@@ -298,7 +292,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 </tr>
 
 <tr>
-<td>Window manager</td>
+<td>Window manager/compositor</td>
 
 <td class="kdeapp">KWin</td> <!-- Plasma -->
 <td class="gnomeapp">Mutter</td> <!-- Gnome -->
@@ -307,10 +301,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gnomeapp tooltip">Marco<span class="tooltiptext">fork of Metacity</span></td> <!-- MATE -->
 <td class="gnomeapp tooltip">Muffin<span class="tooltiptext">fork of Mutter</span></td> <!-- Cinnamon -->
 <td><span class="tooltip">various<span class="tooltiptext">For X11, the default is Openbox, but KWin and Xfwm4 are also available. For Wayland, there is a choice of Labwc, KWin, Wayfire, Hyprland, Sway, Niri and River.</span></span></td> <!-- LXQt -->
+<td>cosmic-comp</td>
 <td class="gnomeapp tooltip">Magpie<span class="tooltiptext">fork of Mutter</span></td>
 
 <td>Quartz Compositor</td>
-<td>Desktop Window Manager</td>
+<td style="font-size: 90%;">Desktop Window Manager</td>
 </tr>
 
 <tr>
@@ -323,6 +318,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>LightDM</td> <!-- MATE -->
 <td>LightDM</td> <!-- Cinnamon -->
 <td class="qttoolkit">SDDM</td> <!-- LXQt -->
+<td>cosmic-greeter</td>
 <td>LightDM</td>
 
 <td>macOS login screen</td>
@@ -340,6 +336,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 <td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td>
+<td class="kdeapp gtktoolkit tooltip">WebKitGTK<span class="tooltiptext">WebKit, fork of KHTML</span></td>
 
 <td class="kdeapp tooltip">WKWebKit<span class="tooltiptext">WebKit, fork of KHTML</span></td>
 <td class="kdeapp tooltip">Edge WebView2<span class="tooltiptext">Blink, fork of WebKit, fork of KHTML</span></td>
@@ -347,7 +344,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 </tr>
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -360,6 +357,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">Caja<span class="tooltiptext">fork of Nautilus</span></td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp tooltip">Nemo<span class="tooltiptext">fork of Nautilus</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">PCManFM-Qt</td> <!-- LXQt -->
+<td>COSMIC Files</td>
 <td class="gtktoolkit gnomeapp tooltip">Nemo (usually)<span class="tooltiptext">fork of Nautilus</span></td>
 
 <td>Finder</td>
@@ -376,6 +374,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">Engrampa<span class="tooltiptext">fork of File Roller</span></td>  <!-- MATE -->
 <td>-</td> <!-- Cinnamon -->
 <td class="qttoolkit">LXQt Archiver</td> <!-- LXQt -->
+<td>-</td>
 <td>-</td>
 
 <td>Archive Utility</td>
@@ -394,6 +393,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">xreader<span class="tooltiptext">fork of Atril</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">qpdfview</td> <!-- LXQt -->
 <td>-</td>
+<td>-</td>
 
 <td>Preview</td>
 <td>Edge</td>
@@ -409,6 +409,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">Eye of MATE<span class="tooltiptext">fork of eog (Eye of GNOME)</span></td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp"><span class="tooltip">xviewer<span class="tooltiptext">fork of eog (Eye of GNOME)</span></span>, <span class="tooltip">pix<span class="tooltiptext">fork of gThumb</span></span></td> <!-- Cinnamon -->
 <td class="qttoolkit">LXImage</td> <!-- LXQt -->
+<td>-</td>
 <td>-</td>
 
 <td>Preview, macOS Photos</td>
@@ -427,6 +428,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 <td>-</td>
+<td>-</td>
 
 <td>macOS Photos</td>
 <td>Paint</td>
@@ -436,53 +438,18 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Text editor</td>
 
 <td class="qttoolkit kdeapp">Kate, KWrite</td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">GNOME Text Editor, gedit</td> <!-- Gnome -->
+<td class="gtktoolkit gnomeapp" style="font-size: 90%;">GNOME Text Editor, gedit</td> <!-- Gnome -->
 
 <td class="gtktoolkit">Mousepad</td> <!-- Xfce -->
 <td class="gtktoolkit gnomeapp tooltip">Pluma<span class="tooltiptext">fork of gedit</span></td>  <!-- MATE -->
 <td class="gtktoolkit gnomeapp tooltip">xed<span class="tooltiptext">fork of Pluma</span></td> <!-- Cinnamon -->
 <td class="qttoolkit">Featherpad</td> <!-- LXQt -->
 <td>-</td>
+<td>COSMIC Text Editor</td>
 
 <td>TextEdit</td>
 <td>Notepad, WordPad</td>
 </tr>
-
-
-<!--
-<tr>
-<td>Terminal</td>
-
-<td class="qttoolkit kdeapp">Konsole</td> 
-<td class="gtktoolkit gnomeapp">GNOME Console, Terminal</td> 
-
-<td class="gtktoolkit">Xfce Terminal</td>
-<td class="gtktoolkit gnomeapp tooltip">MATE Terminal<span class="tooltiptext">fork of GNOME Terminal</span></td>  
-<td>-</td>
-<td class="qttoolkit">QTerminal</td>
-<td>-</td>
-
-<td>macOS Terminal</td>
-<td>Windows Terminal</td>
-</tr>
-
-
-<tr>
-<td>Calculator</td>
-
-<td class="qttoolkit kdeapp">KCalc</td> 
-<td class="gtktoolkit gnomeapp">GNOME Calculator</td> 
-
-<td>-</td>
-<td class="gtktoolkit gnomeapp tooltip">MATE Calculator<span class="tooltiptext">fork of GNOME Calculator</span></td> 
-<td>-</td> 
-<td>-</td> 
-<td>-</td>
-
-<td>macOS Calculator</td>
-<td>Windows Calculator</td>
-</tr>
--->
 
 
 <tr>
@@ -495,6 +462,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="gtktoolkit gnomeapp tooltip">xplayer<span class="tooltiptext">fork of Totem</span></td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 <td>-</td>
+<td>COSMIC Media Player</td>
 
 <td>Quicktime Player</td>
 <td>Windows Media Player</td>
@@ -505,11 +473,12 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Music library</td>
 
 <td class="qttoolkit kdeapp">Elisa, Strawberry, ... <!-- JuK --></td> <!-- Plasma -->
-<td class="gtktoolkit gnomeapp">Decibels, GNOME Music, ... <!--Lollypop, Rhythmbox--></td> <!-- GNOME -->
+<td class="gtktoolkit gnomeapp" style="font-size: 90%;">Decibels, GNOME Music, ... <!--Lollypop, Rhythmbox--></td> <!-- GNOME -->
 <td class="gtktoolkit">Xfmpc</td> <!-- Xfce -->
 <td>-</td> <!-- MATE -->
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
+<td>-</td>
 <td>-</td>
 
 <td>Apple Music</td>
@@ -524,6 +493,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>-</td> <!-- MATE -->
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
+<td>-</td>
 <td>-</td>
 
 <td>Safari</td>
@@ -540,6 +510,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 <td>-</td>
+<td>-</td>
 
 <td>macOS Mail</td>
 <td>Outlook for Windows</td>
@@ -553,40 +524,24 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>-</td> <!-- Cinnamon -->
 <td>-</td> <!-- LXQt -->
 <td>-</td>
+<td>-</td>
 
 <td>macOS Calendar</td>
 <td>Outlook for Windows</rd>
 </tr>
 
-<!--
-<tr>
-<td>System monitor</td>
-
-<td class="qttoolkit kdeapp">Plasma System Monitor</td> <
-<td class="gtktoolkit gnomeapp">GNOME System Monitor</td> 
-<td class="gtktoolkit">Xfce Taskmanager</td> 
-<td class="gnomeapp gtktoolkit tooltip">MATE System Monitor<span class="tooltiptext">fork of GNOME System Monitor</span></td> 
-<td>-</td> 
-<td class="kdeapp">qps</td> 
-<td>-</td>
-
-<td>Activity Monitor</td>
-<td>Windows Task Manager</td>
-</tr>
--->
-
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">General features</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -599,10 +554,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>X11</td> <!-- MATE -->
 <td>X11</td> <!-- Cinnamon -->
 <td>X11 + Wayland</td> <!-- LXQt -->
+<td>Wayland</td>
 <td>X11</td>
 
 <td>Quartz Compositor</td>
-<td>Desktop Window Manager</td>
+<td style="font-size: 90%;">Desktop Window Manager</td>
 </tr>
 
 
@@ -616,6 +572,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
@@ -633,6 +590,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -648,6 +606,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="no">No</td>
 
 <td class="yes">Yes</td>
@@ -665,28 +624,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 </tr>
-
-<!--
-<tr>
-<td>Preferred style of window decorations (SSD/CSD)</td>
-
-<td>Server-side decorations</td>
-<td>Client-side decorations</td>
-
-<td>Server-side decorations</td>
-<td>Server-side decorations</td>
-<td>Server-side decorations</td>
-<td>Server-side decorations</td>
-<td>Client-side decorations</td>
-
-<td>Mixed</td>
-<td>Mixed</td>
-</tr>
--->
 
 <tr>
 <td class="tooltip">Can draw generic window decorations ("server-side decorations")<span class="tooltiptext">Meaning the desktop environment will draw generic window decorations (such as minimize, maximize and close buttons) for applications that don't want to draw their own custom window decorations. In the Linux world, this is usually known as "server-side decorations" (SSD) (drawn by window manager) as opposed to "client-side decorations" (CSD) (drawn by app, hence apps will all have different looks for the title bars and window buttons).</span></td>
@@ -699,6 +641,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 
 <td class="yes tooltip">Yes<span class="tooltiptext">MacOS technically doesn't have server-side but client-side decorations that are "injected" into the app by default. As they are added automatically by the OS they are essentially the same as server-side decorations same from a developer and user perspective; apps don't have to draw their own window decorations.</span></td>
@@ -717,6 +660,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
 <td class="no">No</td>
 <td class="no">No</td>
@@ -733,6 +677,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -748,6 +693,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
 <td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
@@ -765,6 +711,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -774,79 +721,45 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Permission system for apps recording the screen</td>
 
 <td class="yes tooltip">Yes (on Wayland)<span class="tooltiptext">implements permission control for privileged Wayland protocols like <code>screencopy</code></span></td><!-- Plasma -->
-<td class="yes tooltip">Yes (on Wayland)<span class="tooltiptext">implements permission control for privileged Wayland protocols like <code>screencopy</code></span></td><!-- Gnome -->
+<td class="yes tooltip">Yes<span class="tooltiptext">implements permission control for privileged Wayland protocols like <code>screencopy</code></span></td><!-- Gnome -->
 
 <td class="no">No</td> <!-- Xfce -->
 <td class="no">No</td> <!-- MATE -->
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes tooltip">Yes<span class="tooltiptext">implements permission control for privileged Wayland protocols like <code>screencopy</code></span>
 <td class="no">No</td>
 
 <td class="yes tooltip">Yes<span class="tooltiptext">Since macOS Sequoia, the user needs to give explicit permission when an app tries to record the screen</span></td>
 <td class="yes tooltip">Yes<span class="tooltiptext">Permission settings can be found in Settings -> Privacy &amp; security -> Screenshots &amp; apps .By default all apps can take screenshots.</span></td>
 </tr>
 
-<!--
-<tr>
-<td>Integration with online accounts</td>
-
-<td>Google, Nextcloud, Owncloud</td> 
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> 
-
-<td>-</td>
-<td>-</td> 
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td> 
-<td>-</td> 
-<td>Facebook, Flickr, Foursquare, Google, Microsoft, Nextcloud</td>
-
-
-<td>Apple, AOL, Google, Microsoft, Yahoo</td>
-<td>Microsoft</td>
-</tr>
--->
-
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
 <td class="semititle">Panel elements <span style="font-size: x-small; font-weight: normal; text-decoration: none;">w/o extensions or hidden settings/tweaks</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><td></td></td>
 </tr>
 
-<!--
-<tr>
-<td>App launcher: show all apps / sort apps by XDG category</td>
-
-<td class="yes"><span class="tooltip">Yes<span class="tooltiptext">with alternative launcher</span></span>/Yes</td> 
-<td class="mixed">Yes/<span class="tooltip">No<span class="tooltiptext">but can create custom app folders</span></span></td>
-
-<td class="yes">Yes/Yes</td>
-<td class="yes">Yes/Yes</td>
-<td class="yes">Yes/Yes</td> 
-<td class="mixed">No/Yes</td> 
-<td class="yes">Yes/Yes</td>
-
-<td class="mixed">Yes/<span class="tooltip">(n.a.)<span class="tooltiptext">no automatic categorization but can create custom app folders</span></span></td>
-<td class="mixed">Yes/<span class="tooltip">(n.a.)<span class="tooltiptext">no automatic categorization but can create custom app folders</span></span></td>
-</tr>
--->
 
 
 <tr>
 <td>Favourited/pinned apps</td>
 
-<td class="yes">in app launcher and panel</td> <!-- Plasma -->
+<td class="yes">in app launcher &amp; panel</td> <!-- Plasma -->
 <td class="yes">in "Activities" dash</td> <!-- Gnome -->
 
-<td class="yes">in app launcher and panel</td> <!-- Xfce -->
-<td class="yes">in app launcher and panel</td> <!-- MATE -->
-<td class="yes">in app launcher and panel</td> <!-- Cinnamon -->
+<td class="yes">in app launcher &amp; panel</td> <!-- Xfce -->
+<td class="yes">in app launcher &amp; panel</td> <!-- MATE -->
+<td class="yes">in app launcher &amp; panel</td> <!-- Cinnamon -->
 <td class="yes">in panel</td> <!-- LXQt -->
+<td class="yes">in app launcher &amp; panel</td>
 <td class="yes">in panel</td>
 
 <td class="yes">in dock</td>
-<td class="yes">in start menu and panel</td>
+<td class="yes">in start menu &amp; panel</td>
 </tr>
 
 
@@ -860,6 +773,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (all four sides)</td> <!-- MATE -->
 <td class="yes">Yes (all four sides)</td> <!-- Cinnamon -->
 <td class="yes">Yes (all four sides)</td> <!-- LXQt -->
+<td class="yes">Yes (all four sides)</td>
 <td class="yes">Yes (all four sides)</td>
 
 <td class="mixed">No, but can move dock</td>
@@ -877,9 +791,10 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes (dock as well)</td>
 <td class="yes">Yes</td>
 
-<td class="mixed">No, but can auto-hide dock</td>
+<td class="mixed">No, but dock auto-hide</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -894,6 +809,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (all)</td> <!-- MATE -->
 <td class="yes">Yes (all)</td> <!-- Cinnamon -->
 <td class="yes">Yes (all)</td> <!-- LXQt -->
+<td class="yes">Yes (all)</td>
 <td class="yes">Yes (all)</td>
 
 <td class="yes">Yes (all)</td>
@@ -913,6 +829,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes (all)</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -930,6 +847,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -946,6 +864,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (default: local)</td> <!-- MATE -->
 <td class="no">No (always local)</td> <!-- Cinnamon -->
 <td class="no">No (always local)</td> <!-- LXQt -->
+<td class="no">No (always local)</td>
 <td class="yes">Yes (default: local)</td>
 
 <td class="no">No (always global)</td>
@@ -964,6 +883,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -971,11 +891,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">Window management</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Window management</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -988,6 +908,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="no">No (only shows apps)</td>
 <td class="yes">Yes</td>
 
 <td class="no">No (only shows apps)</td>
@@ -1007,8 +928,9 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
-<td class="almost">keyboard shortcut only</td>
+<td class="almost">keyboard shortcut</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -1017,13 +939,14 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Fullscreen (hides panel and other element)</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
+<td class="almost">keyboard shortcut</td> <!-- Gnome -->
 
-<td class="yes">Yes (right-click only)</td><!-- Xfce -->
-<td class="almost">keyboard shortcut only</td> <!-- MATE -->
-<td class="almost">keyboard shortcut only</td> <!-- Cinnamon -->
-<td class="almost">keyboard shortcut only</td> <!-- LXQt -->
-<td class="almost">keyboard shortcut only</td>
+<td class="yes">Yes (right-click)</td><!-- Xfce -->
+<td class="almost">keyboard shortcut</td> <!-- MATE -->
+<td class="almost">keyboard shortcut</td> <!-- Cinnamon -->
+<td class="almost">keyboard shortcut</td> <!-- LXQt -->
+<td class="yes">Yes (right-click)</td>
+<td class="almost">keyboard shortcut</td>
 
 <td class="yes">Yes</td>
 <td class="no">No</td>
@@ -1041,6 +964,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1051,15 +975,16 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Show desktop (minimize all windows)</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
+<td class="almost">keyboard shortcut</td> <!-- Gnome -->
 
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="no">No</td>
 <td class="yes">Yes</td>
 
-<td class="almost tooltip">keyboard shortcut only<span class="tooltiptext">or trackpad gesture</span></td>
+<td class="almost tooltip">keyboard shortcut<span class="tooltiptext">or trackpad gesture</span></td>
 <td class="yes">Yes</td>
 
 <tr>
@@ -1072,6 +997,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (right-click)</td><!-- MATE -->
 <td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
 <td class="yes">Yes (right-click)</td> <!-- LXQt -->
+<td class="yes">Yes (right-click)</td>
 <td class="yes">Yes (right-click)</td>
 
 <td class="no">No</td>
@@ -1088,6 +1014,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (right-click)</td><!-- MATE -->
 <td class="yes">Yes (right-click)</td> <!-- Cinnamon -->
 <td class="yes">Yes (right-click)</td> <!-- LXQt -->
+<td class="yes">Yes (right-click)</td>
 <td class="yes">Yes (right-click)</td>
 
 <td class="mixed">Drag &amp; drop / No</td>
@@ -1106,6 +1033,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- MATE -->
 <td class="yes">Yes (&frac12; or &frac14; screen)</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes (&frac12; or &frac14; screen)</td>
 <td class="almost">Yes (&frac12; screen only)</td>
 
 <td class="yes">Yes (&frac12; or &frac14; screen)</td>
@@ -1123,6 +1051,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes</td><!-- MATE -->
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td>
 <td class="no">No/No</td>
 
 <td class="no">No/No</td>
@@ -1140,6 +1069,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="no">No</td>
 
 <td class="yes">Yes</td>
@@ -1157,6 +1087,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1164,12 +1095,11 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
-<td class="semititle">File manager</td><td>Dolphin</td><td>GNOME Files (Nautilus)</td><td>Thunar</td><td>Caja</td><td>Nemo</td><td>PCManFM-Qt</td>
-<!--<td rowspan="15" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">Budgie does not have a standard file manager, it is up to the distribution to decide which file manager to ship. For example, Ubuntu and Fedora use Cinnamon's Nemo, while Solus uses GNOME's Nautilus.</td> --><td>Nemo (usually)</td>
+<td class="semititle">File manager</td><td>Dolphin</td><td>GNOME Files (Nautilus)</td><td>Thunar</td><td>Caja</td><td>Nemo</td><td>PCManFM-Qt</td><td>COSMIC Files</td><td>Nemo (usually)</td>
 <td>Finder</td><td>File Explorer</td>
 </tr>
 
@@ -1183,6 +1113,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="almost">Yes/Yes/in side panel</td> <!-- MATE -->
 <td class="almost">Yes/Yes/in side panel</td> <!-- Cinnamon -->
 <td class="almost">Yes/Yes/in side panel</td> <!-- LXQt -->
+<td class="mixed">Yes/Yes/No</td>
 <td class="almost">Yes/Yes/in side panel</td>
 
 <td class="mixed">Yes/Yes/No</td>
@@ -1199,6 +1130,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td>
 <td class="yes">Yes/Yes</td>
 
 <td class="mixed">Yes/No</td>
@@ -1216,8 +1148,9 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
-<td class="almost">keyboard shortcut only</td>
+<td class="almost">keyboard shortcut</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -1232,6 +1165,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- MATE -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes/Yes/Yes</td> <!-- LXQt -->
+<td class="almost">Yes/No/Yes/Yes</td>
 <td class="yes">Yes/Yes/Yes/Yes</td>
 
 <td class="yes">Yes/Yes/Yes/Yes</td>
@@ -1249,6 +1183,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="no">No</td>
 <td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
@@ -1266,6 +1201,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="mixed">Yes/No</td>  <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
 <td class="mixed">Yes/No</td>
+<td class="mixed">Yes/No</td>
 
 <td class="yes">Yes/Yes</td>
 <td class="yes">Yes/Yes</td>
@@ -1282,6 +1218,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td>   <!-- Cinnamon -->
 <td class="no">No</td>  <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1297,6 +1234,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="no">No</td>
 <td class="yes">Yes</td>
 
 <td class="yes">Yes</td>
@@ -1314,6 +1252,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="no">No</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="no">No</td>
+<td class="no">No</td>
 
 <td class="no">No</td>
 <td class="no">No</td>
@@ -1330,6 +1269,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="yes">Yes</td> 
 
 <td class="yes">Yes</td>
@@ -1348,6 +1288,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="no">No</td> <!-- LXQt -->
+<td class="no">No</td>
 <td class="yes">Yes</td> 
 
 <td class="yes tooltip">Yes<span class="tooltiptext">Cmd + Z</td>
@@ -1365,6 +1306,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Keep new/old/rename</td> <!-- MATE -->
 <td class="yes">Keep new/old/rename</td> <!-- Cinnamon -->
 <td class="yes">Keep new/old/rename</td> <!-- LXQt -->
+<td class="almost">Keep new/old</td>
 <td class="yes">Keep new/old/rename</td>
 
 <td class="yes">Keep new/old/rename</td>
@@ -1375,12 +1317,13 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Create new empty file</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="almost">only files from ~/Templates</td> <!-- Gnome -->
+<td class="almost" style="font-size: 90%;">only files from ~/Templates</td> <!-- Gnome -->
 
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="yes">Yes</td>
 <td class="yes">Yes</td>
 
 <td class="no">No</td>
@@ -1391,15 +1334,16 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Select multiple files with Ctrl/Shift, and invert selection</td>
 
 <td class="yes">Yes/Yes</td> <!-- Plasma -->
-<td class="almost">Yes/keyboard shortcut only</td> <!-- Gnome -->
+<td class="almost">Yes/keyboard shortcut</td> <!-- Gnome -->
 
 <td class="yes">Yes/Yes</td> <!-- Xfce -->
 <td class="yes">Yes/Yes</td><!-- MATE -->
 <td class="yes">Yes/Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes/Yes</td> <!-- LXQt -->
+<td class="mixed">Yes/No</td>
 <td class="yes">Yes/Yes</td>
 
-<td class="almost">Yes/keyboard shortcut only</td>
+<td class="almost">Yes/keyboard shortcut</td>
 <td class="yes">Yes/Yes</td>
 </tr>
 
@@ -1414,8 +1358,9 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 
-<td class="almost">keyboard shortcut only</td>
+<td class="almost">keyboard shortcut</td>
 <td class="yes">Yes</td>
 </tr>
 
@@ -1423,42 +1368,44 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Go up a level (to parent directory)</td>
 
 <td class="yes">Yes</td> <!-- Plasma -->
-<td class="almost">keyboard shortcut only</td> <!-- Gnome -->
+<td class="almost">keyboard shortcut</td> <!-- Gnome -->
 
 <td class="yes">Yes</td> <!-- Xfce -->
 <td class="yes">Yes</td><!-- MATE -->
 <td class="yes">Yes</td> <!-- Cinnamon -->
 <td class="yes">Yes</td> <!-- LXQt -->
+<td class="almost">keyboard shortcut</td>
 <td class="yes">Yes</td>
 
-<td class="almost">keyboard shortcut only</td>
+<td class="almost">keyboard shortcut</td>
 <td class="yes">Yes</td>
 </tr>
 
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <tr>
-<td class="semititle">Distribution support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Distribution support</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 
 <tr>
-<td>Number of supporting active distributions (<a href="https://distrowatch.com" target="_blank">Distrowatch.com<a/>, 04/2024)</td>
+<td>Number of supporting active distributions (<a href="https://distrowatch.com" target="_blank">Distrowatch.com<a/>, 12/2025)</td>
 
-<td>66</td> <!-- Plasma -->
-<td>74</td> <!-- Gnome -->
+<td>107</td> <!-- Plasma -->
+<td>101</td> <!-- Gnome -->
 
-<td>95</td> <!-- Xfce -->
-<td>54</td> <!-- MATE -->
-<td>34</td> <!-- Cinnamon -->
-<td>34</td> <!-- LXQt -->
-<td>14</td> <!-- Budgie -->
+<td>123</td> <!-- Xfce -->
+<td>69</td> <!-- MATE -->
+<td>48</td> <!-- Cinnamon -->
+<td>48</td> <!-- LXQt -->
+<td>9</td> <!-- Cosmic -->
+<td>11</td> <!-- Budgie -->
 
 <td><em>macOS only</em></td>
 <td><em>Windows only</em></td>
@@ -1470,12 +1417,13 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Debian</td>
 
 <td class="almost">option during installation</td> <!-- Plasma -->
-<td class="yes">pre-selected at installation</td> <!-- Gnome -->
+<td class="yes">pre-selected option</td> <!-- Gnome -->
 
 <td class="almost">option during installation</td> <!-- Xfce -->
 <td class="almost">option during installation</td>  <!-- MATE -->
 <td class="almost">option during installation</td>  <!-- Cinnamon -->
 <td class="almost">option during installation</td>  <!-- LXQt -->
+<td class="no">not in repository</td>
 <td class="mixed">officially supported</td>
 
 </tr>
@@ -1485,13 +1433,14 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Ubuntu</td>
 
 <td class="almost">default in Kubuntu</td> <!-- Plasma -->
-<td class="yes">default desktop (<span class="tooltip">modified<span class="tooltiptext">Ubuntu comes with a heavily modified GNOME desktop by default, which is configured to look and behave similar to the previous default desktop Unity</span></span>)</td> <!-- Gnome -->
+<td class="yes tooltip">default desktop <span class="tooltiptext">Ubuntu comes with a heavily modified GNOME desktop by default, which is configured to look and behave similar to the previous default desktop Unity</span></td> <!-- Gnome -->
 
 <td class="almost">default in Xubuntu</td> <!-- Xfce -->
 <td class="almost">default in Ubuntu MATE</td>  <!-- MATE -->
-<td class="almost">default in Ubuntu Cinnamon</td>  <!-- Cinnamon -->
+<td class="almost" style="font-size: 90%;">default in Ubuntu Cinnamon</td>  <!-- Cinnamon -->
 <td class="almost">default in Lubuntu</td>  <!-- LXQt -->
-<td class="almost">default in Ubuntu Budgie</td
+<td class="no">not in repository</td>
+<td class="almost">default in Ubuntu Budgie</td>
 </tr>
 
 
@@ -1499,12 +1448,13 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td>Fedora</td>
 
 <td class="yes">default in KDE Edition</td> <!-- Plasma -->
-<td class="yes">default Workstation Edition</td> <!-- Gnome -->
+<td class="yes">default in "Workstation"</td> <!-- Gnome -->
 
 <td class="almost">default in Xfce Spin</td> <!-- Xfce -->
 <td class="almost">default in MATE Spin</td>  <!-- MATE -->
 <td class="almost">default in Cinnamon Spin</td>  <!-- Cinnamon -->
 <td class="almost">default in LXQt Spin</td>  <!-- LXQt -->
+<td class="almost">default in COSMIC Spin</td>
 <td class="almost">default in Budgie Spin</td>
 </tr>
 
@@ -1521,6 +1471,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="mixed">officially supported</td>   <!-- Cinnamon -->
 <td class="mixed">officially supported</td> <!-- LXQt -->
 <td class="mixed">officially supported</td>
+<td class="mixed">officially supported</td>
 </tr>
 
 
@@ -1536,7 +1487,8 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td>   <!-- MATE -->
 <td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td>  <!-- Cinnamon -->
 <td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td> <!-- LXQt -->
-<td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td
+<td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td>
+<td class="almost tooltip">option during installation<span class="tooltiptext">in <em>archinstall</em></span></td>
 
 </tr>
 
@@ -1550,7 +1502,9 @@ The desktop environment "landscape" has fragmented since the controversial initi
 <td class="mixed">officially supported</td>    <!-- MATE -->
 <td class="mixed">officially supported</td>   <!-- Cinnamon -->
 <td class="mixed">officially supported</td> <!-- LXQt -->
+<td class="no">not in repository</td>
 <td class="mixed">officially supported</td>
+
 
 </tr>
 
@@ -1558,54 +1512,58 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
 <tr>
-<td class="semititle">Usage share (estimate)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle">Usage share (estimate)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
+<!--
 <tr>
 <td><a href="https://www.gamingonlinux.com/users/statistics/" target="_blank">GamingOnLinux.com User Statistics (02/2025)</a></td>
 
-<td class="mktshare100">43.2%</td> <!-- Plasma -->
-<td class="mktshare30">26.4%</td> <!-- Gnome -->
+<td class="mktshare100">43.2%</td>
+<td class="mktshare30">26.4%</td>
 
-<td class="mktshare20">6.4%</td> <!-- Xfce -->
-<td class="mktshare5">2.2%</td> <!-- MATE -->
-<td class="mktshare20">7.9%</td> <!-- Cinnamon -->
-<td class="mktshare1">0.4%</td> <!-- LXQt -->
-<td class="mktshare1">0.8%</td> <!-- Budgie -->
+<td class="mktshare20">6.4%</td>
+<td class="mktshare5">2.2%</td>
+<td class="mktshare20">7.9%</td>
+<td class="mktshare1">0.4%</td>
+<td class="mktshare1">0.8%</td>
 
 </tr>
+-->
 
 
 <tr>
-<td><a href="https://linux-hardware.org/?view=os_de" target="_blank">Hardware for Linux Trends (05/2025)</a></td>
+<td><a href="https://linux-hardware.org/?view=os_de" target="_blank">Hardware for Linux Trends (11/2025)</a></td>
 
-<td class="mktshare40">38.2%</td> <!-- Plasma -->
-<td class="mktshare40">34.1%</td> <!-- Gnome -->
+<td class="mktshare100">41.4%</td> <!-- Plasma -->
+<td class="mktshare30">28.2%</td> <!-- Gnome -->
 
-<td class="mktshare5">4.7%</td> <!-- Xfce -->
-<td class="mktshare5">1.9%</td> <!-- MATE -->
-<td class="mktshare20">9.4%</td> <!-- Cinnamon -->
-<td class="mktshare5">1.9%</td> <!-- LXQt -->
-<td class="mktshare1">0.3%</td> <!-- Budgie -->
+<td class="mktshare10">5.1%</td> <!-- Xfce -->
+<td class="mktshare5">1.6%</td> <!-- MATE -->
+<td class="mktshare20">11.4%%</td> <!-- Cinnamon -->
+<td class="mktshare5">1.8%</td> <!-- LXQt -->
+<td class="mktshare1">0.7%</td> <!-- Cosmic -->
+<td class="mktshare1">0.2%</td> <!-- Budgie -->
 
 </tr>
 
 <tr>
-<td><a href="https://pkgstats.archlinux.de/compare/packages#packages=cinnamon,gnome-shell,lxqt-session,mate-panel,plasma-workspace,xfdesktop,budgie-desktop" target="_blank">Arch (<u>no default desktop</u>) - installations (05/2025)</a></td>
+<td><a href="https://pkgstats.archlinux.de/compare/packages#packages=cinnamon,gnome-shell,lxqt-session,mate-panel,plasma-workspace,xfdesktop,budgie-desktop,cosmic-session" target="_blank">Arch (<u>no default desktop</u>) - installations (12/2025)</a></td>
 
-<td class="mktshare40">33.5%</td> <!-- Plasma -->
-<td class="mktshare20">18.5%</td> <!-- Gnome -->
+<td class="mktshare40">38.4%</td> <!-- Plasma -->
+<td class="mktshare20">19.8%</td> <!-- Gnome -->
 
-<td class="mktshare20">11.6%</td> <!-- Xfce -->
-<td class="mktshare5">2.0%</td> <!-- MATE -->
-<td class="mktshare5">2.9%</td> <!-- Cinnamon -->
+<td class="mktshare20">10.7%</td> <!-- Xfce -->
+<td class="mktshare5">2.1%</td> <!-- MATE -->
+<td class="mktshare5">3.2%</td> <!-- Cinnamon -->
 <td class="mktshare5">2.5%</td> <!-- LXQt -->
-<td class="mktshare1">0.7%</td> <!-- Budgie -->
+<td class="mktshare5">1.7%</td> <!-- Cosmic -->
+<td class="mktshare1">0.5%</td> <!-- Budgie -->
 
 </tr>
 
@@ -1626,7 +1584,7 @@ The desktop environment "landscape" has fragmented since the controversial initi
 
 
 <tr height="10">
-<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 
