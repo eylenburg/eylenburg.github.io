@@ -7871,7 +7871,7 @@ style='opacity:0.6;' >
   <path id='__line_DEC__OSF/1__[DEC]' d='M 1210 5035 C 1210,5035 1210,5125 1210,5125 L 1210 5125 L 1360 5125' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DEC__OSF/1__[DEC])' />
   <path id='__line_OSF/1__AD__[Locus__Computing]' d='M 1243 5035 C 1263.25,5035 1249.75,5065 1270,5065 L 1270 5065 L 1330 5065' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1__AD__[Locus__Computing])' />
   <path id='__line_Hitachi__OSF/1-MJ__[Hitachi]' d='M 1210 5035 C 1219,5035 1213,5095 1222,5095 L 1222 5095 L 1330 5095' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Hitachi__OSF/1-MJ__[Hitachi])' />
-  <path id='__line_OSF/1' d='M 1149 5185 C 1194.75,5185 1164.25,5035 1210,5035 L 1210 5035 L 1802 5035' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1)' />
+  <path id='__line_OSF/1' d='M 1149 5185 C 1194.75,5185 1164.25,5035 1210,5035 L 1210 5035 L 1867 5035' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1)' />
   <path id='__line_MacMach' d='M 1220 5185 C 1240.25,5185 1226.75,5155 1247,5155 L 1247 5155 L 1307 5155' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MacMach)' />
   <path id='__line_xMach' d='M 1360 5185 C 1380.25,5185 1366.75,5155 1387,5155 L 1387 5155 L 1515 5155' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_xMach)' />
   <path id='__line_HeliOS__[Perihelion]' d='M 1059 5185 C 1104.75,5185 1074.25,5335 1120,5335 L 1120 5335 L 1447 5335' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HeliOS__[Perihelion])' />
@@ -9277,7 +9277,7 @@ style='opacity:0.6;' >
   <circle id='__dot_HP__OSF/1__[HP]' cx='1210' cy='4945' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Paragon__OSF/1__[Paragon]' cx='1240' cy='4975' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_OSF/MK' cx='1277' cy='5005' r='10' fill='#FF8585' stroke='none' />
-    <circle cx='1370' cy='5005' r='5' fill='#FF8585' stroke='none' />
+    <circle cx='1362' cy='5005' r='5' fill='#FF8585' stroke='none' />
   <circle id='__dot_DEC__OSF/1__[DEC]' cx='1210' cy='5125' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_OSF/1__AD__[Locus__Computing]' cx='1270' cy='5065' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Hitachi__OSF/1-MJ__[Hitachi]' cx='1222' cy='5095' r='10' fill='#FF8585' stroke='none' />
@@ -11144,8 +11144,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1250' y='4971'  >Paragon OSF/1 [Paragon]</text></a>
   <rect x='1286' y='4992' width='50' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1287' y='5001'  >OSF/MK</text></a>
-    <rect x='1374' y='4992' width='48' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-    <a xlink:href=''><text x='1375' y='5001' >MkLinux</text></a>
+    <rect x='1366' y='4992' width='48' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+    <a xlink:href=''><text x='1367' y='5001' >MkLinux</text></a>
   <rect x='1219' y='5112' width='110' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1220' y='5121'  >DEC OSF/1 [DEC]</text></a>
   <rect x='1279' y='5052' width='176' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
