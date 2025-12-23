@@ -18,6 +18,58 @@
 table.comparison {
 width: calc(var(--legendwidth) + 5 * var(--columnwidth));
 }
+
+#office {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: auto;
+}
+
+#office col.platform {
+  width: 1fr;
+}
+
+#office th,
+#office td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#office td:first-child,
+#office th:first-child {
+  text-align: left;
+}
+
+#office .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px;
+  width: max-content;
+}
+
+#office td {
+  white-space: nowrap;
+}
+
+#legendtable {
+  border-collapse: collapse;
+  font-size: small;
+  width: 768px;
+  table-layout: fixed;
+}
+
+#legendtable td {
+  text-align: center;
+  padding: 8px 12px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+
 </style>
 
 </head>
@@ -46,7 +98,7 @@ width: calc(var(--legendwidth) + 5 * var(--columnwidth));
 <li><span style="font-weight: bold;">Softmaker Office</span>, a proprietary office suite from Germany that has been developed since 1987 and is available in free and paid versions</li>
 <li><span style="font-weight: bold;">WPS Office</span>, a proprietary office suite from China going back to 1988</li>
 </ul>
-<p>I limited this comparison to the best-known Excel alternatives and also excluded all those that are not sufficiently cross-platform (Windows, macOS, Linux). For example, not included in the comparison are:</p>
+<p>I limited this comparison to the best-known Excel alternatives and also excluded all those that are not sufficiently cross-platform (Windows, macOS, Linux). See <a href="#appendix">the appendix</a> for a list of more spreadsheet software and the platforms on which they run. For example, not included in the comparison are:</p>
 <ul>
 <li><span style="font-weight: bold;">Apache OpenOffice</span>, as its development has become quite dormant and LibreOffice is a more modern and feature-rich fork</li>
 <li><span style="font-weight: bold;">Calligra Sheets</span>, a KDE app initially release in 2000 as part of KOffice but currently only available for Linux and Unix</li>
@@ -1643,6 +1695,103 @@ width: calc(var(--legendwidth) + 5 * var(--columnwidth));
 <h2>So, what's the conclusion?</h2>
 
 <p>There's no program that's fully compatible with Excel. The unfortunate summary for Linux users is: if you need full Excel compatibility (to open existing Excel files or share your spreadsheets with others) the best solution is to use the web-based version of Excel or to run it in Wine/Crossover or a VM (which is what my <a href="https://github.com/eylenburg/linoffice/" target="_blank">LinOffice</a> does). In fact, all of the Excel alternatives have a mediocre to horrible compatibility, especially when it comes to charts and diagrams. The least bad was (to my surprise) WPS Office, which I rarely see recommended anywhere, possibly because it's Chinese and proprietary. The two free and open source options, LibreOffice and OnlyOffice, are both disappointing, but in different ways, with different flaws and incompatibilities, though overall LibreOffice comes out on top when looking at the comparison table above - yet I personally prefer OnlyOffice's user interface. I don't really see a strong reason to prefer Softmaker Office over the competition, but I was impressed by their mobile app which is basically a full-featured port of the desktop app, while all the others just have a spreadsheet viewer with only a few basic editing features.</p>
+
+<h2 id="appendix">Appendix: What other spreadsheet editors are there?</h2>
+
+<p>The table below shows which spreadsheet software there is and on which platforms they run. Crypt.ee and Proton Sheets are the only browser applications offering end-to-end encryption.</p>
+
+
+<table id="office">
+  <colgroup>
+    <col>
+    <col class="platform">
+    <col class="platform">
+    <col class="platform">
+  </colgroup>
+<tr><th></th><th colspan="3">Supported platforms<br />&nbsp;</th></tr>
+<tr><th></th><th>Desktop</th><th>Mobile</th><th>Browser</th></tr>
+
+<tr><td>Ability Office Spreadsheet</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /></div></td><td></td><td></td></tr>
+<tr><td>Apache OpenOffice Calc</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /><img src="pics/logos/OS_logos_bw/desktop_unix_freebsd.svg" class="icon" alt="FreeBSD" /><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_arcaos.png" style="max-height: 24px;" class="icon" alt="ArcaOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td></td></tr>
+<tr><td>Apple iWork Numbers</td><td><div class="icons"><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /></div></td><td><div class="icons"><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Calligra Sheets</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /><img src="pics/logos/OS_logos_bw/desktop_unix_freebsd.svg" class="icon" alt="FreeBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_openbsd.svg" class="icon" alt="OpenBSD" /><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_unix_dragonflybsd.svg" class="icon" alt="DragonFlyBSD" /><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_haiku.png" class="icon" style="max-height: 24px;" alt="Haiku" /></div></td><td></td><td></td></tr>
+<tr><td>Collabora Office Calc<td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Crypt.ee (based on OnlyOffice)</td><td></td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Docs To Go</td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td></td></tr>
+<tr><td>Ethercalc</td><td></td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Fireworkz</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_riscos.svg" class="icon" alt="RISC OS" /></div></td><td></td><td></td></tr>
+<tr><td>Google Sheets</td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Gnumeric</td><td><div class="icons"><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 90%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /><img src="pics/logos/OS_logos_bw/desktop_unix_freebsd.svg" class="icon" alt="FreeBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_openbsd.svg" class="icon" alt="OpenBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_netbsd.svg" class="icon" alt="NetBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_dragonflybsd.svg" class="icon" alt="DragonFlyBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_illumos.svg" class="icon" alt="Illumos" /><img src="pics/logos/OS_logos_bw/desktop_amigaos.jpg" class="icon" style="max-height: 24px;" alt="AmigaOS" /></div></td><td></td><td></td></tr>
+<tr><td>Hancom Office Cell</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>LibreOffice Calc</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /><img src="pics/logos/OS_logos_bw/desktop_unix_freebsd.svg" class="icon" alt="FreeBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_openbsd.svg" class="icon" alt="OpenBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_netbsd.svg" class="icon" alt="NetBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_dragonflybsd.svg" class="icon" alt="DragonFlyBSD" /><img src="pics/logos/OS_logos_bw/desktop_unix_illumos.svg" class="icon" alt="Illumos" /><img src="pics/logos/OS_logos_bw/desktop_haiku.png" class="icon" style="max-height: 24px;" alt="Haiku" /></div></td><td></td><td></td></tr>
+<tr><td>Microsoft Office Excel </td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>MobiSystems OfficeSuite</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td></td></tr>
+<tr><td>OnlyOffice</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>OX Spreadsheet (for Open-Xchange)</td><td></td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Polaris Office Sheet</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>Proton Sheets</td><td></td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+<tr><td>SmartOffice</td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td></td></tr>
+<tr><td>Softmaker Office PlanMaker</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td></td></tr>
+<tr><td>WordPerfect Office Quattro Pro</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /></div></td><td></td><td></td></tr>
+<tr><td>WPS Office</td><td><div class="icons"><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /><img src="pics/logos/OS_logos_bw/mobile_harmony.svg" class="icon" alt="HarmonyOS" style="width: 24px; height: 24px; filter: grayscale(1);" /></div></td><td></td></tr>
+<tr><td>Zoho Sheet</td><td></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></div></td><td><div class="icons"><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /><!--<img src="pics/logos/OS_logos_bw/browser_edge.svg" class="icon" alt="Edge" /><img src="pics/logos/OS_logos_bw/browser_opera.svg" class="icon" alt="Opera" /><img src="pics/logos/OS_logos_bw/browser_brave.svg" class="icon" alt="Brave" />--></td></tr>
+</table>
+
+
+<p>Legend:</p>
+
+<table id="legendtable">
+<tr>
+<td><img src="pics/logos/OS_logos_bw/desktop_windows.svg" class="icon" alt="Windows" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_macos.svg" class="icon" alt="macOS" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_linux.svg" class="icon" alt="Linux" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_unix_freebsd.svg" class="icon" alt="FreeBSD" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_unix_openbsd.svg" class="icon" alt="OpenBSD" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_unix_netbsd.svg" class="icon" alt="NetBSD" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_unix_dragonflybsd.svg" class="icon" alt="DragonFlyBSD" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_unix_illumos.svg" class="icon" alt="Illumos" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_haiku.png" class="icon" style="max-height: 24px;" alt="Haiku" /></td>
+</tr>
+
+<tr>
+<td>Windows</td>
+<td>macOS</td>
+<td>Linux</td>
+<td>Free<wbr>BSD</td>
+<td>Open<wbr>BSD</td>
+<td>Net<wbr>BSD</td>
+<td>Dragon&shy;Fly<wbr>BSD</td>
+<td>Illumos</td>
+<td>Haiku</td>
+</tr>
+
+</table>
+
+<table id="legendtable">
+<tr>
+<td><img src="pics/logos/OS_logos_bw/mobile_android.svg" class="icon" alt="Android" /></td>
+<td><img src="pics/logos/OS_logos_bw/mobile_ios.svg" class="icon" alt="iOS" /></td>
+<td><img src="pics/logos/OS_logos_bw/mobile_harmony.svg" class="icon" alt="HarmonyOS" style="width: 24px; height: 24px; filter: grayscale(1);" /></td>
+<td><img src="pics/logos/OS_logos_bw/browser_firefox.svg" class="icon" alt="Firefox" /></td>
+<td><img src="pics/logos/OS_logos_bw/browser_safari.svg" class="icon" alt="Safari" /></td>
+<td><img src="pics/logos/OS_logos_bw/browser_chrome.svg" class="icon" alt="Chrome" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_arcaos.png" style="max-height: 24px;" class="icon" alt="ArcaOS" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_amigaos.jpg" class="icon" style="max-height: 24px;" alt="AmigaOS" /></td>
+<td><img src="pics/logos/OS_logos_bw/desktop_riscos.svg" class="icon" alt="RISC OS" /></td>
+</tr>
+<tr>
+<td>Android</td>
+<td>iOS</td>
+<td>HarmonyOS</td>
+<td>Firefox</td>
+<td>Safari</td>
+<td>Chromium</td>
+<td>ArcaOS</td>
+<td>AmigaOS</td>
+<td>RISC OS</td>
+</tr>
+</table>
+
 
 <script src="bottom.js "></script>
 </body>
