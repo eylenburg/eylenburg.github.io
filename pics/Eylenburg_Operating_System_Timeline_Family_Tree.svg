@@ -13,7 +13,7 @@
   version='1.1'
   width='2390'
   height='46340'
-  viewBox='0 0 2390 46340'
+  viewBox='0 0 2390 46430'
 >
 
 <title>Operating Systems</title>
@@ -1302,6 +1302,20 @@
   </linearGradient>
   <marker id='__stop_SPP-UX__[Convex]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_SPP-UX__[Convex])' />
+  </marker>
+  <linearGradient id='__fadeout_HP-UX__[HP]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_HP-UX__[HP]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_HP-UX__[HP])' />
+  </marker>
+  <linearGradient id='__fadeout_HI-UX__[Hitachi]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
+    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
+    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
+  </linearGradient>
+  <marker id='__stop_HI-UX__[Hitachi]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
+    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_HI-UX__[Hitachi])' />
   </marker>
   <linearGradient id='__fadeout_Plexus__System__[Plexus]' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
@@ -8054,9 +8068,9 @@ style='opacity:0.6;' >
   <path id='__line_PC-IX__[Interactive__Systems__Corp]' d='M 980 3295 C 1000.25,3295 986.75,3325 1007,3325 L 1007 3325 L 1057 3325' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_PC-IX__[Interactive__Systems__Corp])' />
   <path id='__line_IS/1__[Interactive]' d='M 666 2845 C 745.5,2845 692.5,3295 772,3295 L 772 3295 L 1437 3295' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_IS/1__[Interactive])' />
   <path id='__line_UNIX/TS' d='M 621 2845 C 702.75,2845 648.25,3325 730,3325 L 730 3325 L 970 3325' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UNIX/TS)' />
-  <path id='__line_HI-UX__[Hitachi]' d='M 1063 5635 C 1083.25,5635 1069.75,5665 1090,5665 L 1090 5665 L 2287 5665' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_HI-UX__[Hitachi]' d='M 1063 5635 C 1083.25,5635 1069.75,5665 1090,5665 L 1090 5665 L 1690 5665' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HI-UX__[Hitachi])' />
   <path id='__line_SPP-UX__[Convex]' d='M 1273 5635 C 1293.25,5635 1279.75,5605 1300,5605 L 1300 5605 L 1357 5605' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SPP-UX__[Convex])' />
-  <path id='__line_HP-UX__[HP]' d='M 880 4795 C 925,4795 895,5635 940,5635 L 940 5635 L 2287 5635' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_HP-UX__[HP]' d='M 880 4795 C 925,4795 895,5635 940,5635 L 940 5635 L 2259 5635' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HP-UX__[HP])' />
   <path id='__line_UTS/M__[Fujitsu]' d='M 1010 3445 C 1030.25,3445 1016.75,3475 1037,3475 L 1037 3475 L 1197 3475' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UTS/M__[Fujitsu])' />
   <path id='__line_UTS__[Amdahl]' d='M 880 4795 C 910,4795 890,3445 920,3445 L 920 3445 L 1480 3445' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UTS__[Amdahl])' />
   <path id='__line_MP-RAS__Unix__[NCR]' d='M 880 4795 C 925,4795 895,3505 940,3505 L 940 3505 L 1357 3505' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MP-RAS__Unix__[NCR])' />
@@ -8096,6 +8110,7 @@ style='opacity:0.6;' >
   <path id='__line_Tribblix' d='M 1832 4525 C 1860.5,4525 1841.5,4465 1870,4465 L 1870 4465 L 2287 4465' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Unleashed' d='M 2005 4525 C 2025.25,4525 2011.75,4495 2032,4495 L 2032 4495 L 2087 4495' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Unleashed)' />
   <path id='__line_SchilliX' d='M 1642 4525 C 1642.75,4525 1642.25,4705 1643,4705 L 1643 4705 L 1857 4705' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_SchilliX)' />
+  <path id='__line_Helios' d='M 2070 4525 C 2090.25,4525 2076.75,4555 2097,4555 L 2097 4555 L 2287 4555' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Dyson' d='M 1875 4525 C 1895.25,4525 1881.75,4555 1902,4555 L 1902 4555 L 2075 4555' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Dyson)' />
   <path id='__line_DilOS' d='M 1818 4525 C 1846.5,4525 1827.5,4585 1856,4585 L 1856 4585 L 2287 4585' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_SmartOS' d='M 1755 4525 C 1790.25,4525 1766.75,4615 1802,4615 L 1802 4615 L 2287 4615' stroke='#8B0000' style='stroke-width:4;' />
@@ -9518,9 +9533,9 @@ style='opacity:0.6;' >
     <circle cx='1030' cy='3295' r='5' fill='#FF8585' stroke='none' />
     <circle cx='1120' cy='3295' r='5' fill='#FF8585' stroke='none' />
   <circle id='__dot_UNIX/TS' cx='730' cy='3325' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_HI-UX__[Hitachi]' cx='1090' cy='5665' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_HI-UX__[Hitachi]' cx='1090' cy='5665' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_SPP-UX__[Convex]' cx='1300' cy='5605' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_HP-UX__[HP]' cx='940' cy='5635' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_HP-UX__[HP]' cx='940' cy='5635' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_UTS/M__[Fujitsu]' cx='1037' cy='3475' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_UTS__[Amdahl]' cx='920' cy='3445' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_MP-RAS__Unix__[NCR]' cx='940' cy='3505' r='10' fill='#FF8585' stroke='none' />
@@ -9562,6 +9577,7 @@ style='opacity:0.6;' >
   <circle id='__dot_Tribblix' cx='1870' cy='4465' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Unleashed' cx='2032' cy='4495' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_SchilliX' cx='1643' cy='4705' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Helios' cx='2097' cy='4555' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Dyson' cx='1902' cy='4555' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_DilOS' cx='1856' cy='4585' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_SmartOS' cx='1802' cy='4615' r='10' fill='#8B0000' stroke='none' />
@@ -11463,6 +11479,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='2042' y='4491'  >Unleashed</text></a>
   <rect x='1652' y='4692' width='43' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1653' y='4701'  >SchilliX</text></a>
+  <rect x='2106' y='4542' width='36' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='2107' y='4551'  >Helios</text></a>
   <rect x='1911' y='4542' width='36' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1912' y='4551'  >Dyson</text></a>
   <rect x='1865' y='4572' width='33' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
