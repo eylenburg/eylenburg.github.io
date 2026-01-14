@@ -8076,7 +8076,7 @@ style='opacity:0.6;' >
   <path id='__line_Mac__OS__X__[Apple]' d='M 1480 2305 C 1506.25,2305 1488.75,2215 1515,2215 L 1515 2215 L 2287 2215' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_FreeDarwin' d='M 1638 2305 C 1658.25,2305 1644.75,2275 1665,2275 L 1665 2275 L 1670 2275' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_FreeDarwin)' />
   <path id='__line_DarwinBSD' d='M 1823 2305 C 1843.25,2305 1829.75,2275 1850,2275 L 1850 2275 L 1872 2275' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_DarwinBSD)' />
-  <path id='__line_GNU-Darwin' d='M 1480 2305 C 1498.75,2305 1486.25,2365 1505,2365 L 1505 2365 L 1690 2365' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_GNU-Darwin)' />
+  <path id='__line_GNU-Darwin' d='M 1480 2305 C 1498.75,2305 1486.25,2365 1505,2365 L 1505 2365 L 1570 2365' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_GNU-Darwin)' />
   <path id='__line_Darwin__[Apple]' d='M 1430 2125 C 1467.5,2125 1442.5,2305 1480,2305 L 1480 2305 L 2287 2305' stroke='#8B008B' style='stroke-width:4;' />
   <path id='__line_Rhapsody' d='M 1403 2095 C 1423.25,2095 1409.75,2125 1430,2125 L 1430 2125 L 1515 2125' stroke='#ae80ae' style='stroke-width:4;' marker-end='url(#__stop_Rhapsody)' />
   <path id='__line_NeXTSTEP__[NeXT__Computer]' d='M 1078 1885 C 1132,1885 1096,2095 1150,2095 L 1150 2095 L 1507 2095' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_NeXTSTEP__[NeXT__Computer])' />
