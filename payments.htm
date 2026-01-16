@@ -12,15 +12,15 @@
 <style>
 :root {
 --legendwidth: 300px;
---currencywidth: 145px;
+--currencywidth: 133px;
 }
 
 table {
 font-size: small;
-width: calc(var(--legendwidth) + 11 * var(--currencywidth));
+width: calc(var(--legendwidth) + 12 * var(--currencywidth));
 }
 
-.lightning { font-size: smaller; }
+.lightning, .wip { font-size: smaller; }
 
 </style>
 </head>
@@ -38,7 +38,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 
 <h2 class="center">Comparison of Payment Methods</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 25 July 2025</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 16 January 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -54,6 +54,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <!-- end fiat, begin crypto -->
 <col style="border-left: double; width: var(--currencywidth);">
+<col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--currencywidth);">
@@ -73,12 +74,13 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td style="width: var(--currencywidth);"></td>
 <td style="width: var(--currencywidth);"></td>
 <td style="width: var(--currencywidth);"></td>
+<td style="width: var(--currencywidth);"></td>
 </tr>
 
 <tr class="groups" style="font-size: large; font-weight: bold; border: none;">
 <td></td>
 <td colspan="7" style="border: 1px solid grey;">Fiat money</td>
-<td colspan="4" style="border: 1px solid grey;" >Cryptocurrencies</td>
+<td colspan="5" style="border: 1px solid grey;" >Cryptocurrencies</td>
 </tr>
 
 <tr style="font-size: larger; font-weight: bold;">
@@ -94,6 +96,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <th>Bitcoin Cash (BCH)</th>
 <th>Litecoin (LTC)</th>
 <th>Monero (XMR)</th>
+<th>ZCash (ZEC)</th>
 </tr>
 
 </thead>
@@ -112,11 +115,12 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td style="vertical-align: middle;"><img src="pics/logos/other/crypto/bch.svg" style="height: 100px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/crypto/ltc.svg" style="height: 100px; max-width: 190px;" /></td>
 <td style="vertical-align: middle;"><img src="pics/logos/other/crypto/xmr.svg" style="height: 100px; max-width: 190px;" /></td>
+<td style="vertical-align: middle;"><img src="pics/logos/other/crypto/zec.svg" style="height: 100px; max-width: 190px;" /></td>
 </tr>
 
 
 <!-- <tr> -->
-<td class="semititle"><br />Utility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Utility</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -132,6 +136,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Theoretically unlimited <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> due to variable blocksize (since May 2024).</td>
 <td class="mixed">No, the blockchain can process only 56 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>, although this is currently sufficient. <em>MWEB (Mimble&shy;Wimble Extension Blocks)</em> improve scalability by aggregating multiple transactions. <br /><span class="yes lightning">The "Layer 2" <em>Lightning Network</em> allows "millions to billions" of <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>.</span></td>
 <td class="yes">Theoretically unlimited <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span> due to variable blocksize.</td>
+<td class="mixed">No, the blockchain can process only around 6-27 <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>, depending on the mix of shielded and transparent transactions, although this is currently sufficient. <br /><span class="almost wip">Project Tachyon is a planned architectural update that would scale Zcash's shielded transaction throughput to thousands of <span class="tooltip">TPS<span class="tooltiptext">transactions per second</span></span>.</span></td>
 </tr>
 
 <tr>
@@ -147,6 +152,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="mixed">10 minutes for one block confirmation. <br /><span class="yes">Instant with 0-conf which is relatively safe for BCH due to double spend proofs.</span></td>
 <td class="mixed">2.5 minutes for one block confirmation. <br /><span class="yes lightning">Instant with the "Layer 2" <em>Lightning Network</em>.</span></td>
 <td class="mixed">20 minutes to fully confirm payment and be able to spend received money (10 block confirmations, 2 minutes per block).</td>
+<td class="mixed">75 seconds for one block confirmation.</td>
 </tr>
 
 <tr>
@@ -162,11 +168,12 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
 <td class="yes">Very low fees at current network usage. Normally, a transaction costs a few USD cents.<br /><span class="lightning yes tooltip">Cheap transactions using the <em>Lightning Network</em> are also possible. <span class="tooltiptext">But will still incur fees for opening/closing the channel and the Lightning node</span></span></td>
 <td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
+<td class="yes">Very low fees. Normally, a transaction costs a few USD cents.</td>
 </tr>
 
 
 <tr>
-<td class="semititle"><br />Decentralization</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Decentralization</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -178,6 +185,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">Yes (by PayPal)</td>
 <td class="mixed">For merchants only (Taler exchanges can refuse to process fund deposits to a merchant or refreshing coins)</td>
 <td class="no tooltip">Yes (by government/central bank)<span class="tooltiptext">CBDCs could empower the state to make it impossible to donate to a certain NGO or could prohibit certain people from purchasing certain items such as a flight ticket or alcohol.</span></td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
@@ -197,6 +205,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
 <td class="yes">Not possible if using a non-custodial wallet.</td>
+<td class="yes">Not possible if using a non-custodial wallet.</td>
 </tr>
 
 <tr>
@@ -212,11 +221,12 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <br /><span class="lightning yes tooltip">Source of funds can be obscured by mixing (<em>CashFusion</em>), with various downsides.<span class="tooltiptext">such as minimum funds needed, the time and fees for mixing, and the likely blacklisting of mixed coins from CEX and off-ramping providers</span></span></td>
 <td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <span class="yes tooltip">Coins used in <em>MWEB</em> transactions are fungible.<span class="tooltiptext">By obfuscating the sending and receiving addresses as well as the transaction amounts, the individual units of Litecoin used in MWEB are indistinguishable from one another and therefore can't be identified and potentially blacklisted.</span></span></td>
 <td class="yes">Yes</td>
+<td class="no">No. Due to the public blockchain, coins can become "tainted" and wallets can be blacklisted. <span class="yes tooltip">Coins used in <em>shielded transactions</em> transactions are fungible.<span class="tooltiptext">Due to privacy via zk-SNARKs, individual units of Zcash used in shielded transactions are indistinguishable from one another and therefore can't be identified and potentially blacklisted.</span></span></td>
 </tr>
 
 
 <tr>
-<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Privacy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -228,6 +238,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">No, PayPal requires customer identification.</td>
 <td class="no">No, requires bank account linkage. Merchants are auditable for tax purposes.</td>
 <td class="no">No (TBC)</td>
+<td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
 <td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
 <td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
 <td class="yes">Yes, but most <span class="tooltip">CEX<span class="tooltiptext">Centralized Exchanges</span></span> require KYC.</td>
@@ -245,8 +256,9 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">The government has direct visibility of financial transactions and the spending of everyone. Sender and recipient know each other.</td>
 <td class="no">Everyone can view transactions on the blockchain. <br /><span class="lightning mixed">Using the <em>Lightning Network</em> slightly improves privacy.</span></td>
 <td class="no">Everyone can view transactions on the blockchain.</td>
-<td class="no">Everyone can view transactions on the blockchain, <span class="tooltip yes">except for <em>MWEB</em> transactions<span class="tooltiptext">MWEB (Mimblewimble Extension Blocks) hides amounts and addresses. The downside is that coins might get blacklisted by CEX and off-ramping providers.</span></span><br /><span class="lightning mixed">Using the <em>Lightning Network</em> slightly improves privacy.</span></td>
+<td class="no">Everyone can view transactions on the blockchain, <span class="tooltip yes">except for <em>MWEB</em> transactions, which hide amounts and addresses.<span class="tooltiptext"> The downside is that coins might get blacklisted by CEX and off-ramping providers.</span></span><br /><span class="lightning mixed">Using the <em>Lightning Network</em> slightly improves privacy.</span></td>
 <td class="yes">Private by default. Even sender and recipient can remain anonymous from each other. View keys exist for opt-in transparency.</td>
+<td class="no">Everyone can view transactions on the blockchain, except for <span class="tooltip yes"><em>shielded transactions</em>, which hide amounts and addresses. <span class="tooltiptext">View keys exist for selective disclosure.</span></span></td>
 </tr>
 
 <tr>
@@ -262,11 +274,12 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">Everyone can see the funds of a wallet on the blockchain.</td>
 <td class="no">Everyone can see the funds of a wallet on the blockchain, <span class="tooltip yes">except those relating to <em>MWEB</em> transactions. <span class="tooltiptext">Transactions that are done on MWEB remains private indefinitely and the corresponding wallet balances are therefore hidden. However, when moving funds from MWEB to the normal blockchain an aggregated transaction is created, thereby making the total funds publicly visible again.</span></span></td>
 <td class="yes">Only the owner knows his/her total wealth.</td>
+<td class="no">Everyone can see the funds of a wallet on the blockchain, <span class="tooltip yes">except for funds in shielded pools. <span class="tooltiptext">Shielded transactions remain private indefinitely and the corresponding wallet balances are therefore hidden. However, when moving funds from a shielded pool to the normal (transparent) blockchain a deshielding transaction is required, thereby making the total funds publicly visible again.</span></span></td>
 </tr>
 
 
 <tr>
-<td class="semititle"><br />Acceptance</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Acceptance</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -278,6 +291,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="almost">Yes (with phone app, in participating countries)</td>
 <td class="mixed">Yes, but very little adoption (pilot phase).</td>
 <td class="line">TBC</td>
+<td class="mixed">Yes, but negligible point-of-sale adoption.</td>
 <td class="mixed">Yes, but negligible point-of-sale adoption.</td>
 <td class="mixed">Yes, but negligible point-of-sale adoption.</td>
 <td class="mixed">Yes, but negligible point-of-sale adoption.</td>
@@ -297,6 +311,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
@@ -312,10 +327,11 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
+<td class="yes">Yes</td>
 </tr>
 
 <tr>
-<td class="semititle"><br />Other considerations</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="semititle"><br />Other considerations</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
 <tr>
@@ -327,6 +343,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="line">TBC</td>
+<td class="no">No (unless supported by wallet app)</td>
 <td class="no">No (unless supported by wallet app)</td>
 <td class="no">No (unless supported by wallet app)</td>
 <td class="no">No (unless supported by wallet app)</td>
@@ -346,11 +363,13 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="no">No, transactions are final</td>
 <td class="no">No, transactions are final</td>
 <td class="no">No, transactions are final</td>
+<td class="no">No, transactions are final</td>
 </tr>
 
 <tr>
 <td>Useable without electricity or Internet?</td>
 <td class="yes">Yes</td>
+<td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="no">No</td>
@@ -371,6 +390,7 @@ width: calc(var(--legendwidth) + 11 * var(--currencywidth));
 <td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
 <td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
 <td class="almost">Probably yes. There is a perpetual coin issuance (tail emissions) with inflation asymptotically approaching zero. Supply is further reduced by lost wallet seeds.</td>
+<td class="yes">Yes, deflationary. Fixed maximum supply which is further reduced by lost wallet seeds.</td>
 </tr>
 
 </tbody>
