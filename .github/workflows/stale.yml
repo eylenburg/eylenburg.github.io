@@ -19,7 +19,7 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
           # Issue behavior
-          days-before-issue-stale: 30
+          days-before-issue-stale: 90
           days-before-issue-close: 0
           stale-issue-label: stale
           exempt-issue-labels: planned
