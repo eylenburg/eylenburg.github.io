@@ -9415,7 +9415,7 @@ style='opacity:0.6;' >
   <path id='__line_ultronOS' d='M 1980 45205 L 2017 45205' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ultronOS)' />
   <path id='__line_Urbit' d='M 1870 45235 L 2287 45235' stroke='#000' style='stroke-width:4;' />
   <path id='__line_V2_OS' d='M 1450 45265 L 1540 45265' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_V2_OS)' />
-  <path id='__line_Valix' d='M 1815 45295 L 1917 45295' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Valix)' />
+  <path id='__line_Valix' d='M 1750 45295 L 1917 45295' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Valix)' />
   <path id='__line_Vanadinite' d='M 2082 45325 L 2287 45325' stroke='#000' style='stroke-width:4;' />
   <path id='__line_VEKOS' d='M 2227 45355 L 2287 45355' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Verex' d='M 850 45385 L 910 45385' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Verex)' />
@@ -11115,7 +11115,7 @@ style='opacity:0.6;' >
   <circle id='__dot_ultronOS' cx='1980' cy='45205' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Urbit' cx='1870' cy='45235' r='10' fill='#000' stroke='none' />
   <circle id='__dot_V2_OS' cx='1450' cy='45265' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Valix' cx='1815' cy='45295' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_Valix' cx='1750' cy='45295' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Vanadinite' cx='2082' cy='45325' r='10' fill='#000' stroke='none' />
   <circle id='__dot_VEKOS' cx='2227' cy='45355' r='10' fill='#000' stroke='none' />
   <circle id='__dot_Verex' cx='850' cy='45385' r='10' fill='#AAA' stroke='none' />
@@ -14485,8 +14485,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1880' y='45231'  >Urbit</text></a>
   <rect x='1459' y='45252' width='41' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1460' y='45261'  >V2_OS</text></a>
-  <rect x='1824' y='45282' width='28' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1825' y='45291'  >Valix</text></a>
+  <rect x='1759' y='45282' width='28' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1760' y='45291'  >Valix</text></a>
   <rect x='2091' y='45312' width='62' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2092' y='45321'  >Vanadinite</text></a>
   <rect x='2236' y='45342' width='43' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
