@@ -17,6 +17,7 @@ document.write(`
 <td><a href="countries.htm">(10) <strong>Digital Freedom</strong> across the World</a></td>
 <td><a href="#"><strong>Other articles</strong></a>
     <div class="submenu">
+        <a href="ai_search_maps.htm">[2026] <strong>Search, AI, Maps</strong> - overview of providers</a>
         <a href="small_phones.htm">[2025] <strong>All phones are huge</strong> - a data-backed rant</a>
         <a href="altchans.htm">[2025] <strong>Altchans</strong> - imageboard activity beyond 4chan</a>
         <a href="linux_distrowatch.htm">[2023] <strong>Linux distro popularity</strong> (on Distrowatch)</a>

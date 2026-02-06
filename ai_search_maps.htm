@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Overview of Search, AI/LLM and Maps Providers</title>
+<meta name="darkreader-lock">
+<meta name="description" content="Overview of Search, AI/LLM and Maps Providers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="technology, operating systems, Linux distributions, Android ROMs, desktop environments, web browsers, instant messengers, cloud services, privacy, digital freedom, payments, cryptocurrencies, productivity software">
+<meta name="author" content="Alphonse Eylenburg">
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+        --table-bg: #ffffff;
+        --header-bg: #f1f3f5;
+        --subhead-bg: #e9ecef;
+        --border-color: #d0d4d8;
+        --text: #1f2529;
+        --hover: #f8f9fb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --table-bg: #1c2024;
+            --header-bg: #2a2f35;
+            --subhead-bg: #252a30;
+            --border-color: #3a424a;
+            --text: #e0e4e8;
+            --hover: #252a30;
+        }
+    }
+
+    table.providers {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2.5rem;
+        background: var(--table-bg);
+        color: var(--text);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    table.providers th,
+    table.providers td {
+        padding: 14px 18px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px dotted var(--border-color);
+    }
+
+    table.providers th {
+        border-bottom: 2px solid var(--border-color);
+    }
+
+/* ────── COLUMN WIDTHS WITH MIN + MAX ────── */
+    /* Name */
+    table.providers th:nth-child(1),
+    table.providers td:nth-child(1) {
+        min-width: 50px;
+        max-width: 20%;
+        width: 15%;
+    }
+
+    /* Developer */
+    table.providers th:nth-child(2),
+    table.providers td:nth-child(2) {
+        min-width: 50px;
+        max-width: 20%;
+        width: 15%;
+    }
+
+    /* Country (flag) */
+    table.providers th:nth-child(3),
+    table.providers td:nth-child(3) {
+        min-width: 50px;
+        max-width: 25%;
+        width: 10%;
+        text-align: center;
+    }
+
+    /* Index / LLM / Map data (the long one) */
+    table.providers th:nth-child(4),
+    table.providers td:nth-child(4) {
+        min-width: 200px;
+        max-width: 40%;
+        width: 30%;
+    }
+
+    /* Account / Features */
+    table.providers th:nth-child(5),
+    table.providers td:nth-child(5) {
+        min-width: 200px;
+        max-width: 40%;
+        width: 30%;
+    }
+
+    table.providers th {
+        background: var(--header-bg);
+        font-weight: 700;
+        color: #0066cc;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    table.providers .subheading td {
+        background: var(--subhead-bg);
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        padding: 10px 18px;
+        color: #666;
+        border-bottom: 2px solid var(--border-color);
+        border-top: 2px solid var(--border-color);
+        letter-spacing: 0.4px;
+    }
+
+    /* Row hover + subtle zebra striping */
+    table.providers tbody tr:hover,
+    table.providers tr:hover {
+        background: var(--hover);
+    }
+
+    table.providers tbody tr:nth-child(even),
+    table.providers tr:nth-child(even) {
+        background: rgba(240, 243, 246, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        table.providers tbody tr:nth-child(even),
+        table.providers tr:nth-child(even) {
+            background: rgba(40, 45, 52, 0.6);
+        }
+        table.providers th {
+            color: #6b9ccc;
+        }
+    }
+</style>
+</head>
+<body>
+
+<script src="top.js"></script>
+<header>
+<p><a href="index.html">&larr; Sitemap</a></p>
+</header>
+
+<h1>Overview of Search, AI/LLM and Maps Providers</h1>
+<h2>Which ones are "original", which ones just front-ends?</h2>
+<p style="color: red; font-size: small;">Published: February 2026</p>
+
+<p>Almost everything we use to access knowledge and information - such as web search, AI chats, and maps - is dominated by a few giant companies and a large number of smaller competitors. But not every service uses their own data and technology, many are a front-end for other providers.<br /><br />
+The below tables are a quick overview which technologies and data source are used, for example which search index powers the search results of a search engine, which Large Language Model (LLM) family powers the various AI chatbots that have recently popped up, and which map providers are there. For example, Google, Bing, and Brave Search use their own search index, while DuckDuckGo, Startpage, and Yahoo are just regurgitating other providers' search results. Likewise, OpenAI's ChatGPT, Anthropic's Claude, xAI's Grok, Google's Gemini, Meta AI's Llama, and Mistral's Le Chat run their own LLM families, while others, including big names like Microsoft Copilot or Perplexity, rely on these models rather than creating their own.<br /><br />
+This is not meant to be a comprehensive list of all providers and I also don't intend to make this into a larger, more complicated comparison table like some of the others on this website.</p>
+
+<h2>Selected Search Engines</h2>
+<table class="providers" id="search">
+    <tr>
+        <th>Name</th>
+        <th>Developer</th>
+        <th>Country</th>
+        <th>Search index</th>
+        <th>Requires account?</th>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>(Mostly) uses own search index</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.bing.com/" target="_blank">Bing</a></td>
+        <td>Microsoft</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Bing</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://search.brave.com/" target="_blank">Brave Search</a></td>
+        <td>Brave</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Brave</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.google.com/" target="_blank">Google</a></td>
+        <td>Google</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Google</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.mojeek.com/" target="_blank">Mojeek</a></td>
+        <td>Mojeek</td>
+        <td>UK &#127468;&#127463;</td>
+        <td>Mojeek</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.qwant.com/" target="_blank">Qwant</a></td>
+        <td>Qwant</td>
+        <td>France &#127467;&#127479;</td>
+        <td><span class="tooltip">Staan<span class="tooltiptext">A new European search index created by a joint venture of Qwant and Ecosia. <a href="https://transformit.eu/news/search-engine-staan-a-signal-for-europes-digital-future/" target="_blank">As of August 2025, Qwant already sourced 50% of its search results from Staan.</a></span></span> &amp; Bing</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.yandex.com/" target="_blank">Yandex</a></td>
+        <td>Yandex</td>
+        <td>Russia &#127479;&#127482;</td>
+        <td>Yandex</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>(Mostly) uses third-party search index</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.duckduckgo.com/" target="_blank">DuckDuckGo</a></td>
+        <td>DuckDuckGo</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>mostly Bing <a href="https://duckduckgo.com/duckduckgo-help-pages/results/sources" target="_blank">↫</a></td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.ecosia.org/" target="_blank">Ecosia</a></td>
+        <td>Ecosia</td>
+        <td>Germany &#127465;&#127466;</td>
+        <td><span class="tooltip">Staan<span class="tooltiptext">A new European search index created by a joint venture of Qwant and Ecosia. <a href="https://transformit.eu/news/search-engine-staan-a-signal-for-europes-digital-future/" target="_blank">As of August 2025, Ecosia sourced 33% of its search results from Staan.</a></span></span>, Google, Bing <a href="https://support.ecosia.org/article/579-search-results-providers" target="_blank">↫</a></td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.kagi.com/" target="_blank">Kagi</a></td>
+        <td>Kagi</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>various, incl. its own index Teclis <a href="https://help.kagi.com/kagi/search-details/search-sources.html" target="_blank">↫</a></td>
+        <td style="color: red;">Yes (paid)</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.startpage.com/" target="_blank">Startpage</a></td>
+        <td>Startpage</td>
+        <td>Netherlands &#x1F1F3;&#x1F1F1;</td>
+        <td>Google &amp; Bing</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://search.yahoo.com/" target="_blank">Yahoo Search</a></td>
+        <td>Yahoo</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Bing</td>
+        <td>No</td>
+    </tr>
+</table>
+
+<h2>Selected AI Providers</h2>
+<table class="providers" id="ai">
+    <tr>
+        <th>Name</th>
+        <th>Developer</th>
+        <th>Country</th>
+        <th>LLM family</th>
+        <th>Requires account?</th>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>Own LLMs - Western providers</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.chatgpt.com/" target="_blank">ChatGPT</a></td>
+        <td>OpenAI</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>GPT</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.claude.ai/" target="_blank">Claude</a></td>
+        <td>Anthropic</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Claude</td>
+        <td style="color: red;">Yes</td>
+    </tr>
+    <tr>
+        <td><a href="https://gemini.google.com/app" target="_blank">Gemini</a></td>
+        <td>Google</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Gemini</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.grok.com/" target="_blank">Grok</a></td>
+        <td>xAI</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Grok</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.meta.ai/" target="_blank">Meta AI</a></td>
+        <td>Meta</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Llama</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://chat.mistral.ai/" target="_blank">Mistral Le Chat</a></td>
+        <td>Mistral</td>
+        <td>France &#127467;&#127479;</td>
+        <td>Mistral</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>Own LLMs - Chinese providers</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://chat.deepseek.com/" target="_blank">Deepseek</a></td>
+        <td>Deepseek</td>
+        <td>China &#127464;&#127475;</td>
+        <td>Deepseek</td>
+        <td style="color: red;">Yes</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.kimi.com/" target="_blank">Kimi Chat</a></td>
+        <td>Moonshot AI</td>
+        <td>China &#127464;&#127475;</td>
+        <td>Kimi</td>
+        <td style="color: red;">Yes</td>
+    </tr>
+    <tr>
+        <td><a href="https://chat.qwen.ai/" target="_blank">Qwen</a></td>
+        <td>Alibaba</td>
+        <td>China &#127464;&#127475;</td>
+        <td>Qwen</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://chat.z.ai/" target="_blank">z.AI Chat</a></td>
+        <td>z.AI</td>
+        <td>China &#127464;&#127475;</td>
+        <td>GLM</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>Uses third-party LLMs</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://copilot.microsoft.com/" target="_blank">Copilot</a></td>
+        <td>Microsoft</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>mainly based on OpenAI's GPT</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.perplexity.com/" target="_blank">Perplexity</a></td>
+        <td>Perplexity</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>multiple LLMs used</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td colspan="5" class="subheading"><strong>Uses third-party LLMs &amp; advertises privacy</strong></td>
+    </tr>
+    <tr>
+        <td><a href="https://search.brave.com/ask" target="_blank">Ask Brave</a></td>
+        <td>Brave</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>multiple LLMs used</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.duck.ai/" target="_blank">Duck AI</a></td>
+        <td>DuckDuckGo</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>user can choose model <a href="https://duckduckgo.com/duckduckgo-help-pages/duckai/chat-models">↫</a></td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.ecosia.org/ai-search" target="_blank">Ecosia AI</a></td>
+        <td>Ecosia</td>
+        <td>Germany &#127465;&#127466;</td>
+        <td>OpenAI's GPT-4.1 Mini <a href="https://support.ecosia.org/article/1006-ai-search#Model-training-and-adjustments-LOaKB" target="_blank">↫</a></td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.kagi.com/assistant" target="_blank">Kagi Assistant</a></td>
+        <td>Kagi</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>user can choose model <a href="https://help.kagi.com/kagi/ai/assistant.html#which-model-to-choose">↫</a></td>
+        <td style="color: red;">Yes (paid)</td>
+    </tr>
+    <tr>
+        <td><a href="https://lumo.proton.me/" target="_blank">Lumo</a></td>
+        <td>Proton</td>
+        <td>Switzerland &#127464;&#127469;</td>
+        <td>multiple LLMs used</td>
+        <td>No</td>
+    </tr>
+</table>
+
+<h2>Selected Map Providers</h2>
+
+<table class="providers" id="maps">
+    <tr>
+        <th>Name</th>
+        <th>Developer</th>
+        <th>Country</th>
+        <th>Map data</th>
+        <th>Notable features (not in all countries)</th>
+    </tr>
+    <tr>
+        <td><a href="https://maps.apple.com/" target="_blank">Apple Maps</a></td>
+        <td>Apple</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Apple</td>
+        <td>Satellite images, Streetview, Live traffic info, Public transport</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.bing.com/maps" target="_blank">Bing Maps</a></td>
+        <td>Microsoft</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Bing</td>
+        <td>Satellite images, Live traffic info, Public transport</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.google.com/maps" target="_blank">Google Maps</a></td>
+        <td>Google</td>
+        <td>USA &#127482;&#127480;</td>
+        <td>Google</td>
+        <td>Satellite images, Streetview, Live traffic info, Public transport</td>
+    </tr>
+    <tr>
+        <td><a href="https://wego.here.com/" target="_blank">HERE WeGo</a></td>
+        <td>HERE</td>
+        <td>Netherlands &#x1F1F3;&#x1F1F1;</td>
+        <td>HERE</td>
+        <td>Satellite images, Live traffic info, Public transport</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMaps</a></td>
+        <td>OpenStreetMaps</td>
+        <td>UK &#127468;&#127463;</td>
+        <td>OpenStreetMap</td>
+        <td>Data is freely licensed</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.petalmaps.com/" target="_blank">Petal Maps</a></td>
+        <td>Huawei</td>
+        <td>China &#127464;&#127475;</td>
+        <td>TomTom &#x1F1F3;&#x1F1F1;</td>
+        <td>Live traffic info, Public transport</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.yandex.com/maps" target="_blank">Yandex Maps</a></td>
+        <td>Yandex</td>
+        <td>Russia &#127479;&#127482;</td>
+        <td>Yandex</td>
+        <td>Satellite images, Streetview, Live traffic info, Public transport</td>
+    </tr>
+</table>
+
+<script src="bottom.js "></script>
+</body>
+</html>
