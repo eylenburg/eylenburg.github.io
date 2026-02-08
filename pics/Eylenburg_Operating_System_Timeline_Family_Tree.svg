@@ -8397,7 +8397,7 @@ style='opacity:0.6;' >
   <path id='__line_MERLIN__[Silicon__Valley__Software]' d='M 947 8335 L 1120 8335' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MERLIN__[Silicon__Valley__Software])' />
   <path id='__line_Meshix' d='M 1180 8365 L 1210 8365' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Meshix)' />
   <path id='__line_Minirighi' d='M 1580 8395 L 1727 8395' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Minirighi)' />
-  <path id='__line_Minix-vmd' d='M 1358 8485 C 1378.25,8485 1364.75,8455 1385,8455 L 1385 8455 L 2287 8455' stroke='#8B0000' style='stroke-width:4;' />
+  <path id='__line_Minix-vmd' d='M 1243 8485 C 1263.25,8485 1249.75,8455 1270,8455 L 1270 8455 L 2287 8455' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_MacMinix' d='M 1183 8485 C 1203.25,8485 1189.75,8515 1210,8515 L 1210 8515 L 1330 8515' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MacMinix)' />
   <path id='__line_Preventa' d='M 1633 8485 C 1653.25,8485 1639.75,8515 1660,8515 L 1660 8515 L 1930 8515' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Preventa)' />
   <path id='__line_Minix' d='M 1090 8485 L 2046 8485' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Minix)' />
@@ -9027,7 +9027,7 @@ style='opacity:0.6;' >
   <path id='__line_Copland__[Apple]' d='M 1300 29425 L 1377 29425' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Copland__[Apple])' />
   <path id='__line_COQOS__[OpenSynergy]' d='M 1750 29455 L 2287 29455' stroke='#000' style='stroke-width:4;' />
   <path id='__line_COS-310/350__[DEC]' d='M 640 29485 L 670 29485' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_COS-310/350__[DEC])' />
-  <path id='__line_Cosmos' d='M 1780 29515 L 2287 29515' stroke='#000' style='stroke-width:4;' />
+  <path id='__line_COSMOS' d='M 1690 29515 L 2287 29515' stroke='#000' style='stroke-width:4;' />
   <path id='__line_CP-6__[Honeywell]' d='M 850 29545 L 1657 29545' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CP-6__[Honeywell])' />
   <path id='__line_CPC-OS__[Amstrad]' d='M 1000 29575 L 1207 29575' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CPC-OS__[Amstrad])' />
   <path id='__line_CPS__(IBM__Series/1)__[IBM]' d='M 760 29605 L 1120 29605' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_CPS__(IBM__Series/1)__[IBM])' />
@@ -9907,7 +9907,7 @@ style='opacity:0.6;' >
   <circle id='__dot_MERLIN__[Silicon__Valley__Software]' cx='947' cy='8335' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Meshix' cx='1180' cy='8365' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Minirighi' cx='1580' cy='8395' r='10' fill='#FF8585' stroke='none' />
-  <circle id='__dot_Minix-vmd' cx='1385' cy='8455' r='10' fill='#8B0000' stroke='none' />
+  <circle id='__dot_Minix-vmd' cx='1270' cy='8455' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_MacMinix' cx='1210' cy='8515' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Preventa' cx='1660' cy='8515' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Minix' cx='1090' cy='8485' r='10' fill='#FF8585' stroke='none' />
@@ -10702,7 +10702,7 @@ style='opacity:0.6;' >
   <circle id='__dot_Copland__[Apple]' cx='1300' cy='29425' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_COQOS__[OpenSynergy]' cx='1750' cy='29455' r='10' fill='#000' stroke='none' />
   <circle id='__dot_COS-310/350__[DEC]' cx='640' cy='29485' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_Cosmos' cx='1780' cy='29515' r='10' fill='#000' stroke='none' />
+  <circle id='__dot_COSMOS' cx='1690' cy='29515' r='10' fill='#000' stroke='none' />
   <circle id='__dot_CP-6__[Honeywell]' cx='850' cy='29545' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_CPC-OS__[Amstrad]' cx='1000' cy='29575' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_CPS__(IBM__Series/1)__[IBM]' cx='760' cy='29605' r='10' fill='#AAA' stroke='none' />
@@ -11978,8 +11978,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1190' y='8361'  >Meshix</text></a>
   <rect x='1589' y='8382' width='49' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1590' y='8391'  >Minirighi</text></a>
-  <rect x='1394' y='8442' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1395' y='8451'  >Minix-vmd</text></a>
+  <rect x='1279' y='8442' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1280' y='8451'  >Minix-vmd</text></a>
   <rect x='1219' y='8502' width='54' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1220' y='8511'  >MacMinix</text></a>
   <rect x='1669' y='8502' width='52' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
@@ -13568,8 +13568,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1760' y='29451'  >COQOS [OpenSynergy]</text></a>
   <rect x='649' y='29472' width='122' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='650' y='29481'  >COS-310/350 [DEC]</text></a>
-  <rect x='1789' y='29502' width='46' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1790' y='29511'  >Cosmos</text></a>
+  <rect x='1699' y='29502' width='55' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1700' y='29511'  >COSMOS</text></a>
   <rect x='859' y='29532' width='105' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='860' y='29541'  >CP-6 [Honeywell]</text></a>
   <rect x='1009' y='29562' width='112' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
