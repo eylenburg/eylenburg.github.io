@@ -9193,7 +9193,7 @@ style='opacity:0.6;' >
   <path id='__line_IJMON__[IBM]' d='M 340 33925 L 490 33925' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_IJMON__[IBM])' />
   <path id='__line_ILIOS' d='M 1510 33955 L 1657 33955' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_ILIOS)' />
   <path id='__line_IMOS__[NCR]' d='M 820 33985 L 850 33985' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_IMOS__[NCR])' />
-  <path id='__line_includeOS' d='M 1920 34015 L 2287 34015' stroke='#AAA' style='stroke-width:4;' />
+  <path id='__line_IncludeOS' d='M 1915 34015 L 2287 34015' stroke='#000' style='stroke-width:4;' />
   <path id='__line_Infinity-OS' d='M 1892 34045 L 1922 34045' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Infinity-OS)' />
   <path id='__line_Interim__OS' d='M 1890 34075 L 1950 34075' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_Interim__OS)' />
   <path id='__line_intermezzOS' d='M 1952 34105 L 2087 34105' stroke='#AAA' style='stroke-width:4;' marker-end='url(#__stop_intermezzOS)' />
@@ -10879,7 +10879,7 @@ style='opacity:0.6;' >
   <circle id='__dot_IJMON__[IBM]' cx='340' cy='33925' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_ILIOS' cx='1510' cy='33955' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_IMOS__[NCR]' cx='820' cy='33985' r='10' fill='#AAA' stroke='none' />
-  <circle id='__dot_includeOS' cx='1920' cy='34015' r='10' fill='#AAA' stroke='none' />
+  <circle id='__dot_IncludeOS' cx='1915' cy='34015' r='10' fill='#000' stroke='none' />
   <circle id='__dot_Infinity-OS' cx='1892' cy='34045' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_Interim__OS' cx='1890' cy='34075' r='10' fill='#AAA' stroke='none' />
   <circle id='__dot_intermezzOS' cx='1952' cy='34105' r='10' fill='#AAA' stroke='none' />
@@ -13892,8 +13892,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1520' y='33951'  >ILIOS</text></a>
   <rect x='829' y='33972' width='74' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='830' y='33981'  >IMOS [NCR]</text></a>
-  <rect x='1929' y='34002' width='59' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1930' y='34011'  >includeOS</text></a>
+  <rect x='1924' y='34002' width='60' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1925' y='34011'  >IncludeOS</text></a>
   <rect x='1901' y='34032' width='59' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1902' y='34041'  >Infinity-OS</text></a>
   <rect x='1899' y='34062' width='61' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
