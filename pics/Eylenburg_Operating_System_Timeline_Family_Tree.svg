@@ -13,7 +13,7 @@
   version='1.1'
   width='2390'
   height='47420'
-  viewBox='00 2390 47420'
+  viewBox='0 0 2390 47420'
 >
 
 <title>Operating Systems</title>
@@ -2093,13 +2093,6 @@
   </linearGradient>
   <marker id='__stop_Clear__Linux__[Intel]' markerWidth='7' markerHeight='1' style='overflow:visible;'>
     <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Clear__Linux__[Intel])' />
-  </marker>
-  <linearGradient id='__fadeout_Harmony__OS__[Huawei]__(Android-based)' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
-    <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
-    <stop stop-color='#FF8585' offset='1' stop-opacity='0' />
-  </linearGradient>
-  <marker id='__stop_Harmony__OS__[Huawei]__(Android-based)' markerWidth='7' markerHeight='1' style='overflow:visible;'>
-    <use xlink:href='#__fadeout' style='fill:url(#__fadeout_Harmony__OS__[Huawei]__(Android-based))' />
   </marker>
   <linearGradient id='__fadeout_DivestOS' x1='0' y1='0' x2='7' y2='0' gradientUnits='userSpaceOnUse'>
     <stop stop-color='#FF8585' offset='0' stop-opacity='1' />
@@ -8558,7 +8551,7 @@ style='opacity:0.6;' >
   <path id='__line_Void__Linux' d='M 1733 12715 C 1768.25,12715 1744.75,12805 1780,12805 L 1780 12805 L 2287 12805' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Fire__OS__[Amazon]' d='M 1788 12925 C 1823.25,12925 1799.75,12835 1835,12835 L 1835 12835 L 2287 12835' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_WearOS__[Google]' d='M 1867 12925 C 1895.5,12925 1876.5,12865 1905,12865 L 1905 12865 L 2287 12865' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Harmony__OS__[Huawei]__(Android-based)' d='M 2040 12925 C 2060.25,12925 2046.75,12895 2067,12895 L 2067 12895 L 2225 12895' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Harmony__OS__[Huawei]__(Android-based))' />
+  <path id='__line_Harmony__OS__[Huawei]__(Android-based)' d='M 2040 12925 C 2060.25,12925 2046.75,12895 2067,12895 L 2067 12895 L 2287 12895' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_IodeOS' d='M 2053 13075 C 2073.25,13075 2059.75,13105 2080,13105 L 2080 13105 L 2287 13105' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_CalyxOS' d='M 2068 12925 C 2088.25,12925 2074.75,12955 2095,12955 L 2095 12955 L 2287 12955' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_CopperheadOS' d='M 1909 12925 C 1937.5,12925 1918.5,12985 1947,12985 L 1947 12985 L 2287 12985' stroke='#8B0000' style='stroke-width:4;' />
@@ -8665,7 +8658,7 @@ style='opacity:0.6;' >
   <path id='__line_DOS__XL__[Optimized__Systems]' d='M 940 16015 L 1027 16015' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_DOS__XL__[Optimized__Systems])' />
   <path id='__line_Embedded__DOS__[General__Software]' d='M 1180 16045 L 1720 16045' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Embedded__DOS__[General__Software])' />
   <path id='__line_GDOS__[Miles__Gordon__Technology]' d='M 1060 16075 L 1300 16075' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_GDOS__[Miles__Gordon__Technology])' />
-  <path id='__line_HDOS__[Heath__Company]' d='M 820 16105 L 1117 16105' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_HDOS__[Heath__Company])' />
+  <path id='__line_HDOS__[Heath__Company]' d='M 820 16105 L 1150 16105' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_HDOS__[Heath__Company])' />
   <path id='__line_Human68k' d='M 1060 16135 L 1270 16135' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_Human68k)' />
   <path id='__line_TASiS' d='M 1603 16195 C 1623.25,16195 1609.75,16225 1630,16225 L 1630 16225 L 2287 16225' stroke='#0000CD' style='stroke-width:4;' />
   <path id='__line_IS-DOS' d='M 1210 16195 L 1630 16195' stroke='#b0b0eb' style='stroke-width:4;' marker-end='url(#__stop_IS-DOS)' />
@@ -10092,7 +10085,7 @@ style='opacity:0.6;' >
   <circle id='__dot_Void__Linux' cx='1780' cy='12805' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Fire__OS__[Amazon]' cx='1835' cy='12835' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_WearOS__[Google]' cx='1905' cy='12865' r='10' fill='#8B0000' stroke='none' />
-  <circle id='__dot_Harmony__OS__[Huawei]__(Android-based)' cx='2067' cy='12895' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Harmony__OS__[Huawei]__(Android-based)' cx='2067' cy='12895' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_IodeOS' cx='2080' cy='13105' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_CalyxOS' cx='2095' cy='12955' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_CopperheadOS' cx='1947' cy='12985' r='10' fill='#8B0000' stroke='none' />
