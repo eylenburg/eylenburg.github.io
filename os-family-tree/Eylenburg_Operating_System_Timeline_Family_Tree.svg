@@ -13,7 +13,6 @@
   version='1.1'
   width='2390'
   height='47630'
-  viewBox='0 0 2390 47630'
 >
 
 <title>Operating Systems</title>
@@ -8543,7 +8542,7 @@ style='opacity:0.6;' >
   <path id='__line_____' d='M 1483 10525 C 1503.25,10525 1489.75,10555 1510,10555 L 1510 10555 L 2287 10555' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UZIX' d='M 1390 10525 L 1510 10525' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UZIX)' />
   <path id='__line_Valkyrie' d='M 2110 10615 L 2287 10615' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Viengoos' d='M 1585 10645 L 1750 10645' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Viengoos)' />
+  <path id='__line_Viengoos' d='M 1715 10645 L 1750 10645' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Viengoos)' />
   <path id='__line_Vinix' d='M 2110 10675 L 2287 10675' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_VirtualLogix__C5__[Jaluna]' d='M 1557 10705 L 1800 10705' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VirtualLogix__C5__[Jaluna])' />
   <path id='__line_VMEexec__[Motorola]' d='M 1120 10735 L 1387 10735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VMEexec__[Motorola])' />
@@ -10073,7 +10072,7 @@ style='opacity:0.6;' >
     <circle cx='1900' cy='10555' r='5' fill='#8B0000' stroke='none' />
   <circle id='__dot_UZIX' cx='1390' cy='10525' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Valkyrie' cx='2110' cy='10615' r='10' fill='#8B0000' stroke='none' />
-  <circle id='__dot_Viengoos' cx='1585' cy='10645' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Viengoos' cx='1715' cy='10645' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Vinix' cx='2110' cy='10675' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_VirtualLogix__C5__[Jaluna]' cx='1557' cy='10705' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_VMEexec__[Motorola]' cx='1120' cy='10735' r='10' fill='#FF8585' stroke='none' />
@@ -12227,8 +12226,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1400' y='10521'  >UZIX</text></a>
   <rect x='2119' y='10602' width='46' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2120' y='10611'  >Valkyrie</text></a>
-  <rect x='1594' y='10632' width='54' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
-  <a xlink:href=''><text x='1595' y='10641'  >Viengoos</text></a>
+  <rect x='1724' y='10632' width='54' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1725' y='10641'  >Viengoos</text></a>
   <rect x='2119' y='10662' width='28' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='2120' y='10671'  >Vinix</text></a>
   <rect x='1566' y='10692' width='143' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
