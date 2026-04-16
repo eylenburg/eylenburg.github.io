@@ -13,7 +13,6 @@
   version='1.1'
   width='2390'
   height='47630'
-  viewBox='0 0 2390 47630'
 >
 
 <title>Operating Systems</title>
@@ -8485,6 +8484,7 @@ style='opacity:0.6;' >
   <path id='__line_MacMinix' d='M 1183 8605 C 1203.25,8605 1189.75,8575 1210,8575 L 1210 8575 L 1330 8575' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MacMinix)' />
   <path id='__line_Preventa' d='M 1633 8605 C 1653.25,8605 1639.75,8575 1660,8575 L 1660 8575 L 1930 8575' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Preventa)' />
   <path id='__line_MeikOS__[Meiko__Scientific]' d='M 1043 8605 C 1078.25,8605 1054.75,8695 1090,8695 L 1090 8695 L 1210 8695' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_MeikOS__[Meiko__Scientific])' />
+  <path id='__line_Intel__ME__Firmware__[Intel]' d='M 1903 8605 C 1923.25,8605 1909.75,8635 1930,8635 L 1930 8635 L 2287 8635' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_RT-MINIX' d='M 1243 8605 C 1263.25,8605 1249.75,8635 1270,8635 L 1270 8635 L 1510 8635' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_RT-MINIX)' />
   <path id='__line_Minix-vmd' d='M 1142 8605 C 1170.5,8605 1151.5,8665 1180,8665 L 1180 8665 L 2287 8665' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_Minix' d='M 1000 8605 L 2046 8605' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Minix)' />
@@ -10010,6 +10010,7 @@ style='opacity:0.6;' >
   <circle id='__dot_MacMinix' cx='1210' cy='8575' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Preventa' cx='1660' cy='8575' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_MeikOS__[Meiko__Scientific]' cx='1090' cy='8695' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Intel__ME__Firmware__[Intel]' cx='1930' cy='8635' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_RT-MINIX' cx='1270' cy='8635' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Minix-vmd' cx='1180' cy='8665' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_Minix' cx='1000' cy='8605' r='10' fill='#FF8585' stroke='none' />
@@ -12101,6 +12102,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1670' y='8571'  >Preventa</text></a>
   <rect x='1099' y='8682' width='150' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1100' y='8691'  >MeikOS [Meiko Scientific]</text></a>
+  <rect x='1939' y='8622' width='145' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='1940' y='8631'  >Intel ME Firmware [Intel]</text></a>
   <rect x='1279' y='8622' width='56' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1280' y='8631'  >RT-MINIX</text></a>
   <rect x='1189' y='8652' width='58' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
