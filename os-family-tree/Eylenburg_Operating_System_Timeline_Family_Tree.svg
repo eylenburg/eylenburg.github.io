@@ -13,7 +13,6 @@
   version='1.1'
   width='2390'
   height='47720'
-  viewBox='0 0 2390 47720'
 >
 
 <title>Operating Systems</title>
@@ -8571,7 +8570,7 @@ style='opacity:0.6;' >
   <path id='__line_____' d='M 1483 10555 C 1503.25,10555 1489.75,10585 1510,10585 L 1510 10585 L 2287 10585' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_UZIX' d='M 1390 10555 L 1510 10555' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_UZIX)' />
   <path id='__line_Valkyrie' d='M 2110 10645 L 2287 10645' stroke='#8B0000' style='stroke-width:4;' />
-  <path id='__line_Viengoos' d='M 1715 10675 L 1750 10675' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Viengoos)' />
+  <path id='__line_Viengoos' d='M 1715 10675 L 1759 10675' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Viengoos)' />
   <path id='__line_Vinix' d='M 2110 10705 L 2287 10705' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_VirtualLogix__C5__[Jaluna]' d='M 1557 10735 L 1800 10735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VirtualLogix__C5__[Jaluna])' />
   <path id='__line_VMEexec__[Motorola]' d='M 1120 10765 L 1387 10765' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_VMEexec__[Motorola])' />
