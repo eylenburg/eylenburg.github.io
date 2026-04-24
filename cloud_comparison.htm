@@ -157,7 +157,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 19 January 2026</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 24 April 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -947,6 +947,37 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
+<tr class="product NoEmail NoEmailEncrypt NoIMAP">
+<td>Peergos</td>
+<td><img src="pics/logos/cloud/peergos.svg" class="icon" /></td><!-- Logo -->
+<td>Peergos Ltd</td><!-- Developer -->
+<td>&#x1F1EC;&#x1F1E7;<br />UK</td><!-- Jurisdiction -->
+<td class="yes">Free</td><!-- License -->
+<td class="yes">Yes</td><!-- self-hosting -->
+<td class="yes">Yes</td><!-- encrypted at rest -->
+<!-- File sync -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="almost">API,<em> also WebDAV server via <a href="https://book.peergos.org/features/webdav.html" target="_blank">local bridge</a></em></td><!-- WebDAV or API -->
+<td class="yes">Yes (<a href="https://github.com/allotropia/zetajs/tree/main/examples/web-office" target="_blank">"Web Office"</a>, based on LibreOffice)</td><!-- access/edit in browser -->
+<td class="yes">Yes</td><!--share files -->
+<td class="yes">Yes</td><!-- desktop sync -->
+<td class="yes">Yes</td><!-- mobile sync -->
+<!-- PIM, Mail, Other -->
+<td class="yes">Yes</td><!-- E2EE -->
+<td class="no">Calendar only</td><!-- has tasks? -->
+<td class="no">No (web only)</td><!-- CardDAV/CalDAV -->
+<!-- Mail -->
+<td class="na"></td><!-- Zero access encryption -->
+<td class="na"></td><!-- IMAP -->
+<td class="na"></td><!-- Domain -->
+<!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
+<td colspan="2" class="px na"></td>
+<td class="px">&euro;41<br />(200 GB)</td>
+<td class="px">&euro;111<br />(1 TB)</td>
+<td>Self-hosted cost: either hardware upfront costs (~&euro;50 for RaspPi + ~&euro;50 for 1 TB HDD) or ~&euro;60 p.a. for cheap VPS (e.g. 1 TB at AlphaVPS)</td><!-- price comment -->
+</tr>
+
+
 <tr class="product NoMSO NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync">
 <td>Posteo</td>
 <td><img src="pics/logos/cloud/posteo.jpg" class="icon" /></td><!-- Logo -->
@@ -1124,7 +1155,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td>
 <!-- PIM -->
 <td class="no">No</td><!-- E2EE -->
-<td class="no">Neither calendar nor tasks</td><!-- has tasks? -->
+<td class="no">Addressbook only</td><!-- has tasks? -->
 <td class="no">No</td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
 <td class="almost tooltip">Yes (temporarily decrypted)<span class="tooltiptext">emails are temporarily decrypted when accessing them, e.g. via browser or an IMAP client</span></td><!-- Zero access encryption -->
@@ -1446,6 +1477,7 @@ By the way, even if you use a non-private cloud provider, you can still encrypt 
 	<ul>
 	<li><strong>Mega</strong> <span class="good">E2EE</span>  <span class="good">API for 3rd-party apps</span> <span class="bad">Can't edit files in browser</span></li>
 	<li><strong>Filen</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> <span class="bad">Can't edit files in browser</span></li>
+	<li><strong>Peergos</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> </li>
 	<li><strong>Tresorit</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="bad">No API for 3rd-party apps</span> <span class="bad">Closed source</span></li>
 	</ul>
 </ul>
@@ -1460,7 +1492,7 @@ By the way, even if you use a non-private cloud provider, you can still encrypt 
 <li><strong>Murena</strong> (based on Nextcloud, includes email)</li>
 <li><strong>Nextcloud</strong> + <strong>your own mail server</strong> <em>or</em> you keep your old email hoster and connect it to the Nextcloud mail app</li>
 <ul><li>If you don't want to spend too much time setting up your homeserver you may want to consider a plug-and-play solution such as <a href="https://www.homedrive.io/" target="_blank">Homedrive</a> or <a href="https://shop.nitrokey.com/shop/product/nextbox-116" target="_blank">Nextbox</a>.</li></ul>
-<li><strong>Seafile</strong> for files + <strong>Baikal/Radicale</strong> for contacts and calendar + <strong>your own mail server</strong></li>
+<li><strong>Seafile</strong> or <strong>Peergos</strong> for files + <strong>Baikal/Radicale</strong> for contacts and calendar + <strong>your own mail server</strong></li>
 <li><strong>Kolab</strong> <span class="bad">No file sync client</span></li>
 </ul>
 
