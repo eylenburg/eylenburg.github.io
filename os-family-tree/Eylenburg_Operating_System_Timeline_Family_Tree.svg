@@ -8360,7 +8360,7 @@ style='opacity:0.6;' >
   <path id='__line_Monterey' d='M 1423 4015 C 1443.25,4015 1429.75,4045 1450,4045 L 1450 4045 L 1515 4045' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Monterey)' />
   <path id='__line_AIX__[IBM]' d='M 948 4525 C 1032,4525 976,4015 1060,4015 L 1060 4015 L 2287 4015' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_WEGA__[East__Germany]' d='M 951 4525 C 1032.75,4525 978.25,4045 1060,4045 L 1060 4045 L 1150 4045' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_WEGA__[East__Germany])' />
-  <path id='__line_EWS-UX__[NEC]' d='M 974 4525 C 1053.5,4525 1000.5,4075 1080,4075 L 1080 4075 L 1630 4075' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_EWS-UX__[NEC])' />
+  <path id='__line_EWS-UX__[NEC]' d='M 974 4525 C 1053.5,4525 1000.5,4075 1080,4075 L 1080 4075 L 1600 4075' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_EWS-UX__[NEC])' />
   <path id='__line_RX/V' d='M 988 4525 C 1064.5,4525 1013.5,4105 1090,4105 L 1090 4105 L 1180 4105' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_RX/V)' />
   <path id='__line_Topix__[Sequioa]' d='M 992 4525 C 1065.5,4525 1016.5,4135 1090,4135 L 1090 4135 L 1360 4135' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Topix__[Sequioa])' />
   <path id='__line_NonStop-UX__[HP]' d='M 1003 4525 C 1073.5,4525 1026.5,4165 1097,4165 L 1097 4165 L 1602 4165' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_NonStop-UX__[HP])' />
