@@ -8304,6 +8304,7 @@ style='opacity:0.6;' >
   <path id='__line_TMach__[Trusted__Information__Systems]' d='M 1012 1975 C 1070.5,1975 1031.5,1645 1090,1645 L 1090 1645 L 1405 1645' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_TMach__[Trusted__Information__Systems])' />
   <path id='__line_Hitachi__OSF/1-MJ__[Hitachi]' d='M 1180 1765 C 1211.5,1765 1190.5,1675 1222,1675 L 1222 1675 L 1330 1675' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Hitachi__OSF/1-MJ__[Hitachi])' />
   <path id='__line_Paragon__OSF/1__[Paragon]' d='M 1202 1765 C 1230.5,1765 1211.5,1705 1240,1705 L 1240 1705 L 1450 1705' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_Paragon__OSF/1__[Paragon])' />
+  <path id='__line_Uros' d='M 2262 1735 C 2262,1735 2262,1735 2262,1735 L 2262 1735 L 2287 1735' stroke='#8B0000' style='stroke-width:4;' />
   <path id='__line_OSF/MK' d='M 1250 1765 C 1270.25,1765 1256.75,1735 1277,1735 L 1277 1735 L 1865 1735' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/MK)' />
   <path id='__line_HP__OSF/1__[HP]' d='M 1180 1765 C 1202.5,1765 1187.5,1855 1210,1855 L 1210 1855 L 1237 1855' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_HP__OSF/1__[HP])' />
   <path id='__line_OSF/1__AD__[Locus__Computing]' d='M 1243 1765 C 1263.25,1765 1249.75,1795 1270,1795 L 1270 1795 L 1330 1795' stroke='#FF8585' style='stroke-width:4;' marker-end='url(#__stop_OSF/1__AD__[Locus__Computing])' />
@@ -9801,6 +9802,7 @@ style='opacity:0.6;' >
   <circle id='__dot_TMach__[Trusted__Information__Systems]' cx='1090' cy='1645' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Hitachi__OSF/1-MJ__[Hitachi]' cx='1222' cy='1675' r='10' fill='#FF8585' stroke='none' />
   <circle id='__dot_Paragon__OSF/1__[Paragon]' cx='1240' cy='1705' r='10' fill='#FF8585' stroke='none' />
+  <circle id='__dot_Uros' cx='2262' cy='1735' r='10' fill='#8B0000' stroke='none' />
   <circle id='__dot_OSF/MK' cx='1277' cy='1735' r='10' fill='#FF8585' stroke='none' />
     <circle cx='1362' cy='1735' r='5' fill='#FF8585' stroke='none' />
   <circle id='__dot_HP__OSF/1__[HP]' cx='1210' cy='1855' r='10' fill='#FF8585' stroke='none' />
@@ -11626,6 +11628,8 @@ style='opacity:0.6;' >
   <a xlink:href=''><text x='1232' y='1671'  >Hitachi OSF/1-MJ [Hitachi]</text></a>
   <rect x='1249' y='1692' width='156' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1250' y='1701'  >Paragon OSF/1 [Paragon]</text></a>
+  <rect x='2271' y='1722' width='27' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
+  <a xlink:href=''><text x='2272' y='1731'  >Uros</text></a>
   <rect x='1286' y='1722' width='50' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
   <a xlink:href=''><text x='1287' y='1731'  >OSF/MK</text></a>
     <rect x='1366' y='1722' width='48' height='11' fill='#fff' opacity='0.5'  rx='5' ry='5' />
