@@ -11,11 +11,11 @@
 <style>
 :root {
 --legendwidth: 200px;
---columnwidth: 155px;
+--columnwidth: 169px;
 }
 
 table {
-width: calc(var(--legendwidth) + 11 * var(--columnwidth));
+width: calc(var(--legendwidth) + 10 * var(--columnwidth));
 }
 
 /* Make all details content smaller, except summary */
@@ -117,13 +117,11 @@ To give some more examples:</p>
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 <col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
-<col style="border-left: 1px solid lightgrey; width: var(--columnwidth);">
 </colgroup>
 
 <thead>
 <tr style="height: 1px; display: none;">
 <td style="width: var(--legendwidth);"></td>
-<td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
 <td style="width: var(--columnwidth);"></td>
@@ -152,7 +150,6 @@ To give some more examples:</p>
 <th><strong>Mandatory non-targeted metadata retention</strong><br /><span class="smaller">(for Internet &amp; telecom data)</span></th>
 <th><strong>Mandatory registration for SIM cards</strong></th>
 <th><strong>No platform-agnostic Digital ID or e-Gov auth</strong><br />  <details><summary><span style="font-weight: normal;" class="smaller">Explanation</span></summary><br /><span style="font-weight: normal;">Ideally, these digital services - including all digitally available high-trust actions - should be compatible with all computing platforms and not require anyone to use a specific operating system or device. Specifically, it should (a) not be smartphone-dependent, (b) not require a proprietary operating system, and (c) not require a Google, Apple, or Microsoft account.</span></details>
-<th><strong>No "fair use" of copyrighted material</strong></th>
 </th>
 </tr>
 
@@ -163,7 +160,7 @@ To give some more examples:</p>
 <tr>
 <td><span class="country">U.S.</span> <span class="flag">&#127482;&#127480;</span><br /><span class="update">Last updated: 2026.05.15</span></td>
 <td class="lgreen"><details><summary><strong>Very few, but proposed</strong></summary>The First Amendment provides broad protection. The main unprotected categories are: <strong>obscenity</strong> (failing the Miller test), <strong>fraud</strong>, <strong>child pornography</strong>, <strong>incitement to imminent lawless action</strong> (Brandenburg test), <strong>true threats</strong>, <strong>fighting words</strong>, and <strong>perjury</strong>. Hate speech is generally protected unless it constitutes true threats or incitement. Defamation requires proof of falsity and, for public figures, actual malice.<br /> <span class="blue">The <span class="law">STOP HATE Act</span> (proposed 2025) would ban 'hate speech', antisemitism, and 'disinformation'.</span></details></td>
-<td class="yellow"><details><summary><strong>Indirect &amp; proposed</strong> </summary><span class="blue">The <strong><a href="https://reclaimthenet.org/the-algorithm-accountability-acts-threat-to-free-speech" target="_blank"><span class="law">Algorithm Accountability Act</span></a></strong> (proposed) would hold social media platforms liable for algorithmically distributed content, incentivising over-moderation. Similarly, the <a href="https://reclaimthenet.org/bipartisan-bill-seeks-to-repeal-section-230-endangering-online-free-speech" target="_blank"><span class="law">Sunset Section 230 Act</span></a> and <a href="https://reclaimthenet.org/trump-america-ai-act-section-230-repeal-ai-liability-age-verification" target="_blank"><span class="law">TRUMP AMERICA AI Act</span></a> (both proposed) would make platforms liable for user content, forcing more restrictive moderation. The <strong><span class="law">Block BEARD Act</span></strong> (proposed 2025) would force ISPs to block piracy websites.</span><br />Indirect censorship is possible already:<br />- The government has <strong>pressured social media platforms</strong> to remove content under the pretext of fighting misinformation and hate speech.<br />- High-profile cases such as WikiLeaks, SamouraiWallet and The Pirate Bay involve <strong>domain seizures</strong> framed as law enforcement actions against crime, which are considered legal despite First Amendment concerns.<br />- <strong><span class="law">TAKE IT DOWN Act</span></strong>: Aimed at combating non-consensual sharing of intimate images, this act could enable censorship by allowing platforms to <strong>remove content based solely on complaints</strong>, without proof of harm or an appeals process.<br />- <strong><span class="law">PAFACA</span></strong>: Commonly known as the "TikTok ban", targeting apps or websites owned by foreign entities. Proponents argue it is not censorship because a new (American) owner of TikTok would still be allowed to circulate the same content.<br />- <span class="law">Stop Hiding Hate Act</span> (New York): Forces social media platforms to report 'hate speech' incidents; while no fines for retaining legal content are imposed, it may coerce platforms into more aggressive moderation practices.</details></td>
+<td class="yellow"><details><summary><strong>Indirect &amp; proposed</strong> </summary><span class="blue">The <strong><a href="https://reclaimthenet.org/the-algorithm-accountability-acts-threat-to-free-speech" target="_blank"><span class="law">Algorithm Accountability Act</span></a></strong> (proposed) would hold social media platforms liable for algorithmically distributed content, incentivising over-moderation. Similarly, the <a href="https://reclaimthenet.org/bipartisan-bill-seeks-to-repeal-section-230-endangering-online-free-speech" target="_blank"><span class="law">Sunset Section 230 Act</span></a> and <a href="https://reclaimthenet.org/trump-america-ai-act-section-230-repeal-ai-liability-age-verification" target="_blank"><span class="law">TRUMP AMERICA AI Act</span></a> (both proposed) would make platforms liable for user content, forcing more restrictive moderation. The <strong><span class="law">Block BEARD Act</span></strong> (proposed 2025) would force ISPs to block piracy websites.</span><br />Indirect censorship is possible already:<br />- The government has <strong>pressured social media platforms</strong> to remove content under the pretext of fighting misinformation and hate speech.<br />- High-profile cases such as WikiLeaks, SamouraiWallet and The Pirate Bay involve <strong>domain seizures</strong> framed as law enforcement actions against crime, which are considered legal despite First Amendment concerns.<br />- The <span class="law">Digital Millennium Copyright Act (DMCA)</span> has been <strong>misused for censorship and takedowns of legal content</strong>, as content must be removed quickly and without proving actual copyright infringement.<br />- <strong><span class="law">TAKE IT DOWN Act</span></strong>: Aimed at combating non-consensual sharing of intimate images, this act could enable censorship by allowing platforms to <strong>remove content based solely on complaints</strong>, without proof of harm or an appeals process.<br />- <strong><span class="law">PAFACA</span></strong>: Commonly known as the "TikTok ban", targeting apps or websites owned by foreign entities. Proponents argue it is not censorship because a new (American) owner of TikTok would still be allowed to circulate the same content.<br />- <span class="law">Stop Hiding Hate Act</span> (New York): Forces social media platforms to report 'hate speech' incidents; while no fines for retaining legal content are imposed, it may coerce platforms into more aggressive moderation practices.</details></td>
 <td class="green"><details><summary><strong>No bans</strong></summary>Though such laws are regularly proposed, they have so far all failed, e.g. the <span class="law">EARN IT Act</span>, <span class="law">Lawful Access to Encrypted Data Act</span>, and Florida's <span class="law">Social Media Use by Minors bill</span> (HB 744/SB 868).</details></td>
 <td class="yellow" style="background: repeating-linear-gradient(135deg, #E7DEB1, #E7DEB1 10px, #E7F2DD 10px, #E7F2DD 20px);"><details><summary><strong>VPN restrictions in some states; proposed</strong></summary> Utah's Senate Bill 73 does not ban VPNs for individuals but restricts their use by holding websites liable for failing to verify the age of users physically in Utah, even if they use a VPN to mask their location, and it prohibits these websites from providing instructions on how to use a VPN to bypass age checks. <span style="background-color: aliceblue; display: block; width: 100%;">Some US states have <a href="https://www.eff.org/deeplinks/2025/11/lawmakers-want-ban-vpns-and-they-have-no-idea-what-theyre-doing" target="_blank">proposed VPN bans or restrictions</a>, but no laws have passed yet.</span></details></td>
 <td class="lred" style="background: repeating-linear-gradient(135deg, #EBC1AD, #EBC1AD 10px, #E7F2DD 10px, #E7F2DD 20px);"><details><summary><strong>Age verification in some states; proposed</strong></summary> <span style="background-color: #F5E0D6; display: block; width: 100%;"><strong>Age verification laws for websites and/or social media</strong> are in place in <a href="https://action.freespeechcoalition.com/age-verification-resources/state-avs-laws/" target="_blank">about half of US states</a>, but not at a federal level. <span class="blue">The <span class="law">Kids Online Safety Act</span> (proposed 2025) and <span class="law">SCREEN Act</span> (proposed 2025) aim to implement restrictions federally. The proposed <span class="law">Kids Off Social Media Act</span> and the proposed <span class="law">TRUMP AMERICA AI Act</span> would require age verification for social media and AI chats, respectively. It would also force AI chat providers to require the creation of user accounts.</span></span> <span style="background-color: #F5E0D6; display: block; width: 100%;"><span class="law">App Store Accountability Acts</span> in Texas, Utah, Louisiana and other states <strong>require app stores and developers to implement age verification</strong>; Apple and Google say compliance requires collecting personally identifiable data.</span> <span class="yellow" style="display: block; width: 100%;"><span class="law">California's Digital Age Assurance Act</span> <strong>forces operating systems, device makers, and app stores to send age-related signals</strong> to apps, starting in 2027. App developers are required to modify their apps to request the age signal from the OS and honour it. For now, the age signal does not require ID checks and device admins can <strong>self-declare</strong> the ages for user accounts. Similar laws have been pased in Colorado (<span class="law">Colorado SB26-051</span>), though with an exemption for free and open source operating systems, and <span class="blue">are proposed in Illinois (<span class="law">Illinois SB3977</span>). More extreme laws are proposed in New York and Michigan (<span class="law">New York Senate Bill S8102A</span> and <span class="law">Michigan SB284</span>); they would require actual age verification (not just self-declaration) for all Internet-enabled hardware, operating systems, and app stores, in order to send an age signal to all apps and websites. Similarly, the <span class="law">Parents Decide Act</span> (proposed 2026) would require <strong>age verification for all operating systems</strong> (PCs, phones etc.) on a federal US level.</span></span></details></td>
@@ -172,7 +169,6 @@ To give some more examples:</p>
 <td class="green"><details><summary><strong>None</strong></summary>No comprehensive federal requirement for ISPs to retain connection logs or metadata for all users; any retention is voluntary, though proposals have existed (e.g. <span class="law">SAFETY Act</span> 2009). The <span class="law">CLOUD Act</span> requires US-based providers to hand over data stored overseas on request, but does not mandate retaining data they would not otherwise keep. <span class="law">PRISM</span> is an NSA intelligence program enabling collection of internet communications from US-based tech companies (allowing for the compelled disclosure of content or metadata held by providers when targeted at non-US persons outside the US), but is not a data retention law.</details></td>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary>In April 2026, the FCC approved a proposal requiring telecom providers (including VoIP services) to verify customers’ identities before activating service.</details></td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary> Government services such as Login.gov or ID.me support <strong>browser-based login with password + OTP</strong> (via SMS, email, or authenticator app), and no Android/iOS smartphone is mandatory for access or authentication.</details></td>
-<td class="yellow"><details><summary><strong>Fair Use, but DMCA misuse</strong></summary>Broad, flexible exceptions allowing various uses (commentary, criticism, news reporting, teaching, scholarship, research) based on four fairness factors (purpose, nature, amount, market impact). However, the <span class="law">Digital Millennium Copyright Act (DMCA)</span> has been misused for censorship and takedowns of legal content, as content must be removed quickly and without proving actual copyright infringement.</details></td>
 </tr>
 
 <tr>
@@ -187,7 +183,6 @@ To give some more examples:</p>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary><span class="blue"><span class="law">Bill C-22 (Lawful Access Act 2026)</span> is a proposed surveillance bill that would compel electronic service providers to store Canadians’ metadata for a year.</span></details></td>
 <td class="green"><strong>No</strong></td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary> Government services such as GCKey or Sign-In Partner support <strong>browser-based login with password + OTP</strong> (via SMS, email, or authenticator app), and no Android/iOS smartphone is mandatory for access or authentication.</details></td>
-<td class="lred"><details><summary><strong>Fair Dealings</strong></summary> Use permitted only if it falls into prescribed categories (e.g., research, private study, criticism, review, news reporting, education, parody, satire). More restrictive than US.</details></td>
 </tr>
 
 
@@ -203,7 +198,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (24 months)</strong></summary>The <span class="law">Data Retention Act 2015</span> requires retention of ISP metadata (IPs, connection logs, browsing history), email and telephony metadata (including mobile phone locations) for 2 years.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="red"><details><summary><strong>Limited support</strong>, iOS/Android/AOSP required</summary>For certain government tasks requiring strong authentication (e.g. ATO linkage, DIN), you either need the <strong>myID app on an Android/iOS smartphone</strong> or must handle the process in person. For now, the myID app (not to be confused with the myGov app, which enforces Play Integrity checks and is not required for authentication) seems to work on non-stock Android such as LineageOS or GrapheneOS, though it is only available on the Play Store - requiring a Google account (a possible workaround is using Aurora Store, though this is unsupported).</details></td>
-<td class="lred"><details><summary><strong>Fair Dealings</strong></summary> Only allowed for specified purposes such as research, criticism, review, news reporting, parody/satire, professional advice, or education. Additional exceptions are very situation-specific and narrowly crafted.</details></td>
 </tr>
 
 
@@ -219,7 +213,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (12 months)</strong></summary>The <span class="law">Investigatory Powers Act 2016</span> requires retention of ISP metadata (IPs, connection logs, browsing history), email and telephony metadata (including mobile phone locations) for 1 year.</details></td>
 <td class="green"><strong>No</strong></td>
 <td class="dred"><details><summary><strong>May need Google or Apple account &amp; device</strong></summary>Government services such as GOV.UK One Login, HMRC, and NHS support <strong>browser-based login with password + OTP</strong> (via SMS or authenticator app), so a smartphone is not required for normal sign-in. However, to verify your identity or register a new company, you need the <strong>GOV.UK One Login Android/iOS app</strong>, or alternatively you can <a href="https://www.gov.uk/using-your-gov-uk-one-login/proving-your-identity" target="_blank">verify your identity in person at a post office, or answer security questions online</a> (dependent on Experian credit-reference data, which may not work with a sparse credit history or no UK bank account). The <strong>Android app <a href="https://github.com/alphagov/govuk-mobile-android-app/issues/342" target="_blank">uses Play Integrity</a> and is only available from Google Play</strong>, requiring a Google account and stock Android (incompatible with GrapheneOS or LineageOS). <span class="blue">The government is also planning a <strong>digital ID scheme</strong> ("Brit Card") for all citizens, which will most likely <strong>require an Android/iOS app</strong> with yet to be determined alternatives for those without a smartphone.</span></details></td>
-<td class="lred"><details><summary><strong>Fair Dealings</strong></summary> Permitted uses limited to research, private study, criticism, review, news reporting, parody, caricature, pastiche, and quotation. Other uses require permission.</details></td>
 </tr>
 
 <tr>
@@ -234,7 +227,6 @@ To give some more examples:</p>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary>Despite several attempts, mandatory data retention (Vorratsdatenspeicherung) has been declared unconstitutional. <span class="blue">In April 2026, the <strong>German government passed a law</strong> to make it mandatory for ISPs (and on demand, messengers and email providers) to <strong>store IPs for 3 months</strong>. The law still needs to be approved by the Bundesrat (upper chamber). In the past, similar laws ("Vorratsdatenspeicherung") have been declared unconstitutional by the courts and it is possible that this law, if passed, will also be repealed in the future.</span> <span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">An EU Council paper from 12/2025 (<a href="https://reclaimthenet.org/eu-revives-plan-for-year-long-data-retention" target="_blank">WK 16133/2025 INIT</a>) proposed mandatory 1-year metadata retention (IP addresses and phone locations) applying to telecom operators, cloud platforms, domain hosts, payment processors, and even E2EE messengers such as WhatsApp and Signal.</span></span></details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="yellow"><details><summary><strong>Cross-platform</strong>, with open source app</summary>Some tasks requiring strong authentication require the <em>AusweisApp</em>, either on an Android/iOS smartphone with NFC support or on a desktop computer with a compatible USB smartcard reader. <strong>Linux is explicitly supported</strong> as a desktop OS. The <strong>AusweisApp is open source</strong>, has been ported to FreeBSD, and is available on F-Droid. While the smartcard reader requires an upfront purchase, everything can be done without a smartphone or proprietary OS. <br /><br /><span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">The upcoming <strong>EU Digital Wallet</strong> is still in development, but it seems that it will only be available as an app for iOS and stock Android (requiring Play Integrity and the Play Store), making an Apple or Google account mandatory.</span></span></details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> No general fair use; only narrow, enumerated exceptions for uses such as quotation, research, criticism, and certain educational and private uses. The list is exhaustive and exceptions are strictly interpreted.</details></td>
 </tr>
 
 
@@ -250,7 +242,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (12 months)</strong></summary>Mandatory retention of ISP metadata (IPs, connection logs, browsing history), email and telephony metadata (including mobile phone locations) for 1 year. <span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">An EU Council paper from 12/2025 (<a href="https://reclaimthenet.org/eu-revives-plan-for-year-long-data-retention" target="_blank">WK 16133/2025 INIT</a>) proposed mandatory 1-year metadata retention (IP addresses and phone locations) applying to telecom operators, cloud platforms, domain hosts, payment processors, and even E2EE messengers such as WhatsApp and Signal.</span></span></details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="red"><details><summary><strong>Limited support</strong>, iOS/Android/AOSP required</summary>For certain government tasks requiring strong authentication (e.g. tax filings, e-signatures), a certified <strong>FranceConnect+ app for Android/iOS</strong> is required, such as France Identité or L'Identité Numérique La Poste. These apps appear to work on non-stock Android systems such as LineageOS or GrapheneOS, but require Play Services / microG and are only available on the Play Store (requiring a Google account; Aurora Store can work as an unsupported workaround). <<br /><br /><span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">The upcoming <strong>EU Digital Wallet</strong> is still in development, but it seems that it will only be available as an app for iOS and stock Android (requiring Play Integrity and the Play Store), making an Apple or Google account mandatory.</span></span></details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Uses are only allowed if they fit an exhaustive list of exceptions (quotation, press review, private copy, educational use). No general fair use doctrine; exceptions are narrowly interpreted.</details></td>
 </tr>
 
 
@@ -266,12 +257,11 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (72 months)</strong></summary>Mandatory retention of ISP metadata (IPs, connection logs, browsing history) and telephony metadata (including mobile phone locations) for 6 years. ISP metadata older than 1 year and telephony metadata older than 2 years can only be accessed for terrorism investigations. <span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">An EU Council paper from 12/2025 (<a href="https://reclaimthenet.org/eu-revives-plan-for-year-long-data-retention" target="_blank">WK 16133/2025 INIT</a>) proposed mandatory 1-year metadata retention (IP addresses and phone locations) applying to telecom operators, cloud platforms, domain hosts, payment processors, and even E2EE messengers such as WhatsApp and Signal.</span></span></details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="yellow"><details><summary><strong>Cross-platform</strong>, with open source app</summary>Some tasks requiring strong authentication require either the <strong>CieID app</strong> for Android/iOS or a desktop PC with a compatible USB smartcard reader. <strong>Linux is explicitly supported</strong> as a desktop OS. While the smartcard reader requires an upfront purchase, everything can be done without a smartphone or proprietary OS. The Android app requires Play Services / microG. Other, less essential, government apps for Android, such as IO or PosteID, require  Play Integrity and the Play Store (making a Google account and unmodified stock OS mandatory). <br /><br /><span class="eu"><span style="text-decoration: underline; front-weigth: bold;">EU:</span><br /><span class="blue">The upcoming <strong>EU Digital Wallet</strong> is still in development, but it seems that it will only be available as an app for iOS and stock Android (requiring Play Integrity and the Play Store), making an Apple or Google account mandatory.</span></span></details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> No fair use; only limited statutory exceptions for private copying, education, and criticism, provided specific requirements are met.</details></td>
 </tr>
 
 
 <tr>
-<td><span class="country">Switzerland</span> <span class="flag">&#127464;&#127469;</span><br /><span class="update">Last updated: 2025.12.23</span></td>
+<td><span class="country">Switzerland</span> <span class="flag">&#127464;&#127469;</span><br /><span class="update">Last updated: 2026.05.15</span></td>
 <td class="red"><details><summary><strong>Restricted</strong></summary><span class="law">Penal Code §261bis</span> prohibits vaguely defined <strong>'hate speech'</strong> (incitement, discrimination, racism, sexism, religious discrimination), <strong>anti-LGBT speech</strong> <sup>(<a href="https://reclaimthenet.org/swiss-man-chooses-jail-over-fine-for-lgbt-speech-case" target="_blank">ex.</a>)</sup>, and <span class="tooltip"><strong>Holocaust denial or justification</strong><span class="tooltiptext">The wording of the law applies to all genocides, but in practice this is not the case: In 2015, the ECHR ruled in the case of Perinçek v. Switzerland that criminalizing the denial of the Armenian Genocide was an unnecessary restriction on freedom of expression. The ECHR made a distinction between the two, stating that Holocaust denial is "invariably seen as connoting an antidemocratic ideology and antisemitism", whereas the denial of the Armenian Genocide was deemed to be a matter of historical debate rather than a direct incitement to hatred.</span></span>.</details></td>
 <td class="lred"><details><summary><strong>Selective censorship</strong></summary>Courts have ordered ISPs to <strong>block specific websites</strong>. A notable example is a 2007 case in the canton of Vaud, where a magistrate ordered Swiss ISPs to block three US-hosted websites for defamation of the Swiss judiciary.</details></td>
 <td class="green"><strong>No bans</strong></td>
@@ -281,8 +271,7 @@ To give some more examples:</p>
 <td class="green"><strong>No bans</strong></td>
 <td class="red"><details><summary><strong>Yes (6 months)</strong></summary>The <span class="law">SPTA</span> and <span class="law">OSCPT</span> require retention of ISP metadata (IPs, connection logs, browsing history) and telephony metadata (including mobile phone locations) for 6 months. <span class="blue">A <a href="https://tuta.com/blog/switzerland-surveillance-plan" target="_blank">proposed (2025) update to the <span class="law">VÜPF/OSCPT</span> surveillance law</a> would extend this requirement to email, instant messaging, and VPN providers with &gt;5,000 users. In 12/25, it was announced that the law proposal will be revised following backlash, but no details yet on what will change.</span></details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
-<td class="green"><details><summary><strong>Platform-agnostic</strong>, <span class="lred">but will be smartphone-only</span></summary>SwissID functions <strong>fully via browser</strong> for login and e-government services, with OTP or passkeys created on a desktop PC. The mobile app is not required. <span class="lred">A new <strong>digital ID app called Swiyu</strong>, resulting from a 2025 vote, will only <strong>run on Android and iOS</strong>. A desktop app is not planned. However, the Android app will not require Play Integrity and will be available outside of the Play Store, so it will work on open-source Android distributions and without a Google account.</span></details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Permits limited exceptions for private use, quotation, education, and information reporting, but otherwise copyright is strictly enforced.</details></td>
+<td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary>SwissID functions <strong>fully via browser</strong> for login and e-government services, with OTP or passkeys created on a desktop PC. The mobile app is not required. <span class="blue">A new <strong>digital ID app called Swiyu</strong>, resulting from a 2025 vote, will only <strong>run on Android and iOS</strong>. A desktop app is not planned. However, the Android app will not require Play Integrity and will be available outside of the Play Store, so it will work on open-source Android distributions and without a Google account. As of May 2026, use of the app is not yet mandatory for any tasks.</span></details></td>
 </tr>
 
 
@@ -298,7 +287,6 @@ To give some more examples:</p>
 <td class="lred"><details><summary><strong>IPs only (12 months)</strong></summary> Mandatory retention of IP allocation history for ISPs for 1 year, but no ISP connection logs or telephony metadata such as call logs and location history.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + token</summary>For e-government tasks requiring the highest security level, identification is done via <strong>BankID, Buypass ID, or Commfides</strong>. These can be used via a mobile app (Android or iOS) or, alternatively, with a USB token, smart card with card reader, or a code generator issued by a bank, depending on the chosen ID method.</details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Follows European approach: no fair use, only specific exceptions for quotation, education, private use, parody, etc. Uses outside these lists aren’t permitted.</details></td>
 </tr>
 
 
@@ -314,7 +302,6 @@ To give some more examples:</p>
 <td class="green"><strong>None</strong></td>
 <td class="green"><strong>No</strong></td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary>Most people use the <strong>Auðkenni mobile app</strong> for authentication, but the <strong>SIM-based electronic ID (MobileID)</strong> serves as an alternative and works on dumbphones as well. Note that SIM e-ID requires an Icelandic phone number, which can be inconvenient and costly for people living abroad. eSIMs will not work, as authentication is SIM-based rather than SMS OTP.</details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Follows European approach: no fair use, only specific exceptions for quotation, education, private copying, etc. Uses outside these lists aren’t permitted.</details></td>
 </tr>
 
 
@@ -330,7 +317,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (36 months)</strong></summary>The <span class="law">Yarovaya Law 2016</span> requires retention of ISP metadata (IPs, connection logs, browsing history), email and telephony metadata (including mobile phone locations) and even VPN logs for 3 years.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary> <strong>Browser login to Gosuslugi</strong> works with password + OTP, and no Android/iOS app is required for authentication.</details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Uses must fall within a strictly defined list of statutory exceptions, such as quotation, news reporting, and personal use. No general fair use principle.</details></td>
 </tr>
 
 
@@ -346,7 +332,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (12 months)</strong></summary>Mandatory retention of ISP metadata (IPs, connection logs, browsing history) and telephony metadata (call records, SMS metadata, location history) for 1 year.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="dred"><details><summary><strong>May need Google or Apple account &amp; device</strong></summary> Browser login to gov.br works with password + OTP, but for many sensitive tasks including digital signatures and tax filings a "Gold" status on gov.br is needed. This is usually attained through the <strong>gov.br Android/iOS app</strong>. An alternative is purchasing a digital certificate stored on a computer or smartcard, but these cost R$50–300/year, expire after 1–3 years, and require an in-person or video call identity validation appointment, making them very inconvenient compared to the smartphone app. The <strong>gov.br Android app uses Play Integrity and is only available from Google Play</strong>, requiring a Google account and unmodified Android (incompatible with GrapheneOS or LineageOS, which fail Play Integrity).</details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Exceptions are limited to those expressly listed in statute (quotation, private copying for personal use, etc.), with interpretation strictly applied.</details></td>
 </tr>
 
 
@@ -362,7 +347,6 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (12 months)</strong></summary>Mandatory retention of ISP metadata (IPs, connection logs, browsing history) and telephony metadata (including mobile phone locations) for 1 year.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="green"><details><summary><strong>Platform-agnostic</strong>, can use browser + OTP</summary> <strong>Browser login to DigiLocker or Aadhaar</strong> works with password + SMS OTP, and no Android/iOS app is required for authentication. However, a mobile phone is required to receive SMS OTPs.</details></td>
-<td class="lred"><details><summary><strong>Fair Dealings</strong></summary> Numerous prescribed purposes (research, criticism, review, news reporting, education, judicial proceedings) are allowed, but uses outside these are not: more flexible than in Europe but not as broad as US fair use.</details></td>
 </tr>
 
 
@@ -378,13 +362,12 @@ To give some more examples:</p>
 <td class="red"><details><summary><strong>Yes (6 months)</strong></summary> Mandatory retention of ISP metadata (such as IPs, connection logs, or browsing history), email and telephony metadata (including mobile phone locations) and even VPN logs for 6 months.</details></td>
 <td class="red"><strong>Yes</strong>, must register with official ID</td>
 <td class="lred"><details><summary><strong>Cross-platform, but mobile OS only</strong></summary> For government tasks requiring strong authentication, a smartphone is effectively mandatory because the primary methods <strong>rely on smartphone apps</strong> such as NNIA, CTID, WeChat, AliPay with no straightforward alternatives for desktop PCs or dumbphones. While some government portals have web interfaces, strong authentication often requires scanning a QR code with a mobile app like WeChat or Alipay, or using facial recognition/biometrics tied to a phone. Despite all this, Android phones sold in China are "degoogled" and you <strong>don't need Play Store or a Google account</strong> to download the apps; it is likely to work on FOSS Android distributions such as GrapheneOS or LineageOS. HarmonyOS phones are also supported and, while proprietary, can be used without a Huawei account.</details></td>
-<td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary> Very limited statutory exceptions; general fair use does not exist. Use usually only allowed for research, personal use, or narrow educational purposes.</details></td>
 </tr>
 
 
 <tr>
 <td><span class="country">Japan</span> <span class="flag">&#127471;&#127477;</span><br /><span class="update">Last updated: 2026.04.24</span></td>
-<td class="yellow"><details><summary><strong>Strict defamation laws</strong></summary> Nominally there are very few restrictions on speech, however defamation laws are very strict and <strong>insults</strong> and <strong>damaging someone's reputation</strong> can be prosecuted (Japanese defamation laws do not require the statement to be false; even true statements that harm someone's reputation can lead to legal consequences - unless disclosing the statement is in the public interest).</details></td>
+<td class="yellow"><details><summary><strong>Strict defamation and copyright laws</strong></summary> Nominally there are very few restrictions on speech. <br />However defamation laws are very strict and <strong>insults</strong> and <strong>damaging someone's reputation</strong> can be prosecuted (Japanese defamation laws do not require the statement to be false; even true statements that harm someone's reputation can lead to legal consequences - unless disclosing the statement is in the public interest). <br />Copyright law in Japan is very restrictive, with no general fair use exception and <strong>very strict copyright jurisprudence</strong>: people have been jailed for <a href="https://reclaimthenet.org/when-text-becomes-a-crime-how-transcribing-movies-led-to-jail-time-in-japan" target="_blank">transcribing a film to text</a>, <a href="https://www.ign.com/articles/japanese-police-arrest-36-year-old-man-on-suspicion-of-tampering-with-pokemon-violet-save-data" target="_blank">distributing modified game save data</a>, <a href="https://reclaimthenet.org/japan-jails-a-man-for-publishing-movie-spoilers" target="_blank">publishing movie spoilers</a>, or using or creating software that can bypass DRM (Digital Restrictions Management).</details></td>
 <td class="lred"><details><summary><strong>Selective censorship</strong></summary> Court-ordered site blocks mainly targets <strong>piracy websites</strong>, especially those relating to manga and anime. However, this is usually applied to high-profile sites, not as a blanket censorship policy. A court ruling from 11/2025 <a href="https://reclaimthenet.org/cloudflare-liable-japan-manga-piracy-court-ruling" target="_blank">held CDN providers liable</a> for indirectly hosting copyrighted material, setting a dangerous precedent.</details></td>
 <td class="green"><strong>No bans</strong></td>
 <td class="green"><strong>No bans</strong></td>
@@ -394,24 +377,20 @@ To give some more examples:</p>
 <td class="lgreen"><details><summary><strong>No, but proposed</strong></summary> <span class="blue">As of March 2025, <a href="https://btw.media/internet-governance/japan-considers-tougher-data-retention-rules/" target="_blank">Japan’s data protection laws are under review</a>. However, the legislative outcome is unclear.</span></details></td>
 <td class="red"><details><summary><strong>Yes</strong>, must register with official ID</summary>Data-only SIMs were exempt in the past but <a href="https://www.straitstimes.com/asia/east-asia/japan-to-require-id-checks-for-data-only-sim-cards-amid-fraudulent-use" target="_blank">will also require KYC from April 2027 onwards</a>.</details></td>
 <td class="lred"><details><summary><strong>Cross-platform, but proprietary OS only</strong></summary>Some tasks requiring strong authentication require either the mobile <strong>Mynaportal app for Android/iOS/Windows/macOS</strong>, or a compatible USB card reader for the desktop app. While the smartcard reader requires an upfront purchase, everything can be done without a smartphone. However, on Linux only browser access is offered, making some tasks such as digital signing impossible; a <strong>proprietary OS or smartphone</strong> is therefore required. The Mynaportal Android app appears to work on non-stock Android systems such as LineageOS or GrapheneOS, but it requires Play Services / microG and is only available on the Play Store (requiring a Google account; Aurora Store can work as an unsupported workaround).</details></td>
-<td class="dred"><details><summary><strong>Very restrictive copyright law</strong></summary>Use allowed only for narrowly defined statutory exceptions such as quotation, certain educational use, and news reporting. No general fair use exception and generally <strong>very strict jurisprudence</strong>: people have been jailed for <a href="https://reclaimthenet.org/when-text-becomes-a-crime-how-transcribing-movies-led-to-jail-time-in-japan" target="_blank">transcribing a film to text</a>, <a href="https://www.ign.com/articles/japanese-police-arrest-36-year-old-man-on-suspicion-of-tampering-with-pokemon-violet-save-data" target="_blank">distributing modified game save data</a>, <a href="https://reclaimthenet.org/japan-jails-a-man-for-publishing-movie-spoilers" target="_blank">publishing movie spoilers</a>, or using or creating software that can bypass DRM (Digital Restrictions Management).</details></td>
 </tr>
 
 <tr>
-  <td><span class="country">Vietnam</span> <span class="flag">&#127483;&#127475;</span><br /><span class="update">Last updated: 2026.05.09</span></td>
-  <td class="dred"><details><summary><strong>Severe limitations of speech</strong></summary>Illegal speech includes vaguely defined <strong>'hate speech'</strong>, injuring the reputation of state organs (may include <strong>any criticism of the government</strong>), <strong>disinformation</strong> or <strong>'distorting the truth'</strong>, <strong>'destroying the order of society'</strong>, and criticizing socialism.</details></td>
-  <td class="red"><details><summary><strong>Widespread censorship</strong></summary>Frequently orders ISPs to block access to certain websites, mostly blogging platforms or news sites that allow the creation of <strong>'harmful' content</strong> in Vietnamese (ex. BBC News Tiếng Việt, Medium, RFA...). Authorities were also alleged to have controlled a team of actors that <strong>attempt to shape narratives</strong> on topics related to Vietnam on "neutral"/community-maintained/popular websites, domestic and abroad (ex. Wikipedia). The government has <strong>actively coerced</strong> and attempt to impose control over social media platforms to remove users online for expressing <strong>"wrong views"</strong>. The most profilic incident was in 2016, when <a href="https://en.wikipedia.org/wiki/Censorship_of_Facebook#Vietnam" target="_blank">Facebook was blocked entirely for 2 weeks</a> as a result of an ongoing protest.</details></td>
-  <td class="red"><details><summary><strong>Yes (backdoor on demand)</strong></summary>There are no restrictions on encryption or the use of encryption tools, though some laws require that authorities be given decryption keys <strong>on request</strong>. <span class="law">The Law on Information Security (Article 35, 36)</span> requires technology companies related to civil encryption to share users' data at the request of competent state agencies, mandates that authorities be given decryption keys on request.</details></td>
-  <td class="green"><details><summary><strong>No bans</strong></summary>As of Jan 2026, there are no laws that explicitly restrict the usage and distribution of private network protocols. Under <span class="law">Law No.86/2015/QH13</span>, companies that sell or provide VPN services commercially in Vietnam must be licensed, though it is unsure if this is being enforced.</details></td>
-  <td class="red"><details><summary><strong>Age verification</strong></summary>All social medias in Vietnam are required to implement age verification, although it is currently weakly regulated. This also applies to game providers, in order to apply certain restrictions. Only websites and applications involved in commerce are required to clearly display identifying information.</details></td>
-  <td class="red"><details><summary><strong>Yes</strong></summary><span class="law">Law No. 86/2015/QH13, Article 36</span> explicitly states that users of cryptographic products have the responsibility "to provide necessary information relating to cryptographic keys for competent state agencies <strong>upon request</strong>".</details></td>
-  <td class="green"><strong>No bans</strong></td>
-  <td class="red"><details><summary><strong>Yes (24 months)</strong></summary><span class="law">Decree No. 53/2022/ND-CP</span> explicitly requires internet and telecommunications providers to store information of all users in Vietnam. Types of stored metadata may include: account names, phone numbers, email addresses, IP addresses, service usage (duration and payments), and relational data. These may be stored for as long as 24 months.</details></td>
-  <td class="red"><strong>Yes</strong>, must register with official ID</td>
-  <td class="red"><details><summary><strong>Limited support</strong>, iOS/Android required</summary>Online civilian tasks and services can be done on <strong>VNeID</strong>, which is <strong>only available</strong> on Android and iOS. Android systems are specifically required to pass an extensive operating system check in order to run the app, most of which will fail on open-source custom Android ROMs. There are currently no way to circumvent this, but as of Jan 2026, the app is known to work on GrapheneOS.</details></td>
-  <td class="red"><details><summary><strong>Narrow statutory exceptions</strong></summary>No fair use; only limited statutory exceptions for private copying, education, quotation, news reporting, public display, artificial intellegence training, provided specific requirements are met. These exceptions are exhaustive and listed in <span class="law">Article 25 of Law No. 50/2005/QH11</span> and <span class="law">Law No.
-131/2025/QH15</span></details></td>
-
+<td><span class="country">Vietnam</span> <span class="flag">&#127483;&#127475;</span><br /><span class="update">Last updated: 2026.05.09</span></td>
+<td class="dred"><details><summary><strong>Severe limitations of speech</strong></summary>Illegal speech includes vaguely defined <strong>'hate speech'</strong>, injuring the reputation of state organs (may include <strong>any criticism of the government</strong>), <strong>disinformation</strong> or <strong>'distorting the truth'</strong>, <strong>'destroying the order of society'</strong>, and criticizing socialism.</details></td>
+<td class="red"><details><summary><strong>Widespread censorship</strong></summary>Frequently orders ISPs to block access to certain websites, mostly blogging platforms or news sites that allow the creation of <strong>'harmful' content</strong> in Vietnamese (ex. BBC News Tiếng Việt, Medium, RFA...). Authorities were also alleged to have controlled a team of actors that <strong>attempt to shape narratives</strong> on topics related to Vietnam on "neutral"/community-maintained/popular websites, domestic and abroad (ex. Wikipedia). The government has <strong>actively coerced</strong> and attempt to impose control over social media platforms to remove users online for expressing <strong>"wrong views"</strong>. The most profilic incident was in 2016, when <a href="https://en.wikipedia.org/wiki/Censorship_of_Facebook#Vietnam" target="_blank">Facebook was blocked entirely for 2 weeks</a> as a result of an ongoing protest.</details></td>
+<td class="red"><details><summary><strong>Yes (backdoor on demand)</strong></summary>There are no restrictions on encryption or the use of encryption tools, though some laws require that authorities be given decryption keys <strong>on request</strong>. <span class="law">The Law on Information Security (Article 35, 36)</span> requires technology companies related to civil encryption to share users' data at the request of competent state agencies, mandates that authorities be given decryption keys on request.</details></td>
+<td class="green"><details><summary><strong>No bans</strong></summary>As of Jan 2026, there are no laws that explicitly restrict the usage and distribution of private network protocols. Under <span class="law">Law No.86/2015/QH13</span>, companies that sell or provide VPN services commercially in Vietnam must be licensed, though it is unsure if this is being enforced.</details></td>
+<td class="red"><details><summary><strong>Age verification</strong></summary>All social medias in Vietnam are required to implement age verification, although it is currently weakly regulated. This also applies to game providers, in order to apply certain restrictions. Only websites and applications involved in commerce are required to clearly display identifying information.</details></td>
+<td class="red"><details><summary><strong>Yes</strong></summary><span class="law">Law No. 86/2015/QH13, Article 36</span> explicitly states that users of cryptographic products have the responsibility "to provide necessary information relating to cryptographic keys for competent state agencies <strong>upon request</strong>".</details></td>
+<td class="green"><strong>No bans</strong></td>
+<td class="red"><details><summary><strong>Yes (24 months)</strong></summary><span class="law">Decree No. 53/2022/ND-CP</span> explicitly requires internet and telecommunications providers to store information of all users in Vietnam. Types of stored metadata may include: account names, phone numbers, email addresses, IP addresses, service usage (duration and payments), and relational data. These may be stored for as long as 24 months.</details></td>
+<td class="red"><strong>Yes</strong>, must register with official ID</td>
+<td class="red"><details><summary><strong>Limited support</strong>, iOS/Android required</summary>Online civilian tasks and services can be done on <strong>VNeID</strong>, which is <strong>only available</strong> on Android and iOS. Android systems are specifically required to pass an extensive operating system check in order to run the app, most of which will fail on open-source custom Android ROMs. There are currently no way to circumvent this, but as of Jan 2026, the app is known to work on GrapheneOS.</details></td>
 </tr>
 
 </tbody>
@@ -453,15 +432,13 @@ Step 1: Assign the colours from the table to the following values:</p>
   <li>yellow = 0.25</li>
   <li>light red = 0.75</li>
   <li>red = 1</li>
-  <li>dark red = 1.25</li>
+  <li>dark red = 1.5</li>
 </ul>
 <p>Step 2: Weigh the columns. This is also subjective but I went with these percentages:</p>
 <ul>
-  <li>20% - free speech</li>
-  <li>15% each - censorship, encryption bans</li>
-  <li>12.5% each - VPN bans, online ID/age verification</li>
-  <li>7.5% each - key disclosure laws, Monero ban</li>
-  <li>2.5% each - metadata retention, SIM card registration, digital ID/e-Gov apps, copyright law</li>
+  <li>12.5% each - free speech, censorship, encryption bans, VPN bans</li>
+  <li>10% each - online ID/age verification, key disclosure laws, Monero ban</li>
+  <li>6.67% each - metadata retention, SIM card registration, digital ID/e-Gov apps</li>
 </ul>
 <p>Step 3: Calculate the index as a sumproduct of the columns weight and colour values.<br />
 Step 4: Normalise the index so that China has an oppression index of 1.</p></details>
@@ -471,28 +448,27 @@ Step 4: Normalise the index so that China has an oppression index of 1.</p></det
   <tr style="font-weight: bold;"><td>Country</td><td>Oppression Index</td></tr>
   <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Mostly free (for now)</td></tr>
     <tr><td>USA - federal level &amp; least restrictive states</td><td>0.10</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Decent (but at risk)</td></tr>
-    <tr><td>Japan</td><td>0.22</td></tr>
-    <tr><td>USA - most restrictive states</td><td>0.24</td></tr>
-    <tr><td>Canada</td><td>0.31</td></tr>
-    <tr><td>Iceland</td><td>0.31</td></tr>
-    <tr><td>Switzerland*</td><td>0.34</td></tr>
-    <tr><td>Norway</td><td>0.42</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Restricted (and getting worse)</td></tr>
-    <tr><td>Brazil</td><td>0.58</td></tr>
-    <tr><td>Italy</td><td>0.60</td></tr>	
-    <tr><td>India</td><td>0.63</td></tr>	
-    <tr><td>Germany</td><td>0.64</td></tr>
-    <tr><td>France</td><td>0.68</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Unfree (avoid if you can)</td></tr>	
-    <tr><td>Vietnam</td><td>0.74</td></tr>
-    <tr><td>UK</td><td>0.77</td></tr>
-    <tr><td>Australia</td><td>0.78</td></tr>    
-    <tr><td>Russia</td><td>0.83</td></tr>
-  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Totalitarian (the frog has been boiled)</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Decent (but at risk) (&lt; 0.25)</td></tr>
+    <tr><td>Iceland</td><td>0.19</td></tr>
+    <tr><td>Canada</td><td>0.19</td></tr>
+    <tr><td>USA - most restrictive states</td><td>0.21</td></tr>
+    <tr><td>Japan</td><td>0.21</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Somewhat restricted (and getting worse) (0.25-0.50)</td></tr>
+    <tr><td>Switzerland</td><td>0.28</td></tr>
+    <tr><td>Norway</td><td>0.37</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Unfree (fight back while you still can) (0.51-0.75)</td></tr>
+    <tr><td>Italy</td><td>0.51</td></tr>
+    <tr><td>Germany</td><td>0.54</td></tr>
+    <tr><td>Brazil</td><td>0.54</td></tr>
+    <tr><td>India</td><td>0.56</td></tr>
+    <tr><td>France</td><td>0.63</td></tr>
+    <tr><td>Vietnam</td><td>0.67</td></tr>
+    <tr><td>UK</td><td>0.68</td></tr>
+    <tr><td>Australia</td><td>0.71</td></tr>
+  <tr><td colspan="2" style="font-style: italic; background-color: lightgray; color: black;">Totalitarian (it's over) (&gt; 0.75)</td></tr>
+    <tr><td>Russia</td><td>0.80</td></tr>
     <tr><td>PR China</td><td>1.00</td></tr>
 </table>
-<p>*would increase to 0.36 with the planned smartphone-only digital ID</p>
 
 <h2>Don't be afraid to be an old man yelling at clouds</h2>
 
