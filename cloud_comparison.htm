@@ -157,7 +157,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 22 May 2026</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 29 May 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -255,7 +255,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td>Can be shared with up to 6 people</td>
 </tr>
 
-<tr class="product NoMSO NoSelfHosting NoPIM NoPIMEncrypt NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoDAV NoIMAP">
+<tr class="product NoMSO NoSelfHosting NoPIM NoPIMEncrypt NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoDAV">
 <td>Aster Mail</td>
 <td><img src="pics/logos/cloud/aster.webp" class="icon" /></td><!-- Logo -->
 <td>Aster Communications Inc.</td><!-- Developer -->
@@ -271,7 +271,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="na"></td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
 <td class="yes">Yes</td><!-- Zero access encryption -->
-<td class="no tooltip">No (but claimed)<span class="tooltiptext">While the Help page for Aster Mail claims that paid accounts can connect to Aster Mail with IMAP mail clients (like Thunderbird or Outlook) using the "Aster Bridge", I have not been able to find this application available for download. I suspect that as of May 2026 it is only a planned future feature. I also think that it would most likely not be available on mobile devices, similar to Protonmail's Bridge app which is only available for desktop.</span></td><!-- IMAP -->
+<td class="yellow">Planned (via Aster Bridge) <span style="font-size: 75%;">(Paid accounts, <span class="tooltip">Desktop only<span class="tooltiptext">Windows, macOS, Linux</span></span>)</span></td><!-- IMAP -->
 <td class="yes">Yes</td><!-- Domain -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td class="px">free<br />(10 GB)</td>
@@ -1040,7 +1040,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="no">No</td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
 <td class="yes">Yes</td><!-- Zero access encryption -->
-<td class="almost"><span class="tooltip">Desktop only<span class="tooltiptext">Windows, macOS, Linux</span></span><em> (via Proton&shy;Mail Bridge)</em></td><!-- IMAP -->
+<td class="almost">via Proton&shy;Mail Bridge <span style="font-size: 75%;">(Paid accounts, <span class="tooltip">Desktop only<span class="tooltiptext">Windows, macOS, Linux</span></span>)</span></td><!-- IMAP -->
 <td class="yes">Yes</td><!-- Domain -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
 <td class="px tooltip">free<br />(5 GB)<span class="tooltiptext">also includes 1 GB mail storage</span></td>
@@ -1242,7 +1242,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <!-- File sync -->
 <td class="almost tooltip">Yes (claimed)<span class="tooltiptext">encryption cannot be verified as apps are closed source</span></td><!-- E2EE -->
 <td class="no">No <em>(not compatible with E2EE)</em></td><!-- WebDAV or API -->
-<td class="yes tooltip">Yes (Microsoft Office Online)<span class="tooltiptext">Integration with Microsoft Office 365. Files are decrypted in the browser, then sent to Office Online for editing, then re-encrypted and uploaded back to Tresorit's cloud. Microsoft will be able to see the files, but not Tresorit.</span></td><!-- access/edit in browser -->
+<td class="no">No</td><!-- access/edit in browser -->
 <td class="yes">Yes</td><!--share files -->
 <td class="yes">Yes</td><!-- desktop sync -->
 <td class="no">No</td><!-- mobile sync -->
