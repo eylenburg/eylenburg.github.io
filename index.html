@@ -23,6 +23,9 @@
     grid-template-columns: 1fr 1fr;  /* 2 columns */
     align-items: stretch;            /* makes rows equal height */
   }
+  .article.fullsize {
+    grid-column: span 2;
+  }
 }
 
 div.article {
@@ -65,12 +68,13 @@ div.article {
 
 .image-wrapper img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 51px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
 }
+
 
 .gold {
   background-color: gold;
@@ -88,7 +92,8 @@ img.invert {
   div.article {
     border: 3px solid white;
   }
-  /* invert these logos in darj mode */
+
+  /* invert these logos in dark mode */
   img.invert2 {
     filter: invert(1) hue-rotate(180deg);
   }
@@ -99,8 +104,36 @@ img.invert {
 
 <h1>Sitemap - Eylenburg.github.io</h1>
 <div class="articles">
+
+  <div class="article fullsize">
+  <h2>&nbsp;<strong><a href="countries.htm">Digital Freedom across the World</a></strong> (17 countries)</h2>
+  <div class="header-block">
+    <div class="image-row">
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127482;&#127480;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127462;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127462;&#127482;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127468;&#127463;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127465;&#127466;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127467;&#127479;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127481;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127469;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127475;&#127476;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127480;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127479;&#127482;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127463;&#127479;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127475;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127475;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127471;&#127477;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127483;&#127475;</span></div>
+      <div class="image-wrapper"><span style="font-size: x-large;">&#127480;&#127472;</span></div>
+    </div>
+  </div>
+  <p> <span class="gold">(last update: July 2026)</span>
+  <br /><s>Which countries are serious about keeping their citizens safe from harm online?</s> Which countries restrict free speech, censor the web, block VPNs, have age verification, or ban encryption (and more)? Documenting the slippery slope into tyranny.</p>
+  </div>
+
   <div class="article">
-  <h2>(1a) <strong><a href="os_comparison.htm">Operating Systems - Comparison Table</a></strong> (18 systems)</h2>
+  <h2>&nbsp;<strong><a href="os_comparison.htm">Operating Systems - Comparison Table</a></strong> (18 systems)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/desktops/windows.png" /></div>
@@ -108,7 +141,7 @@ img.invert {
       <div class="image-wrapper"><img src="pics/logos/OS/ios.svg" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/OS/android.svg" /></div>
       <div class="image-wrapper"><img src="pics/logos/OS/chromeos.svg" /></div>
-      <div class="image-wrapper"><img src="pics/logos/OS/Tux.svg" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/OS/Tux.svg"  /></div>
       <div class="image-wrapper"><img src="pics/logos/OS/freebsd.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/OS/netbsd.svg" /></div>
       <div class="image-wrapper"><img src="pics/logos/OS/openbsd.svg" /></div>
@@ -129,13 +162,13 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(1b) <strong><a href="os_familytree.htm">Operating Systems - Timeline and Family Tree</a></strong> from 1950 to Today</h2>
+  <h2>&nbsp;<strong><a href="os_familytree.htm">Operating Systems - Timeline and Family Tree</a></strong> from 1950 to Today</h2>
   <p> <span class="gold">(last update: March 2026)</span>
   <br />includes around 1,400 operating systems since the beginning of computing!</p>
   </div>
 
   <div class="article">
-  <h2>(2) &nbsp;<strong><a href="android_comparison.htm">Android-based Operating Systems - Comparison Table</a></strong> (6 distributions)</h2>
+  <h2>&nbsp;<strong><a href="android_comparison.htm">Android-based Operating Systems - Comparison Table</a></strong> (6 distributions)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/android/grapheneos.svg" class="invert2" /></div>
@@ -153,14 +186,14 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(3) &nbsp;<strong><a href="linux_comparison.htm">Linux Distributions - Comparison Table &amp; Timeline</a></strong> (17 distributions)</h2>
+  <h2>&nbsp;<strong><a href="linux_comparison.htm">Linux Distributions - Comparison Table &amp; Timeline</a></strong> (17 distributions)</h2>
   <div class="header-block">
     <div class="image-row">
-      <div class="image-wrapper"><img src="pics/logos/distros/debian.png" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/distros/debian.png"  /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/ubuntu.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/opensuse.png" /></div>
-      <div class="image-wrapper"><img src="pics/logos/distros/sle.png" style="height: 59px;" /></div>
-      <div class="image-wrapper"><img src="pics/logos/distros/fedora.png" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/distros/sle.png"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/distros/fedora.png"  /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/redhat.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/openmandriva.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/mageia.png" /></div>
@@ -172,7 +205,7 @@ img.invert {
       <div class="image-wrapper"><img src="pics/logos/distros/void.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/nixos.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/distros/guixsd.png" /></div>
-      <div class="image-wrapper"><img src="pics/logos/distros/solus.png" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/distros/solus.png"  /></div>
     </div>
   </div>
   <p> <span class="gold">(last update: April 2026)</span>
@@ -181,11 +214,11 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(4a) <strong><a href="de_comparison.htm">Desktop Environments - Comparison Table &amp; List</a></strong> (10 desktops)</h2>
+  <h2>&nbsp;<strong><a href="de_comparison.htm">Desktop Environments - Comparison Table &amp; List</a></strong> (10 desktops)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/desktops/plasma.png" /></div>
-      <div class="image-wrapper"><img src="pics/logos/desktops/gnome.png" class="invert2" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/desktops/gnome.png" class="invert2"  /></div>
       <div class="image-wrapper"><img src="pics/logos/desktops/xfce.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/desktops/mate.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/desktops/cinnamon.png" /></div>
@@ -203,16 +236,16 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(4b) <strong><a href="de_default.htm">Desktop Environments - Default Choices for Linux and Unix</a></strong> from 1990 to Today</h2>
+  <h2>&nbsp;<strong><a href="de_default.htm">Desktop Environments - Default Choices for Linux and Unix</a></strong> from 1990 to Today</h2>
   <p> <span class="gold">(last update: December 2025)</span>
   <br />Timeline since 1990 showing the most important distributions and their default desktops (KDE, GNOME, Xfce and others)</p>
   </div>
 
   <div class="article">
-  <h2>(5a) <strong><a href="browser_comparison.htm">Web Browsers - Comparison Table</a></strong> (7 - or actually 20 - browsers)</h2>
+  <h2>&nbsp;<strong><a href="browser_comparison.htm">Web Browsers - Comparison Table</a></strong> (7 - or actually 20 - browsers)</h2>
   <div class="header-block">
     <div class="image-row">
-      <div class="image-wrapper"><img src="pics/logos/browsers/firefox.png" style="height: 59px;"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/browsers/firefox.png"   /></div>
       <div class="image-wrapper"><img src="pics/logos/browsers/safari.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/browsers/chrome.svg" /></div>
       <div class="image-wrapper"><img src="pics/logos/browsers/edge.png" /></div>
@@ -226,13 +259,13 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(5b) <strong><a href="browser_engines.htm">Web Browsers - History of Browser Engines</a></strong> from 1990 to Today</h2>
+  <h2>&nbsp;<strong><a href="browser_engines.htm">Web Browsers - History of Browser Engines</a></strong> from 1990 to Today</h2>
   <p> <span class="gold">(last update: March / October 2025)</span>
   <br />Many tried, few remain. Will any Chromium competitors be left in a few years?</p>
   </div>
 
   <div class="article">
-  <h2>(6) &nbsp;<strong><a href="im_comparison.htm">Instant Messengers - Comparison Table</a></strong> (12 messengers)</h2>
+  <h2>&nbsp;<strong><a href="im_comparison.htm">Instant Messengers - Comparison Table</a></strong> (12 messengers)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/messengers/simplex.png" /></div>
@@ -254,10 +287,10 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(7) &nbsp;<strong><a href="cloud_comparison.htm">Cloud, Sync &amp; Email Services - Comparison Table</a></strong> (42 providers)</h2>
+  <h2>&nbsp;<strong><a href="cloud_comparison.htm">Cloud, Sync &amp; Email Services - Comparison Table</a></strong> (42 providers)</h2>
   <div class="header-block">
     <div class="image-row">
-      <div class="image-wrapper"><img src="pics/logos/cloud/aurora.png" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/cloud/aurora.png"  /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/aster.webp"  /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/murena.svg" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/forwardemail.svg" /></div>
@@ -265,7 +298,7 @@ img.invert {
       <div class="image-wrapper"><img src="pics/logos/cloud/kolab.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/mailfence.png" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/nordlocker.svg" class="invert" /></div>
-      <div class="image-wrapper"><img src="pics/logos/cloud/radicale.jpg" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/cloud/radicale.jpg"  /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/sync.com.svg" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/woelkli.png" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/baikal.png" /></div>
@@ -295,7 +328,7 @@ img.invert {
       <div class="image-wrapper"><img src="pics/logos/cloud/yandex.png" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/dropbox.png" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/filen.svg" class="invert2" /></div>
-      <div class="image-wrapper"><img src="pics/logos/cloud/google.png" style="height: 59px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/cloud/google.png"  /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/internxt.svg" class="invert2" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/mailbox.svg" /></div>
       <div class="image-wrapper"><img src="pics/logos/cloud/nextcloud.png" /></div>
@@ -310,7 +343,7 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(8) &nbsp;<strong><a href="payments.htm">Payment Methods - Comparison Table</a></strong> (11+ payment systems)</h2>
+  <h2>&nbsp;<strong><a href="payments.htm">Payment Methods - Comparison Table</a></strong> (11+ payment systems)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/other/cash.svg" /></div>
@@ -335,7 +368,7 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(9) &nbsp;<strong><a href="excel.htm">Spreadsheet Programs - Comparison Table</a></strong> (5 spreadsheet programs)</h2>
+  <h2>&nbsp;<strong><a href="excel.htm">Spreadsheet Programs - Comparison Table</a></strong> (5 spreadsheet programs)</h2>
   <div class="header-block">
     <div class="image-row">
       <div class="image-wrapper"><img src="pics/logos/excel/excel.svg" /></div>
@@ -351,37 +384,58 @@ img.invert {
   </div>
 
   <div class="article">
-  <h2>(10) &nbsp;<strong><a href="countries.htm">Digital Freedom across the World</a></strong> (17 countries)</h2>
+  <h2>&nbsp;<strong><a href="ai_search_maps.htm">Overview of Knowledge and Information Providers <br />– AI (LLM), Search, and Maps</a></strong> (39 providers)</h2>
   <div class="header-block">
     <div class="image-row">
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127482;&#127480;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127462;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127462;&#127482;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127468;&#127463;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127465;&#127466;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127467;&#127479;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127481;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127469;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127475;&#127476;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127480;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127479;&#127482;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127463;&#127479;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127470;&#127475;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127464;&#127475;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127471;&#127477;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127483;&#127475;</span></div>
-      <div class="image-wrapper"><span style="font-size: x-large;">&#127480;&#127472;</span></div>     
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/chatgpt.svg" class="invert2" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/claude.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/deepseek.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/gemini.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/grok.svg" class="invert2" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/kimi.png"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/meta.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/mimo.webp"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/minimax.png"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/mistral.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/qwen.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/zai.svg"  /></div>
+    </div>
+    <div class="image-row">
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/euria.webp"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/perplexity.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/lumo.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/confer.webp"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/copilot.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/ai/tinfoil.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/google.svg"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/mojeek.png"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/qwant.svg" class="invert2" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/yahoo.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/yandex.svg"  /></div>
+    </div>
+    <div class="image-row">
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/ecosia.svg"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/marginalia.png"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/search/startpage.svg" class="invert2" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/bing.svg"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/brave.svg"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/duck.svg"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/kagi.svg" class="invert2" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/maps/applemaps.png"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/maps/googlemaps.svg"   /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/maps/yandexmaps.svg" style="min-height: 40px;" /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/maps/herewego.webp"  /></div>
+      <div class="image-wrapper"><img src="pics/logos/ai_search_maps/maps/openstreetmap.svg"  /></div>
     </div>
   </div>
   <p> <span class="gold">(last update: July 2026)</span>
-  <br /><s>Which countries are serious about keeping their citizens safe from harm online?</s> Which countries restrict free speech, censor the web, block VPNs, have age verification, or ban encryption (and more)? Documenting the slippery slope into tyranny.</p>
+  <br/>Which ones are "original", which ones just front-ends? What are the main features? </p>
   </div>
 
   <div class="article">
   <h2>Other articles:</h2>
   <p>These are one-off articles that I don't plan to update in the future (unless I change my mind)</p>
   <ul>
-    <li><strong style="font-size: x-large;"><a href="ai_search_maps.htm">Overview of Search, AI/LLM and Maps Providers</a></strong>. Which ones are "original", which ones just front-ends? Last updated in <span class="gold">June 2026</span>.</li>
     <li><strong style="font-size: x-large;"><a href="small_phones.htm">The Disappearance of the Pocket-Friendly Phone</a></strong>. Why are all new smartphones so huge? Looking at newly released phones from 2015 to 2025. Published in <span class="gold">October 2025</span>.</li>
     <li><strong style="font-size: x-large;"><a href="altchans.htm">Monitoring activity in Altchans</a></strong>. To which imageboards do users flee when 4chan goes offline? Observing activity across ~40 "altchans" from <span class="gold">April to July 2025</span>.</li>
      <li><strong style="font-size: x-large;"><a href="linux_distrowatch.htm">A look at the relative popularity of Linux distributions over time</a></strong>, as measured by Distrowatch hits from 2002 to <span class="gold">April 2023</span>.</li>

@@ -42,6 +42,7 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+        table-layout: fixed;
     }
     table.providers th,
     table.providers td {
@@ -84,6 +85,32 @@
     table.providers tr:nth-child(even) {
         background: rgba(240, 243, 246, 0.4);
     }
+
+    /* First column - logo */
+    table.providers th:first-child,
+    table.providers td:first-child {
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        white-space: nowrap;
+    }
+
+    table.providers td:first-child {
+        vertical-align: middle;
+    }
+
+    /* Columns 2 to 5 - text-heavy columns */
+    table.providers th:nth-child(n+2):nth-child(-n+5),
+    table.providers td:nth-child(n+2):nth-child(-n+5) {
+        width: 120px;
+    }
+
+    /* Columns 6 to 11 - yes/no columns */
+    table.providers th:nth-child(n+6):nth-child(-n+11),
+    table.providers td:nth-child(n+6):nth-child(-n+11) {
+        width: calc((100% - 50px - (120px * 4)) / 6);   /* Auto-adjusts */
+    }
+
     td.na {
         position: relative;
         background-image:
@@ -92,6 +119,7 @@
         background-repeat: repeat;
         color: var(--text);
     }
+
     td.na::after {
         content: "N/A";
         position: absolute;
@@ -104,10 +132,18 @@
         pointer-events: none;
         text-shadow: 0 1px 2px rgba(255,255,255,0.6);
     }
+
     span.tooltiptext {
         position: fixed; /* or absolute */
         z-index: 99999 !important;
     }
+
+    img.icon {
+        max-width: 50px;
+        min-width: 25px;
+        max-height: 40px;
+    }
+
     @media (prefers-color-scheme: dark) {
         :root {
             --na-text: #8b9bad;
@@ -122,6 +158,10 @@
         }
         table.providers th {
             color: #6b9ccc;
+        }
+            /* invert these logos in dark mode */
+        img.invert2 {
+            filter: invert(1) hue-rotate(180deg);
         }
     }
 </style>
@@ -149,8 +189,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <th>Name</th>
         <th>Developer</th>
         <th>Country</th>
-        <th>LLM family</th>
         <th>Flagship model intelligence<br /><span style="font-size: 6pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;"><a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis Intelligence Index</a> <br /><span style="font-size: 10pt;">2026.06.26</span></span></th>
+        <th>LLM family</th>
         <th>Open weights models</th>
         <th>Access via</th>
         <th>Web search used for responses</th>
@@ -162,12 +202,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>Own LLMs - Western providers</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/chatgpt.svg" class="icon invert2" /></td>
         <td><a href="https://www.chatgpt.com/" target="_blank">ChatGPT</a></td>
         <td>OpenAI</td>
         <td>USA &#127482;&#127480;</td>
-        <td>GPT</td>
         <td>GPT-5.5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">55</a></td>
+        <td>GPT</td>
         <td class="yellow tooltip">Partial (gpt-oss)<span class="tooltiptext">but no top LLMs</span></td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -176,12 +216,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/claude.svg" class="icon" /></td>
         <td><a href="https://www.claude.ai/" target="_blank">Claude</a></td>
         <td>Anthropic</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Claude</td>
         <td>Claude Fable 5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">60</a></td>
+        <td>Claude</td>
         <td class="red">No</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -190,12 +230,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/gemini.svg" class="icon" /></td>
         <td><a href="https://gemini.google.com/app" target="_blank">Gemini</a></td>
         <td>Google</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Gemini</td>
         <td>Gemini 3.5 Flash<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">50</a></td>
+        <td>Gemini</td>
         <td class="yellow tooltip">Partial (Gemma)<span class="tooltiptext">but no top LLMs</span></td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -204,12 +244,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/grok.svg" class="icon invert2" /></td>
         <td><a href="https://www.grok.com/" target="_blank">Grok</a></td>
         <td>xAI</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Grok</td>
         <td>Grok Build 0.1<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">40</a></td>
+        <td>Grok</td>
         <td class="lred tooltip">Mostly no<span class="tooltiptext">only Grok-1</span></td>
         <td>Web, apps, API</td>
         <td class="green tooltip">Yes<span class="tooltiptext">and real-time data from X</span></td>
@@ -218,12 +258,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/meta.svg" class="icon" /></td>
         <td><a href="https://www.meta.ai/" target="_blank">Meta AI</a></td>
         <td>Meta</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Llama, Muse</td>
         <td>Muse Spark<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">43</a></td>
+        <td>Llama, Muse</td>
         <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">Llama family, but not the newer and more powerful Muse LLM</span></td>
         <td>Web, apps, <span class="tooltip">API<span class="tooltiptext">Llama family only, not Muse</span></span></td>
         <td class="green">Yes</td>
@@ -232,12 +272,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/mistral.svg" class="icon" /></td>
         <td><a href="https://chat.mistral.ai/" target="_blank">Mistral Vibe <span style="font-size: smaller; font-style: italic;">(formerly Le Chat)</span></a></td>
         <td>Mistral</td>
         <td>France &#127467;&#127479;</td>
-        <td>Mistral</td>
         <td>Mistral Medium 3.5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">30</a></td>
+        <td>Mistral</td>
         <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">The majority of Mistral models are open weight</span></td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -249,12 +289,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>Own LLMs - Chinese providers</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/deepseek.svg" class="icon" /></td>
         <td><a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a></td>
         <td>DeepSeek</td>
         <td>China &#127464;&#127475;</td>
-        <td>DeepSeek</td>
         <td>DeepSeek V4 Pro<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">44</a></td>
+        <td>DeepSeek</td>
         <td class="green">Yes</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -263,12 +303,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/kimi.png" class="icon" /></td>
         <td><a href="https://www.kimi.com/" target="_blank">Kimi Chat</a></td>
         <td>Moonshot AI</td>
         <td>China &#127464;&#127475;</td>
-        <td>Kimi</td>
         <td>Kimi 2.6 Thinking<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">43</a></td>
+        <td>Kimi</td>
         <td class="green">Yes</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -277,12 +317,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/mimo.webp" class="icon" /></td>
         <td><a href="https://aistudio.xiaomimimo.com/" target="_blank">MiMo Chat</a></td>
         <td>Xiaomi</td>
         <td>China &#127464;&#127475;</td>
-        <td>MiMo</td>
         <td>MiMo-V2.5-Pro<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">42</a></td>
+        <td>MiMo</td>
         <td class="green">Yes</td>
         <td>Web, API</td>
         <td class="green">Yes</td>
@@ -291,12 +331,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/minimax.png" class="icon" /></td>
         <td><a href="https://agent.minimax.io/" target="_blank">MiniMax Agent</a></td>
         <td>MiniMax</td>
         <td>China &#127464;&#127475;</td>
-        <td>MiniMax</td>
         <td>MiniMax-M3<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">44</a></td>
+        <td>MiniMax</td>
         <td class="green">Yes</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -305,12 +345,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/qwen.svg" class="icon" /></td>
         <td><a href="https://chat.qwen.ai/" target="_blank">Qwen</a></td>
         <td>Alibaba</td>
         <td>China &#127464;&#127475;</td>
-        <td>Qwen</td>
         <td>Qwen3.7 Max<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">46</a></td>
+        <td>Qwen</td>
         <td class="green">Yes</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -319,12 +359,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/zai.svg" class="icon" /></td>
         <td><a href="https://chat.z.ai/" target="_blank">Z.ai Chat</a></td>
         <td>Z.ai</td>
         <td>China &#127464;&#127475;</td>
-        <td>GLM</td>
         <td>GLM 5.2<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">51</a></td>
+        <td>GLM</td>
         <td class="green">Yes</td>
         <td>Web, API</td>
         <td class="green">Yes</td>
@@ -336,12 +376,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>Uses third-party LLMs</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/copilot.svg" class="icon" /></td>
         <td><a href="https://copilot.microsoft.com/" target="_blank">Copilot</a></td>
         <td>Microsoft</td>
         <td>USA &#127482;&#127480;</td>
-        <td>GPT, Claude</td>
         <td class="na"></td>
+        <td>GPT, Claude</td>
         <td class="red">No</td>
         <td>Web, API</td>
         <td class="green">Yes</td>
@@ -350,12 +390,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/perplexity.svg" class="icon" /></td>
         <td><a href="https://www.perplexity.ai/" target="_blank">Perplexity</a></td>
         <td>Perplexity</td>
         <td>USA &#127482;&#127480;</td>
-        <td><span class="tooltip">user choice <span class="tooltiptext">Perplexity also has its own model called Sonar, which is based on Meta's Llama model</span></span><a href="https://www.perplexity.ai/help-center/en/articles/10354919-what-advanced-ai-models-are-included-in-my-subscription" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td><span class="tooltip">user choice <span class="tooltiptext">Perplexity also has its own model called Sonar, which is based on Meta's Llama model</span></span><a href="https://www.perplexity.ai/help-center/en/articles/10354919-what-advanced-ai-models-are-included-in-my-subscription" target="_blank">↫</a></td>
         <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones; Perplexity's Sonar model is proprietary</span></td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -367,12 +407,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>Uses third-party LLMs &amp; advertises privacy</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/brave.svg" class="icon" /></td>
         <td><a href="https://search.brave.com/ask" target="_blank">Ask Brave</a></td>
         <td>Brave</td>
         <td>USA &#127482;&#127480;</td>
-        <td><span class="tooltip">Qwen<span class="tooltiptext">+ Brave's LLM context API</span></span> <a href="https://github.com/brave/brave-search-skills/wiki/Evaluation-of-major-AI-powered-answer-engines" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td><span class="tooltip">Qwen<span class="tooltiptext">+ Brave's LLM context API</span></span> <a href="https://github.com/brave/brave-search-skills/wiki/Evaluation-of-major-AI-powered-answer-engines" target="_blank">↫</a></td>
         <td class="green">Yes</td>
         <td>Web</td>
         <td class="green">Yes</td>
@@ -381,12 +421,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/confer.webp" class="icon" /></td>
         <td><a href="https://confer.to/" target="_blank">Confer</a></td>
         <td>Confer</td>
         <td>USA &#127482;&#127480;</td>
-        <td>undisclosed</td>
         <td class="na"></td>
+        <td>undisclosed</td>
         <td class="green">Yes</td>
         <td>Web, apps</td>
         <td class="green">Yes</td>
@@ -395,12 +435,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/duck.svg" class="icon" /></td>
         <td><a href="https://www.duck.ai/" target="_blank">Duck AI</a></td>
         <td>DuckDuckGo</td>
         <td>USA &#127482;&#127480;</td>
-        <td>user choice <a href="https://duckduckgo.com/duckduckgo-help-pages/duckai/chat-models" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td>user choice <a href="https://duckduckgo.com/duckduckgo-help-pages/duckai/chat-models" target="_blank">↫</a></td>
         <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td>Web, apps</td>
         <td class="green">Yes</td>
@@ -408,29 +448,13 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
         <td class="yellow">gpt-oss only</td>
     </tr>
-    <!-- honestly who even uses this?
     <tr>
-        <td></td>
-        <td><a href="https://www.ecosia.org/ai-search" target="_blank">Ecosia AI</a></td>
-        <td>Ecosia</td>
-        <td>Germany &#127465;&#127466;</td>
-        <td>Mistral small 4 <a href="https://support.ecosia.org/article/1006-ai-search#Which-AI-model-does-Ecosia-use-AxEKH" target="_blank">↫</a></td>
-        <td class="na"></td>
-        <td class="green">Yes</td>
-        <td>Web</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-    </tr>
-    -->
-    <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/euria.webp" class="icon" /></td>
         <td><a href="https://euria.infomaniak.com/" target="_blank">Euria</a></td>
         <td>Infomaniak</td>
         <td>Switzerland &#127464;&#127469;</td>
-        <td>multiple LLMs used <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td>multiple LLMs used <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" target="_blank">↫</a></td>
         <td class="green">Yes</td>
         <td>Web, app</td>
         <td class="green">Yes</td>
@@ -439,12 +463,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/kagi.svg" class="icon invert2" /></td>
         <td><a href="https://www.kagi.com/assistant" target="_blank">Kagi Assistant</a></td>
         <td>Kagi</td>
         <td>USA &#127482;&#127480;</td>
-        <td>user choice <a href="https://help.kagi.com/kagi/ai/assistant.html#which-model-to-choose" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td>user choice <a href="https://help.kagi.com/kagi/ai/assistant.html#which-model-to-choose" target="_blank">↫</a></td>
         <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td>Web</td>
         <td class="green">Yes</td>
@@ -453,12 +477,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/lumo.svg" class="icon" /></td>
         <td><a href="https://lumo.proton.me/" target="_blank">Lumo</a></td>
         <td>Proton</td>
         <td>Switzerland &#127464;&#127469;</td>
-        <td>multiple LLMs used <a href="https://proton.me/support/lumo-privacy#open-source" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td>multiple LLMs used <a href="https://proton.me/support/lumo-privacy#open-source" target="_blank">↫</a></td>
         <td class="green">Yes</td>
         <td>Web, app</td>
         <td class="green">Yes</td>
@@ -467,12 +491,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/ai/tinfoil.svg" class="icon" /></td>
         <td><a href="https://chat.tinfoil.sh/" target="_blank">Tinfoil Chat</a></td>
         <td>Tinfoil Inc.</td>
         <td>USA &#127482;&#127480;</td>
-        <td>user choice <a href="https://tinfoil.sh/models" target="_blank">↫</a></td>
         <td class="na"></td>
+        <td>user choice <a href="https://tinfoil.sh/models" target="_blank">↫</a></td>
         <td class="green">Yes</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
@@ -505,7 +529,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>(Mostly) uses own search index</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/bing.svg" class="icon" /></td>
         <td><a href="https://www.bing.com/" target="_blank">Bing</a></td>
         <td>Microsoft</td>
         <td>USA &#127482;&#127480;</td>
@@ -519,7 +543,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/brave.svg" class="icon" /></td>
         <td><a href="https://search.brave.com/" target="_blank">Brave Search</a></td>
         <td>Brave</td>
         <td>USA &#127482;&#127480;</td>
@@ -533,7 +557,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/google.svg" class="icon" /></td>
         <td><a href="https://www.google.com/" target="_blank">Google</a></td>
         <td>Google</td>
         <td>USA &#127482;&#127480;</td>
@@ -547,7 +571,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/marginalia.png" class="icon" /></td>
         <td><a href="https://marginalia-search.com/" target="_blank">Marginalia</a></td>
         <td>Marginalia</td>
         <td>Sweden &#x1f1f8;&#x1f1ea;</td>
@@ -561,7 +585,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>    
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/mojeek.png" class="icon" /></td>
         <td><a href="https://www.mojeek.com/" target="_blank">Mojeek</a></td>
         <td>Mojeek</td>
         <td>UK &#127468;&#127463;</td>
@@ -575,7 +599,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/qwant.svg" class="icon invert2" /></td>
         <td><a href="https://www.qwant.com/" target="_blank">Qwant</a></td>
         <td>Qwant</td>
         <td>France &#127467;&#127479;</td>
@@ -589,7 +613,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/yandex.svg" class="icon" /></td>
         <td><a href="https://www.yandex.com/" target="_blank">Yandex</a></td>
         <td>Yandex</td>
         <td>Russia &#127479;&#127482;</td>
@@ -606,7 +630,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td colspan="12" class="subheading"><strong>(Mostly) uses third-party search index</strong></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/duck.svg" class="icon" /></td>
         <td><a href="https://www.duckduckgo.com/" target="_blank">DuckDuckGo</a></td>
         <td>DuckDuckGo</td>
         <td>USA &#127482;&#127480;</td>
@@ -620,7 +644,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/ecosia.svg" class="icon" /></td>
         <td><a href="https://www.ecosia.org/" target="_blank">Ecosia</a></td>
         <td>Ecosia</td>
         <td>Germany &#127465;&#127466;</td>
@@ -634,7 +658,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/kagi.svg" class="icon invert2" /></td>
         <td><a href="https://www.kagi.com/" target="_blank">Kagi</a></td>
         <td>Kagi</td>
         <td>USA &#127482;&#127480;</td>
@@ -648,7 +672,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="red">No</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/startpage.svg" class="icon invert2" /></td>
         <td><a href="https://www.startpage.com/" target="_blank">Startpage</a></td>
         <td>Startpage</td>
         <td>Netherlands &#x1F1F3;&#x1F1F1;</td>
@@ -662,7 +686,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/search/yahoo.svg" class="icon" /></td>
         <td><a href="https://search.yahoo.com/" target="_blank">Yahoo Search</a></td>
         <td>Yahoo</td>
         <td>USA &#127482;&#127480;</td>
@@ -698,11 +722,11 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <th>Shop/POI info<br /><span style="font-size: 7pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">opening times, phone #, photos, reviews etc.</span></th>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/maps/applemaps.png" class="icon" /></td>
         <td><a href="https://maps.apple.com/" target="_blank">Apple Maps</a></td>
         <td>Apple</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Apple, OpenStreetMaps, TomTom</td>
+        <td>Apple, Open&shy;Street&shy;Map, TomTom</td>
         <td class="red">Proprietary</td>
         <td class="green">Yes</td>
         <td class="lgreen">iOS app only</td>
@@ -712,11 +736,11 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/bing.svg" class="icon" /></td>
         <td><a href="https://www.bing.com/maps" target="_blank">Bing Maps</a></td>
         <td>Microsoft</td>
         <td>USA &#127482;&#127480;</td>
-        <td>Microsoft, TomTom, OpenStreetMaps</td>
+        <td>Microsoft, TomTom, Open&shy;Street&shy;Map</td>
         <td class="red">Proprietary</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -726,7 +750,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/maps/googlemaps.svg" class="icon" /></td>
         <td><a href="https://www.google.com/maps" target="_blank">Google Maps</a></td>
         <td>Google</td>
         <td>USA &#127482;&#127480;</td>
@@ -740,7 +764,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/maps/herewego.webp" class="icon" /></td>
         <td><a href="https://wego.here.com/" target="_blank">HERE WeGo</a></td>
         <td>HERE</td>
         <td>Netherlands &#x1F1F3;&#x1F1F1;</td>
@@ -754,11 +778,11 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
     <tr>
-        <td></td>
-        <td><a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMaps</a></td>
-        <td>OpenStreetMaps</td>
+        <td><img src="pics/logos/ai_search_maps/maps/openstreetmap.svg" class="icon" /></td>
+        <td><a href="https://www.openstreetmap.org/" target="_blank">Open&shy;Street&shy;Map</a></td>
+        <td>Open&shy;Street&shy;Map</td>
         <td>UK &#127468;&#127463;</td>
-        <td>OpenStreetMap</td>
+        <td>Open&shy;Street&shy;Map</td>
         <td class="green">Free (ODbL)</td>
         <td class="red">No</td>
         <td class="red">No</td>
@@ -768,7 +792,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="lgreen tooltip">Partially<span class="tooltiptext">Opening times, phone number, website URL are often contributed by users but no photos or reviews.</span></td>
     </tr>
     <tr>
-        <td></td>
+        <td><img src="pics/logos/ai_search_maps/maps/yandexmaps.svg" class="icon" /></td>
         <td><a href="https://www.yandex.com/maps" target="_blank">Yandex Maps</a></td>
         <td>Yandex</td>
         <td>Russia &#127479;&#127482;</td>
