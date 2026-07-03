@@ -18,6 +18,14 @@
         --text: #1f2529;
         --hover: #f8f9fb;
         --na-text: #8a94a3;
+        --col-logo: 60px;
+        --col-text: 150px;
+        --col-yesno: 110px;
+        --table-fixed-width: calc(
+            var(--col-logo) +
+            (4 * var(--col-text)) +
+            (7 * var(--col-yesno))
+        );
     }
     @media (prefers-color-scheme: dark) {
         :root {
@@ -29,8 +37,8 @@
             --hover: #252a30;
         }
     }
+
     table.providers {
-        width: 100%;
         border-collapse: collapse;
         margin-bottom: 2.5rem;
         background: var(--table-bg);
@@ -39,11 +47,20 @@
         line-height: 1.5;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         border-radius: 16px;
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         z-index: 1;
-        table-layout: fixed;
+        table-layout: fixed !important;
+        width: auto !important;
+        width: var(--table-fixed-width) !important;
+        min-width: var(--table-fixed-width) !important;
+        max-width: var(--table-fixed-width) !important;
     }
+
+    .table-wrapper {
+        overflow-x: visible;
+    }
+
     table.providers th,
     table.providers td {
         padding: 14px 18px;
@@ -51,31 +68,39 @@
         vertical-align: top;
         border-bottom: 1px dotted var(--border-color);
     }
-    table.providers th {
-        border-bottom: 2px solid var(--border-color);
+
+    table.providers {
+        border-collapse: collapse;
+        margin-bottom: 2.5rem;
+        background: var(--table-bg);
+        color: var(--text);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        overflow: visible;
+        position: relative;
+        z-index: 1;
+        table-layout: fixed !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-    table.providers th {
-        background: var(--header-bg);
-        font-weight: 700;
-        color: #0066cc;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 0.5px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+
     table.providers .subheading td {
         background: var(--subhead-bg);
         font-weight: 600;
         font-style: italic;
         text-align: center;
-        padding: 10px 18px;
         color: #666;
         border-bottom: 2px solid var(--border-color);
         border-top: 2px solid var(--border-color);
         letter-spacing: 0.4px;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 10px 18px !important;
+        vertical-align: middle;
     }
+
     /* Row hover + subtle zebra striping */
     table.providers tbody tr:hover,
     table.providers tr:hover {
@@ -86,36 +111,11 @@
         background: rgba(240, 243, 246, 0.4);
     }
 
-    /* First column - logo */
-    table.providers th:first-child,
-    table.providers td:first-child {
-        width: 50px;
-        min-width: 50px;
-        max-width: 50px;
-        white-space: nowrap;
-    }
-
-    table.providers td:first-child {
-        vertical-align: middle;
-    }
-
-    /* Columns 2 to 5 - text-heavy columns */
-    table.providers th:nth-child(n+2):nth-child(-n+5),
-    table.providers td:nth-child(n+2):nth-child(-n+5) {
-        width: 120px;
-    }
-
-    /* Columns 6 to 11 - yes/no columns */
-    table.providers th:nth-child(n+6):nth-child(-n+11),
-    table.providers td:nth-child(n+6):nth-child(-n+11) {
-        width: calc((100% - 50px - (120px * 4)) / 6);   /* Auto-adjusts */
-    }
-
     td.na {
         position: relative;
         background-image:
             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cline x1='0' y1='0' x2='40' y2='40' stroke='%23c2c8d0' stroke-width='3' stroke-opacity='0.7'/%3E%3C/svg%3E");
-        background-size: 28px 28px; /* Adjust this to control density */
+        background-size: 28px 28px;
         background-repeat: repeat;
         color: var(--text);
     }
@@ -134,7 +134,7 @@
     }
 
     span.tooltiptext {
-        position: fixed; /* or absolute */
+        position: fixed;
         z-index: 99999 !important;
     }
 
@@ -142,6 +142,48 @@
         max-width: 50px;
         min-width: 25px;
         max-height: 40px;
+    }
+
+    /* ==================== COLUMN WIDTHS ==================== */
+    /* Logo column */
+    table.providers th:first-child,
+    table.providers td:first-child {
+        width: var(--col-logo) !important;
+    }
+
+    /* Columns 2-5 (Name, Developer, etc.) */
+    table.providers th:nth-child(n+2):nth-child(-n+5),
+    table.providers td:nth-child(n+2):nth-child(-n+5) {
+        width: var(--col-text) !important;
+    }
+
+    /* Columns 6-12 (Yes/No columns) */
+    table.providers th:nth-child(n+6):nth-child(-n+12),
+    table.providers td:nth-child(n+6):nth-child(-n+12) {
+        width: var(--col-yesno) !important;
+    }
+
+    /* === UNIFORM ROW HEIGHTS PER TABLE === */
+    table.providers tr:not(.subheading):not(:first-child) {
+        height: auto;
+    }
+
+    /* Data rows only */
+    table.providers tr:not(.subheading):not(:first-child) td,
+    table.providers tr:not(.subheading):not(:first-child) th {
+        min-height: 74px !important;
+        vertical-align: middle;
+        padding: 12px 18px;
+        box-sizing: border-box;
+    }
+
+    /* Keep header and subheadings compact */
+    table.providers thead tr,
+    table.providers tr:first-child,
+    table.providers .subheading td {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 10px 18px;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -159,7 +201,6 @@
         table.providers th {
             color: #6b9ccc;
         }
-            /* invert these logos in dark mode */
         img.invert2 {
             filter: invert(1) hue-rotate(180deg);
         }
@@ -184,6 +225,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 <h2>Selected AI Providers</h2>
+<div class="table-wrapper">
 <table class="providers" id="ai">
     <tr>
         <th>Logo</th>
@@ -192,8 +234,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <th>Country</th>
         <th>Flagship model intelligence<br /><span style="font-size: 6pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;"><a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis Intelligence Index</a> <br /><span style="font-size: 10pt;">2026.06.26</span></span></th>
         <th>LLM family</th>
-        <th>Open weights models</th>
         <th>Access via</th>
+        <th>Open weights models</th>
         <th>Web search used for responses</th>
         <th>Image/video generation</th>
         <th>Can be used without account?</th>
@@ -209,8 +251,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td>GPT-5.5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">55</a></td>
         <td>GPT</td>
-        <td class="yellow tooltip">Partial (gpt-oss)<span class="tooltiptext">but no top LLMs</span></td>
         <td>Web, apps, API</td>
+        <td class="yellow tooltip">Partial (gpt-oss)<span class="tooltiptext">but no top LLMs</span></td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -223,8 +265,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td>Claude Fable 5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">60</a></td>
         <td>Claude</td>
-        <td class="red">No</td>
         <td>Web, apps, API</td>
+        <td class="red">No</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="red">No</td>
@@ -237,8 +279,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td>Gemini 3.5 Flash<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">50</a></td>
         <td>Gemini</td>
-        <td class="yellow tooltip">Partial (Gemma)<span class="tooltiptext">but no top LLMs</span></td>
         <td>Web, apps, API</td>
+        <td class="yellow tooltip">Partial (Gemma)<span class="tooltiptext">but no top LLMs</span></td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -251,8 +293,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td>Grok Build 0.1<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">40</a></td>
         <td>Grok</td>
-        <td class="lred tooltip">Mostly no<span class="tooltiptext">only Grok-1</span></td>
         <td>Web, apps, API</td>
+        <td class="lred tooltip">Mostly no<span class="tooltiptext">only Grok-1</span></td>
         <td class="green tooltip">Yes<span class="tooltiptext">and real-time data from X</span></td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -265,8 +307,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td>Muse Spark<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">43</a></td>
         <td>Llama, Muse</td>
-        <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">Llama family, but not the newer and more powerful Muse LLM</span></td>
         <td>Web, apps, <span class="tooltip">API<span class="tooltiptext">Llama family only, not Muse</span></span></td>
+        <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">Llama family, but not the newer and more powerful Muse LLM</span></td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
@@ -279,8 +321,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>France &#127467;&#127479;</td>
         <td>Mistral Medium 3.5<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">30</a></td>
         <td>Mistral</td>
-        <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">The majority of Mistral models are open weight</span></td>
         <td>Web, apps, API</td>
+        <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">The majority of Mistral models are open weight</span></td>
         <td class="green">Yes</td>
         <td class="yellow">Images only</td>
         <td class="green">Yes</td>
@@ -296,8 +338,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>DeepSeek V4 Pro<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">44</a></td>
         <td>DeepSeek</td>
-        <td class="green">Yes</td>
         <td>Web, apps, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="red">No</td>
@@ -310,8 +352,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>Kimi 2.6 Thinking<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">43</a></td>
         <td>Kimi</td>
-        <td class="green">Yes</td>
         <td>Web, apps, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red tooltip">No<span class="tooltiptext">Account creation requires phone number or login via Google account</span></td>
@@ -324,8 +366,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>MiMo-V2.5-Pro<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">42</a></td>
         <td>MiMo</td>
-        <td class="green">Yes</td>
         <td>Web, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
@@ -338,8 +380,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>MiniMax-M3<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">44</a></td>
         <td>MiniMax</td>
-        <td class="green">Yes</td>
         <td>Web, apps, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
@@ -352,8 +394,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>Qwen3.7 Max<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">46</a></td>
         <td>Qwen</td>
-        <td class="green">Yes</td>
         <td>Web, apps, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
@@ -366,8 +408,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>China &#127464;&#127475;</td>
         <td>GLM 5.2<br />Intelligence: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">51</a></td>
         <td>GLM</td>
-        <td class="green">Yes</td>
         <td>Web, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
@@ -383,8 +425,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td>GPT, Claude</td>
-        <td class="red">No</td>
         <td>Web, API</td>
+        <td class="red">No</td>
         <td class="green">Yes</td>
         <td class="yellow">Images only</td>
         <td class="green">Yes</td>
@@ -397,8 +439,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td><span class="tooltip">user choice <span class="tooltiptext">Perplexity also has its own model called Sonar, which is based on Meta's Llama model</span></span><a href="https://www.perplexity.ai/help-center/en/articles/10354919-what-advanced-ai-models-are-included-in-my-subscription" target="_blank">↫</a></td>
-        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones; Perplexity's Sonar model is proprietary</span></td>
         <td>Web, apps, API</td>
+        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones; Perplexity's Sonar model is proprietary</span></td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -414,8 +456,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td><span class="tooltip">Qwen<span class="tooltiptext">+ Brave's LLM context API</span></span> <a href="https://github.com/brave/brave-search-skills/wiki/Evaluation-of-major-AI-powered-answer-engines" target="_blank">↫</a></td>
-        <td class="green">Yes</td>
         <td>Web</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="green">Yes</td>
@@ -428,8 +470,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td>undisclosed</td>
-        <td class="green">Yes</td>
         <td>Web, apps</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="red">No</td>
@@ -442,8 +484,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td>user choice <a href="https://duckduckgo.com/duckduckgo-help-pages/duckai/chat-models" target="_blank">↫</a></td>
-        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td>Web, apps</td>
+        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td class="green">Yes</td>
         <td class="yellow">Images only</td>
         <td class="green">Yes</td>
@@ -456,8 +498,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Switzerland &#127464;&#127469;</td>
         <td class="na"></td>
         <td>multiple LLMs used <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" target="_blank">↫</a></td>
-        <td class="green">Yes</td>
         <td>Web, app</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="green">Yes</td>
@@ -470,8 +512,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td>user choice <a href="https://help.kagi.com/kagi/ai/assistant.html#which-model-to-choose" target="_blank">↫</a></td>
-        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td>Web</td>
+        <td class="yellow tooltip">Partial<span class="tooltiptext">choice of various LLMs including open weight ones</span></td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="red">No</td>
@@ -484,8 +526,8 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Switzerland &#127464;&#127469;</td>
         <td class="na"></td>
         <td>multiple LLMs used <a href="https://proton.me/support/lumo-privacy#open-source" target="_blank">↫</a></td>
-        <td class="green">Yes</td>
         <td>Web, app</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="green">Yes</td>
@@ -498,19 +540,20 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>USA &#127482;&#127480;</td>
         <td class="na"></td>
         <td>user choice <a href="https://tinfoil.sh/models" target="_blank">↫</a></td>
-        <td class="green">Yes</td>
         <td>Web, apps, API</td>
+        <td class="green">Yes</td>
         <td class="green">Yes</td>
         <td class="red">No</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
     </tr>
 </table>
-
+</div>
 
 
 
 <h2>Selected Search Engines</h2>
+<div class="table-wrapper">
 <table class="providers" id="search">
     <tr>
         <th>Logo</th>
@@ -521,7 +564,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <th>Open source</th>
         <th>Image search</th>
         <th>Image reverse search</th>
-        <th>Rich snippets / instant answers<br /><span style="font-size: 7pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">calculations, weather, stock/crypto prices, FX rates, unit conversions</span></th>
+        <th>Instant answers<br /><span style="font-size: 7pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">calculations, weather, stock/crypto prices, FX rates, unit conversions</span></th>
         <th>Can set region?<br /><span style="font-size: 7pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">useful for VPN users</span></th>
         <th>Filter search results by time</th>
         <th>Can be used without account?</th>
@@ -663,7 +706,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td><a href="https://www.kagi.com/" target="_blank">Kagi</a></td>
         <td>Kagi</td>
         <td>USA &#127482;&#127480;</td>
-        <td>various, incl. its own index Teclis <a href="https://help.kagi.com/kagi/search-details/search-sources.html" target="_blank">↫</a></td>
+        <td>various, incl. its own (Teclis) <a href="https://help.kagi.com/kagi/search-details/search-sources.html" target="_blank">↫</a></td>
         <td class="red">No</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -701,12 +744,12 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
 </table>
-
+</div>
 
 
 
 <h2>Selected Map Providers</h2>
-
+<div class="table-wrapper">
 <table class="providers" id="maps">
     <tr>
         <th>Logo</th>
@@ -807,8 +850,56 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td class="green">Yes</td>
     </tr>
 </table>
+</div>
 
 <script src="bottom.js "></script>
+<script>
+// Equalize only data rows + fix subheadings
+document.addEventListener('DOMContentLoaded', function() {
+    const tables = document.querySelectorAll('table.providers');
+
+    tables.forEach(table => {
+        // Only regular data rows (exclude header and subheadings)
+        const dataRows = Array.from(table.querySelectorAll('tr'))
+            .filter(row => {
+                return !row.classList.contains('subheading') &&
+                       row.querySelectorAll('td').length > 1; // has data cells
+            });
+
+        if (dataRows.length <= 1) return;
+
+        // Find tallest data row
+        let maxHeight = 0;
+        dataRows.forEach(row => {
+            const height = row.getBoundingClientRect().height;
+            if (height > maxHeight) maxHeight = height;
+        });
+
+        // Apply only to data rows
+        dataRows.forEach(row => {
+            row.style.height = (maxHeight + 4) + 'px';
+        });
+    });
+});
+</script>
+<script>
+// Auto-set exact table width to eliminate unnecessary scrollbar
+document.addEventListener('DOMContentLoaded', function() {
+    const tables = document.querySelectorAll('table.providers');
+
+    tables.forEach(table => {
+        // Get the natural width of the table
+        const naturalWidth = table.getBoundingClientRect().width;eb<
+
+        table.style.width = Math.ceil(naturalWidth) + 'px';
+        table.style.minWidth = Math.ceil(naturalWidth) + 'px';
+        table.style.maxWidth = Math.ceil(naturalWidth) + 'px';
+    });
+
+    // Clean body scrolling
+    document.documentElement.style.overflowX = 'auto';
+});
+</script>
 </body>
 </html>
 
