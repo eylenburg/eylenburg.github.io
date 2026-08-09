@@ -76,7 +76,7 @@ table.comparison {
 table.comparison td {
   border: none;
   padding: 1px 1px;
-  vertical-align: top;
+  vertical-align: middle;
   hyphens: auto;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -202,6 +202,10 @@ table.comparison td img {
   max-width: 300px;
   min-width: 150px;
   font-weight: normal;
+}
+
+.tooltiptext a, .tooptiptext a:visited {
+  color: lightblue !important;
 }
 
 .tooltip:hover .tooltiptext {
@@ -347,6 +351,10 @@ table.comparison tr td.tooltip:first-child:hover {
     color: lightblue;
   }
 
+  span.overwrite-color, .overwrite-color a, .overwrite-color a:visited {
+    color: lightblue !important;
+  }
+
   table.comparison tr td a, table.comparison tr td a:visited {
     color: #333399;
   }
@@ -371,3 +379,21 @@ table.comparison tr td.tooltip:first-child:hover {
   }
 }
 
+/* invert these logos in light mode */
+img.invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .gold {
+    color: black;
+  }
+  div.article {
+    border: 3px solid white;
+  }
+
+  /* invert these logos in dark mode */
+  img.invert2 {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
