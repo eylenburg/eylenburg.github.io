@@ -151,12 +151,6 @@ max-width: 150px;
 max-height: 75px;
 }
 
-@media (prefers-color-scheme: dark) {
-    #grapheneos-logo {
-    filter: invert(88%);
-    }
-}
-
 td.green,
 td.lgreen,
 td.red,
@@ -234,7 +228,7 @@ font-size: x-small;
 
 <tr>
 <td class="legend"></td>
-<td><img class="logo" id="grapheneos-logo" src="../pics/logos/android/grapheneos.svg" /></td>
+<td><img class="logo invert2" src="../pics/logos/android/grapheneos.svg" /></td>
 <td><img class="logo" src="../pics/logos/android/divestos.svg" /></td>
 <td style="vertical-align: middle;"><img class="logo" src="../pics/logos/android/calyxos.jpg" /></td>
 <td style="vertical-align: middle;"><img class="logo" src="../pics/logos/android/iodeos.png" /></td>
@@ -441,7 +435,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend tooltip">PSDS - Google Pixel 6 and later<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="legend tooltip">PSDS - Google Pixel 6 and later<span class="tooltiptext">The default server used depends on the GPS chipset, e.g. phones with Qualcomm chips (e.g. Snapdragon) connect to a Qualcomm server, while newer Google Pixels with Tensor chips connect to a Google server, and other phones with Broadcom GPS (e.g. Exynos) connect to a Broadcom server. Some ROMs override these settings. <br /><a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and to see which device information is sent.</a></span></td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="blue">Broadcom <sup>default</sup>, or none</td>
 <td class="blue">Broadcom <sup>default</sup>, or none</td>
@@ -455,11 +449,11 @@ WHITE
 <td class="legend">Connectivity check/captive portal</td>
 <td class="green">GrapheneOS <sup>default</sup>, Google, or none</td>
 <td class="green">Multiple presets offered</td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="blue"><span class="tooltip">Kuketz.de (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="green"><span class="tooltip">Murena.io (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span></td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span></td>
+<td class="blue"><span class="tooltip">Kuketz.de (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span></td>
+<td class="green"><span class="tooltip">Murena.io (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span></td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span></td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span></td>
 </tr>
 
 <tr>
@@ -487,12 +481,12 @@ WHITE
 <tr>
 <td class="legend">Network time</td>
 <td class="green">GrapheneOS <sup>default</sup>, or none</td>
-<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
-<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
-<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with `adb` command.</span></span> &amp; carrier</td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
-<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with `adb` command</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with <code>adb</code> command.</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with <code>adb</code> command.</span></span> &amp; carrier</td>
+<td class="blue"><span class="tooltip">NTP.org (can be changed)<span class="tooltiptext">Server pool with arbitrary providers, which can include Google-hosted servers or even malicious servers. NTP server can be changed with <code>adb</code> command.</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span> &amp; carrier</td>
+<td class="lgreen"><span class="tooltip">Google (can be changed)<span class="tooltiptext">can be changed with <code>adb</code> command</span></span> &amp; carrier</td>
 </tr>
 
 <tr>
@@ -523,7 +517,7 @@ WHITE
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 
-<tr>
+<tr class="overwrite-color">
 <td class="legend">Implementation</td>
 <td class="tooltip">GmsCompat (sandboxed Google Play)<span class="tooltiptext">GrapheneOS does not include Google Play as a preinstalled app, but it includes an open source compatibility layer for users who choose to use it. Users can alternatively install microG on GrapheneOS, albeit GrapheneOS does not support signature spoofing. Not all microG functionality requires signature spoofing, for example FCM works with microG without signatures spoofing to the extent it works without special privileges (e.g. microG needs to use a privileged API to wake apps and keep them awake for a short period of time to handle FCM messages).</span></td>
 <td>microG</td>
@@ -549,10 +543,10 @@ WHITE
 <tr>
 <td class="legend">FOSS? (see tooltips for details)</td>
 <td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">GrapheneOS's sandboxed Google Play compatibility layer is open source, but the Google binaries themselves are proprietary.</span></td>
-<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support, however, DivestOS blocks the use of Safetynet.</span></td>
-<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
-<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
-<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for Safetynet support.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for SafetyNet support, however, DivestOS blocks the use of SafetyNet.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for SafetyNet support.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for SafetyNet support.</span></td>
+<td class="yellow tooltip">Yes, but executes proprietary code<span class="tooltiptext">microG still involves running closed source Google Play code since every app talking to microG does so using the full proprietary Google Play Services library. microG can additionally download and execute proprietary programs from Google for SafetyNet support.</span></td>
 
 <td class="red">No</td>
 </tr>
@@ -562,11 +556,11 @@ WHITE
 <td class="legend">Runs in standard app sandbox?</td>
 <td class="green">Yes</td>
 <td class="green">Yes</td>
-<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
-<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
-<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the <code>priv_app</code> SELinux domain instead of <code>untrusted_app</code>, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the <code>priv_app</code> SELinux domain instead of <code>untrusted_app</code>, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the <code>priv_app</code> SELinux domain instead of <code>untrusted_app</code>, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
 <!-- skipped -->
-<td class="red tooltip">No<span class="tooltiptext">Runs in the `priv_app` SELinux domain instead of `untrusted_app`, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
+<td class="red tooltip">No<span class="tooltiptext">Runs in the <code>priv_app</code> SELinux domain instead of <code>untrusted_app</code>, which gives it access to internal system APIs and data along with it being much less isolated.</span></td>
 </tr>
 
 <tr>
@@ -628,7 +622,7 @@ WHITE
 </tr>
 -->
 
-<!-- Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other MicroG features</a> such as Maps API, Safetynet or Fused Locations will still work without FCM registration. -->
+<!-- Note that many apps will avoid using their own push implementation when they detect Play Services installed on the phone, in which case denying them access to FCM will break their push messaging. <a style="color: white;" href="https://github.com/microg/GmsCore/wiki/Implementation-Status target="_blank">Other microG features</a> such as Maps API, SafetyNet or Fused Locations will still work without FCM registration. -->
 
 <tr>
 <td class="legend">Google Play Integrity?</td>
@@ -713,7 +707,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend tooltip">PSDS: user agent sent?<span class="tooltiptext">May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and which device information are sent.</a></span></td>
+<td class="legend tooltip">PSDS: user agent sent?<span class="tooltiptext">May include chipset serial number, device manufacturer and model, carrier, and Android version. <a href="https://divestos.org/misc/gnss.txt" target="_blank" style="color: white;">Click here for details and to see which device information is sent.</a></span></td>
 <td class="green">No</td>
 <td class="lgreen">No (device-specific), <a href="https://divestos.org/pages/network_connections#psds">see here</a></td>
 <td class="yellow tooltip">Partially for Qualcomm chips<span class="tooltiptext">Chipset serial number is stripped out but other less unique device information remain</span></td>
@@ -757,7 +751,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend">EXIF metadata stripping for photos</td>
+<td class="legend">Exif metadata stripping for photos</td>
 <td class="green">Yes, <a href="https://grapheneos.org/usage#grapheneos-camera-app" target="_blank">see here </a></td>
 <td class="red">No</td>
 <td class="red">No</td>
@@ -855,12 +849,12 @@ WHITE
 <tr>
 <td class="legend">Hardware memory tagging?</td>
 <td class="green">Yes, if supported by device</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
-<td class="red">No</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
+<td class="yellow">If supported by device: Only via <code>adb</code> or developer options</td>
 </tr>
 
 <tr>
@@ -886,7 +880,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend">Hardened webview?</td>
+<td class="legend">Hardened WebView?</td>
 <td class="green">Yes (Vanadium)</td>
 <td class="green tooltip">Yes (Mulch)<span class="tooltiptext">Patches taken from GrapheneOS</span></td>
 <td class="red">No</td>
@@ -1057,7 +1051,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend tooltip">Webview update speed<span class="tooltiptext"><a href="https://divestos.org/misc/ch-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
+<td class="legend tooltip">WebView update speed<span class="tooltiptext"><a href="https://divestos.org/misc/ch-dates.txt" target="_blank" style="color: white;">Click here for details</a></span></td>
 <td class="green"><2 days</td>
 <td class="green"><2 days</td>
 <td class="yellow"><1 week, sometimes longer delays</td>
@@ -1068,7 +1062,7 @@ WHITE
 </tr>
 
 
-<tr>
+<tr class="overwrite-color">
 <td class="legend semititle"><br />Supported devices</td>
 <td style="vertical-align: bottom;"><a href="https://grapheneos.org/faq#future-devices" target="_blank">Hardware requirements</a></td><td></td><td style="vertical-align: bottom;"><a href="https://calyxos.org/docs/guide/device-support/#preferences-for-supporting-a-new-device" target="_blank">Hardware requirements</a></td><td></td><td></td><td></td><td></td>
 </tr>
@@ -1118,7 +1112,7 @@ WHITE
 </tr>
 
 <tr>
-<td class="legend">Oneplus</td>
+<td class="legend">OnePlus</td>
 <td class="red">No</td>
 <td class="yellow">Older devices only</td>
 <td class="red">No</td>
