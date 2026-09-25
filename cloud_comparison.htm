@@ -157,7 +157,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 
 <h2 class="center">Comparison of Cloud, Sync &amp; Email services</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 1 September 2026</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 25 September 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -993,7 +993,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 </tr>
 
 
-<tr class="product NoMSO NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync">
+<tr class="product NoMSO NoSelfHosting NoFiles NoE2EE NoFullE2EE NoLinuxApp NoAndroidSync NoEmailEncrypt">
 <td>Posteo</td>
 <td><img src="pics/logos/cloud/posteo.jpg" class="icon" /></td><!-- Logo -->
 <td>Posteo e.K. <span class="good">Non-Corporate</span></td><!-- Developer -->
@@ -1008,7 +1008,7 @@ Here, I am looking at cloud services, which includes file sync, PIM (addressbook
 <td class="mixed">Yes, but tasks missing on website</td><!-- has tasks? -->
 <td class="yes">Yes</td><!-- CardDAV/CalDAV -->
 <!-- Mail -->
-<td class="yes">Yes</td><!-- Zero access encryption -->
+<td class="almost tooltip">Yes (temporarily decrypted)<span class="tooltiptext">The data will be temporarily decrypted whenever emails are accessed or sent e.g. in the browser or via an app using IMAP/POP3</span></td><!-- Zero access encryption -->
 <td class="yes">Yes</td><!-- IMAP -->
 <td class="no">No</td><!-- Domain -->
 <!-- Prices: mail 5/15/50 Gb; files 20/100/500/1000/2000 GB -->
@@ -1485,6 +1485,7 @@ By the way, even if you use a non-private cloud provider, you can still encrypt 
 	<ul>
 	<li><strong>Proton</strong> <span class="good">E2EE</span> <span class="good">Hosted in Switzerland</span> <span class="good">Open Source</span> <span class="bad">Forced to use their apps</span></li>
 	<li><strong>EteSync</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> <span class="good">CalDAV/CardDAV</span> <span class="bad">Buggy?</span></li>
+	<li><strong>Peergos</strong> <span class="good">E2EE</span> <span class="good">Open Source</span> </li>
 	</ul>
 <li>For file sync, choose from:</li>
 	<ul>
