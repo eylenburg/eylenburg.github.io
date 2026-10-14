@@ -71,7 +71,7 @@ I have limited this comparison to only eleven messengers:</p>
 
 <h2 class="center">Comparison of Instant Messengers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 22 September 2026</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 14 October 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 
@@ -330,7 +330,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Compatibility with other messengers</td>
 <td class="no">No</td>
 <td class="yes tooltip">Via transports if supported by server <span class="tooltiptext">"Transports" to various other protocols and messengers, e.g. IRC, SMS, Email, WhatsApp, Facebook Messenger, Telegram, Skype, Discord</span></td>
-<td class="yes">Fallback to normal Email; more via <a href="https://github.com/deltachat-bot/matterdelta" target="_blank">bridges</a></td>
+<td class="no tooltip">No<span class="tooltiptext">Default Chatmail only. Classic email is opt-in for additional profiles; sharing the same address with normal email clients is not supported. Bridges available separately.</span></td>
 <td class="yes tooltip">Via <a href="https://matrix.org/ecosystem/bridges/" target="_blank">bridges</a> if supported by server <span class="tooltiptext">"bridges" to various other protocols and messengers, e.g. IRC, SMS, Email, XMPP, WhatsApp, Facebook Messenger, Apple iMessage, Telegram, Signal, Skype, Discord, WeChat</span></td>
 <td class="no">No</td>
 <td class="no">No (SMS in earlier versions)</td>
@@ -520,7 +520,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>FreeBSD</td>
 <td class="no">No</td>
 <td class="otherclients"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other XMPP client(s)</a></td>
-<td class="no">No</td>
+<td class="almost">Unofficial port</td>
 <td class="otherclients"><a href="https://matrix.org/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">Other Matrix client(s)</a></td>
 <td class="no">No</td>
 <td class="almost">As linked device (Unofficial port)</td>
@@ -785,7 +785,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Find contacts from device address book</td>
 <td class="no">No</td>
 <td class="no">No</td><!--<td class="otherclients tooltip"><a href="https://xmpp.org/software/clients/" target="_blank" style="color: black; text-decoration: underline; text-decoration-style: dotted;">other XMPP clients</a> <span class="tooltiptext">e.g. Quicksy, from the same developer as Conversations and mostly identical</span></td>-->
-<td class="yes">Email</td>
+<td class="no">No</td>
 <td class="yes">Phone number &amp; Email</td>
 <td class="no">No</td>
 <td class="yes">Phone number</td>
@@ -871,7 +871,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>User ID</td>
 <td>None (connect via 1-time invitation link or optional SimpleX contact address)</td>
 <td>XMPP address (user@server.tld)</td>
-<td>Email address (user@server.tld)</td>
+<td class="tooltip">Public key (OpenPGP fingerprint)<span class="tooltiptext">Email addresses (especially Chatmail) are ephemeral transport identifiers, not the stable user ID.</span></td>
 <td>Matrix ID (@user:server.tld)</td>
 <td>Alphanumeric Session ID (and optional paid username)</td>
 <td>Phone number or Username</td>
@@ -984,7 +984,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Minimal metadata (beyond IP addresses)</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="yes tooltip">Yes<span class="tooltiptext">Chatmail relays + header protection scrub almost all metadata; only random addresses, size, and IP (to the relay admin) remain visible. Addresses are not stable identifiers.</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1021,7 +1021,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Encryption: Forward secrecy</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="no tooltip">No<span class="tooltiptext">Upcoming with Autocrypt v2 (planned ~early 2027 / late 2026)</span></td>
 <td class="otherclients tooltip">other Matrix clients<span class="tooltiptext">Supported by the Matrix protocol, but not the Element client</span></td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1037,7 +1037,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Encryption: Plausible deniability</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
+<td class="mixed tooltip">Partial<span class="tooltiptext">Chatmail relays scrub DKIM and other traces from storage, but there is no cryptographic repudiation (OpenPGP signatures are non-repudiable). Full deniability not claimed.</span></td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
@@ -1053,7 +1053,7 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Post-quantum encryption</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="no tooltip">No<span class="tooltiptext">Upcoming with Autocrypt v2 (planned ~early 2027 / late 2026)</span></td>
 <td class="no">No</td>
 <td class="no">No</td>
 <td class="yes">Yes</td>
@@ -1069,15 +1069,15 @@ I have limited this comparison to only eleven messengers:</p>
 <td>Lock app with password/biometrics</td>
 <td class="yes">Yes</td>
 <td class="no">No</td>
-<td class="no">No</td>
+<td class="mixed tooltip">iOS only<span class="tooltiptext">OS-level feature in iOS 18+</span></td>
 <td class="mixed">Mobile apps only</td>
 <td class="yes">Yes</td>
 <td class="mixed">Mobile apps only</td>
 <td class="yes">Yes</td>
 <td class="yes">Yes</td>
-<td class="no">No</td>
-<td class="no">No</td>
-<td class="mixed">Desktop app only</td>
+<td class="mixed tooltip">iOS only<span class="tooltiptext">OS-level feature in iOS 18+</span></td>
+<td class="mixed tooltip">iOS only<span class="tooltiptext">OS-level feature in iOS 18+</span></td>
+<td class="mixed">Desktop + <span class="tooltip">iOS<span class="tooltiptext">OS-level feature in iOS 18+</span></span> only</td>
 <td class="yes">Yes</td>
 </tr>
 
