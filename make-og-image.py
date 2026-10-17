@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Generate 1200x630 OG image for Eylenburg's Tech Website (eylenburg.github.io).
-Pillow-only, portable (reads FONT_DIR override for font paths)."""
+Neutral dark #222 card per maintainer review: site name + real tagline only,
+no ranking/"best option" content. Pillow-only, portable (FONT_DIR override)."""
 import os
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1200, 630
-BG = (34, 34, 34)        # site #222 dark
-CARD = (245, 245, 245)   # light card
-ACCENT = (86, 156, 214)  # lightblue-ish tech accent
-GREEN = (120, 180, 120)
-AMBER = (230, 180, 90)
-RED = (214, 110, 110)
+BG = (34, 34, 34)         # site #222 dark
+ACCENT = (86, 156, 214)   # lightblue tech accent
+GREY = (200, 200, 200)
+DIM = (150, 150, 150)
 
 FONT_DIR = os.environ.get("FONT_DIR", "/usr/share/fonts/truetype")
 def f(path, size):
@@ -22,46 +21,28 @@ d = ImageDraw.Draw(img)
 # subtle top accent bar
 d.rectangle([0, 0, W, 10], fill=ACCENT)
 
-# header: site wordmark
-d.text((60, 45), "Eylenburg's Tech Website", font=f("dejavu/DejaVuSans-Bold.ttf", 46), fill=(255, 255, 255))
-d.text((60, 112), "Comparisons, histories & data across computing and technology", font=f("dejavu/DejaVuSans.ttf", 24), fill=(200, 200, 200))
+# site wordmark
+d.text((60, 90), "Eylenburg's Tech Website", font=f("dejavu/DejaVuSans-Bold.ttf", 52), fill=(255, 255, 255))
 
-# comparison-table motif: draw a stylized 2-col x 5-row table card
-tx0, ty0, tx1, ty1 = 60, 180, 1080, 540
-d.rounded_rectangle([tx0, ty0, tx1, ty1], radius=12, fill=CARD)
+# real tagline (wrapped to two lines)
+d.text((60, 190), "Comprehensive comparisons, histories, and other", font=f("dejavu/DejaVuSans.ttf", 32), fill=GREY)
+d.text((60, 246), "information across many areas of computing and technology.", font=f("dejavu/DejaVuSans.ttf", 32), fill=GREY)
 
-def cell(x, y, w, h, color, label, lw=2):
-    d.rectangle([x, y, x + w, y + h], outline=color, width=lw)
-
-col_w = 340
-row_h = 52
-x = tx0 + 30
-y = ty0 + 24
-
-# header row
-d.rectangle([x, y, x + 2 * col_w, y + 40], fill=(222, 222, 222))
-d.text((x + 20, y + 6), "Topic", font=f("dejavu/DejaVuSans-Bold.ttf", 20), fill=(34, 34, 34))
-d.text((x + col_w + 20, y + 6), "Best option", font=f("dejavu/DejaVuSans-Bold.ttf", 20), fill=(34, 34, 34))
-y += 40
-
-rows = [
-    ("Operating systems", GREEN, "Linux / BSD"),
-    ("Linux distributions", GREEN, "Debian, Arch, Fedora"),
-    ("Web browsers", ACCENT, "Firefox, Safari, Chromium"),
-    ("Instant messengers", AMBER, "Signal, Element, IRC"),
-    ("Cloud & email", RED, "Privacy-first providers"),
-]
-for name, color, val in rows:
-    cell(x, y, col_w, row_h, (180, 180, 180), name)
-    cell(x + col_w, y, col_w, row_h, color, val)
-    d.text((x + 16, y + (row_h - 24) // 2), name, font=f("dejavu/DejaVuSans-Bold.ttf", 18), fill=(34, 34, 34))
-    d.text((x + col_w + 16, y + (row_h - 24) // 2), val, font=f("dejavu/DejaVuSans.ttf", 17), fill=(50, 50, 50))
-    y += row_h
+# neutral comparison motif: three simple horizontal bars of differing lengths
+# (data, not rankings) inside a light card
+tx0, ty0, tx1, ty1 = 60, 340, 1080, 540
+d.rounded_rectangle([tx0, ty0, tx1, ty1], radius=12, fill=(245, 245, 245))
+labels = ["Comparisons", "Histories", "Data"]
+widths = [760, 560, 660]
+y = ty0 + 36
+for label, wd in zip(labels, widths):
+    d.text((tx0 + 40, y), label, font=f("dejavu/DejaVuSans-Bold.ttf", 26), fill=(34, 34, 34))
+    d.rounded_rectangle([tx0 + 300, y + 4, tx0 + 300 + wd, y + 48], radius=8, fill=ACCENT)
+    y += 72
 
 # footer
-d.text((60, 562), "Sitemap of comparisons & deep dives — eylenburg.github.io", font=f("dejavu/DejaVuSans.ttf", 20), fill=(160, 160, 160))
-d.text((60, 594), "data-backed tech comparisons", font=f("dejavu/DejaVuSans-Bold.ttf", 18), fill=ACCENT)
+d.text((60, 572), "https://eylenburg.github.io", font=f("dejavu/DejaVuSans.ttf", 22), fill=DIM)
 
-out = "/home/paperclip/scratch/eylenburg.github.io/og-image.png"
+out = "og-image.png"
 img.save(out, "PNG")
 print("wrote", out, img.size)
