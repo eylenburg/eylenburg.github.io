@@ -1,0 +1,38 @@
+name: Update PrivacyTests scores
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 06:00 UTC
+  workflow_dispatch:     # Allow manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update scores
+        run: python update_privacytests.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Update privacytests.org scores"
+          title: "Update privacytests.org scores"
+          body: |
+            Automated update of browser privacy test scores from privacytests.org.
+            
+            - Only runs when a new privacytests version (git hash) is detected.
+            - Updates state partitioning, fingerprinting, and tracking resistance rows.
+            - Colors: green = 100%, lgreen = ≥75%, red = <75%.
+          branch: update-privacytests
+          delete-branch: true
