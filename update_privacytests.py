@@ -8,7 +8,6 @@ import json
 import re
 import urllib.request
 from pathlib import Path
-from collections import defaultdict
 
 # Category mappings based on privacytests.org sections
 STATE_PARTITIONING = ["supercookies"]  # State Partitioning tests
@@ -43,6 +42,9 @@ OS_MAP = {
     "ios": "https://privacytests.org/ios.json",
 }
 
+# Preferred runner that matches the privacytests.org website display
+PREFERRED_RUNNER = "macos-26"
+
 LAST_GIT_FILE = Path(".privacytests_last_git")
 
 
@@ -67,30 +69,34 @@ def is_pass(test: dict) -> bool:
     return False
 
 
-def aggregate_results(entries: list, categories: list) -> tuple[int, int]:
-    """Aggregate across all runs for a browser.
-    A test counts as failed if ANY run failed it (matches privacytests.org display).
-    Returns (passed_count, total_count).
+def select_entry(entries: list) -> dict | None:
+    """Select the entry that matches the privacytests.org website display.
+    Prefer the macos-26 (ARM) runner; fall back to the most recent otherwise.
     """
-    # Collect all test names and their pass status across runs
-    # test_name -> list of is_pass results
-    results = defaultdict(list)
-    for entry in entries:
-        tr = entry.get("testResults", {})
-        for cat in categories:
-            tests = tr.get(cat, {})
-            if not isinstance(tests, dict):
+    if not entries:
+        return None
+    preferred = [e for e in entries if e.get("runner") == PREFERRED_RUNNER]
+    if preferred:
+        # If multiple macos-26 runs, take the latest
+        return max(preferred, key=lambda e: e.get("timeStarted", ""))
+    # Fallback: most recent non-incognito run
+    return max(entries, key=lambda e: e.get("timeStarted", ""))
+
+
+def count_tests(test_results: dict, categories: list) -> tuple[int, int]:
+    """Return (passed_count, total_count) for the given categories."""
+    total = 0
+    passed = 0
+    for cat in categories:
+        tests = test_results.get(cat, {})
+        if not isinstance(tests, dict):
+            continue
+        for test in tests.values():
+            if not isinstance(test, dict):
                 continue
-            for name, test in tests.items():
-                if isinstance(test, dict):
-                    results[name].append(is_pass(test))
-
-    if not results:
-        return 0, 0
-
-    total = len(results)
-    # Pass only if EVERY run passed (i.e. no run failed it)
-    passed = sum(1 for statuses in results.values() if all(statuses))
+            total += 1
+            if is_pass(test):
+                passed += 1
     return passed, total
 
 
@@ -151,25 +157,28 @@ def main():
                 and not t.get("incognito")
                 and not t.get("nightly")
             ]
-            if not entries:
+            entry = select_entry(entries)
+            if not entry:
                 # No data for this browser on this OS → leave blank
                 for prefix in ["statepartitioning", "fingerprinting", "tracking"]:
                     td_id = f"{prefix}_{browser_key}_{os_name}"
                     scores[td_id] = ("", "")
                 continue
 
+            tr = entry.get("testResults", {})
+
             # State partitioning
-            nf, tot = aggregate_results(entries, STATE_PARTITIONING)
+            nf, tot = count_tests(tr, STATE_PARTITIONING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"statepartitioning_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
             # Fingerprinting
-            nf, tot = aggregate_results(entries, FINGERPRINTING)
+            nf, tot = count_tests(tr, FINGERPRINTING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"fingerprinting_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
             # Tracking
-            nf, tot = aggregate_results(entries, TRACKING)
+            nf, tot = count_tests(tr, TRACKING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"tracking_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
