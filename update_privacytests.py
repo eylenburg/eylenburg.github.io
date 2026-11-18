@@ -8,6 +8,7 @@ import json
 import re
 import urllib.request
 from pathlib import Path
+from collections import defaultdict
 
 # Category mappings based on privacytests.org sections
 STATE_PARTITIONING = ["supercookies"]  # State Partitioning tests
@@ -66,20 +67,30 @@ def is_pass(test: dict) -> bool:
     return False
 
 
-def count_tests(test_results: dict, categories: list) -> tuple[int, int]:
-    """Return (passed_count, total_count) for the given categories."""
-    total = 0
-    passed = 0
-    for cat in categories:
-        tests = test_results.get(cat, {})
-        if not isinstance(tests, dict):
-            continue
-        for test in tests.values():
-            if not isinstance(test, dict):
+def aggregate_results(entries: list, categories: list) -> tuple[int, int]:
+    """Aggregate across all runs for a browser.
+    A test counts as failed if ANY run failed it (matches privacytests.org display).
+    Returns (passed_count, total_count).
+    """
+    # Collect all test names and their pass status across runs
+    # test_name -> list of is_pass results
+    results = defaultdict(list)
+    for entry in entries:
+        tr = entry.get("testResults", {})
+        for cat in categories:
+            tests = tr.get(cat, {})
+            if not isinstance(tests, dict):
                 continue
-            total += 1
-            if is_pass(test):
-                passed += 1
+            for name, test in tests.items():
+                if isinstance(test, dict):
+                    results[name].append(is_pass(test))
+
+    if not results:
+        return 0, 0
+
+    total = len(results)
+    # Pass only if EVERY run passed (i.e. no run failed it)
+    passed = sum(1 for statuses in results.values() if all(statuses))
     return passed, total
 
 
@@ -133,31 +144,32 @@ def main():
     for browser_key, browser_json in BROWSER_MAP.items():
         for os_name in OS_MAP:
             platform_data = data[os_name]
-            browser_entry = next(
-                (t for t in platform_data.get("all_tests", []) if t.get("browser") == browser_json),
-                None,
-            )
-            if not browser_entry:
+            # Collect all non-incognito, non-nightly entries for this browser
+            entries = [
+                t for t in platform_data.get("all_tests", [])
+                if t.get("browser") == browser_json
+                and not t.get("incognito")
+                and not t.get("nightly")
+            ]
+            if not entries:
                 # No data for this browser on this OS → leave blank
                 for prefix in ["statepartitioning", "fingerprinting", "tracking"]:
                     td_id = f"{prefix}_{browser_key}_{os_name}"
                     scores[td_id] = ("", "")
                 continue
 
-            tr = browser_entry.get("testResults", {})
-
             # State partitioning
-            nf, tot = count_tests(tr, STATE_PARTITIONING)
+            nf, tot = aggregate_results(entries, STATE_PARTITIONING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"statepartitioning_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
             # Fingerprinting
-            nf, tot = count_tests(tr, FINGERPRINTING)
+            nf, tot = aggregate_results(entries, FINGERPRINTING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"fingerprinting_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
             # Tracking
-            nf, tot = count_tests(tr, TRACKING)
+            nf, tot = aggregate_results(entries, TRACKING)
             text = f"{nf}/{tot}" if tot else ""
             scores[f"tracking_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
