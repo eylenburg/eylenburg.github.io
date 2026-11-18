@@ -8,7 +8,7 @@ Scoring matches the privacytests.org website:
 - State partitioning / tracking: a test fails if ANY run failed it
 - Device fingerprinting: uses the site's consistency logic (excludes Math.tanh,
   passes if ≥2 runners randomized or all values identical)
-- Settings fingerprinting: pass if any run passed
+- Settings fingerprinting: pass only if ALL runs passed
 """
 
 import json
@@ -73,7 +73,7 @@ def score_fingerprinting(entries: list) -> tuple[int, int]:
         tr = entry.get("testResults", {})
         for name, test in tr.get("device_fingerprinting", {}).items():
             if isinstance(test, dict):
-                device_agg[name]["randomized"].append(test.get("randomized", False))
+                device_agg[name]["randomized"].append(bool(test.get("randomized")))
                 device_agg[name]["value"].append(test.get("value"))
         for name, test in tr.get("settings_fingerprinting", {}).items():
             if isinstance(test, dict):
@@ -89,13 +89,13 @@ def score_fingerprinting(entries: list) -> tuple[int, int]:
         if len(rand) < 2:
             continue  # omit if fewer than 2 runners
         device_count += 1
-        if sum(1 for r in rand if r) >= 2:
+        if sum(rand) >= 2:
             device_pass += 1
         elif len(set(str(v) for v in agg["value"])) == 1:
             device_pass += 1
 
-    # Settings: pass if any run passed
-    settings_pass = sum(1 for statuses in settings_agg.values() if any(statuses))
+    # Settings: pass only if ALL runs passed
+    settings_pass = sum(1 for statuses in settings_agg.values() if all(statuses))
     settings_total = len(settings_agg)
 
     return device_pass + settings_pass, device_count + settings_total
