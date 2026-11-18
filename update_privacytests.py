@@ -50,13 +50,26 @@ def fetch_json(url: str) -> dict:
         return json.load(resp)
 
 
-def count_tests(test_results: dict, categories: list) -> tuple[int, int]:
-    """Return (not_failed_count, total_count) for the given categories.
-    
-    'Not failed' means testFailed is not True (includes passed=true and unsupported).
+def is_pass(test: dict) -> bool:
+    """Count as pass if green checkmark (passed=True) or green hyphen (unsupported=True).
+    For device fingerprinting tests that lack a 'passed' field, also treat randomized=True as pass.
     """
+    if not isinstance(test, dict):
+        return False
+    if test.get("passed") is True:
+        return True
+    if test.get("unsupported") is True:
+        return True
+    # Device fingerprinting often has no 'passed' key; randomized=True means resistance succeeded
+    if test.get("randomized") is True or test.get("randomized") == "true":
+        return True
+    return False
+
+
+def count_tests(test_results: dict, categories: list) -> tuple[int, int]:
+    """Return (passed_count, total_count) for the given categories."""
     total = 0
-    not_failed = 0
+    passed = 0
     for cat in categories:
         tests = test_results.get(cat, {})
         if not isinstance(tests, dict):
@@ -65,15 +78,15 @@ def count_tests(test_results: dict, categories: list) -> tuple[int, int]:
             if not isinstance(test, dict):
                 continue
             total += 1
-            if not test.get("testFailed", False):
-                not_failed += 1
-    return not_failed, total
+            if is_pass(test):
+                passed += 1
+    return passed, total
 
 
-def get_class(not_failed: int, total: int) -> str:
+def get_class(passed: int, total: int) -> str:
     if total == 0:
         return ""
-    ratio = not_failed / total
+    ratio = passed / total
     if ratio == 1.0:
         return "green"
     if ratio >= 0.75:
@@ -148,11 +161,13 @@ def main():
             text = f"{nf}/{tot}" if tot else ""
             scores[f"tracking_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
-    # Update HTML
+    # Update HTML (Unix line endings)
     html_path = Path("browser_comparison.htm")
     html = html_path.read_text(encoding="utf-8")
+    # Normalize to LF so future diffs stay clean
+    html = html.replace("\r\n", "\n").replace("\r", "\n")
     new_html = update_html(html, scores)
-    html_path.write_text(new_html, encoding="utf-8")
+    html_path.write_text(new_html, encoding="utf-8", newline="\n")
 
     # Save new git hash
     LAST_GIT_FILE.write_text(current_git + "\n")
