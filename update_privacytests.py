@@ -84,15 +84,17 @@ def get_class(not_failed: int, total: int) -> str:
 def update_html(html: str, scores: dict) -> str:
     """scores: {td_id: (text, css_class)}"""
     for td_id, (text, css_class) in scores.items():
-        # Match the td and replace its content and class
+        # Prefer matching with class attribute
         pattern = rf'(<td[^>]*id="{re.escape(td_id)}"[^>]*class=")[^"]*("[^>]*>)([^<]*)(</td>)'
         def replacer(m):
             return f'{m.group(1)}{css_class}{m.group(2)}{text}{m.group(4)}'
         html, n = re.subn(pattern, replacer, html, count=1)
         if n == 0:
-            # Fallback: just content if class pattern fails
+            # Fallback: content only (no class or different attribute order)
             pattern2 = rf'(<td[^>]*id="{re.escape(td_id)}"[^>]*>)([^<]*)(</td>)'
-            html = re.sub(pattern2, rf'\1{text}\3', html, count=1)
+            def replacer2(m):
+                return f'{m.group(1)}{text}{m.group(3)}'
+            html = re.sub(pattern2, replacer2, html, count=1)
     return html
 
 
