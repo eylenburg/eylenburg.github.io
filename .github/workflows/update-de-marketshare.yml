@@ -1,0 +1,39 @@
+name: Update DE market shares
+
+on:
+  schedule:
+    # Run on the 1st of each month at 06:00 UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update market shares
+        run: python update_de_marketshare.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'Update desktop environment market shares'
+          title: 'Update desktop environment market shares'
+          body: |
+            Automated update of DE market share percentages from:
+            - Arch Linux pkgstats
+            - GamingOnLinux user statistics
+            - linux-hardware.org
+
+            If a source was unavailable, that row was left unchanged.
+          branch: update-de-marketshare
+          delete-branch: true
