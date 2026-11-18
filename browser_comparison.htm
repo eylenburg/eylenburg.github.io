@@ -93,7 +93,7 @@ The result of the comparison is less clear than last time. In terms of pure feat
 
 <h2 class="center">Comparison of Web Browsers</h2>
 <p class="center">Source: eylenburg.github.io</p>
-<p class="center" style="color: red; font-size: small;">Last updated: 4 November 2026</p>
+<p class="center" style="color: red; font-size: small;">Last updated: 18 November 2026</p>
 <p style="font-size: 75%; font-style: italic;"> This table is best viewed on a monitor with 1920px width (Full HD) with 100% display scaling.</p>
 
 <input id="desktop" type="checkbox" checked /><label for="desktop"> Show Desktop browsers</label>
@@ -944,65 +944,34 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr> 
 
 <tr>
-<td class="legend">Partitioning of third-party cookies</td>
+<td class="legend">Encrypted Client Hello support</td>
 <!-- Firefox -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios no">No</td>
 <!-- Safari -->
-<td class="desktop yes">Yes</td>
-<td class="ios_wide yes">Yes</td>
+<td class="desktop no">No</td>
+<td class="ios_wide no">No</td>
 <!-- Chrome -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Edge -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Opera -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Vivaldi -->
-<td class="desktop no">No</td>
-<td class="android no">No</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Brave -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios yes tooltip">Yes<span class="tooltiptext">WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-</tr>
-
-<tr>
-<td class="legend tooltip">Partitioning of third-party storage (excl. cookies)<span class="tooltiptext">See <a href="https://privacytests.org/" target="_blank">PrivacyTests.org</a> for detailed tests of state partitioning.</span></td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android almost tooltip">Mostly<span class="tooltiptext">Favicon cache is still missing</span></td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Safari -->
-<td class="desktop almost tooltip">Mostly<span class="tooltiptext">HSTS cache is still missing.</span></td>
-<td class="ios_wide almost tooltip">Mostly<span class="tooltiptext">HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Chrome -->
-<td class="desktop no">Partially</td>
-<td class="android no">Partially</td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon and HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios no">No</td>
 <!-- Edge -->
-<td class="desktop no">Partially</td>
-<td class="android no">Partially</td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon and HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Opera -->
-<td class="desktop no">Partially</td>
-<td class="android no">Partially</td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon and HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Vivaldi -->
-<td class="desktop no">Partially</td>
-<td class="android no">Partially</td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon and HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
-<!-- Brave -->
 <td class="desktop yes">Yes</td>
 <td class="android yes">Yes</td>
-<td class="ios almost tooltip">Mostly<span class="tooltiptext">Favicon and HSTS cache is still missing. WebKit's "Intelligent Tracking Protection" applies to all iOS browsers</span></td>
+<td class="ios no">No</td>
+<!-- Opera -->
+<td class="desktop yes">Yes</td>
+<td class="android no">No</td>
+<td class="ios no">No</td>
+<!-- Vivaldi -->
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
+<!-- Brave -->
+<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
+<td class="android yes">Yes</td>
+<td class="ios no">No</td>
 </tr>
 
 <tr>
@@ -1037,34 +1006,107 @@ The result of the comparison is less clear than last time. In terms of pure feat
 </tr>
 
 <tr>
-<td class="legend">Can disable built-in ad measurements/tracking?</td>
+<td class="legend" style="font-style: italic;">Test results from <a href="https://privacytests.org" target="_blank">Privacytests</a>, using default browser settings</td>
+<td colspan="3"></td>
+<td colspan="2"></td>
+<td colspan="3"></td>
+<td colspan="3"></td>
+<td colspan="3"></td>
+<td colspan="3"></td>
+<td colspan="3"></td>
+</tr>
+
+<tr>
+<td class="legend tooltip">State partitioning (isolate websites)<span class="tooltiptext">Which browsers isolate websites to prevent them from sharing data to track you?</span></td>
 <!-- Firefox -->
-<td class="desktop almost tooltip">Optional<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
-<td class="android yes tooltip">None<span class="tooltiptext">The so-called "Privacy-Preserving Attribution" is not supported on Android, for now, despite being seemingly enabled in about:config.</td>
-<td class="ios yes">None</td>
+<td class="desktop green" id="statepartitioning_firefox_desktop">27/27</td>
+<td class="android lgreen" id="statepartitioning_firefox_android">26/27</td>
+<td class="ios lgreen" id="statepartitioning_firefox_ios">25/27</td>
 <!-- Safari -->
-<td class="desktop almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving measurements of ad effectiveness" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
-<td class="ios_wide almost tooltip">Optional<span class="tooltiptext">The "Web AdAttributionKit", also called "privacy-preserving ad measurements" in the settings, tracks which ads you're clicking on, despite having "Privacy" in the name. It can be disabled but is enabled by default.</td>
+<td class="desktop lgreen" id="statepartitioning_safari_desktop">25/27</td>
+<td class="ios_wide lgreen" id="statepartitioning_safari_ios">25/27</td>
 <!-- Chrome -->
-<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="ios yes">None</td>
+<td class="desktop red" id="statepartitioning_chrome_desktop">19/27</td>
+<td class="android red" id="statepartitioning_chrome_android">17/27</td>
+<td class="ios lgreen" id="statepartitioning_chrome_ios">24/27</td>
 <!-- Edge -->
-<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="ios yes">None</td>
+<td class="desktop red" id="statepartitioning_edge_desktop">19/27</td>
+<td class="android red" id="statepartitioning_edge_android">17/27</td>
+<td class="ios lgreen" id="statepartitioning_edge_ios">24/27</td>
 <!-- Opera -->
-<td class="desktop yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="android yes tooltip">Stopped<span class="tooltiptext">Chromiums's "Privacy Sandbox" and the "Topics API" were announced to be discontinued in October 2025.</span></td>
-<td class="ios yes">None</td>
+<td class="desktop red" id="statepartitioning_opera_desktop">17/27</td>
+<td class="android red" id="statepartitioning_opera_android">17/27</td>
+<td class="ios" id="statepartitioning_opera_ios">?</td>
 <!-- Vivaldi -->
-<td class="desktop yes tooltip">None<span class="tooltiptext">Vivaldi has always disabled Chromium's now-discontinued "Privacy Sandbox"</span></td>
-<td class="android yes tooltip">None<span class="tooltiptext">Vivaldi has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
-<td class="ios yes">None</td>
+<td class="desktop red" id="statepartitioning_vivaldi_desktop">17/27</td>
+<td class="android lgreen" id="statepartitioning_vivaldi_android">22/27</td>
+<td class="ios lgreen" id="statepartitioning_vivaldi_ios">24/27</td>
 <!-- Brave -->
-<td class="desktop yes tooltip">None<span class="tooltiptext">Brave has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
-<td class="android yes tooltip">None<span class="tooltiptext">Brave has always disabled Chromium's now-discontinued  "Privacy Sandbox"</span></td>
-<td class="ios yes">None</td>
+<td class="desktop green" id="statepartitioning_brave_desktop">27/27</td>
+<td class="android green" id="statepartitioning_brave_android">27/27</td>
+<td class="ios lgreen" id="statepartitioning_brave_ios">24/27</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">Fingerprinting resistance<span class="tooltiptext">Which browsers hide what's unique about your device? Which browsers hide what's unique about your system settings?</span></td>
+<!-- Firefox -->
+<td class="desktop lgreen" id="fingerprinting_firefox_desktop">18/24</td>
+<td class="android" id="fingerprinting_firefox_android">?</td>
+<td class="ios" id="fingerprinting_firefox_ios">?</td>
+<!-- Safari -->
+<td class="desktop red" id="fingerprinting_safari_desktop">9/24</td>
+<td class="ios_wide" id="fingerprinting_safari_ios">?</td>
+<!-- Chrome -->
+<td class="desktop red" id="fingerprinting_chrome_desktop">2/24</td>
+<td class="android" id="fingerprinting_chrome_android">?</td>
+<td class="ios" id="fingerprinting_chrome_ios">?</td>
+<!-- Edge -->
+<td class="desktop red" id="fingerprinting_edge_desktop">2/24</td>
+<td class="android" id="fingerprinting_edge_android">?</td>
+<td class="ios" id="fingerprinting_edge_ios">?</td>
+<!-- Opera -->
+<td class="desktop red" id="fingerprinting_opera_desktop">3/24</td>
+<td class="android" id="fingerprinting_opera_android">?</td>
+<td class="ios" id="fingerprinting_opera_ios">?</td>
+<!-- Vivaldi -->
+<td class="desktop red" id="fingerprinting_vivaldi_desktop">3/24</td>
+<td class="android" id="fingerprinting_vivaldi_android">22/27</td>
+<td class="ios" id="fingerprinting_vivaldi_ios">?</td>
+<!-- Brave -->
+<td class="desktop green" id="fingerprinting_brave_desktop">14/24</td>
+<td class="android" id="fingerprinting_brave_android">27/27</td>
+<td class="ios" id="fingerprinting_brave_ios">?</td>
+</tr>
+
+<tr>
+<td class="legend tooltip">Tracking prevention tests<span class="tooltiptext">Which browsers prevent websites from sharing tracking data when you click on a link? Which browsers remove URL parameters that can track you? Which browsers block important known tracking scripts and pixels? Which browsers block important known tracking cookies? Which browsers prevent websites from tracking you across browser sessions? Which browsers prevent third-party trackers from tracking you across browser sessions?</span></td>
+<!-- Firefox -->
+<td class="desktop red" id="tracking_firefox_desktop">21/96</td>
+<td class="android red" id="tracking_firefox_android">2/77</td>
+<td class="ios red" id="tracking_firefox_ios">13/77</td>
+<!-- Safari -->
+<td class="desktop red" id="tracking_safari_desktop">30/96</td>
+<td class="ios_wide red" id="tracking_safari_ios">10/77</td>
+<!-- Chrome -->
+<td class="desktop red" id="tracking_chrome_desktop">1/96</td>
+<td class="android red" id="tracking_chrome_android">3/77</td>
+<td class="ios red" id="tracking_chrome_ios">15/77</td>
+<!-- Edge -->
+<td class="desktop red" id="tracking_edge_desktop">15/96</td>
+<td class="android red" id="tracking_edge_android">3/77</td>
+<td class="ios red" id="tracking_edge_ios">15/77</td>
+<!-- Opera -->
+<td class="desktop red" id="tracking_opera_desktop">1/96</td>
+<td class="android red" id="tracking_opera_android">8/77</td>
+<td class="ios" id="tracking_opera_ios">?</td>
+<!-- Vivaldi -->
+<td class="desktop red" id="tracking_vivaldi_desktop">39/96</td>
+<td class="android red" id="tracking_vivaldi_android">22/77</td>
+<td class="ios red" id="tracking_vivaldi_ios">32/77</td>
+<!-- Brave -->
+<td class="desktop red" id="tracking_brave_desktop">71/96</td>
+<td class="android red" id="tracking_brave_android">52/77</td>
+<td class="ios lgreen" id="tracking_brave_ios">58/77</td>
 </tr>
 
 <tr>
@@ -1820,38 +1862,6 @@ The result of the comparison is less clear than last time. In terms of pure feat
 <!-- Brave -->
 <td class="desktop no">No</td>
 <td class="android no">No</td>
-<td class="ios no">No</td>
-</tr>
-
-
-<tr>
-<td class="legend">Encrypted Client Hello support</td>
-<!-- Firefox -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Safari -->
-<td class="desktop no">No</td>
-<td class="ios_wide no">No</td>
-<!-- Chrome -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Edge -->
-<td class="desktop yes">Yes</td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Opera -->
-<td class="desktop yes">Yes</td>
-<td class="android no">No</td>
-<td class="ios no">No</td>
-<!-- Vivaldi -->
-<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in vivaldi://flags</span></td>
-<td class="android yes">Yes</td>
-<td class="ios no">No</td>
-<!-- Brave -->
-<td class="desktop hidden tooltip">hidden<span class="tooltiptext">in brave://flags</span></td>
-<td class="android yes">Yes</td>
 <td class="ios no">No</td>
 </tr>
 
