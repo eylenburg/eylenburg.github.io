@@ -6,7 +6,7 @@ Run weekly via GitHub Action. Only updates if the privacytests git hash changed.
 Scoring matches the privacytests.org website:
 - State partitioning: aggregate all runs, fail if ANY run failed
 - Fingerprinting: website-style consistency scoring
-- Tracking: macos-26 single run (matches the site's default display)
+- Tracking: the run with the fewest passes (matches site display for Opera etc.)
 """
 
 import json
@@ -32,23 +32,13 @@ OS_MAP = {
 }
 
 LAST_GIT_FILE = Path(".privacytests_last_git")
-PREFERRED_RUNNER = "macos-26"
 EXCLUDED_DEVICE_TESTS = {"Math.tanh(0.123)"}
+TRACKING_CATS = ["navigation", "query", "trackers", "tracker_cookies", "session_1p", "session_3p"]
 
 
 def fetch_json(url: str) -> dict:
     with urllib.request.urlopen(url, timeout=30) as resp:
         return json.load(resp)
-
-
-def select_preferred(entries: list) -> dict | None:
-    """Prefer macos-26 runner; fall back to most recent."""
-    if not entries:
-        return None
-    preferred = [e for e in entries if e.get("runner") == PREFERRED_RUNNER]
-    if preferred:
-        return max(preferred, key=lambda e: e.get("timeStarted", ""))
-    return max(entries, key=lambda e: e.get("timeStarted", ""))
 
 
 def score_aggregated(entries: list, categories: list) -> tuple[int, int]:
@@ -83,6 +73,13 @@ def score_single(entry: dict, categories: list) -> tuple[int, int]:
                 if test.get("passed") is True or test.get("unsupported") is True:
                     passed += 1
     return passed, total
+
+
+def select_worst_tracking(entries: list) -> dict | None:
+    """Pick the run with the fewest tracking passes (matches site for Opera)."""
+    if not entries:
+        return None
+    return min(entries, key=lambda e: score_single(e, TRACKING_CATS)[0])
 
 
 def score_fingerprinting(entries: list) -> tuple[int, int]:
@@ -176,8 +173,6 @@ def main():
                     scores[f"{prefix}_{browser_key}_{os_name}"] = ("", "")
                 continue
 
-            preferred = select_preferred(entries)
-
             # State partitioning: aggregate (fail if any)
             nf, tot = score_aggregated(entries, ["supercookies"])
             text = f"{nf}/{tot}" if tot else ""
@@ -188,12 +183,10 @@ def main():
             text = f"{nf}/{tot}" if tot else ""
             scores[f"fingerprinting_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
 
-            # Tracking: macos-26 single run
-            if preferred:
-                nf, tot = score_single(preferred, [
-                    "navigation", "query", "trackers", "tracker_cookies",
-                    "session_1p", "session_3p",
-                ])
+            # Tracking: run with fewest passes
+            worst = select_worst_tracking(entries)
+            if worst:
+                nf, tot = score_single(worst, TRACKING_CATS)
                 text = f"{nf}/{tot}" if tot else ""
                 scores[f"tracking_{browser_key}_{os_name}"] = (text, get_class(nf, tot))
             else:
