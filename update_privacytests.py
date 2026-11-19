@@ -12,7 +12,9 @@ Colors are re-evaluated on every update:
 - green: 100%
 - lgreen: >= 75%
 - red: < 75%
-- no class: no data
+- no color class: no data
+
+Other classes (e.g. tooltip) are preserved.
 """
 
 import json
@@ -40,6 +42,7 @@ OS_MAP = {
 LAST_GIT_FILE = Path(".privacytests_last_git")
 EXCLUDED_DEVICE_TESTS = {"Math.tanh(0.123)"}
 TRACKING_CATS = ["navigation", "query", "trackers", "tracker_cookies", "session_1p", "session_3p"]
+COLOR_CLASSES = {"green", "lgreen", "red"}
 
 
 def fetch_json(url: str) -> dict:
@@ -124,7 +127,7 @@ def score_fingerprinting(entries: list) -> tuple[int, int]:
 
 
 def get_class(passed: int, total: int) -> str:
-    """Return CSS class based on pass rate. Empty string if no data."""
+    """Return color class based on pass rate. Empty string if no data."""
     if total == 0:
         return ""
     ratio = passed / total
@@ -135,9 +138,8 @@ def get_class(passed: int, total: int) -> str:
     return "red"
 
 
-def update_td(html: str, td_id: str, text: str, css_class: str) -> str:
-    """Update a single <td> by id, always setting the correct class."""
-    # Match the full <td ... id="..." ...>...</td>
+def update_td(html: str, td_id: str, text: str, color_class: str) -> str:
+    """Update a <td> by id. Replaces only the color class; preserves others."""
     pattern = rf'<td\b[^>]*\bid="{re.escape(td_id)}"[^>]*>[^<]*</td>'
     m = re.search(pattern, html)
     if not m:
@@ -145,18 +147,31 @@ def update_td(html: str, td_id: str, text: str, css_class: str) -> str:
         return html
 
     old_td = m.group(0)
-    # Extract attributes except class
     attr_match = re.match(r'<td\b([^>]*)>', old_td)
     if not attr_match:
         return html
     attrs = attr_match.group(1)
-    # Remove existing class attribute
-    attrs = re.sub(r'\s*class="[^"]*"', '', attrs)
-    attrs = re.sub(r"\s*class='[^']*'", '', attrs)
-    # Add new class if non-empty
-    if css_class:
-        attrs = attrs.rstrip() + f' class="{css_class}"'
-    new_td = f'<td{attrs}>{text}</td>'
+
+    # Extract existing class value (if any)
+    class_match = re.search(r'class="([^"]*)"', attrs) or re.search(r"class='([^']*)'", attrs)
+    existing_classes = class_match.group(1).split() if class_match else []
+
+    # Remove color classes, keep the rest
+    other_classes = [c for c in existing_classes if c not in COLOR_CLASSES]
+
+    # Build new class list
+    new_classes = other_classes[:]
+    if color_class:
+        new_classes.append(color_class)
+
+    # Rebuild attributes without the old class
+    attrs_no_class = re.sub(r'\s*class="[^"]*"', '', attrs)
+    attrs_no_class = re.sub(r"\s*class='[^']*'", '', attrs_no_class)
+
+    if new_classes:
+        attrs_no_class = attrs_no_class.rstrip() + f' class="{" ".join(new_classes)}"'
+
+    new_td = f'<td{attrs_no_class}>{text}</td>'
     return html[:m.start()] + new_td + html[m.end():]
 
 
