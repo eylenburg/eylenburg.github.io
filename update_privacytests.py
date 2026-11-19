@@ -7,6 +7,12 @@ Scoring matches the privacytests.org website:
 - State partitioning: aggregate all runs, fail if ANY run failed
 - Fingerprinting: website-style consistency scoring
 - Tracking: the run with the fewest passes (matches site display for Opera etc.)
+
+Colors are re-evaluated on every update:
+- green: 100%
+- lgreen: >= 75%
+- red: < 75%
+- no class: no data
 """
 
 import json
@@ -118,27 +124,45 @@ def score_fingerprinting(entries: list) -> tuple[int, int]:
 
 
 def get_class(passed: int, total: int) -> str:
+    """Return CSS class based on pass rate. Empty string if no data."""
     if total == 0:
         return ""
     ratio = passed / total
-    if ratio == 1.0:
+    if ratio >= 1.0:
         return "green"
     if ratio >= 0.75:
         return "lgreen"
     return "red"
 
 
+def update_td(html: str, td_id: str, text: str, css_class: str) -> str:
+    """Update a single <td> by id, always setting the correct class."""
+    # Match the full <td ... id="..." ...>...</td>
+    pattern = rf'<td\b[^>]*\bid="{re.escape(td_id)}"[^>]*>[^<]*</td>'
+    m = re.search(pattern, html)
+    if not m:
+        print(f"Warning: td id={td_id} not found")
+        return html
+
+    old_td = m.group(0)
+    # Extract attributes except class
+    attr_match = re.match(r'<td\b([^>]*)>', old_td)
+    if not attr_match:
+        return html
+    attrs = attr_match.group(1)
+    # Remove existing class attribute
+    attrs = re.sub(r'\s*class="[^"]*"', '', attrs)
+    attrs = re.sub(r"\s*class='[^']*'", '', attrs)
+    # Add new class if non-empty
+    if css_class:
+        attrs = attrs.rstrip() + f' class="{css_class}"'
+    new_td = f'<td{attrs}>{text}</td>'
+    return html[:m.start()] + new_td + html[m.end():]
+
+
 def update_html(html: str, scores: dict) -> str:
     for td_id, (text, css_class) in scores.items():
-        pattern = rf'(<td[^>]*id="{re.escape(td_id)}"[^>]*class=")[^"]*("[^>]*>)([^<]*)(</td>)'
-        def replacer(m):
-            return f'{m.group(1)}{css_class}{m.group(2)}{text}{m.group(4)}'
-        html, n = re.subn(pattern, replacer, html, count=1)
-        if n == 0:
-            pattern2 = rf'(<td[^>]*id="{re.escape(td_id)}"[^>]*>)([^<]*)(</td>)'
-            def replacer2(m):
-                return f'{m.group(1)}{text}{m.group(3)}'
-            html = re.sub(pattern2, replacer2, html, count=1)
+        html = update_td(html, td_id, text, css_class)
     return html
 
 
