@@ -1,0 +1,373 @@
+[
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "free_speech",
+    "law_name": "STOP HATE Act",
+    "comment": "Proposed 2025; would ban 'hate speech', antisemitism, and 'disinformation'."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "Algorithm Accountability Bill 2025",
+    "comment": "Would hold platforms liable for algorithmically distributed content, incentivising over-moderation."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "Sunset Section 230 Act",
+    "comment": "Would make platforms liable for user content."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "TRUMP AMERICA AI Act",
+    "comment": "Would make platforms liable for user content; also tied to age verification for AI chats."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "NO FAKES Act",
+    "comment": "Aimed at unauthorized digital replicas; risk of over-removal of legal content."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "access_blocking",
+    "law_name": "Block BEARD Act",
+    "comment": "Proposed 2025; force ISPs and other service providers to block piracy websites."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "access_blocking",
+    "law_name": "Foreign Anti-Digital Piracy Act (FADPA)",
+    "comment": "Proposed 2025; require ISPs and DNS resolvers to block piracy websites."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "access_blocking",
+    "law_name": "American Copyright Protection Act",
+    "comment": "Proposed 2026; require ISPs, DNS resolvers and VPN providers to block piracy websites."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "access_blocking",
+    "law_name": "DEFEND IP Act",
+    "comment": "Proposed 2026; require ISPs and DNS resolvers to block piracy websites."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "vpn_ban",
+    "law_name": "",
+    "comment": "Some US states have proposed VPN bans or restrictions (including age verification for VPNs); none have passed yet."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "Kids Internet and Digital Safety Act (KIDS Act)",
+    "comment": "Proposed 2026; federal age-verification and related restrictions."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "Kids Online Safety Act (KOSA)",
+    "comment": "Proposed 2025."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "SCREEN Act",
+    "comment": "Proposed 2025."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "Kids Off Social Media Act",
+    "comment": "Would require age verification for social media."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "GUARD Act",
+    "comment": "Tied to age verification / AI chat account requirements."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_devices",
+    "law_name": "Digital Age Assurance Act of 2026, S. 5090",
+    "comment": "Would bring OS-level age declaration requirements to all US states."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_devices",
+    "law_name": "New York Senate Bill S8102A",
+    "comment": "Would require actual age verification (not self-declaration) for Internet-enabled hardware, operating systems, and app stores."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "age_devices",
+    "law_name": "Parents Decide Act",
+    "comment": "Proposed 2026; would require age verification for all operating systems (PCs, phones, etc.) at federal level."
+  },
+  {
+    "country": "US",
+    "status": "proposed",
+    "column": "sim_registration",
+    "law_name": "",
+    "comment": "In April 2026 the FCC approved a proposal requiring telecom providers (including VoIP) to verify customers’ identities before activating service."
+  },
+  {
+    "country": "Canada",
+    "status": "proposed",
+    "column": "encryption",
+    "law_name": "Bill C-26",
+    "comment": "Centered on cybersecurity and expanding surveillance powers; still under review."
+  },
+  {
+    "country": "Canada",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "Bill S-209",
+    "comment": "Aimed at mandatory age verification for access to online adult content."
+  },
+  {
+    "country": "Canada",
+    "status": "proposed",
+    "column": "encryption",
+    "law_name": "Bill C-22 (Lawful Access Act 2026)",
+    "comment": "Proposed surveillance bill that would compel electronic service providers to create backdoors and store metadata."
+  },
+  {
+    "country": "Canada",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "Bill C-34 (Safe Social Media Act)",
+    "comment": "Would ban under-16s from social media, require age verification, and create a Digital Safety Commission that can order content deletion."
+  },
+  {
+    "country": "Canada",
+    "status": "recommended",
+    "column": "free_speech",
+    "law_name": "",
+    "comment": "An internal memo for the Department of Industry (07/2026) contemplates legal action against social media users allegedly spreading 'false or misleading information'."
+  },
+  {
+    "country": "Australia",
+    "status": "proposed",
+    "column": "free_speech",
+    "law_name": "",
+    "comment": "In Victoria, the government is advancing 'demasking orders' that would empower the state to force social media platforms to unmask anonymous users accused of 'online vilification'."
+  },
+  {
+    "country": "Australia",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "Online Safety Amendment (Digital Duty of Care) Bill 2026",
+    "comment": ""
+  },
+  {
+    "country": "UK",
+    "status": "proposed",
+    "column": "vpn_ban",
+    "law_name": "HL Bill 135",
+    "comment": "Proposed 12/2025 for VPN age verification."
+  },
+  {
+    "country": "UK",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "HL Bill 135",
+    "comment": "For social media age verification."
+  },
+  {
+    "country": "UK",
+    "status": "recommended",
+    "column": "content_removal",
+    "law_name": "",
+    "comment": "Proposal to force social media and video platforms to prioritize content from 'trusted news sources' (government-compiled list)."
+  },
+  {
+    "country": "UK",
+    "status": "recommended",
+    "column": "age_devices",
+    "law_name": "",
+    "comment": "Government encouragement/demands (late 2025 and June 2026) for mandatory client-side AI scanning of photos/videos on smartphones/tablets to block nudity unless age is verified."
+  },
+  {
+    "country": "UK",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "Social Media Platforms (Ofcom Licensing) Bill",
+    "comment": "Proposed in 09/2026."
+  },
+  {
+    "country": "Switzerland",
+    "status": "proposed",
+    "column": "metadata_retention",
+    "law_name": "VÜPF/OSCPT update",
+    "comment": "Proposed (2025, revised 2026) update to the surveillance law would require VPN providers (and others) with larger user bases to identify their users."
+  },
+  {
+    "country": "Iceland",
+    "status": "recommended",
+    "column": "content_removal",
+    "law_name": "DSA",
+    "comment": "Implementation of the DSA to align with the EU is not actually proposed yet but might happen in the future (as an EEA member)."
+  },
+  {
+    "country": "Norway",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "DSA",
+    "comment": "As an EEA member, Norway is in the process of implementing the DSA (expected mid-2026)."
+  },
+  {
+    "country": "Norway",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "A 15-year age limit for social media with effective age verification (ID or biometrics) was proposed in 2024; not yet formally enacted."
+  },
+  {
+    "country": "Brazil",
+    "status": "proposed",
+    "column": "free_speech",
+    "law_name": "Law Project 896/2023",
+    "comment": "Would amend existing racism laws to include misogyny (Senate approved in 2025)."
+  },
+  {
+    "country": "Russia",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "A proposed Russian law from 10/2025 plans to mandate the use of the state's biometric and e-government systems for mandatory age verification to access all adult or 'potentially harmful' online content."
+  },
+  {
+    "country": "Russia",
+    "status": "recommended",
+    "column": "sim_registration",
+    "law_name": "",
+    "comment": "June 2026 plans to forbid registration of foreign eSIMs for Russian citizens (to hinder censorship circumvention)."
+  },
+  {
+    "country": "China",
+    "status": "proposed",
+    "column": "free_speech",
+    "law_name": "Cybercrime Prevention and Control Law",
+    "comment": "In January 2026 the law was proposed; lays out punishments for individuals attempting to bypass the Internet real-name system or circumventing censorship."
+  },
+  {
+    "country": "Japan",
+    "status": "recommended",
+    "column": "metadata_retention",
+    "law_name": "",
+    "comment": "As of March 2025, Japan’s data protection laws are under review regarding an introduction of mandatory data retention for ISPs, mobile carriers etc. Legislative outcome unclear."
+  },
+  {
+    "country": "Japan",
+    "status": "recommended",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "In April 2026 Japan's Ministry of Internal Affairs and Communications began considering a plan to impose age restrictions on social media platforms. Some form of legal regulation could be enacted as early as 2027."
+  },
+  {
+    "country": "Germany",
+    "status": "recommended",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "SPD wants to make age verification via EUDI Wallet mandatory to access social media. VPNs should be blocked from accessing social media. Unclear what the formal law proposal is."
+  },
+  {
+    "country": "Germany",
+    "status": "proposed",
+    "column": "metadata_retention",
+    "law_name": "",
+    "comment": "In April 2026 the German government passed a law to make it mandatory for ISPs (and on demand, messengers and email providers) to store IPs for 3 months. The law still needs to be approved by the Bundesrat."
+  },
+  {
+    "country": "Germany",
+    "status": "recommended",
+    "column": "content_removal",
+    "law_name": "",
+    "comment": "State media authorities’ May 2026 plans to force platforms to algorithmically promote “Public Value”/state-approved media and downrank “disinforming”/polarizing content."
+  },
+  {
+    "country": "Slovakia",
+    "status": "recommended",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "Formal request with other EU states (June 2025) for mandatory social-media age verification."
+  },
+  {
+    "country": "Spain",
+    "status": "proposed",
+    "column": "content_removal",
+    "law_name": "",
+    "comment": "A bill before Congress (as of 10/2026) would make platform executives personally liable for failing to remove illegal or hateful content, and would criminalise algorithmic amplification of illegal content."
+  },
+  {
+    "country": "Spain",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "",
+    "comment": "A bill before Congress (as of 10/2026) would ban social media for under-16s."
+  },
+  {
+    "country": "Spain",
+    "status": "proposed",
+    "column": "free_speech",
+    "law_name": "",
+    "comment": "A separate government bill adds deepfakes to crimes against honour."
+  },
+  {
+    "country": "EU",
+    "status": "proposed",
+    "column": "encryption",
+    "law_name": "Chat Control 2.0",
+    "comment": "Proposed by Council but rejected by the EU Parliament so far. Widely expected to make a return in amended form (in trilogue). Includes age-verification elements for accounts."
+  },
+  {
+    "country": "EU",
+    "status": "recommended",
+    "column": "age_web",
+    "law_name": "Report A10-0213/2025",
+    "comment": "The EU Parliament on 2025.11.27 approved this non-binding resolution proposing mandatory recurring age verification (every 3 months) for social media, video platforms and AI chatbots. Expected to influence policy; nothing binding has come out of it yet."
+  },
+  {
+    "country": "EU",
+    "status": "proposed",
+    "column": "metadata_retention",
+    "law_name": "WK 16133/2025 INIT",
+    "comment": "An EU Council paper from 12/2025 proposed a mandatory 1-year metadata retention (IP addresses and phone locations) applying to telecom operators and nearly every major digital service (including E2EE messengers). Nothing binding has come out of it yet."
+  },
+  {
+    "country": "EU",
+    "status": "proposed",
+    "column": "encryption",
+    "law_name": "ProtectEU strategy / HLG Recommendations on Access to Data for Effective Law Enforcement",
+    "comment": "Various EU proposals aiming to ban end-to-end encryption, mandate backdoors, or circumvent it using client-side scanning. Nothing binding has come out of it yet."
+  },
+  {
+    "country": "EU",
+    "status": "proposed",
+    "column": "age_web",
+    "law_name": "EU Kids Act (COM(2026) 681)",
+    "comment": "Would make age verification mandatory to open or keep an unrestricted account on social networks, video-sharing platforms and AI chats."
+  }
+]
