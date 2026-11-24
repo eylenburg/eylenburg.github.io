@@ -167,29 +167,63 @@
         vertical-align: 0.05em;
     }
 
+table.providers td.tier1 {
+    color: #0e6b32;
+}
+
+table.providers td.tier2 {
+    color: #3d7a38;
+}
+
+table.providers td.tier3 {
+    color: #6a6410;
+}
+
+table.providers td.tier4 {
+    color: #a17a0a;
+}
+
+table.providers td.tier5 {
+    color: #c47b0a;
+}
+
+table.providers td.tier6 {
+    color: #d65a16;
+}
+
+table.providers td.tier7 {
+    color: #c62828;
+}
+
+@media (prefers-color-scheme: dark) {
     table.providers td.tier1 {
-        color: #0e6b32;
+        color: #7ddea0;
     }
 
     table.providers td.tier2 {
-        color: #3d7a38;
+        color: #b7d7a8;
     }
 
     table.providers td.tier3 {
-        color: #6a6410;
+        color: #e4dc8a;
     }
 
-    @media (prefers-color-scheme: dark) {
-        table.providers td.tier1 {
-            color: #7ddea0;
-        }
-        table.providers td.tier2 {
-            color: #b7d7a8;
-        }
-        table.providers td.tier3 {
-            color: #e4dc8a;
-        }
+    table.providers td.tier4 {
+        color: #f2d477;
     }
+
+    table.providers td.tier5 {
+        color: #ffbd66;
+    }
+
+    table.providers td.tier6 {
+        color: #ff9666;
+    }
+
+    table.providers td.tier7 {
+        color: #ff7777;
+    }
+}
 
     span.tooltiptext {
         position: fixed;
@@ -291,7 +325,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <th>Developer</th>
         <th>Country</th>
         <th>LLM family</th>
-        <th>Flagship model intelligence tier<br /><span style="font-size: 6pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">based on <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis Intelligence Index</a></span></th>
+        <th>Flagship model intelligence tier<br /><span style="font-size: 6pt !important; letter-spacing: 0.25px; font-weight: normal; text-transform: none; color: grey; font-style: italic;">source: <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis Intelligence Index</a>, <span id="aaii_date">2026.10.31</span></span></th>
         <th>Access via</th>
         <th>Open weights models</th>
         <th>Web search used for responses</th>
@@ -308,7 +342,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>OpenAI</td>
         <td>USA &#127482;&#127480;</td>
         <td>GPT</td>
-        <td class="tier1">Tier 1</td>
+        <td id="aaii_chatgpt" class="tier1">Tier 1</td>
         <td>Web, apps, API</td>
         <td class="yellow tooltip">Partial (gpt-oss)<span class="tooltiptext">but no top LLMs</span></td>
         <td class="green">Yes</td>
@@ -322,7 +356,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Anthropic</td>
         <td>USA &#127482;&#127480;</td>
         <td>Claude</td>
-        <td class="tier1">Tier 1</td>
+        <td id="aaii_claude" class="tier1">Tier 1</td>
         <td>Web, apps, API</td>
         <td class="red">No</td>
         <td class="green">Yes</td>
@@ -336,7 +370,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Google</td>
         <td>USA &#127482;&#127480;</td>
         <td>Gemini</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_gemini" class="tier2">Tier 2</td>
         <td>Web, apps, API</td>
         <td class="yellow tooltip">Partial (Gemma)<span class="tooltiptext">but no top LLMs</span></td>
         <td class="green">Yes</td>
@@ -350,7 +384,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>xAI</td>
         <td>USA &#127482;&#127480;</td>
         <td>Grok</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_grok" class="tier2">Tier 2</td>
         <td>Web, apps, API</td>
         <td class="lred tooltip">Mostly no<span class="tooltiptext">only Grok-1</span></td>
         <td class="green tooltip">Yes<span class="tooltiptext">and real-time data from X</span></td>
@@ -364,7 +398,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Meta</td>
         <td>USA &#127482;&#127480;</td>
         <td>Llama, Muse</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_meta" class="tier2">Tier 2</td>
         <td>Web, apps, API</td>
         <td class="yellow tooltip">Partial (Llama)<span class="tooltiptext">but no top LLMs</span></td>
         <td class="green">Yes</td>
@@ -378,7 +412,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Mistral</td>
         <td>France &#127467;&#127479;</td>
         <td>Mistral</td>
-        <td class="tier3">Tier 3</td>
+        <td id="aaii_mistral" class="tier3">Tier 3</td>
         <td>Web, apps, API</td>
         <td class="lgreen tooltip">Mostly yes<span class="tooltiptext">The majority of Mistral models are open weight</span></td>
         <td class="green">Yes</td>
@@ -395,7 +429,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>DeepSeek</td>
         <td>China &#127464;&#127475;</td>
         <td>DeepSeek</td>
-        <td class="tier3">Tier 3</td>
+        <td id="aaii_deepseek" class="tier3">Tier 3</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -409,7 +443,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Moonshot AI</td>
         <td>China &#127464;&#127475;</td>
         <td>Kimi</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_kimi" class="tier2">Tier 2</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -423,7 +457,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Xiaomi</td>
         <td>China &#127464;&#127475;</td>
         <td>MiMo</td>
-        <td class="tier3">Tier 3</td>
+        <td id="aaii_mimo" class="tier3">Tier 3</td>
         <td>Web, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -437,7 +471,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>MiniMax</td>
         <td>China &#127464;&#127475;</td>
         <td>MiniMax</td>
-        <td class="tier3">Tier 3</td>
+        <td id="aaii_minimax" class="tier3">Tier 3</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -451,7 +485,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Alibaba</td>
         <td>China &#127464;&#127475;</td>
         <td>Qwen</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_qwen" class="tier2">Tier 2</td>
         <td>Web, apps, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
@@ -465,7 +499,7 @@ This is not meant to be a comprehensive list of all providers and I also don't i
         <td>Z.ai</td>
         <td>China &#127464;&#127475;</td>
         <td>GLM</td>
-        <td class="tier2">Tier 2</td>
+        <td id="aaii_glm" class="tier2">Tier 2</td>
         <td>Web, API</td>
         <td class="green">Yes</td>
         <td class="green">Yes</td>
