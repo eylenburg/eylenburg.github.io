@@ -19,14 +19,14 @@ def og_block(title, desc, url):
         '<meta property="og:title" content="' + title + '">\n'
         '<meta property="og:description" content="' + desc + '">\n'
         '<meta property="og:url" content="' + url + '">\n'
-        '<meta property="og:image" content="' + BASE + '/og-image.png">\n'
+        '<meta property="og:image" content="' + BASE + '/scripts/og-image.png">\n'
         '<meta property="og:image:type" content="image/png">\n'
         '<meta property="og:image:width" content="1200">\n'
         '<meta property="og:image:height" content="630">\n'
         '<meta name="twitter:card" content="summary_large_image">\n'
         '<meta name="twitter:title" content="' + title + '">\n'
         '<meta name="twitter:description" content="' + desc + '">\n'
-        '<meta name="twitter:image" content="' + BASE + '/og-image.png">\n'
+        '<meta name="twitter:image" content="' + BASE + '/scripts/og-image.png">\n'
     )
 
 files = sorted(ROOT.glob("*.htm")) + [ROOT / "index.html"]

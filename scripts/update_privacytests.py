@@ -39,7 +39,8 @@ OS_MAP = {
     "ios": "https://privacytests.org/ios.json",
 }
 
-LAST_GIT_FILE = Path(".privacytests_last_git")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+LAST_GIT_FILE = REPO_ROOT / ".privacytests_last_git"
 EXCLUDED_DEVICE_TESTS = {"Math.tanh(0.123)"}
 TRACKING_CATS = ["navigation", "query", "trackers", "tracker_cookies", "session_1p", "session_3p"]
 COLOR_CLASSES = {"green", "lgreen", "red"}
@@ -231,7 +232,7 @@ def main():
             else:
                 scores[f"tracking_{browser_key}_{os_name}"] = ("", "")
 
-    html_path = Path("browser_comparison.htm")
+    html_path = REPO_ROOT / "browser_comparison.htm"
     html = html_path.read_text(encoding="utf-8")
     html = html.replace("\r\n", "\n").replace("\r", "\n")
     new_html = update_html(html, scores)

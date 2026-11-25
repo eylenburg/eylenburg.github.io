@@ -45,7 +45,7 @@ def main():
     year, month = latest_key.split("-")
     date_str = f"{month}/{year}"
 
-    html_path = Path("browser_comparison.htm")
+    html_path = Path(__file__).resolve().parent.parent / "browser_comparison.htm"
     html = html_path.read_text(encoding="utf-8")
     html = html.replace("\r\n", "\n").replace("\r", "\n")
 

@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Update browser shares
-        run: python update_browser_share.py
+        run: python scripts/update_browser_share.py
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

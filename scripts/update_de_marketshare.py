@@ -172,7 +172,7 @@ def update_row(html: str, row_id: str, percentages: dict[str, float]) -> str:
 
 
 def main():
-    html_path = Path("de_comparison.htm")
+    html_path = Path(__file__).resolve().parent.parent / "de_comparison.htm"
     html = html_path.read_text(encoding="utf-8")
     html = html.replace("\r\n", "\n").replace("\r", "\n")
 

@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Update scores
-        run: python update_privacytests.py
+        run: python scripts/update_privacytests.py
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

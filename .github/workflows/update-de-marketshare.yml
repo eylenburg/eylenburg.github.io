@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Update market shares
-        run: python update_de_marketshare.py
+        run: python scripts/update_de_marketshare.py
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

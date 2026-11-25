@@ -43,6 +43,6 @@ for label, wd in zip(labels, widths):
 # footer
 d.text((60, 572), "https://eylenburg.github.io", font=f("dejavu/DejaVuSans.ttf", 22), fill=DIM)
 
-out = "og-image.png"
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "og-image.png")
 img.save(out, "PNG")
 print("wrote", out, img.size)

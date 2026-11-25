@@ -27,7 +27,7 @@ jobs:
       - name: Update AAII scores
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
-        run: python update_aaii.py
+        run: python scripts/update_aaii.py
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

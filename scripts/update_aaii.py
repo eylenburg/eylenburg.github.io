@@ -13,7 +13,8 @@ from pathlib import Path
 
 import requests
 
-HTML_PATH = Path("ai_search_maps.htm")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+HTML_PATH = REPO_ROOT / "ai_search_maps.htm"
 API_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 
 # HTML id suffix -> list of creator name aliases (case-insensitive match)
