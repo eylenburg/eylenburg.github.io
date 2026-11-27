@@ -1,0 +1,42 @@
+name: Update SpeechMap Free Speech Index
+
+on:
+  schedule:
+    # Every Sunday at 20:00 UTC (same cadence as the AAII updater)
+    - cron: '0 20 * * 0'
+  workflow_dispatch:  # allow manual runs
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update SpeechMap scores
+        run: python scripts/update_speechmap.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Update SpeechMap Free Speech Index scores"
+          title: "Update SpeechMap Free Speech Index scores"
+          body: |
+            Automated weekly update of SpeechMap Free Speech Index scores on the AI providers table.
+
+            - Fetches the lab leaderboard from [SpeechMap](https://speechmap.ai/labs/).
+            - Updates the Index (lab average, not Peak) for each tracked lab.
+            - Recomputes tiers 1–7 from the absolute score range of the updated entries.
+            - Updates the source date next to the SpeechMap link.
+
+            Source: [SpeechMap Lab Leaderboard](https://speechmap.ai/labs/)
+          branch: update-speechmap
+          delete-branch: true

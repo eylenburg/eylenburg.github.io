@@ -27,6 +27,7 @@ CREATOR_MAP = {
     "mistral": ["Mistral", "Mistral AI"],
     "deepseek": ["DeepSeek"],
     "kimi": ["Moonshot AI", "Kimi", "Moonshot"],
+    "ling": ["InclusionAI", "Ling"],
     "mimo": ["Xiaomi", "MiMo"],
     "minimax": ["MiniMax"],
     "qwen": ["Alibaba", "Qwen", "Alibaba (Qwen)"],
