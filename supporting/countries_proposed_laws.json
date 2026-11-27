@@ -370,4 +370,11 @@
     "law_name": "EU Kids Act (COM(2026) 681)",
     "comment": "Would make age verification mandatory to open or keep an unrestricted account on social networks, video-sharing platforms and AI chats."
   }
+  {
+  "country": "Argentina",
+  "status": "proposed",
+  "column": "age_web",
+  "law_name": "Bill 6018-D-2026",
+  "comment": "Introduced 11/2026 in the Chamber of Deputies. Would require biometric identity and age verification via Renaper (“proof of life”) to open or keep accounts on social media, e-commerce and online gaming platforms (purely passive/informational accounts excluded). Still in committee."
+}
 ]
