@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 """
 Update desktop environment market share percentages in de_comparison.htm.
-Sources: Arch pkgstats, GamingOnLinux, linux-hardware.org.
+Sources: Arch pkgstats, GamingOnLinux, linux-hardware.org, Fedora Count Me, Debian PopCon.
 
 Uses absolute percentages as shown on each site (not relative among the 8 DEs).
 """
 
+import gzip
 import json
 import re
+import sqlite3
+import tempfile
+import urllib.parse
 import urllib.request
+from datetime import date, timedelta
 from pathlib import Path
 
 # Column order in the HTML table
@@ -50,12 +55,40 @@ LHW_GROUPS = {
     "budgie": ["Budgie"],
 }
 
+# Debian packages (task packages where available; GNOME includes flashback)
+DEBIAN_PACKAGES = {
+    "gnome": ["task-gnome-desktop", "task-gnome-flashback-desktop"],
+    "plasma": ["task-kde-desktop"],
+    "xfce": ["task-xfce-desktop"],
+    "mate": ["task-mate-desktop"],
+    "cinnamon": ["task-cinnamon-desktop"],
+    "lxqt": ["task-lxqt-desktop"],
+    "budgie": ["budgie-desktop"],
+    "cosmic": ["cosmic-session"],  # may be 0 / not in repo
+}
+DEBIAN_TOTAL_PROXY = "task-desktop"
+DEBIAN_POPCON_API = "https://qa.debian.org/cgi-bin/popcon-data"
 
-def fetch(url: str, timeout: int = 30) -> str | None:
+# Fedora Count Me
+FEDORA_URL = "https://data-analysis.fedoraproject.org/csv-reports/countme/totals.db.gz"
+RECENT_WEEKS = 4  # recent weeks to consider
+
+
+def fetch(url: str, timeout: int = 60) -> str | None:
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "eylenburg-de-updater"})
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"Failed to fetch {url}: {e}")
+        return None
+
+
+def fetch_bytes(url: str, timeout: int = 120) -> bytes | None:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "eylenburg-de-updater"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read()
     except Exception as e:
         print(f"Failed to fetch {url}: {e}")
         return None
@@ -144,8 +177,164 @@ def fetch_lhw() -> dict[str, float] | None:
     return grouped
 
 
-def update_row(html: str, row_id: str, percentages: dict[str, float]) -> str:
-    """Replace the 8 DE <td> cells in the given row."""
+def classify_fedora(os_variant: str) -> str | None:
+    """Map Fedora os_variant to one of our DE keys, or None to exclude from both numerator and denominator."""
+    v = (os_variant or "").lower()
+
+    # Exclude Bazzite (no fixed default DE) and pure non-desktop variants
+    if "bazzite" in v:
+        return None
+    if any(x in v for x in ("server", "iot", "cloud", "coreos", "container", "toolbox", "toolbx", "generic", "unknown")):
+        return None
+
+    # Main desktop / Atomic mappings
+    if any(x in v for x in ("silverblue", "bluefin", "workstation")):
+        return "gnome"
+    if any(x in v for x in ("kinoite", "aurora", "kde", "plasma")):
+        return "plasma"
+    if "xfce" in v:
+        return "xfce"
+    if "mate" in v:
+        return "mate"
+    if "cinnamon" in v:
+        return "cinnamon"
+    if "lxqt" in v:
+        return "lxqt"
+    if "budgie" in v:
+        return "budgie"
+    if "cosmic" in v:
+        return "cosmic"
+
+    # Other known desktops count in the denominator
+    if any(x in v for x in ("sway", "i3", "lxde", "phosh", "lomiri", "deepin", "pantheon", "onyx", "sericea")):
+        return "other"
+
+    # Anything else is excluded
+    return None
+
+
+def fetch_fedora() -> dict[str, float] | None:
+    """Download Fedora Count Me totals.db.gz, compute DE percentages, discard data."""
+    print("Downloading Fedora Count Me data...")
+    raw = fetch_bytes(FEDORA_URL)
+    if not raw:
+        return None
+
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            gz_path = Path(tmpdir) / "totals.db.gz"
+            db_path = Path(tmpdir) / "totals.db"
+            gz_path.write_bytes(raw)
+            with gzip.open(gz_path, "rb") as f_in, open(db_path, "wb") as f_out:
+                f_out.write(f_in.read())
+
+            con = sqlite3.connect(db_path)
+            cur = con.cursor()
+
+            cur.execute("SELECT MAX(weeknum) FROM countme_totals")
+            max_week = cur.fetchone()[0]
+            if max_week is None:
+                return None
+            max_week = int(max_week)
+            min_week = max_week - RECENT_WEEKS + 1
+
+            # Approximate unique systems: max hits per (os_variant, os_arch, sys_age) over recent weeks
+            # (each host reports once per week; max across repos approximates hosts)
+            cur.execute(
+                """
+                SELECT os_variant, MAX(hits)
+                FROM countme_totals
+                WHERE weeknum >= ? AND weeknum <= ?
+                  AND os_name LIKE '%Fedora%'
+                GROUP BY os_variant, os_arch, sys_age
+                """,
+                (min_week, max_week),
+            )
+            rows = cur.fetchall()
+            con.close()
+
+            counts: dict[str, int] = {k: 0 for k in COLUMNS}
+            other = 0
+            for os_variant, hits in rows:
+                cls = classify_fedora(os_variant or "")
+                if cls is None:
+                    continue
+                if cls in counts:
+                    counts[cls] += hits
+                else:
+                    other += hits
+
+            total = sum(counts.values()) + other
+            if total == 0:
+                return None
+
+            return {k: 100.0 * counts[k] / total for k in COLUMNS}
+    except Exception as e:
+        print(f"Fedora processing failed: {e}")
+        return None
+    # TemporaryDirectory is cleaned up automatically; no leftover files
+
+
+def fetch_debian() -> dict[str, float | str] | None:
+    """Query Debian PopCon for the relevant packages; use task-desktop as denominator."""
+    print("Querying Debian PopCon...")
+    all_pkgs = []
+    for pkgs in DEBIAN_PACKAGES.values():
+        all_pkgs.extend(pkgs)
+    all_pkgs.append(DEBIAN_TOTAL_PROXY)
+
+    today = date.today()
+    from_date = (today - timedelta(days=30)).isoformat()
+    to_date = today.isoformat()
+
+    params = {
+        "packages": " ".join(all_pkgs),
+        "from_date": from_date,
+        "to_date": to_date,
+    }
+    url = DEBIAN_POPCON_API + "?" + urllib.parse.urlencode(params)
+    data_str = fetch(url)
+    if not data_str:
+        return None
+
+    try:
+        data = json.loads(data_str)
+    except Exception:
+        return None
+
+    inst = {}
+    for pkg in all_pkgs:
+        series = data.get(pkg, {})
+        if not series:
+            inst[pkg] = 0
+            continue
+        latest_day = max(series.keys())
+        entry = series[latest_day]
+        inst[pkg] = (
+            int(entry.get("vote", 0))
+            + int(entry.get("old", 0))
+            + int(entry.get("recent", 0))
+            + int(entry.get("no_files", 0))
+        )
+
+    total = inst.get(DEBIAN_TOTAL_PROXY, 0)
+    if total == 0:
+        return None
+
+    results: dict[str, float | str] = {}
+    for de, pkgs in DEBIAN_PACKAGES.items():
+        count = sum(inst.get(pkg, 0) for pkg in pkgs)
+        if de == "cosmic" and count == 0:
+            results[de] = "not in repo"
+        else:
+            results[de] = 100.0 * count / total
+    return results
+
+
+def update_row(html: str, row_id: str, percentages: dict[str, float | str]) -> str:
+    """Replace the 8 DE <td> cells in the given row.
+    Values may be floats (percentages) or special strings (e.g. 'not in repo').
+    """
     pattern = rf'(<tr id="{row_id}">.*?</tr>)'
     m = re.search(pattern, html, re.DOTALL)
     if not m:
@@ -160,10 +349,14 @@ def update_row(html: str, row_id: str, percentages: dict[str, float]) -> str:
     offset = 0
     for i, col in enumerate(COLUMNS):
         td = tds[i + 1]
-        pct = percentages.get(col, 0)
-        cls = mktshare_class(pct)
-        text = f"{pct:.1f}%"
-        new_td = f'<td class="{cls}">{text}</td>'
+        val = percentages.get(col, 0)
+        if isinstance(val, str):
+            new_td = f"<td>{val}</td>"
+        else:
+            pct = float(val)
+            cls = mktshare_class(pct)
+            text = f"{pct:.1f}%"
+            new_td = f'<td class="{cls}">{text}</td>'
         start = td.start() + offset
         end = td.end() + offset
         new_row = new_row[:start] + new_td + new_row[end:]
@@ -201,6 +394,22 @@ def main():
         changed = True
     else:
         print("linux-hardware.org: skipped (fetch failed)")
+
+    fedora = fetch_fedora()
+    if fedora:
+        print("Fedora:", {k: f"{v:.1f}%" for k, v in fedora.items()})
+        html = update_row(html, "marketshare_fedora", fedora)
+        changed = True
+    else:
+        print("Fedora: skipped (fetch/processing failed)")
+
+    debian = fetch_debian()
+    if debian:
+        print("Debian:", {k: (f"{v:.1f}%" if isinstance(v, float) else v) for k, v in debian.items()})
+        html = update_row(html, "marketshare_debian", debian)
+        changed = True
+    else:
+        print("Debian: skipped (fetch failed)")
 
     if changed:
         html_path.write_text(html, encoding="utf-8", newline="\n")
